@@ -1,0 +1,27 @@
+header#pageheader, footer#pagefooter, div.related, div.document {
+  max-width: 90%;
+}
+
+img {
+  max-width: 100%;
+}
+
+table.docutils {
+  width: 100%;
+}
+
+table.docutils td, table.docutils th {
+  border-top: 1px solid #aaa;
+}
+
+tr:only-child td, tr:only-child th {
+  border: none;
+}
+
+code {
+  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, sans-serif;
+  background-color: #eee;
+  color: #333;
+  padding: 3px;
+  font-size: 90%;
+}

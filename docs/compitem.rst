@@ -1,0 +1,569 @@
+.. highlight:: javascript
+.. _CompItem:
+
+CompItem object
+################################################
+
+|  ``app.project.item(index)``
+|  ``app.project.items[index]``
+
+**Description**
+
+The CompItem object represents a composition, and allows you to manipulate and get information about it. Access the objects by position index number in a project’s ite m collection.
+
+    CompItem is a subclass of :ref:`AVItem`, which is a subclass of :ref:`Item`. All methods and attributes of AVItem and Item, in addition to those listed below, are available when working with CompItem.
+
+**Example**
+
+Given that the first item in the project is a CompItem, the following code displays two alerts. The first showsthe number of layers in the CompItem, and the second shows the name of the last layer in the CompItem.
+
+.. code::
+
+    var firstComp = app.project.item(1);
+    alert("number of layers is " + firstComp.numLayers);
+    alert("name of last layer is " + firstComp.layer(firstComp.numLayers).name) ;
+
+----
+
+==========
+Attributes
+==========
+
+.. _CompItem.activeCamera:
+
+CompItem.activeCamera
+*********************************************
+
+``app.project.item(index).activeCamera``
+
+**Description**
+
+The active camera, which is the front-most camera layer that is enabled. The value is null if the composition contains no enabled camera layers.
+
+**Type**
+
+CameraLayer object; read-only.
+
+----
+
+.. _CompItem.bgColor:
+
+CompItem.bgColor
+*********************************************
+
+``app.project.item(index).bgColor``
+
+**Description**
+
+The background color of the composition. The three array values specify the red, green, and blue components of the color.
+
+**Type**
+
+An array containing three floating-point values, ``[R, G, B]``, in the range ``[0.0..1.0]``; read/write.
+
+----
+
+.. _CompItem.displayStartTime:
+
+CompItem.displayStartTime
+*********************************************
+
+``app.project.item(index).displayStartTime``
+
+**Description**
+
+The time set as the beginning of the composition, in seconds. This is the equivalent of the Start Timecode or Start Frame setting in the Composition Settings dialog box.
+
+**Type**
+
+Floating-point value in the range ``[0.0...86339.0]``
+(1 second less than 25 hours); read/write.
+
+----
+
+.. _CompItem.draft3d:
+
+CompItem.draft3d
+*********************************************
+
+``app.project.item(index).draft3d``
+
+**Description**
+
+When true, Draft 3D mode is enabled for the Composition panel. This corresponds to the value of the Draft 3D button in the Composition panel.
+
+**Type**
+
+Boolean; read/write.
+
+----
+
+.. _CompItem.dropFrame:
+
+CompItem.dropFrame
+*********************************************
+
+``app.project.item(index).dropFrame``
+
+**Description**
+
+When true, indicates that the composition uses drop-frame timecode. When false, indicates non-drop-frame timecode. This corresponds to the setting in the Composition Settings dialog box.
+
+**Type**
+
+Boolean; read/write.
+
+----
+
+.. _CompItem.frameBlending:
+
+CompItem.frameBlending
+*********************************************
+
+``app.project.item(index).frameBlending``
+
+**Description**
+
+When true, frame blending is enabled for this Composition. Corresponds to the value of the Frame Blending button in the Composition panel.
+
+**Type**
+
+Boolean; if true, frame blending is enabled; read/write.
+
+----
+
+.. _CompItem.frameDuration:
+
+CompItem.frameDuration
+*********************************************
+
+``app.project.item(index).frameDuration``
+
+**Description**
+
+The duration of a frame, in seconds. This is the inverse of the ``frameRate`` value (frames-per-second).
+
+**Type**
+
+Floating-point; read/write.
+
+----
+
+.. _CompItem.hideShyLayers:
+
+CompItem.hideShyLayers
+*********************************************
+
+``app.project.item(index).hideShyLayers``
+
+**Description**
+
+When true, only layers with shy set to false are shown in the Timeline panel. When false, all layers are visible, including those whose shy value is true. Corresponds to the value of the Hide All Shy Layers button in the Composition panel.
+
+**Type**
+
+Boolean; read/write.
+
+----
+
+.. _CompItem.layers:
+
+CompItem.layers
+*********************************************
+
+``app.project.item(index).layers``
+
+**Description**
+
+A :ref:`LayerCollection` that contains all the Layer objects for layers in this composition.
+
+**Type**
+
+LayerCollection object; read-only.
+
+----
+
+.. _CompItem.motionBlur:
+
+CompItem.motionBlur
+*********************************************
+
+``app.project.item(index).motionBlur``
+
+**Description**
+
+When true, motion blur is enabled for the composition. Corresponds to the value of the Motion Blur button in the Composition panel.
+
+**Type**
+
+Boolean; read/write.
+
+----
+
+.. _CompItem.motionBlurAdaptiveSampleLimit:
+
+CompItem.motionBlurAdaptiveSampleLimit
+*********************************************
+
+``app.project.item(index).motionBlurAdaptiveSampleLimit``
+
+**Description**
+
+The maximum number of motion blur samples of 2D layer motion. This corresponds to the Adaptive Sample Limit setting in the Advanced tab of the Composition Settings dialog box.
+
+**Type**
+
+Integer (between 16 and 256); read/write.
+
+----
+
+.. _CompItem.motionBlurSamplesPerFrame:
+
+CompItem.motionBlurSamplesPerFrame
+*********************************************
+
+``app.project.item(index).motionBlurSamplesPerFrame``
+
+**Description**
+
+The minimum number of motion blur samples per frame for Classic 3D layers, shape layers, and certain effects. This corresponds to the Samples Per Frame setting in the Advanced tab of the Composition Settings dialog box.
+
+**Type**
+
+Integer (between 2 and 64); read/write.
+
+----
+
+.. _CompItem.numLayers:
+
+CompItem.numLayers
+*********************************************
+
+``app.project.item(index).numLayers``
+
+**Description**
+
+The number of layers in the composition.
+
+**Type**
+
+Integer; read-only.
+
+----
+
+.. _CompItem.markerProperty:
+
+CompItem.markerProperty
+*********************************************
+
+``app.project.item(index).markerProperty``
+
+**Description**
+
+Composition markers can now be created and modified via the new comp.markerProperty attribute. Composition marker scripting has the same functionality as layer markers.
+see :ref:`MarkerValue`
+
+**Type**
+
+Property; read-only.
+
+**Example**
+
+The following sample code creates a project and composition, then creates two composition markers with different properties::
+
+    // comp.markerProperty allows you add markers to a comp.
+    // It has the same functionality as layer.property("Marker")
+    {
+        var currentProj = app.newProject();
+        var comp = currentProj.items.addComp("mycomp", 1920, 1080, 1.0, 5, 29.97);
+        var solidLayer = comp.layers.addSolid([1, 1, 1], "mylayer", 1920, 1080, 1.0);
+
+        var compMarker = new MarkerValue("This is a comp marker!");
+        compMarker.duration = 1; compMarker.url = "http://www.adobe.com/aftereffects";
+
+        var compMarker2 = new MarkerValue("Another comp marker!");
+        compMarker2.duration = 1;
+
+        comp.markerProperty.setValueAtTime(1, compMarker)
+        comp.markerProperty.setValueAtTime(3, compMarker2)
+    }
+
+----
+
+.. _CompItem.openInViewer:
+
+CompItem.openInViewer()
+*********************************************
+
+``app.project.item(index).openInViewer()``
+
+**Description**
+
+Opens the composition in a Composition panel, and moves the Composition panel to front and gives it focus.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Viewer object for the Composition panel, or null if the composition could not be opened.
+
+----
+
+.. _CompItem.preserveNestedFrameRate:
+
+CompItem.preserveNestedFrameRate
+*********************************************
+
+``app.project.item(index).preserveNestedFrameRate``
+
+**Description**
+
+When true, the frame rate of nested compositions is preserved in the current composition. Corresponds to the value of the "Preserve frame rate when nested or in render queue" option in the Advanced tab of the Composition Settings dialog box.
+
+**Type**
+
+Boolean; read/write.
+
+----
+
+.. _CompItem.preserveNestedResolution:
+
+CompItem.preserveNestedResolution
+*********************************************
+
+``app.project.item(index).preserveNestedResolution``
+
+**Description**
+
+When true, the resolution of nested compositions is preserved in the current composition. Corresponds to the value of the "Preserve Resolution When Nested" option in the Advanced tab of the Composition Settings dialog box.
+
+**Type**
+
+Boolean; read/write.
+
+----
+
+.. _CompItem.renderer:
+
+CompItem.renderer
+*********************************************
+
+``app.project.item(index).renderer``
+
+**Description**
+
+The current rendering plug-in module to be used to render this composition, as set in the Advanced tab of the Composition Settings dialog box. Allowed values are the members of :ref:`compItem.renderers`.
+
+**Type**
+
+String; read/write.
+
+----
+
+.. _CompItem.renderers:
+
+CompItem.renderers
+*********************************************
+
+``app.project.item(index).renderers``
+
+**Description**
+
+The available rendering plug-in modules. Member strings reflect installed modules, as seen in the Advanced tab of the Composition Settings dialog box.
+
+**Type**
+
+Array of strings; read-only.
+
+----
+
+.. _CompItem.resolutionFactor:
+
+CompItem.resolutionFactor
+*********************************************
+
+``app.project.item(index).resolutionFactor``
+
+**Description**
+
+The x and y downsample resolution factors for rendering the composition. The two values in the array specify how many pixels to skip when sampling; the first number controls horizontal sampling, the second controls vertical sampling. Full resolution is ``[1, 1]``, half resolution is ``[2, 2]``, and quarter resolution is ``[4, 4]``. The default is ``[1, 1]``.
+
+**Type**
+
+Array of two integers in the range ``[1..99]``; read/write.
+
+----
+
+.. _CompItem.selectedLayers:
+
+CompItem.selectedLayers
+*********************************************
+
+``app.project.item(index).selectedLayers``
+
+**Description**
+
+All of the selected layers in this composition. This is a 0-based array (the first object is at index 0).
+
+**Type**
+
+Array of :ref:`Layer <Layer>` objects; read-only.
+
+----
+
+.. _CompItem.selectedProperties:
+
+CompItem.selectedProperties
+*********************************************
+
+``app.project.item(index).selectedProperties``
+
+**Description**
+
+All of the selected properties (Property and PropertyGroup objects) in this composition. The first property is at index position 0.
+
+**Type**
+
+Array of :ref:`Property <Property>` and :ref:`PropertyGroup <PropertyGroup>` objects; read-only.
+
+----
+
+.. _CompItem.shutterAngle:
+
+CompItem.shutterAngle
+*********************************************
+
+``app.project.item(index).shutterAngle``
+
+**Description**
+
+The shutter angle setting for the composition. This corresponds to the Shutter Angle setting in the Advanced tab of the Composition Settings dialog box.
+
+**Type**
+
+Integer in the range ``[0...720]``; read/write.
+
+----
+
+.. _CompItem.shutterPhase:
+
+CompItem.shutterPhase
+*********************************************
+
+``app.project.item(index).shutterPhase``
+
+**Description**
+
+The shutter phase setting for the composition. This corresponds to the Shutter Phase setting in the Advanced tab of the Composition Settings dialog box.
+
+**Type**
+
+Integer in the range ``[–360...360]``; read/write.
+
+----
+
+.. _CompItem.workAreaDuration:
+
+CompItem.workAreaDuration
+*********************************************
+
+``app.project.item(index).workAreaDuration``
+
+**Description**
+
+The duration of the work area in seconds. This is the difference of the start-point and end-point times of the Composition work area.
+
+**Type**
+
+Floating-point; read/write.
+
+----
+
+.. _CompItem.workAreaStart:
+
+CompItem.workAreaStart
+*********************************************
+
+``app.project.item(index).workAreaStart``
+
+**Description**
+
+The time when the Composition work area begins, in seconds.
+
+**Type**
+
+Floating-point; read/write.
+
+----
+
+=======
+Methods
+=======
+
+.. _CompItem.duplicate:
+
+CompItem.duplicate()
+*********************************************
+
+``app.project.item(index).duplicate()``
+
+**Description**
+
+Creates and returns a duplicate of this composition, which contains the same layers as the original.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+CompItem object.
+
+----
+
+.. _CompItem.layer:
+
+CompItem.layer()
+*********************************************
+
+|  ``app.project.item(index).layer(index)``
+|  ``app.project.item(index).layer(otherLayer, relIndex)``
+|  ``app.project.item(index).layer(name)``
+
+**Description**
+
+Returns a Layer object, which can be specified by name, an index position in this layer, or an index position relative to another layer.
+
+**Parameters**
+
+=========  =================================================================
+``index``  The index number of the desired layer in this composition. An
+           integer in the range ``[1...numLayers]``, where ``numLayers`` is
+           the number of layers in the composition.
+=========  =================================================================
+
+or:
+
+==============  =============================================================
+``otherLayer``  A Layer object in this composition. The ``relIndex`` value is
+                added to the index value of thislayer to findthe positionof
+                the desired layer.
+``relIndex``    The postion of the desired layer, relative to ``otherLayer``.
+                An integer in the range ``[1 – otherLayer.index...numLayers –
+                otherLayer.index]``, where ``numLayers`` is the number of
+                layers in the composition. This value is added to the
+                ``otherLayer`` value to derive the absolute index of the
+                layer to return.
+==============  =============================================================
+
+—or—
+
+========  ====================================================
+``name``  The string containing the name of the desired layer.
+========  ====================================================
+
+**Returns**
+
+:ref:`Layer`.
