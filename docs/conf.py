@@ -24,14 +24,14 @@ pygments_style = 'sphinx'
 
 # -- Options for HTML output ----------------------------------------------
 
-html_theme = 'better'
+#html_theme = 'better'
 
 html_theme_options = {
     'sidebarwidth': '20rem',
     'cssfiles': ['_static/extra.css']
 }
 
-html_theme_path = [better_theme_path]
+#html_theme_path = [better_theme_path]
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
