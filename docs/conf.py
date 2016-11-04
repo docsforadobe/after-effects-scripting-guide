@@ -2,7 +2,7 @@
 
 import sys
 import os
-from better import better_theme_path
+#from better import better_theme_path
 
 # -- General configuration ------------------------------------------------
 
