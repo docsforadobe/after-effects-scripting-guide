@@ -131,7 +131,8 @@ TextDocument.fillColor
 
 The text layer’s fill color, as an array of ``[r, g, b]`` floating-point values. For example, in an 8-bpc project, a red value of 255 would be 1.0, and in a 32-bpc project, an overbright blue value can be something like 3.2.
 
-.. note:: If the text layer has different fill color settings for each character, this attribute returns the setting for the first character. Also, if you change the value, it resets all characters in the text layer to the specified setting.
+.. note::
+   If the text layer has different fill color settings for each character, this attribute returns the setting for the first character. Also, if you change the value, it resets all characters in the text layer to the specified setting.
 
 **Type**
 
@@ -150,7 +151,8 @@ TextDocument.font
 
 The text layer’s font specified by its PostScript name.
 
-.. note:: If the text layer has different font settings for each character, this attribute returns the setting for the first character. Also, if you change the value, it resets all characters in the text layer to the specified setting.
+.. note::
+   If the text layer has different font settings for each character, this attribute returns the setting for the first character. Also, if you change the value, it resets all characters in the text layer to the specified setting.
 
 **Type**
 
@@ -169,7 +171,8 @@ TextDocument.fontSize
 
 The text layer’s font size in pixels.
 
-.. note:: If the text layer has different font size settings for each character, this attribute returns the setting for the first character. Also, if you change the value, it resets all characters in the text layer to the specified setting.
+.. note::
+   If the text layer has different font size settings for each character, this attribute returns the setting for the first character. Also, if you change the value, it resets all characters in the text layer to the specified setting.
 
 **Type**
 
@@ -230,7 +233,8 @@ TextDocument.strokeColor
 
 The text layer’s stroke color, as an array of [r, g, b] floating-point values. For example, in an 8-bpc project, a red value of 255 would be 1.0, and in a 32-bpc project, an overbright blue value can be something like 3.2.
 
-.. note:: If the text layer has different stroke color settings for each character, this attribute returns the setting for the first character. Also, if you change the value, it resets all characters in the text layer to the specified setting.
+.. note::
+   If the text layer has different stroke color settings for each character, this attribute returns the setting for the first character. Also, if you change the value, it resets all characters in the text layer to the specified setting.
 
 **Type**
 
@@ -249,7 +253,8 @@ TextDocument.strokeOverFill
 
 Indicates the rendering order for the fill and stroke of a text layer. When true, the stroke appears over the fill.
 
-.. note:: If the text layer has different fill/stroke rendering order settings for each character, this attribute returns the setting for the first character. Also, if you change the value, it resets all characters in the text layer to the specified setting.
+.. note::
+   If the text layer has different fill/stroke rendering order settings for each character, this attribute returns the setting for the first character. Also, if you change the value, it resets all characters in the text layer to the specified setting.
 
 **Type**
 
@@ -268,7 +273,8 @@ TextDocument.strokeWidth
 
 The text layer’s stroke thickness in pixels.
 
-.. note:: If the text layer has different stroke width settings for each character, this attribute returns the setting forthe first character. Also, if you change the value, it resets all characters in the text layer to the specified setting.
+.. note::
+   If the text layer has different stroke width settings for each character, this attribute returns the setting forthe first character. Also, if you change the value, it resets all characters in the text layer to the specified setting.
 
 **Type**
 
@@ -304,7 +310,8 @@ TextDocument.tracking
 
 The text layer’s spacing between characters.
 
-.. note:: If the text layer has different tracking settings for each character, this attribute returns the setting for the first character. Also, if you change the value, it resets all characters in the text layer to the specified setting.
+.. note::
+   If the text layer has different tracking settings for each character, this attribute returns the setting for the first character. Also, if you change the value, it resets all characters in the text layer to the specified setting.
 
 **Type**
 

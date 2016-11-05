@@ -211,7 +211,10 @@ app.isoLanguage
 
 **Description**
 
-A string indicating the locale (language and regional designations) After Effects is running. NOTE: ``$.locale`` returns the operating system language, not the language of the After Effects application.
+A string indicating the locale (language and regional designations) After Effects is running.
+
+.. note::
+   ``$.locale`` returns the operating system language, not the language of the After Effects application.
 
 **Type**
 

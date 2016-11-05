@@ -143,7 +143,7 @@ A ``FramesCountType`` enumerated value; read/write. One of:
 -  ``FramesCountType.FC_START_0``
 -  ``FramesCountType.FC_TIMECODE_CONVERSION``
 
-.. NOTE:: Setting this attribute to ``FramesCountType.FC_TIMECODE_CONVERSION`` resets the ``displayStartFrame`` attribute to 0.
+.. WARNING:: Setting this attribute to ``FramesCountType.FC_TIMECODE_CONVERSION`` resets the ``displayStartFrame`` attribute to 0.
 
 ----
 

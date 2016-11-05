@@ -216,7 +216,8 @@ The Queue In AME command, introduced in After Effects CC 2015.3 (13.8), can now 
 
 Calls the Queue In AME command. This method requires passing a boolean value, telling AME whether to only queue the render items (false) or if AME should also start processing its queue (true).
 
-Note that when AME receives the queued items, it applies the most recently used encoding preset. If render_immediately_in_AME is set to true, you will not have an opportunity to change the encoding settings.
+.. note::
+   When AME receives the queued items, it applies the most recently used encoding preset. If ``render_immediately_in_AME`` is set to true, you will not have an opportunity to change the encoding settings.
 
 **Parameters**
 

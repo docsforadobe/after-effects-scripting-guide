@@ -353,7 +353,9 @@ AVItem.setProxyWithPlaceholder()
 
 Creates a PlaceholderSource object with specified values, sets this as the value of the ``proxySource`` attribute, and sets ``useProxy`` to true. It does not preserve the interpretation parameters, instead using the user preferences.
 
-NOTE: There is no direct way to set a placeholder as a proxy in the user interface; this behavior occurs when a proxy has been set and then moved or deleted.
+.. note::
+   There is no direct way to set a placeholder as a proxy in the user interface; this behavior occurs when a proxy has been set and then moved or deleted.
+
 
 **parameters**
 
@@ -409,7 +411,6 @@ AVItem.setProxyWithSolid()
 Creates a :ref:`SolidSource` with specified values, sets this as the value of the ``proxySource`` attribute, and sets ``useProxy`` to true. It does not preserve the interpretation parameters, instead using the user preferences.
 
 .. note::
-
    There is no way, using the user interface, to set a solid as a proxy; this feature is available only through scripting.
 
 **parameters**

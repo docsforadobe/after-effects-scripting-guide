@@ -436,8 +436,7 @@ Layer.copyToComp()
 
 Copies the layer into the specified composition. The original layer remains unchanged. Creates a new Layer object with the same values as this one, and prepends the new object to the :ref:`layercollection` in the target CompItem. Retrieve the copy using into ``Comp.layer(1)``. Copying in a layer changes the index positions of previously existing layers in the target composition. This is the same as copying and pasting a layer through the user interface.
 
-.. note::
-
+.. tip::
    The scripting guide says this method copies the layer to the top of the comp. It actually copies it to above the first selected layer, or to to the top, if nothing is selected. To retrieve the copy you have to check ``CompItem.selectedLayers`` for the layer with the topmost index, and use ``comp.layer( topmost_index_of_selected_layers - 1 )`` to retrieve the layer.
 
 **Parameters**

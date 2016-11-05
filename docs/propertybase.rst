@@ -331,7 +331,8 @@ PropertyBase.moveTo()
 
 Moves this property to a new position in its parent property group.This method is valid only for children of indexed groups; if it is not, or if the index value is not valid, the method generates an exception and displays an error. (An indexed group has the type ``PropertyType.INDEXED_GROUP``; see :ref:`PropertyBase.propertyType`.)
 
-.. NOTE:: Using this method invalidates existing references to other children in the same indexed group. Forexample, if you have three effects on a layer, each effect assigned to a different variable, moving one of the effectsinvalidates the references for all of these variables. You will need to reassign them.
+.. warning::
+   Using this method invalidates existing references to other children in the same indexed group. For example, if you have three effects on a layer, each effect assigned to a different variable, moving one of the effectsinvalidates the references for all of these variables. You will need to reassign them.
 
 **Parameters**
 

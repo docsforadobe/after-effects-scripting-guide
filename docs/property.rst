@@ -12,7 +12,8 @@ The Property object contains value, keyframe, and expression information about a
 
     Property is a subclass of :ref:`PropertyBase <propertybase>`. All methods and attributes of PropertyBase, in addition to those listed below, are available when working with Property.
 
-.. NOTE:: JavaScript objects commonly referred to as "properties" are called "attributes" in this guide, to avoid confusion with the After Effects definition of property.
+.. note::
+   JavaScript objects commonly referred to as "properties" are called "attributes" in this guide, to avoid confusion with the After Effects definition of property.
 
 .. _propertyExamples:
 
@@ -147,7 +148,8 @@ Property.dimensionsSeparated
 
 When true, the property’s dimensions are represented as separate properties. For example, if the layer’s position is represented as X Position and Y Position properties in the Timeline panel, the Position property has this attribute set to true.
 
-.. NOTE:: This attribute applies only when the :ref:`isSeparationLeader <Property.isSeparationLeader>` attribute is true.
+.. note::
+   This attribute applies only when the :ref:`isSeparationLeader <Property.isSeparationLeader>` attribute is true.
 
 **Type**
 
@@ -255,7 +257,8 @@ Property.isSeparationFollower
 
 When true, the property represents one of the separated dimensions for a multidimensional property. For example, the X Position property has this attribute set to true.
 
-.. NOTE:: The original, consolidated, multidimensional property is the "separation leader" and the new, separated, single-dimensional properties are its "separation followers".
+.. note::
+   The original, consolidated, multidimensional property is the "separation leader" and the new, separated, single-dimensional properties are its "separation followers".
 
 **Type**
 
@@ -274,7 +277,8 @@ Property.isSeparationLeader
 
 When true, the property is multidimensional and can be separated. For example, the Position property has this attribute set to true.
 
-.. NOTE:: The original, consolidated, multidimensional property is the "separation leader" and the new, separated, single-dimensional properties are its "separation followers".
+.. note::
+   The original, consolidated, multidimensional property is the "separation leader" and the new, separated, single-dimensional properties are its "separation followers".
 
 **Type**
 
@@ -468,7 +472,8 @@ Property.separationLeader
 
 The original multidimensional property for this separated follower. For example, if the current property is Y Position, this attribute’s value points to the Position property.
 
-.. note:: The original, consolidated, multidimensional property is the "separation leader" and the new, separated, single-dimensional properties are its "separation followers".
+.. note::
+   The original, consolidated, multidimensional property is the "separation leader" and the new, separated, single-dimensional properties are its "separation followers".
 
 **Type**
 
@@ -555,7 +560,8 @@ Property.getSeparationFollower()
 
 For a separated, multidimensional property, retrieves a specific follower property. For example, you can use this method on the Position property to access the separated X Position and Y Position properties
 
-.. NOTE:: This attribute applies only when the :ref:`isSeparationLeader <Property.isSeparationLeader>` attribute is true.
+.. note::
+   This attribute applies only when the :ref:`isSeparationLeader <Property.isSeparationLeader>` attribute is true.
 
 **Parameters**
 
