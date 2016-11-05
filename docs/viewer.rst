@@ -14,10 +14,10 @@ The Viewer object represents a Composition, Layer, or Footage panel.
 
 This maximizes the active viewer panel, and displays its type if it contains a composition::
 
-    var activeViewer = app.activeViewer;
-    activeViewer.maximized = true;
-    if (activeViewer.type == ViewerType.VIEWER_COMPOSITION)
-        alert("Compositionpanelisactive.");
+	var activeViewer = app.activeViewer;
+	activeViewer.maximized = true;
+	if (activeViewer.type == ViewerType.VIEWER_COMPOSITION)
+	alert("Compositionpanelisactive.");
 
 ----
 
@@ -63,11 +63,11 @@ The state of the Fast Previews menuThis is a read/write attribute using an enume
 
 A ``FastPreviewType`` enumerated value; read/write. One of:
 
--  ``FastPreviewType.FP_OFF``: Off (Final Quality)
--  ``FastPreviewType.FP_ADAPTIVE_RESOLUTION``: Adaptive Resolution
--  ``FastPreviewType.FP_DRAFT``: Draft
--  ``FastPreviewType.FP_FAST_DRAFT``: Fast Draft
--  ``FastPreviewType.FP_WIREFRAME``: Wireframe
+- ``FastPreviewType.FP_OFF``: Off (Final Quality)
+- ``FastPreviewType.FP_ADAPTIVE_RESOLUTION``: Adaptive Resolution
+- ``FastPreviewType.FP_DRAFT``: Draft
+- ``FastPreviewType.FP_FAST_DRAFT``: Fast Draft
+- ``FastPreviewType.FP_WIREFRAME``: Wireframe
 
 **Example**
 
@@ -113,9 +113,9 @@ The content in the viewer panel.
 
 A ``ViewerType`` enumerated value; read-only. One of:
 
--  ``ViewerType.VIEWER_COMPOSITION``
--  ``ViewerType.VIEWER_LAYER``
--  ``ViewerType.VIEWER_FOOTAGE``
+- ``ViewerType.VIEWER_COMPOSITION``
+- ``ViewerType.VIEWER_LAYER``
+- ``ViewerType.VIEWER_FOOTAGE``
 
 ----
 

@@ -27,8 +27,8 @@ pygments_style = 'sphinx'
 #html_theme = 'better'
 
 html_theme_options = {
-    'sidebarwidth': '20rem',
-    'cssfiles': ['_static/extra.css']
+	'sidebarwidth': '20rem',
+	'cssfiles': ['_static/extra.css']
 }
 
 #html_theme_path = [better_theme_path]
@@ -52,8 +52,8 @@ html_static_path = ['_static']
 
 # Custom sidebar templates, maps document names to template names.
 html_sidebars = {
-    '**': ['searchbox.html', 'localtoc.html', 'globaltoc.html'],
-    'index': ['searchbox.html']
+	'**': ['searchbox.html', 'localtoc.html', 'globaltoc.html'],
+	'index': ['searchbox.html']
 }
 
 # If true, links to the reST sources are added to the pages.

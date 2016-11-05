@@ -17,14 +17,14 @@ Contributors are welcome and encouraged to suggest fixes, adjustments, notes/war
 
 Currently, the following `admonitions <http://docutils.sourceforge.net/docs/ref/rst/directives.html#admonitions>`_ are in use in this project. Try to keep one piece of data per note, for easier parsing.
 
-    .. note::
-    	Notes detail version added, and/or relevant pieces of information.
+	.. note::
+		Notes detail version added, and/or relevant pieces of information.
 
-    .. tip::
-    	Tips supply helpful suggestions on usage or behaviours.
+	.. tip::
+		Tips supply helpful suggestions on usage or behaviours.
 
-    .. warning::
-    	Warnings convey negative behaviours, or when something won't work the way you'd expect.
+	.. warning::
+		Warnings convey negative behaviours, or when something won't work the way you'd expect.
 
 ----
 

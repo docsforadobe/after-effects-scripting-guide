@@ -10,7 +10,7 @@ FileSource object
 
 The FileSource object describes footage that comes from a file.
 
-    FileSource is a subclass of :ref:`FootageSource`. All methods and attributes of FootageSource, in addition to those listed below, are available when working with FileSource.
+	FileSource is a subclass of :ref:`FootageSource`. All methods and attributes of FootageSource, in addition to those listed below, are available when working with FileSource.
 
 ----
 
@@ -30,8 +30,8 @@ FileSource.file
 
 The ExtendScript File object for the file that defines this asset. To change the value:
 
--  If this FileSource is a :ref:`proxySource <AVItem.proxySource>` of an :ref:`AVItem <AVItem>`, call :ref:`setProxy() <AVItem.setProxy>` or :ref:`setProxyWithSequence() <AVItem.setProxyWithSequence>`.
--  If this FileSource is a :ref:`mainSource <FootageItem.mainSource>` of a :ref:`FootageItem <FootageItem>`, call :ref:`replace() <FootageItem.replace>` or :ref:`replaceWithSequence() <FootageItem.replaceWithSequence>`.
+- If this FileSource is a :ref:`proxySource <AVItem.proxySource>` of an :ref:`AVItem <AVItem>`, call :ref:`setProxy() <AVItem.setProxy>` or :ref:`setProxyWithSequence() <AVItem.setProxyWithSequence>`.
+- If this FileSource is a :ref:`mainSource <FootageItem.mainSource>` of a :ref:`FootageItem <FootageItem>`, call :ref:`replace() <FootageItem.replace>` or :ref:`replaceWithSequence() <FootageItem.replaceWithSequence>`.
 
 **Type**
 

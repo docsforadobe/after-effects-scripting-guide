@@ -10,7 +10,7 @@ Layer object
 
 The Layer object provides access to layers within compositions. It can be accessed from an item’s layer collection either by index number or by a name string.
 
-    Layer is the base class for :ref:`CameraLayer`, :ref:`LightLayer`, and :ref:`AVLayer`, so Layer attributes and methods are available when working with all layer types. Layers contain AE properties, in addition to their JavaScript attributes and methods. For examples of how to access properties in layers, see :ref:`PropertyBase`.
+	Layer is the base class for :ref:`CameraLayer`, :ref:`LightLayer`, and :ref:`AVLayer`, so Layer attributes and methods are available when working with all layer types. Layers contain AE properties, in addition to their JavaScript attributes and methods. For examples of how to access properties in layers, see :ref:`PropertyBase`.
 
 **Example**
 
@@ -18,9 +18,9 @@ If the first item in the project is a :ref:`CompItem <CompItem>`, this example d
 
 ::
 
-    var firstLayer = app.project.item(1).layer(1);
-    firstLayer.enabled = false;
-    firstLayer.name = "DisabledLayer";
+	var firstLayer = app.project.item(1).layer(1);
+	firstLayer.enabled = false;
+	firstLayer.name = "DisabledLayer";
 
 ----
 
@@ -259,7 +259,7 @@ Layer.samplingQuality
 ``app.project.item(index).layer(index).samplingQuality``
 
 .. note::
-   This functionality was added in After Effects 12.0
+	This functionality was added in After Effects 12.0
 
 **Description**
 
@@ -269,8 +269,8 @@ Set/get layer sampling method (bicubic or bilinear)
 
 A ``LayerSamplingQuality`` enumerated value; read/write. One of:
 
--  ``LayerSamplingQuality.BICUBIC``
--  ``LayerSamplingQuality.BILINEAR``
+- ``LayerSamplingQuality.BICUBIC``
+- ``LayerSamplingQuality.BILINEAR``
 
 ----
 
@@ -393,9 +393,9 @@ Returns true if this layer will be active at the specified time. To return true,
 
 **Parameters**
 
-========  ============================================
-``time``  The time in seconds, a floating-point value.
-========  ============================================
+========	============================================
+``time``	The time in seconds, a floating-point value.
+========	============================================
 
 **Returns**
 
@@ -416,10 +416,9 @@ Applies the specified collection of animation settings (an animation preset) to 
 
 **Parameters**
 
-==============  =======================================================
-``presetName``  An ExtendScript File object for the file containing the
-                animation preset.
-==============  =======================================================
+==============	=======================================================
+``presetName``	An ExtendScript File object for the file containing the animation preset.
+==============	=======================================================
 
 **Returns**
 
@@ -442,13 +441,13 @@ Copies the layer into the specified composition. The original layer remains unch
 	As After Effects 13.6, this method no longer causes After Effects to crash when the layer has a parent.
 
 .. tip::
-   The scripting guide says this method copies the layer to the top of the comp. It actually copies it to above the first selected layer, or to to the top, if nothing is selected. To retrieve the copy you have to check ``CompItem.selectedLayers`` for the layer with the topmost index, and use ``comp.layer( topmost_index_of_selected_layers - 1 )`` to retrieve the layer.
+	The scripting guide says this method copies the layer to the top of the comp. It actually copies it to above the first selected layer, or to to the top, if nothing is selected. To retrieve the copy you have to check ``CompItem.selectedLayers`` for the layer with the topmost index, and use ``comp.layer( topmost_index_of_selected_layers - 1 )`` to retrieve the layer.
 
 **Parameters**
 
-============  ============================================
-``intoComp``  The target composition, and :ref:`CompItem`.
-============  ============================================
+============	============================================
+``intoComp``	The target composition, and :ref:`CompItem`.
+============	============================================
 
 **Returns**
 
@@ -490,9 +489,9 @@ Moves this layer to a position immediately after (below) the specified layer.
 
 **Parameters**
 
-=========  =========================================================
-``layer``  The target layer, a layer object in the same composition.
-=========  =========================================================
+=========	=========================================================
+``layer``	The target layer, a layer object in the same composition.
+=========	=========================================================
 
 **Returns**
 
@@ -513,9 +512,9 @@ Moves this layer to a position immediately before (above) the specified layer.
 
 **Parameters**
 
-=========  =========================================================
-``layer``  The target layer, a layer object in the same composition.
-=========  =========================================================
+=========	=========================================================
+``layer``	The target layer, a layer object in the same composition.
+=========	=========================================================
 
 **Returns**
 
@@ -599,10 +598,9 @@ Sets the parent of this layer to the specified layer, without changing the trans
 
 **Parameters**
 
-=============  ========================================================
-``newParent``  Optional, a layer object in the same composition. If not
-               specified, it sets the parent to None.
-=============  ========================================================
+=============	========================================================
+``newParent``	Optional, a layer object in the same composition. If not specified, it sets the parent to None.
+=============	========================================================
 
 **Returns**
 

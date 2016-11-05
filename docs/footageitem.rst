@@ -10,7 +10,7 @@ FootageItem object
 
 The FootageItem object represents a footage item imported into a project, which appears in the Project panel. These are accessed by position index number in a project’s ite m collection.
 
-    FootageItem is a subclass of :ref:`AVItem`, which is a subclass of :ref:`Item`. All methods and attributes of AVItem and Item, in addition to those listed below, are available when working with FootageItem.
+	FootageItem is a subclass of :ref:`AVItem`, which is a subclass of :ref:`Item`. All methods and attributes of AVItem and Item, in addition to those listed below, are available when working with FootageItem.
 
 ----
 
@@ -42,9 +42,9 @@ FootageItem.mainSource
 
 The footage source, an object that contains all of the settings related to that footage item, including those that are normally accessed through the Interpret Footage dialog box. The attribute is read-only. To change its value, call one of the FootageItem "replace" methods. See the :ref:`FootageSource`, and its three types:
 
--  :ref:`SolidSource`
--  :ref:`FileSource`
--  :ref:`PlaceholderSource`
+- :ref:`SolidSource`
+- :ref:`FileSource`
+- :ref:`PlaceholderSource`
 
 If this is a FileSource object, and the :ref:`footageMissing <AVItem.footageMissing>` value is true, the path to the missing footage file is in the :ref:`FileSource.missingFootagePath` attribute.
 
@@ -66,7 +66,7 @@ FootageItem.openInViewer()
 Opens the footage in a Footage panel, and moves the Footage panel to front and gives it focus.
 
 .. note::
-   Missing and placeholder footage can be opened using this method, but cannot manually (via doubleclicking it).
+	Missing and placeholder footage can be opened using this method, but cannot manually (via doubleclicking it).
 
 **Parameters**
 
@@ -91,10 +91,9 @@ Changes the source of this FootageItem to the specified file. In addition to loa
 
 **Parameters**
 
-========  ==========================================================
-``file``  An ExtendScript File object for the file to be used as the
-          footage main source.
-========  ==========================================================
+========	==========================================================
+``file``	An ExtendScript File object for the file to be used as the footage main source.
+========	==========================================================
 
 ----
 
@@ -111,17 +110,13 @@ Changes the source of this FootageItem to the specified placeholder. Creates a n
 
 **Parameters**
 
-=============  =======================================================
-``name``       A string containing the name of the placeholder.
-``width``      The width of the placeholder in pixels, an integer
-               in the range ``[4..30000]``.
-``height``     The height of the placeholder in pixels, an integer
-               in the range ``[4..30000]``.
-``frameRate``  The frame rate of the placeholder, a floating-point
-               value in the range ``[1.0..99.0]``
-``duration``   The duration of the placeholder in seconds, a
-               floating-point value in the range ``[0.0..10800.0]``.
-=============  =======================================================
+=============	=======================================================
+``name``		A string containing the name of the placeholder.
+``width``		The width of the placeholder in pixels, an integer in the range ``[4..30000]``.
+``height``		The height of the placeholder in pixels, an integer in the range ``[4..30000]``.
+``frameRate``	The frame rate of the placeholder, a floating-point value in the range ``[1.0..99.0]``
+``duration``	The duration of the placeholder in seconds, a floating-point value in the range ``[0.0..10800.0]``.
+=============	=======================================================
 
 ----
 
@@ -138,11 +133,11 @@ Changes the source of this FootageItem to the specified image sequence. In addit
 
 **Parameters**
 
-=====================  =====================================================
-``file``               An ExtendScript File object for the first file in the
-                       sequence to be used as the footage main source.
+=====================	=====================================================
+``file``			   An ExtendScript File object for the first file in the
+		 sequence to be used as the footage main source.
 ``forceAlphabetical``  When true, use the "Force alphabetical order" option.
-=====================  =====================================================
+=====================	=====================================================
 
 ----
 
@@ -159,14 +154,10 @@ Changes the source of this FootageItem to the specified solid. Creates a new Sol
 
 **Parameters**
 
-===============  ===========================================================
-``pixelAspect``  The pixel aspect ratio of the solid, a floating-point value
-                 in the range ``[0.01..100.0]``.
-``height``       The height of the solid in pixels, an integer in the range
-                 ``[4..30000]``.
-``width``        The width of the solid in pixels, an integer in the range
-                 ``[4..30000]``.
-``name``         A string containing the name of the solid.
-``color``        The color of the solid, an array of three floating-point
-                 values, ``[R, G, B]``, in the range ``[0.0..1.0]``.
-===============  ===========================================================
+===============	===========================================================
+``pixelAspect``	The pixel aspect ratio of the solid, a floating-point value in the range ``[0.01..100.0]``.
+``height``		The height of the solid in pixels, an integer in the range ``[4..30000]``.
+``width``		The width of the solid in pixels, an integer in the range ``[4..30000]``.
+``name``		A string containing the name of the solid.
+``color``		The color of the solid, an array of three floating-point values, ``[R, G, B]``, in the range ``[0.0..1.0]``.
+===============	===========================================================

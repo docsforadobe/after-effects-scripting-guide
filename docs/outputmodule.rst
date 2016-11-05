@@ -81,10 +81,10 @@ An action to be performed when the render operation is completed.
 
 A ``PostRenderAction`` enumerated value (read/write); one of:
 
--  ``postRenderAction.NONE``
--  ``postRenderAction.IMPORT``
--  ``postRenderAction.IMPORT_AND_REPLACE_USAGE``
--  ``postRenderAction.SET_PROXY``
+- ``postRenderAction.NONE``
+- ``postRenderAction.IMPORT``
+- ``postRenderAction.IMPORT_AND_REPLACE_USAGE``
+- ``postRenderAction.SET_PROXY``
 
 ----
 
@@ -122,9 +122,9 @@ Applies the specified existing output-module template.
 
 **Parameters**
 
-================  ===========================================================
-``templateName``  A string containing the name of the template to be applied.
-================  ===========================================================
+================	===========================================================
+``templateName``	A string containing the name of the template to be applied.
+================	===========================================================
 
 **Returns**
 
@@ -140,7 +140,7 @@ OutputModule.getSetting()
 ``app.project.renderQueue.item(index).outputModule(index).getSetting()``
 
 .. note::
-   This functionality was added in After Effects 13.0
+	This functionality was added in After Effects 13.0
 
 **Description**
 
@@ -156,7 +156,7 @@ OutputModule.getSettings()
 ``app.project.renderQueue.item(index).outputModule(index).getSettings()``
 
 .. note::
-   This functionality was added in After Effects 13.0
+	This functionality was added in After Effects 13.0
 
 **Description**
 
@@ -198,9 +198,9 @@ Saves this output module as a template and adds it to the te mpl ate s array.
 
 **Parameters**
 
-========  =================================================
-``name``  A string containing the name of the new template.
-========  =================================================
+========	=================================================
+``name``	A string containing the name of the new template.
+========	=================================================
 
 **Returns**
 
@@ -216,7 +216,7 @@ OutputModule.setSetting()
 ``app.project.renderQueue.item(index).outputModule(index).setSetting()``
 
 .. note::
-   This functionality was added in After Effects 13.0
+	This functionality was added in After Effects 13.0
 
 **Description**
 
@@ -232,7 +232,7 @@ OutputModule.setSettings()
 ``app.project.renderQueue.item(index).outputModule(index).setSettings()``
 
 .. note::
-   This functionality was added in After Effects 13.0
+	This functionality was added in After Effects 13.0
 
 **Description**
 

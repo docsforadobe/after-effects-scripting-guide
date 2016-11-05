@@ -10,92 +10,92 @@ Property object
 
 The Property object contains value, keyframe, and expression information about a particular AE property of a layer. An AE property is an value, often animatable, of an effect, mask, or transform within an individual layer. For examples of how to access properties, see :ref:`PropertyBase` and :ref:`PropertyGroup.property`.
 
-    Property is a subclass of :ref:`PropertyBase <propertybase>`. All methods and attributes of PropertyBase, in addition to those listed below, are available when working with Property.
+	Property is a subclass of :ref:`PropertyBase <propertybase>`. All methods and attributes of PropertyBase, in addition to those listed below, are available when working with Property.
 
 .. note::
-   JavaScript objects commonly referred to as "properties" are called "attributes" in this guide, to avoid confusion with the After Effects definition of property.
+	JavaScript objects commonly referred to as "properties" are called "attributes" in this guide, to avoid confusion with the After Effects definition of property.
 
 .. _propertyExamples:
 
 **Examples**
 
--  Get and set the value of opacity::
+- Get and set the value of opacity::
 
-    var myProperty = myLayer.opacity;
-    // opacity has propertyValueType of OneD, and is stored as a float
-    myProperty.setValue(50);//set opacity to 50%
-    // Variable my Opacity is a float value
-    var myOpacity = myProperty.value;
+	var myProperty = myLayer.opacity;
+	// opacity has propertyValueType of OneD, and is stored as a float
+	myProperty.setValue(50);//set opacity to 50%
+	// Variable my Opacity is a float value
+	var myOpacity = myProperty.value;
 
--  Get and set the value of a position::
+- Get and set the value of a position::
 
-    var myProperty = myLayer.position;
-    // position has propertyValueType of ThreeD_SPATIAL, and is stored as an array of 3 floats
-    myProperty.setValue([10.0, 30.0, 0.0]);
-    // Variable my Position is an array of 3 floats
-    var myPosition = myProperty.value;
+	var myProperty = myLayer.position;
+	// position has propertyValueType of ThreeD_SPATIAL, and is stored as an array of 3 floats
+	myProperty.setValue([10.0, 30.0, 0.0]);
+	// Variable my Position is an array of 3 floats
+	var myPosition = myProperty.value;
 
--  Change the value of a mask shape to be open instead of closed::
+- Change the value of a mask shape to be open instead of closed::
 
-    var myMask = mylayer.mask(1);
-    var myProperty = myMask.maskPath;
-    myShape = myProperty.value;
-    myShape.closed = false;
-    myProperty.setValue(myShape);
+	var myMask = mylayer.mask(1);
+	var myProperty = myMask.maskPath;
+	myShape = myProperty.value;
+	myShape.closed = false;
+	myProperty.setValue(myShape);
 
--  Get the value of a color at a particular timeA color is stored as an array of four floats, ``[r, g, b, opacity]``. This sets the value of the red component of a light's color at time 4 to be half of that at time 2::
+- Get the value of a color at a particular timeA color is stored as an array of four floats, ``[r, g, b, opacity]``. This sets the value of the red component of a light's color at time 4 to be half of that at time 2::
 
-    var myProperty = myLight.color;
-    var colorValue = myProperty.valueAtTime(2, true);
-    colorValue[0] = 0.5 * colorValue[0];
-    myProperty.setValueAtTime(4, colorValue);
+	var myProperty = myLight.color;
+	var colorValue = myProperty.valueAtTime(2, true);
+	colorValue[0] = 0.5 * colorValue[0];
+	myProperty.setValueAtTime(4, colorValue);
 
--  Check that a scale calculated by an expression at time 3.5 is the expected value of [10,50]::
+- Check that a scale calculated by an expression at time 3.5 is the expected value of [10,50]::
 
-    var myProperty = myLayer.scale;
-    //false value of preExpression means evaluate the expression
-    var scaleValue = myProperty.valueAtTime(3.5, false);
+	var myProperty = myLayer.scale;
+	//false value of preExpression means evaluate the expression
+	var scaleValue = myProperty.valueAtTime(3.5, false);
 
-    if(scaleValue[0] == 10 && scaleValue[1] == 50) {
-        alert("hurray");
-    }
-    else{
-        alert("oops");
-    }
+	if(scaleValue[0] == 10 && scaleValue[1] == 50) {
+	   alert("hurray");
+	}
+	else{
+	   alert("oops");
+	}
 
--  Keyframe a rotation from 0 to 90 and back again. The animation is 10 seconds, and the middle keyframe is at the 5 second mark. Rotation properties are stored as a OneD value::
+- Keyframe a rotation from 0 to 90 and back again. The animation is 10 seconds, and the middle keyframe is at the 5 second mark. Rotation properties are stored as a OneD value::
 
-      myProperty = myLayer.rotation;
-      myProperty.setValueAtTime(0, 0);
-      myProperty.setValueAtTime(5, 90);
-      myProperty.setValueAtTime(10, 0);
+		myProperty = myLayer.rotation;
+		myProperty.setValueAtTime(0, 0);
+		myProperty.setValueAtTime(5, 90);
+		myProperty.setValueAtTime(10, 0);
 
--  Change the key frame values for the first three keyframes of some sourcetext::
+- Change the key frame values for the first three keyframes of some sourcetext::
 
-    myProperty = myTextLayer.sourceText;
-    if(myProperty.numKeys<3){
-     alert("error, I thought there were 3 keyframes");
-    }
-    else{
-        myProperty.setValueAtKey(1, newTextDocument("keynumber1"));
-        myProperty.setValueAtKey(2, newTextDocument("keynumber2"));
-        myProperty.setValueAtKey(3, newTextDocument("keynumber3"));
-    }
+	myProperty = myTextLayer.sourceText;
+	if (myProperty.numKeys < 3) {
+	   alert("error, I thought there were 3 keyframes");
+	}
+	else{
+	   myProperty.setValueAtKey(1, newTextDocument("keynumber1"));
+	   myProperty.setValueAtKey(2, newTextDocument("keynumber2"));
+	   myProperty.setValueAtKey(3, newTextDocument("keynumber3"));
+	}
 
--  Set values using the convenience syntax for position, scale, color, or source text::
+- Set values using the convenience syntax for position, scale, color, or source text::
 
-    //These two are equivalent. The second fills in a default of 0.
-    myLayer.position.setValue([20, 30, 0]);
-    myLayer.position.setValue([20, 30]);
-    //These two are equivalent. The second fills in a defaultof 100.
-    myLayer.scale.setValue([50, 50, 100]);
-    myLayer.scale.setValue([50, 50]);
-    //These two are equivalent. The second fills in a defaultof 1.0
-    myLight.color.setValue([.8, .3, .1, 1.0]);
-    myLight.color.setValue([.8, .3, .1]);
-    //These two are equivalent. The second creates a TextDocument
-    myTextLayer.sourceText.setValue(newTextDocument("foo"));
-    myTextLayer.sourceText.setValue("foo");
+	//These two are equivalent. The second fills in a default of 0.
+	myLayer.position.setValue([20, 30, 0]);
+	myLayer.position.setValue([20, 30]);
+	//These two are equivalent. The second fills in a defaultof 100.
+	myLayer.scale.setValue([50, 50, 100]);
+	myLayer.scale.setValue([50, 50]);
+	//These two are equivalent. The second fills in a defaultof 1.0
+	myLight.color.setValue([.8, .3, .1, 1.0]);
+	myLight.color.setValue([.8, .3, .1]);
+	//These two are equivalent. The second creates a TextDocument
+	myTextLayer.sourceText.setValue(newTextDocument("foo"));
+	myTextLayer.sourceText.setValue("foo");
 
 ----
 
@@ -149,7 +149,7 @@ Property.dimensionsSeparated
 When true, the property’s dimensions are represented as separate properties. For example, if the layer’s position is represented as X Position and Y Position properties in the Timeline panel, the Position property has this attribute set to true.
 
 .. note::
-   This attribute applies only when the :ref:`isSeparationLeader <Property.isSeparationLeader>` attribute is true.
+	This attribute applies only when the :ref:`isSeparationLeader <Property.isSeparationLeader>` attribute is true.
 
 **Type**
 
@@ -168,9 +168,9 @@ Property.expression
 
 The expression for the named property. Writeable only when :ref:`canSetExpression <property.cansetexpression>` for the named property is true. When you specify a value for this attribute, the string is evaluated.
 
--  If the string contains a valid expression, :ref:`expressionEnabled <property.expressionenabled>` becomes true.
--  If the string does not contain a valid expression, an error is generated, and :ref:`expressionEnabled <property.expressionenabled>` becomes false.
--  If you set the attribute to the empty string, :ref:`expressionEnabled <property.expressionenabled>` becomes false, but no error is generated.
+- If the string contains a valid expression, :ref:`expressionEnabled <property.expressionenabled>` becomes true.
+- If the string does not contain a valid expression, an error is generated, and :ref:`expressionEnabled <property.expressionenabled>` becomes false.
+- If you set the attribute to the empty string, :ref:`expressionEnabled <property.expressionenabled>` becomes false, but no error is generated.
 
 **Type**
 
@@ -258,7 +258,7 @@ Property.isSeparationFollower
 When true, the property represents one of the separated dimensions for a multidimensional property. For example, the X Position property has this attribute set to true.
 
 .. note::
-   The original, consolidated, multidimensional property is the "separation leader" and the new, separated, single-dimensional properties are its "separation followers".
+	The original, consolidated, multidimensional property is the "separation leader" and the new, separated, single-dimensional properties are its "separation followers".
 
 **Type**
 
@@ -278,7 +278,7 @@ Property.isSeparationLeader
 When true, the property is multidimensional and can be separated. For example, the Position property has this attribute set to true.
 
 .. note::
-   The original, consolidated, multidimensional property is the "separation leader" and the new, separated, single-dimensional properties are its "separation followers".
+	The original, consolidated, multidimensional property is the "separation leader" and the new, separated, single-dimensional properties are its "separation followers".
 
 **Type**
 
@@ -402,28 +402,28 @@ The type of value stored in the named property. The ``PropertyValueType`` enumer
 
 In contrast, a shape property (such as a layer's mask shape) is stored as a Shape object. When setting a value for a shape, pass a Shape object, as follows::
 
-    var myShape = newShape();
-    myShape.vertices = [[0,0], [0,100], [100,100], [100,0]];
-    var myMask = mylayer.property("ADBE Mask Parade").property(1);
-    myMask.property("ADBE Mask Shape").setValue(myShape);
+	var myShape = newShape();
+	myShape.vertices = [[0,0], [0,100], [100,100], [100,0]];
+	var myMask = mylayer.property("ADBE Mask Parade").property(1);
+	myMask.property("ADBE Mask Shape").setValue(myShape);
 
 **Type**
 
 A ``PropertyValueType`` enumerated value; read/write. One of:E
 
--  ``PropertyValueType.NO_VALUE``: Stores no data.
--  ``PropertyValueType.ThreeD_SPATIAL``: Array of three floating-point positional values. For example, an Anchor Point value might be [10.0, 20.2, 0.0]
--  ``PropertyValueType.ThreeD``: Array of three floating-point quantitative values. For example, a Scale value might be [100.0, 20.2, 0.0]
--  ``PropertyValueType.TwoD_SPATIAL``: Array of 2 floating-point positional values For example, an Anchor Point value might be [5.1, 10.0]
--  ``PropertyValueType.TwoD``: Array of 2 floating-point quantitative values. For example, a Scale value might be [5.1, 100.0]
--  ``PropertyValueType.OneD``: A floating-point value.
--  ``PropertyValueType.COLOR``:Arrayof4floating-pointvaluesintherange``[0.0..1.0]``. For example, [0.8, 0.3, 0.1, 1.0]
--  ``PropertyValueType.CUSTOM_VALUE`` : Custom property value, such as the Histogram property for the Levels effect.
--  ``PropertyValueType.MARKER``: :ref:`MarkerValue`
--  ``PropertyValueType.LAYER_INDEX``: Integer; a value of 0 means no layer.
--  ``PropertyValueType.MASK_INDEX``: Integer; a value of 0 means no mask.
--  ``PropertyValueType.SHAPE``: :ref:`Shape`
--  ``PropertyValueType.TEXT_DOCUMENT``: :ref:`TextDocument`
+- ``PropertyValueType.NO_VALUE``: Stores no data.
+- ``PropertyValueType.ThreeD_SPATIAL``: Array of three floating-point positional values. For example, an Anchor Point value might be [10.0, 20.2, 0.0]
+- ``PropertyValueType.ThreeD``: Array of three floating-point quantitative values. For example, a Scale value might be [100.0, 20.2, 0.0]
+- ``PropertyValueType.TwoD_SPATIAL``: Array of 2 floating-point positional values For example, an Anchor Point value might be [5.1, 10.0]
+- ``PropertyValueType.TwoD``: Array of 2 floating-point quantitative values. For example, a Scale value might be [5.1, 100.0]
+- ``PropertyValueType.OneD``: A floating-point value.
+- ``PropertyValueType.COLOR``:Array of 4 floating-point values in the range ``[0.0..1.0]``. For example, [0.8, 0.3, 0.1, 1.0]
+- ``PropertyValueType.CUSTOM_VALUE`` : Custom property value, such as the Histogram property for the Levels effect.
+- ``PropertyValueType.MARKER``: :ref:`MarkerValue`
+- ``PropertyValueType.LAYER_INDEX``: Integer; a value of 0 means no layer.
+- ``PropertyValueType.MASK_INDEX``: Integer; a value of 0 means no mask.
+- ``PropertyValueType.SHAPE``: :ref:`Shape`
+- ``PropertyValueType.TEXT_DOCUMENT``: :ref:`TextDocument`
 
 ----
 
@@ -473,7 +473,7 @@ Property.separationLeader
 The original multidimensional property for this separated follower. For example, if the current property is Y Position, this attribute’s value points to the Position property.
 
 .. note::
-   The original, consolidated, multidimensional property is the "separation leader" and the new, separated, single-dimensional properties are its "separation followers".
+	The original, consolidated, multidimensional property is the "separation leader" and the new, separated, single-dimensional properties are its "separation followers".
 
 **Type**
 
@@ -509,9 +509,9 @@ Property.value
 
 The value of the named property at the current time.
 
--  If ``expressionEnabled`` is true, returns the evaluated expression value.
--  If there are keyframes, returns the keyframed value at the current time.
--  Otherwise, returns the static value.
+- If ``expressionEnabled`` is true, returns the evaluated expression value.
+- If there are keyframes, returns the keyframed value at the current time.
+- Otherwise, returns the static value.
 
 The type of value returned depends on the property value type. See :ref:`examples for Property object <propertyExamples>`.
 
@@ -538,10 +538,9 @@ Adds a new keyframe or marker to the named property at the specified time and re
 
 **Parameters**
 
-========  =====================================================================
-``time``  The time, in seconds, at which to add the keyframe. A floating-point
-          value. The beginning of the composition is 0.
-========  =====================================================================
+========	=====================================================================
+``time``	The time, in seconds, at which to add the keyframe. A floating-point value. The beginning of the composition is 0.
+========	=====================================================================
 
 **Returns**
 
@@ -561,13 +560,13 @@ Property.getSeparationFollower()
 For a separated, multidimensional property, retrieves a specific follower property. For example, you can use this method on the Position property to access the separated X Position and Y Position properties
 
 .. note::
-   This attribute applies only when the :ref:`isSeparationLeader <Property.isSeparationLeader>` attribute is true.
+	This attribute applies only when the :ref:`isSeparationLeader <Property.isSeparationLeader>` attribute is true.
 
 **Parameters**
 
-=======  =====================================
-``dim``  The dimension number (starting at 0).
-=======  =====================================
+=======	=====================================
+``dim``	The dimension number (starting at 0).
+=======	=====================================
 
 **Returns**
 
@@ -592,9 +591,9 @@ Returns true if the named property can be interpolated using the specified keyfr
 
 A ``KeyframeInterpolationType`` enumerated value; one of:
 
--  ``KeyframeInterpolationType.LINEAR``
--  ``KeyframeInterpolationType.BEZIER``
--  ``KeyframeInterpolationType.HOLD``
+- ``KeyframeInterpolationType.LINEAR``
+- ``KeyframeInterpolationType.BEZIER``
+- ``KeyframeInterpolationType.HOLD``
 
 **Returns**
 
@@ -615,20 +614,17 @@ Returns the 'in' interpolation type for the specified keyframe.
 
 **Parameters**
 
-============  ================================================================
-``keyIndex``  The index for the keyframe. An integer in the range
-              ``[1..numKeys]``, as returned by the
-              :ref:`addKey <property.addKey>` or
-              :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
-============  ================================================================
+============	================================================================
+``keyIndex``	The index for the keyframe. An integer in the range ``[1..numKeys]``, as returned by the :ref:`addKey <property.addKey>` or :ref:`nearestKeyIndex() <property.nearestKeyIndex>` method.
+============	================================================================
 
 **Returns**
 
 A ``KeyframeInterpolationType`` enumerated value; one of:
 
--  ``KeyframeInterpolationType. LINEAR``
--  ``KeyframeInterpolationType.BEZIER``
--  ``KeyframeInterpolationType.HOLD``
+- ``KeyframeInterpolationType. LINEAR``
+- ``KeyframeInterpolationType.BEZIER``
+- ``KeyframeInterpolationType.HOLD``
 
 ----
 
@@ -645,20 +641,17 @@ Returns the incoming spatial tangent for the specified keyframe, if the named pr
 
 **Parameters**
 
-============  ================================================================
-``keyIndex``  The index for the keyframe. An integer in the range
-              ``[1..numKeys]``, as returned by the
-              :ref:`addKey <property.addKey>` or
-              :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
-============  ================================================================
+============	================================================================
+``keyIndex``	The index for the keyframe. An integer in the range ``[1..numKeys]``, as returned by the :ref:`addKey <property.addKey>` or :ref:`nearestKeyIndex() <property.nearestKeyIndex>` method.
+============	================================================================
 
 **Returns**
 
 Array of floating-point values:
 
--  If the property value type is ``PropertyValueType.TwoD_SPATIAL``, the array contains 2 floating-point values.
--  If the property value type is ``PropertyValueType.ThreeD_SPATIAL``, the array contains 3 floating-point values.
--  If the property value type is neither of these types, an exception is generated.
+- If the property value type is ``PropertyValueType.TwoD_SPATIAL``, the array contains 2 floating-point values.
+- If the property value type is ``PropertyValueType.ThreeD_SPATIAL``, the array contains 3 floating-point values.
+- If the property value type is neither of these types, an exception is generated.
 
 ----
 
@@ -675,20 +668,17 @@ Returns the incoming temporal ease for the specified keyframe.
 
 **Parameters**
 
-============  ================================================================
-``keyIndex``  The index for the keyframe. An integer in the range
-              ``[1..numKeys]``, as returned by the
-              :ref:`addKey <property.addKey>` or
-              :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
-============  ================================================================
+============	================================================================
+``keyIndex``	The index for the keyframe. An integer in the range ``[1..numKeys]``, as returned by the :ref:`addKey <property.addKey>` or :ref:`nearestKeyIndex() <property.nearestKeyIndex>` method.
+============	================================================================
 
 **Returns**
 
 Array of :ref:`KeyframeEase objects <KeyframeEase>`:
 
--  If the property value type is ``PropertyValueType.TwoD``, the array contains 2 objects.
--  If the property value type is ``PropertyValueType.ThreeD``, the array contains 3 objects.
--  For any other value type, the array contains 1 object.
+- If the property value type is ``PropertyValueType.TwoD``, the array contains 2 objects.
+- If the property value type is ``PropertyValueType.ThreeD``, the array contains 3 objects.
+- For any other value type, the array contains 1 object.
 
 ----
 
@@ -705,20 +695,17 @@ Returns the outgoing interpolation type for the specified keyframe.
 
 **Parameters**
 
-============  ================================================================
-``keyIndex``  The index for the keyframe. An integer in the range
-              ``[1..numKeys]``, as returned by the
-              :ref:`addKey <property.addKey>` or
-              :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
-============  ================================================================
+============	================================================================
+``keyIndex``  The index for the keyframe. An integer in the range ``[1..numKeys]``, as returned by the :ref:`addKey <property.addKey>` or :ref:`nearestKeyIndex() <property.nearestKeyIndex>` method.
+============	================================================================
 
 **Returns**
 
 A ``KeyframeInterpolationType`` enumerated value; one of:
 
--  ``KeyframeInterpolationType.LINEAR``
--  ``KeyframeInterpolationType.BEZIER``
--  ``KeyframeInterpolationType.HOLD``
+- ``KeyframeInterpolationType.LINEAR``
+- ``KeyframeInterpolationType.BEZIER``
+- ``KeyframeInterpolationType.HOLD``
 
 ----
 
@@ -735,20 +722,17 @@ Returns the outgoing spatial tangent for the specified keyframe.
 
 **Parameters**
 
-============  ================================================================
-``keyIndex``  The index for the keyframe. An integer in the range
-              ``[1..numKeys]``, as returned by the
-              :ref:`addKey <property.addKey>` or
-              :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
-============  ================================================================
+============	================================================================
+``keyIndex``	The index for the keyframe. An integer in the range ``[1..numKeys]``, as returned by the :ref:`addKey <property.addKey>` or :ref:`nearestKeyIndex() <property.nearestKeyIndex>` method.
+============	================================================================
 
 **Returns**
 
 Array of floating-point values:
 
--  If the property value type is ``PropertyValueType.TwoD_SPATIAL``, the array contains 2 floating-point values.
--  If the property value type is ``PropertyValueType.ThreeD_SPATIAL``, the array contains 3 floating-point values.
--  If the property value type is neither of these types, an exception is generated.
+- If the property value type is ``PropertyValueType.TwoD_SPATIAL``, the array contains 2 floating-point values.
+- If the property value type is ``PropertyValueType.ThreeD_SPATIAL``, the array contains 3 floating-point values.
+- If the property value type is neither of these types, an exception is generated.
 
 ----
 
@@ -765,19 +749,16 @@ Returns the outgoing temporal ease for the specified keyframe.
 
 **Parameters**
 
-============  ================================================================
-``keyIndex``  The index for the keyframe. An integer in the range
-              ``[1..numKeys]``, as returned by the
-              :ref:`addKey <property.addKey>` or
-              :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
-============  ================================================================
+============	================================================================
+``keyIndex``	The index for the keyframe. An integer in the range ``[1..numKeys]``, as returned by the :ref:`addKey <property.addKey>` or :ref:`nearestKeyIndex() <property.nearestKeyIndex>` method.
+============	================================================================
 
 **Returns**
 
 Array of KeyframeEase objects:
--  If the property value type is ``PropertyValueType.TwoD``, the array contains 2 objects.
--  If the property value type is ``PropertyValueType.ThreeD``, the array contains 3 objects.
--  For any other value type, the array contains 1 object.
+- If the property value type is ``PropertyValueType.TwoD``, the array contains 2 objects.
+- If the property value type is ``PropertyValueType.ThreeD``, the array contains 3 objects.
+- For any other value type, the array contains 1 object.
 
 ----
 
@@ -794,12 +775,9 @@ Returns true if the specified keyframe is roving. The first and last keyframe in
 
 **Parameters**
 
-============  ================================================================
-``keyIndex``  The index for the keyframe. An integer in the range
-              ``[1..numKeys]``, as returned by the
-              :ref:`addKey <property.addKey>` or
-              :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
-============  ================================================================
+============	================================================================
+``keyIndex``	The index for the keyframe. An integer in the range ``[1..numKeys]``, as returned by the :ref:`addKey <property.addKey>` or :ref:`nearestKeyIndex() <property.nearestKeyIndex>` method.
+============	================================================================
 
 **Returns**
 
@@ -820,12 +798,9 @@ Returns true if the specified keyframe is selected.
 
 **Parameters**
 
-============  ================================================================
-``keyIndex``  The index for the keyframe. An integer in the range
-              ``[1..numKeys]``, as returned by the
-              :ref:`addKey <property.addKey>` or
-              :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
-============  ================================================================
+============	================================================================
+``keyIndex``	The index for the keyframe. An integer in the range ``[1..numKeys]``, as returned by the :ref:`addKey <property.addKey>` or :ref:`nearestKeyIndex() <property.nearestKeyIndex>` method.
+============	================================================================
 
 **Returns**
 
@@ -846,12 +821,9 @@ Returns true if the specified keyframe has spatial auto-Bezier interpolation. (T
 
 **Parameters**
 
-============  ================================================================
-``keyIndex``  The index for the keyframe. An integer in the range
-              ``[1..numKeys]``, as returned by the
-              :ref:`addKey <property.addKey>` or
-              :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
-============  ================================================================
+============	================================================================
+``keyIndex``	The index for the keyframe. An integer in the range ``[1..numKeys]``, as returned by the :ref:`addKey <property.addKey>` or :ref:`nearestKeyIndex() <property.nearestKeyIndex>` method.
+============	================================================================
 
 **Returns**
 
@@ -872,12 +844,9 @@ Returns true if the specified keyframe has spatial continuity. If the property v
 
 **Parameters**
 
-============  ================================================================
-``keyIndex``  The index for the keyframe. An integer in the range
-              ``[1..numKeys]``, as returned by the
-              :ref:`addKey <property.addKey>` or
-              :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
-============  ================================================================
+============	================================================================
+``keyIndex``	The index for the keyframe. An integer in the range ``[1..numKeys]``, as returned by the :ref:`addKey <property.addKey>` or :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
+============	================================================================
 
 **Returns**
 
@@ -898,12 +867,9 @@ Returns true if the specified keyframe has temporal auto-Bezier interpolation. T
 
 **Parameters**
 
-============  ================================================================
-``keyIndex``  The index for the keyframe. An integer in the range
-              ``[1..numKeys]``, as returned by the
-              :ref:`addKey <property.addKey>` or
-              :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
-============  ================================================================
+============	================================================================
+``keyIndex``	The index for the keyframe. An integer in the range ``[1..numKeys]``, as returned by the :ref:`addKey <property.addKey>` or :ref:`nearestKeyIndex() <property.nearestKeyIndex>` method.
+============	================================================================
 
 **Returns**
 
@@ -924,12 +890,9 @@ Returns true if the specified keyframe has temporal continuity. Temporal continu
 
 **Parameters**
 
-============  ================================================================
-``keyIndex``  The index for the keyframe. An integer in the range
-              ``[1..numKeys]``, as returned by the
-              :ref:`addKey <property.addKey>` or
-              :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
-============  ================================================================
+============	================================================================
+``keyIndex``	The index for the keyframe. An integer in the range ``[1..numKeys]``, as returned by the :ref:`addKey <property.addKey>` or :ref:`nearestKeyIndex() <property.nearestKeyIndex>` method.
+============	================================================================
 
 **Returns**
 
@@ -951,14 +914,10 @@ Finds the specified keyframe or marker and returns the time at which it occurs. 
 
 **Parameters**
 
-=================  ============================================================
-``keyIndex``       The index for the keyframe. An integer in the range
-                   ``[1..numKeys]``, as returned by the
-                   :ref:`addKey <property.addKey>` or
-                   :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
-``markerComment``  The comment string attached to a marker (see
-                   :ref:`MarkerValue.comment` attribute).
-=================  ============================================================
+=================	============================================================
+``keyIndex``		The index for the keyframe. An integer in the range ``[1..numKeys]``, as returned by the :ref:`addKey <property.addKey>` or :ref:`nearestKeyIndex() <property.nearestKeyIndex>` method.
+``markerComment``	The comment string attached to a marker (see :ref:`MarkerValue.comment` attribute).
+=================	============================================================
 
 **Returns**
 
@@ -980,14 +939,10 @@ Finds the specified keyframe or marker and returns its current value. If no keyf
 
 **Parameters**
 
-=================  =========================================================
-``keyIndex``       The index for the keyframe. An integer in the range
-                   ``[1..numKeys]``, as returned by the
-                   :ref:`addKey <property.addKey>` or
-                   :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
-``markerComment``  The comment string attached to a marker (see
-                   :ref:`MarkerValue.comment` attribute).
-=================  =========================================================
+=================	=========================================================
+``keyIndex``		The index for the keyframe. An integer in the range ``[1..numKeys]``, as returned by the :ref:`addKey <property.addKey>` or :ref:`nearestKeyIndex() <property.nearestKeyIndex>` method.
+``markerComment``	The comment string attached to a marker (see :ref:`MarkerValue.comment` attribute).
+=================	=========================================================
 
 **Returns**
 
@@ -1008,10 +963,9 @@ Returns the index of the keyframe nearest to the specified time.
 
 **Parameters**
 
-========  ====================================================================
-``time``  The time in seconds; a floating-point value. The beginning of the
-          composition is 0.
-========  ====================================================================
+========	====================================================================
+``time``	The time in seconds; a floating-point value. The beginning of the composition is 0.
+========	====================================================================
 
 **Returns**
 
@@ -1032,12 +986,9 @@ Removes the specified keyframe from the named property. If no keyframe with the 
 
 **Parameters**
 
-============  ================================================================
-``keyIndex``  The index for the keyframe. An integer in the range
-              ``[1..numKeys]``, as returned by the
-              :ref:`addKey <property.addKey>` or
-              :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
-============  ================================================================
+============	================================================================
+``keyIndex``	The index for the keyframe. An integer in the range ``[1..numKeys]``, as returned by the :ref:`addKey <property.addKey>` or :ref:`nearestKeyIndex() <property.nearestKeyIndex>` method.
+============	================================================================
 
 **Returns**
 
@@ -1058,25 +1009,19 @@ Sets the ``in`` and ``out`` interpolation types for the specified keyframe.
 
 **Parameters**
 
-============  ================================================================
-``keyIndex``  The index for the keyframe. An integer in the range
-              ``[1..numKeys]``, as returned by the
-              :ref:`addKey <property.addKey>` or
-              :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
-``inType``    The incoming interpolation type. A ``KeyframeInterpolationType``
-              enumerated value; one of:
+============	================================================================
+``keyIndex``	The index for the keyframe. An integer in the range ``[1..numKeys]``, as returned by the :ref:`addKey <property.addKey>` or :ref:`nearestKeyIndex() <property.nearestKeyIndex>` method.
+``inType``		The incoming interpolation type. A ``KeyframeInterpolationType`` enumerated value; one of:
 
-              -  ``KeyframeInterpolationType.LINEAR``
-              -  ``KeyframeInterpolationType.BEZIER``
-              -  ``KeyframeInterpolationType.HOLD``
-``outType``   (Optional) The outgoing interpolation type. If not supplied, the
-              ‘out’ type is set to the ``inType`` value. A
-              ``KeyframeInterpolationType`` enumerated value; one of:
+				- ``KeyframeInterpolationType.LINEAR``
+				- ``KeyframeInterpolationType.BEZIER``
+				- ``KeyframeInterpolationType.HOLD``
+``outType``		(Optional) The outgoing interpolation type. If not supplied, the ‘out’ type is set to the ``inType`` value. A ``KeyframeInterpolationType`` enumerated value; one of:
 
-              -  ``KeyframeInterpolationType.LINEAR``
-              -  ``KeyframeInterpolationType.BEZIER``
-              -  ``KeyframeInterpolationType.HOLD``
-============  ================================================================
+				- ``KeyframeInterpolationType.LINEAR``
+				- ``KeyframeInterpolationType.BEZIER``
+				- ``KeyframeInterpolationType.HOLD``
+============	================================================================
 
 **Returns**
 
@@ -1097,13 +1042,10 @@ Turns roving on or off for the specified keyframe. The first and last keyframe i
 
 **Parameters**
 
-============  ================================================================
-``keyIndex``  The index for the keyframe. An integer in the range
-              ``[1..numKeys]``, as returned by the
-              :ref:`addKey <property.addKey>` or
-              :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
-``newVal``    True to turn roving on, false to turn roving off.
-============  ================================================================
+============	================================================================
+``keyIndex``	The index for the keyframe. An integer in the range ``[1..numKeys]``, as returned by the :ref:`addKey <property.addKey>` or :ref:`nearestKeyIndex() <property.nearestKeyIndex>` method.
+``newVal``		True to turn roving on, false to turn roving off.
+============	================================================================
 
 **Returns**
 
@@ -1124,13 +1066,10 @@ Selects or deselects the specified keyframe.
 
 **Parameters**
 
-============  ================================================================
-``keyIndex``  The index for the keyframe. An integer in the range
-              ``[1..numKeys]``, as returned by the
-              :ref:`addKey <property.addKey>` or
-              :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
-``onOff``     True to select the keyframe, false to deselect it.
-============  ================================================================
+============	================================================================
+``keyIndex``	The index for the keyframe. An integer in the range ``[1..numKeys]``, as returned by the :ref:`addKey <property.addKey>` or :ref:`nearestKeyIndex() <property.nearestKeyIndex>` method.
+``onOff``		True to select the keyframe, false to deselect it.
+============	================================================================
 
 **Returns**
 
@@ -1151,13 +1090,10 @@ Turns spatial auto-Bezier interpolation on or off for the specified keyframe. If
 
 **Parameters**
 
-============  ================================================================
-``keyIndex``  The index for the keyframe. An integer in the range
-              ``[1..numKeys]``, as returned by the
-              :ref:`addKey <property.addKey>` or
-              :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
-``newVal``    True to turn spatial auto-Bezier on, false to turn it off.
-============  ================================================================
+============	================================================================
+``keyIndex``	The index for the keyframe. An integer in the range ``[1..numKeys]``, as returned by the :ref:`addKey <property.addKey>` or :ref:`nearestKeyIndex() <property.nearestKeyIndex>` method.
+``newVal``		True to turn spatial auto-Bezier on, false to turn it off.
+============	================================================================
 
 **Returns**
 
@@ -1178,13 +1114,10 @@ Turns spatial continuity on or off for the specified keyframe. If the property v
 
 **Parameters**
 
-============  ================================================================
-``keyIndex``  The index for the keyframe. An integer in the range
-              ``[1..numKeys]``, as returned by the
-              :ref:`addKey <property.addKey>` or
-              :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
-``newVal``    True to turn spatial auto-Bezier on, false to turn it off.
-============  ================================================================
+============	================================================================
+``keyIndex``	The index for the keyframe. An integer in the range ``[1..numKeys]``, as returned by the :ref:`addKey <property.addKey>` or :ref:`nearestKeyIndex() <property.nearestKeyIndex>` method.
+``newVal``		True to turn spatial auto-Bezier on, false to turn it off.
+============	================================================================
 
 **Returns**
 
@@ -1205,31 +1138,17 @@ Sets the incoming and outgoing tangent vectors for the specified keyframe. If th
 
 **Parameters**
 
-==============  ===============================================================
-``keyIndex``    The index for the keyframe. An integer in the range
-                ``[1..numKeys]``, as returned by the :ref:`addKey
-                <property.addKey>` or :ref:`nearestKeyIndex()
-                <property.nearestKeyIndex>` method.
-``inTangent``   The incoming tangent vector. An array of 2 or 3 floating-point
-                values.
+==============	===============================================================
+``keyIndex``	The index for the keyframe. An integer in the range ``[1..numKeys]``, as returned by the :ref:`addKey <property.addKey>` or :ref:`nearestKeyIndex() <property.nearestKeyIndex>` method.
+``inTangent``	The incoming tangent vector. An array of 2 or 3 floating-point values.
 
-                -  If the property value type is
-                   ``PropertyValueType.TwoD_SPATIAL``, the array contains 2
-                   values.
-                -  If the property value type is
-                   ``PropertyValueType.ThreeD_SPATIAL``, the array contains 3
-                   values.
-``outTangent``  (Optional) The outgoing tangent vector. If not supplied, the
-                ``out`` tangent is set to the ``inTangent`` value. An array of
-                2 or 3 floating-point values.
+					- If the property value type is ``PropertyValueType.TwoD_SPATIAL``, the array contains 2 values.
+					- If the property value type is ``PropertyValueType.ThreeD_SPATIAL``, the array contains 3 values.
+``outTangent``  (Optional) The outgoing tangent vector. If not supplied, the ``out`` tangent is set to the ``inTangent`` value. An array of 2 or 3 floating-point values.
 
-                -  If the property value type is
-                   ``PropertyValueType.TwoD_SPATIAL``, the array contains 2
-                   values.
-                -  If the property value type is
-                    ``PropertyValueType.ThreeD_SPATIAL``, the array contains 3
-                    values.
-==============  ===============================================================
+					- If the property value type is ``PropertyValueType.TwoD_SPATIAL``, the array contains 2 values.
+					- If the property value type is ``PropertyValueType.ThreeD_SPATIAL``, the array contains 3 values.
+==============	===============================================================
 
 **Returns**
 
@@ -1250,13 +1169,10 @@ Turns temporal auto-Bezier interpolation on or off for the specified keyframe. W
 
 **Parameters**
 
-============  ================================================================
-``keyIndex``  The index for the keyframe. An integer in the range
-              ``[1..numKeys]``, as returned by the
-              :ref:`addKey <property.addKey>` or
-              :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
-``newVal``    True to turn temporal auto-Bezier on, false to turn it off.
-============  ================================================================
+============	================================================================
+``keyIndex``	The index for the keyframe. An integer in the range ``[1..numKeys]``, as returned by the :ref:`addKey <property.addKey>` or :ref:`nearestKeyIndex() <property.nearestKeyIndex>` method.
+``newVal``		True to turn temporal auto-Bezier on, false to turn it off.
+============	================================================================
 
 **Returns**
 
@@ -1277,13 +1193,10 @@ Turns temporal continuity on or off for the specified keyframe. When temporal co
 
 **Parameters**
 
-============  ================================================================
-``keyIndex``  The index for the keyframe. An integer in the range
-              ``[1..numKeys]``, as returned by the
-              :ref:`addKey <property.addKey>` or
-              :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
-``newVal``    True to turn temporal continuity on, false to turn it off.
-============  ================================================================
+============	================================================================
+``keyIndex``	The index for the keyframe. An integer in the range ``[1..numKeys]``, as returned by the :ref:`addKey <property.addKey>` or :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
+``newVal``		True to turn temporal continuity on, false to turn it off.
+============	================================================================
 
 **Returns**
 
@@ -1304,33 +1217,19 @@ Sets the incoming and outgoing temporal ease for the specified keyframe. See :re
 
 **Parameters**
 
-===================  ==========================================================
-``keyIndex``         The index for the keyframe. An integer in the range
-                     ``[1..numKeys]``, as returned by the
-                     :ref:`addKey <property.addKey>` or
-                     :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
-``inTemporalEase``   The incoming temporal ease. An array of 1, 2, or 3
-                     KeyframeEase objects.
+===================	==========================================================
+``keyIndex``		The index for the keyframe. An integer in the range ``[1..numKeys]``, as returned by the :ref:`addKey <property.addKey>` or :ref:`nearestKeyIndex() <property.nearestKeyIndex>` method.
+``inTemporalEase``	The incoming temporal ease. An array of 1, 2, or 3 KeyframeEase objects.
 
-                     -  If the property value type is
-                        ``PropertyValueType.TwoD``, the array contains 2
-                        objects.
-                     -  If the property value type is
-                        ``PropertyValueType.ThreeD``, the array contains 3
-                        objects.
-                     -  For all other value types, the array contains 1 object.
-``outTemporalEase``  (Optional) The outgoing temporal ease. If not supplied,
-                     the outgoing ease is set to the ``inTemporalEase`` value.
-                     An array of 1, 2, or 3 KeyframeEase objects.
+						- If the property value type is ``PropertyValueType.TwoD``, the array contains 2 objects.
+						- If the property value type is ``PropertyValueType.ThreeD``, the array contains 3 objects.
+						- For all other value types, the array contains 1 object.
+``outTemporalEase``	(Optional) The outgoing temporal ease. If not supplied, the outgoing ease is set to the ``inTemporalEase`` value. An array of 1, 2, or 3 KeyframeEase objects.
 
-                     -  If the property value type is
-                        ``PropertyValueType.TwoD``, the array contains 2
-                        objects.
-                     -  If the property value type is
-                        ``PropertyValueType.ThreeD``, the array contains 3
-                        objects.
-                     -  For all other value types, the array contains 1 object.
-===================  ==========================================================
+						- If the property value type is ``PropertyValueType.TwoD``, the array contains 2 objects.
+						- If the property value type is ``PropertyValueType.ThreeD``, the array contains 3 objects.
+						- For all other value types, the array contains 1 object.
+===================	==========================================================
 
 
 **Returns**
@@ -1352,10 +1251,9 @@ Sets the static value of a property that has no keyframes. If the named property
 
 **Parameters**
 
-============  ============================================================
-``newValue``  A value appropriate for the type of property being set; see
-              :ref:`Property.propertyValueType`.
-============  ============================================================
+============	============================================================
+``newValue``	A value appropriate for the type of property being set; see :ref:`Property.propertyValueType`.
+============	============================================================
 
 **Returns**
 
@@ -1376,14 +1274,10 @@ Finds the specified keyframe and sets its value. If the named property has no ke
 
 **Parameters**
 
-============  ================================================================
-``keyIndex``  The index for the keyframe. An integer in the range
-              ``[1..numKeys]``, as returned by the
-              :ref:`addKey <property.addKey>` or
-              :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
-``newValue``  A value appropriate for the type of property being set; see
-              :ref:`Property.propertyValueType`.
-============  ================================================================
+============	================================================================
+``keyIndex``	The index for the keyframe. An integer in the range ``[1..numKeys]``, as returned by the :ref:`addKey <property.addKey>` or :ref:`nearestKeyIndex() <property.nearestKeyIndex>` method.
+``newValue``	A value appropriate for the type of property being set; see :ref:`Property.propertyValueType`.
+============	================================================================
 
 **Returns**
 
@@ -1404,12 +1298,10 @@ Sets the value of a keyframe at the specified time. Creates a new keyframe for t
 
 **Parameters**
 
-============  ================================================================
-``time``      The time in seconds, a floating-point value. The beginning of
-              the composition is 0.
-``newValue``  A value appropriate for the type of property being set; see
-              :ref:`Property.propertyValueType`.
-============  ================================================================
+============	================================================================
+``time``		The time in seconds, a floating-point value. The beginning of the composition is 0.
+``newValue``	A value appropriate for the type of property being set; see :ref:`Property.propertyValueType`.
+============	================================================================
 
 **Returns**
 
@@ -1430,12 +1322,10 @@ Sets values for a set of keyframes at specified of times. Creates a new keyframe
 
 **Parameters**
 
-=============  ===============================================================
-``times``      An array of times, in seconds. Each time is a floating-point
-               value. The beginning of the composition is 0.
-``newValues``  A array of values appropriate for the type of property being
-               set; see :ref:`Property.propertyValueType`.
-=============  ===============================================================
+=============	===============================================================
+``times``		An array of times, in seconds. Each time is a floating-point value. The beginning of the composition is 0.
+``newValues``	A array of values appropriate for the type of property being set; see :ref:`Property.propertyValueType`.
+=============	===============================================================
 
 **Returns**
 
@@ -1455,19 +1345,14 @@ Property.valueAtTime()
 The value of the named property as evaluated at the specified time. Note that the type of value returned is not made explicit; it will be of a different type, depending on the property evaluated.
 
 .. note::
-    As After Effects 13.6, this method now waits for time-intensive expressions, like ``sampleImage``, to finish evaluating before it returns the result.
+	As After Effects 13.6, this method now waits for time-intensive expressions, like ``sampleImage``, to finish evaluating before it returns the result.
 
 **Parameters**
 
-=================  ===========================================================
-``time``           The time in seconds; a floating-point value. The beginning
-                   of the composition is 0.
-``preExpression``  If the property has an expression and this is true, return
-                   the value for the specified time without applying the
-                   expression to it. When false, return the result of
-                   evaluating the expression for the specified time. Ignored if
-                   the property does not have an associated expression.
-=================  ===========================================================
+=================	===========================================================
+``time``		 	The time in seconds; a floating-point value. The beginning of the composition is 0.
+``preExpression``	If the property has an expression and this is true, return the value for the specified time without applying the expression to it. When false, return the result of evaluating the expression for the specified time. Ignored if the property does not have an associated expression.
+=================	===========================================================
 
 **Returns**
 

@@ -11,7 +11,7 @@ Item object
 
 The Item object represents an item that can appear in the Project panel. The first item is at index 1.
 
-    Item is the base class for :ref:`AVItem` and for :ref:`FolderItem`, which are in turn the base classes for various other item types, so Item attributes and methods are available when working with all of these item types.
+	Item is the base class for :ref:`AVItem` and for :ref:`FolderItem`, which are in turn the base classes for various other item types, so Item attributes and methods are available when working with all of these item types.
 
 **Example**
 
@@ -19,27 +19,27 @@ This example gets the second item from the project and checks that it is a folde
 
 ::
 
-    var myFolder = app.project.item(2);
-    if (myFolder.typeName != "Folder") {
-        alert("error: second item is not a folder");
-    }
-    else {
-        var numInFolder = myFolder.numItems;
-        //Always run loops backwards when deleting things:
-        for(i = numInFolder; i >= 1; i--) {
-            var curItem = myFolder.item(i);
-            if(curItem.parentFolder != myFolder) {
-                alert("error within AE: the parentFolder is not set correctly");
-            }
-            else {
-                if(!curItem.selected && curItem.typeName == "Footage")
-                {
-                    //found an unselected solid.
-                    curItem.remove();
-                }
-            }
-        }
-    }
+	var myFolder = app.project.item(2);
+	if (myFolder.typeName != "Folder") {
+		alert("error: second item is not a folder");
+	}
+	else {
+		var numInFolder = myFolder.numItems;
+		//Always run loops backwards when deleting things:
+		for (i = numInFolder; i >= 1; i--) {
+			var curItem = myFolder.item(i);
+			if (curItem.parentFolder != myFolder) {
+				alert("error within AE: the parentFolder is not set correctly");
+			}
+			else {
+			if (!curItem.selected && curItem.typeName == "Footage")
+				{
+					//found an unselected solid.
+					curItem.remove();
+				}
+			}
+		}
+	}
 
 ----
 
@@ -136,15 +136,15 @@ This script creates a new FolderItem in the Project panel and moves compositions
 
 ::
 
-    //create a new FolderItem in project, with name "comps"
-    var compFolder = app.project.items.addFolder("comps");
+	//create a new FolderItem in project, with name "comps"
+	var compFolder = app.project.items.addFolder("comps");
 
-    //move all compositions into new folder by setting
-    //compItem’s parentFolder to "comps" folder
-    for(var i = 1; i <= app.project.numItems; i++){
-        if(app.project.item(i) instanceof CompItem)
-          app.project.item(i).parentFolder = compFolder;
-    }
+	//move all compositions into new folder by setting
+	//compItem’s parentFolder to "comps" folder
+	for (var i = 1; i <= app.project.numItems; i++) {
+		if (app.project.item(i) instanceof CompItem)
+			app.project.item(i).parentFolder = compFolder;
+	}
 
 ----
 

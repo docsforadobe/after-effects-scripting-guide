@@ -7,20 +7,17 @@ Global functions
 These globally available functions that are specific to After Effects. Any JavaScript object or function can call these functions, which allow you to display text in a small (3-line) area of the Info panel, to convert numeric time values to and from string values, or to generate a random number.
 
 
-==========================  ===================================================
-Global function             Description
-==========================  ===================================================
-``clearOutput()``           Clears text from the Info panel.
-``currentFormatToTime()``   Converts string time value to a numeric time value.
-``generateRandomNumber()``  Generates a random number.
-``timeToCurrentFormat()``   Converts a numeric time value to a string time
-                            value.
-``write()``                 Writes text to the Info panel, with no line break
-                            added.
-``writeLn()``               Writes text to the Info panel, adding a line break
-                            at the end.
-``isValid()``               When true, the specified object exists.
-==========================  ===================================================
+==========================	===================================================
+Global function				Description
+==========================	===================================================
+``clearOutput()``			Clears text from the Info panel.
+``currentFormatToTime()``	Converts string time value to a numeric time value.
+``generateRandomNumber()``	Generates a random number.
+``timeToCurrentFormat()``	Converts a numeric time value to a string time value.
+``write()``					Writes text to the Info panel, with no line break added.
+``writeLn()``				Writes text to the Info panel, adding a line break at the end.
+``isValid()``				When true, the specified object exists.
+==========================	===================================================
 
 Additional global functions for standard user I/O (``alert``, ``confirm`` , and ``prompt``) and static functions for file I/O, are defined by ExtendScript; for detailed reference information, see the JavaScript Tools Guide (available from the ExtendScript Toolkit’s Help menu).
 
@@ -60,14 +57,11 @@ Converts a formatted string for a frame time value to a number of seconds, given
 
 **Parameters**
 
-=================  ============================================================
-``formattedTime``  The frame time value, a string specifying a number of
-                   frames in the project’s current time display format.
-``fps``            The frames-per-second, a floating-point value.
-``isDuration``     Optional. When true, the time is a duration (measured from
-                   frame 0). When false (the default), the time is measured
-                   from the project’s starting frame.
-=================  ============================================================
+=================	============================================================
+``formattedTime``	The frame time value, a string specifying a number of frames in the project’s current time display format.
+``fps``				The frames-per-second, a floating-point value.
+``isDuration``		Optional. When true, the time is a duration (measured from frame 0). When false (the default), the time is measured from the project’s starting frame.
+=================	============================================================
 
 **Returns**
 
@@ -83,7 +77,7 @@ generateRandomNumber()
 ``generateRandomNumber()``
 
 .. note::
-   This functionality was added in After Effects 13.6
+	This functionality was added in After Effects 13.6
 
 **Description**
 
@@ -99,20 +93,20 @@ Floating-point, pseudo-random number in the range [0, 1].
 
 ::
 
-    // change the position X of all layers with random number
+	// change the position X of all layers with random number
 
-    var myComp = app.project.activeItem;
-    var x = 0;
+	var myComp = app.project.activeItem;
+	var x = 0;
 
-    for (var i = 1; i <= myComp.numLayers; i++) {
-        // If you use Math.random(), this does not work
-        // x = 400*(Math.random()) – 200;
-        // use new generateRandomNumber() instead
+	for (var i = 1; i <= myComp.numLayers; i++) {
+		// If you use Math.random(), this does not work
+		// x = 400*(Math.random()) – 200;
+		// use new generateRandomNumber() instead
 
-        x = 400*(generateRandomNumber()) – 200;
-        currentPos = myComp.layer(i).property(“Position”).value;
-        myComp.layer(i).property(“Position”).setValue([currentPos[0]+x,currentPos[1]]);
-    }
+		x = 400*(generateRandomNumber()) – 200;
+		currentPos = myComp.layer(i).property(“Position”).value;
+		myComp.layer(i).property(“Position”).setValue([currentPos[0]+x,currentPos[1]]);
+	}
 
 ----
 
@@ -129,9 +123,9 @@ Determines if the specified After Effects object (e.g., composition, layer, mask
 
 **Parameters**
 
-=======  ===============================================
-``obj``  The After Effects object to check for validity.
-=======  ===============================================
+=======	===============================================
+``obj``	The After Effects object to check for validity.
+=======	===============================================
 
 **Returns**
 
@@ -141,13 +135,13 @@ Boolean.
 
 ::
 
-    var layer = app.project.activeItem.layer(1); // assume layer has three masks
-    alert(isValid(layer)); // displays "true"
-    var mask1 = layer.mask(1);
-    var mask2 = layer.mask(2);
-    var mask3 = layer.mask(3);
-    mask3.moveTo(1); // move the third mask to the top of the mask stack
-    alert(isValid(mask1)); // displays "false"; mask2 and mask3 do as well
+	var layer = app.project.activeItem.layer(1); // assume layer has three masks
+	alert(isValid(layer)); // displays "true"
+	var mask1 = layer.mask(1);
+	var mask2 = layer.mask(2);
+	var mask3 = layer.mask(3);
+	mask3.moveTo(1); // move the third mask to the top of the mask stack
+	alert(isValid(mask1)); // displays "false"; mask2 and mask3 do as well
 
 ----
 
@@ -164,13 +158,11 @@ Converts a numeric time value (a number of seconds) to a frame time value; that 
 
 **Parameters**
 
-==============  ===============================================================
-``time``        The number of seconds, a floating-point value.
-``fps``         The frames-per-second, a floating-point value.
-``isDuration``  Optional. When true, the time is a duration (measured from
-                frame 0). When false (the default), the time is measured from
-                the project’s starting frame.
-==============  ===============================================================
+==============	===============================================================
+``time``		The number of seconds, a floating-point value.
+``fps``			The frames-per-second, a floating-point value.
+``isDuration``	Optional. When true, the time is a duration (measured from frame 0). When false (the default), the time is measured from the project’s starting frame.
+==============	===============================================================
 
 **Returns**
 
@@ -201,8 +193,8 @@ Nothing.
 
 ::
 
-    write("This text appears in Info panel ");
-    write("with more on same line.");
+	write("This text appears in Info panel ");
+	write("with more on same line.");
 
 ----
 
@@ -229,5 +221,5 @@ Nothing.
 
 ::
 
-    writeln("This text appears on first line");
-    writeln("This text appears on second line");
+	writeln("This text appears on first line");
+	writeln("This text appears on second line");

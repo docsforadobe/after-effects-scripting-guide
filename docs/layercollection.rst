@@ -10,7 +10,7 @@ LayerCollection object
 
 The LayerCollection object represents a set of layers. The LayerCollection belonging to a :ref:`CompItem` contains all the layer objects for layers in the composition. The methods of the collection object allow you to manipulate the layer list.
 
-    LayerCollection is a subclass of :ref:`Collection`. All methods and attributes of Collection, in addition to those listed below, are available when working with LayerCollection.
+	LayerCollection is a subclass of :ref:`Collection`. All methods and attributes of Collection, in addition to those listed below, are available when working with LayerCollection.
 
 **Example**
 
@@ -18,12 +18,12 @@ Given that the first item in the project is a CompItem and the second item is an
 
 ::
 
-    var firstComp = app.project.item(1);
-    var layerCollection = firstComp.layers;
-    alert("number of layers before is" + layerCollection.length);
-    var anAVItem = app.project.item(2);
-    layerCollection.add(anAVItem);
-    alert("number of layers after is"+layerCollection.length);
+	var firstComp = app.project.item(1);
+	var layerCollection = firstComp.layers;
+	alert("number of layers before is" + layerCollection.length);
+	var anAVItem = app.project.item(2);
+	layerCollection.add(anAVItem);
+	alert("number of layers after is"+layerCollection.length);
 
 ----
 
@@ -44,19 +44,10 @@ Creates a new :ref:`AVLayer` containing the specified item, and adds it to this 
 
 **Parameters**
 
-============  ================================================================
-``item``      The AVItem object for the item to be added.
-``duration``  Optional, the length of a still layer in seconds, a
-              floating-point value. Used only if the item contains a piece of
-              still footage. Has no effect on movies, sequences or audio. If
-              supplied, sets the du r at i on value of the new layer.
-              Otherwise, the duration value is set according to user
-              preferences. By default, this is the same as the duration of the
-              containing CompItem. To set another preferred value, choose
-              Edit > Preferences > Import (Windows) or After Effects >
-              Preferences > Import (Mac OS), and specify options under Still
-              Footage.
-============  ================================================================
+============	================================================================
+``item``		The AVItem object for the item to be added.
+``duration``	Optional, the length of a still layer in seconds, a floating-point value. Used only if the item contains a piece of still footage. Has no effect on movies, sequences or audio. If supplied, sets the du r at i on value of the new layer. Otherwise, the duration value is set according to user preferences. By default, this is the same as the duration of the containing CompItem. To set another preferred value, choose Edit > Preferences > Import (Windows) or After Effects > Preferences > Import (Mac OS), and specify options under Still Footage.
+============	================================================================
 
 **Returns**
 
@@ -77,11 +68,9 @@ Creates a new paragraph (box) text layer and adds the new :ref:`TextLayer` to th
 
 **Parameters**
 
-==============  ===============================================================
-``sourceText``  Optional; a string containing the source text of the new layer,
-                or a :ref:`TextDocument` containing the source text of the new
-                layer.
-==============  ===============================================================
+==============	===============================================================
+``sourceText``	Optional; a string containing the source text of the new layer, or a :ref:`TextDocument` containing the source text of the new layer.
+==============	===============================================================
 
 **Returns**
 
@@ -102,12 +91,10 @@ Creates a new camera layer and adds the :ref:`CameraLayer` to this collection. T
 
 **Parameters**
 
-===============  =============================================================
-``name``         A string containing the name of the new layer.
-``centerPoint``  The center of the new camera, a floating-point array [x, y].
-                 This is used to set the initial x and y values of the new
-                 camera’s Point of Interest property. The z value is set to 0.
-===============  =============================================================
+===============	=============================================================
+``name``		A string containing the name of the new layer.
+``centerPoint``	The center of the new camera, a floating-point array [x, y]. This is used to set the initial x and y values of the new camera’s Point of Interest property. The z value is set to 0.
+===============	=============================================================
 
 **Returns**
 
@@ -128,10 +115,10 @@ Creates a new light layer and adds the :ref:`LightLayer` to this collection. The
 
 **Parameters**
 
-===============  ===========================================================
-``name``         A string containing the name of the new layer.
-``centerPoint``  The center of the new light, a floating-point array [x, y].
-===============  ===========================================================
+===============	===========================================================
+``name``		A string containing the name of the new layer.
+``centerPoint``	The center of the new light, a floating-point array [x, y].
+===============	===========================================================
 
 **Returns**
 
@@ -152,16 +139,9 @@ Creates a new null layer and adds the :ref:`AVLayer` to this collection. This is
 
 **Parameters**
 
-============  ================================================================
-``duration``  Optional, the length of a still layer in seconds, a
-              floating-point value. If supplied, sets the ``duration`` value of
-              the new layer. Otherwise, the ``duration`` value is set according
-              to user preferences. By default, this is the same as the duration
-              of the containing CompItem. To set another preferred value,
-              choose Edit > Preferences > Import (Windows) or After Effects >
-              Preferences > Import (Mac OS), and specify options under Still
-              Footage.
-============  ================================================================
+============	================================================================
+``duration``	Optional, the length of a still layer in seconds, a floating-point value. If supplied, sets the ``duration`` value of the new layer. Otherwise, the ``duration`` value is set according to user preferences. By default, this is the same as the duration of the containing CompItem. To set another preferred value, choose Edit > Preferences > Import (Windows) or After Effects > Preferences > Import (Mac OS), and specify options under Still Footage.
+============	================================================================
 
 **Returns**
 
@@ -203,26 +183,14 @@ Creates a new :ref:`SolidSource`, with values set as specified; sets the new Sol
 
 **Parameters**
 
-===============  =============================================================
-``color``        The color of the solid, an array of three floating-point
-                 values,
-                 ``[R, G, B]``, intherange ``[0.0..1.0]``.
-``name``         A string containing the name of the solid.
-``width``        The width of the solid in pixels, an integer in the range
-                 ``[4..30000]``.
-``height``       The height of the solid in pixels, an integer in the range
-                 ``[4..30000]``.
-``pixelAspect``  The pixel aspect ratio of the solid, a floating-point value
-                 in the range ``[0.01..100.0]``.
-``duration``     Optional, the length of a still layer in seconds, a
-                 floating-point value. If supplied, sets the ``duration``
-                 value of the new layer. Otherwise, the ``duration`` value is
-                 set according to user preferences. By default, this is the
-                 same as the duration of the containing CompItem. To set
-                 another preferred value, choose Edit > Preferences > Import
-                 (Windows) or After Effects > Preferences > Import (MacOS), and
-                 specify options under Still Footage.
-===============  =============================================================
+===============	=============================================================
+``color``		The color of the solid, an array of three floating-point values, ``[R, G, B]``, in the range ``[0.0..1.0]``.
+``name``		A string containing the name of the solid.
+``width``		The width of the solid in pixels, an integer in the range ``[4..30000]``.
+``height``		The height of the solid in pixels, an integer in the range ``[4..30000]``.
+``pixelAspect``	The pixel aspect ratio of the solid, a floating-point value in the range ``[0.01..100.0]``.
+``duration``	Optional, the length of a still layer in seconds, a floating-point value. If supplied, sets the ``duration`` value of the new layer. Otherwise, the ``duration`` value is set according to user preferences. By default, this is the same as the duration of the containing CompItem. To set another preferred value, choose Edit > Preferences > Import (Windows) or After Effects > Preferences > Import (MacOS), and specify options under Still Footage.
+===============	=============================================================
 
 **Returns**
 
@@ -243,11 +211,9 @@ Creates a new point text layer and adds the new :ref:`TextLayer` to this collect
 
 **Parameters**
 
-==============  ===============================================================
-``sourceText``  Optional; a string containing the source text of the new
-                layer, or a :ref:`TextDocument` containing the source text of
-                the new layer.
-==============  ===============================================================
+==============	===============================================================
+``sourceText``	Optional; a string containing the source text of the new layer, or a :ref:`TextDocument` containing the source text of the new layer.
+==============	===============================================================
 
 **Returns**
 
@@ -268,9 +234,9 @@ Returns the first (topmost) layer found in this collection with the specified na
 
 **Parameters**
 
-========  =============================
-``name``  A string containing the name.
-========  =============================
+========	=============================
+``name``	A string containing the name.
+========	=============================
 
 **Returns**
 
@@ -291,19 +257,11 @@ Creates a new :ref:`CompItem` and moves the specified layers into its layer coll
 
 **Parameters**
 
-=====================  ========================================================
-``layerIndices``       The position indexes of the layers to be collected. An
-                       array of integers.
-``name``               The name of the new CompItem object.
-``moveAllAttributes``  Optional. When true (the default), retains all
-                       attributes in the new composition. This is the same as
-                       selecting the "Move all attributes into the new
-                       composition" option in the Pre-compose dialog box. You
-                       can only set this to false if there is just one index in
-                       the ``layerIndices`` array. This is the same as
-                       selecting the "Leave all attributes in" option in the
-                       Pre-compose dialog box.
-=====================  ========================================================
+=====================	========================================================
+``layerIndices``		The position indexes of the layers to be collected. An array of integers.
+``name``				The name of the new CompItem object.
+``moveAllAttributes``	Optional. When true (the default), retains all attributes in the new composition. This is the same as selecting the "Move all attributes into the new composition" option in the Pre-compose dialog box. You can only set this to false if there is just one index in the ``layerIndices`` array. This is the same as selecting the "Leave all attributes in" option in the Pre-compose dialog box.
+=====================	========================================================
 
 **Returns**
 

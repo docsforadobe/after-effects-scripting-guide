@@ -15,7 +15,7 @@ The heart of a scriptable application is the object model. When you use Adobe Af
 The After Effects object model is composed of a project, items, compositions, layers, and render queue items. Each object has its own special attributes, and every object in an After Effects project has its own identity (although not all are accessible to scripting). You should be familiar with the After Effects object model in order to create scripts.
 
 .. note::
-   JavaScript objects normally referred to as "properties" are consistently called "attributes" in this guide, to avoid confusion with After Effects' own definition of a property (an animatable value of an effect, mask, or transform within an individual layer).
+	JavaScript objects normally referred to as "properties" are consistently called "attributes" in this guide, to avoid confusion with After Effects' own definition of a property (an animatable value of an effect, mask, or transform within an individual layer).
 
 Nearly all of what scripting can accomplish replicates what can be done by means of the After Effects graphical user interface. A thorough knowledge of the application itself and its graphical user interface is essential to understanding how to use scripting in After Effects.
 
@@ -89,7 +89,7 @@ Example (for Windows):
 
 .. code-block:: bat
 
-  afterfx -r c:\script_path\example_script.jsx
+	afterfx -r c:\script_path\example_script.jsx
 
 You can use this command-line technique—together with the software that comes with a customizable keyboard—to bind the invocation of a script to a keyboard shortcut.
 
@@ -97,13 +97,13 @@ Following are examples of Windows command-line entries that will send an After E
 
 In the first example, you copy and paste your After Effects script directly on the command line and then run it. The script text appears in quotation marks following the afterfx.exe -s command::
 
-  afterfx.exe -s "alert("You just sent an alert to After Effects")"
+	afterfx.exe -s "alert("You just sent an alert to After Effects")"
 
 Alternatively, you can specify the location of the JSX file to be executed. For example:
 
 .. code-block:: bat
 
-  afterfx.exe -r c:\myDocuments\Scripts\yourAEScriptHere.jsx afterfx.exe -r "c:\myDocuments\Scripts\Script Name with Spaces.jsx"
+	afterfx.exe -r c:\myDocuments\Scripts\yourAEScriptHere.jsx afterfx.exe -r "c:\myDocuments\Scripts\Script Name with Spaces.jsx"
 
 How to include After Effects scripting in an AppleScript (Mac OS)
 *****************************************************************************
@@ -114,18 +114,18 @@ In the first example, you copy your After Effects script directly into the Scrip
 
 .. code-block:: AppleScript
 
-  tell application "Adobe After Effects CS6"
-      DoScript "alert(\"You just sent an alert to After Effects\")"
-  end tell
+	tell application "Adobe After Effects CS6"
+		DoScript "alert(\"You just sent an alert to After Effects\")"
+	end tell
 
 Alternatively, you could display a dialog box asking for the location of the JSX file to be executed, as follows:
 
 .. code-block:: AppleScript
 
-  set theFile to choose file
-  tell application "Adobe After Effects CS6"
-      DoScript theFile
-  end tell
+	set theFile to choose file
+	tell application "Adobe After Effects CS6"
+		DoScript theFile
+	end tell
 
 Finally, this script is perhaps most useful when you are working directly on editing a JSX script and want to send it to After Effects for testing or to run. To use it effectively you must enter the application that contains the open JSX file (in this example it is TextEdit); if you do not know the proper name of the application, type in your best guess to replace “TextEdit” and AppleScript prompts you to locate it.
 
@@ -133,17 +133,17 @@ Simply highlight the script text that you want to run, and then activate this Ap
 
 .. code-block:: AppleScript
 
-  (*
-  This script sends the current selection to After Effects as a script.
-  *)
+	(*
+	This script sends the current selection to After Effects as a script.
+	*)
 
-  tell application "TextEdit"
-      set the_script to text of front document
-  end tell
+	tell application "TextEdit"
+		set the_script to text of front document
+	end tell
 
-  tell application "Adobe After Effects CS6" activate
-      DoScript the_script
-  end tell
+	tell application "Adobe After Effects CS6" activate
+		DoScript the_script
+	end tell
 
 Running scripts automatically during application startup or shutdown
 **************************************************************************
@@ -166,27 +166,27 @@ Scripts in the ScriptUI Panels folder are available from the bottom of the Windo
 
 Instead of creating a Window object and adding controls to it, a ScriptUI Panels script uses the ``this`` object that represents the panel. For example, the following code adds a button to a panel::
 
-  var myPanel = this;
-  myPanel.add("button", [10, 10, 100, 30], "Tool #1");
+	var myPanel = this;
+	myPanel.add("button", [10, 10, 100, 30], "Tool #1");
 
 If your script creates its user interface in a function, you cannot use t h i s as it will refer to the function itself, not the panel. In this case, you should pass the t h i s object as an argument to your function. For example::
 
-  function createUI(thisObj) {
-      var myPanel = thisObj;
-      myPanel.add("button", [10, 10, 100, 30], "Tool #1");
-      return myPanel;
-  }
-  var myToolsPanel = createUI(this);
+	function createUI(thisObj) {
+		var myPanel = thisObj;
+		myPanel.add("button", [10, 10, 100, 30], "Tool #1");
+		return myPanel;
+	}
+	var myToolsPanel = createUI(this);
 
 You cannot use the File > Scripts > Run Script File menu command to run a script that refers to this. To make your script work with either a Window object (accessible from the File > Scripts menu) or a native panel (accessible from the Window menu), check whether this is a Panel object. For example::
 
-  function createUI(thisObj) {
-      var myPanel = (thisObj instanceof Panel) ? thisObj : new Window("palette", "My Tools",
-      [100, 100, 300, 300]);
-      myPanel.add("button", [10, 10, 100, 30], "Tool #1");
-      return myPanel;
-  }
-  var myToolsPanel = createUI(this);
+	function createUI(thisObj) {
+		var myPanel = (thisObj instanceof Panel) ? thisObj : new Window("palette", "My Tools",
+		[100, 100, 300, 300]);
+		myPanel.add("button", [10, 10, 100, 30], "Tool #1");
+		return myPanel;
+	}
+	var myToolsPanel = createUI(this);
 
 Stopping a running script
 *************************

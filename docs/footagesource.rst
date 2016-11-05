@@ -10,7 +10,7 @@ FootageSource object
 
 The FootageSource object holds information describing the source of some footage. It is used as the ``mainSource`` of a :ref:`FootageItem`, or the ``proxySource`` of a :ref:`CompItem` or FootageItem.
 
-    FootageSource is the base class for :ref:`SolidSource`, so FootageSource attributes and methods are available when working with SolidSource objects.
+	FootageSource is the base class for :ref:`SolidSource`, so FootageSource attributes and methods are available when working with SolidSource objects.
 
 ----
 
@@ -33,9 +33,9 @@ The.alphaMode of footageSource defines how the alpha information in the footage 
 **Type**
 
 An A lpha Mo d e enumerated value; (read/write). One of:
--  ``AlphaMode.IGNORE``
--  ``AlphaMode.STRAIGHT``
--  ``AlphaMode.PREMULTIPLIED``
+- ``AlphaMode.IGNORE``
+- ``AlphaMode.STRAIGHT``
+- ``AlphaMode.PREMULTIPLIED``
 
 ----
 
@@ -91,9 +91,9 @@ How the fields are to be separated in non-still footage. It is an error to set t
 
 A ``FieldSeparationType`` enumerated value; read/write. One of:
 
--  ``FieldSeparationType.OFF``
--  ``FieldSeparationType.UPPER_FIELD_FIRST``
--  ``FieldSeparationType.LOWER_FIELD_FIRST``
+- ``FieldSeparationType.OFF``
+- ``FieldSeparationType.UPPER_FIELD_FIRST``
+- ``FieldSeparationType.LOWER_FIELD_FIRST``
 
 ----
 
@@ -239,17 +239,17 @@ How the pulldowns are to be removed when field separation is used. It is an erro
 
 A ``PulldownPhase`` enumerated value; read/write. One of:
 
--  ``PulldownPhase.RemovePulldown.OFF``
--  ``PulldownPhase.RemovePulldown.WSSWW``
--  ``PulldownPhase.RemovePulldown.SSWWW``
--  ``PulldownPhase.RemovePulldown.SWWWS``
--  ``PulldownPhase.RemovePulldown.WWWSS``
--  ``PulldownPhase.RemovePulldown.WWSSW``
--  ``PulldownPhase.RemovePulldown.WSSWW_24P_ADVANCE``
--  ``PulldownPhase.RemovePulldown.SSWWW_24P_ADVANCE``
--  ``PulldownPhase.RemovePulldown.SWWWS_24P_ADVANCE``
--  ``PulldownPhase.RemovePulldown.WWWSS_24P_ADVANCE``
--  ``PulldownPhase.RemovePulldown.WWSSW_24P_ADVANCE``
+- ``PulldownPhase.RemovePulldown.OFF``
+- ``PulldownPhase.RemovePulldown.WSSWW``
+- ``PulldownPhase.RemovePulldown.SSWWW``
+- ``PulldownPhase.RemovePulldown.SWWWS``
+- ``PulldownPhase.RemovePulldown.WWWSS``
+- ``PulldownPhase.RemovePulldown.WWSSW``
+- ``PulldownPhase.RemovePulldown.WSSWW_24P_ADVANCE``
+- ``PulldownPhase.RemovePulldown.SSWWW_24P_ADVANCE``
+- ``PulldownPhase.RemovePulldown.SWWWS_24P_ADVANCE``
+- ``PulldownPhase.RemovePulldown.WWWSS_24P_ADVANCE``
+- ``PulldownPhase.RemovePulldown.WWSSW_24P_ADVANCE``
 
 ----
 
@@ -293,13 +293,12 @@ Sets ``fieldSeparationType`` and :ref:`removePulldown <FootageSource.removePulld
 
 **Parameters**
 
-==========  =================================================================
-``method``  The method to use for estimation. A ``PulldownMethod`` enumerated
-            value, one of:
+==========	=================================================================
+``method``	The method to use for estimation. A ``PulldownMethod`` enumerated value, one of:
 
-            -  ``PulldownMethod.PULLDOWN_3_2``
-            -  ``PulldownMethod.ADVANCE_24P``
-==========  =================================================================
+				- ``PulldownMethod.PULLDOWN_3_2``
+				- ``PulldownMethod.ADVANCE_24P``
+==========	=================================================================
 
 **Returns**
 
