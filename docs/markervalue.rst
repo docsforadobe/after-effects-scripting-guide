@@ -12,22 +12,22 @@ The MarkerValue object represents a layer, or composition, marker, which associa
 
 **Examples**
 
-- To set a marker that says "Fade Up" at the 2 second mark:
+-  To set a marker that says "Fade Up" at the 2 second mark:
 
-	::
+  ::
 
-		var myMarker = new MarkerValue("FadeUp");
-		myLayer.property("Marker").setValueAtTime(2, myMarker);
+      var myMarker = new MarkerValue("FadeUp");
+      myLayer.property("Marker").setValueAtTime(2, myMarker);
 
 - To get comment values from a particular marker:
 
-	::
+  ::
 
-		var commentOfFirstMarker = app.project.item(1).layer(1).property("Marker").keyValue(1).comment;
-		var commentOfMarkerAtTime4 = app.project.item(1).layer(1).property("Marker").valueAtTime(4.0, true).comment
-		var markerProperty = app.project.item(1).layer(1).property("Marker");
-		var markerValueAtTimeClosestToTime4 = markerProperty.keyValue(markerProperty.nearestKeyIndex(4.0));
-		var commentOfMarkerClosestToTime4 = markerValueAtTimeClosestToTime4.comment;
+      var commentOfFirstMarker = app.project.item(1).layer(1).property("Marker").keyValue(1).comment;
+      var commentOfMarkerAtTime4 = app.project.item(1).layer(1).property("Marker").valueAtTime(4.0, true).comment
+      var markerProperty = app.project.item(1).layer(1).property("Marker");
+      var markerValueAtTimeClosestToTime4 = markerProperty.keyValue(markerProperty.nearestKeyIndex(4.0));
+      var commentOfMarkerClosestToTime4 = markerValueAtTimeClosestToTime4.comment;
 
 ----
 
@@ -192,9 +192,11 @@ Associates a set of key-value pairs for Flash Video cue-point parameters, for a 
 
 **Parameters**
 
-==================	===========================================================
-``keyValuePairs``	An object containing the key-value pairs as attributes and values. The object’s ``toString()`` method is called to assign the string value of each attribute to the named key.
-==================	===========================================================
+==================  ===========================================================
+``keyValuePairs``   An object containing the key-value pairs as attributes and
+                    values. The object’s ``toString()`` method is called to
+                    assign the string value of each attribute to the named key.
+==================  ===========================================================
 
 **Returns**
 
@@ -204,9 +206,9 @@ Nothing.
 
 ::
 
-	var mv = new MarkerValue("MyMarker");
-	var parms = new Object;
-	parms.timeToBlink = 1;
-	parms.assignMe = "A string"
-	mv.setParameters(parms);
-	myLayer.property("Marker").setValueAtTime(2, mv);
+    var mv = new MarkerValue("MyMarker");
+    var parms = new Object;
+    parms.timeToBlink = 1;
+    parms.assignMe = "A string"
+    mv.setParameters(parms);
+    myLayer.property("Marker").setValueAtTime(2, mv);

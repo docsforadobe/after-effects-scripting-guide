@@ -10,36 +10,36 @@ PropertyBase object
 
 Properties are accessed by name through layers, using various kinds of expression syntax, as controlled by application preferences. For example, the following are all ways of access properties in the Effects group::
 
-	var effect1 = app.project.item(1).layer(1).effect("AddGrain")("Viewing Mode");
-	var effect1again = app.project.item(1).layer(1).effect.addGrain.viewingMode;
-	var effect1againtoo = app.project.item(1).layer(1)("Effects").addGrain.viewingMode;
-	var effect1againtoo2 = app.project.item(1).layer(1)("Effects")("Add Grain")("Viewing Mode");
+    var effect1 = app.project.item(1).layer(1).effect("AddGrain")("Viewing Mode");
+    var effect1again = app.project.item(1).layer(1).effect.addGrain.viewingMode;
+    var effect1againtoo = app.project.item(1).layer(1)("Effects").addGrain.viewingMode;
+    var effect1againtoo2 = app.project.item(1).layer(1)("Effects")("Add Grain")("Viewing Mode");
 
 See also :ref:`PropertyGroup.property`.
 
-	PropertyBase is the base class for both :ref:`Property <property>` and :ref:`PropertyGroup <propertygroup>`, so PropertyBase attributes and methods are available when working with properties and property groups.
+    PropertyBase is the base class for both :ref:`Property <property>` and :ref:`PropertyGroup <propertygroup>`, so PropertyBase attributes and methods are available when working with properties and property groups.
 
 **Reference invalidation**
 
 When something occurs that changes an object sufficiently for the reference to become invalid, script references to that object can generate errors. In simple cases this is straightforward. For example, if you delete anobject, a reference to the deleted object generates the warning "Object is Invalid"::
 
-	var layer1 = app.project.item(1).layer(1);
-	layer1.remove();
-	alert(layer1.name); // invalid reference to deleted object
+    var layer1 = app.project.item(1).layer(1);
+    layer1.remove();
+    alert(layer1.name); // invalid reference to deleted object
 
 Similarly, if you reference an AE property in a deleted object, the warning occurs::
-	var layer1 = app.project.item(1).layer(1);
-	var layer1position = layer1.transform.position;
-	layer1.remove();
-	alert(layer1position.value); // invalid reference to property inselected object
+    var layer1 = app.project.item(1).layer(1);
+    var layer1position = layer1.transform.position;
+    layer1.remove();
+    alert(layer1position.value); // invalid reference to property inselected object
 
 A less straightforward case is when a property is removed from a property group. In this case, After Effectsgenerates the "Object is Invalid" error when you subsequently reference that item or other items in the group,because their index positions have changed. For example::
 
-	var effect1 = app.project.item(1).layer(1).effect(1);
-	var effect2 = app.project.item(1).layer(1).effect(2);
-	var effect2param = app.project.item(1).layer(1).effect(2).blendWithOriginal;
-	effect1.remove();
-	alert(effect2.name); // invalid reference because group index positions have changed
+    var effect1 = app.project.item(1).layer(1).effect(1);
+    var effect2 = app.project.item(1).layer(1).effect(2);
+    var effect2param = app.project.item(1).layer(1).effect(2).blendWithOriginal;
+    effect1.remove();
+    alert(effect2.name); // invalid reference because group index positions have changed
 
 ----
 
@@ -92,11 +92,11 @@ PropertyBase.elided
 
 When true, this property is a group used to organize other properties. The property is not displayed in the user interface and its child properties are not indented in the Timeline panel.For example, for a text layer with two animators and no properties twirled down, you might see:
 
-- ``Text``
-- ``PathOptions``
-- ``MoreOptions``
-- ``Animator1``
-- ``Animator2``
+-  ``Text``
+-  ``PathOptions``
+-  ``MoreOptions``
+-  ``Animator1``
+-  ``Animator2``
 
 In this example, "Animator 1" and "Animator 2" are contained in a PropertyBase called "Text Animators." This parent group is not displayed in the user interface, and so the two child properties are not indented in the Timeline panel.
 
@@ -274,9 +274,9 @@ The type of this property.
 
 A ``PropertyType`` enumerated value; read/write. One of:
 
-- ``PropertyType.PROPERTY``: A single property such as position or zoom.
-- ``PropertyType.INDEXED_GROUP``: A property group whose members have an editable name and an index. Effects and masks are indexed groups. For example, the masks property of a layer refers to a variable number of individual masks by index number.
-- ``PropertyType.NAMED_GROUP``: A property group in which the member names are not editable. Layers are named groups.
+-  ``PropertyType.PROPERTY``: A single property such as position or zoom.
+-  ``PropertyType.INDEXED_GROUP``: A property group whose members have an editable name and an index. Effects and masks are indexed groups. For example, the masks property of a layer refers to a variable number of individual masks by index number.
+-  ``PropertyType.NAMED_GROUP``: A property group in which the member names are not editable. Layers are named groups.
 
 ----
 
@@ -332,13 +332,14 @@ PropertyBase.moveTo()
 Moves this property to a new position in its parent property group.This method is valid only for children of indexed groups; if it is not, or if the index value is not valid, the method generates an exception and displays an error. (An indexed group has the type ``PropertyType.INDEXED_GROUP``; see :ref:`PropertyBase.propertyType`.)
 
 .. warning::
-	Using this method invalidates existing references to other children in the same indexed group. For example, if you have three effects on a layer, each effect assigned to a different variable, moving one of the effectsinvalidates the references for all of these variables. You will need to reassign them.
+   Using this method invalidates existing references to other children in the same indexed group. For example, if you have three effects on a layer, each effect assigned to a different variable, moving one of the effectsinvalidates the references for all of these variables. You will need to reassign them.
 
 **Parameters**
 
-============	=============================================================
-``newIndex``	The new index position at which to place this property in its group. An integer.
-============	=============================================================
+============  =============================================================
+``newIndex``  The new index position at which to place this property in its
+              group. An integer.
+============  =============================================================
 
 **Returns**
 
@@ -359,9 +360,11 @@ Gets the PropertyGroup object for an ancestor group of this property at a specif
 
 **Parameters**
 
-===========	==================================================================
-``countUp``	Optional. The number of levels to ascend within the parent-child hierarchy. An integer in the range ``[1..propertyDepth]``. Default is 1, which gets the immediate parent.
-===========	==================================================================
+===========  ==================================================================
+``countUp``  Optional. The number of levels to ascend within the parent-child
+             hierarchy. An integer in the range ``[1..propertyDepth]``. Default
+             is 1, which gets the immediate parent.
+===========  ==================================================================
 
 **Returns**
 

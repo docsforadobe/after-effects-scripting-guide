@@ -10,9 +10,9 @@ PropertyGroup object
 
 The PropertyGroup object represents a group of properties. It can contain Property objects and other PropertyGroup objects. Property groups can be nested to provide a parent-child hierarchy, with a Layer object at the top (root) down to a single Property object, such as the mask feather of the third mask. To traverse the group hierarchy, use PropertyBase methods and attributes; see :ref:`PropertyBase.propertyGroup`. For examples of how to access properties and property groups, see :ref:`PropertyBase`.
 
-	PropertyGroup is a subclass of :ref:`PropertyBase <PropertyBase>`. All methods and attributes of PropertyBase, in addition to those listed below, are available when working with PropertyGroup.
+    PropertyGroup is a subclass of :ref:`PropertyBase <PropertyBase>`. All methods and attributes of PropertyBase, in addition to those listed below, are available when working with PropertyGroup.
 
-	PropertyGroup is a base class for :ref:`MaskPropertyGroup <MaskPropertyGroup>`. PropertyGroup attributes and methods are available when working with mask groups.
+    PropertyGroup is a base class for :ref:`MaskPropertyGroup <MaskPropertyGroup>`. PropertyGroup attributes and methods are available when working with mask groups.
 
 ----
 
@@ -54,16 +54,22 @@ Creates and returns a PropertyBase object with the specified name, and adds it t
 
 **Parameters**
 
-========	=====================================================================
-``name``	The display name or match name of the property to add. (See :ref:`PropertyBase.matchName`). The following names are supported:
+========  =====================================================================
+``name``  The display name or match name of the property to add. (See
+          :ref:`PropertyBase.matchName`). The following names are supported:
 
-			- Any match name for a property that can be added through the user interface. For example, "ADBE Mask Atom", "ADBE Paint Atom", "ADBE Text Position", "ADBE Text Anchor Point".
-			- When adding to an ADBE Mask Parade: "ADBE Mask Atom", "Mask".
-			- When adding to an ADBE Effect Parade, any effect by match name, such as "ADBE Bulge", "ADBE Glo2", "APC Vegas".
-			- Any effect by display name, such as "Bulge", "Glow", "Vegas".
-			- For text animators, "ADBE Text Animator".
-			- For selectors, Range Selector has the name "ADBE Text Selector", Wiggly Selector has the name "ADBE Text Wiggly Selector", and Expression Selector has the name "ADBE Text Expressible Selector".
-========	=====================================================================
+          -  Any match name for a property that can be added through the user
+             interface. For example, "ADBE Mask Atom", "ADBE Paint Atom", "ADBE
+             Text Position", "ADBE Text Anchor Point".
+          -  When adding to an ADBE Mask Parade: "ADBE Mask Atom", "Mask".
+          -  When adding to an ADBE Effect Parade, any effect by match name,
+             such as "ADBE Bulge", "ADBE Glo2", "APC Vegas".
+          -  Any effect by display name, such as "Bulge", "Glow", "Vegas".
+          -  For text animators, "ADBE Text Animator".
+          -  For selectors, Range Selector has the name "ADBE Text Selector",
+             Wiggly Selector has the name "ADBE Text Wiggly Selector", and
+             Expression Selector has the name "ADBE Text Expressible Selector".
+========  =====================================================================
 
 **Returns**
 
@@ -84,15 +90,16 @@ Returns true if a property with the given name can be added to this property gro
 
 ::
 
-	maskGroup.canAddProperty("mask"); // returns true
-	maskGroup.canAddProperty("ADBE Mask Atom"); // returns true
-	maskGroup.canAddProperty("blend"); // returns false
+    maskGroup.canAddProperty("mask"); // returns true
+    maskGroup.canAddProperty("ADBE Mask Atom"); // returns true
+    maskGroup.canAddProperty("blend"); // returns false
 
 **Parameters**
 
-========	=====================================================================
-``name``	The display name or match name of the property to be checked. (See :ref:`PropertyGroup.addProperty`.
-========	=====================================================================
+========  =====================================================================
+``name``  The display name or match name of the property to be checked. (See
+          :ref:`PropertyGroup.addProperty`.
+========  =====================================================================
 
 **Returns**
 
@@ -112,89 +119,107 @@ PropertyGroup.property()
 
 Finds and returns a child property of this group, as specified by either its index or name. A name specification can use the same syntax that is available with expressions. The following are all allowed and are equivalent::
 
-	mylayer.position
-	mylayer("position")
-	mylayer.property("position")
-	mylayer(1)
-	mylayer.property(1)
+    mylayer.position
+    mylayer("position")
+    mylayer.property("position")
+    mylayer(1)
+    mylayer.property(1)
 
 Some properties of a layer, such as position and zoom, can be accessed only by name. When using the name to find a property that is multiple levels down, you must make more than one call to this method. For example, the following call searches two levels down, and returns the first mask in the mask group: ``myLayer.property("ADBE Masks").property(1)``
 
 **Parameters**
 
-=========	====================================================================
-``index``	The index for the child property, in this is an indexed group. An integer in the range [0..numProperties].
-``name``	The name of the child property. This can be:
+=========  ====================================================================
+``index``  The index for the child property, in this is an indexed group. An
+           integer in the range [0..numProperties].
+``name``   The name of the child property. This can be:
 
-			- Any match name
-			- Any name in expression "parenthesis style" syntax, meaning the display name or the compact English name
-			- Any name in expression "intercap style" syntax
+           -  Any match name
+           -  Any name in expression "parenthesis style" syntax, meaning the
+              display name or the compact English name
+           -  Any name in expression "intercap style" syntax
 
-			For supported property names, see the table below.
-=========	====================================================================
+           For supported property names, see the table below.
+=========  ====================================================================
 
 **Returns**
 
 :ref:`PropertyBase` or null if no child property with the specified string name is found. Properties accessible by name
 
-=======================================	======================================
-From any Layer							- "ADBE Mask Parade", or "Masks"
-										- "ADBE Effect Parade", or "Effects"
-										- "ADBE MTrackers", or "Motion Trackers"
-From an AVLayer							- "Anchor Point" or "anchorPoint"
-										- "Position" or "position"
-										- "Scale" or "scale"
-										- "Rotation" or "rotation"
-										- "Z Rotation" or "zRotation" or "Rotation Z" or "rotationZ"
-										- "Opacity" or "opacity"
-										- "Marker" or "marker"
-From an AVLayer with a non-still source	- "Time Remap" or "timeRemapEnabled"
-From an AVLayer with an audio component	- "Audio Levels" or "audioLevels"
-From a camera Layer					  	- "Zoom" or "zoom"
-										- "Depth of Field" or "depthOfField"
-										- "Focus Distance" or "focusDistance"
-										- "Aperture" or "aperture"
-										- "Blur Level" or "blurLevel"
-From a light layer					   	- "Intensity" or "intensity"
-										- "Color" or "color"
-										- "Cone Angle" or "coneAngle"
-										- "Cone Feather" or "coneFeather"
-										- "Shadow Darkness" or "shadowDarkness"
-										- "Shadow Diffusion" or "shadowDiffusion"
-										- "Casts Shadows" or "castsShadows"
-From a 3D layer							- "Accepts Shadows" or "acceptsShadows"
-										- "Accepts Lights" or "acceptsLights"
-										- "Ambient" or "ambient"
-										- "Diffuse" or "diffuse"
-										- "Specular" or "specular" (these are for the Specular Intensity property)
-										- "Shininess" or "shininess" (these are for the Specular Shininess property)
-										- "Casts Shadows" or "castsShadows"
-										- "Light Transmission" or "lightTransmission"
-										- "Metal" or "metal"
-From a camera, light or 3D layer		- "X Rotation" or "xRotation" or "Rotation X" or "rotationX"
-										- "Y Rotation" or "yRotation" or "Rotation Y" or "rotationY"
-										- "Orientation" or "orientation"
-From a text layer						- "Source Text" or "source Text" or "Text" or "text"
-From a PropertyGroup "ADBE Mask Parade" - "ADBE Mask Atom"
-From a PropertyGroup "ADBE Mask Atom"	- "ADBE Mask Shape", or "maskShape", or "maskPath"
-										- "ADBE Mask Feather", or "maskFeather"
-										- "ADBE Mask Opacity", or "maskOpacity"
-										- "ADBE Mask Offset", or "maskOffset"
-=======================================	======================================
+=======================================  ======================================
+From any Layer                           -  "ADBE Mask Parade", or "Masks"
+                                         -  "ADBE Effect Parade", or "Effects"
+                                         -  "ADBE MTrackers", or "Motion
+                                            Trackers"
+From an AVLayer                          -  "Anchor Point" or "anchorPoint"
+                                         -  "Position" or "position"
+                                         -  "Scale" or "scale"
+                                         -  "Rotation" or "rotation"
+                                         -  "Z Rotation" or "zRotation" or
+                                            "Rotation Z" or "rotationZ"
+                                         -  "Opacity" or "opacity"
+                                         -  "Marker" or "marker"
+From an AVLayer with a non-still source  -  "Time Remap" or "timeRemapEnabled"
+From an AVLayer with an audio component  -  "Audio Levels" or "audioLevels"
+From a camera layer                      -  "Zoom" or "zoom"
+                                         -  "Depth of Field" or "depthOfField"
+                                         -  "Focus Distance" or "focusDistance"
+                                         -  "Aperture" or "aperture"
+                                         -  "Blur Level" or "blurLevel"
+From a light layer                       -  "Intensity" or "intensity"
+                                         -  "Color" or "color"
+                                         -  "Cone Angle" or "coneAngle"
+                                         -  "Cone Feather" or "coneFeather"
+                                         -  "Shadow Darkness" or
+                                            "shadowDarkness"
+                                         -  "Shadow Diffusion" or
+                                            "shadowDiffusion"
+                                         -  "Casts Shadows" or "castsShadows"
+From a 3D layer                          -  "Accepts Shadows" or
+                                            "acceptsShadows"
+                                         -  "Accepts Lights" or "acceptsLights"
+                                         -  "Ambient" or "ambient"
+                                         -  "Diffuse" or "diffuse"
+                                         -  "Specular" or "specular" (these are
+                                            for the Specular Intensity
+                                            property)
+                                         -  "Shininess" or "shininess" (these
+                                            are for the Specular Shininess
+                                            property)
+                                         -  "Casts Shadows" or "castsShadows"
+                                         -  "Light Transmission" or
+                                            "lightTransmission"
+                                         -  "Metal" or "metal"
+From a camera, light or 3D layer         -  "X Rotation" or "xRotation" or
+                                            "Rotation X" or "rotationX"
+                                         -  "Y Rotation" or "yRotation" or
+                                            "Rotation Y" or "rotationY"
+                                         -  "Orientation" or "orientation"
+From a text layer                        -  "Source Text" or "source Text" or
+                                            "Text" or "text"
+From a PropertyGroup "ADBE Mask Parade"  -  "ADBE Mask Atom"
+From a PropertyGroup "ADBE Mask Atom"    -  "ADBE Mask Shape", or "maskShape",
+                                            or "maskPath"
+                                         -  "ADBE Mask Feather", or
+                                            "maskFeather"
+                                         -  "ADBE Mask Opacity", or
+                                            "maskOpacity"
+                                         -  "ADBE Mask Offset", or "maskOffset"
+=======================================  ======================================
 
 **Examples**
 
 1. If a layer named "myLayer" has a Box Blur effect, you can retrieve the effect in any of the following ways::
 
-	myLayer.property("Effects").property("Box Blur");
-	myLayer.property("Effects").property("boxBlur");
-	myLayer.property("Effects").property("ADBE Box Blur");
+    myLayer.property("Effects").property("Box Blur");
+    myLayer.property("Effects").property("boxBlur");
+    myLayer.property("Effects").property("ADBE Box Blur");
 
 2. If a layer named "myLayer" has a mask named "Mask 1" you can retrieve it as follows::
 
-	myLayer.property("Masks").property("Mask1");
+    myLayer.property("Masks").property("Mask1");
 
 3. To get a Bulge Center value from a Bulge effect, you can use either of the following::
 
-	myLayer.property("Effects").property("Bulge").property("Bulge Center");
-	myLayer.property("Effects").property("Bulge").property("bulgeCenter");
+    myLayer.property("Effects").property("Bulge").property("Bulge Center");
+    myLayer.property("Effects").property("Bulge").property("bulgeCenter");

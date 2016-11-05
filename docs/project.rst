@@ -82,8 +82,8 @@ The Use Feet + Frames menu setting in the Project Settings dialog box. Use this 
 
 A ``FeetFramesFilmType`` enumerated value; read/write. One of:
 
-- ``FeetFramesFilmType.MM16``
-- ``FeetFramesFilmType.MM35``
+-  ``FeetFramesFilmType.MM16``
+-  ``FeetFramesFilmType.MM35``
 
 ----
 
@@ -119,8 +119,8 @@ The Footage Start Time setting in the Project Settings dialog box, which is enab
 
 A ``FootageTimecodeDisplayStartType`` enumerated value; read/write. One of:
 
-- ``FootageTimecodeDisplayStartType.FTCS_START_0``
-- ``FootageTimecodeDisplayStartType.FTCS_USE_SOURCE_MEDIA``
+-  ``FootageTimecodeDisplayStartType.FTCS_START_0``
+-  ``FootageTimecodeDisplayStartType.FTCS_USE_SOURCE_MEDIA``
 
 ----
 
@@ -139,9 +139,9 @@ The Frame Count menu setting in the Project Settings dialog box.
 
 A ``FramesCountType`` enumerated value; read/write. One of:
 
-- ``FramesCountType.FC_START_1``
-- ``FramesCountType.FC_START_0``
-- ``FramesCountType.FC_TIMECODE_CONVERSION``
+-  ``FramesCountType.FC_START_1``
+-  ``FramesCountType.FC_START_0``
+-  ``FramesCountType.FC_TIMECODE_CONVERSION``
 
 .. WARNING:: Setting this attribute to ``FramesCountType.FC_TIMECODE_CONVERSION`` resets the ``displayStartFrame`` attribute to 0.
 
@@ -172,7 +172,7 @@ Project.gpuAccelType
 ``app.project.gpuAccelType``
 
 .. note::
-	This functionality was added in After Effects 13.8
+   This functionality was added in After Effects 13.8
 
 **Description**
 
@@ -192,26 +192,26 @@ A ``GpuAccelType`` enumerated value; read/write. One of:
 
 The following sample code checks to see if there are queued items in the render queue, and if so queues them in AME but does not immediately start rendering::
 
-	// access via scripting to Project Settings -> Video Rendering and Effects -> Use
+    // access via scripting to Project Settings -> Video Rendering and Effects -> Use
 
-	var currentGPUSettings = app.project.gpuAccelType; // returns the current value
-	var type_str = "";
+    var currentGPUSettings = app.project.gpuAccelType; // returns the current value
+    var type_str = "";
 
-	// check the current value and alert the user
+    // check the current value and alert the user
 
-	switch(currentGPUSettings) {
-		case GpuAccelType.CUDA:	type_str = "CUDA"; break;
-		case GpuAccelType.METAL:	type_str = "Metal"; break;
-		case GpuAccelType.OPENCL:	type_str = "OpenCL"; break;
-		case GpuAccelType.SOFTWARE:	type_str = "Software"; break;
-		default:	type_str = "UNKNOWN"; break;
-	}
+    switch(currentGPUSettings) {
+        case GpuAccelType.CUDA:  type_str = "CUDA"; break;
+        case GpuAccelType.METAL:    type_str = "Metal"; break;
+        case GpuAccelType.OPENCL:       type_str = "OpenCL"; break;
+        case GpuAccelType.SOFTWARE:     type_str = "Software"; break;
+        default:    type_str = "UNKNOWN"; break;
+        }
 
-	alert("Your current setting is " + type_str);
+    alert("Your current setting is " + type_str);
 
-	// set the value to Metal
+    // set the value to Metal
 
-	app.project.gpuAccelType = GpuAccelType.METAL;
+    app.project.gpuAccelType = GpuAccelType.METAL;
 
 
 ----
@@ -269,8 +269,8 @@ Integer; read-only.
 
 ::
 
-	n = app.project.numItems;
-	alert("There are " + n + "items in this project.")
+    n = app.project.numItems;
+    alert("There are " + n + "items in this project.")
 
 ----
 
@@ -361,8 +361,8 @@ The time display style, corresponding to the Time Display Style section in the P
 
 A ``TimeDisplayType`` enumerated value; read/write. One of:
 
-- ``TimeDisplayType.FRAMES``
-- ``TimeDisplayType.TIMECODE``
+-  ``TimeDisplayType.FRAMES``
+-  ``TimeDisplayType.TIMECODE``
 
 ----
 
@@ -374,7 +374,7 @@ Project.toolType
 ``app.project.toolType``
 
 .. note::
-	This functionality was added in After Effects 14.0
+    This functionality was added in After Effects 14.0
 
 **Description**
 
@@ -418,45 +418,45 @@ A ``ToolType`` enumerated value; read/write. One of:
 
 The following sample code checks the current tool, and if it is not the Unified Camera Tool, sets the current tool to that::
 
-	// Check the current tool, then set it to Unified Camera Tool (UCT).
-	{
-		// Assume a composition is selected in the project.
-		var comp = app.project.activeItem;
-		if (comp instanceof CompItem) {
-			// Add a camera to the current comp. (Requirement for UCT.)
-			var cameraLayer = comp.layers.addCamera("Test Camera", [comp.width/2, comp.height/2]);
-			comp.openInViewer();
+    // Check the current tool, then set it to Unified Camera Tool (UCT).
+    {
+        // Assume a composition is selected in the project.
+        var comp = app.project.activeItem;
+        if (comp instanceof CompItem) {
+            // Add a camera to the current comp. (Requirement for UCT.)
+            var cameraLayer = comp.layers.addCamera("Test Camera", [comp.width/2, comp.height/2]);
+            comp.openInViewer();
 
-			// If the currently selected tool is not one of the camera tools, set it to UCT.
-			if (( app.project.toolType != ToolType.Tool_CameraMaya) &&
-				( app.project.toolType != ToolType.Tool_CameraOrbit ) &&
-				( app.project.toolType != ToolType.Tool_CameraTrackXY) &&
-				( app.project.toolType != ToolType.Tool_CameraTrackZ))
-			app.project.toolType = ToolType.Tool_CameraMaya;
-		}
-	}
+            // If the currently selected tool is not one of the camera tools, set it to UCT.
+            if (( app.project.toolType != ToolType.Tool_CameraMaya) &&
+                ( app.project.toolType != ToolType.Tool_CameraOrbit ) &&
+                ( app.project.toolType != ToolType.Tool_CameraTrackXY) &&
+                ( app.project.toolType != ToolType.Tool_CameraTrackZ))
+                    app.project.toolType = ToolType.Tool_CameraMaya;
+        }
+    }
 
 The following sample code uses the new app.project.toolType attribute to create a 360° composition (environment layer and camera) from a selected footage item or composition selected in the Project panel. This script a good starting point for building VR compositions from equirectangular footage::
 
-	// Create a 360 VR comp from a footage item or comp selected in the Project panel.
+    // Create a 360 VR comp from a footage item or comp selected in the Project panel.
 
-	var item = app.project.activeItem;
+    var item = app.project.activeItem;
 
-	if (item != null && (item.typeName == "Footage" || item.typeName == "Composition")) {
+    if (item != null && (item.typeName == "Footage" || item.typeName == "Composition")) {
 
-		// Create a comp with the footage.
-		var comp = app.project.items.addComp(item.name, item.width, item.height, item.pixelAspect, item.duration, item.frameRate);
-		var layers = comp.layers;
-		var footageLayer = layers.add(item);
+        // Create a comp with the footage.
+        var comp = app.project.items.addComp(item.name, item.width, item.height, item.pixelAspect, item.duration, item.frameRate);
+        var layers = comp.layers;
+        var footageLayer = layers.add(item);
 
-		//Apply the CC Environment effect and create a camera.
-		var effect = footageLayer.Effects.addProperty("CC Environment");
-		var camera = layers.addCamera("360 Camera", [item.width/2, item.height/2]);
-		comp.openInViewer(); app.project.toolType = ToolType.Tool_CameraMaya;
-	}
-	else {
-		alert("Select a single footage item or composition in the Project panel.");
-	}
+        //Apply the CC Environment effect and create a camera.
+        var effect = footageLayer.Effects.addProperty("CC Environment");
+        var camera = layers.addCamera("360 Camera", [item.width/2, item.height/2]);
+        comp.openInViewer(); app.project.toolType = ToolType.Tool_CameraMaya;
+    }
+    else {
+        alert("Select a single footage item or composition in the Project panel.");
+    }
 
 ----
 
@@ -498,23 +498,23 @@ The following example code accesses the XMP metadata of the current project, and
 
 ::
 
-	var proj = app.project;
+    var proj = app.project;
 
-	//load the XMPlibrary as an ExtendScript ExternalObject
-	if(ExternalObject.AdobeXMPScript == undefined) {
-		ExternalObject.AdobeXMPScript = new ExternalObject('lib:AdobeXMPScript');
-	}
-	var mdata = new XMPMeta(app.project.xmpPacket); //get the project’s XMPmetadata
-	//update the Label project metadata’s value
-	var schemaNS = XMPMeta.getNamespaceURI("xmp");
-	var propName = "xmp:Label";
-	try{
-		mdata.setProperty(schemaNS, propName, "finalversion...no, really!");
-	}
-	catch(e) {
-		alert(e);
-	}
-	app.project.xmpPacket = mdata.serialize();
+    //load the XMPlibrary as an ExtendScript ExternalObject
+    if(ExternalObject.AdobeXMPScript == undefined){
+        ExternalObject.AdobeXMPScript = new ExternalObject('lib:AdobeXMPScript');
+    }
+    var mdata = new XMPMeta(app.project.xmpPacket); //get the project’s XMPmetadata
+    //update the Label project metadata’s value
+    var schemaNS = XMPMeta.getNamespaceURI("xmp");
+    var propName = "xmp:Label";
+    try{
+        mdata.setProperty(schemaNS, propName, "finalversion...no, really!");
+    }
+    catch(e){
+        alert(e);
+    }
+    app.project.xmpPacket = mdata.serialize();
 
 ----
 
@@ -535,10 +535,10 @@ Automatically replaces text found in broken expressions in the project, if the n
 
 **Parameters**
 
-===========	======================
-``oldText``	The text to replace.
-``newText``	The new text.
-===========	======================
+===========  ======================
+``oldText``  The text to replace.
+``newText``  The new text.
+===========  ======================
 
 **Returns**
 
@@ -559,12 +559,17 @@ Closes the project with the option of saving changes automatically, prompting th
 
 **Parameters**
 
-================	============================================================
-``closeOptions``	Action to be performed on close. A ``CloseOptions`` enumerated value, one of:
-						- [``CloseOptions.DO_NOT_SAVE_CHANGES``: Close without saving.
-						- [``CloseOptions.PROMPT_TO_SAVE_CHANGES``:Prompt for whether to save changes before close.
-						- [``CloseOptions.SAVE_CHANGES``: Save automatically on close.
-================	============================================================
+================  ============================================================
+``closeOptions``  Action to be performed on close. A ``CloseOptions``
+                  enumerated value, one of:
+
+                  -  [``CloseOptions.DO_NOT_SAVE_CHANGES``: Close without
+                     saving.
+                  -  [``CloseOptions.PROMPT_TO_SAVE_CHANGES``:Prompt for
+                     whether to save changes before close.
+                  -  [``CloseOptions.SAVE_CHANGES``: Save automatically on
+                     close.
+================  ============================================================
 
 **Returns**
 
@@ -607,7 +612,8 @@ Imports the file specified in the specified ImportOptions object, using the spec
 **Parameters**
 
 =================   =====================================================
-``importOptions``	An :ref:`ImportOptions` specifying the file to import and the options for the operation.
+``importOptions``   An :ref:`ImportOptions` specifying the file to
+                    import and the options for the operation.
 =================   =====================================================
 
 **Returns**
@@ -618,7 +624,7 @@ Imports the file specified in the specified ImportOptions object, using the spec
 
 ::
 
-	app.project.importFile(new ImportOptions(File("sample.psd"))
+    app.project.importFile(new ImportOptions(File("sample.psd"))
 
 ----
 
@@ -652,13 +658,17 @@ Creates and returns a new PlaceholderItem and adds it to the project’s items a
 
 **Parameters**
 
-==============	===============================================================
-``name``		A string containing the name of the placeholder.
-``width``		The width of the placeholder in pixels, an integer in the range ``[4..30000]``.
-``height``		The height of the placeholder in pixels, an integer in the range ``[4..30000]``.
-``frameRate``	The frame rate of the placeholder, a floating-point value in the range ``[1.0..99.0]``.
-``duration``	The duration of the placeholder in seconds, a floating-point value in the range ``[0.0..10800.0]``.
-==============	===============================================================
+==============  ===============================================================
+``name``        A string containing the name of the placeholder.
+``width``       The width of the placeholder in pixels, an integer in the range
+                ``[4..30000]``.
+``height``      The height of the placeholder in pixels, an integer in the
+                range ``[4..30000]``.
+``frameRate``   The frame rate of the placeholder, a floating-point value in
+                the range ``[1.0..99.0]``.
+``duration``    The duration of the placeholder in seconds, a floating-point
+                value in the range ``[0.0..10800.0]``.
+==============  ===============================================================
 
 **Returns**
 
@@ -679,9 +689,10 @@ Retrieves an item at a specified index position.
 
 **Parameters**
 
-=========	====================================================================
-``index``	The index position of the item, an integer. The first item is at index 1.
-=========	====================================================================
+=========  ====================================================================
+``index``  The index position of the item, an integer. The first item is at
+           index 1.
+=========  ====================================================================
 
 **Returns**
 
@@ -702,9 +713,10 @@ Removes all items from the project except those specified. Same as the File > Re
 
 **Parameters**
 
-==================	===========================================================
-``array_of_items``	An array containing the :ref:`Item objects <item>` that are to be kept.
-==================	===========================================================
+==================  ===========================================================
+``array_of_items``  An array containing the :ref:`Item objects <item>` that are
+                    to be kept.
+==================  ===========================================================
 
 **Returns**
 
@@ -714,10 +726,10 @@ Integer; the total number of items removed.
 
 ::
 
-	var theItems = new Array();
-	theItems[theItems.length] = app.project.item(1);
-	theItems[theItems.length] = app.project.item(3);
-	app.project.reduceProject(theItems);
+    var theItems = new Array();
+    theItems[theItems.length] = app.project.item(1);
+    theItems[theItems.length] = app.project.item(3);
+    app.project.reduceProject(theItems);
 
 ----
 
@@ -734,9 +746,9 @@ Saves the project. The same as the File > Save or File > Save As command. If the
 
 **Parameters**
 
-========	============================================================
-``file``	Optional. An ExtendScript File object for the file to save.
-========	============================================================
+========  ============================================================
+``file``  Optional. An ExtendScript File object for the file to save.
+========  ============================================================
 
 **Returns**
 
@@ -778,9 +790,10 @@ Shows or hides the Project panel.
 
 **Parameters**
 
-==========	===================================================================
-``doShow``	When true, show the Project panel. When false, hide the Project panel.
-==========	===================================================================
+==========  ===================================================================
+``doShow``  When true, show the Project panel. When false, hide the Project
+            panel.
+==========  ===================================================================
 
 **Returns**
 

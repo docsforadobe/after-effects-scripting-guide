@@ -65,9 +65,9 @@ A log type for this item, indicating which events should be logged while this it
 
 A ``LogType`` enumerated value; (read/write). One of:
 
-- ``LogType.ERRORS_ONLY``
-- ``LogType.ERRORS_AND_SETTINGS``
-- ``LogType.ERRORS_AND_PER_FRAME_INFO``
+-  ``LogType.ERRORS_ONLY``
+-  ``LogType.ERRORS_AND_SETTINGS``
+-  ``LogType.ERRORS_AND_PER_FRAME_INFO``
 
 ----
 
@@ -109,12 +109,12 @@ A function name string, or null if no function is assigned.
 
 ::
 
-	function myStatusChanged() {
-	alert(app.project.renderQueue.item(1).status)
-	}
+    function myStatusChanged() {
+        alert(app.project.renderQueue.item(1).status)
+    }
 
-	app.project.renderQueue.item(1).onStatusChanged = myStatusChanged();
-	app.project.renderQueue.item(1).render = false; // changes status and shows dialog
+    app.project.renderQueue.item(1).onStatusChanged = myStatusChanged();
+    app.project.renderQueue.item(1).render = false; // changes status and shows dialog
 
 ----
 
@@ -202,14 +202,14 @@ The current render status of the item.
 
 An ``RQItemStatus`` enumerated value; read-only. One of:
 
-- ``RQItemStatus.WILL_CONTINUE``: Rendering process has been paused.
-- ``RQItemStatus.NEEDS_OUTPUT``: Item lacks a valid output path.
-- ``RQItemStatus.UNQUEUED``: Item is listed in the Render Queue panel but composition is not ready to render.
-- ``RQItemStatus.QUEUED``: Composition is ready to render.
-- ``RQItemStatus.RENDERING``: Composition is rendering
-- ``RQItemStatus.USER_STOPPED``: Rendering process was stopped by user or script.
-- ``RQItemStatus.ERR_STOPPED``: Rendering process was stopped due to an error.
-- ``RQItemStatus.DONE``: Rendering process for the item is complete.
+-  ``RQItemStatus.WILL_CONTINUE``: Rendering process has been paused.
+-  ``RQItemStatus.NEEDS_OUTPUT``: Item lacks a valid output path.
+-  ``RQItemStatus.UNQUEUED``: Item is listed in the Render Queue panel but composition is not ready to render.
+-  ``RQItemStatus.QUEUED``: Composition is ready to render.
+-  ``RQItemStatus.RENDERING``: Composition is rendering
+-  ``RQItemStatus.USER_STOPPED``: Rendering process was stopped by user or script.
+-  ``RQItemStatus.ERR_STOPPED``: Rendering process was stopped due to an error.
+-  ``RQItemStatus.DONE``: Rendering process for the item is complete.
 
 ----
 
@@ -281,9 +281,9 @@ Applies a Render Settings template to the item. See also :ref:`RenderQueueItem.s
 
 **Parameters**
 
-================	======================================================
-``templateName``	A string containing the name of the template to apply.
-================	======================================================
+================  ======================================================
+``templateName``  A string containing the name of the template to apply.
+================  ======================================================
 
 **Returns**
 
@@ -303,7 +303,7 @@ RenderQueueItem.duplicate()
 Creates a duplicate of this item and adds it this render queue.
 
 .. note::
-	Duplicating an item whose status is "Done" sets the new item’s status to "Queued".
+   Duplicating an item whose status is "Done" sets the new item’s status to "Queued".
 
 **Parameters**
 
@@ -323,7 +323,7 @@ RenderQueueItem.getSetting()
 ``app.project.renderQueue.item(index).getSetting()``
 
 .. note::
-	This functionality was added in After Effects 13.0
+   This functionality was added in After Effects 13.0
 
 **Description**
 
@@ -339,7 +339,7 @@ RenderQueueItem.getSettings()
 ``app.project.renderQueue.item(index).getSettings()``
 
 .. note::
-	This functionality was added in After Effects 13.0
+   This functionality was added in After Effects 13.0
 
 **Description**
 
@@ -360,9 +360,10 @@ Gets an output module with the specified index position.
 
 **Parameters**
 
-=========	====================================================================
-``index``	The position index of the output module. An integer in the range ``[1..numOutputModules]``.
-=========	====================================================================
+=========  ====================================================================
+``index``  The position index of the output module. An integer in the range
+           ``[1..numOutputModules]``.
+=========  ====================================================================
 
 **Returns**
 
@@ -404,9 +405,9 @@ Saves the item’s current render settings as a new template with the specified 
 
 **Parameters**
 
-========	==================================================
-``name``	A string containing the name of the new template.
-========	==================================================
+========  ==================================================
+``name``  A string containing the name of the new template.
+========  ==================================================
 
 **Returns**
 
@@ -422,7 +423,7 @@ RenderQueueItem.setSetting()
 ``app.project.renderQueue.item(index).setSetting()``
 
 .. note::
-	This functionality was added in After Effects 13.0
+   This functionality was added in After Effects 13.0
 
 **Description**
 
@@ -438,7 +439,7 @@ RenderQueueItem.setSettings()
 ``app.project.renderQueue.item(index).setSettings()``
 
 .. note::
-	This functionality was added in After Effects 13.0
+   This functionality was added in After Effects 13.0
 
 **Description**
 

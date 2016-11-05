@@ -13,7 +13,7 @@ The ImportOptions object encapsulates the options used to import a file with the
 
 ::
 
-	new ImportOptions().file = new File("myfile.psd");
+    new ImportOptions().file = new File("myfile.psd");
 
 ----
 
@@ -70,10 +70,10 @@ The type of object for which the imported file is to be the source. Before setti
 
 An ``ImportAsType`` enumerated value; read/write. One of:
 
-- ``ImportAsType.COMP_CROPPED_LAYERS``
-- ``ImportAsType.FOOTAGE``
-- ``ImportAsType.COMP``
-- ``ImportAsType.PROJECT``
+-  ``ImportAsType.COMP_CROPPED_LAYERS``
+-  ``ImportAsType.FOOTAGE``
+-  ``ImportAsType.COMP``
+-  ``ImportAsType.PROJECT``
 
 ----
 
@@ -111,14 +111,15 @@ Reports whether the file can be imported as the source of a particular object ty
 
 **Parameters**
 
-========	=====================================================================
-``type``	The type of file that can be imported. An ``ImportAsType`` enumerated value; one of:
+========  =====================================================================
+``type``  The type of file that can be imported. An ``ImportAsType`` enumerated
+          value; one of:
 
-				- ``ImportAsType.COMP``
-				- ``ImportAsType.FOOTAGE``
-				- ``ImportAsType.COMP_CROPPED_LAYERS``
-				- ``ImportAsType.PROJECT``
-========	=====================================================================
+          -  ``ImportAsType.COMP``
+          -  ``ImportAsType.FOOTAGE``
+          -  ``ImportAsType.COMP_CROPPED_LAYERS``
+          -  ``ImportAsType.PROJECT``
+========  =====================================================================
 
 **Returns**
 
@@ -128,7 +129,7 @@ Boolean.
 
 ::
 
-	var io = new ImportOptions(File("c:\\myFile.psd"));
-	if io.canImportAs(ImportAsType.COMP) {
-		io.importAs = ImportAsType.COMP;
-	}
+    var io = new ImportOptions(File("c:\\myFile.psd"));
+    if io.canImportAs(ImportAsType.COMP) {
+        io.importAs = ImportAsType.COMP;
+    }

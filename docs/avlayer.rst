@@ -11,51 +11,51 @@ AVLayer object
 
 The AVLayer object provides an interface to those layers that contain AVItem objects (composition layers, footage layers, solid layers, text layers, and sound layers).
 
-	AVLayer is a subclass of :ref:`Layer`. All methods and attributes of Layer, in addition to those listed below, are available when working with AVLayer.
+    AVLayer is a subclass of :ref:`Layer`. All methods and attributes of Layer, in addition to those listed below, are available when working with AVLayer.
 
-	AVLayer is a base class for :ref:`TextLayer`, so AVLayer attributes and methods are available when working with TextLayer objects.
+    AVLayer is a base class for :ref:`TextLayer`, so AVLayer attributes and methods are available when working with TextLayer objects.
 
 **AE Properties**
 
 Different types of layers have different AE properties. AVLayer has the following properties and property groups:
 
-- Marker
-- TimeRemap
-- MotionTrackers
-- Masks
-- Effects
-- Transform
+-  Marker
+-  TimeRemap
+-  MotionTrackers
+-  Masks
+-  Effects
+-  Transform
 
-	- AnchorPoint
-	- Position
-	- Scale
-	- Orientation
-	- XRotation
-	- YRotation
-	- Rotation
-	- Opacity
+   -  AnchorPoint
+   -  Position
+   -  Scale
+   -  Orientation
+   -  XRotation
+   -  YRotation
+   -  Rotation
+   -  Opacity
 
-- LayerStyles
-- GeometryOptions // Ray-traced 3D
-- MaterialOptions
+-  LayerStyles
+-  GeometryOptions // Ray-traced 3D
+-  MaterialOptions
 
-	- CastsShadows
-	- LightTransmission
-	- AcceptsShadows
-	- AcceptsLights
-	- AppearsinReflections // Ray-traced 3D
-	- Ambient
-	- Diffuse
-	- SpecularIntensity
-	- SpecularShininess
-	- Metal
-	- ReflectionIntensity // Ray-traced3D
-	- ReflectionSharpness // Ray-traced3D
-	- ReflectionRolloff // Ray-traced3D
-	- Transparency // Ray-traced3D
-	- TransparencyRolloff // Ray-traced3D
-	- IndexofRefraction // Ray-traced3D-Audio
-	- AudioLevels
+   -  CastsShadows
+   -  LightTransmission
+   -  AcceptsShadows
+   -  AcceptsLights
+   -  AppearsinReflections // Ray-traced 3D
+   -  Ambient
+   -  Diffuse
+   -  SpecularIntensity
+   -  SpecularShininess
+   -  Metal
+   -  ReflectionIntensity // Ray-traced3D
+   -  ReflectionSharpness // Ray-traced3D
+   -  ReflectionRolloff // Ray-traced3D
+   -  Transparency // Ray-traced3D
+   -  TransparencyRolloff // Ray-traced3D
+   -  IndexofRefraction // Ray-traced3D-Audio
+   -  AudioLevels
 
 **Example**
 
@@ -63,10 +63,10 @@ If the first item in the project is a CompItem, and the first layer of that Comp
 
 .. code:: javascript
 
-	var firstLayer = app.project.item(1).layer(1);
-	firstLayer.quality = LayerQuality.BEST;
-	firstLayer.startTime = 1;
-	firstLayer.inPoint = 2;
+    var firstLayer = app.project.item(1).layer(1);
+    firstLayer.quality = LayerQuality.BEST;
+    firstLayer.startTime = 1;
+    firstLayer.inPoint = 2;
 
 ----
 
@@ -141,10 +141,10 @@ The type of automatic orientation to perform for the layer.
 
 An ``AutoOrientType`` enumerated value; read/write. One of:
 
-- ``AutoOrientType.ALONG_PATH`` Layer faces in the direction of the motion path.
-- ``AutoOrientType.CAMERA_OR_POINT_OF_INTEREST`` Layer always faces the active camera or points at its point of interest.
-- ``AutoOrientType.CHARACTERS_TOWARD_CAMERA`` Each character in a per-character 3D text layer automatically faces the active camera.
-- ``AutoOrientType.NO_AUTO_ORIENT`` Layer rotates freely, independent of any motion path, point of interest, or other layers.
+-  ``AutoOrientType.ALONG_PATH`` Layer faces in the direction of the motion path.
+-  ``AutoOrientType.CAMERA_OR_POINT_OF_INTEREST`` Layer always faces the active camera or points at its point of interest.
+-  ``AutoOrientType.CHARACTERS_TOWARD_CAMERA`` Each character in a per-character 3D text layer automatically faces the active camera.
+-  ``AutoOrientType.NO_AUTO_ORIENT`` Layer rotates freely, independent of any motion path, point of interest, or other layers.
 
 ----
 
@@ -163,42 +163,42 @@ The blending mode of the layer.
 
 A BlendingMode enumerated value; read/write. One of:
 
-- ``BlendingMode.ADD``
-- ``BlendingMode.ALPHA_ADD``
-- ``BlendingMode.CLASSIC_COLOR_BURN``
-- ``BlendingMode.CLASSIC_COLOR_DODGE``
-- ``BlendingMode.CLASSIC_DIFFERENCE``
-- ``BlendingMode.COLOR``
-- ``BlendingMode.COLOR_BURN``
-- ``BlendingMode.COLOR_DODGE``
-- ``BlendingMode.DANCING_DISSOLVE``
-- ``BlendingMode.DARKEN``
-- ``BlendingMode.DARKER_COLOR``
-- ``BlendingMode.DIFFERENCE``
-- ``BlendingMode.DISSOLVE``
-- ``BlendingMode.EXCLUSION``
-- ``BlendingMode.HARD_LIGHT``
-- ``BlendingMode.HARD_MIX``
-- ``BlendingMode.HUE``
-- ``BlendingMode.LIGHTEN``
-- ``BlendingMode.LIGHTER_COLOR``
-- ``BlendingMode.LINEAR_BURN``
-- ``BlendingMode.LINEAR_DODGE``
-- ``BlendingMode.LINEAR_LIGHT``
-- ``BlendingMode.LUMINESCENT_PREMUL``
-- ``BlendingMode.LUMINOSITY``
-- ``BlendingMode.MULTIPLY``
-- ``BlendingMode.NORMAL``
-- ``BlendingMode.OVERLAY``
-- ``BlendingMode.PIN_LIGHT``
-- ``BlendingMode.SATURATION``
-- ``BlendingMode.SCREEN``
-- ``BlendingMode.SILHOUETE_ALPHA``
-- ``BlendingMode.SILHOUETTE_LUMA``
-- ``BlendingMode.SOFT_LIGHT``
-- ``BlendingMode.STENCIL_ALPHA``
-- ``BlendingMode.STENCIL_LUMA``
-- ``BlendingMode.VIVID_LIGHT``
+-  ``BlendingMode.ADD``
+-  ``BlendingMode.ALPHA_ADD``
+-  ``BlendingMode.CLASSIC_COLOR_BURN``
+-  ``BlendingMode.CLASSIC_COLOR_DODGE``
+-  ``BlendingMode.CLASSIC_DIFFERENCE``
+-  ``BlendingMode.COLOR``
+-  ``BlendingMode.COLOR_BURN``
+-  ``BlendingMode.COLOR_DODGE``
+-  ``BlendingMode.DANCING_DISSOLVE``
+-  ``BlendingMode.DARKEN``
+-  ``BlendingMode.DARKER_COLOR``
+-  ``BlendingMode.DIFFERENCE``
+-  ``BlendingMode.DISSOLVE``
+-  ``BlendingMode.EXCLUSION``
+-  ``BlendingMode.HARD_LIGHT``
+-  ``BlendingMode.HARD_MIX``
+-  ``BlendingMode.HUE``
+-  ``BlendingMode.LIGHTEN``
+-  ``BlendingMode.LIGHTER_COLOR``
+-  ``BlendingMode.LINEAR_BURN``
+-  ``BlendingMode.LINEAR_DODGE``
+-  ``BlendingMode.LINEAR_LIGHT``
+-  ``BlendingMode.LUMINESCENT_PREMUL``
+-  ``BlendingMode.LUMINOSITY``
+-  ``BlendingMode.MULTIPLY``
+-  ``BlendingMode.NORMAL``
+-  ``BlendingMode.OVERLAY``
+-  ``BlendingMode.PIN_LIGHT``
+-  ``BlendingMode.SATURATION``
+-  ``BlendingMode.SCREEN``
+-  ``BlendingMode.SILHOUETE_ALPHA``
+-  ``BlendingMode.SILHOUETTE_LUMA``
+-  ``BlendingMode.SOFT_LIGHT``
+-  ``BlendingMode.STENCIL_ALPHA``
+-  ``BlendingMode.STENCIL_LUMA``
+-  ``BlendingMode.VIVID_LIGHT``
 
 ----
 
@@ -319,9 +319,9 @@ The type of frame blending to perform when frame blending is enabled for the lay
 
 A FrameBlendingType enumerated value; read/write. One of:
 
-- ``FrameBlendingType.FRAME_MIX``
-- ``FrameBlendingType.NO_FRAME_BLEND``
-- ``FrameBlendingType.PIXEL_MOTION``
+-  ``FrameBlendingType.FRAME_MIX``
+-  ``FrameBlendingType.NO_FRAME_BLEND``
+-  ``FrameBlendingType.PIXEL_MOTION``
 
 ----
 
@@ -476,9 +476,9 @@ The quality with which this layer is displayed.
 
 A ``LayerQuality`` enumerated value; read/write. One of:
 
-- ``LayerQuality.BEST``
-- ``LayerQuality.DRAFT``
-- ``LayerQuality.WIREFRAME``
+-  ``LayerQuality.BEST``
+-  ``LayerQuality.DRAFT``
+-  ``LayerQuality.WIREFRAME``
 
 ----
 
@@ -564,11 +564,11 @@ If this layer has a track matte, specifies the way the track matte is applied.
 
 A ``TrackMatteType`` enumerated value; read/write. One of:
 
-- ``TrackMatteType.ALPHA``
-- ``TrackMatteType.ALPHA_INVERTED``
-- ``TrackMatteType.LUMA``
-- ``TrackMatteType.LUMA_INVERTED``
-- ``TrackMatteType.NO_TRACK_MATTE``
+-  ``TrackMatteType.ALPHA``
+-  ``TrackMatteType.ALPHA_INVERTED``
+-  ``TrackMatteType.LUMA``
+-  ``TrackMatteType.LUMA_INVERTED``
+-  ``TrackMatteType.NO_TRACK_MATTE``
 
 ----
 
@@ -606,9 +606,9 @@ Returns true if this layer's audio will be active at the specified time. For thi
 
 **Parameters**
 
-========	=============================================
-``time``	The time, in seconds. A floating-point value.
-========	=============================================
+========  =============================================
+``time``  The time, in seconds. A floating-point value.
+========  =============================================
 
 **Returns**
 
@@ -629,11 +629,14 @@ Calculates a transformation from a set of points in this layer.
 
 **Parameters**
 
-====================	========================================================
-``pointTopLeft``		The top left point coordinates in the form of an array, [x , y, z] .
-``pointTopRight``		The top right point coordinates in the form of an array, [ x, y, z ] .
-``pointBottomRight``	The bottom right point coordinates in the form of an array, [ x, y, z ] .
-====================	========================================================
+====================  ========================================================
+``pointTopLeft``      The top left point coordinates in the form of an array,
+                      [x , y, z] .
+``pointTopRight``     The top right point coordinates in the form of an array,
+                      [ x, y, z ] .
+``pointBottomRight``  The bottom right point coordinates in the form of an
+                      array, [ x, y, z ] .
+====================  ========================================================
 
 **Returns**
 
@@ -643,13 +646,13 @@ An Object with the transformation properties set.
 
 .. code:: javascript
 
-	var newLayer = comp.layers.add(newFootage);
-	newLayer.threeDLayer = true;
-	newLayer.blendingMode = BlendingMode.ALPHA_ADD;
-	var transform = newLayer.calculateTransformFromPoints(tl, tr, bl);
-	for (var sel in transform) {
-		newLayer.transform[sel].setValue(transform[sel]);
-	}
+    var newLayer = comp.layers.add(newFootage);
+    newLayer.threeDLayer = true;
+    newLayer.blendingMode = BlendingMode.ALPHA_ADD;
+    var transform = newLayer.calculateTransformFromPoints(tl, tr, bl);
+    for(var sel in transform) {
+        newLayer.transform[sel].setValue(transform[sel]);
+    }
 
 ----
 
@@ -687,10 +690,14 @@ Replaces the source for this layer.
 
 **Parameters**
 
-==================	=========================================================
-``newSource``		The new source AVItem object.
-``fixExpressions``	``True`` to adjust expressions for the new source, ``false`` otherwise. Note that this feature can be resource-intensive; if replacing a large amount of footage, do this only at the end of the operation. See also :ref:`Project.autoFixExpressions`.
-==================	=========================================================
+==================  =========================================================
+``newSource``       The new source AVItem object.
+``fixExpressions``  ``True`` to adjust expressions for the new source,
+                    ``false`` otherwise. Note that this feature can be
+                    resource-intensive; if replacing a large amount of
+                    footage, do this only at the end of the operation. See
+                    also :ref:`Project.autoFixExpressions`.
+==================  =========================================================
 
 **Returns**
 
@@ -711,10 +718,12 @@ Retrieves the rectangle bounds of the layer at the specified time index, correct
 
 **Parameters**
 
-===========	================================================================
-``timeT``	The time index, in seconds. A floating-point value.
-``extents``	``True`` to include the extents, ``false`` otherwise. Extents apply to shape layers, increasing the size of the layer bounds as necessary.
-===========	================================================================
+===========  ================================================================
+``timeT``    The time index, in seconds. A floating-point value.
+``extents``  ``True`` to include the extents, ``false`` otherwise. Extents
+             apply to shape layers, increasing the size of the layer bounds
+             as necessary.
+===========  ================================================================
 
 **Returns**
 

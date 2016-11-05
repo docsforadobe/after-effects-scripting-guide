@@ -44,7 +44,7 @@ app.availableGPUAccelTypes
 ``app.availableGPUAccelTypes``
 
 .. note::
-	This functionality was added in After Effects 14.0
+   This functionality was added in After Effects 14.0
 
 **Description**
 
@@ -64,27 +64,27 @@ Array of ``GpuAccelType`` enums, or null if no viewers are open; Read-only. One 
 **Example**
 The following sample code checks the current computer's available GPU acceleration types, and sets it to Metal if available::
 
-	// app.availableGPUAccelTypes returns GPU acceleration types available on the current system.
-	// You can use this to check before setting the GPU acceleration type.
-	{
-		var newType = GpuAccelType.METAL;
+    // app.availableGPUAccelTypes returns GPU acceleration types available on the current system.
+    // You can use this to check before setting the GPU acceleration type.
+    {
+        var newType = GpuAccelType.METAL;
 
-		// Before trying to set, check which GPU acceleration types are available on the current system.
-		var canSet = false;
-		var currentOptions = app.availableGPUAccelTypes;
-		for (op in currentOptions) {
-			if (currentOptions[op] == newType)
-				canSet = true;
-		}
+        // Before trying to set, check which GPU acceleration types are available on the current system.
+        var canSet = false;
+        var currentOptions = app.availableGPUAccelTypes;
+        for (op in currentOptions) {
+            if (currentOptions[op] == newType)
+                canSet = true;
+        }
 
-		if (canSet) {
-			// Set the GPU acceleration type.
-			app.project.gpuAccelType = newType
-		}
-		else {
-			alert("Metal is not available on this OS.");
-		}
-	}
+        if (canSet) {
+            // Set the GPU acceleration type.
+            app.project.gpuAccelType = newType
+        }
+        else {
+            alert("Metal is not available on this OS.");
+        }
+    }
 
 ----
 
@@ -137,18 +137,25 @@ The effects available in the application.
 
 Array, with each element containing the following properties; read-only:
 
-===============	===========================================================
-``displayName``	String representing the localized display name of the effect as seen in the Effect menu.
-``category``	String representing the localized category label as seen in the Effect menu. This can be "" for synthetic effects that aren’t normally shown to the user.
-``matchName``	String representing the internal unique name for the effect. This name does not change between versions of After Effects. Use this value to apply the effect.
-``version``		Effect’s internal version string. This value might be different than the version number the plug-in vendor decides to show in the effect’s about box.
-===============	===========================================================
+===============  ===========================================================
+``displayName``  String representing the localized display name of the
+                 effect as seen in the Effect menu.
+``category``     String representing the localized category label as seen
+                 in the Effect menu. This can be "" for synthetic effects
+                 that aren’t normally shown to the user.
+``matchName``    String representing the internal unique name for the effect.
+                 This name does not change between versions of After Effects.
+                 Use this value to apply the effect.
+``version``      Effect’s internal version string.
+                 This value might be different than the version number the
+                 plug-in vendor decides to show in the effect’s about box.
+===============  ===========================================================
 
 **Example**
 
 ::
 
-	var effectName = app.effects[12].displayName;
+  var effectName = app.effects[12].displayName;
 
 ----
 
@@ -180,9 +187,9 @@ app.exitCode
 
 A numeric status code used when executing a script externally (that is, from a command line or AppleScript).
 
-- In Windows, the value is returned on the command line when After Effects was launched on the command line (using the ``afterfx`` or ``afterfx –m`` command), and a script was specified with the ``–r`` or ``–s`` option.
+-  In Windows, the value is returned on the command line when After Effects was launched on the command line (using the ``afterfx`` or ``afterfx –m`` command), and a script was specified with the ``–r`` or ``–s`` option.
 
-- in Mac OS, the value is returned as the AppleScript ``DoScript`` result for each script.
+-  in Mac OS, the value is returned as the AppleScript ``DoScript`` result for each script.
 
 In both Mac OS and Windows, the value is set to 0 (``EXIT_SUCCESS``) at the beginning of each script evaluation. In the event of an error while the script is running, the script can set this to a positive integer that indicates what error occurred.
 
@@ -194,7 +201,7 @@ Integer; read/write.
 
 ::
 
-	app.exitCode = 2; // on quit, if value is 2, an error has occurred
+  app.exitCode = 2; // on quit, if value is 2, an error has occurred
 
 ----
 
@@ -210,34 +217,34 @@ app.isoLanguage
 A string indicating the locale (language and regional designations) After Effects is running.
 
 .. note::
-	``$.locale`` returns the operating system language, not the language of the After Effects application.
+   ``$.locale`` returns the operating system language, not the language of the After Effects application.
 
 **Type**
 
 String; read-only. Some common values include:
 
-- ``en_US`` for English (United States)
-- ``de_DE`` for German (Germany)
-- ``es_ES`` for Spanish (Spain)
-- ``fr_FR`` for French (France)
-- ``it_IT`` for Italian (Italy)
-- ``ja_JP`` for Japanese (Japan)
-- ``ko_KR`` for Korean (Korea)
+-  ``en_US`` for English (United States)
+-  ``de_DE`` for German (Germany)
+-  ``es_ES`` for Spanish (Spain)
+-  ``fr_FR`` for French (France)
+-  ``it_IT`` for Italian (Italy)
+-  ``ja_JP`` for Japanese (Japan)
+-  ``ko_KR`` for Korean (Korea)
 
 **Example**
 
 ::
 
-	var lang = app.isoLanguage;
-	if (lang == "en_US") {
-		alert("After Effects is running in English.");
-	}
-	elseif (lang == "fr_FR") {
-		alert("After Effects is running in French.");
-	}
-	else {
-		alert("After Effects is running in English or French.");
-	}
+  var lang = app.isoLanguage;
+  if (lang == "en_US") {
+    alert("After Effects is running in English.");
+  }
+  elseif (lang == "fr_FR") {
+    alert("After Effects is running in French.");
+  }
+  else {
+    alert("After Effects is running in English or French.");
+  }
 
 ----
 
@@ -311,10 +318,10 @@ A function name string, or null if no function is assigned; read/write.
 
 ::
 
-	function err(errString) {
-		alert(errString) ;
-	}
-	app.onError = err;
+  function err(errString) {
+    alert(errString) ;
+  }
+  app.onError = err;
 
 ----
 
@@ -377,7 +384,7 @@ app.version
 ``app.version``
 
 .. note::
-	This functionality was added in After Effects 12.0
+   This functionality was added in After Effects 12.0
 
 **Description**
 
@@ -391,8 +398,8 @@ String; read-only.
 
 ::
 
-	var ver = app.version;
-	alert("This machine is running version" + ver + "of AfterEffects.");
+  var ver = app.version;
+  alert("This machine is running version" + ver + "of AfterEffects.");
 
 -----
 
@@ -457,9 +464,10 @@ Marks the beginning of an undo group, which allows a script to logically group a
 
 **Parameters**
 
-==============	==========================================
-``undoString``	The text that will appear for the Undo command in the Edit menu (that is, "Undo ")
-==============	==========================================
+==============  ==========================================
+``undoString``  The text that will appear for the Undo command in the
+                Edit menu (that is, "Undo ")
+==============  ==========================================
 
 **Returns**
 
@@ -480,9 +488,10 @@ Removes the specified task from the queue of tasks scheduled for delayed executi
 
 **Parameters**
 
-==========	=============================
-``taskID``	An integer that identifies the task, as returned by `app.scheduleTask()`_.
-==========	=============================
+==========  =============================
+``taskID``  An integer that identifies the task, as returned by
+            `app.scheduleTask()`_.
+==========  =============================
 
 **Returns**
 
@@ -503,9 +512,11 @@ Ends the suppression of script error dialog boxes in the user interface. Error d
 
 **Parameters**
 
-============	=========	==============================================
-``alert``		Boolean;	when true, errors that have occurred following the call to ``beginSuppressDialogs()`` are displayed in adialog box.
-============	=========	==============================================
+============  =========  ==============================================
+``alert``     Boolean;   when true, errors that have occurred following
+                         the call to ``beginSuppressDialogs()`` are
+                         displayed in adialog box.
+============  =========  ==============================================
 
 **Returns**
 
@@ -584,8 +595,8 @@ A new Project object, or null if no new project is created.
 
 ::
 
-	app.project.close(CloseOptions.DO_NOT_SAVE_CHANGES);
-	app.newProject();
+    app.project.close(CloseOptions.DO_NOT_SAVE_CHANGES);
+    app.newProject();
 
 ----
 
@@ -603,9 +614,11 @@ Opens a project.
 
 **Parameters**
 
-=========	=========	==============================
-``file``	Optional	An ExtendScript File object for the project file to open. If not supplied, the method prompts the user to select a project file.
-=========	=========	==============================
+=========  =========  ==============================
+``file``   Optional   An ExtendScript File object for the project file
+                      to open. If not supplied, the method prompts the user
+                      to select a project file.
+=========  =========  ==============================
 
 **Returns**
 
@@ -615,13 +628,12 @@ A new Project object for the specified project, or null if the user cancels the 
 
 ::
 
-	var my_file = new File("../my_folder/my_test.aep");
-	if (my_file.exists) {
-		new_project = app.open(my_file);
-		if (new_project) {
-			alert(new_project.file.name);
-		}
-	}
+  var my_file = new File("../my_folder/my_test.aep");
+  if (my_file.exists) {
+    new_project = app.open(my_file); if (new_project) {
+      alert(new_project.file.name);
+    }
+  }
 
 ----
 
@@ -638,37 +650,40 @@ Loads color swatch data from an Adobe Swatch Exchange (ASE) file.
 
 **Parameters**
 
-========	============================
-``file``	The file specification, an ExtendScript ``File`` object.
-========	============================
+========  ============================
+``file``  The file specification, an ExtendScript ``File`` object.
+========  ============================
 
 **Returns**
 
 The swatch data, in this format:
 
-+---------------------------+---------------------------------------------------------------------------------------+
-|	``data.majorVersion``	|	The ASE version number.																|
-|	``data.minorVersion``	|																						|
-+---------------------------+---------------------------------------------------------------------------------------+
-|	``data.values``			|	An array of Swatch Value.															|
-+---------------------------+---------------------------------------------------------------------------------------+
-|	``SwatchValue.type``	|  One of "RGB", "CMYK", "LAB", "Gray"													|
-+---------------------------+---------------------------------------------------------------------------------------+
-|	``SwatchValue.r``		|	When ``type = "RGB"``, the color values in the range ``[0.0..1.0]``.				|
-|	``SwatchValue.g``		|																						|
-|	``SwatchValue.b``		|	0, 0, 0 is Black.																	|
-+---------------------------+---------------------------------------------------------------------------------------+
-|	``SwatchValue.c``		|	When ``type`` = "CMYK", the color values in the range  [0.0..1.0].					|
-|	``SwatchValue.m``		|																						|
-|	``SwatchValue.y``		|	0, 0, 0, 0 is White.																|
-|	``SwatchValue.k``		|																						|
-+---------------------------+---------------------------------------------------------------------------------------+
-|	``SwatchValue.L``		|	When ``type = "LAB"``, the color values.											|
-|	``SwatchValue.a``		|	``L`` is in the range [0.0..1.0]. ``a`` and ``b`` are in the range [-128.0..+128.0]	|
-|	``SwatchValue.b``		|	0, 0, 0 is Black.								 									|
-|	``SwatchValue.value``	|	When ``type = "Gray"``, the ``value`` range is [0.0..1.0].							|
-|							|	0.0 is Black.																		|
-+---------------------------+---------------------------------------------------------------------------------------+
++------------------------+---------------------------------------------------+
+| ``data.majorVersion``  | The ASE version number.                           |
+| ``data.minorVersion``  |                                                   |
++------------------------+---------------------------------------------------+
+| ``data.values``        | An array of Swatch Value.                         |
++------------------------+---------------------------------------------------+
+| ``SwatchValue.type``   |  One of "RGB", "CMYK", "LAB", "Gray"              |
++------------------------+---------------------------------------------------+
+| ``SwatchValue.r``      | When ``type = "RGB"``, the color values in the    |
+|                        | range ``[0.0..1.0]``.                             |
+| ``SwatchValue.g``      | 0, 0, 0 is Black.                                 |
+| ``SwatchValue.b``      |                                                   |
++------------------------+---------------------------------------------------+
+| ``SwatchValue.c``      | When ``type`` = "CMYK", the color values in the   |
+|                        | range  [0.0..1.0].                                |
+| ``SwatchValue.m``      | 0, 0, 0, 0 is White.                              |
+| ``SwatchValue.y``      |                                                   |
+| ``SwatchValue.k``      |                                                   |
++------------------------+---------------------------------------------------+
+| ``SwatchValue.L``      | When ``type = "LAB"``, the color values.          |
+| ``SwatchValue.a``      | ``L`` is in the range [0.0..1.0]. ``a`` and ``b`` |
+|                        | are in the range [-128.0..+128.0]                 |
+| ``SwatchValue.b``      | 0, 0, 0 is Black.                                 |
+| ``SwatchValue.value``  | When ``type = "Gray"``, the ``value`` range is    |
+|                        | [0.0..1.0]. 0.0 is Black.                         |
++------------------------+---------------------------------------------------+
 
 ----
 
@@ -685,9 +700,9 @@ Pauses or resumes the search of the target watch folder for items to render.
 
 **Parameters**
 
-=========	============================
-``pause``	True to pause, false to resume.
-=========	============================
+=========  ============================
+``pause``  True to pause, false to resume.
+=========  ============================
 
 **Returns**
 
@@ -714,14 +729,18 @@ Purges unused data of the specified types from memory. Replicates the Purge opti
 
 **Parameters**
 
-+---------------+---------------------------------------------------------------------------------------------------+
-|	``target``	|	The type of elements to purge from memory; a PurgeTarget enumerated value, one of:				|
-|				|																									|
-|				| - ``PurgeTarget.ALL_CACHES``: Purges all data that After Effects has cached to physical memory.	|
-|				| - ``PurgeTarget.UNDO_CACHES``: Purges all data saved in the undo cache.							|
-|				| - ``PurgeTarget.SNAPSHOT_CACHES``: Purges all data cached as composition/layer snapshots.			|
-|				| - ``PurgeTarget.IMAGE_CACHES`` : Purges all saved image data. 									|
-+---------------+---------------------------------------------------------------------------------------------------+
++------------+---------------------------------------------------------------+
+| ``target`` | The type of elements to purge from memory; a PurgeTarget      |
+|            | enumerated value, one of:                                     |
+|            |                                                               |
+|            | - ``PurgeTarget.ALL_CACHES``: Purges all data that After      |
+|            |   Effects has cached to physical memory.                      |
+|            | - ``PurgeTarget.UNDO_CACHES``: Purges all data saved in the   |
+|            |   undo cache.                                                 |
+|            | - ``PurgeTarget.SNAPSHOT_CACHES``: Purges all data cached as  |
+|            |   composition/layer snapshots.                                |
+|            | - ``PurgeTarget.IMAGE_CACHES`` : Purges all saved image data. |
++------------+---------------------------------------------------------------+
 
 **Returns**
 
@@ -763,11 +782,14 @@ Schedules the specified JavaScript for delayed execution.
 
 **Parameters**
 
-===================	==============================================
-``stringToExecute``	A string containing JavaScript to be executed.
-``delay``			A number of milliseconds to wait before executing the JavaScript. A floating-point value.
-``repeat``			When true, execute the script repeatedly, with the specified delay between each execution. When false the script is executed only once.
-===================	==============================================
+===================   ==============================================
+``stringToExecute``   A string containing JavaScript to be executed.
+``delay``             A number of milliseconds to wait before executing
+                      the JavaScript. A floating-point value.
+``repeat``            When true, execute the script repeatedly, with the
+                      specified delay between each execution. When false the
+                      script is executed only once.
+===================   ==============================================
 
 **Returns**
 
@@ -788,10 +810,12 @@ Sets memory usage limits as in the Memory & Cache preferences area. For both val
 
 **Parameters**
 
-===========================	==============================================
-``imageCachePercentage``	Floating-point value, the percentage of memory assigned to image cache.
-``maximumMemoryPercentage``	Floating-point value, the maximum usable percentage of memory.
-===========================	==============================================
+===========================  ==============================================
+``imageCachePercentage``     Floating-point value, the percentage of memory
+                             assigned to image cache.
+``maximumMemoryPercentage``  Floating-point value, the maximum usable
+                             percentage of memory.
+===========================  ==============================================
 
 **Returns**
 
@@ -812,9 +836,9 @@ Set or clears the flag that determines whether preferences are saved when the ap
 
 **Parameters**
 
-==========	====================================
-``doSave``	When true, preferences saved on quit, when false they are not.
-==========	====================================
+==========  ====================================
+``doSave``  When true, preferences saved on quit, when false they are not.
+==========  ====================================
 
 **Returns**
 
@@ -835,9 +859,10 @@ Starts a Watch Folder (network rendering) process pointed at a specified folder.
 
 **Parameters**
 
-==========================	====================================
-``folder_object_to_watch``	The ExtendScript Folder object for the folder to watch.
-==========================	====================================
+==========================  ====================================
+``folder_object_to_watch``  The ExtendScript Folder object for the folder to
+                            watch.
+==========================  ====================================
 
 **Returns**
 
@@ -847,8 +872,8 @@ Nothing.
 
 ::
 
-	var theFolder = new Folder("c:/tool");
-	app.watchFolder(theFolder);
+  var theFolder = new Folder("c:/tool");
+  app.watchFolder(theFolder);
 
 **See also**
 

@@ -14,8 +14,8 @@ The System object provides access to attributes found on the user’s system, su
 
 ::
 
-	alert("Your OS is" + system.osName + "running version" + system.osVersion);
-	confirm("You are:" + system.userName + "running on" + system.machineName + ".");
+    alert("Your OS is" + system.osName + "running version" + system.osVersion);
+    confirm("You are:" + system.userName + "running on" + system.machineName + ".");
 
 ----
 
@@ -52,7 +52,7 @@ System.osName
 The name of the operating system on which After Effects is running.
 
 .. warning::
-	As of Windows 7, this attribute returns a blank value. Use $.os instead.
+   As of Windows 7, this attribute returns a blank value. Use $.os instead.
 
 **Type**
 
@@ -109,14 +109,14 @@ System.callSystem()
 
 Executes a system command, as if you had typed it on the operating system’s command line. Returns whatever the system outputs in response to the command, if anything.In Windows, you can invoke commands using the ``/c`` switch for the ``cmd.exe`` command, passing the command to run in escaped quotes (``\"...\"``). For example, the following retrieves the current time and displays it to the user::
 
-	var timeStr = system.callSystem("cmd.exe /c \"time /t\"");
-	alert("Current time is" + timeStr);
+    var timeStr = system.callSystem("cmd.exe /c \"time /t\"");
+    alert("Current time is" + timeStr);
 
 **Parameters**
 
-====================	========================================================
-``cmdLineToExecute``	A string containing the command and its parameters.
-====================	========================================================
+====================  ========================================================
+``cmdLineToExecute``  A string containing the command and its parameters.
+====================  ========================================================
 
 **Returns**
 

@@ -23,7 +23,7 @@ RenderQueue.canQueueInAME
 ``app.project.renderQueue.canQueueInAME``
 
 .. note::
-	This functionality was added in After Effects 14.0
+   This functionality was added in After Effects 14.0
 
 **Description**
 
@@ -127,9 +127,10 @@ Pauses the current rendering process, or continues a paused rendering process. T
 
 **Parameters**
 
-=========	====================================================================
-``pause``	True to pause a current render process, false to continue a paused render.
-=========	====================================================================
+=========  ====================================================================
+``pause``  True to pause a current render process, false to continue a paused
+           render.
+=========  ====================================================================
 
 **Returns**
 
@@ -148,8 +149,8 @@ RenderQueue.render()
 
 Starts the rendering process. This is the same as clicking Render in the Render Queue panel. The method does not return until the render process is complete. To pause or stop the rendering process, call :ref:`renderqueue.pauseRendering` or :ref:`renderqueue.stopRendering` from an ``onError`` or ``onStatusChanged`` callback.
 
-- To respond to errors during the rendering process, define a callback function in :ref:`app.onError`.
-- To respond to changes in the status of a particular item while the render is progressing, define a callback function in :ref:`RenderQueueItem.onStatusChanged` in the associated RenderQueueItem object.
+-  To respond to errors during the rendering process, define a callback function in :ref:`app.onError`.
+-  To respond to changes in the status of a particular item while the render is progressing, define a callback function in :ref:`RenderQueueItem.onStatusChanged` in the associated RenderQueueItem object.
 
 **Parameters**
 
@@ -174,9 +175,9 @@ Shows or hides the Render Queue panel.
 
 **Parameters**
 
-==========	=============================================================
-``doShow``	When true, show the Render Queue panel. When false, hide it.
-==========	=============================================================
+==========  =============================================================
+``doShow``  When true, show the Render Queue panel. When false, hide it.
+==========  =============================================================
 
 **Returns**
 
@@ -213,23 +214,24 @@ RenderQueue.queueInAME()
 ``app.project.renderQueue.queueInAME(render_immediately_in_AME)``
 
 .. note::
-	This functionality was added in After Effects 14.0
+   This functionality was added in After Effects 14.0
 
 **Description**
 
 Calls the Queue In AME command. This method requires passing a boolean value, telling AME whether to only queue the render items (false) or if AME should also start processing its queue (true).
 
 .. note::
-	This requires Adobe Media Encoder CC 2017 (11.0) or later.
+   This requires Adobe Media Encoder CC 2017 (11.0) or later.
 
 .. note::
-	When AME receives the queued items, it applies the most recently used encoding preset. If ``render_immediately_in_AME`` is set to true, you will not have an opportunity to change the encoding settings.
+   When AME receives the queued items, it applies the most recently used encoding preset. If ``render_immediately_in_AME`` is set to true, you will not have an opportunity to change the encoding settings.
 
 **Parameters**
 
-=============================	==============================================================
-``render_immediately_in_AME``	Telling AME whether to only queue the render items (``false``) or if AME should also start processing its queue (``true``).
-=============================	==============================================================
+=============================  ==============================================================
+``render_immediately_in_AME``  Telling AME whether to only queue the render items (``false``)
+                               or if AME should also start processing its queue (``true``).
+=============================  ==============================================================
 
 **Returns**
 
@@ -239,15 +241,15 @@ Nothing.
 
 The following sample code checks to see if there are queued items in the render queue, and if so queues them in AME but does not immediately start rendering::
 
-	// Scripting support for Queue in AME.
-	// Requires Adobe Media Encoder 11.0.
-	{
-		if (app.project.renderQueue.canQueueInAME == true)
-		{
-			// Send queued items to AME, but do not start rendering.
-			app.project.renderQueue.queueInAME(false);
-		}
-		else {
-			alert("There are no queued item in the Render Queue.");
-		}
-	}
+    // Scripting support for Queue in AME.
+    // Requires Adobe Media Encoder 11.0.
+    {
+        if (app.project.renderQueue.canQueueInAME == true)
+        {
+            // Send queued items to AME, but do not start rendering.
+            app.project.renderQueue.queueInAME(false);
+        }
+        else {
+            alert("There are no queued item in the Render Queue.");
+        }
+    }

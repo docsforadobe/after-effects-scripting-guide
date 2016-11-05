@@ -9,9 +9,9 @@ app.project.item(index)
 
 The AVItem object provides access to attributes and methods of audio/visual files imported into After Effects.
 
-	AVItem is a subclass of Item. All methods and attributes of Item, in addition to those listed below, are available when working with AVItem. See :ref:`Item`
+    AVItem is a subclass of Item. All methods and attributes of Item, in addition to those listed below, are available when working with AVItem. See :ref:`Item`
 
-	AVItem is the base class for both CompItem and FootageItem, so AVItem attributes and methods are also available when working with CompItem and FootageItem objects. See :ref:`CompItem` and :ref:`FootageItem`.
+    AVItem is the base class for both CompItem and FootageItem, so AVItem attributes and methods are also available when working with CompItem and FootageItem objects. See :ref:`CompItem` and :ref:`FootageItem`.
 
 ----
 
@@ -30,8 +30,8 @@ AVItem.duration
 
 Returns the duration, in seconds, of the item. Still footage items have a duration of 0.
 
-- In a CompItem, the value is linked to the duration of the composition, and is read/write.
-- In a FootageItem, the value is linked to the ``duration`` of the ``mainSource`` object, and is read-only.
+-  In a CompItem, the value is linked to the duration of the composition, and is read/write.
+-  In a FootageItem, the value is linked to the ``duration`` of the ``mainSource`` object, and is read-only.
 
 **Type**
 
@@ -84,8 +84,8 @@ AVItem.frameRate
 
 The frame rate of the AVItem, in frames-per-second. This is the reciprocal of the ``frameDuration`` . When set, the reciprocal is automatically set as a new ``frameDuration`` value.
 
-- In a CompItem, the value is linked to the ``frameRate`` of the composition, and is read/write.
-- In a FootageItem, the value is linked to the ``frameRate`` of the ``mainSource`` object, and is read-only. To change it, set the ``conformFrameRate`` of the ``mainSource`` object. This sets both the ``frameRate`` and ``frameDuration`` of the FootageItem.
+-  In a CompItem, the value is linked to the ``frameRate`` of the composition, and is read/write.
+-  In a FootageItem, the value is linked to the ``frameRate`` of the ``mainSource`` object, and is read-only. To change it, set the ``conformFrameRate`` of the ``mainSource`` object. This sets both the ``frameRate`` and ``frameDuration`` of the FootageItem.
 
 **Type**
 
@@ -104,8 +104,8 @@ AVItem.hasAudio
 
 When true, the AVItem has an audio component.
 
-- In a CompItem, the value is linked to the composition.
-- In a FootageItem, the value is linked to the ``mainSource`` object.
+-  In a CompItem, the value is linked to the composition.
+-  In a FootageItem, the value is linked to the ``mainSource`` object.
 
 **Type**
 
@@ -124,8 +124,8 @@ AVItem.hasVideo
 
 When true, the AVItem has an video component.
 
-- In a CompItem, the value is linked to the composition.
-- In a FootageItem, the value is linked to the ``mainSource`` object.
+-  In a CompItem, the value is linked to the composition.
+-  In a FootageItem, the value is linked to the ``mainSource`` object.
 
 **Type**
 
@@ -144,8 +144,8 @@ AVItem.height
 
 The height of the item in pixels.
 
-- In a CompItem, the value is linked to the composition, and is read/write.
-- In a FootageItem, the value is linked to the ``mainSource`` object, and is read/write only if the ``mainSource`` object is a SolidSource. Otherwise, it is read-only.
+-  In a CompItem, the value is linked to the composition, and is read/write.
+-  In a FootageItem, the value is linked to the ``mainSource`` object, and is read/write only if the ``mainSource`` object is a SolidSource. Otherwise, it is read-only.
 
 **Type**
 
@@ -164,7 +164,7 @@ AVItem.name
 
 The name of the item, as shown in the Project panel.
 
-- In a FootageItem, the value is linked to the ``mainSource`` object. If the ``mainSource`` object is a ``FileSource``, this value controls the display name in the Project panel, but does not affect the file name.
+-  In a FootageItem, the value is linked to the ``mainSource`` object. If the ``mainSource`` object is a ``FileSource``, this value controls the display name in the Project panel, but does not affect the file name.
 
 **Type**
 
@@ -183,23 +183,23 @@ AVItem.pixelAspect
 
 The pixel aspect ratio (PAR) of the item.
 
-- In a CompItem, the value is linked to the composition.
-- In a FootageItem, the value is linked to the mainSource object.
+-  In a CompItem, the value is linked to the composition.
+-  In a FootageItem, the value is linked to the mainSource object.
 
 The value you retrieve after setting may be slightly different from the value you supplied. The following table compares the value as it appears in the UI with the more accurate value returned by this attribute.
 
-===========================	=========================================
-PAR in the After Effects UI	PAR returned by the pixelAspect attribute
-===========================	=========================================
-0.91						0.90909090909091
-1							1
-1.5							1.5
-1.09						1.09401709401709
-1.21						1.21212121212121
-1.33						1.33333333333333
-1.46						1.45868945868946
-2							2
-===========================	=========================================
+===========================  =========================================
+PAR in the After Effects UI  PAR returned by the pixelAspect attribute
+===========================  =========================================
+0.91                         0.90909090909091
+1                            1
+1.5                          1.5
+1.09                         1.09401709401709
+1.21                         1.21212121212121
+1.33                         1.33333333333333
+1.46                         1.45868945868946
+2                            2
+===========================  =========================================
 
 **Type**
 
@@ -285,8 +285,8 @@ AVItem.width
 
 The width of the item, in pixels.
 
-- In a CompItem, the value is linked to the composition, and is read/write.
-- In a FootageItem, the value is linked to the ``mainSource`` object, and is read/write only if the ``mainSource`` object is a SolidSource. Otherwise, it is read-only.
+-  In a CompItem, the value is linked to the composition, and is read/write.
+-  In a FootageItem, the value is linked to the ``mainSource`` object, and is read/write only if the ``mainSource`` object is a SolidSource. Otherwise, it is read-only.
 
 **Type**
 
@@ -311,9 +311,9 @@ Sets a file as the proxy of this AVItem. Loads the specified file into a new Fil
 
 **Parameters**
 
-========	================================================================
-``file``	An ExtendScript File object for the file to be used as a proxy.
-========	================================================================
+========  ================================================================
+``file``  An ExtendScript File object for the file to be used as a proxy.
+========  ================================================================
 
 **Returns**
 
@@ -354,17 +354,19 @@ AVItem.setProxyWithPlaceholder()
 Creates a PlaceholderSource object with specified values, sets this as the value of the ``proxySource`` attribute, and sets ``useProxy`` to true. It does not preserve the interpretation parameters, instead using the user preferences.
 
 .. note::
-	There is no direct way to set a placeholder as a proxy in the user interface; this behavior occurs when a proxy has been set and then moved or deleted.
+   There is no direct way to set a placeholder as a proxy in the user interface; this behavior occurs when a proxy has been set and then moved or deleted.
 
 
 **parameters**
 
-=====================	===================================================
-``name``				A string containing the name of the new object.
-``width``, ``height``	The pixel dimensions of the placeholder, an integer in the range [4..30000].
-``frameRate``			The frames-per-second, an integer in the range [1..99].
-``duration``			The total length in seconds, up to 3 hours. An integer in the range [0.0..10800.0].
-=====================	===================================================
+=====================  ===================================================
+``name``               A string containing the name of the new object.
+``width``, ``height``  The pixel dimensions of the placeholder, an integer
+                       in the range [4..30000]. ``frameRate`` The
+                       frames-per-second, an integer in the range [1..99].
+                       ``duration`` The total length in seconds, up to 3
+                       hours. An integer in the range [0.0..10800.0].
+=====================  ===================================================
 
 **Returns**
 
@@ -385,10 +387,11 @@ Sets a sequence of files as the proxy of this AVItem, with the option of forcing
 
 **parameters**
 
-=====================	=====================================================
-``file``				An ExtendScript File object for the first file in the sequence.
-``forceAlphabetical``	When true, use the "Force alphabetical order" option.
-=====================	=====================================================
+=====================  =====================================================
+``file``               An ExtendScript File object for the first file in
+                       the sequence.
+``forceAlphabetical``  When true, use the "Force alphabetical order" option.
+=====================  =====================================================
 
 **Returns**
 
@@ -408,16 +411,19 @@ AVItem.setProxyWithSolid()
 Creates a :ref:`SolidSource` with specified values, sets this as the value of the ``proxySource`` attribute, and sets ``useProxy`` to true. It does not preserve the interpretation parameters, instead using the user preferences.
 
 .. note::
-	There is no way, using the user interface, to set a solid as a proxy; this feature is available only through scripting.
+   There is no way, using the user interface, to set a solid as a proxy; this feature is available only through scripting.
 
 **parameters**
 
-=====================	====================================================
-``color``				The color of the solid, an array of 3 floating-point values, [R, G, B], in the range [0.0..1.0].
-``name``				A string containing the name of the new object.
-``width``, ``height``	The pixel dimensions of the placeholder, an integer in the range [1...30000].
-``pixelAspect``			The pixel aspect of the solid, a floating-point value in the range [0.01... 100.0].
-=====================	====================================================
+=====================  ====================================================
+``color``              The color of the solid, an array of 3 floating-point
+                       values, [R, G, B], in the range [0.0..1.0]. ``name``
+                       A string containing the name of the new object.
+``width``, ``height``  The pixel dimensions of the placeholder, an integer
+                       in the range [1...30000]. ``pixelAspect`` The pixel
+                       aspect of the solid, a floating-point value in the
+                       range [0.01... 100.0].
+=====================  ====================================================
 
 **Returns**
 

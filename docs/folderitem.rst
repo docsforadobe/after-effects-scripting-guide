@@ -16,14 +16,14 @@ Given that the second item in the project is a FolderItem, the following code pu
 
 ::
 
-	var secondItem = app.project.item(2);
-	if(!(secondItem instanceof FolderItem)) {
-		alert("problem: second item is not a folder");
-	} else {
-		for (i = 1; i < = secondItem.numItems; i++) {
-			alert("item number " + i + " within the folder is named " + secondItem.item(i).name);
-		}
-	}
+    var secondItem = app.project.item(2);
+    if(!(secondItem instanceof FolderItem)) {
+        alert("problem: second item is not a folder");
+    } else {
+        for (i = 1; i < = secondItem.numItems; i++) {
+            alert("item number " + i + " within the folder is named " + secondItem.item(i).name);
+        }
+    }
 
 ----
 
@@ -82,9 +82,10 @@ Returns the top-level item in this folder at the specified index position. Note 
 
 **Parameters**
 
-=========	=================================================================
-``index``	An integer, the position index of the item to retrieve. The first item is at index 1.
-=========	=================================================================
+=========  =================================================================
+``index``  An integer, the position index of the item to retrieve. The first
+           item is at index 1.
+=========  =================================================================
 
 **Returns**
 Item object.

@@ -11,7 +11,7 @@ CompItem object
 
 The CompItem object represents a composition, and allows you to manipulate and get information about it. Access the objects by position index number in a project’s ite m collection.
 
-	CompItem is a subclass of :ref:`AVItem`, which is a subclass of :ref:`Item`. All methods and attributes of AVItem and Item, in addition to those listed below, are available when working with CompItem.
+    CompItem is a subclass of :ref:`AVItem`, which is a subclass of :ref:`Item`. All methods and attributes of AVItem and Item, in addition to those listed below, are available when working with CompItem.
 
 **Example**
 
@@ -19,9 +19,9 @@ Given that the first item in the project is a CompItem, the following code displ
 
 .. code::
 
-	var firstComp = app.project.item(1);
-	alert("number of layers is " + firstComp.numLayers);
-	alert("name of last layer is " + firstComp.layer(firstComp.numLayers).name) ;
+    var firstComp = app.project.item(1);
+    alert("number of layers is " + firstComp.numLayers);
+    alert("name of last layer is " + firstComp.layer(firstComp.numLayers).name) ;
 
 ----
 
@@ -76,7 +76,8 @@ The time set as the beginning of the composition, in seconds. This is the equiva
 
 **Type**
 
-Floating-point value in the range ``[0.0...86339.0]`` (1 second less than 25 hours); read/write.
+Floating-point value in the range ``[0.0...86339.0]``
+(1 second less than 25 hours); read/write.
 
 ----
 
@@ -258,7 +259,7 @@ CompItem.markerProperty
 ``app.project.item(index).markerProperty``
 
 .. note::
-	This functionality was added in After Effects 14.0
+   This functionality was added in After Effects 14.0
 
 **Description**
 
@@ -272,22 +273,22 @@ PropertyGroup object or null; read-only.
 
 The following sample code creates a project and composition, then creates two composition markers with different properties::
 
-	// comp.markerProperty allows you add markers to a comp.
-	// It has the same functionality as layer.property("Marker")
-	{
-		var currentProj = app.newProject();
-		var comp = currentProj.items.addComp("mycomp", 1920, 1080, 1.0, 5, 29.97);
-		var solidLayer = comp.layers.addSolid([1, 1, 1], "mylayer", 1920, 1080, 1.0);
+    // comp.markerProperty allows you add markers to a comp.
+    // It has the same functionality as layer.property("Marker")
+    {
+        var currentProj = app.newProject();
+        var comp = currentProj.items.addComp("mycomp", 1920, 1080, 1.0, 5, 29.97);
+        var solidLayer = comp.layers.addSolid([1, 1, 1], "mylayer", 1920, 1080, 1.0);
 
-		var compMarker = new MarkerValue("This is a comp marker!");
-		compMarker.duration = 1; compMarker.url = "http://www.adobe.com/aftereffects";
+        var compMarker = new MarkerValue("This is a comp marker!");
+        compMarker.duration = 1; compMarker.url = "http://www.adobe.com/aftereffects";
 
-		var compMarker2 = new MarkerValue("Another comp marker!");
-		compMarker2.duration = 1;
+        var compMarker2 = new MarkerValue("Another comp marker!");
+        compMarker2.duration = 1;
 
-		comp.markerProperty.setValueAtTime(1, compMarker)
-		comp.markerProperty.setValueAtTime(3, compMarker2)
-	}
+        comp.markerProperty.setValueAtTime(1, compMarker)
+        comp.markerProperty.setValueAtTime(3, compMarker2)
+    }
 
 ----
 
@@ -539,22 +540,31 @@ Returns a Layer object, which can be specified by name, an index position in thi
 
 **Parameters**
 
-=========	=================================================================
-``index``	The index number of the desired layer in this composition. An integer in the range ``[1...numLayers]``, where ``numLayers`` is the number of layers in the composition.
-=========	=================================================================
+=========  =================================================================
+``index``  The index number of the desired layer in this composition. An
+           integer in the range ``[1...numLayers]``, where ``numLayers`` is
+           the number of layers in the composition.
+=========  =================================================================
 
 or:
 
-==============	=============================================================
-``otherLayer``	A Layer object in this composition. The ``relIndex`` value is added to the index value of this layer to find the position of the desired layer.
-``relIndex``	The postion of the desired layer, relative to ``otherLayer``. An integer in the range ``[otherLayer.index...numLayers otherLayer.index]``, where ``numLayers`` is the number of layers in the composition. This value is added to the ``otherLayer`` value to derive the absolute index of the layer to return.
-==============	=============================================================
+==============  =============================================================
+``otherLayer``  A Layer object in this composition. The ``relIndex`` value is
+                added to the index value of thislayer to findthe positionof
+                the desired layer.
+``relIndex``    The postion of the desired layer, relative to ``otherLayer``.
+                An integer in the range ``[1 – otherLayer.index...numLayers –
+                otherLayer.index]``, where ``numLayers`` is the number of
+                layers in the composition. This value is added to the
+                ``otherLayer`` value to derive the absolute index of the
+                layer to return.
+==============  =============================================================
 
 —or—
 
-========	====================================================
-``name``	The string containing the name of the desired layer.
-========	====================================================
+========  ====================================================
+``name``  The string containing the name of the desired layer.
+========  ====================================================
 
 **Returns**
 

@@ -9,7 +9,7 @@ MaskPropertyGroup object
 
 The MaskPropertyGroup object encapsulates mask attributes in a layer.
 
-	MaskPropertyGroup is a subclass of :ref:`PropertyGroup`. All methods and attributes of :ref:`PropertyBase` and PropertyGroup, in addition to those listed below, are available when working with MaskPropertyGroup.
+    MaskPropertyGroup is a subclass of :ref:`PropertyGroup`. All methods and attributes of :ref:`PropertyBase` and PropertyGroup, in addition to those listed below, are available when working with MaskPropertyGroup.
 
 ----
 
@@ -83,8 +83,8 @@ The feather falloff mode for the mask. Equivalent to the Layer > Mask > Feather 
 
 A ``MaskFeatherFalloff`` enumerated value; read/write. One of:
 
-- ``MaskFeatherFalloff.FFO_LINEAR``
-- ``MaskFeatherFalloff.FFO_SMOOTH``
+-  ``MaskFeatherFalloff.FFO_LINEAR``
+-  ``MaskFeatherFalloff.FFO_SMOOTH``
 
 ----
 
@@ -103,13 +103,13 @@ The masking mode for this mask.
 
 A ``MaskMode`` enumerated value; read/write. One of:
 
-- ``MaskMode.NONE``
-- ``MaskMode.ADD``
-- ``MaskMode.SUBTRACT``
-- ``MaskMode.INTERSECT``
-- ``MaskMode.LIGHTEN``
-- ``MaskMode.DARKEN``
-- ``MaskMode.DIFFERENCE``
+-  ``MaskMode.NONE``
+-  ``MaskMode.ADD``
+-  ``MaskMode.SUBTRACT``
+-  ``MaskMode.INTERSECT``
+-  ``MaskMode.LIGHTEN``
+-  ``MaskMode.DARKEN``
+-  ``MaskMode.DIFFERENCE``
 
 ----
 
@@ -128,9 +128,9 @@ How motion blur is applied to this mask.
 
 A ``MakMotionBlur`` enumerated value; read/write. One of:
 
-- ``MaskMotionBlur.SAME_AS_LAYER``
-- ``MaskMotionBlur.ON``
-- ``MaskMotionBlur.OFF``
+-  ``MaskMotionBlur.SAME_AS_LAYER``
+-  ``MaskMotionBlur.ON``
+-  ``MaskMotionBlur.OFF``
 
 ----
 
