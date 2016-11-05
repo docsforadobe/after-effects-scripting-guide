@@ -144,7 +144,9 @@ Some properties of a layer, such as position and zoom, can be accessed only by n
 
 **Returns**
 
-:ref:`PropertyBase` or null if no child property with the specified string name is found. Properties accessible by name
+:ref:`PropertyBase` or null if no child property with the specified string name is found.
+
+**Properties accessible by name**
 
 =======================================  ======================================
 From any Layer                           -  "ADBE Mask Parade", or "Masks"
