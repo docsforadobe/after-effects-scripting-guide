@@ -171,10 +171,13 @@ Project.gpuAccelType
 
 ``app.project.gpuAccelType``
 
+.. note::
+   This functionality was added in After Effects 13.8
+
 **Description**
 
 Get or set the current projects GPU Acceleration option.
-see :ref:`app.availableGPUAccelTypes `
+see :ref:`app.availableGPUAccelTypes`
 
 **Type**
 
@@ -184,6 +187,32 @@ A ``GpuAccelType`` enumerated value; read/write. One of:
 - ``Metal``
 - ``OPENCL``
 - ``SOFTWARE``
+
+**Example**
+
+The following sample code checks to see if there are queued items in the render queue, and if so queues them in AME but does not immediately start rendering::
+
+    // access via scripting to Project Settings -> Video Rendering and Effects -> Use
+
+    var currentGPUSettings = app.project.gpuAccelType; // returns the current value
+    var type_str = "";
+
+    // check the current value and alert the user
+
+    switch(currentGPUSettings) {
+        case GpuAccelType.CUDA:  type_str = "CUDA"; break;
+        case GpuAccelType.METAL:    type_str = "Metal"; break;
+        case GpuAccelType.OPENCL:       type_str = "OpenCL"; break;
+        case GpuAccelType.SOFTWARE:     type_str = "Software"; break;
+        default:    type_str = "UNKNOWN"; break;
+        }
+
+    alert("Your current setting is " + type_str);
+
+    // set the value to Metal
+
+    app.project.gpuAccelType = GpuAccelType.METAL;
+
 
 ----
 
@@ -344,9 +373,12 @@ Project.toolType
 
 ``app.project.toolType``
 
+.. note::
+    This functionality was added in After Effects 14.0
+
 **Description**
 
-You can now get and set the active tool in the Tools panel using the new app.project.toolType attribute. This read/write attribute returns or accepts an enumerated ToolType value, of one of the following:
+Get and sets the active tool in the Tools panel.
 
 **Type**
 

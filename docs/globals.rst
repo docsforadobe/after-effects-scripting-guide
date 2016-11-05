@@ -4,7 +4,7 @@
 Global functions
 ################
 
-These globally available functions that are specific to After Effects. Any JavaScript object or function can call these functions, which allow you to display text in a small (3-line) area of the Info panel, and to convert numeric time values to and from string values.
+These globally available functions that are specific to After Effects. Any JavaScript object or function can call these functions, which allow you to display text in a small (3-line) area of the Info panel, to convert numeric time values to and from string values, or to generate a random number.
 
 
 ==========================  ===================================================
@@ -12,6 +12,7 @@ Global function             Description
 ==========================  ===================================================
 ``clearOutput()``           Clears text from the Info panel.
 ``currentFormatToTime()``   Converts string time value to a numeric time value.
+``generateRandomNumber()``  Generates a random number.
 ``timeToCurrentFormat()``   Converts a numeric time value to a string time
                             value.
 ``write()``                 Writes text to the Info panel, with no line break
@@ -71,6 +72,47 @@ Converts a formatted string for a frame time value to a number of seconds, given
 **Returns**
 
 Floating-point value, the number of seconds.
+
+----
+
+.. _generateRandomNumber:
+
+generateRandomNumber()
+*********************
+
+``generateRandomNumber()``
+
+.. note::
+   This functionality was added in After Effects 13.6
+
+**Description**
+
+Generates random numbers. This function is recommended instead of ``Math.random`` for generating random numbers that will be applied as values in a project (e.g., when using setValue).
+
+This method avoids a problem where ``Math.random`` would not return random values in After Effects CC 2015 (13.5.x) due to a concurrency issue with multiple CPU threads.
+
+**Returns**
+
+Floating-point, pseudo-random number in the range [0, 1].
+
+**Example**
+
+::
+
+    // change the position X of all layers with random number
+
+    var myComp = app.project.activeItem;
+    var x = 0;
+
+    for (var i = 1; i <= myComp.numLayers; i++) {
+        // If you use Math.random(), this does not work
+        // x = 400*(Math.random()) – 200;
+        // use new generateRandomNumber() instead
+
+        x = 400*(generateRandomNumber()) – 200;
+        currentPos = myComp.layer(i).property(“Position”).value;
+        myComp.layer(i).property(“Position”).setValue([currentPos[0]+x,currentPos[1]]);
+    }
 
 ----
 

@@ -43,15 +43,18 @@ app.availableGPUAccelTypes
 
 ``app.availableGPUAccelTypes``
 
+.. note::
+   This functionality was added in After Effects 14.0
+
 **Description**
 
-The Viewer object for the currently focused or active-focused viewer (Composition, Layer, or Footage) panel. Returns null if no viewers are open.
+The Viewer object for the currently focused or active-focused viewer (Composition, Layer, or Footage) panel.
 
 Use this in conjunction with app.project.gpuAccelType to set the value for Project Settings > Video Rendering and Effects > Use.
 
 **Type**
 
-Array of ``GpuAccelType`` enums; Read-only. One of:
+Array of ``GpuAccelType`` enums, or null if no viewers are open; Read-only. One of:
 
 - ``CUDA``
 - ``Metal``
@@ -143,7 +146,7 @@ Array, with each element containing the following properties; read-only:
 ``matchName``    String representing the internal unique name for the effect.
                  This name does not change between versions of After Effects.
                  Use this value to apply the effect.
-``version``      (New in version 12/CC) Effect’s internal version string.
+``version``      Effect’s internal version string.
                  This value might be different than the version number the
                  plug-in vendor decides to show in the effect’s about box.
 ===============  ===========================================================
@@ -379,6 +382,9 @@ app.version
 *********************************************
 
 ``app.version``
+
+.. note::
+   This functionality was added in After Effects 12.0
 
 **Description**
 

@@ -258,14 +258,16 @@ CompItem.markerProperty
 
 ``app.project.item(index).markerProperty``
 
+.. note::
+   This functionality was added in After Effects 14.0
+
 **Description**
 
-Composition markers can now be created and modified via the new comp.markerProperty attribute. Composition marker scripting has the same functionality as layer markers.
-see :ref:`MarkerValue`
+A :ref:`PropertyGroup` that contains all a composition's markers. Composition marker scripting has the same functionality as layer markers. See :ref:`MarkerValue`
 
 **Type**
 
-Property; read-only.
+PropertyGroup object or null; read-only.
 
 **Example**
 

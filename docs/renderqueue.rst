@@ -22,6 +22,9 @@ RenderQueue.canQueueInAME
 
 ``app.project.renderQueue.canQueueInAME``
 
+.. note::
+   This functionality was added in After Effects 14.0
+
 **Description**
 
 indicates whether or not there are queued render items in the After Effects render queue. Only queued items can be added to the AME queue.
@@ -210,11 +213,15 @@ RenderQueue.queueInAME()
 
 ``app.project.renderQueue.queueInAME(render_immediately_in_AME)``
 
+.. note::
+   This functionality was added in After Effects 14.0
+
 **Description**
 
-The Queue In AME command, introduced in After Effects CC 2015.3 (13.8), can now be triggered via scripting. This requires Adobe Media Encoder CC 2017 (11.0) or later.
-
 Calls the Queue In AME command. This method requires passing a boolean value, telling AME whether to only queue the render items (false) or if AME should also start processing its queue (true).
+
+.. note::
+   This requires Adobe Media Encoder CC 2017 (11.0) or later.
 
 .. note::
    When AME receives the queued items, it applies the most recently used encoding preset. If ``render_immediately_in_AME`` is set to true, you will not have an opportunity to change the encoding settings.

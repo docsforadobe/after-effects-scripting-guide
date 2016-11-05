@@ -52,6 +52,29 @@ This sets various character and paragraph settings for some text::
 Attributes
 ==========
 
+.. _TextDocument.allCaps:
+
+TextDocument.allCaps
+*********************************************
+
+``textDocument.allCaps``
+
+.. note::
+   This functionality was added in After Effects 13.2
+
+**Description**
+
+True if a text layer has allcaps enabled; otherwise false.
+
+.. warning::
+   This value only reflects the first character in the text layer at the current time.
+
+**Type**
+
+Boolean; read-only.
+
+----
+
 .. _TextDocument.applyFill:
 
 TextDocument.applyFill
@@ -86,6 +109,52 @@ Boolean; read/write.
 
 ----
 
+.. _TextDocument.baselineLocs:
+
+TextDocument.baselineLocs
+*********************************************
+
+``textDocument.baselineLocs``
+
+.. note::
+   This functionality was added in After Effects 13.6
+
+**Description**
+
+The baseline (x,y) locations for a text layer. Line wraps in a paragraph text box are treated as multiple lines.
+
+.. note::
+  If a line has no characters, the x and y values for start and end will be the maximum float value (3.402823466e+38F).
+
+**Type**
+
+Array of floating-point values in the form of: ``line0.start_x, line0.start_y, line0.end_x, line0.end_y, line1.start_x, line1.start_y, line1.end_x, line1.end_y … lineN-1.start_x, lineN-1.start_y, lineN-1.end_x, lineN-1.end_y``
+
+----
+
+.. _TextDocument.baselineShift:
+
+TextDocument.baselineShift
+*********************************************
+
+``textDocument.baselineShift``
+
+.. note::
+   This functionality was added in After Effects 13.2
+
+**Description**
+
+This text layer's baseline shift in pixels.
+
+.. warning::
+   This value only reflects the first character in the text layer at the current time.
+
+**Type**
+
+Floating-point value; read-only.
+
+----
+
 .. _TextDocument.boxText:
 
 TextDocument.boxText
@@ -100,6 +169,38 @@ True if a text layer is a layer of paragraph (bounded) text; otherwise false.
 **Type**
 
 Boolean; read-only.
+
+----
+
+.. _TextDocument.boxTextPos:
+
+TextDocument.boxTextPos
+*********************************************
+
+``textDocument.boxTextPos``
+
+.. note::
+   This functionality was added in After Effects 13.2
+
+**Description**
+
+The layer coordinates from a paragraph (box) text layer's anchor point as a [width, height] array of pixel dimensions.
+
+.. warning::
+  This attribute only works on paragraph text layers.
+  This value only reflects the first character in the text layer at the current time.
+
+**Type**
+
+Array of ([X,Y]) position coordinates; read-only.
+
+**Example**
+
+For a paragraph text layer::
+
+  // Returns [x,y] position from layer anchor point in layer coordinates.
+  // e.g. approximately [0, -25] with default character panel settings.
+  var boxTextLayerPos =  myTextLayer.sourceText.value.boxTextPos;
 
 ----
 
@@ -120,6 +221,57 @@ Array of two integers (minimum value of 1); read/write.
 
 ----
 
+.. _TextDocument.fauxBold:
+
+TextDocument.fauxBold
+*********************************************
+
+``textDocument.fauxBold``
+
+.. note::
+   This functionality was added in After Effects 13.2
+
+**Description**
+
+True if a text layer has faux bold enabled; otherwise false.
+
+.. warning::
+   This value only reflects the first character in the text layer at the current time.
+
+**Type**
+
+Boolean; read-only.
+
+**Example**
+
+For a text layer with fauxBold enabled::
+  var isFauxBold = myTextLayer.sourceText.value.fauxBold; // returns true
+
+----
+
+.. _TextDocument.fauxItalic:
+
+TextDocument.fauxItalic
+*********************************************
+
+``textDocument.fauxItalic``
+
+.. note::
+   This functionality was added in After Effects 13.2
+
+**Description**
+
+True if a text layer has faux italic enabled; otherwise false.
+
+.. warning::
+   This value only reflects the first character in the text layer at the current time.
+
+**Type**
+
+Boolean; read-only.
+
+----
+
 .. _TextDocument.fillColor:
 
 TextDocument.fillColor
@@ -131,8 +283,9 @@ TextDocument.fillColor
 
 The text layer’s fill color, as an array of ``[r, g, b]`` floating-point values. For example, in an 8-bpc project, a red value of 255 would be 1.0, and in a 32-bpc project, an overbright blue value can be something like 3.2.
 
-.. note::
-   If the text layer has different fill color settings for each character, this attribute returns the setting for the first character. Also, if you change the value, it resets all characters in the text layer to the specified setting.
+.. warning::
+   This value only reflects the first character in the text layer at the current time.
+   If you change this value, it resets all characters in the text layer to the specified setting.
 
 **Type**
 
@@ -151,12 +304,62 @@ TextDocument.font
 
 The text layer’s font specified by its PostScript name.
 
-.. note::
-   If the text layer has different font settings for each character, this attribute returns the setting for the first character. Also, if you change the value, it resets all characters in the text layer to the specified setting.
+.. warning::
+   This value only reflects the first character in the text layer at the current time.
+   If you change this value, it resets all characters in the text layer to the specified setting.
 
 **Type**
 
 String; read/write.
+
+----
+
+.. _TextDocument.fontFamily:
+
+TextDocument.fontFamily
+*********************************************
+
+``textDocument.fontFamily``
+
+.. note::
+   This functionality was added in After Effects 13.1
+
+**Description**
+
+String with with the name of the font family.
+
+.. warning::
+  This value only reflects the first character in the text layer at the current time.
+
+**Type**
+
+String; read-only.
+
+----
+
+.. _TextDocument.fontLocation:
+
+TextDocument.fontLocation
+*********************************************
+
+``textDocument.fontLocation``
+
+.. note::
+   This functionality was added in After Effects 13.1
+
+**Description**
+
+Path of font file, providing its location on disk.
+
+.. warning::
+  Not guaranteed to be returned for all font types; return value may be empty string for some kinds of fonts.
+
+.. warning::
+  This value only reflects the first character in the text layer at the current time.
+
+**Type**
+
+String; read-only.
 
 ----
 
@@ -171,12 +374,64 @@ TextDocument.fontSize
 
 The text layer’s font size in pixels.
 
-.. note::
-   If the text layer has different font size settings for each character, this attribute returns the setting for the first character. Also, if you change the value, it resets all characters in the text layer to the specified setting.
+.. warning::
+   This value only reflects the first character in the text layer at the current time.
+   If you change this value, it resets all characters in the text layer to the specified setting.
 
 **Type**
 
 Floating-point value (0.1 to 1296, inclusive); read/write.
+
+----
+
+.. _TextDocument.fontStyle:
+
+TextDocument.fontStyle
+*********************************************
+
+``textDocument.fontStyle``
+
+.. note::
+   This functionality was added in After Effects 13.1
+
+**Description**
+
+String with style information, e.g., “bold”, “italic”
+
+.. warning::
+  This value only reflects the first character in the text layer at the current time.
+
+**Type**
+
+String; read-only.
+
+----
+
+.. _TextDocument.horizontalScale:
+
+TextDocument.horizontalScale
+*********************************************
+
+``textDocument.horizontalScale``
+
+.. note::
+   This functionality was added in After Effects 13.2
+
+**Description**
+
+This text layer's horizontal scale in pixels.
+
+.. warning::
+   This value only reflects the first character in the text layer at the current time.
+
+**Type**
+
+Floating-point value; read-only.
+
+**Example**
+
+For a text layer with horizontalScale set to 50%::
+  var valOfHScale = myTextLayer.sourceText.value.horizontalScale; // returns 0.5
 
 ----
 
@@ -222,6 +477,29 @@ Boolean; read-only.
 
 ----
 
+.. _TextDocument.smallCaps:
+
+TextDocument.smallCaps
+*********************************************
+
+``textDocument.smallCaps``
+
+.. note::
+   This functionality was added in After Effects 13.2
+
+**Description**
+
+True if a text layer has small caps enabled; otherwise false.
+
+.. warning::
+   This value only reflects the first character in the text layer at the current time.
+
+**Type**
+
+Boolean; read-only.
+
+----
+
 .. _TextDocument.strokeColor:
 
 TextDocument.strokeColor
@@ -233,8 +511,9 @@ TextDocument.strokeColor
 
 The text layer’s stroke color, as an array of [r, g, b] floating-point values. For example, in an 8-bpc project, a red value of 255 would be 1.0, and in a 32-bpc project, an overbright blue value can be something like 3.2.
 
-.. note::
-   If the text layer has different stroke color settings for each character, this attribute returns the setting for the first character. Also, if you change the value, it resets all characters in the text layer to the specified setting.
+.. warning::
+   This value only reflects the first character in the text layer at the current time.
+   If you change this value, it resets all characters in the text layer to the specified setting.
 
 **Type**
 
@@ -253,8 +532,9 @@ TextDocument.strokeOverFill
 
 Indicates the rendering order for the fill and stroke of a text layer. When true, the stroke appears over the fill.
 
-.. note::
-   If the text layer has different fill/stroke rendering order settings for each character, this attribute returns the setting for the first character. Also, if you change the value, it resets all characters in the text layer to the specified setting.
+.. warning::
+   This value only reflects the first character in the text layer at the current time.
+   If you change this value, it resets all characters in the text layer to the specified setting.
 
 **Type**
 
@@ -273,12 +553,59 @@ TextDocument.strokeWidth
 
 The text layer’s stroke thickness in pixels.
 
-.. note::
-   If the text layer has different stroke width settings for each character, this attribute returns the setting forthe first character. Also, if you change the value, it resets all characters in the text layer to the specified setting.
+.. warning::
+   This value only reflects the first character in the text layer at the current time.
+   If you change this value, it resets all characters in the text layer to the specified setting.
 
 **Type**
 
 Floating-point value (0 to 1000, inclusive); read/write.
+
+----
+
+.. _TextDocument.subscript:
+
+TextDocument.subscript
+*********************************************
+
+``textDocument.subscript``
+
+.. note::
+   This functionality was added in After Effects 13.2
+
+**Description**
+
+True if a text layer has subscript enabled; otherwise false.
+
+.. warning::
+   This value only reflects the first character in the text layer at the current time.
+
+**Type**
+
+Boolean; read-only.
+
+----
+
+.. _TextDocument.superscript:
+
+TextDocument.superscript
+*********************************************
+
+``textDocument.superscript``
+
+.. note::
+   This functionality was added in After Effects 13.2
+
+**Description**
+
+True if a text layer has superscript enabled; otherwise false.
+
+.. warning::
+   This value only reflects the first character in the text layer at the current time.
+
+**Type**
+
+Boolean; read-only.
 
 ----
 
@@ -310,8 +637,9 @@ TextDocument.tracking
 
 The text layer’s spacing between characters.
 
-.. note::
-   If the text layer has different tracking settings for each character, this attribute returns the setting for the first character. Also, if you change the value, it resets all characters in the text layer to the specified setting.
+.. warning::
+   This value only reflects the first character in the text layer at the current time.
+   If you change this value, it resets all characters in the text layer to the specified setting.
 
 **Type**
 
@@ -319,9 +647,85 @@ Floating-point value; read/write.
 
 ----
 
+.. _TextDocument.tsume:
+
+TextDocument.tsume
+*********************************************
+
+``textDocument.tsume``
+
+.. note::
+   This functionality was added in After Effects 13.2
+
+**Description**
+
+This text layer's tsume value.
+
+.. warning::
+   This value only reflects the first character in the text layer at the current time.
+
+**Type**
+
+Floating-point value; read-only.
+
+----
+
+.. _TextDocument.verticalScale:
+
+TextDocument.verticalScale
+*********************************************
+
+``textDocument.verticalScale``
+
+.. note::
+   This functionality was added in After Effects 13.2
+
+**Description**
+
+This text layer's vertical scale in pixels.
+
+.. warning::
+   This value only reflects the first character in the text layer at the current time.
+
+**Type**
+
+Floating-point value; read-only.
+
+----
+
 =======
 Methods
 =======
+
+.. _TextDocument.compPointToSource:
+
+TextDocument.compPointToSource()
+*********************************************
+
+``textDocument.compPointToSource()``
+
+.. note::
+   This functionality was added in After Effects 13.2
+
+**Description**
+
+Converts composition coordinates, such as ``sourcePointToComp``, to layer coordinates.
+
+.. warning::
+  This method only works on paragraph text layers.
+  This value only reflects the first character in the text layer at the current time.
+
+**Parameters**
+
+=====================  =====================================================================
+``sourcePointToComp``  A position array of composition coordinates in ([X, Y]) format.
+=====================  =====================================================================
+
+**Returns**
+
+Array of ([X,Y]) position coordinates; read-only.
+
+----
 
 .. _TextDocument.resetCharStyle:
 
@@ -362,3 +766,40 @@ None.
 **Returns**
 
 Nothing.
+
+----
+
+.. _TextDocument.sourcePointToComp:
+
+TextDocument.sourcePointToComp()
+*********************************************
+
+``textDocument.sourcePointToComp()``
+
+.. note::
+   This functionality was added in After Effects 13.2
+
+**Description**
+
+Converts layer coordinates, such as ``boxTextPos``, to composition coordinates.
+
+.. warning::
+  This method only works on paragraph text layers.
+  This value only reflects the first character in the text layer at the current time.
+
+**Parameters**
+
+==============  =====================================================================
+``boxTextPos``  A position array of layer coordinates in ([X, Y]) format.
+==============  =====================================================================
+
+**Returns**
+
+Array of ([X,Y]) position coordinates; read-only.
+
+**Example**
+
+For a paragraph text layer::
+
+  // Converts position in layer coordinates to comp coordinates.
+  var boxTextCompPos = myTextLayer.sourcePointToComp(boxTextLayerPos);

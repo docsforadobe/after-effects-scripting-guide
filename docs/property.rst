@@ -588,7 +588,7 @@ Returns true if the named property can be interpolated using the specified keyfr
 
 **Parameters**
 
-``type``
+**Type**
 
 A ``KeyframeInterpolationType`` enumerated value; one of:
 
@@ -1453,6 +1453,9 @@ Property.valueAtTime()
 **Description**
 
 The value of the named property as evaluated at the specified time. Note that the type of value returned is not made explicit; it will be of a different type, depending on the property evaluated.
+
+.. note::
+    As After Effects 13.6, this method now waits for time-intensive expressions, like ``sampleImage``, to finish evaluating before it returns the result.
 
 **Parameters**
 

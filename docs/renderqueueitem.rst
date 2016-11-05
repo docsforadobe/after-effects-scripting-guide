@@ -322,9 +322,11 @@ RenderQueueItem.getSetting()
 
 ``app.project.renderQueue.item(index).getSetting()``
 
+.. note::
+   This functionality was added in After Effects 13.0
+
 **Description**
 
-New in version 13.0/CC2014.
 See https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva
 
 ----
@@ -336,9 +338,11 @@ RenderQueueItem.getSettings()
 
 ``app.project.renderQueue.item(index).getSettings()``
 
+.. note::
+   This functionality was added in After Effects 13.0
+
 **Description**
 
-New in version 13.0/CC2014.
 See https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva
 
 ----
@@ -418,9 +422,11 @@ RenderQueueItem.setSetting()
 
 ``app.project.renderQueue.item(index).setSetting()``
 
+.. note::
+   This functionality was added in After Effects 13.0
+
 **Description**
 
-New in version 13.0/CC2014.
 See https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva
 
 ----
@@ -432,7 +438,9 @@ RenderQueueItem.setSettings()
 
 ``app.project.renderQueue.item(index).setSettings()``
 
+.. note::
+   This functionality was added in After Effects 13.0
+
 **Description**
 
-New in version 13.0/CC2014.
 See https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva

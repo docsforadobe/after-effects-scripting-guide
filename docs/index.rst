@@ -12,6 +12,7 @@ Contents:
    :maxdepth: 1
 
    overview
+   changelog
    javascript
    objectmodel
    globals

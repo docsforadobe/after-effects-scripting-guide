@@ -139,9 +139,11 @@ OutputModule.getSetting()
 
 ``app.project.renderQueue.item(index).outputModule(index).getSetting()``
 
+.. note::
+   This functionality was added in After Effects 13.0
+
 **Description**
 
-New in version 13.0/CC2014.
 See https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva
 
 ----
@@ -153,9 +155,11 @@ OutputModule.getSettings()
 
 ``app.project.renderQueue.item(index).outputModule(index).getSettings()``
 
+.. note::
+   This functionality was added in After Effects 13.0
+
 **Description**
 
-New in version 13.0/CC2014.
 See https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva
 
 ----
@@ -201,3 +205,35 @@ Saves this output module as a template and adds it to the te mpl ate s array.
 **Returns**
 
 Nothing.
+
+----
+
+.. _OutputModule.setSetting:
+
+OutputModule.setSetting()
+*********************************************
+
+``app.project.renderQueue.item(index).outputModule(index).setSetting()``
+
+.. note::
+   This functionality was added in After Effects 13.0
+
+**Description**
+
+See https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva
+
+----
+
+.. _OutputModule.setSettings:
+
+OutputModule.setSettings()
+*********************************************
+
+``app.project.renderQueue.item(index).outputModule(index).setSettings()``
+
+.. note::
+   This functionality was added in After Effects 13.0
+
+**Description**
+
+See https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva
