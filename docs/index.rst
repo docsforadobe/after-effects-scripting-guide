@@ -8,13 +8,21 @@ Welcome to the After Effects Scripting Guide!
 
 .. toctree::
     :maxdepth: 1
-    :caption: General
+    :caption: Introduction
 
     overview
     changelog
     javascript
     objectmodel
+
+.. toctree::
+    :maxdepth: 1
+    :caption: General
+
     globals
+    application
+    project
+    system
 
 .. toctree::
     :maxdepth: 1
@@ -43,8 +51,8 @@ Welcome to the After Effects Scripting Guide!
     :maxdepth: 1
     :caption: Properties
 
-    property
     propertybase
+    property
     propertygroup
     maskpropertygroup
 
@@ -71,14 +79,11 @@ Welcome to the After Effects Scripting Guide!
     :maxdepth: 1
     :caption: Other
 
-    application
-    project
-    system
-    settings
     collection
     importoptions
     keyframeease
     markervalue
+    settings
     shape
     textdocument
     viewer
