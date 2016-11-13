@@ -31,6 +31,7 @@ html_theme_options = {
     'cssfiles': ['_static/extra.css']
 }
 
+
 #html_theme_path = [better_theme_path]
 
 # The name for this set of Sphinx documents.  If None, it defaults to
@@ -45,6 +46,12 @@ html_short_title = "Home"
 # html_favicon = None
 
 html_static_path = ['_static']
+
+html_context = {
+    'css_files': [
+        '_static/theme_overrides.css',  # override wide tables in RTD theme
+    ],
+}
 
 # html_extra_path = []
 
