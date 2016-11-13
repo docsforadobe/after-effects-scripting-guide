@@ -2,7 +2,6 @@
 
 import sys
 import os
-import sphinx_rtd_theme
 #from better import better_theme_path
 
 # -- General configuration ------------------------------------------------
@@ -25,7 +24,7 @@ pygments_style = 'sphinx'
 
 # -- Options for HTML output ----------------------------------------------
 
-html_theme = "sphinx_rtd_theme"
+#html_theme = 'better'
 
 html_theme_options = {
     'sidebarwidth': '20rem',
