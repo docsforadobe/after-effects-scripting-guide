@@ -8,7 +8,17 @@ Shape object
 
 **Description**
 
-The Shape object encapsulates information describing a shape in a shape layer, or the outline shape of a Mask. It is the value of the "Mask Path" AE properties, and of the "Path" AE property of a shape layer. Use the constructor, ``newShape()``, to create a new, empty Shape object, then set the attributes individually to define the shape. A shape has a set of anchor points, or vertices, and a pair of direction handles, or tangent vectors, for each anchor point. A tangent vector (in a non-RotoBezier mask) determines the direction of the line that is drawn to or from an anchor point. There is one incoming tangent vector and one outgoing tangent vector associated with each vertex in the shape. A tangent value is a pair of x,y coordinates specified relative to the associated vertex. For example, a tangent of [-1,-1] is located above and to the left of the vertex and has a 45 degree slope, regardless of the actual location of the vertex. The longer a handle is, the greater its influence; for example, an incoming shape segment stayscloser to the vector for an i nTange nt of [-2,-2] than it does for an i nTange nt of [-1,-1], even though both of these come toward the vertex from the same direction. If a shape is not closed, the ``inTangent`` for the first vertex and the ``outTangent`` for the final vertex are ignored. If the shape is closed, these two vectors specify the direction handles of the final connecting segment out of the final vertex and back into the first vertex. RotoBezier masks calculate their tangents automatically. (See :ref:`MaskPropertyGroup.rotoBezier`) If a shape is used in a RotoBezier mask, the tangent values are ignored. This means that, for RotoBezier masks, you can construct a shape by setting only the ``vertices`` attribute and setting both ``inTangents`` and out Tange nt s to null. When you access the new shape, its tangent values are filled with the automatically calculated tangent values. For closed mask shapes, variable-width mask feather points can exist anywhere along the mask path. Feather points are part of the Mask Path property. Reference a specific feather point by the number of the mask path segment (portion of the path between adjacent vertices) where it appears.
+The Shape object encapsulates information describing a shape in a shape layer, or the outline shape of a Mask. It is the value of the "Mask Path" AE properties, and of the "Path" AE property of a shape layer. Use the constructor, ``newShape()``, to create a new, empty Shape object, then set the attributes individually to define the shape.
+
+A shape has a set of anchor points, or vertices, and a pair of direction handles, or tangent vectors, for each anchor point. A tangent vector (in a non-RotoBezier mask) determines the direction of the line that is drawn to or from an anchor point. There is one incoming tangent vector and one outgoing tangent vector associated with each vertex in the shape.
+
+A tangent value is a pair of x,y coordinates specified relative to the associated vertex. For example, a tangent of [-1,-1] is located above and to the left of the vertex and has a 45 degree slope, regardless of the actual location of the vertex. The longer a handle is, the greater its influence; for example, an incoming shape segment stayscloser to the vector for an i nTange nt of [-2,-2] than it does for an i nTange nt of [-1,-1], even though both of these come toward the vertex from the same direction.
+
+If a shape is not closed, the ``inTangent`` for the first vertex and the ``outTangent`` for the final vertex are ignored. If the shape is closed, these two vectors specify the direction handles of the final connecting segment out of the final vertex and back into the first vertex.
+
+RotoBezier masks calculate their tangents automatically. (See :ref:`MaskPropertyGroup.rotoBezier`) If a shape is used in a RotoBezier mask, the tangent values are ignored. This means that, for RotoBezier masks, you can construct a shape by setting only the ``vertices`` attribute and setting both ``inTangents`` and out Tange nt s to null. When you access the new shape, its tangent values are filled with the automatically calculated tangent values.
+
+For closed mask shapes, variable-width mask feather points can exist anywhere along the mask path. Feather points are part of the Mask Path property. Reference a specific feather point by the number of the mask path segment (portion of the path between adjacent vertices) where it appears.
 
 .. note::
    The feather points on a mask are listed in an array in the order that they were created.
@@ -239,7 +249,11 @@ Shape.inTangents
 
 **Description**
 
-The incoming tangent vectors, or direction handles, associated with the vertices of the shape. Specify each vector as an array of two floating-point values, and collect the vectors into an array the same length as the ``vertices`` array. Each tangent value defaults to [0,0]. When the mask shape is not RotoBezier, this results in a straight line segment. If the shape is in a RotoBezier mask, all tangent values are ignored and the tangents are automatically calculated.
+The incoming tangent vectors, or direction handles, associated with the vertices of the shape. Specify each vector as an array of two floating-point values, and collect the vectors into an array the same length as the ``vertices`` array.
+
+Each tangent value defaults to [0,0]. When the mask shape is not RotoBezier, this results in a straight line segment.
+
+If the shape is in a RotoBezier mask, all tangent values are ignored and the tangents are automatically calculated.
 
 **Type**
 
@@ -258,7 +272,9 @@ Shape.outTangents
 
 The outgoing tangent vectors, or direction handles, associated with the vertices of the shape. Specify each vector as an array of two floating-point values, and collect the vectors into an array the same length as the ``vertices`` array.
 
-Each tangent value defaults to [0,0]. When the mask shape is not RotoBezier, this results in a straight line segment. If the shape is in a RotoBezier mask, all tangent values are ignored and the tangents are automatically calculated.
+Each tangent value defaults to [0,0]. When the mask shape is not RotoBezier, this results in a straight line segment.
+
+If the shape is in a RotoBezier mask, all tangent values are ignored and the tangents are automatically calculated.
 
 **Type**
 
