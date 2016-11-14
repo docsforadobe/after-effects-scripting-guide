@@ -131,7 +131,7 @@ Some properties of a layer, such as position and zoom, can be accessed only by n
 
 =========  ====================================================================
 ``index``  The index for the child property, in this is an indexed group. An
-           integer in the range [0..numProperties].
+           integer in the range [1..numProperties].
 ``name``   The name of the child property. This can be:
 
            -  Any match name
