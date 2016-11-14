@@ -6,50 +6,84 @@
 Welcome to the After Effects Scripting Guide!
 ---------------------------------------------
 
-Contents:
+.. toctree::
+    :maxdepth: 1
+    :caption: Introduction
+
+    overview
+    changelog
+    javascript
+    objectmodel
 
 .. toctree::
-   :maxdepth: 1
+    :maxdepth: 1
+    :caption: General
 
-   overview
-   changelog
-   javascript
-   objectmodel
-   globals
-   application
-   avitem
-   avlayer
-   cameralayer
-   collection
-   compitem
-   filesource
-   folderitem
-   footageitem
-   footagesource
-   importoptions
-   item
-   itemcollection
-   keyframeease
-   layer
-   layercollection
-   lightlayer
-   markervalue
-   maskpropertygroup
-   omcollection
-   outputmodule
-   placeholdersource
-   project
-   property
-   propertybase
-   propertygroup
-   renderqueue
-   renderqueueitem
-   rqitemcollection
-   settings
-   shape
-   shapelayer
-   solidsource
-   system
-   textdocument
-   textlayer
-   viewer
+    globals
+    application
+    project
+    system
+
+.. toctree::
+    :maxdepth: 1
+    :caption: Items
+
+    item
+    itemcollection
+    avitem
+    compitem
+    folderitem
+    footageitem
+
+.. toctree::
+    :maxdepth: 1
+    :caption: Layers
+
+    layer
+    layercollection
+    avlayer
+    cameralayer
+    lightlayer
+    shapelayer
+    textlayer
+
+.. toctree::
+    :maxdepth: 1
+    :caption: Properties
+
+    propertybase
+    property
+    propertygroup
+    maskpropertygroup
+
+.. toctree::
+    :maxdepth: 1
+    :caption: Renderqueue
+
+    renderqueue
+    rqitemcollection
+    renderqueueitem
+    omcollection
+    outputmodule
+
+.. toctree::
+    :maxdepth: 1
+    :caption: Sources
+
+    filesource
+    footagesource
+    placeholdersource
+    solidsource
+
+.. toctree::
+    :maxdepth: 1
+    :caption: Other
+
+    collection
+    importoptions
+    keyframeease
+    markervalue
+    settings
+    shape
+    textdocument
+    viewer
