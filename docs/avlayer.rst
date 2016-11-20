@@ -703,6 +703,9 @@ Replaces the source for this layer.
 
 Nothing.
 
+.. warning::
+  If this method is performed on a null layer, the layers ``isNull`` attribute is not changed from ``true``. This causes the layer not to be visible in comp viewer and renders.
+
 ----
 
 .. _AVLayer.sourceRectAtTime:
