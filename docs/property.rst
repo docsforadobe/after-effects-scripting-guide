@@ -409,15 +409,15 @@ In contrast, a shape property (such as a layer's mask shape) is stored as a Shap
 
 **Type**
 
-A ``PropertyValueType`` enumerated value; read/write. One of:E
+A ``PropertyValueType`` enumerated value; read/write. One of:
 
 -  ``PropertyValueType.NO_VALUE``: Stores no data.
 -  ``PropertyValueType.ThreeD_SPATIAL``: Array of three floating-point positional values. For example, an Anchor Point value might be [10.0, 20.2, 0.0]
 -  ``PropertyValueType.ThreeD``: Array of three floating-point quantitative values. For example, a Scale value might be [100.0, 20.2, 0.0]
--  ``PropertyValueType.TwoD_SPATIAL``: Array of 2 floating-point positional values For example, an Anchor Point value might be [5.1, 10.0]
+-  ``PropertyValueType.TwoD_SPATIAL``: Array of 2 floating-point positional values. For example, an Anchor Point value might be [5.1, 10.0]
 -  ``PropertyValueType.TwoD``: Array of 2 floating-point quantitative values. For example, a Scale value might be [5.1, 100.0]
 -  ``PropertyValueType.OneD``: A floating-point value.
--  ``PropertyValueType.COLOR``:Arrayof4floating-pointvaluesintherange``[0.0..1.0]``. For example, [0.8, 0.3, 0.1, 1.0]
+-  ``PropertyValueType.COLOR``:Array of 4 floating-point values in the range ``[0.0..1.0]``. For example, [0.8, 0.3, 0.1, 1.0]
 -  ``PropertyValueType.CUSTOM_VALUE`` : Custom property value, such as the Histogram property for the Levels effect.
 -  ``PropertyValueType.MARKER``: :ref:`MarkerValue`
 -  ``PropertyValueType.LAYER_INDEX``: Integer; a value of 0 means no layer.
