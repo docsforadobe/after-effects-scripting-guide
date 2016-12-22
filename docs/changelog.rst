@@ -106,8 +106,8 @@ What's new and changed for scripting?
 `After Effects 12.0 <https://blogs.adobe.com/creativecloud/scripting-changes-in-after-effects-cc-12-0-12-2/>`_
 ***************************************************************************************************************
 
-- access to effectâ€™s internal version string
-	- Added: :ref:`app.version`
+- access to effect’s internal version string
+	- Added: Application effects object’s version attribute, see :ref:`app.effects`
 - ability to get and set preview mode
 	- Added: :ref:`Viewer.fastPreview`
 - access to layer sampling method (see :ref:`samplingQuality <Layer.samplingQuality>`)
