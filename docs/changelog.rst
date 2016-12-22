@@ -39,9 +39,9 @@ What's new and changed for scripting?
 
 `After Effects 13.6 <https://blogs.adobe.com/creativecloud/whats-new-and-changed-in-the-upcoming-update-to-after-effects-cc-2015/>`_
 *************************************************************************************************************************************
-- scripting access to text baselines
+- Scripting access to text baselines
 	- Added: :ref:`baselineLocs <TextDocument.baselineLocs>`
-- new scripting method to generate random numbers
+- New scripting method to generate random numbers
 	- Added: :ref:`generateRandomNumber() <generateRandomNumber>`
 - Using the :ref:`copyToComp() <Layer.copyToComp>` scripting method no longer causes After Effects to crash when the layer has a parent.
 - The :ref:`valueAtTime() <Property.valueAtTime>` scripting method now waits for time-intensive expressions, like ``sampleImage``, to finish evaluating before it returns the result.
@@ -55,20 +55,20 @@ What's new and changed for scripting?
 `After Effects 13.2 <https://blogs.adobe.com/creativecloud/after-effects-cc-2014-2-13-2/>`_
 ********************************************************************************************
 
-- scripting improvements for text layers (read-only)
-	- returns boolean value:
+- Scripting improvements for text layers (read-only)
+	- Returns boolean value:
 		- Added: :ref:`fauxBold <TextDocument.fauxBold>`
 		- Added: :ref:`fauxItalic <TextDocument.fauxItalic>`
 		- Added: :ref:`allCaps <TextDocument.allCaps>`
 		- Added: :ref:`smallCaps <TextDocument.smallCaps>`
 		- Added: :ref:`superscript <TextDocument.superscript>`
 		- Added: :ref:`subscript <TextDocument.subscript>`
-	- returns float:
+	- Returns float:
 		- Added: :ref:`verticalScale <TextDocument.verticalScale>`
 		- Added: :ref:`horizontalScale <TextDocument.horizontalScale>`
 		- Added: :ref:`baselineShift <TextDocument.baselineShift>`
 		- Added: :ref:`tsume <TextDocument.tsume>`
-	- returns array of ([X,Y]) position coordinates (paragraph text layers only):
+	- Returns array of ([X,Y]) position coordinates (paragraph text layers only):
 		- Added: :ref:`boxTextPos <TextDocument.boxTextPos>`
 		- Added: :ref:`sourcePointToComp() <TextDocument.sourcePointToComp>`
 		- Added: :ref:`compPointToSource() <TextDocument.compPointToSource>`
@@ -80,7 +80,7 @@ What's new and changed for scripting?
 `After Effects 13.1 <https://blogs.adobe.com/creativecloud/after-effects-cc-2014-1-13-1/>`_
 ********************************************************************************************
 
-- scripting improvements for text layers (read-only)
+- Scripting improvements for text layers (read-only)
 	- returns string:
 		- Added: :ref:`fontLocation <TextDocument.fontLocation>`
 		- Added: :ref:`fontStyle <TextDocument.fontStyle>`
@@ -93,7 +93,7 @@ What's new and changed for scripting?
 `After Effects 13.0 <https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/>`_
 *************************************************************************************************
 
-- scripting access to render settings and output module settings
+- Scripting access to render settings and output module settings
 	- Added: RenderQueueItem object :ref:`getSetting <RenderQueueItem.getSetting>`, :ref:`setSetting <RenderQueueItem.setSetting>` methods
 	- Added: RenderQueueItem object :ref:`getSettings <RenderQueueItem.getSettings>`, :ref:`setSettings <RenderQueueItem.setSettings>` methods
 	- Added: OutputModule object :ref:`getSetting <OutputModule.getSetting>`, :ref:`setSetting <OutputModule.setSetting>` methods
@@ -106,10 +106,10 @@ What's new and changed for scripting?
 `After Effects 12.0 <https://blogs.adobe.com/creativecloud/scripting-changes-in-after-effects-cc-12-0-12-2/>`_
 ***************************************************************************************************************
 
-- access to effect’s internal version string
-	- Added: Application effects object’s version attribute, see :ref:`app.effects`
-- ability to get and set preview mode
+- Access to effect's internal version string
+	- Added: Application effects object's version attribute, see :ref:`app.effects`
+- Ability to get and set preview mode
 	- Added: :ref:`Viewer.fastPreview`
-- access to layer sampling method (see :ref:`samplingQuality <Layer.samplingQuality>`)
-- changed preference and settings methods (see :ref:`Settings`)
+- Access to layer sampling method (see :ref:`samplingQuality <Layer.samplingQuality>`)
+- Changed preference and settings methods (see :ref:`Settings`)
 - ScriptUI is now based on the same controls as the main application.
