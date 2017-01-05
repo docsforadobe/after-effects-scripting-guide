@@ -20,41 +20,44 @@ The AVLayer object provides an interface to those layers that contain AVItem obj
 Different types of layers have different AE properties. AVLayer has the following properties and property groups:
 
 -  Marker
--  TimeRemap
--  MotionTrackers
+-  Time Remap
+-  Motion Trackers
 -  Masks
 -  Effects
 -  Transform
 
-   -  AnchorPoint
+   -  Anchor Point
    -  Position
    -  Scale
    -  Orientation
-   -  XRotation
-   -  YRotation
+   -  X Rotation
+   -  Y Rotation
    -  Rotation
    -  Opacity
 
--  LayerStyles
--  GeometryOptions // Ray-traced 3D
--  MaterialOptions
+-  Layer Styles
+-  Geometry Options // Ray-traced 3D
+-  Material Options
 
-   -  CastsShadows
-   -  LightTransmission
-   -  AcceptsShadows
-   -  AcceptsLights
-   -  AppearsinReflections // Ray-traced 3D
+   -  Casts Shadows
+   -  Light Transmission
+   -  Accepts Shadows
+   -  Accepts Lights
+   -  Appears in Reflections // Ray-traced 3D
    -  Ambient
    -  Diffuse
-   -  SpecularIntensity
-   -  SpecularShininess
+   -  Specular Intensity
+   -  Specular Shininess
    -  Metal
-   -  ReflectionIntensity // Ray-traced3D
-   -  ReflectionSharpness // Ray-traced3D
-   -  ReflectionRolloff // Ray-traced3D
-   -  Transparency // Ray-traced3D
-   -  TransparencyRolloff // Ray-traced3D
-   -  IndexofRefraction // Ray-traced3D-Audio
+   -  Reflection Intensity // Ray-traced 3D
+   -  Reflection Sharpness // Ray-traced 3D
+   -  Reflection Rolloff // Ray-traced 3D
+   -  Transparency // Ray-traced 3D
+   -  Transparency Rolloff // Ray-traced 3D
+   -  Index of Refraction // Ray-traced 3D
+
+-  Audio
+
    -  AudioLevels
 
 **Example**
