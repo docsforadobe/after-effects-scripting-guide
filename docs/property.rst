@@ -775,6 +775,7 @@ Returns the outgoing temporal ease for the specified keyframe.
 **Returns**
 
 Array of KeyframeEase objects:
+
 -  If the property value type is ``PropertyValueType.TwoD``, the array contains 2 objects.
 -  If the property value type is ``PropertyValueType.ThreeD``, the array contains 3 objects.
 -  For any other value type, the array contains 1 object.
@@ -790,7 +791,7 @@ Property.keyRoving()
 
 **Description**
 
-Returns true if the specified keyframe is roving. The first and last keyframe in a property cannot rove; if you try to set roving for one of these, the operation is ignored, and `keyRoving()` continues to return false.If the property value type is neither ``TwoD_SPATIALnorThreeD_SPATIAL``, an exception is generated.
+Returns true if the specified keyframe is roving. The first and last keyframe in a property cannot rove; if you try to set roving for one of these, the operation is ignored, and `keyRoving()` continues to return false.If the property value type is neither ``TwoD_SPATIAL`` nor ``ThreeD_SPATIAL``, an exception is generated.
 
 **Parameters**
 
@@ -842,7 +843,7 @@ Property.keySpatialAutoBezier()
 
 **Description**
 
-Returns true if the specified keyframe has spatial auto-Bezier interpolation. (This type of interpolation affects this keyframe only if ``keySpatialContinuous(keyIndex)`` is also true.) If the property valuetype is neither ``TwoD_SPATIALnorThreeD_SPATIAL``, an exception is generated.
+Returns true if the specified keyframe has spatial auto-Bezier interpolation. (This type of interpolation affects this keyframe only if ``keySpatialContinuous(keyIndex)`` is also true.) If the property valuetype is neither ``TwoD_SPATIAL`` nor ``ThreeD_SPATIAL``, an exception is generated.
 
 **Parameters**
 
@@ -868,7 +869,7 @@ Property.keySpatialContinuous()
 
 **Description**
 
-Returns true if the specified keyframe has spatial continuity. If the property value type is neither ``TwoD_SPATIALnorThreeD_SPATIAL``, an exception is generated.
+Returns true if the specified keyframe has spatial continuity. If the property value type is neither ``TwoD_SPATIAL`` nor ``ThreeD_SPATIAL``, an exception is generated.
 
 **Parameters**
 
@@ -1093,7 +1094,7 @@ Property.setRovingAtKey()
 
 **Description**
 
-Turns roving on or off for the specified keyframe. The first and last keyframe in a property cannot rove; if you try to set roving for one of these, the operation is ignored, and ``keyRoving()`` continues to return false. If the property value type is neither ``TwoD_SPATIALnorThreeD_SPATIAL``, an exception is generated.
+Turns roving on or off for the specified keyframe. The first and last keyframe in a property cannot rove; if you try to set roving for one of these, the operation is ignored, and ``keyRoving()`` continues to return false. If the property value type is neither ``TwoD_SPATIAL`` nor ``ThreeD_SPATIAL``, an exception is generated.
 
 **Parameters**
 
@@ -1174,7 +1175,7 @@ Property.setSpatialContinuousAtKey()
 
 **Description**
 
-Turns spatial continuity on or off for the specified keyframe. If the property value type is neither ``TwoD_SPATIALnorThreeD_SPATIAL``, an exception is generated.
+Turns spatial continuity on or off for the specified keyframe. If the property value type is neither ``TwoD_SPATIAL`` nor ``ThreeD_SPATIAL``, an exception is generated.
 
 **Parameters**
 
