@@ -538,10 +538,10 @@ Adds a new keyframe or marker to the named property at the specified time and re
 
 **Parameters**
 
-========  =====================================================================
+========  ====================================================================
 ``time``  The time, in seconds, at which to add the keyframe. A floating-point
           value. The beginning of the composition is 0.
-========  =====================================================================
+========  ====================================================================
 
 **Returns**
 
@@ -615,12 +615,12 @@ Returns the 'in' interpolation type for the specified keyframe.
 
 **Parameters**
 
-============  ================================================================
+============  ===================================================
 ``keyIndex``  The index for the keyframe. An integer in the range
               ``[1..numKeys]``, as returned by the
               :ref:`addKey <property.addKey>` or
               :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
-============  ================================================================
+============  ===================================================
 
 **Returns**
 
@@ -645,12 +645,12 @@ Returns the incoming spatial tangent for the specified keyframe, if the named pr
 
 **Parameters**
 
-============  ================================================================
+============  ===================================================
 ``keyIndex``  The index for the keyframe. An integer in the range
               ``[1..numKeys]``, as returned by the
               :ref:`addKey <property.addKey>` or
               :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
-============  ================================================================
+============  ===================================================
 
 **Returns**
 
@@ -675,12 +675,12 @@ Returns the incoming temporal ease for the specified keyframe.
 
 **Parameters**
 
-============  ================================================================
+============  ===================================================
 ``keyIndex``  The index for the keyframe. An integer in the range
               ``[1..numKeys]``, as returned by the
               :ref:`addKey <property.addKey>` or
               :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
-============  ================================================================
+============  ===================================================
 
 **Returns**
 
@@ -705,12 +705,12 @@ Returns the outgoing interpolation type for the specified keyframe.
 
 **Parameters**
 
-============  ================================================================
+============  ===================================================
 ``keyIndex``  The index for the keyframe. An integer in the range
               ``[1..numKeys]``, as returned by the
               :ref:`addKey <property.addKey>` or
               :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
-============  ================================================================
+============  ===================================================
 
 **Returns**
 
@@ -735,12 +735,12 @@ Returns the outgoing spatial tangent for the specified keyframe.
 
 **Parameters**
 
-============  ================================================================
+============  ===================================================
 ``keyIndex``  The index for the keyframe. An integer in the range
               ``[1..numKeys]``, as returned by the
               :ref:`addKey <property.addKey>` or
               :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
-============  ================================================================
+============  ===================================================
 
 **Returns**
 
@@ -765,12 +765,12 @@ Returns the outgoing temporal ease for the specified keyframe.
 
 **Parameters**
 
-============  ================================================================
+============  ===================================================
 ``keyIndex``  The index for the keyframe. An integer in the range
               ``[1..numKeys]``, as returned by the
               :ref:`addKey <property.addKey>` or
               :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
-============  ================================================================
+============  ===================================================
 
 **Returns**
 
@@ -795,12 +795,12 @@ Returns true if the specified keyframe is roving. The first and last keyframe in
 
 **Parameters**
 
-============  ================================================================
+============  ===================================================
 ``keyIndex``  The index for the keyframe. An integer in the range
               ``[1..numKeys]``, as returned by the
               :ref:`addKey <property.addKey>` or
               :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
-============  ================================================================
+============  ===================================================
 
 **Returns**
 
@@ -821,12 +821,12 @@ Returns true if the specified keyframe is selected.
 
 **Parameters**
 
-============  ================================================================
+============  ===================================================
 ``keyIndex``  The index for the keyframe. An integer in the range
               ``[1..numKeys]``, as returned by the
               :ref:`addKey <property.addKey>` or
               :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
-============  ================================================================
+============  ===================================================
 
 **Returns**
 
@@ -847,12 +847,12 @@ Returns true if the specified keyframe has spatial auto-Bezier interpolation. (T
 
 **Parameters**
 
-============  ================================================================
+============  ===================================================
 ``keyIndex``  The index for the keyframe. An integer in the range
               ``[1..numKeys]``, as returned by the
               :ref:`addKey <property.addKey>` or
               :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
-============  ================================================================
+============  ===================================================
 
 **Returns**
 
@@ -873,12 +873,12 @@ Returns true if the specified keyframe has spatial continuity. If the property v
 
 **Parameters**
 
-============  ================================================================
+============  ===================================================
 ``keyIndex``  The index for the keyframe. An integer in the range
               ``[1..numKeys]``, as returned by the
               :ref:`addKey <property.addKey>` or
               :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
-============  ================================================================
+============  ===================================================
 
 **Returns**
 
@@ -899,12 +899,12 @@ Returns true if the specified keyframe has temporal auto-Bezier interpolation. T
 
 **Parameters**
 
-============  ================================================================
+============  ===================================================
 ``keyIndex``  The index for the keyframe. An integer in the range
               ``[1..numKeys]``, as returned by the
               :ref:`addKey <property.addKey>` or
               :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
-============  ================================================================
+============  ===================================================
 
 **Returns**
 
@@ -925,12 +925,12 @@ Returns true if the specified keyframe has temporal continuity. Temporal continu
 
 **Parameters**
 
-============  ================================================================
+============  ===================================================
 ``keyIndex``  The index for the keyframe. An integer in the range
               ``[1..numKeys]``, as returned by the
               :ref:`addKey <property.addKey>` or
               :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
-============  ================================================================
+============  ===================================================
 
 **Returns**
 
@@ -952,14 +952,14 @@ Finds the specified keyframe or marker and returns the time at which it occurs. 
 
 **Parameters**
 
-=================  ============================================================
+=================  ===================================================
 ``keyIndex``       The index for the keyframe. An integer in the range
                    ``[1..numKeys]``, as returned by the
                    :ref:`addKey <property.addKey>` or
                    :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
 ``markerComment``  The comment string attached to a marker (see
                    :ref:`MarkerValue.comment` attribute).
-=================  ============================================================
+=================  ===================================================
 
 **Returns**
 
@@ -981,14 +981,14 @@ Finds the specified keyframe or marker and returns its current value. If no keyf
 
 **Parameters**
 
-=================  =========================================================
+=================  ===================================================
 ``keyIndex``       The index for the keyframe. An integer in the range
                    ``[1..numKeys]``, as returned by the
                    :ref:`addKey <property.addKey>` or
                    :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
 ``markerComment``  The comment string attached to a marker (see
                    :ref:`MarkerValue.comment` attribute).
-=================  =========================================================
+=================  ===================================================
 
 **Returns**
 
@@ -1009,10 +1009,10 @@ Returns the index of the keyframe nearest to the specified time.
 
 **Parameters**
 
-========  ====================================================================
+========  =================================================================
 ``time``  The time in seconds; a floating-point value. The beginning of the
           composition is 0.
-========  ====================================================================
+========  =================================================================
 
 **Returns**
 
@@ -1033,12 +1033,12 @@ Removes the specified keyframe from the named property. If no keyframe with the 
 
 **Parameters**
 
-============  ================================================================
+============  ===================================================
 ``keyIndex``  The index for the keyframe. An integer in the range
               ``[1..numKeys]``, as returned by the
               :ref:`addKey <property.addKey>` or
               :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
-============  ================================================================
+============  ===================================================
 
 **Returns**
 
@@ -1059,7 +1059,7 @@ Sets the ``in`` and ``out`` interpolation types for the specified keyframe.
 
 **Parameters**
 
-============  ================================================================
+============= ================================================================
 ``keyIndex``  The index for the keyframe. An integer in the range
               ``[1..numKeys]``, as returned by the
               :ref:`addKey <property.addKey>` or
@@ -1077,7 +1077,7 @@ Sets the ``in`` and ``out`` interpolation types for the specified keyframe.
               -  ``KeyframeInterpolationType.LINEAR``
               -  ``KeyframeInterpolationType.BEZIER``
               -  ``KeyframeInterpolationType.HOLD``
-============  ================================================================
+============= ================================================================
 
 **Returns**
 
@@ -1098,13 +1098,13 @@ Turns roving on or off for the specified keyframe. The first and last keyframe i
 
 **Parameters**
 
-============  ================================================================
+============= ===================================================
 ``keyIndex``  The index for the keyframe. An integer in the range
               ``[1..numKeys]``, as returned by the
               :ref:`addKey <property.addKey>` or
               :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
 ``newVal``    True to turn roving on, false to turn roving off.
-============  ================================================================
+============= ===================================================
 
 **Returns**
 
@@ -1125,13 +1125,13 @@ Selects or deselects the specified keyframe.
 
 **Parameters**
 
-============  ================================================================
+============= ===================================================
 ``keyIndex``  The index for the keyframe. An integer in the range
               ``[1..numKeys]``, as returned by the
               :ref:`addKey <property.addKey>` or
               :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
 ``onOff``     True to select the keyframe, false to deselect it.
-============  ================================================================
+============= ===================================================
 
 **Returns**
 
@@ -1152,13 +1152,13 @@ Turns spatial auto-Bezier interpolation on or off for the specified keyframe. If
 
 **Parameters**
 
-============  ================================================================
+============= ==========================================================
 ``keyIndex``  The index for the keyframe. An integer in the range
               ``[1..numKeys]``, as returned by the
               :ref:`addKey <property.addKey>` or
               :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
 ``newVal``    True to turn spatial auto-Bezier on, false to turn it off.
-============  ================================================================
+============= ==========================================================
 
 **Returns**
 
@@ -1179,13 +1179,13 @@ Turns spatial continuity on or off for the specified keyframe. If the property v
 
 **Parameters**
 
-============  ================================================================
+============= ==========================================================
 ``keyIndex``  The index for the keyframe. An integer in the range
               ``[1..numKeys]``, as returned by the
               :ref:`addKey <property.addKey>` or
               :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
 ``newVal``    True to turn spatial auto-Bezier on, false to turn it off.
-============  ================================================================
+============= ==========================================================
 
 **Returns**
 
@@ -1206,7 +1206,7 @@ Sets the incoming and outgoing tangent vectors for the specified keyframe. If th
 
 **Parameters**
 
-==============  ===============================================================
+=============== ===============================================================
 ``keyIndex``    The index for the keyframe. An integer in the range
                 ``[1..numKeys]``, as returned by the :ref:`addKey
                 <property.addKey>` or :ref:`nearestKeyIndex()
@@ -1230,7 +1230,7 @@ Sets the incoming and outgoing tangent vectors for the specified keyframe. If th
                 -  If the property value type is
                     ``PropertyValueType.ThreeD_SPATIAL``, the array contains 3
                     values.
-==============  ===============================================================
+=============== ===============================================================
 
 **Returns**
 
@@ -1251,13 +1251,13 @@ Turns temporal auto-Bezier interpolation on or off for the specified keyframe. W
 
 **Parameters**
 
-============  ================================================================
+============= ===========================================================
 ``keyIndex``  The index for the keyframe. An integer in the range
               ``[1..numKeys]``, as returned by the
               :ref:`addKey <property.addKey>` or
               :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
 ``newVal``    True to turn temporal auto-Bezier on, false to turn it off.
-============  ================================================================
+============= ===========================================================
 
 **Returns**
 
@@ -1278,13 +1278,13 @@ Turns temporal continuity on or off for the specified keyframe. When temporal co
 
 **Parameters**
 
-============  ================================================================
+============= ==========================================================
 ``keyIndex``  The index for the keyframe. An integer in the range
               ``[1..numKeys]``, as returned by the
               :ref:`addKey <property.addKey>` or
               :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
 ``newVal``    True to turn temporal continuity on, false to turn it off.
-============  ================================================================
+============= ==========================================================
 
 **Returns**
 
@@ -1305,7 +1305,7 @@ Sets the incoming and outgoing temporal ease for the specified keyframe. See :re
 
 **Parameters**
 
-===================  ==========================================================
+==================== ==========================================================
 ``keyIndex``         The index for the keyframe. An integer in the range
                      ``[1..numKeys]``, as returned by the
                      :ref:`addKey <property.addKey>` or
@@ -1331,7 +1331,7 @@ Sets the incoming and outgoing temporal ease for the specified keyframe. See :re
                         ``PropertyValueType.ThreeD``, the array contains 3
                         objects.
                      -  For all other value types, the array contains 1 object.
-===================  ==========================================================
+==================== ==========================================================
 
 
 **Returns**
@@ -1353,10 +1353,10 @@ Sets the static value of a property that has no keyframes. If the named property
 
 **Parameters**
 
-============  ============================================================
+============= ===========================================================
 ``newValue``  A value appropriate for the type of property being set; see
               :ref:`Property.propertyValueType`.
-============  ============================================================
+============= ===========================================================
 
 **Returns**
 
@@ -1377,14 +1377,14 @@ Finds the specified keyframe and sets its value. If the named property has no ke
 
 **Parameters**
 
-============  ================================================================
+============= ===========================================================
 ``keyIndex``  The index for the keyframe. An integer in the range
               ``[1..numKeys]``, as returned by the
               :ref:`addKey <property.addKey>` or
               :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
 ``newValue``  A value appropriate for the type of property being set; see
               :ref:`Property.propertyValueType`.
-============  ================================================================
+============= ===========================================================
 
 **Returns**
 
@@ -1405,12 +1405,12 @@ Sets the value of a keyframe at the specified time. Creates a new keyframe for t
 
 **Parameters**
 
-============  ================================================================
+============= =============================================================
 ``time``      The time in seconds, a floating-point value. The beginning of
               the composition is 0.
 ``newValue``  A value appropriate for the type of property being set; see
               :ref:`Property.propertyValueType`.
-============  ================================================================
+============= =============================================================
 
 **Returns**
 
@@ -1431,12 +1431,12 @@ Sets values for a set of keyframes at specified of times. Creates a new keyframe
 
 **Parameters**
 
-=============  ===============================================================
+============== ============================================================
 ``times``      An array of times, in seconds. Each time is a floating-point
                value. The beginning of the composition is 0.
 ``newValues``  A array of values appropriate for the type of property being
                set; see :ref:`Property.propertyValueType`.
-=============  ===============================================================
+============== ============================================================
 
 **Returns**
 
@@ -1460,7 +1460,7 @@ The value of the named property as evaluated at the specified time. Note that th
 
 **Parameters**
 
-=================  ===========================================================
+================== ============================================================
 ``time``           The time in seconds; a floating-point value. The beginning
                    of the composition is 0.
 ``preExpression``  If the property has an expression and this is true, return
@@ -1468,7 +1468,7 @@ The value of the named property as evaluated at the specified time. Note that th
                    expression to it. When false, return the result of
                    evaluating the expression for the specified time. Ignored if
                    the property does not have an associated expression.
-=================  ===========================================================
+================== ============================================================
 
 **Returns**
 
