@@ -32,7 +32,7 @@ The.alphaMode of footageSource defines how the alpha information in the footage 
 
 **Type**
 
-An A lpha Mo d e enumerated value; (read/write). One of:
+An Alpha Mode enumerated value; (read/write). One of:
 -  ``AlphaMode.IGNORE``
 -  ``AlphaMode.STRAIGHT``
 -  ``AlphaMode.PREMULTIPLIED``

@@ -81,10 +81,10 @@ An action to be performed when the render operation is completed.
 
 A ``PostRenderAction`` enumerated value (read/write); one of:
 
--  ``postRenderAction.NONE``
--  ``postRenderAction.IMPORT``
--  ``postRenderAction.IMPORT_AND_REPLACE_USAGE``
--  ``postRenderAction.SET_PROXY``
+-  ``PostRenderAction.NONE``
+-  ``PostRenderAction.IMPORT``
+-  ``PostRenderAction.IMPORT_AND_REPLACE_USAGE``
+-  ``PostRenderAction.SET_PROXY``
 
 ----
 

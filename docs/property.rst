@@ -626,7 +626,7 @@ Returns the 'in' interpolation type for the specified keyframe.
 
 A ``KeyframeInterpolationType`` enumerated value; one of:
 
--  ``KeyframeInterpolationType. LINEAR``
+-  ``KeyframeInterpolationType.LINEAR``
 -  ``KeyframeInterpolationType.BEZIER``
 -  ``KeyframeInterpolationType.HOLD``
 

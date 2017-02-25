@@ -183,10 +183,10 @@ see :ref:`app.availableGPUAccelTypes`
 
 A ``GpuAccelType`` enumerated value; read/write. One of:
 
-- ``CUDA``
-- ``Metal``
-- ``OPENCL``
-- ``SOFTWARE``
+- ``GpuAccelType.CUDA``
+- ``GpuAccelType.Metal``
+- ``GpuAccelType.OPENCL``
+- ``GpuAccelType.SOFTWARE``
 
 **Example**
 
@@ -384,35 +384,35 @@ Get and sets the active tool in the Tools panel.
 
 A ``ToolType`` enumerated value; read/write. One of:
 
-- ``Tool_Arrow``: Selection Tool
-- ``Tool_Rotate``: Rotation Tool
-- ``Tool_CameraMaya``: Unified Camera Tool
-- ``Tool_CameraOrbit``: Orbit Camera Tool
-- ``Tool_CameraTrackXY``: Track XY Camera Tool
-- ``Tool_CameraTrackZ``: Track Z Camera Tool
-- ``Tool_Paintbrush``: Brush Tool
-- ``Tool_CloneStamp``: Clone Stamp Tool
-- ``Tool_Eraser``: Eraser Tool
-- ``Tool_Hand``: Hand Tool
-- ``Tool_Magnify``: Zoom Tool
-- ``Tool_PanBehind``: Pan Behind (Anchor Point) Tool
-- ``Tool_Rect``: Rectangle Tool
-- ``Tool_RoundedRect``: Rounded Rectangle Tool
-- ``Tool_Oval``: Ellipse Tool
-- ``Tool_Polygon``: Polygon Tool
-- ``Tool_Star``: Star Tool
-- ``Tool_TextH``: Horizontal Type Tool
-- ``Tool_TextV``: Vertical Type Tool
-- ``Tool_Pen``: Pen Tool
-- ``Tool_Feather``: Mask Feather Tool
-- ``Tool_PenPlus``: Add Vertex Tool
-- ``Tool_PenMinus``: Delete Vertex Tool
-- ``Tool_PenConvert``: Convert Vertex Tool
-- ``Tool_Pin``: Puppet Pin Tool
-- ``Tool_PinStarch``: Puppet Starch Tool
-- ``Tool_PinDepth``: Puppet Overlap Tool
-- ``Tool_Quickselect``: Roto Brush Tool
-- ``Tool_Hairbrush``: Refine Edge Tool
+- ``ToolType.Tool_Arrow``: Selection Tool
+- ``ToolType.Tool_Rotate``: Rotation Tool
+- ``ToolType.Tool_CameraMaya``: Unified Camera Tool
+- ``ToolType.Tool_CameraOrbit``: Orbit Camera Tool
+- ``ToolType.Tool_CameraTrackXY``: Track XY Camera Tool
+- ``ToolType.Tool_CameraTrackZ``: Track Z Camera Tool
+- ``ToolType.Tool_Paintbrush``: Brush Tool
+- ``ToolType.Tool_CloneStamp``: Clone Stamp Tool
+- ``ToolType.Tool_Eraser``: Eraser Tool
+- ``ToolType.Tool_Hand``: Hand Tool
+- ``ToolType.Tool_Magnify``: Zoom Tool
+- ``ToolType.Tool_PanBehind``: Pan Behind (Anchor Point) Tool
+- ``ToolType.Tool_Rect``: Rectangle Tool
+- ``ToolType.Tool_RoundedRect``: Rounded Rectangle Tool
+- ``ToolType.Tool_Oval``: Ellipse Tool
+- ``ToolType.Tool_Polygon``: Polygon Tool
+- ``ToolType.Tool_Star``: Star Tool
+- ``ToolType.Tool_TextH``: Horizontal Type Tool
+- ``ToolType.Tool_TextV``: Vertical Type Tool
+- ``ToolType.Tool_Pen``: Pen Tool
+- ``ToolType.Tool_Feather``: Mask Feather Tool
+- ``ToolType.Tool_PenPlus``: Add Vertex Tool
+- ``ToolType.Tool_PenMinus``: Delete Vertex Tool
+- ``ToolType.Tool_PenConvert``: Convert Vertex Tool
+- ``ToolType.Tool_Pin``: Puppet Pin Tool
+- ``ToolType.Tool_PinStarch``: Puppet Starch Tool
+- ``ToolType.Tool_PinDepth``: Puppet Overlap Tool
+- ``ToolType.Tool_Quickselect``: Roto Brush Tool
+- ``ToolType.Tool_Hairbrush``: Refine Edge Tool
 
 **Examples**
 
