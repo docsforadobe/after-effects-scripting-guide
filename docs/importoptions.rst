@@ -9,7 +9,7 @@ ImportOptions object
 
 **Description**
 
-The ImportOptions object encapsulates the options used to import a file with the :ref:`Project.importFile` methods.The constructor takes an optional parameter, an ExtendScript File object for the file. If it is not supplied, you must explicitly set the value of the ``file`` attribute before using the object with the ``importFile`` method. For example:
+The ImportOptions object encapsulates the options used to import a file with the :ref:`Project.importFile` methods. The constructor takes an optional parameter, an ExtendScript File object for the file. If it is not supplied, you must explicitly set the value of the ``file`` attribute before using the object with the ``importFile`` method. For example:
 
 ::
 

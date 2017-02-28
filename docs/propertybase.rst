@@ -28,6 +28,7 @@ When something occurs that changes an object sufficiently for the reference to b
     alert(layer1.name); // invalid reference to deleted object
 
 Similarly, if you reference an AE property in a deleted object, the warning occurs::
+
     var layer1 = app.project.item(1).layer(1);
     var layer1position = layer1.transform.position;
     layer1.remove();
@@ -183,7 +184,7 @@ PropertyBase.matchName
 
 **Description**
 
-A special name for the property used to build unique naming paths. The match name is not displayed, but you can refer to it in scripts. Every property has a unique match-name identifier. Match names are stable from version to version regardless of the display name (the name attribute value) or any changes to the application. Unlike the display name, it is not localized.An indexed group may not have a name value, but always has a match Name value. (An indexed group has the type ``PropertyType.INDEXED_GROUP``; see :ref:`PropertyBase.propertyType`.)
+A special name for the property used to build unique naming paths. The match name is not displayed, but you can refer to it in scripts. Every property has a unique match-name identifier. Match names are stable from version to version regardless of the display name (the name attribute value) or any changes to the application. Unlike the display name, it is not localized. An indexed group may not have a name value, but always has a matchName value. (An indexed group has the type ``PropertyType.INDEXED_GROUP``; see :ref:`PropertyBase.propertyType`.)
 
 **Type**
 
@@ -289,7 +290,7 @@ PropertyBase.selected
 
 **Description**
 
-When true, this property is selected. Set to true to select the property, or to false to deselect it.Sampling this attribute repeatedly for a large number of properties can slow down system performance. To read the full set of selected properties of a composition or layer, use either :ref:`CompItem.selectedProperties` or :ref:`Layer.selectedProperties`.
+When true, this property is selected. Set to true to select the property, or to false to deselect it. Sampling this attribute repeatedly for a large number of properties can slow down system performance. To read the full set of selected properties of a composition or layer, use either :ref:`CompItem.selectedProperties` or :ref:`Layer.selectedProperties`.
 
 **Type**
 
@@ -308,7 +309,7 @@ PropertyBase.duplicate()
 
 **Description**
 
-If this property is a child of an indexed group, creates and returns a new PropertyBase object with the same attribute values as this one.If this property is not a child of an indexed group, the method generates an exception and displays an error.An indexed group has the type ``PropertyType.INDEXED_GROUP``; see :ref:`PropertyBase.propertyType`.
+If this property is a child of an indexed group, creates and returns a new PropertyBase object with the same attribute values as this one. If this property is not a child of an indexed group, the method generates an exception and displays an error. An indexed group has the type ``PropertyType.INDEXED_GROUP``; see :ref:`PropertyBase.propertyType`.
 
 **Parameters**
 
@@ -329,7 +330,7 @@ PropertyBase.moveTo()
 
 **Description**
 
-Moves this property to a new position in its parent property group.This method is valid only for children of indexed groups; if it is not, or if the index value is not valid, the method generates an exception and displays an error. (An indexed group has the type ``PropertyType.INDEXED_GROUP``; see :ref:`PropertyBase.propertyType`.)
+Moves this property to a new position in its parent property group. This method is valid only for children of indexed groups; if it is not, or if the index value is not valid, the method generates an exception and displays an error. (An indexed group has the type ``PropertyType.INDEXED_GROUP``; see :ref:`PropertyBase.propertyType`.)
 
 .. warning::
    Using this method invalidates existing references to other children in the same indexed group. For example, if you have three effects on a layer, each effect assigned to a different variable, moving one of the effectsinvalidates the references for all of these variables. You will need to reassign them.
@@ -381,7 +382,7 @@ PropertyBase.remove()
 
 **Description**
 
-Removes this property from its parent group. If this is a property group, it removes the child properties as well.This method is valid only for children of indexed groups; if it is not, or if the index value is not valid, the method generates an exception and displays an error. (An indexed group has the type ``PropertyType.INDEXED_GROUP``; see :ref:`PropertyBase.propertyType`.) This method can be called on a text animation property (that is, any animator that has been set to a text layer).
+Removes this property from its parent group. If this is a property group, it removes the child properties as well. This method is valid only for children of indexed groups; if it is not, or if the index value is not valid, the method generates an exception and displays an error. (An indexed group has the type ``PropertyType.INDEXED_GROUP``; see :ref:`PropertyBase.propertyType`.) This method can be called on a text animation property (that is, any animator that has been set to a text layer).
 
 **Parameters**
 

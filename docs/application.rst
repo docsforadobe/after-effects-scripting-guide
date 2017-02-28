@@ -50,7 +50,7 @@ app.availableGPUAccelTypes
 
 The Viewer object for the currently focused or active-focused viewer (Composition, Layer, or Footage) panel.
 
-Use this in conjunction with app.project.gpuAccelType to set the value for Project Settings > Video Rendering and Effects > Use.
+Use this in conjunction with ``app.project.gpuAccelType`` to set the value for Project Settings > Video Rendering and Effects > Use.
 
 **Type**
 

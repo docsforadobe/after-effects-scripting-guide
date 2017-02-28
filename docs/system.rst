@@ -107,7 +107,7 @@ System.callSystem()
 
 **Description**
 
-Executes a system command, as if you had typed it on the operating system’s command line. Returns whatever the system outputs in response to the command, if anything.In Windows, you can invoke commands using the ``/c`` switch for the ``cmd.exe`` command, passing the command to run in escaped quotes (``\"...\"``). For example, the following retrieves the current time and displays it to the user::
+Executes a system command, as if you had typed it on the operating system’s command line. Returns whatever the system outputs in response to the command, if anything. In Windows, you can invoke commands using the ``/c`` switch for the ``cmd.exe`` command, passing the command to run in escaped quotes (``\"...\"``). For example, the following retrieves the current time and displays it to the user::
 
     var timeStr = system.callSystem("cmd.exe /c \"time /t\"");
     alert("Current time is" + timeStr);

@@ -8,7 +8,7 @@ FootageItem object
 
 **Description**
 
-The FootageItem object represents a footage item imported into a project, which appears in the Project panel. These are accessed by position index number in a project’s ite m collection.
+The FootageItem object represents a footage item imported into a project, which appears in the Project panel. These are accessed by position index number in a project’s item collection.
 
     FootageItem is a subclass of :ref:`AVItem`, which is a subclass of :ref:`Item`. All methods and attributes of AVItem and Item, in addition to those listed below, are available when working with FootageItem.
 
@@ -87,7 +87,7 @@ FootageItem.replace()
 
 **Description**
 
-Changes the source of this FootageItem to the specified file. In addition to loading the file, the method creates a new FileSource object for the file and sets mainS ource to that object. In the new source object, it sets the ``name``, ``width``, ``height``, ``frameDuration``, and ``duration`` attributes (see :ref:`AVItem`) based on the contents of the file. The method preserves interpretation parameters from the previous ``mainSource`` object. If the specified file has an unlabeled alpha channel, the method estimates the alpha interpretation.
+Changes the source of this FootageItem to the specified file. In addition to loading the file, the method creates a new FileSource object for the file and sets mainSource to that object. In the new source object, it sets the ``name``, ``width``, ``height``, ``frameDuration``, and ``duration`` attributes (see :ref:`AVItem`) based on the contents of the file. The method preserves interpretation parameters from the previous ``mainSource`` object. If the specified file has an unlabeled alpha channel, the method estimates the alpha interpretation.
 
 **Parameters**
 

@@ -15,7 +15,7 @@ The CompItem object represents a composition, and allows you to manipulate and g
 
 **Example**
 
-Given that the first item in the project is a CompItem, the following code displays two alerts. The first showsthe number of layers in the CompItem, and the second shows the name of the last layer in the CompItem.
+Given that the first item in the project is a CompItem, the following code displays two alerts. The first shows the number of layers in the CompItem, and the second shows the name of the last layer in the CompItem.
 
 .. code::
 

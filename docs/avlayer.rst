@@ -527,6 +527,7 @@ AVLayer.threeDPerChar
 ``app.project.item(index).layer(index).threeDPerChar``
 
 **Description**
+
 ``True`` if this layer has the Enable Per-character 3D switch set, allowing its characters to be animated off the plane of the text layer. Applies only to text layers.
 
 **Type**

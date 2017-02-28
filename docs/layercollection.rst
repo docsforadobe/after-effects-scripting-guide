@@ -199,7 +199,7 @@ LayerCollection.addSolid()
 
 **Description**
 
-Creates a new :ref:`SolidSource`, with values set as specified; sets the new SolidSource as the ``mainSource`` value of a new :ref:`FootageItem`, and adds the FootageItem to the project. Creates a new :ref:`AVLayer`, sets the new Footage Item as its``source``, and adds the layer to this collection.
+Creates a new :ref:`SolidSource`, with values set as specified; sets the new SolidSource as the ``mainSource`` value of a new :ref:`FootageItem`, and adds the FootageItem to the project. Creates a new :ref:`AVLayer`, sets the new Footage Item as its ``source``, and adds the layer to this collection.
 
 **Parameters**
 

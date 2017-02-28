@@ -12,11 +12,11 @@ The Shape object encapsulates information describing a shape in a shape layer, o
 
 A shape has a set of anchor points, or vertices, and a pair of direction handles, or tangent vectors, for each anchor point. A tangent vector (in a non-RotoBezier mask) determines the direction of the line that is drawn to or from an anchor point. There is one incoming tangent vector and one outgoing tangent vector associated with each vertex in the shape.
 
-A tangent value is a pair of x,y coordinates specified relative to the associated vertex. For example, a tangent of [-1,-1] is located above and to the left of the vertex and has a 45 degree slope, regardless of the actual location of the vertex. The longer a handle is, the greater its influence; for example, an incoming shape segment stayscloser to the vector for an i nTange nt of [-2,-2] than it does for an i nTange nt of [-1,-1], even though both of these come toward the vertex from the same direction.
+A tangent value is a pair of x,y coordinates specified relative to the associated vertex. For example, a tangent of [-1,-1] is located above and to the left of the vertex and has a 45 degree slope, regardless of the actual location of the vertex. The longer a handle is, the greater its influence; for example, an incoming shape segment stays closer to the vector for an ``inTangent`` of [-2,-2] than it does for an ``inTangent`` of [-1,-1], even though both of these come toward the vertex from the same direction.
 
 If a shape is not closed, the ``inTangent`` for the first vertex and the ``outTangent`` for the final vertex are ignored. If the shape is closed, these two vectors specify the direction handles of the final connecting segment out of the final vertex and back into the first vertex.
 
-RotoBezier masks calculate their tangents automatically. (See :ref:`MaskPropertyGroup.rotoBezier`) If a shape is used in a RotoBezier mask, the tangent values are ignored. This means that, for RotoBezier masks, you can construct a shape by setting only the ``vertices`` attribute and setting both ``inTangents`` and out Tange nt s to null. When you access the new shape, its tangent values are filled with the automatically calculated tangent values.
+RotoBezier masks calculate their tangents automatically. (See :ref:`MaskPropertyGroup.rotoBezier`) If a shape is used in a RotoBezier mask, the tangent values are ignored. This means that, for RotoBezier masks, you can construct a shape by setting only the ``vertices`` attribute and setting both ``inTangents`` and ``outTangents`` to null. When you access the new shape, its tangent values are filled with the automatically calculated tangent values.
 
 For closed mask shapes, variable-width mask feather points can exist anywhere along the mask path. Feather points are part of the Mask Path property. Reference a specific feather point by the number of the mask path segment (portion of the path between adjacent vertices) where it appears.
 
@@ -25,19 +25,19 @@ For closed mask shapes, variable-width mask feather points can exist anywhere al
 
 **Examples**
 
--  Create a square maskA square is a closed shape with 4 vertices. The ``inTangents`` and ``outTangents`` for connected straight-line segments are 0, the default, and do not need to be explicitly set. ::
+-  Create a square mask. A square is a closed shape with 4 vertices. The ``inTangents`` and ``outTangents`` for connected straight-line segments are 0, the default, and do not need to be explicitly set. ::
 
     var myShape = newShape();
     myShape.vertices = [[0,0], [0,100], [100,100], [100,0]];
     myShape.closed = true;
 
--  Create a "U" shaped maskA "U" is an open shape with the same 4 vertices used in the square::
+-  Create a "U" shaped mask. A "U" is an open shape with the same 4 vertices used in the square::
 
     var myShape = newShape();
     myShape.vertices = [[0,0], [0,100], [100,100], [100,0]];
     myShape.closed = false;
 
--  Create an ovalAn oval is a closed shape with 4 vertices and with i nTange nt and out Tange nt values::
+-  Create an oval. An oval is a closed shape with 4 vertices and with i nTange nt and out Tange nt values::
 
     var myShape = new Shape();
     myShape.vertices = [[300,50], [200,150],[300,250],[400,150]];
@@ -45,7 +45,7 @@ For closed mask shapes, variable-width mask feather points can exist anywhere al
     myShape.outTangents = [[-55.23,0],[0,55.23],[55.23,0],[0,-55.23]];
     myShape.closed = true;
 
--  Create a square mask with two feather pointsA large square mask with two feather points, one closer to the left end the second mask segment (off the bottom edge) with a radius of 30 pixels and the other one centered the third mask segment (off the right edge) with a larger radius of 100 pixels. ::
+-  Create a square mask with two feather points. A large square mask with two feather points, one closer to the left end the second mask segment (off the bottom edge) with a radius of 30 pixels and the other one centered the third mask segment (off the right edge) with a larger radius of 100 pixels. ::
 
     var myShape = new Shape();
     myShape.vertices = [[100,100], [100,400], [400,400], [400,100]]; // segments drawn counter clockwise

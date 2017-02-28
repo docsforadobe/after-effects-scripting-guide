@@ -32,7 +32,7 @@ ExtendScript defines a global debugging object, the dollar (``$``) object, and a
 
 **Tools and Utilities:** In addition, ExtendScript provides tools and features such as a localization utility for providing user-interface string values in different languages and global functions for displaying short messages in dialog boxes (alert, confirm, and prompt).
 
-**External Communication:** ExtendScript provides a S o c k e t object that allows you to communicate with remote systems from your After Effects scripts.
+**External Communication:** ExtendScript provides a Socket object that allows you to communicate with remote systems from your After Effects scripts.
 
 **Interapplication Communication:** ExtendScript provide s a common scripting environment for all Adobe applications, and allows interapplication communication through scripts.
 
@@ -169,7 +169,7 @@ Instead of creating a Window object and adding controls to it, a ScriptUI Panels
   var myPanel = this;
   myPanel.add("button", [10, 10, 100, 30], "Tool #1");
 
-If your script creates its user interface in a function, you cannot use t h i s as it will refer to the function itself, not the panel. In this case, you should pass the t h i s object as an argument to your function. For example::
+If your script creates its user interface in a function, you cannot use ``this`` as it will refer to the function itself, not the panel. In this case, you should pass the ``this`` object as an argument to your function. For example::
 
   function createUI(thisObj) {
       var myPanel = thisObj;
