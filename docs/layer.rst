@@ -259,7 +259,7 @@ Layer.samplingQuality
 ``app.project.item(index).layer(index).samplingQuality``
 
 .. note::
-   This functionality was added in After Effects 12.0
+   This functionality was added in After Effects 12.0 (CC)
 
 **Description**
 

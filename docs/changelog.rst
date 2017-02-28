@@ -10,7 +10,7 @@ What's new and changed for scripting?
 
 .. _Changelog.14-0:
 
-`After Effects 14.0 <https://forums.adobe.com/message/9108589>`_
+`After Effects 14.0 (CC 2017) <https://forums.adobe.com/message/9108589>`_
 *****************************************************************
 
 - Scripting Access to Tools
@@ -26,7 +26,7 @@ What's new and changed for scripting?
 
 .. _Changelog.13-8:
 
-`After Effects 13.8 <https://blogs.adobe.com/creativecloud/after-effects-cc-2015-3-in-depth-gpu-accelerated-effects/>`_
+`After Effects 13.8 (CC 2015.3) <https://blogs.adobe.com/creativecloud/after-effects-cc-2015-3-in-depth-gpu-accelerated-effects/>`_
 ************************************************************************************************************************
 
 - Enable GPU effect rendering via scripting
@@ -37,7 +37,7 @@ What's new and changed for scripting?
 
 .. _Changelog.13-6:
 
-`After Effects 13.6 <https://blogs.adobe.com/creativecloud/whats-new-and-changed-in-the-upcoming-update-to-after-effects-cc-2015/>`_
+`After Effects 13.6 (CC 2015) <https://blogs.adobe.com/creativecloud/whats-new-and-changed-in-the-upcoming-update-to-after-effects-cc-2015/>`_
 *************************************************************************************************************************************
 - Scripting access to text baselines
 	- Added: :ref:`baselineLocs <TextDocument.baselineLocs>`
@@ -52,7 +52,7 @@ What's new and changed for scripting?
 
 .. _Changelog.13-2:
 
-`After Effects 13.2 <https://blogs.adobe.com/creativecloud/after-effects-cc-2014-2-13-2/>`_
+`After Effects 13.2 (CC 2014.2) <https://blogs.adobe.com/creativecloud/after-effects-cc-2014-2-13-2/>`_
 ********************************************************************************************
 
 - Scripting improvements for text layers (read-only)
@@ -77,7 +77,7 @@ What's new and changed for scripting?
 
 .. _Changelog.13-1:
 
-`After Effects 13.1 <https://blogs.adobe.com/creativecloud/after-effects-cc-2014-1-13-1/>`_
+`After Effects 13.1 (CC 2014.1) <https://blogs.adobe.com/creativecloud/after-effects-cc-2014-1-13-1/>`_
 ********************************************************************************************
 
 - Scripting improvements for text layers (read-only)
@@ -90,7 +90,8 @@ What's new and changed for scripting?
 ----
 
 .. _Changelog.13-0:
-`After Effects 13.0 <https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/>`_
+
+`After Effects 13.0 (CC 2014) <https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/>`_
 *************************************************************************************************
 
 - Scripting access to render settings and output module settings
@@ -103,7 +104,8 @@ What's new and changed for scripting?
 ----
 
 .. _Changelog.12-0:
-`After Effects 12.0 <https://blogs.adobe.com/creativecloud/scripting-changes-in-after-effects-cc-12-0-12-2/>`_
+
+`After Effects 12.0 (CC) <https://blogs.adobe.com/creativecloud/scripting-changes-in-after-effects-cc-12-0-12-2/>`_
 ***************************************************************************************************************
 
 - Access to effect's internal version string

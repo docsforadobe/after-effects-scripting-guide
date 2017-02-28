@@ -60,7 +60,7 @@ TextDocument.allCaps
 ``textDocument.allCaps``
 
 .. note::
-   This functionality was added in After Effects 13.2
+   This functionality was added in After Effects 13.2 (CC 2014.2)
 
 **Description**
 
@@ -117,7 +117,7 @@ TextDocument.baselineLocs
 ``textDocument.baselineLocs``
 
 .. note::
-   This functionality was added in After Effects 13.6
+   This functionality was added in After Effects 13.6 (CC 2015)
 
 **Description**
 
@@ -140,7 +140,7 @@ TextDocument.baselineShift
 ``textDocument.baselineShift``
 
 .. note::
-   This functionality was added in After Effects 13.2
+   This functionality was added in After Effects 13.2 (CC 2014.2)
 
 **Description**
 
@@ -180,7 +180,7 @@ TextDocument.boxTextPos
 ``textDocument.boxTextPos``
 
 .. note::
-   This functionality was added in After Effects 13.2
+   This functionality was added in After Effects 13.2 (CC 2014.2)
 
 **Description**
 
@@ -229,7 +229,7 @@ TextDocument.fauxBold
 ``textDocument.fauxBold``
 
 .. note::
-   This functionality was added in After Effects 13.2
+   This functionality was added in After Effects 13.2 (CC 2014.2)
 
 **Description**
 
@@ -257,7 +257,7 @@ TextDocument.fauxItalic
 ``textDocument.fauxItalic``
 
 .. note::
-   This functionality was added in After Effects 13.2
+   This functionality was added in After Effects 13.2 (CC 2014.2)
 
 **Description**
 
@@ -322,7 +322,7 @@ TextDocument.fontFamily
 ``textDocument.fontFamily``
 
 .. note::
-   This functionality was added in After Effects 13.1
+   This functionality was added in After Effects 13.1 (CC 2014.1)
 
 **Description**
 
@@ -345,7 +345,7 @@ TextDocument.fontLocation
 ``textDocument.fontLocation``
 
 .. note::
-   This functionality was added in After Effects 13.1
+   This functionality was added in After Effects 13.1 (CC 2014.1)
 
 **Description**
 
@@ -392,7 +392,7 @@ TextDocument.fontStyle
 ``textDocument.fontStyle``
 
 .. note::
-   This functionality was added in After Effects 13.1
+   This functionality was added in After Effects 13.1 (CC 2014.1)
 
 **Description**
 
@@ -415,7 +415,7 @@ TextDocument.horizontalScale
 ``textDocument.horizontalScale``
 
 .. note::
-   This functionality was added in After Effects 13.2
+   This functionality was added in After Effects 13.2 (CC 2014.2)
 
 **Description**
 
@@ -485,7 +485,7 @@ TextDocument.smallCaps
 ``textDocument.smallCaps``
 
 .. note::
-   This functionality was added in After Effects 13.2
+   This functionality was added in After Effects 13.2 (CC 2014.2)
 
 **Description**
 
@@ -571,7 +571,7 @@ TextDocument.subscript
 ``textDocument.subscript``
 
 .. note::
-   This functionality was added in After Effects 13.2
+   This functionality was added in After Effects 13.2 (CC 2014.2)
 
 **Description**
 
@@ -594,7 +594,7 @@ TextDocument.superscript
 ``textDocument.superscript``
 
 .. note::
-   This functionality was added in After Effects 13.2
+   This functionality was added in After Effects 13.2 (CC 2014.2)
 
 **Description**
 
@@ -655,7 +655,7 @@ TextDocument.tsume
 ``textDocument.tsume``
 
 .. note::
-   This functionality was added in After Effects 13.2
+   This functionality was added in After Effects 13.2 (CC 2014.2)
 
 **Description**
 
@@ -678,7 +678,7 @@ TextDocument.verticalScale
 ``textDocument.verticalScale``
 
 .. note::
-   This functionality was added in After Effects 13.2
+   This functionality was added in After Effects 13.2 (CC 2014.2)
 
 **Description**
 
@@ -705,7 +705,7 @@ TextDocument.compPointToSource()
 ``textDocument.compPointToSource()``
 
 .. note::
-   This functionality was added in After Effects 13.2
+   This functionality was added in After Effects 13.2 (CC 2014.2)
 
 **Description**
 
@@ -777,7 +777,7 @@ TextDocument.sourcePointToComp()
 ``textDocument.sourcePointToComp()``
 
 .. note::
-   This functionality was added in After Effects 13.2
+   This functionality was added in After Effects 13.2 (CC 2014.2)
 
 **Description**
 

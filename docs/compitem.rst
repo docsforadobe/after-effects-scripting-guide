@@ -259,7 +259,7 @@ CompItem.markerProperty
 ``app.project.item(index).markerProperty``
 
 .. note::
-   This functionality was added in After Effects 14.0
+   This functionality was added in After Effects 14.0 (CC 2017)
 
 **Description**
 

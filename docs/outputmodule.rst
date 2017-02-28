@@ -140,7 +140,7 @@ OutputModule.getSetting()
 ``app.project.renderQueue.item(index).outputModule(index).getSetting()``
 
 .. note::
-   This functionality was added in After Effects 13.0
+   This functionality was added in After Effects 13.0 (CC 2014)
 
 **Description**
 
@@ -156,7 +156,7 @@ OutputModule.getSettings()
 ``app.project.renderQueue.item(index).outputModule(index).getSettings()``
 
 .. note::
-   This functionality was added in After Effects 13.0
+   This functionality was added in After Effects 13.0 (CC 2014)
 
 **Description**
 
@@ -216,7 +216,7 @@ OutputModule.setSetting()
 ``app.project.renderQueue.item(index).outputModule(index).setSetting()``
 
 .. note::
-   This functionality was added in After Effects 13.0
+   This functionality was added in After Effects 13.0 (CC 2014)
 
 **Description**
 
@@ -232,7 +232,7 @@ OutputModule.setSettings()
 ``app.project.renderQueue.item(index).outputModule(index).setSettings()``
 
 .. note::
-   This functionality was added in After Effects 13.0
+   This functionality was added in After Effects 13.0 (CC 2014)
 
 **Description**
 

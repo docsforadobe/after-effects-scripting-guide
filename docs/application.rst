@@ -44,7 +44,7 @@ app.availableGPUAccelTypes
 ``app.availableGPUAccelTypes``
 
 .. note::
-   This functionality was added in After Effects 14.0
+   This functionality was added in After Effects 14.0 (CC 2017)
 
 **Description**
 
@@ -384,7 +384,7 @@ app.version
 ``app.version``
 
 .. note::
-   This functionality was added in After Effects 12.0
+   This functionality was added in After Effects 12.0 (CC)
 
 **Description**
 

@@ -323,7 +323,7 @@ RenderQueueItem.getSetting()
 ``app.project.renderQueue.item(index).getSetting()``
 
 .. note::
-   This functionality was added in After Effects 13.0
+   This functionality was added in After Effects 13.0 (CC 2014)
 
 **Description**
 
@@ -339,7 +339,7 @@ RenderQueueItem.getSettings()
 ``app.project.renderQueue.item(index).getSettings()``
 
 .. note::
-   This functionality was added in After Effects 13.0
+   This functionality was added in After Effects 13.0 (CC 2014)
 
 **Description**
 
@@ -423,7 +423,7 @@ RenderQueueItem.setSetting()
 ``app.project.renderQueue.item(index).setSetting()``
 
 .. note::
-   This functionality was added in After Effects 13.0
+   This functionality was added in After Effects 13.0 (CC 2014)
 
 **Description**
 
@@ -439,7 +439,7 @@ RenderQueueItem.setSettings()
 ``app.project.renderQueue.item(index).setSettings()``
 
 .. note::
-   This functionality was added in After Effects 13.0
+   This functionality was added in After Effects 13.0 (CC 2014)
 
 **Description**
 

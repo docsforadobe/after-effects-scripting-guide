@@ -172,7 +172,7 @@ Project.gpuAccelType
 ``app.project.gpuAccelType``
 
 .. note::
-   This functionality was added in After Effects 13.8
+   This functionality was added in After Effects 13.8 (CC 2015.3)
 
 **Description**
 
@@ -374,7 +374,7 @@ Project.toolType
 ``app.project.toolType``
 
 .. note::
-    This functionality was added in After Effects 14.0
+    This functionality was added in After Effects 14.0 (CC 2017)
 
 **Description**
 

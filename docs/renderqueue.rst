@@ -23,7 +23,7 @@ RenderQueue.canQueueInAME
 ``app.project.renderQueue.canQueueInAME``
 
 .. note::
-   This functionality was added in After Effects 14.0
+   This functionality was added in After Effects 14.0 (CC 2017)
 
 **Description**
 
@@ -214,7 +214,7 @@ RenderQueue.queueInAME()
 ``app.project.renderQueue.queueInAME(render_immediately_in_AME)``
 
 .. note::
-   This functionality was added in After Effects 14.0
+   This functionality was added in After Effects 14.0 (CC 2017)
 
 **Description**
 

@@ -83,7 +83,7 @@ generateRandomNumber()
 ``generateRandomNumber()``
 
 .. note::
-   This functionality was added in After Effects 13.6
+   This functionality was added in After Effects 13.6 (CC 2015)
 
 **Description**
 
