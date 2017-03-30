@@ -8,7 +8,7 @@ FootageItem object
 
 **Description**
 
-The FootageItem object represents a footage item imported into a project, which appears in the Project panel. These are accessed by position index number in a projectâ€™s item collection.
+The FootageItem object represents a footage item imported into a project, which appears in the Project panel. These are accessed by position index number in a project’s item collection.
 
     FootageItem is a subclass of :ref:`AVItem`, which is a subclass of :ref:`Item`. All methods and attributes of AVItem and Item, in addition to those listed below, are available when working with FootageItem.
 
@@ -160,13 +160,13 @@ Changes the source of this FootageItem to the specified solid. Creates a new Sol
 **Parameters**
 
 ===============  ===========================================================
-``pixelAspect``  The pixel aspect ratio of the solid, a floating-point value
-                 in the range ``[0.01..100.0]``.
-``height``       The height of the solid in pixels, an integer in the range
-                 ``[4..30000]``.
-``width``        The width of the solid in pixels, an integer in the range
-                 ``[4..30000]``.
-``name``         A string containing the name of the solid.
 ``color``        The color of the solid, an array of three floating-point
                  values, ``[R, G, B]``, in the range ``[0.0..1.0]``.
+``name``         A string containing the name of the solid.
+``width``        The width of the solid in pixels, an integer in the range
+                 ``[4..30000]``.
+``height``       The height of the solid in pixels, an integer in the range
+                 ``[4..30000]``.
+``pixelAspect``  The pixel aspect ratio of the solid, a floating-point value
+                 in the range ``[0.01..100.0]``.
 ===============  ===========================================================
