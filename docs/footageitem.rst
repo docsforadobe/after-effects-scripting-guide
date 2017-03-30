@@ -8,7 +8,7 @@ FootageItem object
 
 **Description**
 
-The FootageItem object represents a footage item imported into a project, which appears in the Project panel. These are accessed by position index number in a project’s item collection.
+The FootageItem object represents a footage item imported into a project, which appears in the Project panel. These are accessed by position index number in a project's item collection.
 
     FootageItem is a subclass of :ref:`AVItem`, which is a subclass of :ref:`Item`. All methods and attributes of AVItem and Item, in addition to those listed below, are available when working with FootageItem.
 

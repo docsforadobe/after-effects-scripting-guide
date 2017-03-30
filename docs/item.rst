@@ -140,7 +140,7 @@ This script creates a new FolderItem in the Project panel and moves compositions
     var compFolder = app.project.items.addFolder("comps");
 
     //move all compositions into new folder by setting
-    //compItem’s parentFolder to "comps" folder
+    //compItem's parentFolder to "comps" folder
     for(var i = 1; i <= app.project.numItems; i++){
         if(app.project.item(i) instanceof CompItem)
           app.project.item(i).parentFolder = compFolder;

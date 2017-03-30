@@ -281,7 +281,7 @@ TextDocument.fillColor
 
 **Description**
 
-The text layer’s fill color, as an array of ``[r, g, b]`` floating-point values. For example, in an 8-bpc project, a red value of 255 would be 1.0, and in a 32-bpc project, an overbright blue value can be something like 3.2.
+The text layer's fill color, as an array of ``[r, g, b]`` floating-point values. For example, in an 8-bpc project, a red value of 255 would be 1.0, and in a 32-bpc project, an overbright blue value can be something like 3.2.
 
 .. warning::
    This value only reflects the first character in the text layer at the current time.
@@ -302,7 +302,7 @@ TextDocument.font
 
 **Description**
 
-The text layer’s font specified by its PostScript name.
+The text layer's font specified by its PostScript name.
 
 .. warning::
    This value only reflects the first character in the text layer at the current time.
@@ -372,7 +372,7 @@ TextDocument.fontSize
 
 **Description**
 
-The text layer’s font size in pixels.
+The text layer's font size in pixels.
 
 .. warning::
    This value only reflects the first character in the text layer at the current time.
@@ -509,7 +509,7 @@ TextDocument.strokeColor
 
 **Description**
 
-The text layer’s stroke color, as an array of [r, g, b] floating-point values. For example, in an 8-bpc project, a red value of 255 would be 1.0, and in a 32-bpc project, an overbright blue value can be something like 3.2.
+The text layer's stroke color, as an array of [r, g, b] floating-point values. For example, in an 8-bpc project, a red value of 255 would be 1.0, and in a 32-bpc project, an overbright blue value can be something like 3.2.
 
 .. warning::
    This value only reflects the first character in the text layer at the current time.
@@ -551,7 +551,7 @@ TextDocument.strokeWidth
 
 **Description**
 
-The text layer’s stroke thickness in pixels.
+The text layer's stroke thickness in pixels.
 
 .. warning::
    This value only reflects the first character in the text layer at the current time.
@@ -618,7 +618,7 @@ TextDocument.text
 
 **Description**
 
-The text value for the text layer’s Source Text property.
+The text value for the text layer's Source Text property.
 
 **Type**
 
@@ -635,7 +635,7 @@ TextDocument.tracking
 
 **Description**
 
-The text layer’s spacing between characters.
+The text layer's spacing between characters.
 
 .. warning::
    This value only reflects the first character in the text layer at the current time.

@@ -146,7 +146,7 @@ Property.dimensionsSeparated
 
 **Description**
 
-When true, the property’s dimensions are represented as separate properties. For example, if the layer’s position is represented as X Position and Y Position properties in the Timeline panel, the Position property has this attribute set to true.
+When true, the property's dimensions are represented as separate properties. For example, if the layer's position is represented as X Position and Y Position properties in the Timeline panel, the Position property has this attribute set to true.
 
 .. note::
    This attribute applies only when the :ref:`isSeparationLeader <Property.isSeparationLeader>` attribute is true.
@@ -470,7 +470,7 @@ Property.separationLeader
 
 **Description**
 
-The original multidimensional property for this separated follower. For example, if the current property is Y Position, this attribute’s value points to the Position property.
+The original multidimensional property for this separated follower. For example, if the current property is Y Position, this attribute's value points to the Position property.
 
 .. note::
    The original, consolidated, multidimensional property is the "separation leader" and the new, separated, single-dimensional properties are its "separation followers".
@@ -1071,7 +1071,7 @@ Sets the ``in`` and ``out`` interpolation types for the specified keyframe.
               -  ``KeyframeInterpolationType.BEZIER``
               -  ``KeyframeInterpolationType.HOLD``
 ``outType``   (Optional) The outgoing interpolation type. If not supplied, the
-              ‘out’ type is set to the ``inType`` value. A
+              ‘out' type is set to the ``inType`` value. A
               ``KeyframeInterpolationType`` enumerated value; one of:
 
               -  ``KeyframeInterpolationType.LINEAR``

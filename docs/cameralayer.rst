@@ -7,7 +7,7 @@ CameraLayer object
 
 **Description**
 
-The CameraLayer object represents a camera layer within a composition. Create it using :ref:`LayerCollection.addCamera`. It can be accessed in an item’s layer collection either by index number or by a name string.
+The CameraLayer object represents a camera layer within a composition. Create it using :ref:`LayerCollection.addCamera`. It can be accessed in an item's layer collection either by index number or by a name string.
 
     CameraLayer is a subclass of :ref:`Layer`. All methods and attributes of Layer are available when working with CameraLayer.
 

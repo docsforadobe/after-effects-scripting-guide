@@ -48,7 +48,7 @@ AVItem.footageMissing
 
 **Description**
 
-When true, the AVItem is a placeholder, or represents footage with a source file that cannot be found. In this case, the path of the missing source file is in the ``missingFootagePath`` attribute of the footage item’s source-file object. See :ref:`FootageItem.mainSource` and :ref:`FileSource.missingFootagePath`.
+When true, the AVItem is a placeholder, or represents footage with a source file that cannot be found. In this case, the path of the missing source file is in the ``missingFootagePath`` attribute of the footage item's source-file object. See :ref:`FootageItem.mainSource` and :ref:`FileSource.missingFootagePath`.
 
 **Type**
 

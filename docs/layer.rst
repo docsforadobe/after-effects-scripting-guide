@@ -8,7 +8,7 @@ Layer object
 
 **Description**
 
-The Layer object provides access to layers within compositions. It can be accessed from an item’s layer collection either by index number or by a name string.
+The Layer object provides access to layers within compositions. It can be accessed from an item's layer collection either by index number or by a name string.
 
     Layer is the base class for :ref:`CameraLayer`, :ref:`LightLayer`, and :ref:`AVLayer`, so Layer attributes and methods are available when working with all layer types. Layers contain AE properties, in addition to their JavaScript attributes and methods. For examples of how to access properties in layers, see :ref:`PropertyBase`.
 
@@ -300,7 +300,7 @@ Layer.shy
 
 **Description**
 
-When true, the layer is "shy", meaning that it is hidden in the Layer panel if the composition’s "Hide all shy layers" option is toggled on.
+When true, the layer is "shy", meaning that it is hidden in the Layer panel if the composition's "Hide all shy layers" option is toggled on.
 
 **Type**
 
@@ -351,7 +351,7 @@ Layer.stretch
 
 **Description**
 
-The layer’s time stretch, expressed as a percentage. A value of 100 means no stretch. Values between 0 and 1 are set to 1, and values between -1 and 0 (not including 0) are set to -1.
+The layer's time stretch, expressed as a percentage. A value of 100 means no stretch. Values between 0 and 1 are set to 1, and values between -1 and 0 (not including 0) are set to -1.
 
 **Type**
 
@@ -598,7 +598,7 @@ Layer.setParentWithJump()
 
 **Description**
 
-Sets the parent of this layer to the specified layer, without changing the transform values of the child layer. There may be an apparent jump in the rotation, translation, or scale of the child layer, as this layer’s transform values are combined with those of its ancestors. If you do not want the child layer to jump, set the :ref:`parent <layer.parent>` attribute directly. In this case, an offset is calculated and set in the child layer's transform fields, to prevent the jump from occurring.
+Sets the parent of this layer to the specified layer, without changing the transform values of the child layer. There may be an apparent jump in the rotation, translation, or scale of the child layer, as this layer's transform values are combined with those of its ancestors. If you do not want the child layer to jump, set the :ref:`parent <layer.parent>` attribute directly. In this case, an offset is calculated and set in the child layer's transform fields, to prevent the jump from occurring.
 
 **Parameters**
 

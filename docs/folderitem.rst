@@ -12,7 +12,7 @@ The FolderItem object corresponds to a folder in your Project panel. It can cont
 
 **Example**
 
-Given that the second item in the project is a FolderItem, the following code puts up an alert for each top-level item in the folder, showing that item’s name.
+Given that the second item in the project is a FolderItem, the following code puts up an alert for each top-level item in the folder, showing that item's name.
 
 ::
 

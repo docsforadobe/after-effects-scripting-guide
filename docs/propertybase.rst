@@ -57,7 +57,7 @@ PropertyBase.active
 
 **Description**
 
-When true, this property is active. For a layer, this corresponds to the setting of the eyeball icon and if the current time is between the layer’s in and out points. For an effect and all properties, it is the same as the e n abl e d attribute, except that it’s read-only.
+When true, this property is active. For a layer, this corresponds to the setting of the eyeball icon and if the current time is between the layer's in and out points. For an effect and all properties, it is the same as the e n abl e d attribute, except that it's read-only.
 
 **Type**
 

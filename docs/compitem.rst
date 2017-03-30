@@ -9,7 +9,7 @@ CompItem object
 
 **Description**
 
-The CompItem object represents a composition, and allows you to manipulate and get information about it. Access the objects by position index number in a project’s ite m collection.
+The CompItem object represents a composition, and allows you to manipulate and get information about it. Access the objects by position index number in a project's ite m collection.
 
     CompItem is a subclass of :ref:`AVItem`, which is a subclass of :ref:`Item`. All methods and attributes of AVItem and Item, in addition to those listed below, are available when working with CompItem.
 

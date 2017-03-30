@@ -95,7 +95,7 @@ MarkerValue.duration
 
 **Description**
 
-The marker’s duration, in seconds. The duration appears in the Timeline panel as a short bar extending from the marker location.
+The marker's duration, in seconds. The duration appears in the Timeline panel as a short bar extending from the marker location.
 
 **Type**
 
@@ -175,7 +175,7 @@ None.
 
 **Returns**
 
-An object with an attribute matching each parameter name, containing that parameter’s value.
+An object with an attribute matching each parameter name, containing that parameter's value.
 
 ----
 
@@ -194,7 +194,7 @@ Associates a set of key-value pairs for Flash Video cue-point parameters, for a 
 
 ==================  ===========================================================
 ``keyValuePairs``   An object containing the key-value pairs as attributes and
-                    values. The object’s ``toString()`` method is called to
+                    values. The object's ``toString()`` method is called to
                     assign the string value of each attribute to the named key.
 ==================  ===========================================================
 

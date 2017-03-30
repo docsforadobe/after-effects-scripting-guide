@@ -303,7 +303,7 @@ RenderQueueItem.duplicate()
 Creates a duplicate of this item and adds it this render queue.
 
 .. note::
-   Duplicating an item whose status is "Done" sets the new item’s status to "Queued".
+   Duplicating an item whose status is "Done" sets the new item's status to "Queued".
 
 **Parameters**
 
@@ -401,7 +401,7 @@ RenderQueueItem.saveAsTemplate()
 
 **Description**
 
-Saves the item’s current render settings as a new template with the specified name.
+Saves the item's current render settings as a new template with the specified name.
 
 **Parameters**
 

@@ -486,7 +486,7 @@ Project.xmpPacket
 
 **Description**
 
-The project’s XMP metadata, stored as RDF (XML-based). For more information on XMP, see the JavaScript Tools Guide.
+The project's XMP metadata, stored as RDF (XML-based). For more information on XMP, see the JavaScript Tools Guide.
 
 **Type**
 
@@ -504,8 +504,8 @@ The following example code accesses the XMP metadata of the current project, and
     if(ExternalObject.AdobeXMPScript == undefined){
         ExternalObject.AdobeXMPScript = new ExternalObject('lib:AdobeXMPScript');
     }
-    var mdata = new XMPMeta(app.project.xmpPacket); //get the project’s XMPmetadata
-    //update the Label project metadata’s value
+    var mdata = new XMPMeta(app.project.xmpPacket); //get the project's XMPmetadata
+    //update the Label project metadata's value
     var schemaNS = XMPMeta.getNamespaceURI("xmp");
     var propName = "xmp:Label";
     try{
@@ -607,7 +607,7 @@ Project.importFile()
 
 **Description**
 
-Imports the file specified in the specified ImportOptions object, using the specified options. Same as the File > Import File command. Creates and returns a new FootageItem object from the file, and adds it to the project’s items array.
+Imports the file specified in the specified ImportOptions object, using the specified options. Same as the File > Import File command. Creates and returns a new FootageItem object from the file, and adds it to the project's items array.
 
 **Parameters**
 
@@ -654,7 +654,7 @@ Project.importPlaceholder()
 
 **Description**
 
-Creates and returns a new PlaceholderItem and adds it to the project’s items array. Same as the File > Import > Placeholder command.
+Creates and returns a new PlaceholderItem and adds it to the project's items array. Same as the File > Import > Placeholder command.
 
 **Parameters**
 

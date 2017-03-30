@@ -7,7 +7,7 @@ LightLayer object
 
 **Description**
 
-The LightLayer object represents a light layer within a composition. Create it using the :ref:`LayerCollection.addLight` method. It can be accessed in an item’s layer collection either by index number or by a name string.
+The LightLayer object represents a light layer within a composition. Create it using the :ref:`LayerCollection.addLight` method. It can be accessed in an item's layer collection either by index number or by a name string.
 
     LightLayer is a subclass of :ref:`Layer`. All methods and attributes of Layer are available when working with Light-Layer.
 

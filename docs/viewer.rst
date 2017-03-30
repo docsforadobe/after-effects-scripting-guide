@@ -54,10 +54,10 @@ Viewer.fastPreview
 The state of the Fast Previews menuThis is a read/write attribute using an enumerated value:
 
 .. warning::
-	If you try to get or set the attribute’s value in the Layer or Footage panel, you’ll get an error message.
+	If you try to get or set the attribute's value in the Layer or Footage panel, you'll get an error message.
 
 .. note::
-	The Draft preview mode is only available in ray-traced 3D compositions. If you try to use it in a Classic 3D composition, you’ll get an error: “Cannot set Draft fast preview mode in a Classic 3D composition.”
+	The Draft preview mode is only available in ray-traced 3D compositions. If you try to use it in a Classic 3D composition, you'll get an error: “Cannot set Draft fast preview mode in a Classic 3D composition.”
 
 **Type**
 
@@ -132,7 +132,7 @@ Viewer.setActive()
 
 **Description**
 
-Moves the viewer panel to the front and places focus on it, making it active. Calling this method will set the :ref:`viewer’s active attribute <viewer.active>` to true.
+Moves the viewer panel to the front and places focus on it, making it active. Calling this method will set the :ref:`viewer's active attribute <viewer.active>` to true.
 
 **Parameters**
 

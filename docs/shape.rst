@@ -86,7 +86,7 @@ Shape.featherInterps
 
 **Description**
 
-An array containing each feather point’s radius interpolation type (0 for non-Hold feather points, 1 for Hold feather points).
+An array containing each feather point's radius interpolation type (0 for non-Hold feather points, 1 for Hold feather points).
 
 .. note::
    Values are stored in the array in the order that feather points are created.
@@ -106,7 +106,7 @@ Shape.featherRadii
 
 **Description**
 
-An array containing each feather point’s radius (feather amount); inner feather points have negative values.
+An array containing each feather point's radius (feather amount); inner feather points have negative values.
 
 .. note::
    Values are stored in the array in the order that feather points are created.
@@ -126,7 +126,7 @@ Shape.featherRelCornerAngles
 
 **Description**
 
-An array containing each feather point’s relative angle percentage between the two normals on either side of a curved outer feather boundary at a corner on a mask path. The angle value is 0% for feather points not at corners.
+An array containing each feather point's relative angle percentage between the two normals on either side of a curved outer feather boundary at a corner on a mask path. The angle value is 0% for feather points not at corners.
 
 .. note::
    Values are stored in the array in the order that feather points are created.
@@ -146,7 +146,7 @@ Shape.featherRelSegLocs
 
 **Description**
 
-An array containing each feather point’s relative position, from 0 to 1, on its mask path segment (section of the mask path between vertices, numbered starting at 0).
+An array containing each feather point's relative position, from 0 to 1, on its mask path segment (section of the mask path between vertices, numbered starting at 0).
 
 .. note::
    Values are stored in the array in the order that feather points are created. To move a feather point to a different mask path segment, first change the :ref:`featherSegLocs <Shape.featherSegLocs>` attribute value, then this attribute.
@@ -166,7 +166,7 @@ Shape.featherSegLocs
 
 **Description**
 
-An array containing each feather point’s mask path segment number (section of the mask path between vertices, numbered starting at 0).
+An array containing each feather point's mask path segment number (section of the mask path between vertices, numbered starting at 0).
 
 .. note::
    Values are stored in the array in the order that feather points are created. Move a feather point to a different segment by changing both its segment number (this attribute) and, optionally, its :ref:`featherRelSegLocs <Shape.featherRelSegLocs>` attribute value.
@@ -206,7 +206,7 @@ Shape.featherTensions
 
 **Description**
 
-An array containing each feather point’s tension amount, from 0 (0% tension) to 1 (100% tension).
+An array containing each feather point's tension amount, from 0 (0% tension) to 1 (100% tension).
 
 .. note::
    Values are stored in the array in the order that feather points are created.
@@ -226,7 +226,7 @@ Shape.featherTypes
 
 **Description**
 
-An array containing each feather point’s direction, either 0 (outer feather point) or 1 (inner feather point).
+An array containing each feather point's direction, either 0 (outer feather point) or 1 (inner feather point).
 
 .. note::
    You cannot change the direction of a feather point after it has been created.

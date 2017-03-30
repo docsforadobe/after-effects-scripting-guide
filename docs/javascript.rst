@@ -33,7 +33,7 @@ Keyword/Statement                    Description
 ``return``         Standard JavaScript way of returning a value from a
                    function or exiting a function.
 ``switch``         Standard JavaScript way of evaluating a JavaScript
-                   expression and attempting to match the expression’s value
+                   expression and attempting to match the expression's value
                    to a ``case`` label.
 ``this``           Standard JavaScript method of indicating the current object.
 ``true``           Literal representing the Boolean true value.

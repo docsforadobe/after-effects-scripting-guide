@@ -27,7 +27,7 @@ ItemCollection.addComp()
 
 **Description**
 
-Creates a new composition. Creates and returns a new CompItem object and adds it to this collection. If the ItemCollection belongs to the project or the root folder, then the new item’s ``parentFolder`` is the root folder. If the ItemCollection belongs to any other folder, the new item’s ``parentFolder`` is that ``FolderItem``.
+Creates a new composition. Creates and returns a new CompItem object and adds it to this collection. If the ItemCollection belongs to the project or the root folder, then the new item's ``parentFolder`` is the root folder. If the ItemCollection belongs to any other folder, the new item's ``parentFolder`` is that ``FolderItem``.
 
 **Parameters**
 
@@ -60,7 +60,7 @@ ItemCollection.addFolder()
 
 **Description**
 
-Creates a new folder. Creates and returns a new FolderItem object and adds it to this collection. If the ItemCollection belongs to the project or the root folder, then the new folder’s ``parentFolder`` is the root folder. If the ItemCollection belongs to any other folder, the new folder’s ``parentFolder`` is that ``FolderItem``. To put items in the folder, set the :ref:`item.parentFolder` attribute
+Creates a new folder. Creates and returns a new FolderItem object and adds it to this collection. If the ItemCollection belongs to the project or the root folder, then the new folder's ``parentFolder`` is the root folder. If the ItemCollection belongs to any other folder, the new folder's ``parentFolder`` is that ``FolderItem``. To put items in the folder, set the :ref:`item.parentFolder` attribute
 
 **Parameters**
 
@@ -81,7 +81,7 @@ This script creates a new FolderItem in the Project panel and moves compositions
     //create a new FolderItem in project, with name "comps"
     var compFolder = app.project.items.addFolder("comps");
     //move all compositions into new folder by setting
-    //comp Item’s parentFolder to "comps" folder
+    //comp Item's parentFolder to "comps" folder
     for(var i = 1; i <= app.project.numItems; i++) {
         if(app.project.item(i) instanceof CompItem)
             app.project.item(i).parentFolder = compFolder;

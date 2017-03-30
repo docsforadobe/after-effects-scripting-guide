@@ -191,4 +191,4 @@ You cannot use the File > Scripts > Run Script File menu command to run a script
 Stopping a running script
 *************************
 
-A script can be stopped by pressing Esc or Cmd+period (in Mac OS) when the After Effects or the script’s user interface has focus. However, a script that is busy processing a lot of data might not be very responsive.
+A script can be stopped by pressing Esc or Cmd+period (in Mac OS) when the After Effects or the script's user interface has focus. However, a script that is busy processing a lot of data might not be very responsive.

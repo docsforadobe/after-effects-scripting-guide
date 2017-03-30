@@ -22,7 +22,7 @@ Global function             Description
 ``isValid()``               When true, the specified object exists.
 ==========================  ===================================================
 
-Additional global functions for standard user I/O (``alert``, ``confirm`` , and ``prompt``) and static functions for file I/O, are defined by ExtendScript; for detailed reference information, see the JavaScript Tools Guide (available from the ExtendScript Toolkit’s Help menu).
+Additional global functions for standard user I/O (``alert``, ``confirm`` , and ``prompt``) and static functions for file I/O, are defined by ExtendScript; for detailed reference information, see the JavaScript Tools Guide (available from the ExtendScript Toolkit's Help menu).
 
 ----
 
@@ -56,17 +56,17 @@ currentFormatToTime()
 
 **Description**
 
-Converts a formatted string for a frame time value to a number of seconds, given a specified frame rate. For example, if the formatted frame time value is 0:00:12 (the exact string format is determined by a project setting), and the frame rate is 24 fps, the time would be 0.5 seconds (12/24). If the frame rate is 30 fps, the time would be 0.4 seconds (12/30). If the time is a duration, the frames are counted from 0. Otherwise, the frames are counted from the project’s starting frame (see :ref:`Project.displayStartFrame`).
+Converts a formatted string for a frame time value to a number of seconds, given a specified frame rate. For example, if the formatted frame time value is 0:00:12 (the exact string format is determined by a project setting), and the frame rate is 24 fps, the time would be 0.5 seconds (12/24). If the frame rate is 30 fps, the time would be 0.4 seconds (12/30). If the time is a duration, the frames are counted from 0. Otherwise, the frames are counted from the project's starting frame (see :ref:`Project.displayStartFrame`).
 
 **Parameters**
 
 =================  ============================================================
 ``formattedTime``  The frame time value, a string specifying a number of
-                   frames in the project’s current time display format.
+                   frames in the project's current time display format.
 ``fps``            The frames-per-second, a floating-point value.
 ``isDuration``     Optional. When true, the time is a duration (measured from
                    frame 0). When false (the default), the time is measured
-                   from the project’s starting frame.
+                   from the project's starting frame.
 =================  ============================================================
 
 **Returns**
@@ -160,7 +160,7 @@ timeToCurrentFormat()
 
 **Description**
 
-Converts a numeric time value (a number of seconds) to a frame time value; that is, a formatted string thatshows which frame corresponds to that time, at the specified rate. For example, if the time is 0.5 seconds, andthe frame rate is 24 fps, the frame would be 0:00:12 (when the project is set to display as timecode). If the framerate is 30 fps, the frame would be 0:00:15. The format of the timecode string is determined by a project setting. If the time is a duration, the frames are counted from 0. Otherwise, the frames are counted from the project’s starting frame (see :ref:`Project displayStartFrame <project.displayStartFrame>` attribute).
+Converts a numeric time value (a number of seconds) to a frame time value; that is, a formatted string thatshows which frame corresponds to that time, at the specified rate. For example, if the time is 0.5 seconds, andthe frame rate is 24 fps, the frame would be 0:00:12 (when the project is set to display as timecode). If the framerate is 30 fps, the frame would be 0:00:15. The format of the timecode string is determined by a project setting. If the time is a duration, the frames are counted from 0. Otherwise, the frames are counted from the project's starting frame (see :ref:`Project displayStartFrame <project.displayStartFrame>` attribute).
 
 **Parameters**
 
@@ -169,12 +169,12 @@ Converts a numeric time value (a number of seconds) to a frame time value; that 
 ``fps``         The frames-per-second, a floating-point value.
 ``isDuration``  Optional. When true, the time is a duration (measured from
                 frame 0). When false (the default), the time is measured from
-                the project’s starting frame.
+                the project's starting frame.
 ==============  ===============================================================
 
 **Returns**
 
-String in the project’s current time display format.
+String in the project's current time display format.
 
 ----
 

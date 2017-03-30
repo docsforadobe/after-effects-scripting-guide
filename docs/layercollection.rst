@@ -106,7 +106,7 @@ Creates a new camera layer and adds the :ref:`CameraLayer` to this collection. T
 ``name``         A string containing the name of the new layer.
 ``centerPoint``  The center of the new camera, a floating-point array [x, y].
                  This is used to set the initial x and y values of the new
-                 camera’s Point of Interest property. The z value is set to 0.
+                 camera's Point of Interest property. The z value is set to 0.
 ===============  =============================================================
 
 **Returns**
