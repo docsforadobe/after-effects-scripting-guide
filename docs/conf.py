@@ -76,3 +76,7 @@ html_search_language = 'en'
 
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'ae-scripting-guide'
+
+extensions = [
+    'sphinxprettysearchresults'
+]
