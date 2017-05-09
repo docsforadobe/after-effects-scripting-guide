@@ -436,7 +436,7 @@ The following sample code checks the current tool, and if it is not the Unified 
         }
     }
 
-The following sample code uses the new app.project.toolType attribute to create a 360Â° composition (environment layer and camera) from a selected footage item or composition selected in the Project panel. This script a good starting point for building VR compositions from equirectangular footage::
+The following sample code uses the new app.project.toolType attribute to create a 360° composition (environment layer and camera) from a selected footage item or composition selected in the Project panel. This script a good starting point for building VR compositions from equirectangular footage::
 
     // Create a 360 VR comp from a footage item or comp selected in the Project panel.
 
@@ -693,6 +693,32 @@ Retrieves an item at a specified index position.
 ``index``  The index position of the item, an integer. The first item is at
            index 1.
 =========  ====================================================================
+
+**Returns**
+
+:ref:`Item`.
+
+----
+
+.. _Project.itemByID:
+
+Project.itemByID()
+*********************************************
+
+``app.project.itemByID(id)``
+
+.. note::
+   This functionality was added in After Effects 13.0 (CC 2014)
+   
+**Description**
+
+Retrieves an item by its :ref:`Item ID <Item.id>`
+
+**Parameters**
+
+======  ====================================================================
+``id``  The ID of an item, an integer.
+======  ====================================================================
 
 **Returns**
 
