@@ -99,6 +99,7 @@ What's new and changed for scripting?
 	- Added: RenderQueueItem object :ref:`getSettings <RenderQueueItem.getSettings>`, :ref:`setSettings <RenderQueueItem.setSettings>` methods
 	- Added: OutputModule object :ref:`getSetting <OutputModule.getSetting>`, :ref:`setSetting <OutputModule.setSetting>` methods
 	- Added: OutputModule object :ref:`getSettings <OutputModule.getSettings>`, :ref:`setSettings <OutputModule.setSettings>` methods
+- Fetch project item by id: :ref:`Project.itemByID`
 - CEP panels implemented
 
 ----
