@@ -245,6 +245,7 @@ Boolean; read-only.
 **Example**
 
 For a text layer with fauxBold enabled::
+
   var isFauxBold = myTextLayer.sourceText.value.fauxBold; // returns true
 
 ----
@@ -431,6 +432,7 @@ Floating-point value; read-only.
 **Example**
 
 For a text layer with horizontalScale set to 50%::
+
   var valOfHScale = myTextLayer.sourceText.value.horizontalScale; // returns 0.5
 
 ----
@@ -457,6 +459,41 @@ A ``ParagraphJustification`` enumerated value; read-only. One of:
 -  ``ParagraphJustification.FULL_JUSTIFY_LASTLINE_RIGHT``
 -  ``ParagraphJustification.FULL_JUSTIFY_LASTLINE_CENTER``
 -  ``ParagraphJustification.FULL_JUSTIFY_LASTLINE_FULL``
+
+----
+
+.. _TextDocument.leading:
+
+TextDocument.leading
+*********************************************
+
+``textDocument.leading``
+
+.. note::
+   This functionality was added in After Effects 14.2 (CC 2017.1)
+
+**Description**
+
+The text layer’s spacing between lines.
+
+.. warning::
+   If the text layer has different leading settings for each line, this attribute returns the setting for the first line.
+   Also, if you change the value, it resets all lines in the text layer to the specified setting..
+
+**Type**
+
+Floating-point value; read/write.
+
+**Example**
+
+This creates a text layer and sets the leading to 100::
+
+  var composition = app.project.activeItem;
+  var myTextLayer = comp.layers.addText("Spring\nSummer\nAutumn\nWinter");
+  var myTextSource = myTextLayer.sourceText;
+  var myTextDocument = myTextSource.value;
+  myTextDocument.leading = 100;
+  myTextSource.setValue(myTextDocument);
 
 ----
 

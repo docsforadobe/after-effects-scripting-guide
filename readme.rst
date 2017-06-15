@@ -2,7 +2,7 @@
 
 Repo hosting the AE Scripting Guide RST docs, linked into a http://readthedocs.io system hosted at http://docs.aenhancers.com
 
-This came from the Adobe After Effects CS6 Scripting Guide, and has been added to and adjusted to reflect the current state of scripting within AE, up to AE14.0 (CC2017).
+This came from the Adobe After Effects CS6 Scripting Guide, and has been added to and adjusted to reflect the current state of scripting within AE, up to AE14.2 (CC2017.2).
 
 ----
 

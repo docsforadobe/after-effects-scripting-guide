@@ -8,6 +8,48 @@ What's new and changed for scripting?
 
 ----
 
+.. _Changelog.14-2-1:
+
+`After Effects 14.2.1 (CC 2017.2) <https://blogs.adobe.com/creativecloud/a-june-2017-update-to-after-effects-cc-is-now-available/>`_
+*****************************************************************
+
+- Buttons in ScriptUI panels have been reverted to the rectangular appearance seen in After Effects 14.1 and previous releases.
+- The :ref:`AVItem.setProxyToNone` scripting method no longer fails with an error message, “After Effects error: AEGP trying to add invalid footage”.
+- The :ref:`System.callSystem` scripting method now waits for all tasks called by the command to complete, instead of failing when the command takes a long time to complete.
+
+----
+
+.. _Changelog.14-2:
+
+`After Effects 14.2 (CC 2017.1) <https://blogs.adobe.com/creativecloud/after-effects-cc-april-2017-in-depth-scripting-improvements/>`_
+*****************************************************************
+
+- Scripting Access to text leading
+	- Added: :ref:`TextDocument.leading`
+- Scripting Access to Team Projects (Beta)
+	- Added: :ref:`Project.newTeamProject`
+	- Added: :ref:`Project.openTeamProject`
+	- Added: :ref:`Project.shareTeamProject`
+	- Added: :ref:`Project.syncTeamProject`
+	- Added: :ref:`Project.closeTeamProject`
+	- Added: :ref:`Project.convertTeamProjectToProject`
+	- Added: :ref:`Project.listTeamProjects`
+	- Added: :ref:`Project.isTeamProjectOpen`
+	- Added: :ref:`Project.isAnyTeamProjectOpen`
+	- Added: :ref:`Project.isTeamProjectEnabled`
+	- Added: :ref:`Project.isLoggedInToTeamProject`
+	- Added: :ref:`Project.isSyncCommandEnabled`
+	- Added: :ref:`Project.isShareCommandEnabled`
+	- Added: :ref:`Project.isResolveCommandEnabled`
+	- Added: :ref:`Project.resolveConflict`
+
+- Drop-down menus in ScriptUI panels are no longer clipped on HiDPI displays on Windows.
+- The appearance of buttons, sliders, disclosure triangles (“twirly arrow”), scroll bar, progress bar, radio buttons, and checkboxes in ScriptUI embedded panels have been updated to match the appearance of After Effects native controls.
+- After Effects no longer crashes when the :ref:`TextDocument.compPointToSource` scripting method is used with a 3D text layer.
+- The match name of the Fast Box Blur effect is “ADBE Box Blur2”. The older match name “ADBE Box Blur” will continue to work: when used to add the effect, “ADBE Box Blur” will apply the Fast Box Blur effect, but with the older name “Box Blur”; the Iterations parameter will be set to the new default of 3.
+
+----
+
 .. _Changelog.14-0:
 
 `After Effects 14.0 (CC 2017) <https://forums.adobe.com/message/9108589>`_

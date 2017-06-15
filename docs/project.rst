@@ -546,9 +546,9 @@ Nothing.
 
 ----
 
-.. _project.close:
+.. _Project.close:
 
-project.close()
+Project.close()
 *********************************************
 
 ``app.project.close(closeOptions)``
@@ -563,11 +563,11 @@ Closes the project with the option of saving changes automatically, prompting th
 ``closeOptions``  Action to be performed on close. A ``CloseOptions``
                   enumerated value, one of:
 
-                  -  [``CloseOptions.DO_NOT_SAVE_CHANGES``: Close without
+                  -  ``CloseOptions.DO_NOT_SAVE_CHANGES``: Close without
                      saving.
-                  -  [``CloseOptions.PROMPT_TO_SAVE_CHANGES``:Prompt for
+                  -  ``CloseOptions.PROMPT_TO_SAVE_CHANGES``:Prompt for
                      whether to save changes before close.
-                  -  [``CloseOptions.SAVE_CHANGES``: Save automatically on
+                  -  ``CloseOptions.SAVE_CHANGES``: Save automatically on
                      close.
 ================  ============================================================
 
@@ -709,7 +709,7 @@ Project.itemByID()
 
 .. note::
    This functionality was added in After Effects 13.0 (CC 2014)
-   
+
 **Description**
 
 Retrieves an item by its :ref:`Item ID <Item.id>`
@@ -824,3 +824,351 @@ Shows or hides the Project panel.
 **Returns**
 
 Nothing.
+
+=============
+Team Projects
+=============
+
+.. _Project.newTeamProject:
+
+Project.newTeamProject()
+*********************************************
+
+``app.project.newTeamProject(teamProjectName, description)``
+
+.. note::
+   This functionality was added in After Effects 14.2 (CC 2017.1)
+
+**Description**
+
+Creates a new team project.
+
+**Parameters**
+
+===================  =================================================
+``teamProjectName``  Team project name, string value.
+``description``      Optional. Team project description, string value.
+===================  =================================================
+
+**Returns**
+
+Boolean. ``True`` if the team project is successfully created, ``false`` otherwise.
+
+----
+
+.. _Project.openTeamProject:
+
+Project.openTeamProject()
+*********************************************
+
+``app.project.openTeamProject(teamProjectName)``
+
+.. note::
+   This functionality was added in After Effects 14.2 (CC 2017.1)
+
+**Description**
+
+Opens a team project.
+
+**Parameters**
+
+===================  ================================
+``teamProjectName``  Team project name, string value.
+===================  ================================
+
+**Returns**
+
+Boolean. ``True`` if the team project is successfully opened, ``false`` otherwise.
+
+----
+
+.. _Project.shareTeamProject:
+
+Project.shareTeamProject()
+*********************************************
+
+``app.project.shareTeamProject(comment)``
+
+.. note::
+   This functionality was added in After Effects 14.2 (CC 2017.1)
+
+**Description**
+
+Shares the currently open team project.
+
+**Parameters**
+
+===========  ================================
+``comment``  Comment, string value. Optional.
+===========  ================================
+
+**Returns**
+
+Boolean. ``True`` if the team project is successfully shared, ``false`` otherwise.
+
+----
+
+.. _Project.syncTeamProject:
+
+Project.syncTeamProject()
+*********************************************
+
+``app.project.syncTeamProject()``
+
+.. note::
+   This functionality was added in After Effects 14.2 (CC 2017.1)
+
+**Description**
+
+Syncs the currently open team project.
+
+**Returns**
+
+Boolean. ``True`` if the team project is successfully synced, ``false`` otherwise.
+
+----
+
+.. _Project.closeTeamProject:
+
+Project.closeTeamProject()
+*********************************************
+
+``app.project.closeTeamProject()``
+
+.. note::
+   This functionality was added in After Effects 14.2 (CC 2017.1)
+
+**Description**
+
+Closes a currently open team project.
+
+**Returns**
+
+Boolean. ``True`` if the team project is successfully closed, ``false`` otherwise.
+
+----
+
+.. _Project.convertTeamProjectToProject:
+
+Project.convertTeamProjectToProject()
+*********************************************
+
+``app.project.convertTeamProjectToProject(project_file)``
+
+.. note::
+   This functionality was added in After Effects 14.2 (CC 2017.1)
+
+**Description**
+
+Converts a team project to an After Effects project on a local disk.
+
+**Parameters**
+
+================  ======================================================================
+``project_file``  File object for the local After Effects project.
+                  File extension should be either .aep or .aet (.aepx is not supported).
+================  ======================================================================
+
+**Returns**
+
+Boolean. ``True`` if the team project is successfully converted, ``false`` otherwise.
+
+----
+
+.. _Project.listTeamProjects:
+
+Project.listTeamProjects()
+*********************************************
+
+``app.project.listTeamProjects()``
+
+.. note::
+   This functionality was added in After Effects 14.2 (CC 2017.1)
+
+**Description**
+
+Returns an array containing the name strings for all team projects available for the current user.
+Archived Team Projects are not included.
+
+**Returns**
+
+Array of strings.
+
+----
+
+.. _Project.isTeamProjectOpen:
+
+Project.isTeamProjectOpen()
+*********************************************
+
+``app.project.isTeamProjectOpen(teamProjectName)``
+
+.. note::
+   This functionality was added in After Effects 14.2 (CC 2017.1)
+
+**Description**
+
+Checks whether specified team project is currently open.
+
+**Parameters**
+
+===================  ================================
+``teamProjectName``  Team project name, string value.
+===================  ================================
+
+**Returns**
+
+Boolean. ``True`` if the specified team project is currently open, ``false`` otherwise.
+
+----
+
+.. _Project.isAnyTeamProjectOpen:
+
+Project.isAnyTeamProjectOpen()
+*********************************************
+
+``app.project.isAnyTeamProjectOpen()``
+
+.. note::
+   This functionality was added in After Effects 14.2 (CC 2017.1)
+
+**Description**
+
+Checks whether any team project is currently open.
+
+**Returns**
+
+Boolean. ``True`` if any team project is currently open, ``false`` otherwise.
+
+----
+
+.. _Project.isTeamProjectEnabled:
+
+Project.isTeamProjectEnabled()
+*********************************************
+
+``app.project.isTeamProjectEnabled()``
+
+.. note::
+   This functionality was added in After Effects 14.2 (CC 2017.1)
+
+**Description**
+
+Checks whether or not team projects is enabled for After Effects. (This will almost always return true.)
+
+**Returns**
+
+Boolean. ``True`` if team projects is currently enabled, ``false`` otherwise.
+
+----
+
+.. _Project.isLoggedInToTeamProject:
+
+Project.isLoggedInToTeamProject()
+*********************************************
+
+``app.project.isLoggedInToTeamProject()``
+
+.. note::
+   This functionality was added in After Effects 14.2 (CC 2017.1)
+
+**Description**
+
+Checks whether or not the client (After Effects) is currently logged into the team project server.
+
+**Returns**
+
+Boolean. ``True`` if the client (After Effects) is currently logged into the team projects server, ``false`` otherwise.
+
+----
+
+.. _Project.isSyncCommandEnabled:
+
+Project.isSyncCommandEnabled()
+*********************************************
+
+``app.project.isSyncCommandEnabled()``
+
+.. note::
+   This functionality was added in After Effects 14.2 (CC 2017.1)
+
+**Description**
+
+Checks whether or not the Sync command is enabled.
+
+**Returns**
+
+Boolean. ``True`` if the team projects Sync command is enabled, ``false`` otherwise.
+
+----
+
+.. _Project.isShareCommandEnabled:
+
+Project.isShareCommandEnabled()
+*********************************************
+
+``app.project.isShareCommandEnabled()``
+
+.. note::
+   This functionality was added in After Effects 14.2 (CC 2017.1)
+
+**Description**
+
+Checks whether or not the Share command is enabled.
+
+**Returns**
+
+Boolean. ``True`` if the team projects Share command is enabled, ``false`` otherwise.
+
+----
+
+.. _Project.isResolveCommandEnabled:
+
+Project.isResolveCommandEnabled()
+*********************************************
+
+``app.project.isResolveCommandEnabled()``
+
+.. note::
+   This functionality was added in After Effects 14.2 (CC 2017.1)
+
+**Description**
+
+Checks whether or not the Resolve command is enabled.
+
+**Returns**
+
+Boolean. ``True`` if the team projects Resolve command is enabled, ``false`` otherwise.
+
+----
+
+.. _Project.resolveConflict:
+
+Project.resolveConflict()
+*********************************************
+
+``app.project.resolveConflict(ResolveType)``
+
+.. note::
+   This functionality was added in After Effects 14.2 (CC 2017.1)
+
+**Description**
+
+Resolves a conflict between the open team project and the version on the team projects server, using the specified resolution method.
+
+**Parameters**
+
+===============  ===================================================================================
+``ResolveType``  The type of conflict resolution to use. A ``ResolveType`` enumerated value, one of:
+
+                  -  ``ResolveType.ACCEPT_THEIRS``: Take the shared version.
+                     The shared version replaces your version.
+                  -  ``ResolveType.ACCEPT_YOURS``: Keep your version of the project.
+                     The shared version is not taken.
+                  -  ``ResolveType.ACCEPT_THEIRS_AND_COPY``: Copy and rename your version,
+                     then take the shared version. The shared version replaces your original version
+===============  ===================================================================================
+
+**Returns**
+
+Boolean. ``True`` if the resolution of the specified type was successful, ``false`` otherwise.
