@@ -8,7 +8,7 @@ Shape object
 
 **Description**
 
-The Shape object encapsulates information describing a shape in a shape layer, or the outline shape of a Mask. It is the value of the "Mask Path" AE properties, and of the "Path" AE property of a shape layer. Use the constructor, ``newShape()``, to create a new, empty Shape object, then set the attributes individually to define the shape.
+The Shape object encapsulates information describing a shape in a shape layer, or the outline shape of a Mask. It is the value of the "Mask Path" AE properties, and of the "Path" AE property of a shape layer. Use the constructor, ``new Shape()``, to create a new, empty Shape object, then set the attributes individually to define the shape.
 
 A shape has a set of anchor points, or vertices, and a pair of direction handles, or tangent vectors, for each anchor point. A tangent vector (in a non-RotoBezier mask) determines the direction of the line that is drawn to or from an anchor point. There is one incoming tangent vector and one outgoing tangent vector associated with each vertex in the shape.
 
@@ -27,13 +27,13 @@ For closed mask shapes, variable-width mask feather points can exist anywhere al
 
 -  Create a square mask. A square is a closed shape with 4 vertices. The ``inTangents`` and ``outTangents`` for connected straight-line segments are 0, the default, and do not need to be explicitly set. ::
 
-    var myShape = newShape();
+    var myShape = new Shape();
     myShape.vertices = [[0,0], [0,100], [100,100], [100,0]];
     myShape.closed = true;
 
 -  Create a "U" shaped mask. A "U" is an open shape with the same 4 vertices used in the square::
 
-    var myShape = newShape();
+    var myShape = new Shape();
     myShape.vertices = [[0,0], [0,100], [100,100], [100,0]];
     myShape.closed = false;
 

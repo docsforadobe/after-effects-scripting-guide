@@ -206,7 +206,7 @@ Creates a new :ref:`SolidSource`, with values set as specified; sets the new Sol
 ===============  =============================================================
 ``color``        The color of the solid, an array of three floating-point
                  values,
-                 ``[R, G, B]``, intherange ``[0.0..1.0]``.
+                 ``[R, G, B]``, in the range ``[0.0..1.0]``.
 ``name``         A string containing the name of the solid.
 ``width``        The width of the solid in pixels, an integer in the range
                  ``[4..30000]``.

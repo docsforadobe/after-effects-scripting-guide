@@ -402,7 +402,7 @@ The type of value stored in the named property. The ``PropertyValueType`` enumer
 
 In contrast, a shape property (such as a layer's mask shape) is stored as a Shape object. When setting a value for a shape, pass a Shape object, as follows::
 
-    var myShape = newShape();
+    var myShape = new Shape();
     myShape.vertices = [[0,0], [0,100], [100,100], [100,0]];
     var myMask = mylayer.property("ADBE Mask Parade").property(1);
     myMask.property("ADBE Mask Shape").setValue(myShape);
