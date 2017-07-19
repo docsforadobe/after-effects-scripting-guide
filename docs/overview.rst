@@ -22,7 +22,7 @@ Nearly all of what scripting can accomplish replicates what can be done by means
 The ExtendScript language
 =========================
 
-After Effects scripts use the Adobe ExtendScript language, which is an extended form of JavaScript used by several Adobe applications, including Photoshop, Illustrator, and InDesign. ExtendScript implements the JavaScript language according to the ECMA-262 specification. The After Effects scripting engine supports the 3rd Edition of the ECMA-262 Standard, including its notational and lexical conventions, types, objects, expres- sions, and statements. ExtendScript also implements the E4X ECMA-357 specification, which defines access to data in XML format.
+After Effects scripts use the Adobe ExtendScript language, which is an extended form of JavaScript used by several Adobe applications, including Photoshop, Illustrator, and InDesign. ExtendScript implements the JavaScript language according to the ECMA-262 specification. The After Effects scripting engine supports the 3rd Edition of the ECMA-262 Standard, including its notational and lexical conventions, types, objects, expressions, and statements. ExtendScript also implements the E4X ECMA-357 specification, which defines access to data in XML format.
 
 ExtendScript defines a global debugging object, the dollar (``$``) object, and a reporting utility for ExtendScript elements, the ExtendScript Reflection interface.
 
@@ -39,7 +39,7 @@ ExtendScript defines a global debugging object, the dollar (``$``) object, and a
 The ExtendScript Toolkit (ESTK)
 ===============================
 
-After Effects includes a script editor and debugger, the ExtendScript Toolkit (ESTK), which provides a conve- nient interface for creating and testing your own scripts.
+After Effects includes a script editor and debugger, the ExtendScript Toolkit (ESTK), which provides a convenient interface for creating and testing your own scripts.
 
 To start the ESTK, choose File > Scripts > Open Script Editor.
 
