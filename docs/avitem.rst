@@ -383,7 +383,7 @@ AVItem.setProxyWithSequence()
 
 **Description**
 
-Sets a sequence of files as the proxy of this AVItem, with the option of forcing alphabetical order. Loads thespecified file sequence into a new FileSource object, sets this as the value of the prox yS ou rce attribute, and sets ``useProxy`` to true. It does not preserve the interpretation parameters, instead using the user preferences. If anyfile has an unlabeled alpha channel, and the user preference says to ask the user what to do, the methodestimates the alpha interpretation, rather than asking the user.
+Sets a sequence of files as the proxy of this AVItem, with the option of forcing alphabetical order. Loads the specified file sequence into a new FileSource object, sets this as the value of the ``proxySource`` attribute, and sets ``useProxy`` to true. It does not preserve the interpretation parameters, instead using the user preferences. If anyfile has an unlabeled alpha channel, and the user preference says to ask the user what to do, the methodestimates the alpha interpretation, rather than asking the user.
 
 **parameters**
 
