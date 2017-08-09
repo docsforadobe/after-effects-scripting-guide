@@ -5,7 +5,7 @@ TextDocument object
 ################################################
 
 |  ``new TextDocument(docText)``
-|  ``app.project.item(index).layer(index).property("SourceText").value``
+|  ``app.project.item(index).layer(index).property("Source Text").value``
 
 **Description**
 
@@ -16,8 +16,8 @@ The TextDocument object stores a value for a TextLayer's Source Text property. C
 This sets a value of some source text and displays an alert showing the new value::
 
     var myTextDocument = newTextDocument("HappyCake");
-    myTextLayer.property("SourceText").setValue(myTextDocument);
-    alert(myTextLayer.property("SourceText").value);
+    myTextLayer.property("Source Text").setValue(myTextDocument);
+    alert(myTextLayer.property("Source Text").value);
 
 This sets keyframe values for text that show different words over time::
 
