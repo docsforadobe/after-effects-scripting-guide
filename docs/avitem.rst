@@ -3,7 +3,7 @@
 AVItem object
 ################################################
 
-app.project.item(index)
+``app.project.item(index)``
 
 **Description**
 
