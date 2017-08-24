@@ -93,7 +93,7 @@ Example (for Windows):
 
 You can use this command-line technique—together with the software that comes with a customizable keyboard—to bind the invocation of a script to a keyboard shortcut.
 
-Following are examples of Windows command-line entries that will send an After Effects script to the appli- cation without using the After Effects user interface to execute the script.
+Following are examples of Windows command-line entries that will send an After Effects script to the application without using the After Effects user interface to execute the script.
 
 In the first example, you copy and paste your After Effects script directly on the command line and then run it. The script text appears in quotation marks following the afterfx.exe -s command::
 
@@ -126,6 +126,9 @@ Alternatively, you could display a dialog box asking for the location of the JSX
   tell application "Adobe After Effects CS6"
       DoScript theFile
   end tell
+
+.. note::
+     This documentation is incorrect, the correct invocation in this instance is :code:`DoScriptFile`
 
 Finally, this script is perhaps most useful when you are working directly on editing a JSX script and want to send it to After Effects for testing or to run. To use it effectively you must enter the application that contains the open JSX file (in this example it is TextEdit); if you do not know the proper name of the application, type in your best guess to replace “TextEdit” and AppleScript prompts you to locate it.
 
