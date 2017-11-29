@@ -82,3 +82,16 @@ Welcome to the After Effects Scripting Guide!
     shape
     textdocument
     viewer
+
+.. toctree::
+    :maxdepth: 2
+    :caption: Match Names
+
+    matchnames/layer/avlayer
+    matchnames/layer/3dlayer
+    matchnames/layer/cameralayer
+    matchnames/layer/lightlayer
+    matchnames/layer/textlayer
+    matchnames/layer/shapelayer
+    matchnames/layer/layerstyles
+    matchnames/effects/firstparty
