@@ -78,7 +78,7 @@ Floating-point value, the number of seconds.
 .. _generateRandomNumber:
 
 generateRandomNumber()
-*********************
+**********************
 
 ``generateRandomNumber()``
 

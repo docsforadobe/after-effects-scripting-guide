@@ -5,83 +5,83 @@ Welcome to the After Effects Scripting Guide!
     :maxdepth: 1
     :caption: Introduction
 
-    overview
-    changelog
-    javascript
-    objectmodel
+    introduction/overview
+    introduction/changelog
+    introduction/javascript
+    introduction/objectmodel
 
 .. toctree::
     :maxdepth: 1
     :caption: General
 
-    globals
-    application
-    project
-    system
+    general/globals
+    general/application
+    general/project
+    general/system
 
 .. toctree::
     :maxdepth: 1
     :caption: Items
 
-    item
-    itemcollection
-    avitem
-    compitem
-    folderitem
-    footageitem
+    items/item
+    items/itemcollection
+    items/avitem
+    items/compitem
+    items/folderitem
+    items/footageitem
 
 .. toctree::
     :maxdepth: 1
     :caption: Layers
 
-    layer
-    layercollection
-    avlayer
-    cameralayer
-    lightlayer
-    shapelayer
-    textlayer
+    layers/layer
+    layers/layercollection
+    layers/avlayer
+    layers/cameralayer
+    layers/lightlayer
+    layers/shapelayer
+    layers/textlayer
 
 .. toctree::
     :maxdepth: 1
     :caption: Properties
 
-    propertybase
-    property
-    propertygroup
-    maskpropertygroup
+    properties/propertybase
+    properties/property
+    properties/propertygroup
+    properties/maskpropertygroup
 
 .. toctree::
     :maxdepth: 1
-    :caption: Renderqueue
+    :caption: Render Queue
 
-    renderqueue
-    rqitemcollection
-    renderqueueitem
-    omcollection
-    outputmodule
+    renderqueue/renderqueue
+    renderqueue/rqitemcollection
+    renderqueue/renderqueueitem
+    renderqueue/omcollection
+    renderqueue/outputmodule
 
 .. toctree::
     :maxdepth: 1
     :caption: Sources
 
-    filesource
-    footagesource
-    placeholdersource
-    solidsource
+    sources/filesource
+    sources/footagesource
+    sources/placeholdersource
+    sources/solidsource
 
 .. toctree::
     :maxdepth: 1
     :caption: Other
 
-    collection
-    importoptions
-    keyframeease
-    markervalue
-    settings
-    shape
-    textdocument
-    viewer
+    other/collection
+    other/importoptions
+    other/keyframeease
+    other/markervalue
+    other/settings
+    other/shape
+    other/textdocument
+    other/viewer
 
 .. toctree::
     :maxdepth: 2

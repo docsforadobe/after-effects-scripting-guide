@@ -436,7 +436,7 @@ The following sample code checks the current tool, and if it is not the Unified 
         }
     }
 
-The following sample code uses the new app.project.toolType attribute to create a 360° composition (environment layer and camera) from a selected footage item or composition selected in the Project panel. This script a good starting point for building VR compositions from equirectangular footage::
+The following sample code uses the new app.project.toolType attribute to create a 360-degrees composition (environment layer and camera) from a selected footage item or composition selected in the Project panel. This script a good starting point for building VR compositions from equirectangular footage::
 
     // Create a 360 VR comp from a footage item or comp selected in the Project panel.
 
