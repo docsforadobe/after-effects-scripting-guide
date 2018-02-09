@@ -40,6 +40,7 @@ Settings.getSetting()
 **Description**
 
 Retrieves a scripting preferences item value from the preferences file.
+**Note:** If the value is greater than 1999 bytes getSetting that item will throw an error (seen in AE 15.0.1)
 
 **Parameters**
 
@@ -95,6 +96,7 @@ Settings.saveSetting()
 **Description**
 
 Saves a default value for a scripting preferences item.
+**Note:** If the value is greater than 1999 bytes getSetting that item will throw an error (seen in AE 15.0.1)
 
 **Parameters**
 
