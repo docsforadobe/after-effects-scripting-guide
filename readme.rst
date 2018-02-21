@@ -19,6 +19,7 @@ You may want to build the HTML locally before pushing, in order to ensure that t
 - Install ``Python 2.7``
 - Install ``pip``
 - Navigate to the project directory and use the command ``pip install -r requirements.txt``
+- Build the docs using ``make html``
 
 ----
 
