@@ -25,3 +25,7 @@ code {
   padding: 3px;
   font-size: 90%;
 }
+
+.wy-nav-content {
+  max-width: 1000px !important;
+}
