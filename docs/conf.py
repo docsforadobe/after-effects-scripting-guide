@@ -32,10 +32,10 @@ highlight_language = "javascript"
 
 html_theme = "sphinx_rtd_theme"
 
-html_theme_options = {
+# html_theme_options = {
     # 'sidebarwidth': '20rem',
-    'cssfiles': ['_static/extra.css']
-}
+    # 'cssfiles': ['_static/extra.css']
+# }
 
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
