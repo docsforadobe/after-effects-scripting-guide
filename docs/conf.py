@@ -8,7 +8,7 @@ import sphinx_rtd_theme
 # -- General configuration ------------------------------------------------
 
 def setup(app):
-    app.add_stylesheet('_static/extra.css')
+    app.add_stylesheet('extra.css')
 
 templates_path = ['_templates']
 
