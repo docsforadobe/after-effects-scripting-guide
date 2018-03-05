@@ -282,6 +282,9 @@ CompItem.motionGraphicsTemplateName
 
 ``app.project.item(index).motionGraphicsTemplateName``
 
+.. note::
+   This functionality was added in After Effects 15.0 (CC 2018)
+
 **Description**
 
 Read or write the name property in the Essential Graphics panel for the composition.
@@ -535,6 +538,9 @@ CompItem.exportAsMotionGraphicsTemplate()
 
 ``app.project.item(index).exportAsMotionGraphicsTemplate(doOverWriteFileIfExisting, file_path)``
 
+.. note::
+   This functionality was added in After Effects 15.0 (CC 2018)
+
 **Description**
 
 Exports the composition as a Motion Graphics template. Returns true if the Motion Graphics template is successfully exported, false otherwise.
@@ -618,6 +624,9 @@ CompItem.openInEssentialGraphics()
 *********************************************
 
 ``app.project.item(index).openInEssentialGraphics()``
+
+.. note::
+   This functionality was added in After Effects 15.0 (CC 2018)
 
 **Description**
 
