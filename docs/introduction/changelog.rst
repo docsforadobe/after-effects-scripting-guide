@@ -8,6 +8,20 @@ What's new and changed for scripting?
 
 ----
 
+.. _Changelog.15-0:
+
+`After Effects 15.0 (CC 2018) <https://forums.adobe.com/docs/DOC-8872>`_
+************************************************************************************************************************************
+
+- Scripting Access to motion graphics templates
+	- Added: :ref:`CompItem.motionGraphicsTemplateName`
+	- Added: :ref:`CompItem.exportAsMotionGraphicsTemplate`
+	- Added: :ref:`CompItem.openInEssentialGraphics`
+	- Added: :ref:`Property.addToMotionGraphicsTemplate`
+	- Added: :ref:`CompItem.canAddToMotionGraphicsTemplate`
+
+----
+
 .. _Changelog.14-2-1:
 
 `After Effects 14.2.1 (CC 2017.2) <https://blogs.adobe.com/creativecloud/a-june-2017-update-to-after-effects-cc-is-now-available/>`_
