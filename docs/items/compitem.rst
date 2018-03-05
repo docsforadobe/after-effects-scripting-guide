@@ -316,27 +316,6 @@ String; read/write.
 
 ----
 
-.. _CompItem.openInViewer:
-
-CompItem.openInViewer()
-*********************************************
-
-``app.project.item(index).openInViewer()``
-
-**Description**
-
-Opens the composition in a Composition panel, and moves the Composition panel to front and gives it focus.
-
-**Parameters**
-
-None.
-
-**Returns**
-
-Viewer object for the Composition panel, or null if the composition could not be opened.
-
-----
-
 .. _CompItem.preserveNestedFrameRate:
 
 CompItem.preserveNestedFrameRate
@@ -651,3 +630,24 @@ None.
 **Returns**
 
 Nothing.
+
+----
+
+.. _CompItem.openInViewer:
+
+CompItem.openInViewer()
+*********************************************
+
+``app.project.item(index).openInViewer()``
+
+**Description**
+
+Opens the composition in a Composition panel, and moves the Composition panel to front and gives it focus.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Viewer object for the Composition panel, or null if the composition could not be opened.
