@@ -292,6 +292,30 @@ The following sample code creates a project and composition, then creates two co
 
 ----
 
+.. _CompItem.motionGraphicsTemplateName:
+
+CompItem.motionGraphicsTemplateName
+*********************************************
+
+``app.project.item(index).motionGraphicsTemplateName``
+
+**Description**
+
+Read or write the name property in the Essential Graphics panel for the composition.
+
+The name in the Essential Graphics panel is used for the file name of an exported Motion Graphics template (ex., "My Template.mogrt").
+
+The following example will set the name for the active composition and then return it as an alert::
+
+    app.project.activeItem.motionGraphicsTemplateName = "My Template";
+    alert(app.project.activeItem.motionGraphicsTemplateName);
+
+**Type**
+
+String; read/write.
+
+----
+
 .. _CompItem.openInViewer:
 
 CompItem.openInViewer()
@@ -525,6 +549,43 @@ CompItem object.
 
 ----
 
+.. _CompItem.exportAsMotionGraphicsTemplate:
+
+CompItem.exportAsMotionGraphicsTemplate()
+*********************************************
+
+``app.project.item(index).exportAsMotionGraphicsTemplate(doOverWriteFileIfExisting, file_path)``
+
+**Description**
+
+Exports the composition as a Motion Graphics template. Returns true if the Motion Graphics template is successfully exported, false otherwise.
+
+The name in the Essential Graphics panel is used for the file name of the Motion Graphics template (ex., "My Template.mogrt").
+Use the ``motionGraphicsTemplateName`` attribute to set the name.
+
+Optionally specify the path to the folder where the Motion Graphics template file is saved. If not specified, the file will be saved in the current
+user's Essential Graphics folder::
+
+    macOS: /Users/<name>/Library/Application Support/Adobe/Common/Essential Graphics/
+    Windows: C:\Users\<name>\AppData\Roaming\Adobe\Common\Essential Graphics\
+
+If the project has been changed since the last time it was saved, After Effects will prompt the user to save the project. To avoid this, use the
+project ``save()`` method before exporting the Motion Graphics template.
+
+**Parameters**
+
+=============================  =================================================================
+``doOverWriteFileIfExisting``  Whether to overwrite an exsiting file of the same name, boolean.
+                               Required.
+``file_path``                  Path to the folder where the file will be saved. Optional.
+=============================  =================================================================
+
+**Returns**
+
+Boolean.
+
+----
+
 .. _CompItem.layer:
 
 CompItem.layer()
@@ -569,3 +630,24 @@ or:
 **Returns**
 
 :ref:`Layer`.
+
+----
+
+.. _CompItem.openInEssentialGraphics:
+
+CompItem.openInEssentialGraphics()
+*********************************************
+
+``app.project.item(index).openInEssentialGraphics()``
+
+**Description**
+
+Opens the composition in the Essential Graphics panel.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Nothing.
