@@ -183,6 +183,47 @@ LayerCollection object; read-only.
 
 ----
 
+.. _CompItem.markerProperty:
+
+CompItem.markerProperty
+*********************************************
+
+``app.project.item(index).markerProperty``
+
+.. note::
+   This functionality was added in After Effects 14.0 (CC 2017)
+
+**Description**
+
+A :ref:`PropertyGroup` that contains all a composition's markers. Composition marker scripting has the same functionality as layer markers. See :ref:`MarkerValue`
+
+**Type**
+
+PropertyGroup object or null; read-only.
+
+**Example**
+
+The following sample code creates a project and composition, then creates two composition markers with different properties::
+
+    // comp.markerProperty allows you add markers to a comp.
+    // It has the same functionality as layer.property("Marker")
+    {
+        var currentProj = app.newProject();
+        var comp = currentProj.items.addComp("mycomp", 1920, 1080, 1.0, 5, 29.97);
+        var solidLayer = comp.layers.addSolid([1, 1, 1], "mylayer", 1920, 1080, 1.0);
+
+        var compMarker = new MarkerValue("This is a comp marker!");
+        compMarker.duration = 1; compMarker.url = "http://www.adobe.com/aftereffects";
+
+        var compMarker2 = new MarkerValue("Another comp marker!");
+        compMarker2.duration = 1;
+
+        comp.markerProperty.setValueAtTime(1, compMarker)
+        comp.markerProperty.setValueAtTime(3, compMarker2)
+    }
+
+----
+
 .. _CompItem.motionBlur:
 
 CompItem.motionBlur
@@ -234,64 +275,6 @@ Integer (between 2 and 64); read/write.
 
 ----
 
-.. _CompItem.numLayers:
-
-CompItem.numLayers
-*********************************************
-
-``app.project.item(index).numLayers``
-
-**Description**
-
-The number of layers in the composition.
-
-**Type**
-
-Integer; read-only.
-
-----
-
-.. _CompItem.markerProperty:
-
-CompItem.markerProperty
-*********************************************
-
-``app.project.item(index).markerProperty``
-
-.. note::
-   This functionality was added in After Effects 14.0 (CC 2017)
-
-**Description**
-
-A :ref:`PropertyGroup` that contains all a composition's markers. Composition marker scripting has the same functionality as layer markers. See :ref:`MarkerValue`
-
-**Type**
-
-PropertyGroup object or null; read-only.
-
-**Example**
-
-The following sample code creates a project and composition, then creates two composition markers with different properties::
-
-    // comp.markerProperty allows you add markers to a comp.
-    // It has the same functionality as layer.property("Marker")
-    {
-        var currentProj = app.newProject();
-        var comp = currentProj.items.addComp("mycomp", 1920, 1080, 1.0, 5, 29.97);
-        var solidLayer = comp.layers.addSolid([1, 1, 1], "mylayer", 1920, 1080, 1.0);
-
-        var compMarker = new MarkerValue("This is a comp marker!");
-        compMarker.duration = 1; compMarker.url = "http://www.adobe.com/aftereffects";
-
-        var compMarker2 = new MarkerValue("Another comp marker!");
-        compMarker2.duration = 1;
-
-        comp.markerProperty.setValueAtTime(1, compMarker)
-        comp.markerProperty.setValueAtTime(3, compMarker2)
-    }
-
-----
-
 .. _CompItem.motionGraphicsTemplateName:
 
 CompItem.motionGraphicsTemplateName
@@ -313,6 +296,23 @@ The following example will set the name for the active composition and then retu
 **Type**
 
 String; read/write.
+
+----
+
+.. _CompItem.numLayers:
+
+CompItem.numLayers
+*********************************************
+
+``app.project.item(index).numLayers``
+
+**Description**
+
+The number of layers in the composition.
+
+**Type**
+
+Integer; read-only.
 
 ----
 
