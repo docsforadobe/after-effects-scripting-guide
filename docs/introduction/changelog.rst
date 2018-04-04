@@ -8,6 +8,16 @@ What's new and changed for scripting?
 
 ----
 
+.. _Changelog.15-1:
+
+`After Effects 15.1`_
+************************************************************************************************************************************
+
+- :ref:`Project.autoFixExpressions` will now fix expression name references in single quotes (ex., ('Effect Name')), as well as double quotes.
+- Fixes :ref:`CompItem.exportAsMotionGraphicsTemplate` not returning a boolean as expected
+
+----
+
 .. _Changelog.15-0:
 
 `After Effects 15.0 (CC 2018) <https://forums.adobe.com/docs/DOC-8872>`_
