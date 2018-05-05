@@ -29,7 +29,11 @@ PropertyGroup.numProperties
 
 **Description**
 
-The number of indexed properties in this group. For layers, this method returns a value of 3, corresponding to the mask, effect, and motion tracker groups, which are the indexed groups within the layer. However, layers also have many other properties available only by name; see :ref:`PropertyGroup.property`.
+The number of indexed properties in this group.
+
+For layers, this method returns a value of 3, corresponding to the mask, effect, and motion tracker groups, which are the indexed groups within the layer.
+
+However, layers also have many other properties available only by name; see :ref:`PropertyGroup.property`.
 
 **Type**
 
@@ -50,7 +54,36 @@ PropertyGroup.addProperty()
 
 **Description**
 
-Creates and returns a PropertyBase object with the specified name, and adds it to this group. In general, you can only add properties to an indexed group (a property group that has the type ``PropertyType.INDEXED_GROUP``; see :ref:`PropertyBase.propertyType`) The only exception is a text animator property, which can be added to a named group (a property group that has the type ``PropertyType.NAMED_GROUP``) . If this method cannot create a property with the specified name, it generates an exception. To check that you can add a particular property to this group, call ``canAddProperty`` before calling this method. (See :ref:`PropertyGroup.canAddProperty`.)
+Creates and returns a PropertyBase object with the specified name, and adds it to this group.
+
+In general, you can only add properties to an indexed group (a property group that has the type ``PropertyType.INDEXED_GROUP``; see :ref:`PropertyBase.propertyType`).
+The only exception is a text animator property, which can be added to a named group (a property group that has the type ``PropertyType.NAMED_GROUP``).
+
+If this method cannot create a property with the specified name, it generates an exception.
+
+To check that you can add a particular property to this group, call ``canAddProperty`` before calling this method. (See :ref:`PropertyGroup.canAddProperty`.)
+
+.. warning::
+    When you add a new property to an indexed group, the indexed group gets recreated from scratch, invalidating all existing references to properties.
+
+    One workaround is to store the index of the added property with `property.propertyIndex`.
+
+**Examples**
+
+- This won't work, as the `slider` object becomes invalid once we add the `Color Control` property::
+
+    var slider = layer.property("ADBE Effect Parade").addProperty("ADBE Slider Control");
+    var color = layer.property("ADBE Effect Parade").addProperty("ADBE Color Control");
+
+    var sliderProperty = slider.property("ADBE Slider Control-0001"); // Object 'slider' is Invalid
+
+- This revised method will work::
+
+    var slider = layer.property("ADBE Effect Parade").addProperty("ADBE Slider Control");
+    var sliderIndex = slider.propertyIndex;
+    var color = layer.property("ADBE Effect Parade").addProperty("ADBE Color Control");
+
+    var sliderProperty = layer.property("ADBE Effect Parade").property(sliderIndex).property("ADBE Slider Control-0001");
 
 **Parameters**
 
@@ -86,7 +119,9 @@ PropertyGroup.canAddProperty()
 
 **Description**
 
-Returns true if a property with the given name can be added to this property group. For example, you can only add mask to a mask group. The only legal input arguments are "mask" or "ADBE Mask Atom".
+Returns true if a property with the given name can be added to this property group.
+
+For example, you can only add mask to a mask group. The only legal input arguments are "mask" or "ADBE Mask Atom".
 
 ::
 
@@ -125,7 +160,9 @@ Finds and returns a child property of this group, as specified by either its ind
     mylayer(1)
     mylayer.property(1)
 
-Some properties of a layer, such as position and zoom, can be accessed only by name. When using the name to find a property that is multiple levels down, you must make more than one call to this method. For example, the following call searches two levels down, and returns the first mask in the mask group: ``myLayer.property("ADBE Masks").property(1)``
+Some properties of a layer, such as position and zoom, can be accessed only by name. When using the name to find a property that is multiple levels down, you must make more than one call to this method.
+
+For example, the following call searches two levels down, and returns the first mask in the mask group: ``myLayer.property("ADBE Masks").property(1)``
 
 **Parameters**
 
