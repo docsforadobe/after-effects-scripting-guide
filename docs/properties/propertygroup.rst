@@ -72,18 +72,20 @@ To check that you can add a particular property to this group, call ``canAddProp
 
 - This won't work, as the `slider` object becomes invalid once we add the `Color Control` property::
 
-    var slider = layer.property("ADBE Effect Parade").addProperty("ADBE Slider Control");
-    var color = layer.property("ADBE Effect Parade").addProperty("ADBE Color Control");
+    var effectsProperty = layer.property("ADBE Effect Parade");
+    var slider = effectsProperty.addProperty("ADBE Slider Control");
+    var color = effectsProperty.addProperty("ADBE Color Control");
 
     var sliderProperty = slider.property("ADBE Slider Control-0001"); // Object 'slider' is Invalid
 
 - This revised method will work::
 
-    var slider = layer.property("ADBE Effect Parade").addProperty("ADBE Slider Control");
-    var sliderIndex = slider.propertyIndex;
-    var color = layer.property("ADBE Effect Parade").addProperty("ADBE Color Control");
+    var effectsProperty = layer.property("ADBE Effect Parade");
+    var slider = effectsProperty.addProperty("ADBE Slider Control");
+    var sliderIndex = slider.propertyIndex; // Store 'slider' effect index so it can be reused later
+    var color = effectsProperty.addProperty("ADBE Color Control");
 
-    var sliderProperty = layer.property("ADBE Effect Parade").property(sliderIndex).property("ADBE Slider Control-0001");
+    var sliderProperty = effectsProperty.property(sliderIndex).property("ADBE Slider Control-0001");
 
 **Parameters**
 
