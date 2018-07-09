@@ -196,7 +196,7 @@ A BlendingMode enumerated value; read/write. One of:
 -  ``BlendingMode.PIN_LIGHT``
 -  ``BlendingMode.SATURATION``
 -  ``BlendingMode.SCREEN``
--  ``BlendingMode.SILHOUETE_ALPHA``
+-  ``BlendingMode.SILHOUETE_ALPHA`` - note the mispelling of 'SILHOUETTE'!
 -  ``BlendingMode.SILHOUETTE_LUMA``
 -  ``BlendingMode.SOFT_LIGHT``
 -  ``BlendingMode.STENCIL_ALPHA``
