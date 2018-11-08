@@ -10,6 +10,20 @@ table.docutils {
   width: 100%;
 }
 
+/* Have page match browser width, vs fixed size */
+.wy-nav-content {
+  max-width: calc(100% - 50px) !important;
+}
+
+/* Add word wrap to table cell contents */
+.wy-table-responsive table td, .wy-table-responsive table th {
+  white-space: inherit !important;
+}
+
+/*
+
+These things are redundant--
+
 table.docutils td, table.docutils th {
   border-top: 1px solid #aaa;
 }
@@ -17,6 +31,12 @@ table.docutils td, table.docutils th {
 tr:only-child td, tr:only-child th {
   border: none;
 }
+*/
+
+
+/*
+
+This isn't being used -- without appending "!important" they're not being called.
 
 code {
   font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, sans-serif;
@@ -25,7 +45,4 @@ code {
   padding: 3px;
   font-size: 90%;
 }
-
-.wy-nav-content {
-  max-width: 1000px !important;
-}
+*/
