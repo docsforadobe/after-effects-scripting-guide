@@ -36,7 +36,7 @@ What's new and changed for scripting?
 
 .. _Changelog.15-0:
 
-`After Effects 15.0 (CC 2018) <https://forums.adobe.com/docs/DOC-8872>`_
+`After Effects 15.0 <https://forums.adobe.com/docs/DOC-8872>`_
 ************************************************************************************************************************************
 
 - Scripting Access to motion graphics templates
