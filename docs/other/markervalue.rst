@@ -8,7 +8,7 @@ MarkerValue object
 
 **Description**
 
-The MarkerValue object represents a layer, or composition, marker, which associates a comment, and optionally a chapter reference point, Web-page link, or Flash Video cue point with a particular point in a layer. Create it with the constructor; all arguments except ``comment`` are optional. All arguments are strings that set in the corresponding attributes of the returned MarkerValueo bject, except ``params``. This is an array containing key-value pairs, which can then be accessed with the :ref:`getParameters() <MarkerValue.getParameters>` and :ref:`setParameters() <MarkerValue.setParameters>` methods. A script can set any number of parameter pairs; the order does not reflect the order displayed in the application. To associate a marker with a layer, set the MarkerValue object in the ``Marker`` AE property of the layer: ``layerObject.property("Marker").setValueAtTime(time, markerValueObject);`` For information on the usage of markers see "Using markers" in After Effects Help.
+The MarkerValue object represents a layer or composition marker, which associates a comment, and optionally a chapter reference point, Web-page link, or Flash Video cue point with a particular point in a layer. Create it with the constructor; all arguments except ``comment`` are optional. All arguments are strings that set in the corresponding attributes of the returned MarkerValueo bject, except ``params``. This is an array containing key-value pairs, which can then be accessed with the :ref:`getParameters() <MarkerValue.getParameters>` and :ref:`setParameters() <MarkerValue.setParameters>` methods. A script can set any number of parameter pairs; the order does not reflect the order displayed in the application. To associate a marker with a layer, set the MarkerValue object in the ``Marker`` AE property of the layer: ``layerObject.property("Marker").setValueAtTime(time, markerValueObject);`` For information on the usage of markers see "Using markers" in After Effects Help.
 
 **Examples**
 
@@ -151,6 +151,40 @@ A URL for this marker. This URL is an automatic link to a Web page.
 **Type**
 
 String; read/write.
+
+----
+
+MarkerValue.label
+*****************
+
+``app.project.item(index).layer(index).property("Marker").keyValue(index).label``
+
+**Description**
+
+The label color for a composition or layer marker. Colors are represented by their number (0 for None, or 1 to 16 for one of the preset colors in the Labels preferences). Custom label colors cannot be set programmatically.
+
+Available in After Effects 16.0 or later.
+
+**Type**
+
+Integer (0 to 16); read/write.
+
+----
+
+MarkerValue.protectedRegion
+***************************
+
+``app.project.item(index).markerProperty.keyValue(index).protectedRegion``
+
+**Description**
+
+State of the Protected Region option in the Composition Marker dialog box. When true, the composition marker behaves as a protected region. Will also return true for protected region markers on nested composition layers, but is otherwise not applicable to layer markers.
+
+Available in After Effects 16.0 or later.
+
+**Type**
+
+Boolean; read/write.
 
 ----
 
