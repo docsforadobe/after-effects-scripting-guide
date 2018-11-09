@@ -19,7 +19,7 @@ What's new and changed for scripting?
 - Scripting access to additional project color management settings:
 	- Added: :ref:`Project.workingSpace`
 	- Added: :ref:`Project.workingGamma`
-	- Added: :ref:`Project.listColorProfiles()`
+	- Added: :ref:`Project.listColorProfiles`
 - Added project method :ref:`Project.setDefaultImportFolder`, which sets the folder that will be shown in the file import dialog. 
 
 ----
