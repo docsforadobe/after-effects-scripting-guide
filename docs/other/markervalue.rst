@@ -154,6 +154,8 @@ String; read/write.
 
 ----
 
+.. _MarkerValue.label:
+
 MarkerValue.label
 *****************
 
@@ -170,6 +172,8 @@ Available in After Effects 16.0 or later.
 Integer (0 to 16); read/write.
 
 ----
+
+.. _MarkerValue.protectedRegion:
 
 MarkerValue.protectedRegion
 ***************************
