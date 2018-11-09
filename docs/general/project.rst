@@ -49,6 +49,53 @@ The color depth of the current project, either 8, 16, or 32 bits.
 Integer (8, 16, or 32 only); read/write.
 
 ----
+ 
+.. _Project.workingSpace:
+
+Project.workingSpace
+********************
+
+``app.project.workingSpace``
+
+**Description**
+
+A string which is the color profile description for the project's color working space. To set the working space to None, set ``workingSpace`` to an empty string.
+
+Use ``app.project.listColorProfiles()`` to return an array of available color profile descriptions that can be used to set the color working space.
+
+**Type**
+
+String; read/write.
+
+**Examples**
+
+* To set the working space to Rec.709 Gamma 2.4: ``app.project.workingSpace = "Rec.709 Gamma 2.4";``
+* To set the working space to None: ``app.project.workingSpace = "";``
+* To get the current working space: ``var currentSpace = app.project.workingSpace;``
+
+----
+
+.. _Project.workingGamma:
+
+Project.workingGamma
+********************
+
+``app.project.workingGamma``
+
+**Description**
+
+The current project's working gamma value, either 2.2 or 2.4. Setting values other than 2.2 or 2.4 will cause a scripting error. Note that when the project's color working space is set, the working gamma value is ignored by After Effects.
+
+**Type**
+
+Number; read/write.
+
+**Examples**
+
+* To set the working working gamma to 2.4 (Rec. 709): ``app.project.workingGamma = 2.4;``
+* To get the current working gamma: ``var currentGamma = app.project.workingGamma;``
+
+----
 
 .. _Project.displayStartFrame:
 
@@ -628,6 +675,43 @@ Imports the file specified in the specified ImportOptions object, using the spec
 
 ----
 
+.. _Project.setDefaultImportFolder:
+
+Project.setDefaultImportFolder
+******************************
+
+``app.project.setDefaultImportFolder(folder)``
+
+**Description**
+
+Sets the folder that will be shown in the file import dialog. This location will be used as an override until setDefaultImportFolder() is called with no parameters, or until After Effects is quit.
+
+**Parameters**
+
+==========   ===========================
+``folder``   ExtendScript Folder object.
+==========   ===========================
+
+**Returns**
+
+Boolean; indicates if the operation was successful.
+
+**Examples**
+
+Any of the following will set the default import folder to C:/My Folder:
+
+* ``var myFolder = new Folder("C:/My Folder"); app.project.setDefaultImportFolder(myFolder);``
+* ``app.project.setDefaultImportFolder(new Folder("C:/My Folder"));``
+* ``app.project.setDefaultImportFolder(Folder("C:/My Folder"));``
+
+Note: if the path refers to an existing file and not a folder, the Folder function returns a File object instead of a Folder object, which will cause ``setDefaultImportFolder()`` to return false.
+
+To set the default import folder to the current user's desktop folder: ``app.project.setDefaultImportFolder(Folder.desktop);``
+
+To disable the default folder, call ``setDefaultImportFolder()`` with no parameters: ``app.project.setDefaultImportFolder();``
+
+----
+
 .. _Project.importFileWithDialog:
 
 Project.importFileWithDialog()
@@ -824,6 +908,29 @@ Shows or hides the Project panel.
 **Returns**
 
 Nothing.
+
+----
+
+.. _Project.listColorProfiles:
+
+Project.listColorProfiles()
+***************************
+
+``app.project.listColorProfiles()``
+
+**Description**
+
+Returns an array of color profile descriptions that can be set as the project's color working space.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Array of strings.
+
+----
 
 =============
 Team Projects
