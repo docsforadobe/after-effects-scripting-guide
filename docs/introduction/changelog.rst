@@ -8,6 +8,22 @@ What's new and changed for scripting?
 
 ----
 
+.. _Changelog.16.0:
+
+`After Effects 16.0`_
+************************************************************************************************************************************
+
+- Scripting access to marker label and protectedRegion attributes:
+	- Added: :ref:`MarkerValue.label`
+	- Added: :ref:`MarkerValue.protectedRegion`
+- Scripting access to additional project color management settings:
+	- Added: :ref:`Project.workingSpace`
+	- Added: :ref:`Project.workingGamma`
+	- Added: :ref:`Project.listColorProfiles()`
+- Added project method :ref:`Project.setDefaultImportFolder`, which sets the folder that will be shown in the file import dialog. 
+
+----
+
 .. _Changelog.15-1:
 
 `After Effects 15.1`_
