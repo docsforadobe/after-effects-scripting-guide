@@ -67,6 +67,25 @@ Integer (0 or 1); read/write.
 
 ----
 
+.. _Project.expressionEngine:
+
+Project.expressionEngine
+*********************************************
+
+``app.project.expressionEngine``
+
+**Description**
+
+The Expressions Engine setting in the Project Settings dialog box, as a string. One of:
+- ``extendscript``
+- ``javascript-1.0``
+
+**Type**
+
+String; read/write.
+
+----
+
 .. _Project.feetFramesFilmType:
 
 Project.feetFramesFilmType
