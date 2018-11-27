@@ -77,6 +77,7 @@ Project.expressionEngine
 **Description**
 
 The Expressions Engine setting in the Project Settings dialog box, as a string. One of:
+
 - ``extendscript``
 - ``javascript-1.0``
 
