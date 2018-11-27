@@ -49,53 +49,6 @@ The color depth of the current project, either 8, 16, or 32 bits.
 Integer (8, 16, or 32 only); read/write.
 
 ----
- 
-.. _Project.workingSpace:
-
-Project.workingSpace
-********************
-
-``app.project.workingSpace``
-
-**Description**
-
-A string which is the color profile description for the project's color working space. To set the working space to None, set ``workingSpace`` to an empty string.
-
-Use ``app.project.listColorProfiles()`` to return an array of available color profile descriptions that can be used to set the color working space.
-
-**Type**
-
-String; read/write.
-
-**Examples**
-
-* To set the working space to Rec.709 Gamma 2.4: ``app.project.workingSpace = "Rec.709 Gamma 2.4";``
-* To set the working space to None: ``app.project.workingSpace = "";``
-* To get the current working space: ``var currentSpace = app.project.workingSpace;``
-
-----
-
-.. _Project.workingGamma:
-
-Project.workingGamma
-********************
-
-``app.project.workingGamma``
-
-**Description**
-
-The current project's working gamma value, either 2.2 or 2.4. Setting values other than 2.2 or 2.4 will cause a scripting error. Note that when the project's color working space is set, the working gamma value is ignored by After Effects.
-
-**Type**
-
-Number; read/write.
-
-**Examples**
-
-* To set the working working gamma to 2.4 (Rec. 709): ``app.project.workingGamma = 2.4;``
-* To get the current working gamma: ``var currentGamma = app.project.workingGamma;``
-
-----
 
 .. _Project.displayStartFrame:
 
@@ -521,6 +474,53 @@ When true, thumbnail views use the transparency checkerboard pattern.
 **Type**
 
 Boolean; read/write.
+
+----
+
+.. _Project.workingGamma:
+
+Project.workingGamma
+********************
+
+``app.project.workingGamma``
+
+**Description**
+
+The current project's working gamma value, either 2.2 or 2.4. Setting values other than 2.2 or 2.4 will cause a scripting error. Note that when the project's color working space is set, the working gamma value is ignored by After Effects.
+
+**Type**
+
+Number; read/write.
+
+**Examples**
+
+* To set the working working gamma to 2.4 (Rec. 709): ``app.project.workingGamma = 2.4;``
+* To get the current working gamma: ``var currentGamma = app.project.workingGamma;``
+
+----
+ 
+.. _Project.workingSpace:
+
+Project.workingSpace
+********************
+
+``app.project.workingSpace``
+
+**Description**
+
+A string which is the color profile description for the project's color working space. To set the working space to None, set ``workingSpace`` to an empty string.
+
+Use ``app.project.listColorProfiles()`` to return an array of available color profile descriptions that can be used to set the color working space.
+
+**Type**
+
+String; read/write.
+
+**Examples**
+
+* To set the working space to Rec.709 Gamma 2.4: ``app.project.workingSpace = "Rec.709 Gamma 2.4";``
+* To set the working space to None: ``app.project.workingSpace = "";``
+* To get the current working space: ``var currentSpace = app.project.workingSpace;``
 
 ----
 
