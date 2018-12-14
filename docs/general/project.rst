@@ -74,6 +74,9 @@ Project.expressionEngine
 
 ``app.project.expressionEngine``
 
+.. note::
+   This functionality was added in After Effects 16.0 (CC 2019)
+
 **Description**
 
 The Expressions Engine setting in the Project Settings dialog box, as a string. One of:
