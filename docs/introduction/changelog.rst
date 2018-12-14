@@ -20,6 +20,8 @@ What's new and changed for scripting?
 	- Added: :ref:`Project.workingSpace`
 	- Added: :ref:`Project.workingGamma`
 	- Added: :ref:`Project.listColorProfiles`
+- Scripting access to the expression engine attribute:
+	- Added: :ref:`Project.expressionEngine`
 - Added project method :ref:`Project.setDefaultImportFolder`, which sets the folder that will be shown in the file import dialog. 
 
 ----
