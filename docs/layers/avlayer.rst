@@ -201,6 +201,7 @@ A BlendingMode enumerated value; read/write. One of:
 -  ``BlendingMode.SOFT_LIGHT``
 -  ``BlendingMode.STENCIL_ALPHA``
 -  ``BlendingMode.STENCIL_LUMA``
+-  ``BlendingMode.SUBTRACT``
 -  ``BlendingMode.VIVID_LIGHT``
 
 ----
