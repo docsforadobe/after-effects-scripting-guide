@@ -122,6 +122,26 @@ Integer; read-only.
 
 ----
 
+.. _app.disableRendering:
+
+app.disableRendering
+*********************************************
+
+``app.disableRendering``
+
+.. note::
+   This functionality was added in After Effects 16.0 (CC 2019)
+
+**Description**
+
+When false (the default), rendering proceeds as normal. Set to true to disable rendering as if Caps Lock were enabled.
+
+**Type**
+
+Boolean; read/write.
+
+----
+
 .. _app.effects:
 
 app.effects
