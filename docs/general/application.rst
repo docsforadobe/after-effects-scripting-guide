@@ -134,7 +134,7 @@ app.disableRendering
 
 **Description**
 
-When false (the default), rendering proceeds as normal. Set to true to disable rendering as if Caps Lock were enabled.
+When false (the default), rendering proceeds as normal. Set to true to disable rendering as if Caps Lock were turned on.
 
 **Type**
 
