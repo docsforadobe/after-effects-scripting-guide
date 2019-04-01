@@ -50,6 +50,26 @@ Integer (8, 16, or 32 only); read/write.
 
 ----
 
+.. _Project.compensateForSceneReferredProfiles:
+
+Project.compensateForSceneReferredProfiles
+*********************************************
+
+``app.project.compensateForSceneReferredProfiles``
+
+.. note::
+   This functionality was added in After Effects 16.0 (CC 2019)
+
+**Description**
+
+True if Compensate for Scene-referred Profiles should be enabled for this project; otherwise false.
+
+**Type**
+
+Boolean; read/write.
+
+----
+
 .. _Project.displayStartFrame:
 
 Project.displayStartFrame
@@ -266,6 +286,26 @@ Project.linearBlending
 **Description**
 
 True if linear blending should be used for this project; otherwise false.
+
+**Type**
+
+Boolean; read/write.
+
+----
+
+.. _Project.linearizeWorkingSpace:
+
+Project.linearizeWorkingSpace
+*********************************************
+
+``app.project.linearizeWorkingSpace``
+
+.. note::
+   This functionality was added in After Effects 16.0 (CC 2019)
+
+**Description**
+
+True if Linearize Working Space should be enabled for this project; otherwise false.
 
 **Type**
 
