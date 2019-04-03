@@ -19,14 +19,14 @@ What's new and changed for scripting?
 	- Added: :ref:`Viewer.guidesVisibility`
 	- Added: :ref:`Viewer.rulers`
 - Scripting access to add, remove, and set existing guides:
-	- Added: :ref:`AVItem.addGuide()`
-	- Added: :ref:`AVItem.removeGuide()`
-	- Added: :ref:`AVItem.setGuide()`
+	- Added: :ref:`AVItem.addGuide`
+	- Added: :ref:`AVItem.removeGuide`
+	- Added: :ref:`AVItem.setGuide`
 - Scripting access to additional EGP property attributes:
 	- Added: :ref:`CompItem.motionGraphicsTemplateControllerCount`
-	- Added: :ref:`CompItem.getMotionGraphicsTemplateControllerName()`
-	- Added: :ref:`CompItem.setMotionGraphicsControllerName()`
-	- Added: :ref:`Property.addToMotionGraphicsTemplateAs()`
+	- Added: :ref:`CompItem.getMotionGraphicsTemplateControllerName`
+	- Added: :ref:`CompItem.setMotionGraphicsControllerName`
+	- Added: :ref:`Property.addToMotionGraphicsTemplateAs`
 
 ----
 
