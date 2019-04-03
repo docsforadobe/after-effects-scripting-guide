@@ -57,7 +57,7 @@ The state of the Fast Previews menuThis is a read/write attribute using an enume
 	If you try to get or set the attribute's value in the Layer or Footage panel, you'll get an error message.
 
 .. note::
-	The Draft preview mode is only available in ray-traced 3D compositions. If you try to use it in a Classic 3D composition, you'll get an error: “Cannot set Draft fast preview mode in a Classic 3D composition.”
+	The Draft preview mode is only available in ray-traced 3D compositions. If you try to use it in a Classic 3D composition, you'll get an error: "Cannot set Draft fast preview mode in a Classic 3D composition."
 
 **Type**
 
@@ -81,6 +81,84 @@ A ``FastPreviewType`` enumerated value; read/write. One of:
 
 ----
 
+.. _Viewer.guidesLocked:
+
+Viewer.guidesLocked
+*********************************************
+
+``viewer.guidesLocked``
+
+.. note::
+   This functionality was added in After Effects 16.1 (CC 2019)
+
+**Description**
+
+When true, indicates guides are locked in the viewer.
+
+**Type**
+
+Boolean; read/write.
+
+**Example**
+
+::
+
+	app.activeViewer.views[0].options.guidesLocked
+
+----
+
+.. _Viewer.guidesSnap:
+
+Viewer.guidesSnap
+*********************************************
+
+``viewer.guidesSnap``
+
+.. note::
+   This functionality was added in After Effects 16.1 (CC 2019)
+
+**Description**
+
+When true, indicates layers snap to guides when dragged in the viewer.
+
+**Type**
+
+Boolean; read/write.
+
+**Example**
+
+::
+
+	app.activeViewer.views[0].options.guidesSnap
+
+----
+
+.. _Viewer.guidesVisibility:
+
+Viewer.guidesVisibility
+*********************************************
+
+``viewer.guidesVisibility``
+
+.. note::
+   This functionality was added in After Effects 16.1 (CC 2019)
+
+**Description**
+
+When true, indicates guides are visible in the viewer.
+
+**Type**
+
+Boolean; read/write.
+
+**Example**
+
+::
+
+	app.activeViewer.views[0].options.guidesVisibility
+
+----
+
 .. _Viewer.maximized:
 
 Viewer.maximized
@@ -95,6 +173,32 @@ When true, indicates if the viewer panel is at its maximized size.
 **Type**
 
 Boolean; read/write.
+
+----
+
+.. _Viewer.rulers:
+
+Viewer.rulers
+*********************************************
+
+``viewer.rulers``
+
+.. note::
+   This functionality was added in After Effects 16.1 (CC 2019)
+
+**Description**
+
+When true, indicates rulers are shown in the viewer.
+
+**Type**
+
+Boolean; read/write.
+
+**Example**
+
+::
+
+	app.activeViewer.views[0].options.rulers
 
 ----
 
