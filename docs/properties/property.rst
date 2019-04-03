@@ -582,6 +582,40 @@ Boolean.
 
 ----
 
+.. _Property.addToMotionGraphicsTemplateAs:
+
+Property.addToMotionGraphicsTemplateAs()
+*********************************************
+
+``app.project.item(index).layer(index).propertySpec.addToMotionGraphicsTemplateAs(comp,name)``
+
+.. note::
+   This functionality was added in After Effects 16.1 (CC 2019)
+
+**Description**
+
+Adds the property to the Essential Graphics panel for the specified composition, but with an additional option to give the EGP property a custom name.
+
+Returns true if the property is successfully added, false otherwise.
+
+If the property is not added, it is either because it is not one of the supported property types or the property has already been added to that
+composition. After Effects will present a warning dialog. Use the canAddToMotionGraphicsTemplate() method to test whether the property can be
+added to a Motion Graphics template.
+
+**Parameters**
+
+========  ====================================================================
+``comp``  The composition that you wish to add the property to, a CompItem.
+          Required.
+``name``  A string for the new name. Required.
+========  ====================================================================
+
+**Returns**
+
+Boolean.
+
+----
+
 .. _Property.canAddToMotionGraphicsTemplate:
 
 Property.canAddToMotionGraphicsTemplate()
