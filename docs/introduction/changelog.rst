@@ -8,6 +8,28 @@ What's new and changed for scripting?
 
 ----
 
+.. _Changelog.16.1:
+
+`After Effects 16.1`_
+************************************************************************************************************************************
+
+- Scripting access to Viewer guide and ruler booleans:
+	- Added: :ref:`Viewer.guidesLocked`
+	- Added: :ref:`Viewer.guidesSnap`
+	- Added: :ref:`Viewer.guidesVisibility`
+	- Added: :ref:`Viewer.rulers`
+- Scripting access to add, remove, and set existing guides:
+	- Added: :ref:`AVItem.setGuide()`
+	- Added: :ref:`AVItem.removeGuide()`
+	- Added: :ref:`AVItem.setGuide()`
+- Scripting access to additional EGP property attributes:
+	- Added: :ref:`CompItem.motionGraphicsTemplateControllerCount`
+	- Added: :ref:`CompItem.getMotionGraphicsTemplateControllerName()`
+	- Added: :ref:`CompItem.setMotionGraphicsControllerName()`
+	- Added: :ref:`Property.addToMotionGraphicsTemplateAs()`
+
+----
+
 .. _Changelog.16.0:
 
 `After Effects 16.0`_
@@ -20,9 +42,12 @@ What's new and changed for scripting?
 	- Added: :ref:`Project.workingSpace`
 	- Added: :ref:`Project.workingGamma`
 	- Added: :ref:`Project.listColorProfiles`
+	- Added: :ref:`Project.Project.linearizeWorkingSpace`
+	- Added: :ref:`Project.compensateForSceneReferredProfiles`
 - Scripting access to the expression engine attribute:
 	- Added: :ref:`Project.expressionEngine`
-- Added project method :ref:`Project.setDefaultImportFolder`, which sets the folder that will be shown in the file import dialog. 
+- Added project method :ref:`Project.setDefaultImportFolder`, which sets the folder that will be shown in the file import dialog.
+- Added app property :ref:`app.disableRendering`, which disables rendering via the same mechanism as the Caps Lock key.
 
 ----
 
