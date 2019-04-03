@@ -275,6 +275,26 @@ Integer (between 2 and 64); read/write.
 
 ----
 
+.. _CompItem.motionGraphicsTemplateControllerCount:
+
+CompItem.motionGraphicsTemplateControllerCount
+*********************************************
+
+``app.project.item(index).motionGraphicsTemplateControllerCount``
+
+.. note::
+   This functionality was added in After Effects 16.1 (CC 2019)
+
+**Description**
+
+The number of properties in the Essential Graphics panel for the composition.
+
+**Type**
+
+Integer; read-only.
+
+----
+
 .. _CompItem.motionGraphicsTemplateName:
 
 CompItem.motionGraphicsTemplateName
@@ -568,6 +588,62 @@ project ``save()`` method before exporting the Motion Graphics template.
 **Returns**
 
 Boolean.
+
+----
+
+.. _CompItem.getMotionGraphicsTemplateControllerName:
+
+CompItem.getMotionGraphicsTemplateControllerName()
+*********************************************
+
+``app.project.item(index).getMotionGraphicsTemplateControllerName(index)``
+
+.. note::
+   This functionality was added in After Effects 16.1 (CC 2019)
+
+**Description**
+
+Gets the name of a single property in the Essential Graphics panel.
+
+**Parameters**
+
+=========  ===================================================================
+``index``  Integer; the index of the EGP property whose name will be returned.
+=========  ===================================================================
+
+**Returns**
+
+String; read-only.
+
+----
+
+.. _CompItem.setMotionGraphicsControllerName:
+
+CompItem.setMotionGraphicsControllerName()
+*********************************************
+
+``app.project.item(index).setMotionGraphicsControllerName(index,newName)``
+
+.. note::
+   This functionality was added in After Effects 16.1 (CC 2019)
+
+**Description**
+
+Sets the name of a single property in the Essential Graphics panel.
+
+.. note::
+   To rename a property as it is added to the EGP, see :ref:`Property.addToMotionGraphicsTemplateAs()`.
+
+**Parameters**
+
+===========  =================================================================
+``index``    Integer; the index of the EGP property to be renamed.
+``newName``  String; the new name for the EGP property.
+===========  =================================================================
+
+**Returns**
+
+String; read-only.
 
 ----
 
