@@ -375,6 +375,23 @@ The renderqueue of the project.
 
 ----
 
+.. _Project.revision:
+
+Project.revision
+*********************************************
+
+``app.project.revision``
+
+**Description**
+
+The current revision of the project. Every user action increases the revision number. New project starts at revision 1.
+
+**Returns**
+
+Integer; the current revision version of the project; read-only.
+
+----
+
 .. _Project.rootFolder:
 
 Project.rootFolder
