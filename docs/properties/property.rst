@@ -246,6 +246,32 @@ Boolean; read-only.
 
 ----
 
+.. _Property.isDropdownEffect:
+
+Property.isDropdownEffect
+*********************************************
+
+``app.project.item(index).layer(index).propertySpec.isDropdownEffect``
+
+.. note::
+   This functionality was added in After Effects 17.0.1 (2020)
+
+**Description**
+
+When true, the property is the Menu property of a Dropdown Menu Control effect and can have its items updated with :ref:`setPropertyParameters <property.setpropertyparameters>`.
+
+Examples::
+
+    appliedEffect.property("Menu").isDropdownEffect    // true
+    appliedEffect.property("Color").isDropdownEffect   // false
+    appliedEffect.property("Feather").isDropdownEffect // false
+
+**Type**
+
+Boolean; read-only.
+
+----
+
 .. _Property.isSeparationFollower:
 
 Property.isSeparationFollower
@@ -1185,6 +1211,46 @@ Sets the ``in`` and ``out`` interpolation types for the specified keyframe.
 **Returns**
 
 Nothing.
+
+----
+
+.. _Property.setPropertyParameters:
+
+Property.setPropertyParameters()
+*********************************************
+
+``app.project.item(index).layer(index).propertySpec.setPropertyParameters(items)``
+
+.. note::
+   This functionality was added in After Effects 17.0.1 (2020)
+
+**Description**
+
+Sets parameters for a Dropdown Menu Control's Menu Property. This method will overwrite the existing set of Menu items with the provided array of strings.
+
+-  The Dropdown Menu Control effect's Menu property is the only property that allows parameters to be set.
+-  To check if a property allows parameters to be set, check with :ref:`isDropdownEffect <property.isdropdowneffect>` before calling this method.
+-  An exception is raised whenever this method fails.
+
+**Parameters**
+
+============= ===================================================
+``items``     An array of strings which will replace the existing
+              menu entries in a Dropdown Menu Control.
+              
+              - Only strings are allowed.
+              - Empty item strings are not allowed.
+              - Duplicate item strings are not allowed.
+              - The character “|” is not allowed in the item strings.
+              - The string “(-“ - can be specified as of the item strings. These appear as separator lines in the dropdown menu. The separator lines will claim an index for each of themselves.
+============= ===================================================
+
+.. note::
+   Item strings should be in ASCII or MultiByte encodable in the current code-page. In other words, the item strings should be provided in the script of the running system. For example : Specifying the item strings in Japanese while running the script on an English system will create a dropdown effect with illegible characters in the item strings.
+
+**Returns**
+
+Property object, the updated Dropdown Menu Control's Menu property.
 
 ----
 
