@@ -8,6 +8,17 @@ What's new and changed for scripting?
 
 ----
 
+.. _Changelog.17.0.1:
+
+`After Effects 17.0.1`_
+************************************************************************************************************************************
+
+- Scripted creation and modification of Dropdown Menu Control items:
+	- Added: :ref:`Property.isDropdownEffect`
+	- Added: :ref:`Property.setPropertyParameters`
+
+----
+
 .. _Changelog.16.1:
 
 `After Effects 16.1`_
