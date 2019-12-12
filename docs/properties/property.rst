@@ -260,7 +260,7 @@ Property.isDropdownEffect
 
 When true, the property is the Menu property of a Dropdown Menu Control effect and can have its items updated with :ref:`setPropertyParameters <property.setpropertyparameters>`.
 
-Examples::
+**Examples** ::
 
     appliedEffect.property("Menu").isDropdownEffect    // true
     appliedEffect.property("Color").isDropdownEffect   // false
@@ -1237,7 +1237,7 @@ Sets parameters for a Dropdown Menu Control's Menu Property. This method will ov
 ============= ===================================================
 ``items``     An array of strings which will replace the existing
               menu entries in a Dropdown Menu Control.
-              
+
               - Only strings are allowed.
               - Empty item strings are not allowed.
               - Duplicate item strings are not allowed.
@@ -1247,6 +1247,19 @@ Sets parameters for a Dropdown Menu Control's Menu Property. This method will ov
 
 .. note::
    Item strings should be in ASCII or MultiByte encodable in the current code-page. In other words, the item strings should be provided in the script of the running system. For example : Specifying the item strings in Japanese while running the script on an English system will create a dropdown effect with illegible characters in the item strings.
+
+**Example** ::
+
+    var dropdownItems = [
+        "First Item",
+        "Second Item",
+        "(-",
+        "Another Item",
+        "Last Item"
+    ];
+
+    var dropdownEffect = layer.property("ADBE Effect Parade").addProperty("ADBE Dropdown Control");
+    dropdownEffect.property(1).setPropertyParameters(dropdownItems);
 
 **Returns**
 
