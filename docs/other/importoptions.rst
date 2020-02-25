@@ -130,6 +130,6 @@ Boolean.
 ::
 
     var io = new ImportOptions(File("c:\\myFile.psd"));
-    if io.canImportAs(ImportAsType.COMP) {
+    if (io.canImportAs(ImportAsType.COMP)) {
         io.importAs = ImportAsType.COMP;
     }
