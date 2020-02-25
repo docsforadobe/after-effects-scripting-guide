@@ -179,6 +179,7 @@ A BlendingMode enumerated value; read/write. One of:
 -  ``BlendingMode.DARKER_COLOR``
 -  ``BlendingMode.DIFFERENCE``
 -  ``BlendingMode.DISSOLVE``
+-  ``BlendingMode.DIVIDE``
 -  ``BlendingMode.EXCLUSION``
 -  ``BlendingMode.HARD_LIGHT``
 -  ``BlendingMode.HARD_MIX``
@@ -196,6 +197,7 @@ A BlendingMode enumerated value; read/write. One of:
 -  ``BlendingMode.PIN_LIGHT``
 -  ``BlendingMode.SATURATION``
 -  ``BlendingMode.SCREEN``
+-  ``BlendingMode.SUBTRACT``
 -  ``BlendingMode.SILHOUETE_ALPHA`` - note the mispelling of 'SILHOUETTE'!
 -  ``BlendingMode.SILHOUETTE_LUMA``
 -  ``BlendingMode.SOFT_LIGHT``
