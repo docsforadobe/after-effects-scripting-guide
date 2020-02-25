@@ -69,7 +69,7 @@ Creates a new :ref:`AVLayer` containing the specified item, and adds it to this 
 LayerCollection.addBoxText()
 *********************************************
 
-``app.project.item(index).layers.addBoxText([sourceText])``
+``app.project.item(index).layers.addBoxText([width, height])``
 
 **Description**
 
@@ -78,9 +78,7 @@ Creates a new paragraph (box) text layer and adds the new :ref:`TextLayer` to th
 **Parameters**
 
 ==============  ===============================================================
-``sourceText``  Optional; a string containing the source text of the new layer,
-                or a :ref:`TextDocument` containing the source text of the new
-                layer.
+``[width, height]``  An :ref:`Array` containing the dimensions of the new text box.
 ==============  ===============================================================
 
 **Returns**
