@@ -229,5 +229,5 @@ Nothing.
 
 ::
 
-    writeln("This text appears on first line");
-    writeln("This text appears on second line");
+    writeLn("This text appears on first line");
+    writeLn("This text appears on second line");
