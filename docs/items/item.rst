@@ -90,7 +90,10 @@ Item.label
 
 **Description**
 
-The label color for the item. Colors are represented by their number (0 for None, or 1 to 16 for one of the preset colors in the Labels preferences). Custom label colors cannot be set programmatically.
+The label color for the item. Colors are represented by their number (0 for None, or 1 to 16 for one of the preset colors in the Labels preferences).
+
+.. note::
+   Custom label colors cannot be set programmatically.
 
 **Type**
 
