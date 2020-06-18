@@ -8,9 +8,22 @@ What's new and changed for scripting?
 
 ----
 
+.. _Changelog.17.1.1:
+
+`After Effects 17.1.1 <https://helpx.adobe.com/after-effects/using/whats-new/2020-1.html>`_ (May 2020)
+************************************************************************************************************************************
+
+- Scripting access to Shape Layer Stroke Taper, Stroke Waves, Offset Paths Copies, Offset Path Copy Offset
+	- Added relevant :ref:`match names <matchnames-layer-shapelayer>`
+- Fixed an issue to allow negative values for :ref:`CompItem.displayStartTime`:
+	- Added :ref:`CompItem.displayStartFrame`
+	- Now matches the valid range allowed when setting the Start Timecode in the Composition Settings Dialog (-3:00:00:00 to 23:59:00:00).
+
+----
+
 .. _Changelog.17.0.1:
 
-`After Effects 17.0.1`_
+`After Effects 17.0.1 <https://helpx.adobe.com/after-effects/using/whats-new/2020.html>`_ (November 2019)
 ************************************************************************************************************************************
 
 - Scripted creation and modification of Dropdown Menu Control items:
@@ -43,7 +56,7 @@ What's new and changed for scripting?
 
 .. _Changelog.16.0:
 
-`After Effects 16.0`_
+`After Effects 16.0 <https://helpx.adobe.com/after-effects/using/whats-new/2019.html>`_ (October 2018)
 ************************************************************************************************************************************
 
 - Scripting access to marker label and protectedRegion attributes:
@@ -64,7 +77,7 @@ What's new and changed for scripting?
 
 .. _Changelog.15-1:
 
-`After Effects 15.1`_
+`After Effects 15.1 <https://helpx.adobe.com/after-effects/using/whats-new/2018.html>`_ (April 2018)
 ************************************************************************************************************************************
 
 - :ref:`Project.autoFixExpressions` will now fix expression name references in single quotes (ex., ('Effect Name')), as well as double quotes.

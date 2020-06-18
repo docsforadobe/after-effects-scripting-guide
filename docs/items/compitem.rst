@@ -63,6 +63,26 @@ An array containing three floating-point values, ``[R, G, B]``, in the range ``[
 
 ----
 
+.. _CompItem.displayStartFrame:
+
+CompItem.displayStartFrame
+*********************************************
+
+``app.project.item(index).displayStartFrame``
+
+**Description**
+
+The frame value of the beginning of the composition. This value is calculated using :ref:`CompItem.displayStartTime` and :ref:`CompItem.frameDuration`.
+
+.. note::
+   This functionality was added in After Effects 17.1.
+
+**Type**
+
+Integer; read/write.
+
+----
+
 .. _CompItem.displayStartTime:
 
 CompItem.displayStartTime
@@ -74,10 +94,12 @@ CompItem.displayStartTime
 
 The time set as the beginning of the composition, in seconds. This is the equivalent of the Start Timecode or Start Frame setting in the Composition Settings dialog box.
 
+.. note::
+   As of After Effects 17.1, the minimum value is ``-10800.0``. Before 17.1, the minimum value was 0.0
+
 **Type**
 
-Floating-point value in the range ``[0.0...86339.0]``
-(1 second less than 25 hours); read/write.
+Floating-point value in the range ``[-10800.0...86339.0]`` (-3:00:00:00 to 23:59:00:00); read/write.
 
 ----
 
