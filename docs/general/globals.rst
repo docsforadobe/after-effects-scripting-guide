@@ -110,8 +110,8 @@ Floating-point, pseudo-random number in the range [0, 1].
         // use new generateRandomNumber() instead
 
         x = 400*(generateRandomNumber()) – 200;
-        currentPos = myComp.layer(i).property(“Position”).value;
-        myComp.layer(i).property(“Position”).setValue([currentPos[0]+x,currentPos[1]]);
+        currentPos = myComp.layer(i).property("Position").value;
+        myComp.layer(i).property("Position").setValue([currentPos[0]+x,currentPos[1]]);
     }
 
 ----

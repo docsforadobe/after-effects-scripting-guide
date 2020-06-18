@@ -1200,7 +1200,7 @@ Sets the ``in`` and ``out`` interpolation types for the specified keyframe.
               -  ``KeyframeInterpolationType.BEZIER``
               -  ``KeyframeInterpolationType.HOLD``
 ``outType``   (Optional) The outgoing interpolation type. If not supplied, the
-              ‘out' type is set to the ``inType`` value. A
+              'out' type is set to the ``inType`` value. A
               ``KeyframeInterpolationType`` enumerated value; one of:
 
               -  ``KeyframeInterpolationType.LINEAR``
@@ -1241,8 +1241,8 @@ Sets parameters for a Dropdown Menu Control's Menu Property. This method will ov
               - Only strings are allowed.
               - Empty item strings are not allowed.
               - Duplicate item strings are not allowed.
-              - The character “|” is not allowed in the item strings.
-              - The string “(-“ - can be specified as of the item strings. These appear as separator lines in the dropdown menu. The separator lines will claim an index for each of themselves.
+              - The character "|" is not allowed in the item strings.
+              - The string "(-" - can be specified as of the item strings. These appear as separator lines in the dropdown menu. The separator lines will claim an index for each of themselves.
 ============= ===================================================
 
 .. note::

@@ -128,7 +128,23 @@ The baseline (x,y) locations for a text layer. Line wraps in a paragraph text bo
 
 **Type**
 
-Array of floating-point values in the form of: ``line0.start_x, line0.start_y, line0.end_x, line0.end_y, line1.start_x, line1.start_y, line1.end_x, line1.end_y … lineN-1.start_x, lineN-1.start_y, lineN-1.end_x, lineN-1.end_y``
+Array of floating-point values in the form of::
+
+  [
+      line0.start_x,
+      line0.start_y,
+      line0.end_x,
+      line0.end_y,
+      line1.start_x,
+      line1.start_y,
+      line1.end_x,
+      line1.end_y,
+      ...
+      lineN-1.start_x,
+      lineN-1.start_y,
+      lineN-1.end_x,
+      lineN-1.end_y
+  ]
 
 ----
 
@@ -398,7 +414,7 @@ TextDocument.fontStyle
 
 **Description**
 
-String with style information, e.g., “bold”, “italic”
+String with style information, e.g., "bold", "italic"
 
 .. warning::
   This value only reflects the first character in the text layer at the current time.
@@ -475,7 +491,7 @@ TextDocument.leading
 
 **Description**
 
-The text layer’s spacing between lines.
+The text layer's spacing between lines.
 
 .. warning::
    If the text layer has different leading settings for each line, this attribute returns the setting for the first line.
