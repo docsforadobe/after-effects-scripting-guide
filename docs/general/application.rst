@@ -345,6 +345,23 @@ A function name string, or null if no function is assigned; read/write.
 
 ----
 
+.. _app.preferences:
+
+app.preferences
+*********************************************
+
+``app.preferences``
+
+**Description**
+
+The currently loaded AE app preferences. See :ref:`Preferences`.
+
+**Type**
+
+Preferences object; read-only.
+
+----
+
 .. _app.project:
 
 app.project

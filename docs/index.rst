@@ -79,6 +79,7 @@ Welcome to the After Effects Scripting Guide!
     other/keyframeease
     other/markervalue
     other/settings
+    other/preferences
     other/shape
     other/textdocument
     other/viewer
