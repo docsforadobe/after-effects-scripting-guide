@@ -10,6 +10,8 @@ Layer object
 
 The Layer object provides access to layers within compositions. It can be accessed from an item's layer collection either by index number or by a name string.
 
+    Layer is a subclass of :ref:`PropertyGroup <PropertyGroup>`, which is a subclass of :ref:`PropertyBase <PropertyBase>`. All methods and attributes of PropertyGroup, in addition to those listed below, are available when working with Layer, with the exception that ``propertyIndex`` attribute is set to ``undefined``.
+
     Layer is the base class for :ref:`CameraLayer`, :ref:`LightLayer`, and :ref:`AVLayer`, so Layer attributes and methods are available when working with all layer types. Layers contain AE properties, in addition to their JavaScript attributes and methods. For examples of how to access properties in layers, see :ref:`PropertyBase`.
 
 **Example**

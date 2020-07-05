@@ -12,7 +12,7 @@ The PropertyGroup object represents a group of properties. It can contain Proper
 
     PropertyGroup is a subclass of :ref:`PropertyBase <PropertyBase>`. All methods and attributes of PropertyBase, in addition to those listed below, are available when working with PropertyGroup.
 
-    PropertyGroup is a base class for :ref:`MaskPropertyGroup <MaskPropertyGroup>`. PropertyGroup attributes and methods are available when working with mask groups.
+    PropertyGroup is a base class for :ref:`Layer <Layer>` and :ref:`MaskPropertyGroup <MaskPropertyGroup>`. PropertyGroup attributes and methods are available when working with layer or mask groups.
 
 ----
 
