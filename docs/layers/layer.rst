@@ -30,25 +30,6 @@ If the first item in the project is a :ref:`CompItem <CompItem>`, this example d
 Attributes
 ==========
 
-.. _Layer.active:
-
-Layer.active
-*********************************************
-
-``app.project.item(index).layer(index).active``
-
-**Description**
-
-When true, the layer's video is active at the current time. For this to be true, the layer must be enabled, no other layer may be soloing unless this layer is soloed too, and the time must be between the ``inPoint``
-and
-``outPoint`` values of this layer. This value is never true in an audio layer; there is a separate ``audioActive`` attribute in the AVLayer object.
-
-**Type**
-
-Boolean; read-only.
-
-----
-
 .. _Layer.comment:
 
 Layer.comment
@@ -80,23 +61,6 @@ The composition that contains this layer.
 **Type**
 
 CompItem object; read-only.
-
-----
-
-.. _Layer.enabled:
-
-Layer.enabled
-*********************************************
-
-``app.project.item(index).layer(index).enabled``
-
-**Description**
-
-When true, the layer is enabled; otherwise false. This corresponds to the video switch state of the layer in the Timeline panel.
-
-**Type**
-
-Boolean; read/write.
 
 ----
 
@@ -202,23 +166,6 @@ When true, the layer is locked; otherwise false. This corresponds to the lock to
 **Type**
 
 Boolean; read/write.
-
-----
-
-.. _Layer.name:
-
-Layer.name
-*********************************************
-
-``app.project.item(index).layer(index).name``
-
-**Description**
-
-The name of the layer. By default, this is the same as the Source name (which cannot be changed in the Layer panel), but you can set it to be different.
-
-**Type**
-
-String; read/write.
 
 ----
 

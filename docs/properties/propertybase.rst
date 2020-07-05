@@ -53,11 +53,14 @@ attributes
 PropertyBase.active
 *********************************************
 
-``app.project.item(index).layer(index).propertySpec.active``
+|  ``app.project.item(index).layer(index).active``
+|  ``app.project.item(index).layer(index).propertySpec.active``
 
 **Description**
 
-When true, this property is active. For a layer, this corresponds to the setting of the eyeball icon and if the current time is between the layer's in and out points. For an effect and all properties, it is the same as the e n abl e d attribute, except that it's read-only.
+For a layer, this corresponds to the setting of the eyeball icon. When true, the layer's video is active at the current time. For this to be true, the layer must be enabled, no other layer may be soloing unless this layer is soloed too, and the time must be between the ``inPoint`` and ``outPoint`` values of this layer. This value is never true in an audio layer; there is a separate ``audioActive`` attribute in the AVLayer object :ref:`AVLayer.audioActive`.
+
+For an effect and all properties, it is the same as the enabled attribute, except that it's read-only.
 
 **Type**
 
@@ -112,11 +115,14 @@ Boolean; read-only.
 PropertyBase.enabled
 *********************************************
 
-``app.project.item(index).layer(index).propertySpec.enabled``
+|  ``app.project.item(index).layer(index).enabled``
+|  ``app.project.item(index).layer(index).propertySpec.enabled``
 
 **Description**
 
-When true, this property is enabled. It corresponds to the setting of the eyeball icon, if there is one; otherwise, the default is true.
+For layer, this corresponds to the video switch state of the layer in the Timeline panel. For an effect and all properties, it corresponds to the setting of the eyeball icon, if there is one.
+
+When true, the layer or property is enabled; otherwise false.
 
 **Type**
 
@@ -197,11 +203,14 @@ String; read-only.
 PropertyBase.name
 *********************************************
 
-``app.project.item(index).layer(index).propertySpec.name``
+|  ``app.project.item(index).layer(index).name``
+|  ``app.project.item(index).layer(index).propertySpec.name``
 
 **Description**
 
-The display name of the property. (Compare :ref:`PropertyBase.matchName`.) It is an error to set the name value if the property is not a child of an indexed group (that is, a property group that has the type ``PropertyType.INDEXED_GROUP``; see :ref:`PropertyBase.propertyType`).
+For a layer, the name of the layer. By default, this is the same as the Source name, unless :ref:`Layer.isNameSet` returns false.
+
+For an effect and all properties - the display name of the property. (Compare :ref:`PropertyBase.matchName`.) It is an error to set the name value if the property is not a child of an indexed group (that is, a property group that has the type ``PropertyType.INDEXED_GROUP``; see :ref:`PropertyBase.propertyType`).
 
 **Type**
 
