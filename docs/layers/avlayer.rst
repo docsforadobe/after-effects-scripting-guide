@@ -488,6 +488,29 @@ A ``LayerQuality`` enumerated value; read/write. One of:
 
 ----
 
+.. _AVLayer.samplingQuality:
+
+AVLayer.samplingQuality
+*********************************************
+
+``app.project.item(index).layer(index).samplingQuality``
+
+.. note::
+   This functionality was added in After Effects 12.0 (CC)
+
+**Description**
+
+Set/get layer sampling method (bicubic or bilinear)
+
+**Type**
+
+A ``LayerSamplingQuality`` enumerated value; read/write. One of:
+
+-  ``LayerSamplingQuality.BICUBIC``
+-  ``LayerSamplingQuality.BILINEAR``
+
+----
+
 .. _AVLayer.source:
 
 AVLayer.source

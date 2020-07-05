@@ -246,6 +246,6 @@ What's new and changed for scripting?
 	- Added: Application effects object's version attribute, see :ref:`app.effects`
 - Ability to get and set preview mode
 	- Added: :ref:`Viewer.fastPreview`
-- Access to layer sampling method (see :ref:`samplingQuality <Layer.samplingQuality>`)
+- Access to layer sampling method (see :ref:`samplingQuality <AVLayer.samplingQuality>`)
 - Changed preference and settings methods (see :ref:`Settings`)
 - ScriptUI is now based on the same controls as the main application.
