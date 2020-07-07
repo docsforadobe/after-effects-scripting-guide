@@ -81,6 +81,26 @@ String; read-only.
 
 ----
 
+.. _Item.guides:
+
+Item.guides
+*********************************************
+
+``app.project.item(index).guides``
+
+.. note::
+   This functionality was added in After Effects 16.1 (CC 2019)
+
+**Description**
+
+An array of ``guide`` objects, containing ``orientationType``, ``positionType``, and ``position`` attributes.
+
+**Type**
+
+Array; read-only.
+
+----
+
 .. _Item.id:
 
 Item.id
