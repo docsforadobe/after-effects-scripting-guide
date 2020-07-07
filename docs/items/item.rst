@@ -64,6 +64,23 @@ String; read/write.
 
 ----
 
+.. _Item.dynamicLinkGUID:
+
+Item.dynamicLinkGUID
+*********************************************
+
+``app.project.item(index).dynamicLinkGUID``
+
+**Description**
+
+A unique and persistent identification number used for dynamic link, in form of ``00000000-0000-0000-0000-000000000000``.
+
+**Type**
+
+String; read-only.
+
+----
+
 .. _Item.id:
 
 Item.id
