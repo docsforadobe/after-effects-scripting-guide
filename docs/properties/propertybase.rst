@@ -45,7 +45,7 @@ A less straightforward case is when a property is removed from a property group.
 ----
 
 ==========
-attributes
+Attributes
 ==========
 
 .. _PropertyBase.active:

@@ -14,6 +14,10 @@ The FootageItem object represents a footage item imported into a project, which 
 
 ----
 
+==========
+Attributes
+==========
+
 .. _FootageItem.file:
 
 FootageItem.file
@@ -53,6 +57,10 @@ If this is a FileSource object, and the :ref:`footageMissing <AVItem.footageMiss
 :ref:`FootageSource`; read-only.
 
 ----
+
+=======
+Methods
+=======
 
 .. _FootageItem.openInViewer:
 
