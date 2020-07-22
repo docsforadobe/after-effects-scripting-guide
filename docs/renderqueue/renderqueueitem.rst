@@ -166,7 +166,7 @@ The number of frames to skip when rendering this item. Use this to do rendering 
 
 **Type**
 
-Integer in the range ``[0..99]``. Read/write.
+Integer in the range ``[0..99]``; read/write.
 
 ----
 

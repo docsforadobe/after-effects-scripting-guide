@@ -31,7 +31,7 @@ The ExtendScript File object for the footage's source file. If the FootageItem's
 
 **Type**
 
-File object; read only.
+File object; read-only.
 
 ----
 

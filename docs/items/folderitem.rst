@@ -44,7 +44,7 @@ An ItemCollection object containing Item object that represents the top-level co
 
 **Type**
 
-ItemCollection object; read only.
+ItemCollection object; read-only.
 
 ----
 
@@ -61,7 +61,7 @@ The number of items contained in the items collection (``folderItem.items.length
 
 **Type**
 
-Integer; read only.
+Integer; read-only.
 
 ----
 

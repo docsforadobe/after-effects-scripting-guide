@@ -54,7 +54,7 @@ Use this in conjunction with ``app.project.gpuAccelType`` to set the value for P
 
 **Type**
 
-Array of ``GpuAccelType`` enums, or null if no viewers are open; Read-only. One of:
+Array of ``GpuAccelType`` enums, or null if no viewers are open; read-only. One of:
 
 - ``CUDA``
 - ``Metal``
