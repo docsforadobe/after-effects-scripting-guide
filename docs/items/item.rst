@@ -15,7 +15,7 @@ The Item object represents an item that can appear in the Project panel. The fir
 
 **Example**
 
-This example gets the second item from the project and checks that it is a folder. It then removes from thefolder any top-level item that is not currently selected. It also checks to make sure that, for each item in thefolder, the parent is properly set to the correct folder.
+This example gets the second item from the project and checks that it is a folder. It then removes from the folder any top-level item that is not currently selected. It also checks to make sure that, for each item in the folder, the parent is properly set to the correct folder.
 
 ::
 
@@ -73,7 +73,7 @@ Item.dynamicLinkGUID
 
 **Description**
 
-A unique and persistent identification number used for dynamic link, in form of ``00000000-0000-0000-0000-000000000000``.
+A unique and persistent identification number used for the dynamic link, in form of ``00000000-0000-0000-0000-000000000000``.
 
 **Type**
 
@@ -272,7 +272,7 @@ Item.remove()
 
 **Description**
 
-Deletes this item from the project and from the Project panel. If the item is a FolderItem, all the items contained in the folder are also removed from the project. No files or folders are removed from disk.
+Deletes this item from the project and the Project panel. If the item is a FolderItem, all the items contained in the folder are also removed from the project. No files or folders are removed from the disk.
 
 **Parameters**
 

@@ -122,7 +122,7 @@ AVItem.hasVideo
 
 **Description**
 
-When true, the AVItem has an video component.
+When true, the AVItem has a video component.
 
 -  In a CompItem, the value is linked to the composition.
 -  In a FootageItem, the value is linked to the ``mainSource`` object.
@@ -307,7 +307,7 @@ AVItem.setProxy()
 
 **Description**
 
-Sets a file as the proxy of this AVItem. Loads the specified file into a new FileSource object, sets this as thevalue of the ``proxySource`` attribute, and sets ``useProxy`` to true. It does not preserve the interpretation parameters, instead using the user preferences. If the file has an unlabeled alpha channel, and the user preference says to ask the user what to do, the method estimates the alpha interpretation, rather than asking the user. This differs from setting a FootageItem's ``mainSource``, but both actions are performed as in the user interface.
+Sets a file as the proxy of this AVItem. Loads the specified file into a new FileSource object, sets this as the value of the ``proxySource`` attribute, and sets ``useProxy`` to true. It does not preserve the interpretation parameters, instead using the user preferences. If the file has an unlabeled alpha channel, and the user preference says to ask the user what to do, the method estimates the alpha interpretation, rather than asking the user. This differs from setting a FootageItem's ``mainSource``, but both actions are performed as in the user interface.
 
 **Parameters**
 

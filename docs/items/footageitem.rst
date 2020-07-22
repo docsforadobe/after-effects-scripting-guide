@@ -74,7 +74,7 @@ FootageItem.openInViewer()
 Opens the footage in a Footage panel, and moves the Footage panel to front and gives it focus.
 
 .. note::
-   Missing and placeholder footage can be opened using this method, but cannot manually (via doubleclicking it).
+   Missing and placeholder footage can be opened using this method, but cannot manually (via double-clicking it).
 
 **Parameters**
 

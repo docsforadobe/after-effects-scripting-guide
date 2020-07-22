@@ -28,7 +28,7 @@ FootageSource.alphaMode
 
 **Description**
 
-The.alphaMode of footageSource defines how the alpha information in the footage is to be interpreted. If ``hasAlpha`` is false, this attribute has no relevant meaning.
+Defines how the alpha information in the footage is interpreted. If ``hasAlpha`` is false, this attribute has no relevant meaning.
 
 **Type**
 
@@ -162,7 +162,7 @@ FootageSource.isStill
 
 **Description**
 
-When true the footage is still; when false, it has a time-based component. Examples of still footage are JPEG files, solids, and placeholders with duration of 0. Examples of non-still footage are movie files, sound files, sequences, and placeholders of non-zero duration.
+When true the footage is still; when false, it has a time-based component. Examples of still footage are JPEG files, solids, and placeholders with a duration of 0. Examples of non-still footage are movie files, sound files, sequences, and placeholders of non-zero duration.
 
 **Type**
 

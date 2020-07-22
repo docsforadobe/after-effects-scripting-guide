@@ -8,7 +8,7 @@ Introduction to scripting in After Effects
 
 A script is a series of commands that tells an application to perform a series of operations. You can use scripts in most Adobe applications to automate repetitive tasks, perform complex calculations, and even use some functionality not directly exposed through the graphical user interface. For example, you can direct After Effects to reorder the layers in a composition, find and replace source text in text layers, or send an e-mail message when rendering is complete.
 
-Although both the After Effects expressions language and the After Effects ExtendScript scripting language are based on JavaScript, the expressions features and scripting features of After Effects are separate and distinct. Expressions cannot access information from scripts (such as variables and functions). Whereas a script tells an application to do something, an expression says that a property is something. However, because the After Effects expression language and ExtendScript are both based on JavaScript, familiarity with either one is very helpful in understanding the other.
+Although both the After Effects expressions language and the After Effects ExtendScript scripting language is based on JavaScript, the expressions features and scripting features of After Effects are separate and distinct. Expressions cannot access information from scripts (such as variables and functions). Whereas a script tells an application to do something, an expression says that a property is something. However, because the After Effects expression language and ExtendScript are both based on JavaScript, familiarity with either one is very helpful in understanding the other.
 
 The heart of a scriptable application is the object model. When you use Adobe After Effects, you create projects, compositions, and render queue items along with all of the elements that they contain: footage, images, solids, layers, masks, effects, and properties. Each of these items, in scripting terms, is an object. This guide describes the ExtendScript objects that have been defined for After Effects projects.
 
@@ -34,7 +34,7 @@ ExtendScript defines a global debugging object, the dollar (``$``) object, and a
 
 **External Communication:** ExtendScript provides a Socket object that allows you to communicate with remote systems from your After Effects scripts.
 
-**Interapplication Communication:** ExtendScript provide s a common scripting environment for all Adobe applications, and allows interapplication communication through scripts.
+**Interapplication Communication:** ExtendScript provide s a common scripting environment for all Adobe applications, and allows inter-application communication through scripts.
 
 The ExtendScript Toolkit (ESTK)
 ===============================
@@ -108,7 +108,7 @@ Alternatively, you can specify the location of the JSX file to be executed. For 
 How to include After Effects scripting in an AppleScript (Mac OS)
 *****************************************************************************
 
-Following are three examples of AppleScript scripts that will send an existing JSX file containing an After Effects script to the application without using the After Effects user interface to execute the script.
+The following are three examples of AppleScript scripts that will send an existing JSX file containing an After Effects script to the application without using the After Effects user interface to execute the script.
 
 In the first example, you copy your After Effects script directly into the Script Editor and then run it. The script text appears within quotation marks following the DoScript command, so internal quotes in the script must be escaped using the backslash escape character, as follows
 
@@ -153,7 +153,7 @@ Running scripts automatically during application startup or shutdown
 
 Within the Scripts folder are two folders called Startup and Shutdown. After Effects runs scripts in these folders automatically, in alphabetical order, on starting and quitting, respectively.
 
-In the Startup folder you can place scripts that you wish to execute at startup of the application. They are executed after the application is initialized and all plug-ins are loaded.
+In the Startup folder, you can place scripts that you wish to execute at startup of the application. They are executed after the application is initialized and all plug-ins are loaded.
 
 Scripting shares a global environment, so any script executed at startup can define variables and functions that are available to all scripts. In all cases, variables and functions, once defined by running a script that contains them, persist in subsequent scripts during a given After Effects session. Once the application is quit, all such globally defined variables and functions are cleared. Be sure to give variables in scripts unique names, so that a script does not inadvertently reassign global variables intended to persist throughout a session.
 

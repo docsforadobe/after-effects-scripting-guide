@@ -285,7 +285,7 @@ AVLayer.environmentLayer
 
 **Description**
 
-True if this is an environment layer in a Ray-traced 3D composition. Setting this attribute to true automaticallymakes the layer 3D (``threeDLayer`` becomes true).
+True if this is an environment layer in a Ray-traced 3D composition. Setting this attribute to true automatically makes the layer 3D (``threeDLayer`` becomes true).
 
 **Type**
 

@@ -9,7 +9,7 @@ CompItem object
 
 **Description**
 
-The CompItem object represents a composition, and allows you to manipulate and get information about it. Access the objects by position index number in a project's ite m collection.
+The CompItem object represents a composition, and allows you to manipulate and get information about it. Access the objects by position index number in a project's item collection.
 
     CompItem is a subclass of :ref:`AVItem`, which is a subclass of :ref:`Item`. All methods and attributes of AVItem and Item, in addition to those listed below, are available when working with CompItem.
 
@@ -227,7 +227,7 @@ PropertyGroup object or null; read-only.
 
 The following sample code creates a project and composition, then creates two composition markers with different properties::
 
-    // comp.markerProperty allows you add markers to a comp.
+    // comp.markerProperty allows you to add markers to a comp.
     // It has the same functionality as layer.property("Marker")
     {
         var currentProj = app.newProject();

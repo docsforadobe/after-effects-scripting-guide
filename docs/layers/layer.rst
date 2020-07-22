@@ -335,7 +335,7 @@ Layer.activeAtTime()
 
 **Description**
 
-Returns true if this layer will be active at the specified time. To return true, the layer must be enabled, no other layer may be soloing unless this layer is soloed too, and the time must be between the i n Poi nt and out Poi nt values of this layer.
+Returns true if this layer will be active at the specified time. To return true, the layer must be enabled, no other layer may be soloing unless this layer is soloed too, and the time must be between the inPoint and outPoint values of this layer.
 
 **Parameters**
 
@@ -391,7 +391,7 @@ Copies the layer into the specified composition. The original layer remains unch
    As of After Effects 13.7 (13.6, has not been tested), if the copied layer has an effect on it and the user undoes the action, After Effects will Crash.
 
 .. tip::
-   The scripting guide says this method copies the layer to the top of the comp. It actually copies it to above the first selected layer, or to to the top, if nothing is selected. To retrieve the copy you have to check ``CompItem.selectedLayers`` for the layer with the topmost index, and use ``comp.layer( topmost_index_of_selected_layers - 1 )`` to retrieve the layer.
+   The scripting guide says this method copies the layer to the top of the comp. It actually copies it to above the first selected layer, or to the top, if nothing is selected. To retrieve the copy you have to check ``CompItem.selectedLayers`` for the layer with the topmost index, and use ``comp.layer( topmost_index_of_selected_layers - 1 )`` to retrieve the layer.
 
 **Parameters**
 

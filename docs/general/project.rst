@@ -574,7 +574,7 @@ Number; read/write.
 
 **Examples**
 
-* To set the working working gamma to 2.4 (Rec. 709): ``app.project.workingGamma = 2.4;``
+* To set the working gamma to 2.4 (Rec. 709): ``app.project.workingGamma = 2.4;``
 * To get the current working gamma: ``var currentGamma = app.project.workingGamma;``
 
 ----
@@ -621,7 +621,7 @@ String; read/write.
 
 **Example**
 
-The following example code accesses the XMP metadata of the current project, and modifies the Label projectmetadata field.
+The following example code accesses the XMP metadata of the current project, and modifies the Label project metadata field.
 
 ::
 
@@ -1241,11 +1241,11 @@ Project.isTeamProjectEnabled()
 
 **Description**
 
-Checks whether or not team projects is enabled for After Effects. (This will almost always return true.)
+Checks whether or not team project is enabled for After Effects. (This will almost always return true.)
 
 **Returns**
 
-Boolean. ``True`` if team projects is currently enabled, ``false`` otherwise.
+Boolean. ``True`` if team project is currently enabled, ``false`` otherwise.
 
 ----
 

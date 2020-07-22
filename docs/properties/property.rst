@@ -8,7 +8,7 @@ Property object
 
 **Description**
 
-The Property object contains value, keyframe, and expression information about a particular AE property of a layer. An AE property is an value, often animatable, of an effect, mask, or transform within an individual layer. For examples of how to access properties, see :ref:`PropertyBase` and :ref:`PropertyGroup.property`.
+The Property object contains value, keyframe, and expression information about a particular AE property of a layer. An AE property is a value, often animatable, of an effect, mask, or transform within an individual layer. For examples of how to access properties, see :ref:`PropertyBase` and :ref:`PropertyGroup.property`.
 
     Property is a subclass of :ref:`PropertyBase <propertybase>`. All methods and attributes of PropertyBase, in addition to those listed below, are available when working with Property.
 
@@ -338,7 +338,7 @@ Property.isTimeVarying
 
 **Description**
 
-When true, the named property is time varying—that is, it has keyframes or an enabled expression. When this attribute is true, the attribute ``canVaryOverTime``
+When true, the named property is time varying — that is, it has keyframes or an enabled expression. When this attribute is true, the attribute ``canVaryOverTime``
 must also be true.
 
 **Type**
@@ -424,7 +424,7 @@ Property.propertyValueType
 
 **Description**
 
-The type of value stored in the named property. The ``PropertyValueType`` enumeration has one value for each type of data that can be stored in or retrieved from a property. Each type of data is stored and retrieved in a different kind of structure. All property objects store data according to one of these categories. For example, a 3D spatial property (such as a layer's position) is stored as an array of three floating point values. When setting a value for position, pass in such an array, as follows: ``mylayer.property("position").setValue([10, 20, 0]);``
+The type of value stored in the named property. The ``PropertyValueType`` enumeration has one value for each type of data that can be stored in or retrieved from a property. Each type of data is stored and retrieved in a different kind of structure. All property objects store data according to one of these categories. For example, a 3D spatial property (such as a layer's position) is stored as an array of three floating-point values. When setting a value for position, pass in such an array, as follows: ``mylayer.property("position").setValue([10, 20, 0]);``
 
 In contrast, a shape property (such as a layer's mask shape) is stored as a Shape object. When setting a value for a shape, pass a Shape object, as follows::
 
@@ -1246,7 +1246,7 @@ Sets parameters for a Dropdown Menu Control's Menu Property. This method will ov
 ============= ===================================================
 
 .. note::
-   Item strings should be in ASCII or MultiByte encodable in the current code-page. In other words, the item strings should be provided in the script of the running system. For example : Specifying the item strings in Japanese while running the script on an English system will create a dropdown effect with illegible characters in the item strings.
+   Item strings should be in ASCII or MultiByte encodable in the current code-page. In other words, the item strings should be provided in the script of the running system. For example: Specifying the item strings in Japanese while running the script on an English system will create a dropdown effect with illegible characters in the item strings.
 
 **Example** ::
 
@@ -1609,7 +1609,7 @@ Property.setValuesAtTimes()
 
 **Description**
 
-Sets values for a set of keyframes at specified of times. Creates a new keyframe for the named property, if one does not currently exist for a specified time, and sets its value. Times and values are expressed as arrays; the arrays must be of the same length.
+Sets values for a set of keyframes at specified times. Creates a new keyframe for the named property, if one does not currently exist for a specified time, and sets its value. Times and values are expressed as arrays; the arrays must be of the same length.
 
 **Parameters**
 
