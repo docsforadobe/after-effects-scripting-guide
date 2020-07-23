@@ -202,7 +202,7 @@ The native frame rate of the footage.
 
 **Type**
 
-Floating-point; read/write.
+Floating-point; read-only.
 
 ----
 
