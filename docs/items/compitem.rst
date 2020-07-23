@@ -63,6 +63,31 @@ An array containing three floating-point values, ``[R, G, B]``, in the range ``[
 
 ----
 
+.. _CompItem.counters:
+
+CompItem.counters
+*********************************************
+
+``app.project.item(index).counters``
+
+.. note::
+  This functionality was added in After Effects 13.2 (CC2014).
+
+.. warning::
+  This method/property is officially undocumented and was found via research. The information here may be inaccurate, and this whole method/property may disappear or stop working some point. Please contribute if you have more information on it!
+
+**Description**
+
+This attribute works app-wide: if changed on one CompItem, it will change it for every CompItem in the project. The value stays until restarting AE. Once restarted, it will revert to false.
+
+This parameter doesn't do anything.
+
+**Type**
+
+Boolean; read/write.
+
+----
+
 .. _CompItem.displayStartFrame:
 
 CompItem.displayStartFrame
