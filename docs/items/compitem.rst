@@ -97,7 +97,9 @@ CompItem.displayStartFrame
 
 **Description**
 
-The frame value of the beginning of the composition. This value is calculated using :ref:`CompItem.displayStartTime` and :ref:`CompItem.frameDuration`.
+The frame value of the beginning of the composition.
+
+This value is an alternative to calculating the start frame using :ref:`CompItem.displayStartTime` and :ref:`CompItem.frameDuration` to compensate for floating-point problems.
 
 .. note::
    This functionality was added in After Effects 17.1.
