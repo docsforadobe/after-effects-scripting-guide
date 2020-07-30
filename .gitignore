@@ -1,3 +1,4 @@
+.vscode
 *.sublime-project
 *.sublime-workspace
 build/

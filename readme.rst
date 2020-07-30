@@ -2,13 +2,15 @@
 
 Repo hosting the AE Scripting Guide RST docs, linked into a http://readthedocs.io system hosted at http://docs.aenhancers.com
 
-This came from the Adobe After Effects CS6 Scripting Guide, and has been added to and adjusted to reflect the current state of scripting within AE, up to AE14.2 (CC2017.2).
+This came from the Adobe After Effects CS6 Scripting Guide, and has been added to and adjusted to reflect the current state of scripting within AE.
 
 ----
 
 **Contribution**
 
 Contributors are welcome and encouraged to suggest fixes, adjustments, notes/warnings, and anything else that may help the project.
+
+This project uses reStructuredText. For a reference on how to write reStructuredText check out this [quickref](http://docutils.sourceforge.net/docs/user/rst/quickref.html).
 
 ----
 
