@@ -8,7 +8,7 @@ As you look through this reference section, which is organized alphabetically by
 
 Hierarchy diagram of the main After Effects scripting objects
 
-Note that the File, Folder, and Socket objects are defined by ExtendScript, and are documented in the JavaScript Tools Guide. ExtendScript also defines the ScriptUI module, a set of window and user-interface control objects, which are available to After Effects scripts. These are also documented in the JavaScript Tools Guide. The hierarchy of objects in scripting corresponds to the hierarchy in the user interface.
+Note that the File, Folder, and Socket objects are defined by ExtendScript, and are documented in the `JavaScript Tools Guide <http://estk.aenhancers.com/>`_. ExtendScript also defines the ScriptUI module, a set of window and user-interface control objects, which are available to After Effects scripts. These are also documented in the `JavaScript Tools Guide <http://estk.aenhancers.com/>`_. The hierarchy of objects in scripting corresponds to the hierarchy in the user interface.
 
 .. image:: _static/application.png
    :alt: After Effects User Interface

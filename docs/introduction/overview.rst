@@ -45,7 +45,7 @@ To start the ESTK, choose File > Scripts > Open Script Editor.
 
 If you choose to use another text editor to create, edit, and save scripts, be sure to choose an application that does not automatically add header information when saving files and that saves with Unicode (UTF-8) encoding. In many text editors, you can set preferences for saving with UTF-8 encoding. Some applications (such as Microsoft Word) by default add header information to files that can cause "line 0" errors in scripts, causing them to fail.
 
-For detailed information on the ExtendScript Toolkit, see the JavaScript Tools Guide.
+For detailed information on the ExtendScript Toolkit, see the `JavaScript Tools Guide <http://estk.aenhancers.com/>`_.
 
 The .jsx and .jsxbin file-name extensions
 =========================================

@@ -578,7 +578,7 @@ Number; read/write.
 * To get the current working gamma: ``var currentGamma = app.project.workingGamma;``
 
 ----
- 
+
 .. _Project.workingSpace:
 
 Project.workingSpace
@@ -613,7 +613,7 @@ Project.xmpPacket
 
 **Description**
 
-The project's XMP metadata, stored as RDF (XML-based). For more information on XMP, see the JavaScript Tools Guide.
+The project's XMP metadata, stored as RDF (XML-based). For more information on XMP, see the `JavaScript Tools Guide <http://estk.aenhancers.com/>`_.
 
 **Type**
 
