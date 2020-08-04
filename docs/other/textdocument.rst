@@ -15,7 +15,7 @@ The TextDocument object stores a value for a TextLayer's Source Text property. C
 
 This sets a value of some source text and displays an alert showing the new value::
 
-    var myTextDocument = newTextDocument("HappyCake");
+    var myTextDocument = new TextDocument("HappyCake");
     myTextLayer.property("Source Text").setValue(myTextDocument);
     alert(myTextLayer.property("Source Text").value);
 
