@@ -680,8 +680,8 @@ An Object with the transformation properties set.
     newLayer.threeDLayer = true;
     newLayer.blendingMode = BlendingMode.ALPHA_ADD;
     var transform = newLayer.calculateTransformFromPoints(tl, tr, bl);
-    for(var sel in transform) {
-        newLayer.transform[sel].setValue(transform[sel]);
+    for (var sel in transform) {
+      newLayer.transform[sel].setValue(transform[sel]);
     }
 
 ----

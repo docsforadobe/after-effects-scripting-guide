@@ -8,7 +8,9 @@ PropertyBase object
 
 **Description**
 
-Properties are accessed by name through layers, using various kinds of expression syntax, as controlled by application preferences. For example, the following are all ways of access properties in the Effects group::
+Properties are accessed by name through layers, using various kinds of expression syntax, as controlled by application preferences. For example, the following are all ways of access properties in the Effects group
+
+.. code:: javascript
 
     var effect1 = app.project.item(1).layer(1).effect("AddGrain")("Viewing Mode");
     var effect1again = app.project.item(1).layer(1).effect.addGrain.viewingMode;
@@ -21,20 +23,26 @@ See also :ref:`PropertyGroup.property`.
 
 **Reference invalidation**
 
-When something occurs that changes an object sufficiently for the reference to become invalid, script references to that object can generate errors. In simple cases this is straightforward. For example, if you delete anobject, a reference to the deleted object generates the warning "Object is Invalid"::
+When something occurs that changes an object sufficiently for the reference to become invalid, script references to that object can generate errors. In simple cases this is straightforward. For example, if you delete anobject, a reference to the deleted object generates the warning "Object is Invalid":
+
+.. code:: javascript
 
     var layer1 = app.project.item(1).layer(1);
     layer1.remove();
     alert(layer1.name); // invalid reference to deleted object
 
-Similarly, if you reference an AE property in a deleted object, the warning occurs::
+Similarly, if you reference an AE property in a deleted object, the warning occurs
+
+.. code:: javascript
 
     var layer1 = app.project.item(1).layer(1);
     var layer1position = layer1.transform.position;
     layer1.remove();
     alert(layer1position.value); // invalid reference to property inselected object
 
-A less straightforward case is when a property is removed from a property group. In this case, After Effectsgenerates the "Object is Invalid" error when you subsequently reference that item or other items in the group,because their index positions have changed. For example::
+A less straightforward case is when a property is removed from a property group. In this case, After Effectsgenerates the "Object is Invalid" error when you subsequently reference that item or other items in the group,because their index positions have changed. For example:
+
+.. code:: javascript
 
     var effect1 = app.project.item(1).layer(1).effect(1);
     var effect2 = app.project.item(1).layer(1).effect(2);

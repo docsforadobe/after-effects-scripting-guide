@@ -13,13 +13,17 @@ The TextDocument object stores a value for a TextLayer's Source Text property. C
 
 **Examples**
 
-This sets a value of some source text and displays an alert showing the new value::
+This sets a value of some source text and displays an alert showing the new value
+
+.. code:: javascript
 
     var myTextDocument = new TextDocument("HappyCake");
     myTextLayer.property("Source Text").setValue(myTextDocument);
     alert(myTextLayer.property("Source Text").value);
 
-This sets keyframe values for text that show different words over time::
+This sets keyframe values for text that show different words over time
+
+.. code:: javascript
 
     var textProp = myTextLayer.property("Source Text");
     textProp.setValueAtTime(0, newTextDocument("Happy"));
@@ -27,7 +31,9 @@ This sets keyframe values for text that show different words over time::
     textProp.setValueAtTime(.66, newTextDocument("is"));
     textProp.setValueAtTime(1, newTextDocument("yummy!"));
 
-This sets various character and paragraph settings for some text::
+This sets various character and paragraph settings for some text
+
+.. code:: javascript
 
     var textProp = myTextLayer.property("Source Text");
     var textDocument = textProp.value;
@@ -128,9 +134,11 @@ The baseline (x,y) locations for a text layer. Line wraps in a paragraph text bo
 
 **Type**
 
-Array of floating-point values in the form of::
+Array of floating-point values in the form of
 
-  [
+.. code:: javascript
+
+    [
       line0.start_x,
       line0.start_y,
       line0.end_x,
@@ -144,7 +152,7 @@ Array of floating-point values in the form of::
       lineN-1.start_y,
       lineN-1.end_x,
       lineN-1.end_y
-  ]
+    ]
 
 ----
 
@@ -213,11 +221,11 @@ Array of ([X,Y]) position coordinates; read-only.
 
 **Example**
 
-For a paragraph text layer::
+.. code:: javascript
 
-  // Returns [x,y] position from layer anchor point in layer coordinates.
-  // e.g. approximately [0, -25] with default character panel settings.
-  var boxTextLayerPos =  myTextLayer.sourceText.value.boxTextPos;
+    // For a paragraph text layer returns [x, y] position from layer anchor point in layer coordinates.
+    // e.g. approximately [0, -25] with default character panel settings.
+    var boxTextLayerPos = myTextLayer.sourceText.value.boxTextPos;
 
 ----
 
@@ -261,9 +269,9 @@ Boolean; read-only.
 
 **Example**
 
-For a text layer with fauxBold enabled::
+.. code:: javascript
 
-  var isFauxBold = myTextLayer.sourceText.value.fauxBold; // returns true
+    var isFauxBold = myTextLayer.sourceText.value.fauxBold;
 
 ----
 
@@ -448,9 +456,9 @@ Floating-point value; read-only.
 
 **Example**
 
-For a text layer with horizontalScale set to 50%::
+.. code:: javascript
 
-  var valOfHScale = myTextLayer.sourceText.value.horizontalScale; // returns 0.5
+    var valOfHScale = myTextLayer.sourceText.value.horizontalScale;
 
 ----
 
@@ -503,14 +511,16 @@ Floating-point value; read/write.
 
 **Example**
 
-This creates a text layer and sets the leading to 100::
+.. code:: javascript
 
-  var composition = app.project.activeItem;
-  var myTextLayer = comp.layers.addText("Spring\nSummer\nAutumn\nWinter");
-  var myTextSource = myTextLayer.sourceText;
-  var myTextDocument = myTextSource.value;
-  myTextDocument.leading = 100;
-  myTextSource.setValue(myTextDocument);
+    // This creates a text layer and sets the leading to 100
+
+    var composition = app.project.activeItem;
+    var myTextLayer = comp.layers.addText("Spring\nSummer\nAutumn\nWinter");
+    var myTextSource = myTextLayer.sourceText;
+    var myTextDocument = myTextSource.value;
+    myTextDocument.leading = 100;
+    myTextSource.setValue(myTextDocument);
 
 ----
 
@@ -853,7 +863,8 @@ Array of ([X,Y]) position coordinates; read-only.
 
 **Example**
 
-For a paragraph text layer::
+.. code:: javascript
 
-  // Converts position in layer coordinates to comp coordinates.
-  var boxTextCompPos = myTextLayer.sourcePointToComp(boxTextLayerPos);
+    // For a paragraph text layer.
+    // Converts position in layer coordinates to comp coordinates.
+    var boxTextCompPos = myTextLayer.sourcePointToComp(boxTextLayerPos);

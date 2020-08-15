@@ -12,12 +12,15 @@ The Viewer object represents a Composition, Layer, or Footage panel.
 
 **Example**
 
-This maximizes the active viewer panel, and displays its type if it contains a composition::
+This maximizes the active viewer panel, and displays its type if it contains a composition.
+
+.. code:: javascript
 
     var activeViewer = app.activeViewer;
     activeViewer.maximized = true;
-    if (activeViewer.type == ViewerType.VIEWER_COMPOSITION)
-        alert("Compositionpanelisactive.");
+    if (activeViewer.type === ViewerType.VIEWER_COMPOSITION) {
+        alert("Composition panel is active.");
+    }
 
 ----
 
@@ -71,13 +74,13 @@ A ``FastPreviewType`` enumerated value; read/write. One of:
 
 **Example**
 
-::
+.. code:: javascript
 
-	app.activeViewer.views[0].options.fastPreview == FastPreviewType.FP_ADAPTIVE_RESOLUTION
-	app.activeViewer.views[0].options.fastPreview == FastPreviewType.FP_DRAFT
-	app.activeViewer.views[0].options.fastPreview == FastPreviewType.FP_FAST_DRAFT
-	app.activeViewer.views[0].options.fastPreview == FastPreviewType.FP_OFF
-	app.activeViewer.views[0].options.fastPreview == FastPreviewType.FP_WIREFRAME
+    app.activeViewer.views[0].options.fastPreview === FastPreviewType.FP_ADAPTIVE_RESOLUTION;
+    app.activeViewer.views[0].options.fastPreview === FastPreviewType.FP_DRAFT;
+    app.activeViewer.views[0].options.fastPreview === FastPreviewType.FP_FAST_DRAFT;
+    app.activeViewer.views[0].options.fastPreview === FastPreviewType.FP_OFF;
+    app.activeViewer.views[0].options.fastPreview === FastPreviewType.FP_WIREFRAME;
 
 ----
 
@@ -101,9 +104,9 @@ Boolean; read/write.
 
 **Example**
 
-::
+.. code:: javascript
 
-	app.activeViewer.views[0].options.guidesLocked
+    app.activeViewer.views[0].options.guidesLocked;
 
 ----
 
@@ -127,9 +130,9 @@ Boolean; read/write.
 
 **Example**
 
-::
+.. code:: javascript
 
-	app.activeViewer.views[0].options.guidesSnap
+    app.activeViewer.views[0].options.guidesSnap;
 
 ----
 
@@ -153,9 +156,9 @@ Boolean; read/write.
 
 **Example**
 
-::
+.. code:: javascript
 
-	app.activeViewer.views[0].options.guidesVisibility
+    app.activeViewer.views[0].options.guidesVisibility;
 
 ----
 
@@ -196,9 +199,9 @@ Boolean; read/write.
 
 **Example**
 
-::
+.. code:: javascript
 
-	app.activeViewer.views[0].options.rulers
+    app.activeViewer.views[0].options.rulers;
 
 ----
 

@@ -17,23 +17,20 @@ The Item object represents an item that can appear in the Project panel. The fir
 
 This example gets the second item from the project and checks that it is a folder. It then removes from the folder any top-level item that is not currently selected. It also checks to make sure that, for each item in the folder, the parent is properly set to the correct folder.
 
-::
+.. code:: javascript
 
     var myFolder = app.project.item(2);
-    if (myFolder.typeName != "Folder") {
+    if (!(myFolder instanceof FolderItem)) {
         alert("error: second item is not a folder");
-    }
-    else {
+    } else {
         var numInFolder = myFolder.numItems;
         //Always run loops backwards when deleting things:
-        for(i = numInFolder; i >= 1; i--) {
+        for (var i = numInFolder; i >= 1; i--) {
             var curItem = myFolder.item(i);
-            if(curItem.parentFolder != myFolder) {
+            if (curItem.parentFolder !== myFolder) {
                 alert("error within AE: the parentFolder is not set correctly");
-            }
-            else {
-                if(!curItem.selected && curItem.typeName == "Footage")
-                {
+            } else {
+                if (!curItem.selected) {
                     //found an unselected solid.
                     curItem.remove();
                 }
@@ -174,16 +171,17 @@ FolderItem object; read/write.
 
 This script creates a new FolderItem in the Project panel and moves compositions into it.
 
-::
+.. code:: javascript
 
     //create a new FolderItem in project, with name "comps"
     var compFolder = app.project.items.addFolder("comps");
 
     //move all compositions into new folder by setting
     //compItem's parentFolder to "comps" folder
-    for(var i = 1; i <= app.project.numItems; i++){
-        if(app.project.item(i) instanceof CompItem)
-          app.project.item(i).parentFolder = compFolder;
+    for (var i = 1; i <= app.project.numItems; i++){
+      if (app.project.item(i) instanceof CompItem) {
+        app.project.item(i).parentFolder = compFolder;
+      }
     }
 
 ----
@@ -257,7 +255,7 @@ Integer; the index of the newly-created guide.
 
 Adds a vertical guide at 500 pixels on the X axis to the ``activeItem`` of a project.
 
-::
+.. code:: javascript
 
     app.project.activeItem.addGuide(1, 500);
 
@@ -312,7 +310,7 @@ Nothing.
 
 Removes the first guide in ``activeItem``.
 
-::
+.. code:: javascript
 
     app.project.activeItem.removeGuide(0);
     
@@ -352,6 +350,6 @@ Nothing.
 
 Changes the position of the first guide in ``activeItem`` to 1200 pixels.
 
-::
+.. code:: javascript
 
     app.project.activeItem.setGuide(1200, 0);

@@ -233,7 +233,7 @@ A ``GpuAccelType`` enumerated value; read/write. One of:
 
 **Example**
 
-The following sample code checks to see if there are queued items in the render queue, and if so queues them in AME but does not immediately start rendering::
+.. code:: javascript
 
     // access via scripting to Project Settings -> Video Rendering and Effects -> Use
 
@@ -242,20 +242,27 @@ The following sample code checks to see if there are queued items in the render 
 
     // check the current value and alert the user
 
-    switch(currentGPUSettings) {
-        case GpuAccelType.CUDA:  type_str = "CUDA"; break;
-        case GpuAccelType.METAL:    type_str = "Metal"; break;
-        case GpuAccelType.OPENCL:       type_str = "OpenCL"; break;
-        case GpuAccelType.SOFTWARE:     type_str = "Software"; break;
-        default:    type_str = "UNKNOWN"; break;
-        }
+    switch (currentGPUSettings) {
+        case GpuAccelType.CUDA: 
+            type_str = "CUDA";
+            break;
+        case GpuAccelType.METAL:
+            type_str = "Metal";
+            break;
+        case GpuAccelType.OPENCL:
+            type_str = "OpenCL";
+            break;
+        case GpuAccelType.SOFTWARE:
+            type_str = "Software";
+            break;
+        default:
+            type_str = "UNKNOWN";
+    }
 
     alert("Your current setting is " + type_str);
 
     // set the value to Metal
-
     app.project.gpuAccelType = GpuAccelType.METAL;
-
 
 ----
 
@@ -330,10 +337,10 @@ Integer; read-only.
 
 **Example**
 
-::
+.. code:: javascript
 
-    n = app.project.numItems;
-    alert("There are " + n + "items in this project.")
+    var numItems = app.project.numItems;
+    alert("There are " + numItems + " items in this project.")
 
 ----
 
@@ -496,45 +503,46 @@ A ``ToolType`` enumerated value; read/write. One of:
 
 **Examples**
 
-The following sample code checks the current tool, and if it is not the Unified Camera Tool, sets the current tool to that::
+The following sample code checks the current tool, and if it is not the Unified Camera Tool, sets the current tool to that:
+
+.. code:: javascript
 
     // Check the current tool, then set it to Unified Camera Tool (UCT).
-    {
-        // Assume a composition is selected in the project.
-        var comp = app.project.activeItem;
-        if (comp instanceof CompItem) {
-            // Add a camera to the current comp. (Requirement for UCT.)
-            var cameraLayer = comp.layers.addCamera("Test Camera", [comp.width/2, comp.height/2]);
-            comp.openInViewer();
+    // Assume a composition is selected in the project.
+    var comp = app.project.activeItem;
+    if (comp instanceof CompItem) {
+        // Add a camera to the current comp. (Requirement for UCT)
+        var cameraLayer = comp.layers.addCamera("Test Camera", [comp.width / 2, comp.height / 2]);
+        comp.openInViewer();
 
-            // If the currently selected tool is not one of the camera tools, set it to UCT.
-            if (( app.project.toolType != ToolType.Tool_CameraMaya) &&
-                ( app.project.toolType != ToolType.Tool_CameraOrbit ) &&
-                ( app.project.toolType != ToolType.Tool_CameraTrackXY) &&
-                ( app.project.toolType != ToolType.Tool_CameraTrackZ))
-                    app.project.toolType = ToolType.Tool_CameraMaya;
-        }
+        // If the currently selected tool is not one of the camera tools, set it to UCT.
+        if (( app.project.toolType !== ToolType.Tool_CameraMaya) &&
+            ( app.project.toolType !== ToolType.Tool_CameraOrbit ) &&
+            ( app.project.toolType !== ToolType.Tool_CameraTrackXY) &&
+            ( app.project.toolType !== ToolType.Tool_CameraTrackZ)) {
+                app.project.toolType = ToolType.Tool_CameraMaya;
+            }
     }
 
-The following sample code uses the new app.project.toolType attribute to create a 360-degrees composition (environment layer and camera) from a selected footage item or composition selected in the Project panel. This script a good starting point for building VR compositions from equirectangular footage::
+The following sample code uses the new app.project.toolType attribute to create a 360-degrees composition (environment layer and camera) from a selected footage item or composition selected in the Project panel. This script a good starting point for building VR compositions from equirectangular footage:
+
+.. code:: javascript
 
     // Create a 360 VR comp from a footage item or comp selected in the Project panel.
 
     var item = app.project.activeItem;
-
-    if (item != null && (item.typeName == "Footage" || item.typeName == "Composition")) {
-
+    if (item !== null && (item.typeName === "Footage" || item.typeName === "Composition")) {
         // Create a comp with the footage.
         var comp = app.project.items.addComp(item.name, item.width, item.height, item.pixelAspect, item.duration, item.frameRate);
         var layers = comp.layers;
         var footageLayer = layers.add(item);
 
-        //Apply the CC Environment effect and create a camera.
+        // Apply the CC Environment effect and create a camera.
         var effect = footageLayer.Effects.addProperty("CC Environment");
-        var camera = layers.addCamera("360 Camera", [item.width/2, item.height/2]);
-        comp.openInViewer(); app.project.toolType = ToolType.Tool_CameraMaya;
-    }
-    else {
+        var camera = layers.addCamera("360 Camera", [item.width / 2, item.height / 2]);
+        comp.openInViewer();
+        app.project.toolType = ToolType.Tool_CameraMaya;
+    } else {
         alert("Select a single footage item or composition in the Project panel.");
     }
 
@@ -623,24 +631,24 @@ String; read/write.
 
 The following example code accesses the XMP metadata of the current project, and modifies the Label project metadata field.
 
-::
+.. code:: javascript
 
     var proj = app.project;
 
-    //load the XMPlibrary as an ExtendScript ExternalObject
-    if(ExternalObject.AdobeXMPScript == undefined){
+    // load the XMPlibrary as an ExtendScript ExternalObject
+    if (ExternalObject.AdobeXMPScript === undefined){
         ExternalObject.AdobeXMPScript = new ExternalObject('lib:AdobeXMPScript');
     }
     var mdata = new XMPMeta(app.project.xmpPacket); //get the project's XMPmetadata
-    //update the Label project metadata's value
+    // update the Label project metadata's value
     var schemaNS = XMPMeta.getNamespaceURI("xmp");
     var propName = "xmp:Label";
     try{
         mdata.setProperty(schemaNS, propName, "finalversion...no, really!");
-    }
-    catch(e){
+    } catch (e) {
         alert(e);
     }
+
     app.project.xmpPacket = mdata.serialize();
 
 ----
@@ -749,9 +757,9 @@ Imports the file specified in the specified ImportOptions object, using the spec
 
 **Example**
 
-::
+.. code:: javascript
 
-    app.project.importFile(new ImportOptions(File("sample.psd"))
+    app.project.importFile(new ImportOptions(new File("sample.psd"));
 
 ----
 
@@ -914,12 +922,12 @@ Integer; the total number of items removed.
 
 **Example**
 
-::
+.. code:: javascript
 
-    var theItems = new Array();
-    theItems[theItems.length] = app.project.item(1);
-    theItems[theItems.length] = app.project.item(3);
-    app.project.reduceProject(theItems);
+    var items = [];
+    items[items.length] = app.project.item(1);
+    items[items.length] = app.project.item(3);
+    app.project.reduceProject(items);
 
 ----
 

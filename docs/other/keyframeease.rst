@@ -17,7 +17,7 @@ The KeyframeEase object encapsulates the keyframe ease settings of a layer's AE 
 
 This example assumes that the Position, a spatial property, has more than two keyframes.
 
-::
+.. code:: javascript
 
     var easeIn = new KeyframeEase(0.5, 50);
     var easeOut = new KeyframeEase(0.75, 85);
@@ -26,7 +26,7 @@ This example assumes that the Position, a spatial property, has more than two ke
 
 This example sets the Scale, a temporal property with either two or three dimensions. For 2D and 3D properties you must set an ``easeIn`` and ``easeOut`` value for each dimension:
 
-::
+.. code:: javascript
 
     var easeIn = new KeyframeEase(0.5, 50);
     var easeOut = new KeyframeEase(0.75, 85);

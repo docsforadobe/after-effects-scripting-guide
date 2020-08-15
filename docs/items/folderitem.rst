@@ -14,13 +14,13 @@ The FolderItem object corresponds to a folder in your Project panel. It can cont
 
 Given that the second item in the project is a FolderItem, the following code puts up an alert for each top-level item in the folder, showing that item's name.
 
-::
+.. code:: javascript
 
     var secondItem = app.project.item(2);
-    if(!(secondItem instanceof FolderItem)) {
+    if (!(secondItem instanceof FolderItem)) {
         alert("problem: second item is not a folder");
     } else {
-        for (i = 1; i < = secondItem.numItems; i++) {
+        for (var i = 1; i <= secondItem.numItems; i++) {
             alert("item number " + i + " within the folder is named " + secondItem.item(i).name);
         }
     }

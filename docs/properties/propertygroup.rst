@@ -70,22 +70,26 @@ To check that you can add a particular property to this group, call ``canAddProp
 
 **Examples**
 
-- This won't work, as the `slider` object becomes invalid once we add the `Color Control` property::
+- This won't work, as the `slider` object becomes invalid once we add the `Color Control` property:
 
-    var effectsProperty = layer.property("ADBE Effect Parade");
-    var slider = effectsProperty.addProperty("ADBE Slider Control");
-    var color = effectsProperty.addProperty("ADBE Color Control");
+    .. code:: javascript
 
-    var sliderProperty = slider.property("ADBE Slider Control-0001"); // Object 'slider' is Invalid
+        var effectsProperty = layer.property("ADBE Effect Parade");
+        var slider = effectsProperty.addProperty("ADBE Slider Control");
+        var color = effectsProperty.addProperty("ADBE Color Control");
 
-- This revised method will work::
+        var sliderProperty = slider.property("ADBE Slider Control-0001"); // Object 'slider' is Invalid
 
-    var effectsProperty = layer.property("ADBE Effect Parade");
-    var slider = effectsProperty.addProperty("ADBE Slider Control");
-    var sliderIndex = slider.propertyIndex; // Store 'slider' effect index so it can be reused later
-    var color = effectsProperty.addProperty("ADBE Color Control");
+- This revised method will work:
 
-    var sliderProperty = effectsProperty.property(sliderIndex).property("ADBE Slider Control-0001");
+    .. code:: javascript
+
+        var effectsProperty = layer.property("ADBE Effect Parade");
+        var slider = effectsProperty.addProperty("ADBE Slider Control");
+        var sliderIndex = slider.propertyIndex; // Store 'slider' effect index so it can be reused later
+        var color = effectsProperty.addProperty("ADBE Color Control");
+
+        var sliderProperty = effectsProperty.property(sliderIndex).property("ADBE Slider Control-0001");
 
 **Parameters**
 
@@ -125,7 +129,7 @@ Returns true if a property with the given name can be added to this property gro
 
 For example, you can only add mask to a mask group. The only legal input arguments are "mask" or "ADBE Mask Atom".
 
-::
+.. code:: javascript
 
     maskGroup.canAddProperty("mask"); // returns true
     maskGroup.canAddProperty("ADBE Mask Atom"); // returns true
@@ -154,13 +158,15 @@ PropertyGroup.property()
 
 **Description**
 
-Finds and returns a child property of this group, as specified by either its index or name. A name specification can use the same syntax that is available with expressions. The following are all allowed and are equivalent::
+Finds and returns a child property of this group, as specified by either its index or name. A name specification can use the same syntax that is available with expressions. The following are all allowed and are equivalent:
 
-    mylayer.position
-    mylayer("position")
-    mylayer.property("position")
-    mylayer(1)
-    mylayer.property(1)
+.. code:: javascript
+
+    mylayer.position;
+    mylayer("position");
+    mylayer.property("position");
+    mylayer(1);
+    mylayer.property(1);
 
 Some properties of a layer, such as position and zoom, can be accessed only by name. When using the name to find a property that is multiple levels down, you must make more than one call to this method.
 
@@ -250,17 +256,23 @@ From a PropertyGroup "ADBE Mask Atom"    -  "ADBE Mask Shape", or "maskShape",
 
 **Examples**
 
-1. If a layer named "myLayer" has a Box Blur effect, you can retrieve the effect in any of the following ways::
+1. If a layer named "myLayer" has a Box Blur effect, you can retrieve the effect in any of the following ways:
+    
+    .. code:: javascript
 
-    myLayer.property("Effects").property("Box Blur");
-    myLayer.property("Effects").property("boxBlur");
-    myLayer.property("Effects").property("ADBE Box Blur");
+        myLayer.property("Effects").property("Box Blur");
+        myLayer.property("Effects").property("boxBlur");
+        myLayer.property("Effects").property("ADBE Box Blur");
 
-2. If a layer named "myLayer" has a mask named "Mask 1" you can retrieve it as follows::
+2. If a layer named "myLayer" has a mask named "Mask 1" you can retrieve it as follows:
 
-    myLayer.property("Masks").property("Mask1");
+    .. code:: javascript
 
-3. To get a Bulge Center value from a Bulge effect, you can use either of the following::
+        myLayer.property("Masks").property("Mask1");
 
-    myLayer.property("Effects").property("Bulge").property("Bulge Center");
-    myLayer.property("Effects").property("Bulge").property("bulgeCenter");
+3. To get a Bulge Center value from a Bulge effect, you can use either of the following:
+
+    .. code:: javascript
+    
+        myLayer.property("Effects").property("Bulge").property("Bulge Center");
+        myLayer.property("Effects").property("Bulge").property("bulgeCenter");

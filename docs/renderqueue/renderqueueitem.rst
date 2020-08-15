@@ -107,10 +107,10 @@ A function name string, or null if no function is assigned.
 
 **Example**
 
-::
+.. code:: javascript
 
     function myStatusChanged() {
-        alert(app.project.renderQueue.item(1).status)
+        alert(app.project.renderQueue.item(1).status);
     }
 
     app.project.renderQueue.item(1).onStatusChanged = myStatusChanged();

@@ -239,17 +239,15 @@ Nothing.
 
 **Example**
 
-The following sample code checks to see if there are queued items in the render queue, and if so queues them in AME but does not immediately start rendering::
+The following sample code checks to see if there are queued items in the render queue, and if so queues them in AME but does not immediately start rendering:
+
+.. code:: javascript
 
     // Scripting support for Queue in AME.
     // Requires Adobe Media Encoder 11.0.
-    {
-        if (app.project.renderQueue.canQueueInAME == true)
-        {
-            // Send queued items to AME, but do not start rendering.
-            app.project.renderQueue.queueInAME(false);
-        }
-        else {
-            alert("There are no queued item in the Render Queue.");
-        }
+    if (app.project.renderQueue.canQueueInAME === true) {
+        // Send queued items to AME, but do not start rendering.
+        app.project.renderQueue.queueInAME(false);
+    } else {
+        alert("There are no queued item in the Render Queue.");
     }

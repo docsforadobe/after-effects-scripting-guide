@@ -16,14 +16,14 @@ The LayerCollection object represents a set of layers. The LayerCollection belon
 
 Given that the first item in the project is a CompItem and the second item is an AVItem, this example shows the number of layers in the CompItem's layer collection, adds a new layer based on an AVItem in the project, then displays the new number of layers.
 
-::
+.. code:: javascript
 
     var firstComp = app.project.item(1);
     var layerCollection = firstComp.layers;
-    alert("number of layers before is" + layerCollection.length);
+    alert("number of layers before is " + layerCollection.length);
     var anAVItem = app.project.item(2);
     layerCollection.add(anAVItem);
-    alert("number of layers after is"+layerCollection.length);
+    alert("number of layers after is " + layerCollection.length);
 
 ----
 

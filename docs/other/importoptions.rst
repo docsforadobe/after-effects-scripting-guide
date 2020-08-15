@@ -11,7 +11,7 @@ ImportOptions object
 
 The ImportOptions object encapsulates the options used to import a file with the :ref:`Project.importFile` methods. The constructor takes an optional parameter, an ExtendScript File object for the file. If it is not supplied, you must explicitly set the value of the ``file`` attribute before using the object with the ``importFile`` method. For example:
 
-::
+.. code:: javascript
 
     new ImportOptions().file = new File("myfile.psd");
 
@@ -127,21 +127,21 @@ Integer; read/write.
 
 **Example**
 
-::
+.. code:: javascript
 
-  /*
-    Import 20 frames of the sequence, starting at frame 10 and ending at frame 30
-   */
-  var mySequence = '~/Desktop/sequence/image_000.png';
+    /*
+      Import 20 frames of the sequence, starting at frame 10 and ending at frame 30
+     */
+    var mySequence = '~/Desktop/sequence/image_000.png';
 
-  var importOptions = new ImportOptions();
-  importOptions.file = new File(mySequence);
-  importOptions.sequence = true;
-  importOptions.forceAlphabetical = false;
-  importOptions.rangeStart = 10;
-  importOptions.rangeEnd = 30;
+    var importOptions = new ImportOptions();
+    importOptions.file = new File(mySequence);
+    importOptions.sequence = true;
+    importOptions.forceAlphabetical = false;
+    importOptions.rangeStart = 10;
+    importOptions.rangeEnd = 30;
 
-  var item = app.project.importFile(importOptions);
+    var item = app.project.importFile(importOptions);
 
 ----
 
@@ -195,9 +195,9 @@ Boolean.
 
 **Example**
 
-::
+.. code:: javascript
 
-    var io = new ImportOptions(File("c:\\myFile.psd"));
+    var io = new ImportOptions(new File("c:\\myFile.psd"));
     if (io.canImportAs(ImportAsType.COMP)) {
         io.importAs = ImportAsType.COMP;
     }
@@ -234,10 +234,10 @@ Object, containing 2 keys:
 
 **Example**
 
-::
+.. code:: javascript
 
-  var importOptions = new ImportOptions();
-  importOptions.isFileNameNumbered('image.png');     // "isNumbered": false, "num": 0
-  importOptions.isFileNameNumbered('003image.png');  // "isNumbered": true, "num": 3
-  importOptions.isFileNameNumbered('ima0102ge.png'); // "isNumbered": true, "num": 102
-  importOptions.isFileNameNumbered('image0120.png'); // "isNumbered": true, "num": 120
+    var importOptions = new ImportOptions();
+    importOptions.isFileNameNumbered('image.png');     // "isNumbered": false, "num": 0
+    importOptions.isFileNameNumbered('003image.png');  // "isNumbered": true, "num": 3
+    importOptions.isFileNameNumbered('ima0102ge.png'); // "isNumbered": true, "num": 102
+    importOptions.isFileNameNumbered('image0120.png'); // "isNumbered": true, "num": 120

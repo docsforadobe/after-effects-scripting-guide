@@ -61,7 +61,9 @@ String.
 
 **Example**
 
-If you have saved a setting named with the key name "trimPrecomps" in a section called "Precomp Cropper", you can retrieve the value by::
+If you have saved a setting named with the key name "trimPrecomps" in a section called "Precomp Cropper", you can retrieve the value by:
+
+.. code:: javascript
 
     var trimPrecompsSetting = app.settings.getSetting("Precomp Cropper", "trimPrecomps");
     alert("The setting is: " + trimPrecompsSetting);
@@ -122,7 +124,9 @@ Nothing.
 
 **Example**
 
-If you want to save a setting called "trimPrecomps" for a script named "Precomp Cropper", you could save that setting via::
+If you want to save a setting called "trimPrecomps" for a script named "Precomp Cropper", you could save that setting via
+
+.. code:: javascript
 
     var trimPrecompsSetting = true;
     app.settings.saveSetting("Precomp Cropper", "trimPrecomps", trimPrecompsSetting);

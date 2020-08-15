@@ -97,7 +97,7 @@ Floating-point, pseudo-random number in the range [0, 1].
 
 **Example**
 
-::
+.. code:: javascript
 
     // change the position X of all layers with random number
 
@@ -106,11 +106,11 @@ Floating-point, pseudo-random number in the range [0, 1].
 
     for (var i = 1; i <= myComp.numLayers; i++) {
         // If you use Math.random(), this does not work
-        // x = 400*(Math.random()) – 200;
+        // x = 400 * (Math.random()) – 200;
         // use new generateRandomNumber() instead
 
-        x = 400*(generateRandomNumber()) – 200;
-        currentPos = myComp.layer(i).property("Position").value;
+        x = 400 * generateRandomNumber() – 200;
+        var currentPos = myComp.layer(i).property("Position").value;
         myComp.layer(i).property("Position").setValue([currentPos[0]+x,currentPos[1]]);
     }
 
@@ -139,7 +139,7 @@ Boolean.
 
 **Example**
 
-::
+.. code:: javascript
 
     var layer = app.project.activeItem.layer(1); // assume layer has three masks
     alert(isValid(layer)); // displays "true"
@@ -199,7 +199,7 @@ Nothing.
 
 **Example**
 
-::
+.. code:: javascript
 
     write("This text appears in Info panel ");
     write("with more on same line.");
@@ -227,7 +227,7 @@ Nothing.
 
 **Example**
 
-::
+.. code:: javascript
 
     writeLn("This text appears on first line");
     writeLn("This text appears on second line");

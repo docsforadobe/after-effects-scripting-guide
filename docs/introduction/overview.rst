@@ -172,7 +172,9 @@ Instead of creating a Window object and adding controls to it, a ScriptUI Panels
   var myPanel = this;
   myPanel.add("button", [10, 10, 100, 30], "Tool #1");
 
-If your script creates its user interface in a function, you cannot use ``this`` as it will refer to the function itself, not the panel. In this case, you should pass the ``this`` object as an argument to your function. For example::
+If your script creates its user interface in a function, you cannot use ``this`` as it will refer to the function itself, not the panel. In this case, you should pass the ``this`` object as an argument to your function. For example:
+
+.. code:: javascript
 
   function createUI(thisObj) {
       var myPanel = thisObj;
@@ -181,7 +183,9 @@ If your script creates its user interface in a function, you cannot use ``this``
   }
   var myToolsPanel = createUI(this);
 
-You cannot use the File > Scripts > Run Script File menu command to run a script that refers to this. To make your script work with either a Window object (accessible from the File > Scripts menu) or a native panel (accessible from the Window menu), check whether this is a Panel object. For example::
+You cannot use the File > Scripts > Run Script File menu command to run a script that refers to this. To make your script work with either a Window object (accessible from the File > Scripts menu) or a native panel (accessible from the Window menu), check whether this is a Panel object. For example:
+
+.. code:: javascript
 
   function createUI(thisObj) {
       var myPanel = (thisObj instanceof Panel) ? thisObj : new Window("palette", "My Tools",

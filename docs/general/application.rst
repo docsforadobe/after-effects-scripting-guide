@@ -62,28 +62,28 @@ Array of ``GpuAccelType`` enums, or null if no viewers are open; read-only. One 
 - ``SOFTWARE``
 
 **Example**
-The following sample code checks the current computer's available GPU acceleration types, and sets it to Metal if available::
+The following sample code checks the current computer's available GPU acceleration types, and sets it to Metal if available.
+
+.. code:: javascript
 
     // app.availableGPUAccelTypes returns GPU acceleration types available on the current system.
     // You can use this to check before setting the GPU acceleration type.
-    {
-        var newType = GpuAccelType.METAL;
+    var newType = GpuAccelType.METAL;
 
-        // Before trying to set, check which GPU acceleration types are available on the current system.
-        var canSet = false;
-        var currentOptions = app.availableGPUAccelTypes;
-        for (op in currentOptions) {
-            if (currentOptions[op] == newType)
-                canSet = true;
+    // Before trying to set, check which GPU acceleration types are available on the current system.
+    var canSet = false;
+    var currentOptions = app.availableGPUAccelTypes;
+    for (var op in currentOptions) {
+        if (currentOptions[op] === newType) {
+            canSet = true;
         }
+    }
 
-        if (canSet) {
-            // Set the GPU acceleration type.
-            app.project.gpuAccelType = newType
-        }
-        else {
-            alert("Metal is not available on this OS.");
-        }
+    if (canSet) {
+        // Set the GPU acceleration type.
+        app.project.gpuAccelType = newType;
+    } else {
+        alert("Metal is not available on this OS.");
     }
 
 ----
@@ -173,9 +173,9 @@ Array, with each element containing the following properties; read-only:
 
 **Example**
 
-::
+.. code:: javascript
 
-  var effectName = app.effects[12].displayName;
+    var effectName = app.effects[12].displayName;
 
 ----
 
@@ -219,9 +219,9 @@ Integer; read/write.
 
 **Example**
 
-::
+.. code:: javascript
 
-  app.exitCode = 2; // on quit, if value is 2, an error has occurred
+    app.exitCode = 2; // on quit, if value is 2, an error has occurred
 
 ----
 
@@ -253,18 +253,16 @@ String; read-only. Some common values include:
 
 **Example**
 
-::
+.. code:: javascript
 
-  var lang = app.isoLanguage;
-  if (lang == "en_US") {
-    alert("After Effects is running in English.");
-  }
-  elseif (lang == "fr_FR") {
-    alert("After Effects is running in French.");
-  }
-  else {
-    alert("After Effects is running in English or French.");
-  }
+    var lang = app.isoLanguage;
+    if (lang === "en_US") {
+      alert("After Effects is running in English.");
+    } else if (lang === "fr_FR") {
+      alert("After Effects is running in French.");
+    } else {
+      alert("After Effects is running not in English or French.");
+    }
 
 ----
 
@@ -336,12 +334,12 @@ A function name string, or null if no function is assigned; read/write.
 
 **Example**
 
-::
+.. code:: javascript
 
-  function err(errString) {
-    alert(errString) ;
-  }
-  app.onError = err;
+    function err(errString) {
+      alert(errString) ;
+    }
+    app.onError = err;
 
 ----
 
@@ -433,10 +431,10 @@ String; read-only.
 
 **Example**
 
-::
+.. code:: javascript
 
   var ver = app.version;
-  alert("This machine is running version" + ver + "of AfterEffects.");
+  alert("This machine is running version " + ver + " of AfterEffects.");
 
 -----
 
@@ -630,7 +628,7 @@ A new Project object, or null if no new project is created.
 
 **Example**
 
-::
+.. code:: javascript
 
     app.project.close(CloseOptions.DO_NOT_SAVE_CHANGES);
     app.newProject();
@@ -663,14 +661,15 @@ A new Project object for the specified project, or null if the user cancels the 
 
 **Example**
 
-::
+.. code:: javascript
 
-  var my_file = new File("../my_folder/my_test.aep");
-  if (my_file.exists) {
-    new_project = app.open(my_file); if (new_project) {
-      alert(new_project.file.name);
+    var my_file = new File("../my_folder/my_test.aep");
+    if (my_file.exists) {
+      var new_project = app.open(my_file);
+      if (new_project) {
+        alert(new_project.file.name);
+      }
     }
-  }
 
 ----
 
@@ -907,10 +906,10 @@ Nothing.
 
 **Example**
 
-::
+.. code:: javascript
 
-  var theFolder = new Folder("c:/tool");
-  app.watchFolder(theFolder);
+    var theFolder = new Folder("c:/tool");
+    app.watchFolder(theFolder);
 
 **See also**
 

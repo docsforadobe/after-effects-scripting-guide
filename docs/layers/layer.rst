@@ -18,7 +18,7 @@ The Layer object provides access to layers within compositions. It can be access
 
 If the first item in the project is a :ref:`CompItem <CompItem>`, this example disables the first layer in that composition and renames it. This might, for example, turn an icon off in the composition.
 
-::
+.. code:: javascript
 
     var firstLayer = app.project.item(1).layer(1);
     firstLayer.enabled = false;

@@ -19,83 +19,97 @@ The Property object contains value, keyframe, and expression information about a
 
 **Examples**
 
--  Get and set the value of opacity::
+-  Get and set the value of opacity
 
-    var myProperty = myLayer.opacity;
-    // opacity has propertyValueType of OneD, and is stored as a float
-    myProperty.setValue(50);//set opacity to 50%
-    // Variable my Opacity is a float value
-    var myOpacity = myProperty.value;
+    .. code:: javascript
 
--  Get and set the value of a position::
+        var myProperty = myLayer.opacity;
+        // opacity has propertyValueType of OneD, and is stored as a float
+        myProperty.setValue(50); //set opacity to 50%
+        // Variable my Opacity is a float value
+        var myOpacity = myProperty.value;
 
-    var myProperty = myLayer.position;
-    // position has propertyValueType of ThreeD_SPATIAL, and is stored as an array of 3 floats
-    myProperty.setValue([10.0, 30.0, 0.0]);
-    // Variable my Position is an array of 3 floats
-    var myPosition = myProperty.value;
+-  Get and set the value of a position
 
--  Change the value of a mask shape to be open instead of closed::
+    .. code:: javascript
 
-    var myMask = mylayer.mask(1);
-    var myProperty = myMask.maskPath;
-    myShape = myProperty.value;
-    myShape.closed = false;
-    myProperty.setValue(myShape);
+        var myProperty = myLayer.position;
+        // position has propertyValueType of ThreeD_SPATIAL, and is stored as an array of 3 floats
+        myProperty.setValue([10.0, 30.0, 0.0]);
+        // Variable my Position is an array of 3 floats
+        var myPosition = myProperty.value;
 
--  Get the value of a color at a particular time. A color is stored as an array of four floats, ``[r, g, b, opacity]``. This sets the value of the red component of a light's color at time 4 to be half of that at time 2::
+-  Change the value of a mask shape to be open instead of closed
 
-    var myProperty = myLight.color;
-    var colorValue = myProperty.valueAtTime(2, true);
-    colorValue[0] = 0.5 * colorValue[0];
-    myProperty.setValueAtTime(4, colorValue);
+    .. code:: javascript
 
--  Check that a scale calculated by an expression at time 3.5 is the expected value of [10,50]::
+        var myMask = mylayer.mask(1);
+        var myProperty = myMask.maskPath;
+        myShape = myProperty.value;
+        myShape.closed = false;
+        myProperty.setValue(myShape);
 
-    var myProperty = myLayer.scale;
-    //false value of preExpression means evaluate the expression
-    var scaleValue = myProperty.valueAtTime(3.5, false);
+-  Get the value of a color at a particular time. A color is stored as an array of four floats, ``[r, g, b, opacity]``. This sets the value of the red component of a light's color at time 4 to be half of that at time 2
 
-    if(scaleValue[0] == 10 && scaleValue[1] == 50) {
-        alert("hurray");
-    }
-    else{
-        alert("oops");
-    }
+    .. code:: javascript
 
--  Keyframe a rotation from 0 to 90 and back again. The animation is 10 seconds, and the middle keyframe is at the 5 second mark. Rotation properties are stored as a OneD value::
+        var myProperty = myLight.color;
+        var colorValue = myProperty.valueAtTime(2, true);
+        colorValue[0] = 0.5 * colorValue[0];
+        myProperty.setValueAtTime(4, colorValue);
 
-      myProperty = myLayer.rotation;
-      myProperty.setValueAtTime(0, 0);
-      myProperty.setValueAtTime(5, 90);
-      myProperty.setValueAtTime(10, 0);
+-  Check that a scale calculated by an expression at time 3.5 is the expected value of [10,50]
 
--  Change the key frame values for the first three keyframes of some sourcetext::
+    .. code:: javascript
 
-    myProperty = myTextLayer.sourceText;
-    if(myProperty.numKeys<3){
-     alert("error, I thought there were 3 keyframes");
-    }
-    else{
-        myProperty.setValueAtKey(1, newTextDocument("keynumber1"));
-        myProperty.setValueAtKey(2, newTextDocument("keynumber2"));
-        myProperty.setValueAtKey(3, newTextDocument("keynumber3"));
-    }
+        var myProperty = myLayer.scale;
+        // false value of preExpression means evaluate the expression
+        var scaleValue = myProperty.valueAtTime(3.5, false);
 
--  Set values using the convenience syntax for position, scale, color, or source text::
+        if (scaleValue[0] === 10 && scaleValue[1] === 50) {
+            alert("hurray");
+        } else {
+            alert("oops");
+        }
 
-    //These two are equivalent. The second fills in a default of 0.
-    myLayer.position.setValue([20, 30, 0]);
-    myLayer.position.setValue([20, 30]);
-    //These two are equivalent. The second fills in a defaultof 100.
-    myLayer.scale.setValue([50, 50, 100]);
-    myLayer.scale.setValue([50, 50]);
-    //These two are equivalent. The second fills in a defaultof 1.0
-    myLight.color.setValue([.8, .3, .1, 1.0]);
-    myLight.color.setValue([.8, .3, .1]);
-    //These two are equivalent. The second creates a TextDocument
-    myTextLayer.sourceText.setValue(newTextDocument("foo"));
-    myTextLayer.sourceText.setValue("foo");
+-  Keyframe a rotation from 0 to 90 and back again. The animation is 10 seconds, and the middle keyframe is at the 5 second mark. Rotation properties are stored as a OneD value
+
+    .. code:: javascript
+
+        var myProperty = myLayer.rotation;
+        myProperty.setValueAtTime(0, 0);
+        myProperty.setValueAtTime(5, 90);
+        myProperty.setValueAtTime(10, 0);
+
+-  Change the key frame values for the first three keyframes of some sourcetext
+
+    .. code:: javascript
+
+        var myProperty = myTextLayer.sourceText;
+        if (myProperty.numKeys < 3) {
+            alert("error, I thought there were 3 keyframes");
+        } else {
+            myProperty.setValueAtKey(1, newTextDocument("keynumber1"));
+            myProperty.setValueAtKey(2, newTextDocument("keynumber2"));
+            myProperty.setValueAtKey(3, newTextDocument("keynumber3"));
+        }
+
+-  Set values using the convenience syntax for position, scale, color, or source text
+
+    .. code:: javascript
+
+        // These two are equivalent. The second fills in a default of 0.
+        myLayer.position.setValue([20, 30, 0]);
+        myLayer.position.setValue([20, 30]);
+        // These two are equivalent. The second fills in a defaultof 100.
+        myLayer.scale.setValue([50, 50, 100]);
+        myLayer.scale.setValue([50, 50]);
+        // These two are equivalent. The second fills in a defaultof 1.0
+        myLight.color.setValue([0.8, 0.3, 0.1, 1.0]);
+        myLight.color.setValue([0.8, 0.3, 0.1]);
+        // These two are equivalent. The second creates a TextDocument
+        myTextLayer.sourceText.setValue(newTextDocument("foo"));
+        myTextLayer.sourceText.setValue("foo");
 
 ----
 
@@ -260,11 +274,13 @@ Property.isDropdownEffect
 
 When true, the property is the Menu property of a Dropdown Menu Control effect and can have its items updated with :ref:`setPropertyParameters <property.setpropertyparameters>`.
 
-**Examples** ::
+**Examples**
 
-    appliedEffect.property("Menu").isDropdownEffect    // true
-    appliedEffect.property("Color").isDropdownEffect   // false
-    appliedEffect.property("Feather").isDropdownEffect // false
+.. code:: javascript
+
+    appliedEffect.property("Menu").isDropdownEffect;    // true
+    appliedEffect.property("Color").isDropdownEffect;   // false
+    appliedEffect.property("Feather").isDropdownEffect; // false
 
 **Type**
 
@@ -426,7 +442,9 @@ Property.propertyValueType
 
 The type of value stored in the named property. The ``PropertyValueType`` enumeration has one value for each type of data that can be stored in or retrieved from a property. Each type of data is stored and retrieved in a different kind of structure. All property objects store data according to one of these categories. For example, a 3D spatial property (such as a layer's position) is stored as an array of three floating-point values. When setting a value for position, pass in such an array, as follows: ``mylayer.property("position").setValue([10, 20, 0]);``
 
-In contrast, a shape property (such as a layer's mask shape) is stored as a Shape object. When setting a value for a shape, pass a Shape object, as follows::
+In contrast, a shape property (such as a layer's mask shape) is stored as a Shape object. When setting a value for a shape, pass a Shape object, as follows:
+
+.. code:: javascript
 
     var myShape = new Shape();
     myShape.vertices = [[0,0], [0,100], [100,100], [100,0]];
@@ -1248,7 +1266,9 @@ Sets parameters for a Dropdown Menu Control's Menu Property. This method will ov
 .. note::
    Item strings should be in ASCII or MultiByte encodable in the current code-page. In other words, the item strings should be provided in the script of the running system. For example: Specifying the item strings in Japanese while running the script on an English system will create a dropdown effect with illegible characters in the item strings.
 
-**Example** ::
+**Example**
+
+.. code:: javascript
 
     var dropdownItems = [
         "First Item",
@@ -1514,7 +1534,6 @@ Sets the incoming and outgoing temporal ease for the specified keyframe. See :re
                         objects.
                      -  For all other value types, the array contains 1 object.
 ==================== ==========================================================
-
 
 **Returns**
 

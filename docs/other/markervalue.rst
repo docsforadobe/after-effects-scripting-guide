@@ -14,17 +14,17 @@ The MarkerValue object represents a layer or composition marker, which associate
 
 -  To set a marker that says "Fade Up" at the 2 second mark:
 
-  ::
+  .. code:: javascript
 
       var myMarker = new MarkerValue("FadeUp");
       myLayer.property("Marker").setValueAtTime(2, myMarker);
 
 - To get comment values from a particular marker:
 
-  ::
+  .. code:: javascript
 
       var commentOfFirstMarker = app.project.item(1).layer(1).property("Marker").keyValue(1).comment;
-      var commentOfMarkerAtTime4 = app.project.item(1).layer(1).property("Marker").valueAtTime(4.0, true).comment
+      var commentOfMarkerAtTime4 = app.project.item(1).layer(1).property("Marker").valueAtTime(4.0, true).comment;
       var markerProperty = app.project.item(1).layer(1).property("Marker");
       var markerValueAtTimeClosestToTime4 = markerProperty.keyValue(markerProperty.nearestKeyIndex(4.0));
       var commentOfMarkerClosestToTime4 = markerValueAtTimeClosestToTime4.comment;
@@ -242,10 +242,10 @@ Nothing.
 
 **Example**
 
-::
+.. code:: javascript
 
     var mv = new MarkerValue("MyMarker");
-    var parms = new Object;
+    var parms = {};
     parms.timeToBlink = 1;
     parms.assignMe = "A string"
     mv.setParameters(parms);

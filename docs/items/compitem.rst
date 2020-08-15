@@ -17,11 +17,11 @@ The CompItem object represents a composition, and allows you to manipulate and g
 
 Given that the first item in the project is a CompItem, the following code displays two alerts. The first shows the number of layers in the CompItem, and the second shows the name of the last layer in the CompItem.
 
-.. code::
+.. code:: javascript
 
     var firstComp = app.project.item(1);
     alert("number of layers is " + firstComp.numLayers);
-    alert("name of last layer is " + firstComp.layer(firstComp.numLayers).name) ;
+    alert("name of last layer is " + firstComp.layer(firstComp.numLayers).name);
 
 ----
 
@@ -252,24 +252,24 @@ PropertyGroup object or null; read-only.
 
 **Example**
 
-The following sample code creates a project and composition, then creates two composition markers with different properties::
+The following sample code creates a project and composition, then creates two composition markers with different properties
+
+.. code:: javascript
 
     // comp.markerProperty allows you to add markers to a comp.
     // It has the same functionality as layer.property("Marker")
-    {
-        var currentProj = app.newProject();
-        var comp = currentProj.items.addComp("mycomp", 1920, 1080, 1.0, 5, 29.97);
-        var solidLayer = comp.layers.addSolid([1, 1, 1], "mylayer", 1920, 1080, 1.0);
+    var currentProj = app.newProject();
+    var comp = currentProj.items.addComp("mycomp", 1920, 1080, 1.0, 5, 29.97);
+    var solidLayer = comp.layers.addSolid([1, 1, 1], "mylayer", 1920, 1080, 1.0);
 
-        var compMarker = new MarkerValue("This is a comp marker!");
-        compMarker.duration = 1; compMarker.url = "http://www.adobe.com/aftereffects";
+    var compMarker = new MarkerValue("This is a comp marker!");
+    compMarker.duration = 1; compMarker.url = "http://www.adobe.com/aftereffects";
 
-        var compMarker2 = new MarkerValue("Another comp marker!");
-        compMarker2.duration = 1;
+    var compMarker2 = new MarkerValue("Another comp marker!");
+    compMarker2.duration = 1;
 
-        comp.markerProperty.setValueAtTime(1, compMarker)
-        comp.markerProperty.setValueAtTime(3, compMarker2)
-    }
+    comp.markerProperty.setValueAtTime(1, compMarker)
+    comp.markerProperty.setValueAtTime(3, compMarker2)
 
 ----
 
@@ -360,7 +360,9 @@ Read or write the name property in the Essential Graphics panel for the composit
 
 The name in the Essential Graphics panel is used for the file name of an exported Motion Graphics template (ex., "My Template.mogrt").
 
-The following example will set the name for the active composition and then return it as an alert::
+The following example will set the name for the active composition and then return it as an alert
+
+.. code:: javascript
 
     app.project.activeItem.motionGraphicsTemplateName = "My Template";
     alert(app.project.activeItem.motionGraphicsTemplateName);
