@@ -214,7 +214,7 @@ Item.typeName
 
 **Description**
 
-A user-readable name for the item type; for example, "Folder", "Footage", or "Composition".
+A user-readable name for the item type; for example, "Folder", "Footage", or "Composition". These names are application locale-dependent, meaning that they are different depending on the application's interface language.
 
 **Type**
 
