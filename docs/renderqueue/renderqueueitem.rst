@@ -315,22 +315,6 @@ RenderQueueItem object.
 
 ----
 
-.. _RenderQueueItem.getSetting:
-
-RenderQueueItem.getSetting()
-*********************************************
-
-``app.project.renderQueue.item(index).getSetting()``
-
-.. note::
-   This functionality was added in After Effects 13.0 (CC 2014)
-
-**Description**
-
-See https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva
-
-----
-
 .. _RenderQueueItem.getSettings:
 
 RenderQueueItem.getSettings()
@@ -338,13 +322,37 @@ RenderQueueItem.getSettings()
 
 ``app.project.renderQueue.item(index).getSettings()``
 
+**Example**
+
+.. code:: javascript
+
+   // Get current value of render setting's "Proxy Use"
+   // Key and value strings are English.
+
+   var rqItem1_proxyUse = app.project.renderQueue.item(1).getSetting("Proxy Use");
+
+   // Get string version of same setting, add "-str" at the end of key string
+
+   var rqItem1_proxyUse_str = app.project.renderQueue.item(1).getSetting("Proxy Use-str");
+
+   // Set value of "Proxy Use" to "Use All Proxies"
+
+   app.project.renderQueue.item(1).setSetting("Proxy Use", "Use All Proxies");
+
+   // You can use numbers, too.
+   // The next line does the same as the previous example.
+
+   app.project.renderQueue.item(1).setSetting("Proxy Use", 1);
+
 .. note::
    This functionality was added in After Effects 13.0 (CC 2014)
 
 **Description**
 
-See https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva
-
+Depreciated Source: https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva
+Archived version: https://web.archive.org/web/20200622100656/https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva
+Depreciated Source: https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva
+Archived version: https://web.archive.org/web/20200622100656/https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva
 ----
 
 .. _RenderQueueItem.outputModule:
@@ -427,7 +435,8 @@ RenderQueueItem.setSetting()
 
 **Description**
 
-See https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva
+Depreciated Source: https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva
+Archived version: https://web.archive.org/web/20200622100656/https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva
 
 ----
 
@@ -438,9 +447,14 @@ RenderQueueItem.setSettings()
 
 ``app.project.renderQueue.item(index).setSettings()``
 
+**Example**
+
+See example in :ref:`RenderQueueItem.getSettings`
+
 .. note::
    This functionality was added in After Effects 13.0 (CC 2014)
 
 **Description**
 
-See https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva
+Depreciated Source: https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva
+Archived version: https://web.archive.org/web/20200622100656/https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva
