@@ -423,23 +423,6 @@ Nothing.
 
 ----
 
-.. _RenderQueueItem.setSetting:
-
-RenderQueueItem.setSetting()
-*********************************************
-
-``app.project.renderQueue.item(index).setSetting()``
-
-.. note::
-   This functionality was added in After Effects 13.0 (CC 2014)
-
-**Description**
-
-Depreciated Source: https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva
-Archived version: https://web.archive.org/web/20200622100656/https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva
-
-----
-
 .. _RenderQueueItem.setSettings:
 
 RenderQueueItem.setSettings()
@@ -457,4 +440,5 @@ See example in :ref:`RenderQueueItem.getSettings`
 **Description**
 
 Depreciated Source: https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva
+
 Archived version: https://web.archive.org/web/20200622100656/https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva
