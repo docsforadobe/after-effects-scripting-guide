@@ -607,6 +607,64 @@ Nothing.
 
 ----
 
+app.executeCommand
+*********************************************
+
+``app.findMenuCommandId(id)``
+
+**Description**
+
+Menu Commands in the GUI application have an individual ID number, which can be used as the parameter for this method. For some functions not included in the API this is the only way to access them.
+The :ref:`app.findMenuCommandId` method can be used to find the ID number for a command.
+The web site https://www.provideocoalition.com/after-effects-menu-command-ids/ has more information, and a list of the known numbers.
+
+**Parameters**
+
+======  =====================================================
+``id``  The ID number of the command.
+======  =====================================================
+
+**Returns**
+
+None.
+
+**Example**
+
+.. code:: javascript
+
+    app.executeCommand(4162);//calls the Convert to Bezier Path command
+
+----
+
+app.findMenuCommandId
+*********************************************
+
+``app.findMenuCommandId(Command)``
+
+**Description**
+
+Menu Commands in the GUI application have an individual ID number, which can be used as a parameter for the :ref:`app.executeCommand` command. For some functions not included in the API this is the only way to access them.
+The web site https://www.provideocoalition.com/after-effects-menu-command-ids/ has more information, and a list of the known numbers.
+
+**Parameters**
+
+===========  =====================================================
+``Command``  The text of the menu command, exactly as it is shown in the UI.
+===========  =====================================================
+
+**Returns**
+
+Integer, the ID number of the menu command.
+
+
+**Example**
+
+.. code:: javascript
+
+    app.findMenuCommandId("Convert To Bezier Path")
+
+----
+
 .. _app.newProject:
 
 app.newProject()
