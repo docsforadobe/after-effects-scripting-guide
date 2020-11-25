@@ -14,7 +14,7 @@ The AVItem object provides access to attributes and methods of audio/visual file
     AVItem is the base class for both CompItem and FootageItem, so AVItem attributes and methods are also available when working with CompItem and FootageItem objects. See :ref:`CompItem` and :ref:`FootageItem`.
 
 .. warning::
-    *NOTE:* CompItems and FootageItems, while logical descendants of AVItem, are not *really* subclasses of AVItem as AVItem doesn't exist in Extendscript, ie. attempting to check if ``item instanceof AVItem`` will fail because AVItem is undefined. This is also true for ``Item`` itself.
+    CompItems and FootageItems, while logical descendants of AVItem, are not *really* subclasses of AVItem as AVItem doesn't exist in Extendscript, ie. attempting to check if ``item instanceof AVItem`` will fail because AVItem is undefined. This is also true for ``Item`` itself.
 
 ----
 
