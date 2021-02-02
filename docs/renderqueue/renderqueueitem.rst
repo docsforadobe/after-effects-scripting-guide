@@ -315,6 +315,36 @@ RenderQueueItem object.
 
 ----
 
+.. _RenderQueueItem.getSetting:
+
+RenderQueueItem.getSetting()
+*********************************************
+
+``app.project.renderQueue.item(index).getSetting()``
+
+.. note::
+   This functionality was added in After Effects 13.0 (CC 2014)
+
+**Description**
+
+Gets a specific Render Queue Item setting.
+
+- Depreciated Source: https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva
+- Archived version: https://web.archive.org/web/20200622100656/https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva
+
+**Example**
+
+.. code:: javascript
+
+    // Get current value of render setting's "Proxy Use"
+    // Key and value strings are English.
+    var rqItem1_proxyUse = app.project.renderQueue.item(1).getSetting("Proxy Use");
+
+    // Get string version of same setting, add "-str" at the end of key string
+    var rqItem1_proxyUse_str = app.project.renderQueue.item(1).getSetting("Proxy Use-str");
+
+----
+
 .. _RenderQueueItem.getSettings:
 
 RenderQueueItem.getSettings()
@@ -322,37 +352,26 @@ RenderQueueItem.getSettings()
 
 ``app.project.renderQueue.item(index).getSettings()``
 
-**Example**
-
-.. code:: javascript
-
-   // Get current value of render setting's "Proxy Use"
-   // Key and value strings are English.
-
-   var rqItem1_proxyUse = app.project.renderQueue.item(1).getSetting("Proxy Use");
-
-   // Get string version of same setting, add "-str" at the end of key string
-
-   var rqItem1_proxyUse_str = app.project.renderQueue.item(1).getSetting("Proxy Use-str");
-
-   // Set value of "Proxy Use" to "Use All Proxies"
-
-   app.project.renderQueue.item(1).setSetting("Proxy Use", "Use All Proxies");
-
-   // You can use numbers, too.
-   // The next line does the same as the previous example.
-
-   app.project.renderQueue.item(1).setSetting("Proxy Use", 1);
-
 .. note::
    This functionality was added in After Effects 13.0 (CC 2014)
 
 **Description**
 
-Depreciated Source: https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva
-Archived version: https://web.archive.org/web/20200622100656/https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva
-Depreciated Source: https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva
-Archived version: https://web.archive.org/web/20200622100656/https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva
+Gets all settings for a given Render Queue Item.
+
+- Depreciated Source: https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva
+- Archived version: https://web.archive.org/web/20200622100656/https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva
+
+**Example**
+
+.. code:: javascript
+
+  // Get object that contains all possible values of all render settings of
+  // render queue item 1 and convert to JSON format.
+
+  var rqItem1_spec_str = app.project.renderQueue.item(1).getSettings(GetSettingsFormat.SPEC);
+  var rqItem1_spec_str_json = rqItem1_spec_str.toSource();
+
 ----
 
 .. _RenderQueueItem.outputModule:
@@ -423,6 +442,39 @@ Nothing.
 
 ----
 
+.. _RenderQueueItem.setSetting:
+
+RenderQueueItem.setSetting()
+*********************************************
+
+``app.project.renderQueue.item(index).setSetting()``
+
+.. note::
+   This functionality was added in After Effects 13.0 (CC 2014)
+
+**Description**
+
+Sets a specific setting for a given Render Queue Item.
+
+Depreciated Source: https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva
+
+Archived version: https://web.archive.org/web/20200622100656/https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva
+
+**Example**
+
+.. code:: javascript
+
+  // Set value of "Proxy Use" to "Use All Proxies"
+
+  app.project.renderQueue.item(1).setSetting("Proxy Use", "Use All Proxies");
+
+  // You can use numbers, too.
+  // The next line does the same as the previous example.
+
+  app.project.renderQueue.item(1).setSetting("Proxy Use", 1);
+
+----
+
 .. _RenderQueueItem.setSettings:
 
 RenderQueueItem.setSettings()
@@ -430,15 +482,40 @@ RenderQueueItem.setSettings()
 
 ``app.project.renderQueue.item(index).setSettings()``
 
-**Example**
-
-See example in :ref:`RenderQueueItem.getSettings`
-
 .. note::
    This functionality was added in After Effects 13.0 (CC 2014)
 
 **Description**
 
-Depreciated Source: https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva
+Sets a multiple settings for a given Render Queue Item.
 
-Archived version: https://web.archive.org/web/20200622100656/https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva
+- Depreciated Source: https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva
+- Archived version: https://web.archive.org/web/20200622100656/https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva
+
+**Example**
+
+.. code:: javascript
+
+  // Get an object that contains string version of settable render setting
+  // values of render queue item 1.
+  // To get the values in the number format, use
+  // GetSettingsFormat.NUMBER_SETTABLE as an argument.
+
+  var rqItem1_settable_str = app.project.renderQueue.item(1).getSettings( GetSettingsFormat.STRING_SETTABLE );
+
+  // Set render queue item 2 with values that you got from render
+  //queue item 1.
+
+  app.project.renderQueue.item(2).setSettings( rqItem1_settable_str );
+
+  // Set render queue item 3 with values you create.
+
+  var my_renderSettings = {
+    "Color Depth":        "32 bits per channel",
+    "Quality":            "Best",
+    "Effects":            "All On",
+    "Time Span Duration": "1.0",
+    "Time Span Start":    "2.0"
+  };
+
+  app.project.renderQueue.item(2).setSettings( my_renderSettings );
