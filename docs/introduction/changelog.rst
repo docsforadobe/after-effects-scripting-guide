@@ -66,7 +66,7 @@ What's new and changed for scripting?
 	- Added: :ref:`Project.workingSpace`
 	- Added: :ref:`Project.workingGamma`
 	- Added: :ref:`Project.listColorProfiles`
-	- Added: :ref:`Project.Project.linearizeWorkingSpace`
+	- Added: :ref:`Project.linearizeWorkingSpace`
 	- Added: :ref:`Project.compensateForSceneReferredProfiles`
 - Scripting access to the expression engine attribute:
 	- Added: :ref:`Project.expressionEngine`
@@ -95,7 +95,7 @@ What's new and changed for scripting?
 	- Added: :ref:`CompItem.exportAsMotionGraphicsTemplate`
 	- Added: :ref:`CompItem.openInEssentialGraphics`
 	- Added: :ref:`Property.addToMotionGraphicsTemplate`
-	- Added: :ref:`CompItem.canAddToMotionGraphicsTemplate`
+	- Added: :ref:`Property.canAddToMotionGraphicsTemplate`
 
 ----
 

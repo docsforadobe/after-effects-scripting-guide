@@ -77,9 +77,9 @@ Creates a new paragraph (box) text layer and adds the new :ref:`TextLayer` to th
 
 **Parameters**
 
-==============  ===============================================================
-``[width, height]``  An :ref:`Array` containing the dimensions of the new text box.
-==============  ===============================================================
+===================  =======================================================
+``[width, height]``  An Array containing the dimensions of the new text box.
+===================  =======================================================
 
 **Returns**
 

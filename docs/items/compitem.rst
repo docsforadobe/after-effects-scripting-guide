@@ -327,7 +327,7 @@ Integer (between 2 and 64); read/write.
 .. _CompItem.motionGraphicsTemplateControllerCount:
 
 CompItem.motionGraphicsTemplateControllerCount
-*********************************************
+**********************************************
 
 ``app.project.item(index).motionGraphicsTemplateControllerCount``
 
@@ -645,7 +645,7 @@ Boolean.
 .. _CompItem.getMotionGraphicsTemplateControllerName:
 
 CompItem.getMotionGraphicsTemplateControllerName()
-*********************************************
+**************************************************
 
 ``app.project.item(index).getMotionGraphicsTemplateControllerName(index)``
 
@@ -683,7 +683,7 @@ CompItem.setMotionGraphicsControllerName()
 Sets the name of a single property in the Essential Graphics panel.
 
 .. note::
-   To rename a property as it is added to the EGP, see :ref:`Property.addToMotionGraphicsTemplateAs()`.
+   To rename a property as it is added to the EGP, see :ref:`Property.addToMotionGraphicsTemplateAs`.
 
 **Parameters**
 

@@ -609,9 +609,9 @@ Adds the property to the Essential Graphics panel for the specified composition.
 
 Returns true if the property is successfully added, false otherwise.
 
-If the property is not added, it is either because it is not one of the supported property types or the property has already been added to that
-composition. After Effects will present a warning dialog. Use the canAddToMotionGraphicsTemplate() method to test whether the property can be
-added to a Motion Graphics template.
+If the property is not added, it is either because it is not one of the supported property types or the property has already been added to that composition. After Effects will present a warning dialog.
+
+Use the :ref:`Property.canAddToMotionGraphicsTemplate` method to test whether the property can be added to a Motion Graphics template.
 
 **Parameters**
 
@@ -642,9 +642,9 @@ Adds the property to the Essential Graphics panel for the specified composition,
 
 Returns true if the property is successfully added, false otherwise.
 
-If the property is not added, it is either because it is not one of the supported property types or the property has already been added to that
-composition. After Effects will present a warning dialog. Use the canAddToMotionGraphicsTemplate() method to test whether the property can be
-added to a Motion Graphics template.
+If the property is not added, it is either because it is not one of the supported property types or the property has already been added to that composition, After Effects will present a warning dialog.
+
+Use the :ref:`Property.canAddToMotionGraphicsTemplate` method to test whether the property can be added to a Motion Graphics template.
 
 **Parameters**
 
