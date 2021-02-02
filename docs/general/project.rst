@@ -70,6 +70,31 @@ Boolean; read/write.
 
 ----
 
+.. _Project.dirty:
+
+Project.dirty
+*********************************************
+
+``app.project.dirty``
+
+.. note::
+  This functionality was added in After Effects 17.5 (CC2020).
+
+.. warning::
+  This method/property is officially undocumented and was found via research. The information here may be inaccurate, and this whole method/property may disappear or stop working some point. Please contribute if you have more information on it!
+
+**Description**
+
+True if the project has been modified from the last save; otherwise false.
+
+"Dirty" projects will have an ``*`` in the project window title.
+
+**Type**
+
+Boolean; read-only.
+
+----
+
 .. _Project.displayStartFrame:
 
 Project.displayStartFrame
@@ -243,7 +268,7 @@ A ``GpuAccelType`` enumerated value; read/write. One of:
     // check the current value and alert the user
 
     switch (currentGPUSettings) {
-        case GpuAccelType.CUDA: 
+        case GpuAccelType.CUDA:
             type_str = "CUDA";
             break;
         case GpuAccelType.METAL:
