@@ -117,6 +117,63 @@ The Property object contains value, keyframe, and expression information about a
 Attributes
 ==========
 
+.. _Property.alternateSource:
+
+Property.alternateSource
+*********************************************
+
+``app.project.item(index).layer(index).propertySpec.alternateSource``
+
+.. note::
+    This functionality was added in After Effects 18.0 (2021)
+
+**Description**
+
+The value is null when:  
+
+- The alternate source is not set for the associated layer.  
+- The property cannot be used to set an alternate source.  
+
+Use :ref:`Property.canSetAlternateSource` to determine if the property is a Media Replacement Essential Property.
+
+All Media Replacement Layers have an alternate source item that can be set.
+
+A layer is “marked” for media replacement when the layer is added to the Essential Graphics Panel (see :ref:`AVLayer.addToMotionGraphicsTemplate` or :ref:`AVLayer.addToMotionGraphicsTemplateAs`).
+
+ 
+- If present, the render workflow will pick up the alternate source while rendering the layer.
+- If the alternate source for the layer is not set, then the source layer of the Media Replacement control is used for rendering (this is the normal workflow).
+
+Use :ref:`Property.setAlternateSource` to change the value.
+
+**Type**
+
+AVItem object; read-only.
+
+----
+
+.. _Property.canSetAlternateSource:
+
+Property.canSetAlternateSource
+*********************************************
+
+``app.project.item(index).layer(index).propertySpec.canSetAlternateSource``
+
+.. note::
+    This functionality was added in After Effects 18.0 (2021)
+
+**Description**
+
+Test whether the property is an Essential Property that supports Media Replacement.
+
+Returns true if the property allows Media Replacement, false otherwise.
+
+**Type**
+
+Boolean; read-only.
+
+----
+
 .. _Property.canSetExpression:
 
 Property.canSetExpression
@@ -1188,6 +1245,37 @@ Removes the specified keyframe from the named property. If no keyframe with the 
               :ref:`addKey <property.addKey>` or
               :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
 ============  ===================================================
+
+**Returns**
+
+Nothing.
+
+----
+
+.. _Property.setAlternateSource:
+
+Property.setAlternateSource()
+*********************************************
+
+``app.project.item(index).layer(index).propertySpec.setAlternateSource(newSource)``
+
+.. note::
+    This functionality was added in After Effects 18.0 (2021)
+
+**Description**
+
+Set the alternate source for this property.  
+
+The Property object and the input parameters for the AVItem that is being called needs to be Media Replacement compatible for the action to go through.  
+
+- Use the :ref:`AVItem.isMediaReplacementCompatible` method to test whether the AVItem can be used as an alternate source for Media Replacement.  
+- Use :ref:`Property.canSetAlternateSource` to test if the property allows Media Replacement. 
+
+**Parameters**
+
+============= ===================================================
+``newSource`` The new source AVItem object. Required.
+============= ===================================================
 
 **Returns**
 
