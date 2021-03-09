@@ -609,7 +609,7 @@ Adds the property to the Essential Graphics panel for the specified composition.
 
 Returns true if the property is successfully added, false otherwise.
 
-If the property is not added, it is either because it is not one of the supported property types or the property has already been added to that composition. After Effects will present a warning dialog.
+If the property is not added, it is either because it is not one of the supported property types or the property has already been added to the EGP for that composition. After Effects will present a warning dialog if the property cannot be added to the EGP.
 
 Use the :ref:`Property.canAddToMotionGraphicsTemplate` method to test whether the property can be added to a Motion Graphics template.
 
@@ -631,7 +631,7 @@ Boolean.
 Property.addToMotionGraphicsTemplateAs()
 *********************************************
 
-``app.project.item(index).layer(index).propertySpec.addToMotionGraphicsTemplateAs(comp,name)``
+``app.project.item(index).layer(index).propertySpec.addToMotionGraphicsTemplateAs(comp, name)``
 
 .. note::
    This functionality was added in After Effects 16.1 (CC 2019)
@@ -642,7 +642,7 @@ Adds the property to the Essential Graphics panel for the specified composition,
 
 Returns true if the property is successfully added, false otherwise.
 
-If the property is not added, it is either because it is not one of the supported property types or the property has already been added to that composition, After Effects will present a warning dialog.
+If the property is not added, it is either because it is not one of the supported property types or the property has already been added to the EGP for that composition. After Effects will present a warning dialog if the property cannot be added to the EGP.
 
 Use the :ref:`Property.canAddToMotionGraphicsTemplate` method to test whether the property can be added to a Motion Graphics template.
 
@@ -672,9 +672,11 @@ Property.canAddToMotionGraphicsTemplate()
 
 **Description**
 
-Test whether or not the property can be added to the Essential Graphics panel for the specified composition. Returns true if the property can be added, false otherwise.
+Test whether or not the property can be added to the Essential Graphics panel for the specified composition.
 
-If the property can not be added, it is either because it is not one of the supported property types or the property has already been added to that composition. After Effects will present a warning dialog.
+Returns true if the property can be added, false otherwise.
+
+If the property can not be added, it is either because it is not one of the supported property types or the property has already been added to the EGP for that composition. After Effects will present a warning dialog if the property cannot be added to the EGP.
 
 Supported property types are:
 
@@ -686,8 +688,8 @@ Supported property types are:
 **Parameters**
 
 ========  ====================================================================
-``comp``  The composition that you wish to test adding the property to, a
-          CompItem. Required.
+``comp``  The composition that you wish to add the property to, a CompItem.
+          Required.
 ========  ====================================================================
 
 **Returns**
