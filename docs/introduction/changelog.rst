@@ -8,6 +8,24 @@ What's new and changed for scripting?
 
 ----
 
+.. _Changelog.18.0:
+
+`After Effects 18.0 <https://helpx.adobe.com/after-effects/using/whats-new/2020-2.html>`_ (March 2021)
+************************************************************************************************************************************
+
+- Scripting methods and attributes to support Media Replacement
+	- Added: :ref:`AVItem.isMediaReplacementCompatible`
+	- Added: :ref:`AVLayer.addToMotionGraphicsTemplate`
+	- Added: :ref:`AVLayer.addToMotionGraphicsTemplateAs`
+	- Added: :ref:`AVLayer.canAddToMotionGraphicsTemplate`
+	- Added: :ref:`Property.alternateSource`
+	- Added: :ref:`Property.canSetAlternateSource`
+	- Added: :ref:`Property.setAlternateSource`
+	- Added relevant :ref:`match names <matchnames-layer-avlayer>`
+- Added :ref:`match name for Essential Properties <matchnames-layer-avlayer>` property group.
+
+----
+
 .. _Changelog.17.1.1:
 
 `After Effects 17.1.1 <https://helpx.adobe.com/after-effects/using/whats-new/2020-1.html>`_ (May 2020)
