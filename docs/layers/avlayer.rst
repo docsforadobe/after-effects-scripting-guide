@@ -623,6 +623,72 @@ Floating-point; read-only.
 Methods
 =======
 
+.. _AVLayer.addToMotionGraphicsTemplate:
+
+AVLayer.addToMotionGraphicsTemplate()
+*********************************************
+
+``app.project.item(index).layer(index).addToMotionGraphicsTemplate(comp)``
+
+.. note::
+   This functionality was added in After Effects 18.0 (2021)
+
+**Description**
+
+Adds the layer to the Essential Graphics Panel for the specified composition.
+
+Returns true if the layer is successfully added, or false otherwise.
+
+- If the layer cannot be added, it is either because it is not a layer type for which media can be replaced (referred to as Media Replacement Layers), or the layer has already been added to the EGP for that composition. After Effects will present a warning dialog if the layer cannot be added to the EGP.
+
+- Use the :ref:`AVLayer.canAddToMotionGraphicsTemplate` method to test whether the layer can be added to a Motion Graphics template.
+
+**Parameters**
+
+========  ===========================================================================================
+``comp``  A CompItem object; the composition where you wish to add the property to the EGP. Required.
+========  ===========================================================================================
+
+**Returns**
+
+Boolean.
+
+----
+
+.. _AVLayer.addToMotionGraphicsTemplateAs:
+
+AVLayer.addToMotionGraphicsTemplateAs()
+*********************************************
+
+``app.project.item(index).layer(index).addToMotionGraphicsTemplateAs(comp, name)``
+
+.. note::
+   This functionality was added in After Effects 18.0 (2021)
+
+**Description**
+
+Adds the layer to the Essential Graphics Panel for the specified composition. 
+
+Returns true if the layer is successfully added, or false otherwise. 
+
+- If the layer cannot be added, it is either because it is not a layer type for which media can be replaced (referred to as Media Replacement Layers), or the layer has already been added to the EGP for that composition. After Effects will present a warning dialog if the layer cannot be added to the EGP.
+
+- Use the :ref:`AVLayer.canAddToMotionGraphicsTemplate` method to test whether the layer can be added to a Motion Graphics template. 
+
+**Parameters**
+
+====================  ========================================================
+``comp``              A CompItem object; the composition where you wish to add   
+                      the property to the EGP. Required.
+``name``              A string for the new name. Required.
+====================  ========================================================
+
+**Returns**
+
+Boolean.
+
+----
+
 .. _AVLayer.audioActiveAtTime:
 
 AVLayer.audioActiveAtTime()
@@ -683,6 +749,50 @@ An Object with the transformation properties set.
     for (var sel in transform) {
       newLayer.transform[sel].setValue(transform[sel]);
     }
+
+----
+
+.. _AVLayer.canAddToMotionGraphicsTemplate:
+
+AVLayer.canAddToMotionGraphicsTemplate()
+*********************************************
+
+``app.project.item(index).layer(index).canAddToMotionGraphicsTemplate(comp)``
+
+.. note::
+   This functionality was added in After Effects 18.0 (2021)
+
+**Description**
+
+Test whether or not the layer can be added to the Essential Graphics Panel for the specified composition.
+
+Returns true if the layer can be added, or false otherwise.
+
+If the layer cannot be added, it is either because it is not a layer type for which media can be replaced (referred to as Media Replacement Layers), or the layer has already been added to the EGP for that composition.
+
+Media Replacement layers are recognized as AVLayers with an :ref:`AVLayer.source` set to a :ref:`FootageItem` (with specific source types) or a :ref:`CompItem`.
+
+The AVLayer needs to comply with the restrictions below in order to be treated as a Media Replacement layer:
+
+- :ref:`Layer.hasVideo` should return true.
+
+- :ref:`AVLayer.adjustmentLayer` should return false.
+
+- :ref:`Layer.nullLayer` should return false.
+
+- If the :ref:`AVLayer.source` is a :ref:`FootageItem`, then FootageItem.FootageSource should not be a :ref:`SolidSource`. 
+
+- If the :ref:`AVLayer.source` is a :ref:`FootageItem` and the FootageItem.FootageSource is a :ref:`FileSource` then that FileSource should not point to a non-media file e.g. a JSX script file.
+
+**Parameters**
+
+========  ===========================================================================================
+``comp``  A CompItem object; the composition where you wish to add the property to the EGP. Required.
+========  ===========================================================================================
+
+**Returns**
+
+Boolean.
 
 ----
 
