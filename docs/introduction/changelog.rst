@@ -87,7 +87,7 @@ What's new and changed for scripting?
 
 .. _Changelog.15-0:
 
-`After Effects 15.0 <https://forums.adobe.com/docs/DOC-8872>`_
+`After Effects 15.0 <https://forums.adobe.com/docs/DOC-8872>`_ (October 2017)
 ************************************************************************************************************************************
 
 - Scripting Access to motion graphics templates
@@ -101,8 +101,8 @@ What's new and changed for scripting?
 
 .. _Changelog.14-2-1:
 
-`After Effects 14.2.1 (CC 2017.2) <https://blogs.adobe.com/creativecloud/a-june-2017-update-to-after-effects-cc-is-now-available/>`_
-************************************************************************************************************************************
+`After Effects 14.2.1 (CC 2017.2) <https://blogs.adobe.com/creativecloud/a-june-2017-update-to-after-effects-cc-is-now-available/>`_ (June 2017)
+************************************************************************************************************************************************
 
 - Buttons in ScriptUI panels have been reverted to the rectangular appearance seen in After Effects 14.1 and previous releases.
 - The :ref:`AVItem.setProxyToNone` scripting method no longer fails with an error message, "After Effects error: AEGP trying to add invalid footage".
@@ -112,8 +112,8 @@ What's new and changed for scripting?
 
 .. _Changelog.14-2:
 
-`After Effects 14.2 (CC 2017.1) <https://blogs.adobe.com/creativecloud/after-effects-cc-april-2017-in-depth-scripting-improvements/>`_
-**************************************************************************************************************************************
+`After Effects 14.2 (CC 2017.1) <https://blogs.adobe.com/creativecloud/after-effects-cc-april-2017-in-depth-scripting-improvements/>`_ (April 2017)
+***************************************************************************************************************************************************
 
 - Scripting Access to text leading
 	- Added: :ref:`TextDocument.leading`
@@ -143,8 +143,8 @@ What's new and changed for scripting?
 
 .. _Changelog.14-0:
 
-`After Effects 14.0 (CC 2017) <https://forums.adobe.com/message/9108589>`_
-**************************************************************************
+`After Effects 14.0 (CC 2017) <https://forums.adobe.com/message/9108589>`_ (November 2016)
+******************************************************************************************
 
 - Scripting Access to Tools
 	- Added: :ref:`Project.toolType`
@@ -159,8 +159,8 @@ What's new and changed for scripting?
 
 .. _Changelog.13-8:
 
-`After Effects 13.8 (CC 2015.3) <https://blogs.adobe.com/creativecloud/after-effects-cc-2015-3-in-depth-gpu-accelerated-effects/>`_
-***********************************************************************************************************************************
+`After Effects 13.8 (CC 2015.3) <https://blogs.adobe.com/creativecloud/after-effects-cc-2015-3-in-depth-gpu-accelerated-effects/>`_ (June 2016)
+***********************************************************************************************************************************************
 
 - Enable GPU effect rendering via scripting
 	- Added: :ref:`Project.gpuAccelType`
@@ -170,8 +170,8 @@ What's new and changed for scripting?
 
 .. _Changelog.13-6:
 
-`After Effects 13.6 (CC 2015) <https://blogs.adobe.com/creativecloud/whats-new-and-changed-in-the-upcoming-update-to-after-effects-cc-2015/>`_
-**********************************************************************************************************************************************
+`After Effects 13.6 (CC 2015) <https://blogs.adobe.com/creativecloud/whats-new-and-changed-in-the-upcoming-update-to-after-effects-cc-2015/>`_ (November 2015)
+**************************************************************************************************************************************************************
 - Scripting access to text baselines
 	- Added: :ref:`baselineLocs <TextDocument.baselineLocs>`
 - New scripting method to generate random numbers
@@ -185,8 +185,8 @@ What's new and changed for scripting?
 
 .. _Changelog.13-2:
 
-`After Effects 13.2 (CC 2014.2) <https://blogs.adobe.com/creativecloud/after-effects-cc-2014-2-13-2/>`_
-*******************************************************************************************************
+`After Effects 13.2 (CC 2014.2) <https://blogs.adobe.com/creativecloud/after-effects-cc-2014-2-13-2/>`_ (December 2014)
+***********************************************************************************************************************
 
 - Scripting improvements for text layers (read-only)
 	- Returns boolean value:
@@ -204,15 +204,15 @@ What's new and changed for scripting?
 	- Returns array of ([X,Y]) position coordinates (paragraph text layers only):
 		- Added: :ref:`boxTextPos <TextDocument.boxTextPos>`
 - Layer space / comp space conversion:
-  - Added: :ref:`sourcePointToComp() <AVLayer.sourcePointToComp>`
-  - Added: :ref:`compPointToSource() <AVLayer.compPointToSource>`
+    - Added: :ref:`sourcePointToComp() <AVLayer.sourcePointToComp>`
+    - Added: :ref:`compPointToSource() <AVLayer.compPointToSource>`
 
 ----
 
 .. _Changelog.13-1:
 
-`After Effects 13.1 (CC 2014.1) <https://blogs.adobe.com/creativecloud/after-effects-cc-2014-1-13-1/>`_
-*******************************************************************************************************
+`After Effects 13.1 (CC 2014.1) <https://blogs.adobe.com/creativecloud/after-effects-cc-2014-1-13-1/>`_ (September 2014)
+************************************************************************************************************************
 
 - Scripting improvements for text layers (read-only)
 	- returns string:
@@ -225,8 +225,8 @@ What's new and changed for scripting?
 
 .. _Changelog.13-0:
 
-`After Effects 13.0 (CC 2014) <https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/>`_
-***********************************************************************************************************
+`After Effects 13.0 (CC 2014) <https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/>`_ (June 2014)
+**********************************************************************************************************************
 
 - Scripting access to render settings and output module settings
 	- Added: RenderQueueItem object :ref:`getSetting <RenderQueueItem.getSetting>`, :ref:`setSetting <RenderQueueItem.setSetting>` methods
@@ -240,8 +240,8 @@ What's new and changed for scripting?
 
 .. _Changelog.12-0:
 
-`After Effects 12.0 (CC) <https://blogs.adobe.com/creativecloud/scripting-changes-in-after-effects-cc-12-0-12-2/>`_
-*******************************************************************************************************************
+`After Effects 12.0 (CC) <https://blogs.adobe.com/creativecloud/scripting-changes-in-after-effects-cc-12-0-12-2/>`_ (June 2013)
+*******************************************************************************************************************************
 
 - Access to effect's internal version string
 	- Added: Application effects object's version attribute, see :ref:`app.effects`
@@ -250,3 +250,87 @@ What's new and changed for scripting?
 - Access to layer sampling method (see :ref:`samplingQuality <AVLayer.samplingQuality>`)
 - Changed preference and settings methods (see :ref:`Settings`)
 - ScriptUI is now based on the same controls as the main application.
+
+----
+
+.. _Changelog.11-0:
+
+`After Effects 11.0 (CS6) <https://web.archive.org/web/20120623073355/https://blogs.adobe.com/toddkopriva/2012/06/scripting-changes-in-after-effects-cs6-plus-new-scripting-guide.html/>`_ (April 2012)
+*******************************************************************************************************************************************************************************************************
+
+- Added: Access to :ref:`Viewer` object and controls
+    - Added: :ref:`app.activeViewer`
+    - Added: :ref:`AVLayer.openInViewer` to open a layer in the layer viewer
+    - Added: :ref:`CompItem.openInViewer` to open a composition in the composition viewer
+    - Added: :ref:`FootageItem.openInViewer` to open a footage item in the footage viewer
+- Added: :ref:`Property.canSetExpression`
+- Added: :ref:`AVLayer.environmentLayer`
+- Added: :ref:`MaskPropertyGroup.maskFeatherFalloff`
+- Access to Shape Feather properties via scripting
+    - Added: :ref:`Shape.featherSegLocs`
+    - Added: :ref:`Shape.featherRelSegLocs`
+    - Added: :ref:`Shape.featherRadii`
+    - Added: :ref:`Shape.featherInterps`
+    - Added: :ref:`Shape.featherTensions`
+    - Added: :ref:`Shape.featherTypes`
+    - Added: :ref:`Shape.featherRelCornerAngles`
+
+----
+
+.. _Changelog.10-5:
+
+`After Effects 10.5 (CS5.5) <https://web.archive.org/web/20121022055915/http://blogs.adobe.com/toddkopriva/2008/12/after-effects-cs4-scripting-ch.html/>`_ (April 2011)
+***********************************************************************************************************************************************************************
+
+- Added to the :ref:`Project` object:
+    - :ref:`Project.framesCountType`
+    - :ref:`Project.feetFramesFilmType`
+    - :ref:`Project.framesUseFeetFrames`
+    - :ref:`Project.footageTimecodeDisplayStartType`
+    - :ref:`Project.timeDisplayType`
+- Removed from the :ref:`Project` object:
+    - ``timecodeDisplayType`` attribute
+    - ``timecodeBaseType`` attribute
+    - ``timecodeNTSCDropFrame`` attribute
+    - ``timecodeFilmType`` attribute
+    - ``TimecodeDisplayType`` enum
+    - ``TimecodeFilmType`` enum
+    - ``TimecodeBaseType`` enum
+- Added: :ref:`CompItem.dropFrame`
+- Added support for Paragraph Box Text:
+    - Added :ref:`LayerCollection.addBoxText`
+    - Added :ref:`TextDocument.boxText`
+    - Added :ref:`TextDocument.pointText`
+    - Added :ref:`TextDocument.boxTextSize`
+- Added :ref:`LightLayer.lightType`
+
+----
+
+.. _Changelog.9-0:
+
+`After Effects 9.0 (CS4) <https://web.archive.org/web/20121022055915/http://blogs.adobe.com/toddkopriva/2008/12/after-effects-cs4-scripting-ch.html/>`_ (September 2008)
+************************************************************************************************************************************************************************
+
+- Added: :ref:`app.isoLanguage`
+- Added: :ref:`MarkerValue.duration`
+- Added: :ref:`OutputModule.includeSourceXMP`
+- Added: :ref:`Project.xmpPacket`
+- Added the following Property methods and attributes related to the Separate Dimensions feature:
+    - :ref:`Property.dimensionsSeparated`
+    - :ref:`Property.getSeparationFollower`
+    - :ref:`Property.isSeparationFollower`
+    - :ref:`Property.isSeparationLeader`
+    - :ref:`Property.separationDimension`
+    - :ref:`Property.separationLeader`
+- Added :ref:`TextDocument` access, including:
+    - Added: :ref:`TextDocument.applyFill`
+    - Added: :ref:`TextDocument.applyStroke`
+    - Added: :ref:`TextDocument.fillColor`
+    - Added: :ref:`TextDocument.font`
+    - Added: :ref:`TextDocument.fontSize`
+    - Added: :ref:`TextDocument.justification`
+    - Added: :ref:`TextDocument.resetCharStyle`
+    - Added: :ref:`TextDocument.resetParagraphStyle`
+    - Added: :ref:`TextDocument.strokeColor`
+    - Added: :ref:`TextDocument.strokeOverFill`
+    - Added: :ref:`TextDocument.strokeWidth`
