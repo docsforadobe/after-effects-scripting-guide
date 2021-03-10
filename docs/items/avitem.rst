@@ -156,6 +156,34 @@ Integer in the range [1...30000]; read/write, except as noted.
 
 ----
 
+.. _AVItem.isMediaReplacementCompatible:
+
+AVItem.isMediaReplacementCompatible
+*********************************************
+
+``app.project.item(index).isMediaReplacementCompatible``
+
+.. note::
+    This functionality was added in After Effects 18.0 (2021)
+
+**Description**
+
+Test whether the AVItem can be used as an alternate source when calling :ref:`Property.setAlternateSource`.
+
+Returns true if the item can be used, or false otherwise. 
+
+A CompItem or a FootageItem can be used as an alternate source for the layer, with some restrictions:
+
+-  If the AVItem is a :ref:`FootageItem`, then FootageItem.FootageSource should not be a :ref:`SolidSource`.
+-  If the AVItem is a :ref:`FootageItem` and the FootageItem.FootageSource is a :ref:`FileSource` then that FileSource should not point to a non-media file e.g. a JSX script file.
+-  Setting the AVItem cannot create a cyclical reference within the project.
+
+**Type**
+
+Boolean; read only. 
+
+----
+
 .. _AVItem.name:
 
 AVItem.name
