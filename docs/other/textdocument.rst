@@ -761,36 +761,6 @@ Floating-point value; read-only.
 Methods
 =======
 
-.. _TextDocument.compPointToSource:
-
-TextDocument.compPointToSource()
-*********************************************
-
-``textDocument.compPointToSource()``
-
-.. note::
-   This functionality was added in After Effects 13.2 (CC 2014.2)
-
-**Description**
-
-Converts composition coordinates, such as ``sourcePointToComp``, to layer coordinates.
-
-.. warning::
-  This method only works on paragraph text layers.
-  This value only reflects the first character in the text layer at the current time.
-
-**Parameters**
-
-=====================  =====================================================================
-``sourcePointToComp``  A position array of composition coordinates in ([X, Y]) format.
-=====================  =====================================================================
-
-**Returns**
-
-Array of ([X,Y]) position coordinates; read-only.
-
-----
-
 .. _TextDocument.resetCharStyle:
 
 TextDocument.resetCharStyle()
@@ -830,41 +800,3 @@ None.
 **Returns**
 
 Nothing.
-
-----
-
-.. _TextDocument.sourcePointToComp:
-
-TextDocument.sourcePointToComp()
-*********************************************
-
-``textDocument.sourcePointToComp()``
-
-.. note::
-   This functionality was added in After Effects 13.2 (CC 2014.2)
-
-**Description**
-
-Converts layer coordinates, such as ``boxTextPos``, to composition coordinates.
-
-.. warning::
-  This method only works on paragraph text layers.
-  This value only reflects the first character in the text layer at the current time.
-
-**Parameters**
-
-==============  =====================================================================
-``boxTextPos``  A position array of layer coordinates in ([X, Y]) format.
-==============  =====================================================================
-
-**Returns**
-
-Array of ([X,Y]) position coordinates; read-only.
-
-**Example**
-
-.. code:: javascript
-
-    // For a paragraph text layer.
-    // Converts position in layer coordinates to comp coordinates.
-    var boxTextCompPos = myTextLayer.sourcePointToComp(boxTextLayerPos);
