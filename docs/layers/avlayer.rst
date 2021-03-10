@@ -686,6 +686,35 @@ An Object with the transformation properties set.
 
 ----
 
+.. _AVLayer.compPointToSource:
+
+AVLayer.compPointToSource()
+*********************************************
+
+``app.project.item(index).layer(index).compPointToSource()``
+
+.. note::
+   This functionality was added in After Effects 13.2 (CC 2014.2)
+
+**Description**
+
+Converts composition coordinates, such as ``sourcePointToComp``, to layer coordinates.
+
+.. warning::
+  This value only reflects the first character in the text layer at the current time.
+
+**Parameters**
+
+=====================  =====================================================================
+``sourcePointToComp``  A position array of composition coordinates in ([X, Y]) format.
+=====================  =====================================================================
+
+**Returns**
+
+Array of ([X,Y]) position coordinates; read-only.
+
+----
+
 .. _AVLayer.openInViewer:
 
 AVLayer.openInViewer()
@@ -735,6 +764,43 @@ Nothing.
 
 .. warning::
   If this method is performed on a null layer, the layers ``isNull`` attribute is not changed from ``true``. This causes the layer not to be visible in comp viewer and renders.
+
+----
+
+.. _AVLayer.sourcePointToComp:
+
+AVLayer.sourcePointToComp()
+*********************************************
+
+``app.project.item(index).layer(index).sourcePointToComp()``
+
+.. note::
+    This functionality was added in After Effects 13.2 (CC 2014.2)
+
+**Description**
+
+Converts layer coordinates, such as ``boxTextPos``, to composition coordinates.
+
+.. warning::
+  This value only reflects the first character in the text layer at the current time.
+
+**Parameters**
+
+==============  =====================================================================
+``boxTextPos``  A position array of layer coordinates in ([X, Y]) format.
+==============  =====================================================================
+
+**Returns**
+
+Array of ([X,Y]) position coordinates; read-only.
+
+**Example**
+
+.. code:: javascript
+
+    // For a paragraph text layer.
+    // Converts position in layer coordinates to comp coordinates.
+    var boxTextCompPos = myTextLayer.sourcePointToComp(boxTextLayerPos);
 
 ----
 
