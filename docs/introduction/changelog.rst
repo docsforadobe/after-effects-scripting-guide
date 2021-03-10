@@ -10,7 +10,7 @@ What's new and changed for scripting?
 
 .. _Changelog.18.0:
 
-`After Effects 18.0 <https://helpx.adobe.com/after-effects/using/whats-new/2020-2.html>`_ (March 2021)
+`After Effects 18.0 <https://helpx.adobe.com/after-effects/using/whats-new/2021-2.html>`_ (March 2021)
 ************************************************************************************************************************************
 
 - Scripting methods and attributes to support Media Replacement
