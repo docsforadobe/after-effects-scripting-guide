@@ -220,17 +220,17 @@ String; read-only.
 
 **Localized strings**
 
-| en_US 	| Composition    	| Folder     	| Footage             	|
-|-------	|----------------	|------------	|---------------------	|
-| de_DE 	| Komposition    	| Ordner     	| Footage             	|
-| es_ES 	| Composición    	| Carpeta    	| Material de archivo 	|
-| fr_FR 	| Composition    	| Dossier    	| Métrage             	|
-| it_IT 	| Composizione   	| Cartella   	| Metraggio           	|
-| ja_JP 	| コンポジション 	| フォルダー 	| フッテージ          	|
-| ko_KR 	| 컴포지션       	| 폴더       	| 푸티지              	|
-| pt_BR 	| Composição     	| Pasta      	| Gravação            	|
-| ru_ru 	| Композиция     	| Папка      	| Видеоряд            	|
-| zh_CN 	| 合成           	| 文件夹     	| 素材                	|
+===========   ===============  ============  ==============
+``en_US``     **Composition**  **Folder**    **Footage**
+``de_DE``     Komposition      Ordner        Material de archivo
+``fr_FR``     Composition      Dossier       Métrage
+``it_IT``     Composizione     Cartella      Metraggio
+``ja_JP``     コンポジション     フォルダー      フッテージ
+``ko_KR``     컴포지션           폴더           푸티지
+``pt_BR``     Composição       Pasta         Gravação
+``ru_ru``     Композиция       Папка         Видеоряд
+``zh_CN``     合成              文件夹         素材
+===========   ===============  ============  ==============
 
 **Example**
 
