@@ -222,7 +222,8 @@ String; read-only.
 
 ===========   ===============  ============  ==============
 ``en_US``     **Composition**  **Folder**    **Footage**
-``de_DE``     Komposition      Ordner        Material de archivo
+``de_DE``     Komposition      Ordner        Footage
+``es_ES``     Composición      Carpeta       Material de archivo
 ``fr_FR``     Composition      Dossier       Métrage
 ``it_IT``     Composizione     Cartella      Metraggio
 ``ja_JP``     コンポジション     フォルダー      フッテージ
