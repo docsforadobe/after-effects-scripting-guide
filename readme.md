@@ -2,12 +2,6 @@
 
 This repo hosts the After Effects Scripting Guide RST docs, linked into a http://readthedocs.io system hosted at https://ae-scripting.docsforadobe.dev/
 
----
-
-## Description
-
-Repo hosting the AE Scripting Guide RST docs, linked into a http://readthedocs.io system hosted at http://docs.aenhancers.com
-
 This came from the Adobe After Effects CS6 Scripting Guide, and has been added to and adjusted to reflect the current state of scripting within AE.
 
 ----
@@ -32,7 +26,6 @@ You may want to build the HTML locally before pushing, in order to ensure that t
 ----
 
 ## Admonitions Usage
-
 
 Currently, the following [admonitions](http://docutils.sourceforge.net/docs/ref/rst/directives.html#admonitions) are in use in this project. Try to keep one piece of data per note, for easier parsing.
 
