@@ -1,4 +1,10 @@
-**Description**
+# After Effects Scripting Guide
+
+This repo hosts the After Effects Scripting Guide RST docs, linked into a http://readthedocs.io system hosted at https://ae-scripting.docsforadobe.dev/
+
+---
+
+## Description
 
 Repo hosting the AE Scripting Guide RST docs, linked into a http://readthedocs.io system hosted at http://docs.aenhancers.com
 
@@ -6,7 +12,7 @@ This came from the Adobe After Effects CS6 Scripting Guide, and has been added t
 
 ----
 
-**Contribution**
+## Contribution
 
 Contributors are welcome and encouraged to suggest fixes, adjustments, notes/warnings, and anything else that may help the project.
 
@@ -14,7 +20,7 @@ This project uses reStructuredText. For a reference on how to write reStructured
 
 ----
 
-**Build HTML Locally**
+## Build HTML Locally
 
 You may want to build the HTML locally before pushing, in order to ensure that the result is what you'd expect. These files aren't included in the git repo, nor are they used online; this is solely to create a local, offline version of the online docs.
 
@@ -25,10 +31,10 @@ You may want to build the HTML locally before pushing, in order to ensure that t
 
 ----
 
-**Admonitions Usage**
+## Admonitions Usage
 
 
-Currently, the following `admonitions <http://docutils.sourceforge.net/docs/ref/rst/directives.html#admonitions>`_ are in use in this project. Try to keep one piece of data per note, for easier parsing.
+Currently, the following [admonitions](http://docutils.sourceforge.net/docs/ref/rst/directives.html#admonitions) are in use in this project. Try to keep one piece of data per note, for easier parsing.
 
 	.. note::
 		Notes detail version added, and/or relevant pieces of information.
@@ -41,7 +47,7 @@ Currently, the following `admonitions <http://docutils.sourceforge.net/docs/ref/
 
 ----
 
-**Adding undocumented attributes or methods**
+## Adding undocumented attributes or methods
 
 If you find attributes or methods that are not mentioned in this documentation, and they are not publically announced by Adobe, please add this warning to attribute/method so the user knows to use it at their own risk.
 
@@ -50,7 +56,7 @@ If you find attributes or methods that are not mentioned in this documentation, 
 
 ----
 
-**Licensing & Ownership**
+## Licensing & Ownership
 
 This project exists for educational purposes only.
 
