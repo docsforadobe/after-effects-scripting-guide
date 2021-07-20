@@ -8,24 +8,51 @@ MarkerValue object
 
 **Description**
 
-The MarkerValue object represents a layer or composition marker, which associates a comment, and optionally a chapter reference point, Web-page link, or Flash Video cue point with a particular point in a layer. Create it with the constructor; all arguments except ``comment`` are optional. All arguments are strings that set in the corresponding attributes of the returned MarkerValueo bject, except ``params``. This is an array containing key-value pairs, which can then be accessed with the :ref:`getParameters() <MarkerValue.getParameters>` and :ref:`setParameters() <MarkerValue.setParameters>` methods. A script can set any number of parameter pairs; the order does not reflect the order displayed in the application. To associate a marker with a layer, set the MarkerValue object in the ``Marker`` AE property of the layer: ``layerObject.property("Marker").setValueAtTime(time, markerValueObject);`` For information on the usage of markers see "Using markers" in After Effects Help.
+The MarkerValue object represents a layer or composition marker, which associates a comment, and optionally a chapter reference point, Web-page link, or Flash Video cue point with a particular point in a layer.
+
+Create it with the constructor; all arguments except ``comment`` are optional.
+
+All arguments are strings that set in the corresponding attributes of the returned MarkerValue object, except ``params``; this is an array containing key-value pairs, which can then be accessed with the :ref:`getParameters() <MarkerValue.getParameters>` and :ref:`setParameters() <MarkerValue.setParameters>` methods.
+
+A script can set any number of parameter pairs; the order does not reflect the order displayed in the application.
+
+To associate a marker with a layer, set the MarkerValue object in the :ref:`Layer.marker` property of the layer: ``layerObject.property("Marker").setValueAtTime(time, markerValueObject);``
+
+To associate a marker with a composition, set the MarkerValue object in the :ref:`CompItem.markerProperty` property of the comp: ``compObject.markerProperty.setValueAtTime(time, markerValueObject);``
+
+For information on the usage of markers see "Using markers" in After Effects Help.
 
 **Examples**
 
--  To set a marker that says "Fade Up" at the 2 second mark:
+-  To set a **layer** marker that says "Fade Up" at the 2 second mark:
 
   .. code:: javascript
 
       var myMarker = new MarkerValue("FadeUp");
       myLayer.property("Marker").setValueAtTime(2, myMarker);
+      // or
+      myLayer.marker.setValueAtTime(2, myMarker);
+
+-  To set a **comp** marker that says "Fade Up" at the 2 second mark:
+
+.. code:: javascript
+
+      var myMarker = new MarkerValue("FadeUp");
+      comp.markerProperty.setValueAtTime(2, myMarker);
 
 - To get comment values from a particular marker:
 
   .. code:: javascript
 
-      var commentOfFirstMarker = app.project.item(1).layer(1).property("Marker").keyValue(1).comment;
-      var commentOfMarkerAtTime4 = app.project.item(1).layer(1).property("Marker").valueAtTime(4.0, true).comment;
-      var markerProperty = app.project.item(1).layer(1).property("Marker");
+      var layer = app.project.item(1).layer(1);
+      var markerProperty = layer.marker;
+
+      var commentOfFirstMarker = markerProperty.keyValue(1).comment;
+
+      // or
+      var commentOfMarkerAtTime4 = markerProperty.valueAtTime(4.0, true).comment;
+
+      // or
       var markerValueAtTimeClosestToTime4 = markerProperty.keyValue(markerProperty.nearestKeyIndex(4.0));
       var commentOfMarkerClosestToTime4 = markerValueAtTimeClosestToTime4.comment;
 

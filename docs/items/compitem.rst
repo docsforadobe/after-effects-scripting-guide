@@ -244,7 +244,9 @@ CompItem.markerProperty
 
 **Description**
 
-A :ref:`PropertyGroup` that contains all a composition's markers. Composition marker scripting has the same functionality as layer markers. See :ref:`MarkerValue`
+A :ref:`PropertyGroup` that contains all a composition's markers. Composition marker scripting has the same functionality as :ref:`Layer markers <Layer.marker>`.
+
+See :ref:`MarkerValue`.
 
 **Type**
 
@@ -263,13 +265,13 @@ The following sample code creates a project and composition, then creates two co
     var solidLayer = comp.layers.addSolid([1, 1, 1], "mylayer", 1920, 1080, 1.0);
 
     var compMarker = new MarkerValue("This is a comp marker!");
-    compMarker.duration = 1; compMarker.url = "http://www.adobe.com/aftereffects";
+    compMarker.duration = 1;
 
     var compMarker2 = new MarkerValue("Another comp marker!");
     compMarker2.duration = 1;
 
-    comp.markerProperty.setValueAtTime(1, compMarker)
-    comp.markerProperty.setValueAtTime(3, compMarker2)
+    comp.markerProperty.setValueAtTime(1, compMarker);
+    comp.markerProperty.setValueAtTime(3, compMarker2);
 
 ----
 

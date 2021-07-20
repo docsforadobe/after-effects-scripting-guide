@@ -169,6 +169,42 @@ Boolean; read/write.
 
 ----
 
+.. _Layer.marker:
+
+Layer.marker
+*********************************************
+
+``app.project.item(index).layer(index).markerProperty``
+
+**Description**
+
+A :ref:`PropertyGroup` that contains all a layer's markers. Layer marker scripting has the same functionality as :ref:`Comp markers <CompItem.markerProperty>`.
+
+See :ref:`MarkerValue`.
+
+**Type**
+
+PropertyGroup object or null; read-only.
+
+**Example**
+
+The following sample code creates two layer markers with different properties
+
+.. code:: javascript
+
+    var solidLayer = comp.layers.addSolid([1, 1, 1], "mylayer", 1920, 1080, 1.0);
+
+    var layerMarker = new MarkerValue("This is a layer marker!");
+    layerMarker.duration = 1;
+
+    var layerMarker2 = new MarkerValue("Another comp marker!");
+    layerMarker2.duration = 1;
+
+    solidLayer.marker.setValueAtTime(1, layerMarker);
+    solidLayer.marker.setValueAtTime(3, layerMarker2);
+
+----
+
 .. _Layer.nullLayer:
 
 Layer.nullLayer
