@@ -248,7 +248,13 @@ Layer.parent
 
 **Description**
 
-The parent of this layer; can be null. Offset values are calculated to counterbalance any transforms above this layer in the hierarchy, so that when you set the parent there is no apparent jump in the layer's transform. For example, if the new parent has a rotation of 30 degrees, the child layer is assigned a rotation of -30 degrees. To set the parent without changing the child layer's transform values, use the :ref:`setParentWithJump <layer.setParentWithJump>` method.
+The parent of this layer; can be null.
+
+Offset values are calculated to counterbalance any transforms above this layer in the hierarchy, so that when you set the parent there is no apparent jump in the layer's transform.
+
+For example, if the new parent has a rotation of 30 degrees, the child layer is assigned a rotation of -30 degrees.
+
+To set the parent without changing the child layer's transform values, use the :ref:`setParentWithJump <layer.setParentWithJump>` method.
 
 **Type**
 
@@ -371,7 +377,9 @@ Layer.activeAtTime()
 
 **Description**
 
-Returns true if this layer will be active at the specified time. To return true, the layer must be enabled, no other layer may be soloing unless this layer is soloed too, and the time must be between the inPoint and outPoint values of this layer.
+Returns true if this layer will be active at the specified time.
+
+To return ``true``, the layer must be enabled, no other layer may be soloing unless this layer is soloed too, and the time must be between the ``inPoint`` and ``outPoint`` values of this layer.
 
 **Parameters**
 
@@ -394,7 +402,9 @@ Layer.applyPreset()
 
 **Description**
 
-Applies the specified collection of animation settings (an animation preset) to the layer. Predefined animation preset files are installed in the Presets folder, and users can create new animation presets through the user interface.
+Applies the specified collection of animation settings (an animation preset) to the layer.
+
+Predefined animation preset files are installed in the Presets folder, and users can create new animation presets through the user interface.
 
 **Parameters**
 
@@ -418,7 +428,13 @@ Layer.copyToComp()
 
 **Description**
 
-Copies the layer into the specified composition. The original layer remains unchanged. Creates a new Layer object with the same values as this one, and prepends the new object to the :ref:`layercollection` in the target CompItem. Retrieve the copy using into ``Comp.layer(1)``. Copying in a layer changes the index positions of previously existing layers in the target composition. This is the same as copying and pasting a layer through the user interface.
+Copies the layer into the specified composition. The original layer remains unchanged.
+
+Creates a new Layer object with the same values as this one, and prepends the new object to the :ref:`layercollection` in the target CompItem. Retrieve the copy using into ``Comp.layer(1)``.
+
+Copying in a layer changes the index positions of previously existing layers in the target composition.
+
+This is the same as copying and pasting a layer through the user interface.
 
 .. note::
    As of After Effects 13.6, this method no longer causes After Effects to crash when the layer has a parent.
@@ -580,7 +596,11 @@ Layer.setParentWithJump()
 
 **Description**
 
-Sets the parent of this layer to the specified layer, without changing the transform values of the child layer. There may be an apparent jump in the rotation, translation, or scale of the child layer, as this layer's transform values are combined with those of its ancestors. If you do not want the child layer to jump, set the :ref:`parent <layer.parent>` attribute directly. In this case, an offset is calculated and set in the child layer's transform fields, to prevent the jump from occurring.
+Sets the parent of this layer to the specified layer, without changing the transform values of the child layer.
+
+There may be an apparent jump in the rotation, translation, or scale of the child layer, as this layer's transform values are combined with those of its ancestors.
+
+If you do not want the child layer to jump, set the :ref:`parent <layer.parent>` attribute directly. In this case, an offset is calculated and set in the child layer's transform fields, to prevent the jump from occurring.
 
 **Parameters**
 
