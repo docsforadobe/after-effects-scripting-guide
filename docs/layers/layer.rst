@@ -174,7 +174,7 @@ Boolean; read/write.
 Layer.marker
 *********************************************
 
-``app.project.item(index).layer(index).markerProperty``
+``app.project.item(index).layer(index).marker``
 
 **Description**
 
