@@ -18,7 +18,7 @@ This project uses reStructuredText. For a reference on how to write reStructured
 
 You may want to build the HTML locally before pushing, in order to ensure that the result is what you'd expect. These files aren't included in the git repo, nor are they used online; this is solely to create a local, offline version of the online docs.
 
-- Install ``Python 2.7``
+- Install ``Python``
 - Install ``pip``
 - Navigate to the project directory and use the command ``pip install -r requirements.txt``
 - Build the docs using ``make html``
