@@ -57,11 +57,11 @@ Description of Operators
 ==========  ==============================================================
 Operators   Description
 ==========  ==============================================================
-``new``     Allocate object.
-``delete``  Deallocate object.
-``type``    of Returns data type.
+``new``     Create new object instance.
+``delete``  Delete property from an object.
+``typeof``  Returns data type.
 ``void``    Returns undefined value.
-``.``       Structure member.
+``.``       Object member.
 ``[]``      Array element.
 ``()``      Function call.
 ``++``      Pre- or post-increment.
