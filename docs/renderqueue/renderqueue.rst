@@ -37,6 +37,24 @@ Boolean; read-only.
 
 ----
 
+.. _RenderQueue.queueNotify:
+
+RenderQueue.queueNotify
+*********************************************
+
+``app.project.renderQueue.queueNotify``
+
+**Description**
+
+Read or write the **Notify** property for the entire Render Queue. 
+This is exposed in the UI as a checkbox in the lower right corner of the Render Queue panel.
+
+**Type**
+
+Boolean; read/write.
+
+----
+
 .. _RenderQueue.items:
 
 RenderQueue.items
