@@ -418,7 +418,7 @@ Project.revision
 
 The current revision of the project. Every user action increases the revision number. New project starts at revision 1.
 
-**Returns**
+**Type**
 
 Integer; the current revision version of the project; read-only.
 
