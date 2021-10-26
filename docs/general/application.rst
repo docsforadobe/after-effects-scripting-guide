@@ -932,6 +932,9 @@ app.setMultiFrameRenderingConfig()
 
 ``app.setMultiFrameRenderingConfig(mfr_on, max_cpu_perc)``
 
+.. note::
+   This functionality was added in After Effects 22.0 (2022)
+
 **Description**
 
 Calling this function from a script will set the Multi-Frame Rendering configuration for the next render. 

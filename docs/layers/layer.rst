@@ -110,6 +110,9 @@ Layer.id
 
 ``app.project.item(index).layer(index).id``
 
+.. note::
+   This functionality was added in After Effects 22.0 (2022)
+
 **Description**
 
 Instance property on Layer which returns a unique and persistent identification number used internally to identify a Layer between sessions. 

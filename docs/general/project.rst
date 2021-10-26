@@ -930,6 +930,9 @@ Project.layerByID()
 
 ``app.project.layerByID(id)``
 
+.. note::
+   This functionality was added in After Effects 22.0 (2022)
+
 **Description**
 
 Instance method on Project which, when given a valid ID value, returns the Layer object in the Project with that given ID.

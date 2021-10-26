@@ -142,6 +142,9 @@ RenderQueueItem.queueItemNotify
 
 ``app.project.renderQueue.item(index).queueItemNotify``
 
+.. note::
+   This functionality was added in After Effects 22.0 (2022)
+
 **Description**
 
 Scripts can read and write the **Notify** checkbox for each individual item in the Render Queue. This is exposed in the UI as a checkbox next to each Render Queue item in the Notify column.

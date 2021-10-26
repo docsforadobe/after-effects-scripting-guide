@@ -235,6 +235,9 @@ Property.essentialPropertySource
 
 ``app.project.item(index).layer(index).essentialProperty.property(index).essentialPropertySource``
 
+.. note::
+   This functionality was added in After Effects 22.0 (2022)
+
 **Description**
 
 Instance property on an Essential Property object which returns the original source Property which was used to create the Essential Property.
