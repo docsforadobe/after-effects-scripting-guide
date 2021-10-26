@@ -771,6 +771,9 @@ The AVLayer needs to comply with the restrictions below in order to be treated a
 **Returns**
 
 Boolean.
+
+----
+
 .. _AVLayer.compPointToSource:
 
 AVLayer.compPointToSource()
