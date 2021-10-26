@@ -44,6 +44,9 @@ RenderQueue.queueNotify
 
 ``app.project.renderQueue.queueNotify``
 
+.. note::
+   This functionality was added in After Effects 22.0 (2022)
+
 **Description**
 
 Read or write the **Notify** property for the entire Render Queue. 
