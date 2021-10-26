@@ -22,11 +22,11 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'After Effects Scripting Guide'
-copyright = u'1992-2012 Adobe Systems Incorporated'
+copyright = u'1992-2021 Adobe Systems Incorporated'
 author = u'Adobe Systems Incorporated'
 
-version = u'0.0.1'
-release = u'0.0.1'
+version = u'22.0.0'
+release = u'22.0.0'
 
 pygments_style = 'sphinx'
 
