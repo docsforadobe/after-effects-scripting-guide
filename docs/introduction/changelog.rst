@@ -8,6 +8,23 @@ What's new and changed for scripting?
 
 ----
 
+.. _Changelog.22.0:
+
+`After Effects 22.0 <https://helpx.adobe.com/after-effects/using/whats-new.html>`_ (October 2021)
+************************************************************************************************************************************
+
+- Scripting methods added
+	- Added: :ref:`Layer.id`
+	- Added: :ref:`Project.layerByID`
+	- Added: :ref:`Property.essentialPropertySource`
+- Scripting Access to Render Queue Notifications
+    - Added: :ref:`RenderQueue.queueNotify` 
+    - Added: :ref:`RenderQueueItem.queueItemNotify`
+- Scripting Access to Multi-Frame Rendering, Maximum CPU Percentage Overrides
+    - Added: :ref:`app.setMultiFrameRenderingConfig`
+
+----
+
 .. _Changelog.18.0:
 
 `After Effects 18.0 <https://helpx.adobe.com/after-effects/using/whats-new/2021-2.html>`_ (March 2021)

@@ -925,6 +925,31 @@ Nothing.
 
 ----
 
+.. _app.setMultiFrameRenderingConfig:
+
+app.setMultiFrameRenderingConfig()
+*********************************************
+
+``app.setMultiFrameRenderingConfig(mfr_on, max_cpu_perc)``
+
+**Description**
+
+Calling this function from a script will set the Multi-Frame Rendering configuration for the next render. 
+After execution of the script is complete, these settings will be reset to what was previously set in the UI. 
+
+**Parameters**
+
+================  ================================================================================================
+``mfr_on``        Boolean value. Set to ``true`` to enable Multi-Frame Rendering.
+``max_cpu_perc``  Value from 1-100 representing the maximum CPU percentage Multi-Frame Rendering should utilize. If ``mfr_on`` is set to ``false``, pass in 100.
+================  ================================================================================================
+
+**Returns**
+
+Nothing.
+
+----
+
 .. _app.setSavePreferencesOnQuit:
 
 app.setSavePreferencesOnQuit()

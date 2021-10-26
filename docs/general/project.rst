@@ -418,7 +418,7 @@ Project.revision
 
 The current revision of the project. Every user action increases the revision number. New project starts at revision 1.
 
-**Returns**
+**Type**
 
 Integer; the current revision version of the project; read-only.
 
@@ -920,6 +920,42 @@ Retrieves an item by its :ref:`Item ID <Item.id>`
 **Returns**
 
 :ref:`Item`.
+
+----
+
+.. _Project.layerByID:
+
+Project.layerByID()
+*********************************************
+
+``app.project.layerByID(id)``
+
+**Description**
+
+Instance method on Project which, when given a valid ID value, returns the Layer object in the Project with that given ID.
+
+**Parameters**
+
+===========     ======================
+``id``          A non-negative integer representing the ID of the Layer to be retrieved from the Project.
+===========     ======================
+
+**Returns**
+
+:ref:`Layer` with the given ID if it exists on the project; otherwise null. Non-valid IDs will throw an exception stating that the input parameter is not an unsigned integer.
+
+**Example**
+
+.. code:: javascript
+
+   var firstComp = app.project.item(1);
+   var firstLayer = firstComp.layer(1);
+   var layerID = firstLayer.id;
+
+   if (app.project.layerByID(layerID) === firstLayer) {
+      alert("You can get the Layer from the ID!");
+   }
+
 
 ----
 

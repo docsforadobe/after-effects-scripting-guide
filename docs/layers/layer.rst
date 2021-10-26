@@ -103,6 +103,26 @@ Boolean; read-only.
 
 ----
 
+.. _Layer.id:
+
+Layer.id
+*********************************************
+
+``app.project.item(index).layer(index).id``
+
+**Description**
+
+Instance property on Layer which returns a unique and persistent identification number used internally to identify a Layer between sessions. 
+The value of the ID remains the same when the project is saved to a file and later reloaded. 
+However, when you import this project into another project, new IDs are assigned to all Layers in the imported project. 
+The ID is not displayed anywhere in the user interface..
+
+**Type**
+
+Integer; read-only.
+
+----
+
 .. _Layer.index:
 
 Layer.index

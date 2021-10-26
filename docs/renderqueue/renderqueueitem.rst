@@ -135,6 +135,25 @@ The collection of Output Modules for the item.
 
 ----
 
+.. _RenderQueueItem.queueItemNotify:
+
+RenderQueueItem.queueItemNotify
+*********************************************
+
+``app.project.renderQueue.item(index).queueItemNotify``
+
+**Description**
+
+Scripts can read and write the **Notify** checkbox for each individual item in the Render Queue. This is exposed in the UI as a checkbox next to each Render Queue item in the Notify column.
+
+This column is hidden by default and may need to be selected to be visible by right clicking on the Render Queue column headers and choosing Notify. 
+
+**Type**
+
+Boolean; read/write.
+
+----
+
 .. _RenderQueueItem.render:
 
 RenderQueueItem.render
