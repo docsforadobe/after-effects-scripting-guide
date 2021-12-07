@@ -607,9 +607,9 @@ Nothing.
 
 ----
 
-.. _app.executeCommand:
+.. _app.executeCommand():
 
-app.executeCommand
+app.executeCommand()
 *********************************************
 
 ``app.executeCommand(id)``
@@ -618,9 +618,12 @@ app.executeCommand
 
 Menu Commands in the GUI application have an individual ID number, which can be used as the parameter for this method. For some functions not included in the API this is the only way to access them.
 
-The :ref:`app.findMenuCommandId` method can be used to find the ID number for a command.
+The :ref:`app.findMenuCommandId()` method can be used to find the ID number for a command.
 
-The web site https://www.provideocoalition.com/after-effects-menu-command-ids/ has more information, and a list of the known numbers.
+These web sites have more information and lists of the known numbers:
+
+- https://www.provideocoalition.com/after-effects-menu-command-ids/
+- https://hyperbrew.co/blog/after-effects-command-ids/
 
 **Parameters**
 
@@ -641,18 +644,23 @@ None.
 
 ----
 
-.. _app.findMenuCommandId:
+.. _app.findMenuCommandId():
 
-app.findMenuCommandId
+app.findMenuCommandId()
 *********************************************
 
 ``app.findMenuCommandId(Command)``
 
 **Description**
 
-Menu Commands in the GUI application have an individual ID number, which can be used as a parameter for the :ref:`app.executeCommand` command. For some functions not included in the API this is the only way to access them.
+Menu Commands in the GUI application have an individual ID number, which can be used as a parameter for the :ref:`app.executeCommand()` command. For some functions not included in the API this is the only way to access them.
 
-The website https://www.provideocoalition.com/after-effects-menu-command-ids/ has more information, and a list of the known numbers.
+It should be noted that this method is not reliable across different language packages of AE, so you'll likely want to find the command ID number during development and then call it directly using the number in production.
+
+These web sites have more information and lists of the known numbers:
+
+- https://www.provideocoalition.com/after-effects-menu-command-ids/
+- https://hyperbrew.co/blog/after-effects-command-ids/
 
 **Parameters**
 
