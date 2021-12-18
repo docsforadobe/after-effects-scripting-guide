@@ -115,9 +115,9 @@ Layer.id
 
 **Description**
 
-Instance property on Layer which returns a unique and persistent identification number used internally to identify a Layer between sessions. 
-The value of the ID remains the same when the project is saved to a file and later reloaded. 
-However, when you import this project into another project, new IDs are assigned to all Layers in the imported project. 
+Instance property on Layer which returns a unique and persistent identification number used internally to identify a Layer between sessions.
+The value of the ID remains the same when the project is saved to a file and later reloaded.
+However, when you import this project into another project, new IDs are assigned to all Layers in the imported project.
 The ID is not displayed anywhere in the user interface..
 
 **Type**
@@ -457,8 +457,7 @@ Predefined animation preset files are installed in the Presets folder, and users
 **Parameters**
 
 ==============  =======================================================
-``presetName``  An ExtendScript File object for the file containing the
-                animation preset.
+``presetName``  An `Extendscript File <https://extendscript.docsforadobe.dev/file-system-access/file-object.html>`_ object for the file containing the animation preset.
 ==============  =======================================================
 
 **Returns**

@@ -9,7 +9,11 @@ ImportOptions object
 
 **Description**
 
-The ImportOptions object encapsulates the options used to import a file with the :ref:`Project.importFile` methods. The constructor takes an optional parameter, an ExtendScript File object for the file. If it is not supplied, you must explicitly set the value of the ``file`` attribute before using the object with the ``importFile`` method. For example:
+The ImportOptions object encapsulates the options used to import a file with the :ref:`Project.importFile` methods.
+
+The constructor takes an optional parameter, an `Extendscript File <https://extendscript.docsforadobe.dev/file-system-access/file-object.html>`_ object for the file.
+
+If it is not supplied, you must explicitly set the value of the ``file`` attribute before using the object with the ``importFile`` method. For example:
 
 .. code:: javascript
 
@@ -34,7 +38,7 @@ The file to be imported. If a file is set in the constructor, you can access it 
 
 **Type**
 
-ExtendScript File object; read/write.
+`Extendscript File <https://extendscript.docsforadobe.dev/file-system-access/file-object.html>`_ object; read/write.
 
 ----
 
@@ -91,7 +95,7 @@ ImportOptions.rangeEnd
 
 Sets the end clipping range of the sequence, that is going to be imported.
 
-- Creates 'missing frames' (video-bards) if the ``rangeEnd`` exceeds the duration of the sequence to be imported. 
+- Creates 'missing frames' (video-bards) if the ``rangeEnd`` exceeds the duration of the sequence to be imported.
 - Has no effect if `sequence <#importoptions-sequence>`_ is set to false.
 - Throws an exception if `forceAlphabetical <#importoptions-forcealphabetical>`_ is set to true.
 - Throws an exception if ``rangeEnd`` is less then `rangeStart <#importoptions-rangestart>`_ and resets the range to include all the files.
@@ -216,12 +220,12 @@ ImportOptions.isFileNameNumbered()
 
 **Description**
 
-Reports wether the file object is numbered, i.e. file name has a digit.
+Reports whether the file object is numbered, i.e. file name has a digit.
 
 **Parameters**
 
 ========  =====================================================================
-``file``  ExtendScript File object.
+``file``  `Extendscript File <https://extendscript.docsforadobe.dev/file-system-access/file-object.html>`_ object.
 ========  =====================================================================
 
 **Returns**
@@ -229,7 +233,7 @@ Reports wether the file object is numbered, i.e. file name has a digit.
 
 Object, containing 2 keys:
 
-- ``isNumbered``: Boolean; wether the file name contains any digit, 
+- ``isNumbered``: Boolean; wether the file name contains any digit,
 - ``num``: Integer; a number found in file name. Returns 0 when ``isNumbered`` is false.
 
 **Example**

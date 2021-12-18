@@ -27,11 +27,13 @@ FootageItem.file
 
 **Description**
 
-The ExtendScript File object for the footage's source file. If the FootageItem's ``mainSource`` is a FileSource, this is the same as :ref:`FootageItem.mainSource.file <FileSource.file>`. Otherwise it is null.
+The `Extendscript File <https://extendscript.docsforadobe.dev/file-system-access/file-object.html>`_ object for the footage's source file.
+
+If the FootageItem's ``mainSource`` is a FileSource, this is the same as :ref:`FootageItem.mainSource.file <FileSource.file>`. Otherwise it is null.
 
 **Type**
 
-File object; read-only.
+`File <https://extendscript.docsforadobe.dev/file-system-access/file-object.html>`_ object; read-only.
 
 ----
 
@@ -95,13 +97,18 @@ FootageItem.replace()
 
 **Description**
 
-Changes the source of this FootageItem to the specified file. In addition to loading the file, the method creates a new FileSource object for the file and sets mainSource to that object. In the new source object, it sets the ``name``, ``width``, ``height``, ``frameDuration``, and ``duration`` attributes (see :ref:`AVItem`) based on the contents of the file. The method preserves interpretation parameters from the previous ``mainSource`` object. If the specified file has an unlabeled alpha channel, the method estimates the alpha interpretation.
+Changes the source of this FootageItem to the specified file.
+
+In addition to loading the file, the method creates a new FileSource object for the file and sets mainSource to that object. In the new source object, it sets the ``name``, ``width``, ``height``, ``frameDuration``, and ``duration`` attributes (see :ref:`AVItem`) based on the contents of the file.
+
+The method preserves interpretation parameters from the previous ``mainSource`` object.
+
+If the specified file has an unlabeled alpha channel, the method estimates the alpha interpretation.
 
 **Parameters**
 
 ========  ==========================================================
-``file``  An ExtendScript File object for the file to be used as the
-          footage main source.
+``file``  An `Extendscript File <https://extendscript.docsforadobe.dev/file-system-access/file-object.html>`_ object for the file to be used as the footage main source.
 ========  ==========================================================
 
 ----
@@ -142,13 +149,16 @@ FootageItem.replaceWithSequence()
 
 **Description**
 
-Changes the source of this FootageItem to the specified image sequence. In addition to loading the file, the method creates a new FileSource object for the file and sets ``mainSource`` to that object. In the new source object, it sets the ``name``, ``width``, ``height``, ``frameDuration``, and ``duration`` attributes (see :ref:`AVItem`) based on the contents of the file. The method preserves interpretation parameters from the previous ``mainSource`` object. If the specified file has an unlabeled alpha channel, the method estimates the alpha interpretation.
+Changes the source of this FootageItem to the specified image sequence.
+
+In addition to loading the file, the method creates a new FileSource object for the file and sets ``mainSource`` to that object. In the new source object, it sets the ``name``, ``width``, ``height``, ``frameDuration``, and ``duration`` attributes (see :ref:`AVItem`) based on the contents of the file.
+
+The method preserves interpretation parameters from the previous ``mainSource`` object. If the specified file has an unlabeled alpha channel, the method estimates the alpha interpretation.
 
 **Parameters**
 
 =====================  =====================================================
-``file``               An ExtendScript File object for the first file in the
-                       sequence to be used as the footage main source.
+``file``               An `Extendscript File <https://extendscript.docsforadobe.dev/file-system-access/file-object.html>`_ object for the first file in the sequence to be used as the footage main source.
 ``forceAlphabetical``  When true, use the "Force alphabetical order" option.
 =====================  =====================================================
 

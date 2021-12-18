@@ -28,14 +28,14 @@ FileSource.file
 
 **Description**
 
-The ExtendScript File object for the file that defines this asset. To change the value:
+The `Extendscript File <https://extendscript.docsforadobe.dev/file-system-access/file-object.html>`_ object for the file that defines this asset. To change the value:
 
 -  If this FileSource is a :ref:`proxySource <AVItem.proxySource>` of an :ref:`AVItem <AVItem>`, call :ref:`setProxy() <AVItem.setProxy>` or :ref:`setProxyWithSequence() <AVItem.setProxyWithSequence>`.
 -  If this FileSource is a :ref:`mainSource <FootageItem.mainSource>` of a :ref:`FootageItem <FootageItem>`, call :ref:`replace() <FootageItem.replace>` or :ref:`replaceWithSequence() <FootageItem.replaceWithSequence>`.
 
 **Type**
 
-File object; read-only.
+`File <https://extendscript.docsforadobe.dev/file-system-access/file-object.html>`_ object; read-only.
 
 ----
 

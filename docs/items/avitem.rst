@@ -170,7 +170,7 @@ AVItem.isMediaReplacementCompatible
 
 Test whether the AVItem can be used as an alternate source when calling :ref:`Property.setAlternateSource`.
 
-Returns true if the item can be used, or false otherwise. 
+Returns true if the item can be used, or false otherwise.
 
 A CompItem or a FootageItem can be used as an alternate source for the layer, with some restrictions:
 
@@ -180,7 +180,7 @@ A CompItem or a FootageItem can be used as an alternate source for the layer, wi
 
 **Type**
 
-Boolean; read only. 
+Boolean; read only.
 
 ----
 
@@ -338,12 +338,18 @@ AVItem.setProxy()
 
 **Description**
 
-Sets a file as the proxy of this AVItem. Loads the specified file into a new FileSource object, sets this as the value of the ``proxySource`` attribute, and sets ``useProxy`` to true. It does not preserve the interpretation parameters, instead using the user preferences. If the file has an unlabeled alpha channel, and the user preference says to ask the user what to do, the method estimates the alpha interpretation, rather than asking the user. This differs from setting a FootageItem's ``mainSource``, but both actions are performed as in the user interface.
+Sets a file as the proxy of this AVItem.
+
+Loads the specified file into a new FileSource object, sets this as the value of the ``proxySource`` attribute, and sets ``useProxy`` to true.
+
+It does not preserve the interpretation parameters, instead using the user preferences. If the file has an unlabeled alpha channel, and the user preference says to ask the user what to do, the method estimates the alpha interpretation, rather than asking the user.
+
+This differs from setting a FootageItem's ``mainSource``, but both actions are performed as in the user interface.
 
 **Parameters**
 
 ========  ================================================================
-``file``  An ExtendScript File object for the file to be used as a proxy.
+``file``  An `Extendscript File <https://extendscript.docsforadobe.dev/file-system-access/file-object.html>`_ object for the file to be used as a proxy.
 ========  ================================================================
 
 **Returns**
@@ -423,8 +429,7 @@ If any file has an unlabeled alpha channel, and the user preference says to ask 
 **parameters**
 
 =====================  =====================================================
-``file``               An ExtendScript File object for the first file in
-                       the sequence.
+``file``               An `Extendscript File <https://extendscript.docsforadobe.dev/file-system-access/file-object.html>`_ object for the first file in the sequence.
 ``forceAlphabetical``  When true, use the "Force alphabetical order" option.
 =====================  =====================================================
 

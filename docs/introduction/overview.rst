@@ -26,7 +26,7 @@ After Effects scripts use the Adobe ExtendScript language, which is an extended 
 
 ExtendScript defines a global debugging object, the dollar (``$``) object, and a reporting utility for ExtendScript elements, the ExtendScript Reflection interface.
 
-**File and Folder Objects:** Because pathname syntax is very different in different operating systems, Adobe ExtendScript defines File and Folder objects to provide platform-independent access to the underlying file system.
+**File and Folder Objects:** Because pathname syntax is very different in different operating systems, Adobe ExtendScript defines `File <https://extendscript.docsforadobe.dev/file-system-access/file-object.html>`_ and Folder objects to provide platform-independent access to the underlying file system.
 
 **ScriptUI User Interface Module:** The ExtendScript ScriptUI module provides the ability to create and interact with user interface elements. ScriptUI provides an object model for windows and UI control elements that you can use to create a user interface for your scripts.
 
@@ -45,7 +45,7 @@ To start the ESTK, choose File > Scripts > Open Script Editor.
 
 If you choose to use another text editor to create, edit, and save scripts, be sure to choose an application that does not automatically add header information when saving files and that saves with Unicode (UTF-8) encoding. In many text editors, you can set preferences for saving with UTF-8 encoding. Some applications (such as Microsoft Word) by default add header information to files that can cause "line 0" errors in scripts, causing them to fail.
 
-For detailed information on the ExtendScript Toolkit, see the `JavaScript Tools Guide <http://estk.aenhancers.com/>`_.
+For detailed information on the ExtendScript Toolkit, see the `JavaScript Tools Guide <https://extendscript.docsforadobe.dev/>`_.
 
 The .jsx and .jsxbin file-name extensions
 =========================================

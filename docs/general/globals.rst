@@ -22,7 +22,7 @@ Global function             Description
 ``isValid()``               When true, the specified object exists.
 ==========================  ===================================================
 
-Additional global functions for standard user I/O (``alert``, ``confirm`` , and ``prompt``) and static functions for file I/O, are defined by ExtendScript; for detailed reference information, see the `JavaScript Tools Guide <http://estk.aenhancers.com/>`_.
+Additional global functions for standard user I/O (``alert``, ``confirm`` , and ``prompt``) and static functions for file I/O, are defined by ExtendScript; for detailed reference information, see the `JavaScript Tools Guide <https://extendscript.docsforadobe.dev/>`_.
 
 ----
 

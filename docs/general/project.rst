@@ -164,11 +164,11 @@ Project.file
 
 **Description**
 
-The ExtendScript File object for the file containing the project that is currently open.
+The `Extendscript File <https://extendscript.docsforadobe.dev/file-system-access/file-object.html>`_ object for the file containing the project that is currently open.
 
 **Type**
 
-File object or null if project has not been saved; read-only.
+`File <https://extendscript.docsforadobe.dev/file-system-access/file-object.html>`_ object or null if project has not been saved; read-only.
 
 ----
 
@@ -646,7 +646,7 @@ Project.xmpPacket
 
 **Description**
 
-The project's XMP metadata, stored as RDF (XML-based). For more information on XMP, see the `JavaScript Tools Guide <http://estk.aenhancers.com/>`_.
+The project's XMP metadata, stored as RDF (XML-based). For more information on XMP, see the `JavaScript Tools Guide <https://extendscript.docsforadobe.dev/>`_.
 
 **Type**
 
@@ -767,7 +767,9 @@ Project.importFile()
 
 **Description**
 
-Imports the file specified in the specified ImportOptions object, using the specified options. Same as the File > Import File command. Creates and returns a new FootageItem object from the file, and adds it to the project's items array.
+Imports the file specified in the specified ImportOptions object, using the specified options. Same as the File > Import File command.
+
+Creates and returns a new FootageItem object from the file, and adds it to the project's items array.
 
 **Parameters**
 
@@ -1004,12 +1006,14 @@ Project.save()
 
 **Description**
 
-Saves the project. The same as the File > Save or File > Save As command. If the project has never previously been saved and no file is specified, prompts the user for a location and file name. Pass a File object to save a project to a new file without prompting.
+Saves the project. The same as the File > Save or File > Save As command. If the project has never previously been saved and no file is specified, prompts the user for a location and file name.
+
+Pass a `File <https://extendscript.docsforadobe.dev/file-system-access/file-object.html>`_ object to save a project to a new file without prompting.
 
 **Parameters**
 
 ========  ============================================================
-``file``  Optional. An ExtendScript File object for the file to save.
+``file``  Optional. An `Extendscript File <https://extendscript.docsforadobe.dev/file-system-access/file-object.html>`_ object for the file to save.
 ========  ============================================================
 
 **Returns**

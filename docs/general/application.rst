@@ -724,9 +724,7 @@ Opens a project.
 **Parameters**
 
 =========  =========  ==============================
-``file``   Optional   An ExtendScript File object for the project file
-                      to open. If not supplied, the method prompts the user
-                      to select a project file.
+``file``   Optional   An `Extendscript File <https://extendscript.docsforadobe.dev/file-system-access/file-object.html>`_ object for the project file to open. If not supplied, the method prompts the user to select a project file.
 =========  =========  ==============================
 
 **Returns**
@@ -945,8 +943,8 @@ app.setMultiFrameRenderingConfig()
 
 **Description**
 
-Calling this function from a script will set the Multi-Frame Rendering configuration for the next render. 
-After execution of the script is complete, these settings will be reset to what was previously set in the UI. 
+Calling this function from a script will set the Multi-Frame Rendering configuration for the next render.
+After execution of the script is complete, these settings will be reset to what was previously set in the UI.
 
 **Parameters**
 
