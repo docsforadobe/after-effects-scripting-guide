@@ -804,7 +804,7 @@ Sets the folder that will be shown in the file import dialog. This location will
 **Parameters**
 
 ==========   ===========================
-``folder``   ExtendScript Folder object.
+``folder``   `Extendscript Folder <https://extendscript.docsforadobe.dev/file-system-access/folder-object.html>`_ object.
 ==========   ===========================
 
 **Returns**

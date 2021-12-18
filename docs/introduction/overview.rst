@@ -26,7 +26,7 @@ After Effects scripts use the Adobe ExtendScript language, which is an extended 
 
 ExtendScript defines a global debugging object, the dollar (``$``) object, and a reporting utility for ExtendScript elements, the ExtendScript Reflection interface.
 
-**File and Folder Objects:** Because pathname syntax is very different in different operating systems, Adobe ExtendScript defines `File <https://extendscript.docsforadobe.dev/file-system-access/file-object.html>`_ and Folder objects to provide platform-independent access to the underlying file system.
+**File and Folder Objects:** Because pathname syntax is very different in different operating systems, Adobe ExtendScript defines `File <https://extendscript.docsforadobe.dev/file-system-access/file-object.html>`_ and `Folder <https://extendscript.docsforadobe.dev/file-system-access/folder-object.html>`_ objects to provide platform-independent access to the underlying file system.
 
 **ScriptUI User Interface Module:** The ExtendScript ScriptUI module provides the ability to create and interact with user interface elements. ScriptUI provides an object model for windows and UI control elements that you can use to create a user interface for your scripts.
 

@@ -24,11 +24,11 @@ OutputModule.file
 
 **Description**
 
-The ExtendScript File object for the file this output module is set to render.
+The `Extendscript File <https://extendscript.docsforadobe.dev/file-system-access/file-object.html>`_ object for the file this output module is set to render.
 
 **Type**
 
-ExtendScript File object; read/write.
+`Extendscript File <https://extendscript.docsforadobe.dev/file-system-access/file-object.html>`_ object; read/write.
 
 ----
 

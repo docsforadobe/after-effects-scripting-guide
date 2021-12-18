@@ -759,7 +759,7 @@ Loads color swatch data from an Adobe Swatch Exchange (ASE) file.
 **Parameters**
 
 ========  ============================
-``file``  The file specification, an ExtendScript ``File`` object.
+``file``  The file specification, an `Extendscript File <https://extendscript.docsforadobe.dev/file-system-access/file-object.html>`_ object.
 ========  ============================
 
 **Returns**
@@ -996,8 +996,7 @@ Starts a Watch Folder (network rendering) process pointed at a specified folder.
 **Parameters**
 
 ==========================  ====================================
-``folder_object_to_watch``  The ExtendScript Folder object for the folder to
-                            watch.
+``folder_object_to_watch``  The `Folder <https://extendscript.docsforadobe.dev/file-system-access/folder-object.html>`_ object for the folder to watch.
 ==========================  ====================================
 
 **Returns**
