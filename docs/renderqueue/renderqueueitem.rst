@@ -88,12 +88,12 @@ Integer; read-only.
 
 ----
 
-.. _RenderQueueItem.onStatusChanged:
+.. _RenderQueueItem.onstatus:
 
-RenderQueueItem.onStatusChanged
+RenderQueueItem.onstatus
 *********************************************
 
-``app.project.renderQueue.item(index).onStatusChanged``
+``app.project.renderQueue.item(index).onstatus``
 
 **Description**
 
@@ -113,7 +113,7 @@ A function name string, or null if no function is assigned.
         alert(app.project.renderQueue.item(1).status);
     }
 
-    app.project.renderQueue.item(1).onStatusChanged = myStatusChanged();
+    app.project.renderQueue.item(1).onstatus = myStatusChanged();
     app.project.renderQueue.item(1).render = false; // changes status and shows dialog
 
 ----

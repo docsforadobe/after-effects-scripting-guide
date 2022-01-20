@@ -144,7 +144,7 @@ RenderQueue.pauseRendering()
 
 **Description**
 
-Pauses the current rendering process, or continues a paused rendering process. This is the same as clicking Pause in the Render Queue panel during a render. You can call this method from an :ref:`RenderQueueItem.onStatusChanged` or :ref:`app.onError` callback.
+Pauses the current rendering process, or continues a paused rendering process. This is the same as clicking Pause in the Render Queue panel during a render. You can call this method from an :ref:`RenderQueueItem.onstatus` or :ref:`app.onError` callback.
 
 **Parameters**
 
@@ -168,10 +168,10 @@ RenderQueue.render()
 
 **Description**
 
-Starts the rendering process. This is the same as clicking Render in the Render Queue panel. The method does not return until the render process is complete. To pause or stop the rendering process, call :ref:`renderqueue.pauseRendering` or :ref:`renderqueue.stopRendering` from an ``onError`` or ``onStatusChanged`` callback.
+Starts the rendering process. This is the same as clicking Render in the Render Queue panel. The method does not return until the render process is complete. To pause or stop the rendering process, call :ref:`renderqueue.pauseRendering` or :ref:`renderqueue.stopRendering` from an ``onError`` or ``onstatus`` callback.
 
 -  To respond to errors during the rendering process, define a callback function in :ref:`app.onError`.
--  To respond to changes in the status of a particular item while the render is progressing, define a callback function in :ref:`RenderQueueItem.onStatusChanged` in the associated RenderQueueItem object.
+-  To respond to changes in the status of a particular item while the render is progressing, define a callback function in :ref:`RenderQueueItem.onstatus` in the associated RenderQueueItem object.
 
 **Parameters**
 
@@ -215,7 +215,7 @@ RenderQueue.stopRendering()
 
 **Description**
 
-Stops the rendering process. This is the same as clicking Stop in the Render Queue panel during a render. You can call this method from an :ref:`RenderQueueItem.onStatusChanged` or :ref:`app.onError` callback.
+Stops the rendering process. This is the same as clicking Stop in the Render Queue panel during a render. You can call this method from an :ref:`RenderQueueItem.onstatus` or :ref:`app.onError` callback.
 
 **Parameters**
 
