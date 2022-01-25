@@ -171,6 +171,9 @@ Layer.isNameSet
 
 True if the value of the name attribute has been set explicitly, rather than automatically from the source.
 
+.. note::
+   This always returns `true` for layers that do not have a :ref:`AVLayer.source`
+
 **Type**
 
 Boolean; read-only.
