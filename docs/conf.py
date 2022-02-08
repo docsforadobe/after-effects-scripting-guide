@@ -20,6 +20,10 @@ source_suffix = '.rst'
 
 master_doc = 'index'
 
+extensions = ['sphinx_rtd_dark_mode']
+
+default_dark_mode = False
+
 # General information about the project.
 project = u'After Effects Scripting Guide'
 copyright = u'1992-2021 Adobe Systems Incorporated'
