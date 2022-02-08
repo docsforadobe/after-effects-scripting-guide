@@ -49,6 +49,10 @@ If you find attributes or methods that are not mentioned in this documentation, 
 
 ----
 
+To check the build status, visit [Read The Docs](https://readthedocs.org/projects/after-effects-scripting-guide/builds/).
+
+----
+
 ## Licensing & Ownership
 
 This project exists for educational purposes only.
