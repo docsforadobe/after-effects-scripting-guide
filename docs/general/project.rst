@@ -369,27 +369,6 @@ Integer; read-only.
 
 ----
 
-.. _Project.removeUnusedFootage:
-
-Project.removeUnusedFootage()
-*********************************************
-
-``app.project.removeUnusedFootage()``
-
-**Description**
-
-Removes unused footage from the project. Same as the File > Remove Unused Footage command.
-
-**Parameters**
-
-None.
-
-**Returns**
-
-Integer; the total number of FootageItem objects removed.
-
-----
-
 .. _Project.renderQueue:
 
 Project.renderQueue
@@ -994,6 +973,27 @@ Integer; the total number of items removed.
     items[items.length] = app.project.item(1);
     items[items.length] = app.project.item(3);
     app.project.reduceProject(items);
+
+----
+
+.. _Project.removeUnusedFootage:
+
+Project.removeUnusedFootage()
+*********************************************
+
+``app.project.removeUnusedFootage()``
+
+**Description**
+
+Removes unused footage from the project. Same as the File > Remove Unused Footage command.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Integer; the total number of FootageItem objects removed.
 
 ----
 
