@@ -8,9 +8,19 @@ What's new and changed for scripting?
 
 ----
 
+.. _Changelog.22.3:
+
+`After Effects 22.3 <https://helpx.adobe.com/after-effects/using/whats-new.html>`_ (April 2022)
+************************************************************************************************************************************
+
+- Scripting methods added
+	- Added: :ref:`Layer.doSceneEditDetection`
+
+----
+
 .. _Changelog.22.0:
 
-`After Effects 22.0 <https://helpx.adobe.com/after-effects/using/whats-new.html>`_ (October 2021)
+`After Effects 22.0 <https://helpx.adobe.com/after-effects/using/whats-new/2022.html>`_ (October 2021)
 ************************************************************************************************************************************
 
 - Scripting methods added
