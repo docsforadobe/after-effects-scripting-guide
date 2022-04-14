@@ -26,11 +26,11 @@ default_dark_mode = False
 
 # General information about the project.
 project = u'After Effects Scripting Guide'
-copyright = u'1992-2021 Adobe Systems Incorporated'
+copyright = u'1992-2022 Adobe Systems Incorporated'
 author = u'Adobe Systems Incorporated'
 
-version = u'22.0.0'
-release = u'22.0.0'
+version = u'22.3.0'
+release = u'22.3.0'
 
 pygments_style = 'sphinx'
 

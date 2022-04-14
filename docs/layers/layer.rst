@@ -507,6 +507,42 @@ Nothing.
 
 ----
 
+.. _Layer.doSceneEditDetection:
+
+Layer.doSceneEditDetection()
+*********************************************
+
+``app.project.item(index).layer(index).doSceneEditDetection(applyOptions)``
+
+.. note::
+   This functionality was added in After Effects 22.3 (2022)
+
+**Description**
+
+Runs Scene Edit Detection on the layer that the method is called on and returns an array containing the times of any detected scenes. This is the same as selecting a layer in the Timeline and choosing "Layer > Scene Edit Detection" with the single argument determining whether the edits are applied as markers, layer splits, pre-comps, or are not applied to the layer.
+
+Just as in the UI, ``doSceneEditDetection`` will fail and error if called on a non-video layer or a video layer with Time Remapping enabled.
+
+**Parameters**
+
+================  =====================================================================
+``applyOptions``  How the detected edits will be applied. A ``SceneEditDetectionMode``
+                  enumerated value, one of:
+                  
+                  -  ``SceneEditDetectionMode.MARKERS``: Create markers at edit points.
+                  -  ``SceneEditDetectionMode.SPLIT``: Split layer .
+                  -  ``SceneEditDetectionMode.SPLIT_PRECOMP``: Split layer at edit
+                     points and pre-compose each one.
+                  -  ``SceneEditDetectionMode.NONE``: Detected edits are not applied
+                     to the layer.
+================  =====================================================================
+
+**Returns**
+
+Array of floating-point values; the times of the detected edit points expressed in composition time.
+
+----
+
 .. _Layer.duplicate:
 
 Layer.duplicate()
