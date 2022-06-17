@@ -412,6 +412,23 @@ Floating-point value; read-only.
 
 ----
 
+.. _Layer.enable:
+
+Layer.enable
+*************
+
+``app.project.item(index).layer(index).enable``
+
+**Description**
+
+Visibility (eyeball icon) for the layer.
+
+**Type**
+
+Boolean; read/write.
+
+----
+
 =======
 Methods
 =======
