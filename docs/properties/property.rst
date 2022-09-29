@@ -939,6 +939,37 @@ Array of :ref:`KeyframeEase objects <KeyframeEase>`:
 
 ----
 
+.. _Property.keyLabel:
+
+Property.keyLabel()
+*********************************************
+
+``app.project.item(index).layer(index).propertySpec.keyLabel(keyIndex)``
+
+.. note::
+    This functionality was added in After Effects 22.6.
+
+**Description**
+
+The label color for the keyframe. Colors are represented by their number (0 for None, or 1 to 16 for one of the preset colors in the Labels preferences).
+
+Read only. Keyframe color labels can be set by :ref:`setLabelAtKey <property.setLabelAtKey>`.
+
+**Parameters**
+
+============  ===================================================
+``keyIndex``  The index for the keyframe. An integer in the range
+              ``[1..numKeys]``, as returned by the
+              :ref:`addKey <property.addKey>` or
+              :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
+============  ===================================================
+
+**Returns**
+
+Integer (0 to 16); read only.
+
+----
+
 .. _Property.keyOutInterpolationType:
 
 Property.keyOutInterpolationType()
@@ -1356,6 +1387,37 @@ Sets the ``in`` and ``out`` interpolation types for the specified keyframe.
               -  ``KeyframeInterpolationType.BEZIER``
               -  ``KeyframeInterpolationType.HOLD``
 ============= ================================================================
+
+**Returns**
+
+Nothing.
+
+----
+
+.. _Property.setLabelAtKey:
+
+Property.setLabelAtKey()
+*********************************************
+
+``app.project.item(index).layer(index).propertySpec.setLabelAtKey(keyIndex, labelIndex)``
+
+.. note::
+    This functionality was added in After Effects 22.6 (2022)
+
+**Description**
+
+Set the label color for the keyframe. Colors are represented by their number (0 for None, or 1 to 16 for one of the preset colors in the Labels preferences).
+
+**Parameters**
+
+==============  ===================================================
+``keyIndex``    The index for the keyframe. An integer in the range
+                ``[1..numKeys]``, as returned by the
+                :ref:`addKey <property.addKey>` or
+                :ref:`nearestKeyIndex <property.nearestKeyIndex>`.
+``labelIndex``  The index for the new label value. An integer in
+                the range 0-16.
+==============  ===================================================
 
 **Returns**
 
