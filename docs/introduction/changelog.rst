@@ -8,6 +8,15 @@ What's new and changed for scripting?
 
 ----
 
+.. _Changelog.22.6:
+
+`After Effects 22.6 <https://helpx.adobe.com/after-effects/using/whats-new.html>`_ (August 2022)
+************************************************************************************************************************************
+
+- Scripting methods added
+	- Added: :ref:`Property.keyLabel`----
+	- Added: :ref:`Property.keyOutInterpolationType`----
+
 .. _Changelog.22.3:
 
 `After Effects 22.3 <https://helpx.adobe.com/after-effects/using/whats-new.html>`_ (April 2022)
