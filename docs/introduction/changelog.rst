@@ -14,7 +14,7 @@ What's new and changed for scripting?
 ************************************************************************************************************************************
 
 - Scripting methods added
-	- Added: :ref:`Property.keyLabel
+	- Added: :ref:`Property.keyLabel`
 	- Added: :ref:`Property.setLabelAtKey`
 
 .. _Changelog.22.3:
