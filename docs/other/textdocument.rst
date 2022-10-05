@@ -723,10 +723,12 @@ TextDocument.tsume
 
 **Description**
 
-This text layer's tsume value.
+This text layer's tsume value as a normalized percentage, from 0.0 -> 1.0.
 
 .. warning::
    This value only reflects the first character in the text layer at the current time.
+
+   This property accepts values from 0.0 -> 100.0, however the value IS expecting a normalized value from 0.0 -> 1.0. Using a value higher than 1.0 will produce unexpected results; AE's Character Panel will clamp the value at 100%, despite the higher value set by scripting (ie ``TextDocument.tsume = 100`` _really_ sets a value of 10,000%)
 
 **Type**
 
