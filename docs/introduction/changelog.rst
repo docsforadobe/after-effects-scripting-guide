@@ -10,7 +10,7 @@ What's new and changed for scripting?
 
 .. _Changelog.23.0:
 
-`After Effects 23.0 <https://helpx.adobe.com/after-effects/using/whats-new/2022-2.html>`_ (October 2022)
+`After Effects 23.0 <https://helpx.adobe.com/after-effects/using/whats-new/2023.html>`_ (October 2022)
 ************************************************************************************************************************************
 
 - Scripting methods and attributes added
