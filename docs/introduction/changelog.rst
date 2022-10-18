@@ -8,6 +8,21 @@ What's new and changed for scripting?
 
 ----
 
+.. _Changelog.23.0:
+
+`After Effects 23.0 <https://helpx.adobe.com/after-effects/using/whats-new/2022-2.html>`_ (October 2022)
+************************************************************************************************************************************
+
+- Scripting methods and attributes added
+	- Added: :ref:`AVLayer.setTrackMatte`
+	- Added: :ref:`AVLayer.removeTrackMatte`
+	- Added: :ref:`AVLayer.trackMatteLayer`
+
+- Scripting attributes updated
+	- Updated: :ref:`AVLayer.trackMatteType`
+	- Updated: :ref:`AVLayer.isTrackMatte`
+	- Updated: :ref:`AVLayer.hasTrackMatte`
+
 .. _Changelog.22.6:
 
 `After Effects 22.6 <https://helpx.adobe.com/after-effects/using/whats-new/2022-2.html>`_ (August 2022)

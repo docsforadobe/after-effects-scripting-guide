@@ -350,9 +350,13 @@ AVLayer.hasTrackMatte
 
 ``app.project.item(index).layer(index).hasTrackMatte``
 
+.. note::
+    This functionality was updated in After Effects 23.0. Track Matte is no longer dependent on layer order.
+
 **Description**
 
-True if the layer in front of this layer is being used as a track matte on this layer. When true, this layer's ``trackMatteType`` value controls how the matte is applied.
+True if this layer has track matte. When true, this layer's ``trackMatteType`` value controls how the matte is applied.
+See :ref:`AVLayer.trackMatteType` for available track matte types.
 
 **Type**
 
@@ -401,9 +405,12 @@ AVLayer.isTrackMatte
 
 ``app.project.item(index)layer(index).isTrackMatte``
 
+.. note::
+    This functionality was updated in After Effects 23.0. Track Matte is no longer dependent on layer order.
+
 **Description**
 
-True if this layer is being used as a track matte for the layer behind it.
+True if this layer is being used as a track matte.
 
 **Type**
 
@@ -557,6 +564,26 @@ Boolean; read/write.
 
 ----
 
+.. _AVLayer.trackMatteLayer:
+
+AVLayer.trackMatteLayer
+*********************************************
+
+``app.project.item(index).layer(index).trackMatteLayer``
+
+.. note::
+    This functionality was added in After Effects 23.0
+
+**Description**
+
+Returns the track matte layer for this layer. Returns ``null`` if this layer has no track matte layer. 
+
+**Type**
+
+AVLayer object; read only.
+
+----
+
 .. _AVLayer.trackMatteType:
 
 AVLayer.trackMatteType
@@ -564,9 +591,16 @@ AVLayer.trackMatteType
 
 ``app.project.item(index).layer(index).trackMatteType``
 
+.. note::
+    This functionality was updated in After Effects 23.0
+
+.. warning::
+    This is a Legacy API we don't recommend using for setting Track Matte Type in new scripts. Please consider using the latest track matte APIs :ref:`AVLayer.setTrackMatte` and :ref:`AVLayer.removeTrackMatte` for your tasks.
+
 **Description**
 
 If this layer has a track matte, specifies the way the track matte is applied.
+Specifying the ``TrackMatteType.NO_TRACK_MATTE`` type will remove the track matte for this layer and reset the track matte type.
 
 **Type**
 
@@ -577,6 +611,21 @@ A ``TrackMatteType`` enumerated value; read/write. One of:
 -  ``TrackMatteType.LUMA``
 -  ``TrackMatteType.LUMA_INVERTED``
 -  ``TrackMatteType.NO_TRACK_MATTE``
+
+**Example**
+
+.. code:: javascript
+
+   // Returns the current track matte type for myLayer
+   var type = myLayer.trackMatteType;
+
+   // *** We recommend using the new Track Matte APIs for the operations below (See Warning) ***
+
+   // Changes the track matte type for myLayer to TrackMatteType.ALPHA_INVERTED
+   myLayer.trackMatteType = TrackMatteType.ALPHA_INVERTED;
+
+   // Removes the track matte and also resets the type
+   myLayer.trackMatteType = TrackMatteType.NO_TRACK_MATTE;
 
 ----
 
@@ -824,6 +873,42 @@ Viewer object for the Layer panel, or null if the layer could not be opened (e.g
 
 ----
 
+.. _AVLayer.removeTrackMatte:
+
+AVLayer.removeTrackMatte()
+*********************************************
+
+``app.project.item(index).layer(index).removeTrackMatte()``
+
+.. note::
+    This functionality was added in After Effects 23.0
+
+**Description**
+
+Removes the track matte for this layer while preserving the TrackMatteType.
+See :ref:`AVLayer.setTrackMatte` for another way of removing track matte.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Nothing.
+
+.. code:: javascript
+
+   // Sets the track matte layer of myLayer with otherLayer as LUMA type
+   myLayer.setTrackMatte(otherLayer, TrackMatteType.LUMA);
+
+   // Removes the track matte for myLayer but preserves the LUMA type
+   myLayer.removeTrackMatte();
+
+   // Still returns TrackMatteType.LUMA
+   alert(myLayer.trackMatteType);
+
+----
+
 .. _AVLayer.replaceSource:
 
 AVLayer.replaceSource()
@@ -852,6 +937,57 @@ Nothing.
 
 .. warning::
   If this method is performed on a null layer, the layers ``isNull`` attribute is not changed from ``true``. This causes the layer not to be visible in comp viewer and renders.
+
+----
+
+.. _AVLayer.setTrackMatte:
+
+AVLayer.setTrackMatte()
+*********************************************
+
+``app.project.item(index).layer(index).setTrackMatte(trackMatteLayer, trackMatteType)``
+
+.. note::
+    This functionality was added in After Effects 23.0
+
+**Description**
+
+Sets the track matte layer and type for this layer. Passing in ``null`` to trackMatteLayer parameter removes the track matte.
+See :ref:`AVLayer.removeTrackMatte` for another way of removing track matte.
+
+**Parameters**
+
+===================  =====================================================================
+``trackMatteLayer``  The AVLayer to be used as the track matte layer.
+``trackMatteType``   The type of the track matte to be used. Please see :ref:`AVLayer.trackMatteType` for available types.
+===================  =====================================================================
+
+.. warning::
+  Passing in ``TrackMatteType.NO_TRACK_MATTE`` as type is invalid and will result in no-op.
+
+**Returns**
+
+Nothing
+
+**Example**
+
+.. code:: javascript
+
+   // Sets the track matte layer of myLayer with otherLayer as Alpha type
+   myLayer.setTrackMatte(otherLayer, TrackMatteType.ALPHA);
+
+   // Keeps the same trackMatteLayer and only changes the track matte type
+   myLayer.setTrackMatte(myLayer.trackMatteLayer, TrackMatteType.LUMA);
+
+   // Changes the track matte layer but keep the same track matte type
+   myLayer.setTrackMatte(newTrackMatteLayer, myLayer.trackMatteType);
+
+   // Removes the track matte for myLayer and sets the new specified TrackMatteType
+   myLayer.setTrackMatte(null, TrackMatteType.ALPHA);
+   myLayer.setTrackMatte(null, TrackMatteType.NO_TRACK_MATTE);
+
+   // Invalid. Nothing happens
+   myLayer.setTrackMatte(otherLayer, TrackMatteType.NO_TRACK_MATTE);
 
 ----
 
