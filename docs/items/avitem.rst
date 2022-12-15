@@ -16,6 +16,8 @@ The AVItem object provides access to attributes and methods of audio/visual file
 .. warning::
     CompItems and FootageItems, while logical descendants of AVItem, are not *really* subclasses of AVItem as AVItem doesn't exist in Extendscript, ie. attempting to check if ``item instanceof AVItem`` will fail because AVItem is undefined. This is also true for ``Item`` itself.
 
+    See :ref:`ClassHierarchy` for more info.
+
 ----
 
 ==========

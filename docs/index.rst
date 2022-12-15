@@ -9,6 +9,7 @@ Welcome to the After Effects Scripting Guide!
     introduction/changelog
     introduction/javascript
     introduction/objectmodel
+    introduction/classhierarchy
 
 .. toctree::
     :maxdepth: 1
