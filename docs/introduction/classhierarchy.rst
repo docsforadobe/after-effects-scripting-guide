@@ -9,12 +9,11 @@ When using this guide, any objects that exist as part of a class hierarchy will 
 
 As it can be useful to see all available class hierarchies in one place, we've created this list below.
 
-Note that some classes exist only as base classes, and demonstrate unexpected behaviour when type checking via ``instanceof``, as noted in the table below.
+Note that some classes exist only as base classes, and demonstrate unexpected behaviour when type checking via ``instanceof``, as noted in the table below. Classes with no symbol behave as expected.
 
 **Symbol Legend**
 
 ==  ======================================================
-✔   ``instanceof`` evaluates correctly
 ⚠   ``instanceof`` is always ``false``
 ❌   Class is undefined; ``instanceof`` will throw an error
 ==  ======================================================
@@ -28,23 +27,23 @@ Properties, Property Groups, and Layers
 
 - :ref:`PropertyBase` ⚠
 
-  - :ref:`Property` ✔
+  - :ref:`Property`
 
-  - :ref:`PropertyGroup` ✔
+  - :ref:`PropertyGroup`
 
-    - :ref:`MaskPropertyGroup` ✔
+    - :ref:`MaskPropertyGroup`
 
     - :ref:`Layer` ⚠
 
-      - :ref:`AVLayer` ✔
+      - :ref:`AVLayer`
 
-        - :ref:`ShapeLayer` ✔
+        - :ref:`ShapeLayer`
 
-        - :ref:`TextLayer` ✔
+        - :ref:`TextLayer`
 
-      - :ref:`CameraLayer` ✔
+      - :ref:`CameraLayer`
 
-      - :ref:`LightLayer` ✔
+      - :ref:`LightLayer`
 
 ----
 
@@ -57,11 +56,11 @@ Project Items
 
   - :ref:`AVItem` ❌
 
-    - :ref:`CompItem` ✔
+    - :ref:`CompItem`
 
-    - :ref:`FootageItem` ✔
+    - :ref:`FootageItem`
 
-  - :ref:`FolderItem` ✔
+  - :ref:`FolderItem`
 
 ----
 
@@ -72,11 +71,11 @@ Footage Item Sources
 
 - :ref:`FootageSource` ❌
 
-  - :ref:`FileSource` ✔
+  - :ref:`FileSource`
 
-  - :ref:`PlaceholderSource` ✔
+  - :ref:`PlaceholderSource`
 
-  - :ref:`SolidSource` ✔
+  - :ref:`SolidSource`
 
 ----
 
@@ -87,10 +86,10 @@ Collections
 
 - :ref:`Collection` ❌
 
-  - :ref:`ItemCollection` ✔
+  - :ref:`ItemCollection`
 
-  - :ref:`LayerCollection` ✔
+  - :ref:`LayerCollection`
 
-  - :ref:`OMCollection` ✔
+  - :ref:`OMCollection`
 
-  - :ref:`RQItemCollection` ✔
+  - :ref:`RQItemCollection`
