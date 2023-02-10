@@ -44,8 +44,8 @@ The `Extendscript File <https://extendscript.docsforadobe.dev/file-system-access
 FileSource.missingFootagePath
 *********************************************
 
-|  ``app.project.item(index).mainSource.file.missingFootagePath``
-|  ``app.project.item(index).proxySource.file.missingFootagePath``
+|  ``app.project.item(index).mainSource.missingFootagePath``
+|  ``app.project.item(index).proxySource.missingFootagePath``
 
 **Description**
 
@@ -66,7 +66,7 @@ Methods
 FileSource.reload()
 *********************************************
 
-``app.project.item(index).mainSource.file.mainSource.reload()``
+``app.project.item(index).mainSource.reload()``
 
 **Description**
 
