@@ -1623,8 +1623,8 @@ Sets the incoming and outgoing tangent vectors for the specified keyframe. If th
                    ``PropertyValueType.TwoD_SPATIAL``, the array contains 2
                    values.
                 -  If the property value type is
-                    ``PropertyValueType.ThreeD_SPATIAL``, the array contains 3
-                    values.
+                   ``PropertyValueType.ThreeD_SPATIAL``, the array contains 3
+                   values.
 =============== ===============================================================
 
 **Returns**
