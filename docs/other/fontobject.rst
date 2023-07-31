@@ -9,8 +9,8 @@ Font object
 The Font object provides information about a specific font, along with the font technology used, helping disambiguate when multiple fonts sharing the same Postscript name are installed on the system.
 
 .. note::
-   This functionality was added in After Effects 24.0
-   This functionality is currently in Beta and is subject to change.
+   | This functionality was added in After Effects 24.0.
+   | This functionality is currently in Beta and is subject to change.
 
 ----
 

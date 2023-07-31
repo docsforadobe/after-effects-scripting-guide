@@ -122,13 +122,13 @@ TextDocument.autoHyphenate
 
 ``textDocument.autoHyphenate``
 
+.. note::
+   | This functionality was added in After Effects 24.0.
+   | This functionality is currently in Beta and is subject to change.
+
 **Description**
 
 The text layer's auto hyphenate paragraph option.
-
-.. note::
-   This functionality was added in After Effects 24.0
-   This functionality is currently in Beta and is subject to change.
 
 .. warning::
    This value only reflects the first paragraph in the text layer at the current time.
@@ -147,13 +147,13 @@ TextDocument.autoKernType
 
 ``textDocument.autoKernType``
 
+.. note::
+   | This functionality was added in After Effects 24.0.
+   | This functionality is currently in Beta and is subject to change.
+
 **Description**
 
 The text layer's auto kern type option.
-
-.. note::
-   This functionality was added in After Effects 24.0
-   This functionality is currently in Beta and is subject to change.
 
 .. warning::
    This value only reflects the first character in the text layer at the current time.
@@ -176,13 +176,13 @@ TextDocument.baselineDirection
 
 ``textDocument.baselineDirection``
 
+.. note::
+   | This functionality was added in After Effects 24.0.
+   | This functionality is currently in Beta and is subject to change.
+
 **Description**
 
 The text layer's baseline direction option. This is significant for Japanese language in vertical texts. "BASELINE_VERTICAL_CROSS_STREAM" is also know as Tate-Chu-Yoko.
-
-.. note::
-   This functionality was added in After Effects 24.0
-   This functionality is currently in Beta and is subject to change.
 
 .. warning::
    This value only reflects the first character in the text layer at the current time.
@@ -336,13 +336,13 @@ TextDocument.digitSet
 
 ``textDocument.digitSet``
 
+.. note::
+   | This functionality was added in After Effects 24.0.
+   | This functionality is currently in Beta and is subject to change.
+
 **Description**
 
 The text layer's digit set option.
-
-.. note::
-   This functionality was added in After Effects 24.0
-   This functionality is currently in Beta and is subject to change.
 
 .. warning::
    This value only reflects the first character in the text layer at the current time.
@@ -367,13 +367,13 @@ TextDocument.direction
 
 ``textDocument.direction``
 
+.. note::
+   | This functionality was added in After Effects 24.0.
+   | This functionality is currently in Beta and is subject to change.
+
 **Description**
 
 The text layer's paragraph direction option.
-
-.. note::
-   This functionality was added in After Effects 24.0
-   This functionality is currently in Beta and is subject to change.
 
 .. warning::
    This value only reflects the first paragraph in the text layer at the current time.
@@ -395,13 +395,13 @@ TextDocument.endIndent
 
 ``textDocument.endIndent``
 
+.. note::
+   | This functionality was added in After Effects 24.0.
+   | This functionality is currently in Beta and is subject to change.
+
 **Description**
 
 The text layer's paragraph end indent option.
-
-.. note::
-   This functionality was added in After Effects 24.0
-   This functionality is currently in Beta and is subject to change.
 
 .. warning::
    This value only reflects the first paragraph in the text layer at the current time.
@@ -420,13 +420,13 @@ TextDocument.everyLineComposer
 
 ``textDocument.everyLineComposer``
 
+.. note::
+   | This functionality was added in After Effects 24.0.
+   | This functionality is currently in Beta and is subject to change.
+
 **Description**
 
-The text layer's Every-Line Composer paragraph option. If set to false the TextDocument will use the Single-Line Composer.
-
-.. note::
-   This functionality was added in After Effects 24.0
-   This functionality is currently in Beta and is subject to change.
+The text layer's Every-Line Composer paragraph option. If set to false, the TextDocument will use the Single-Line Composer.
    
 .. warning::
    This value only reflects the first paragraph in the text layer at the current time.
@@ -520,13 +520,13 @@ TextDocument.firstLineIndent
 
 ``textDocument.firstLineIndent``
 
+.. note::
+   | This functionality was added in After Effects 24.0.
+   | This functionality is currently in Beta and is subject to change.
+
 **Description**
 
 The text layer's paragraph first line indent option.
-
-.. note::
-   This functionality was added in After Effects 24.0
-   This functionality is currently in Beta and is subject to change.
 
 .. warning::
    This value only reflects the first paragraph in the text layer at the current time.
@@ -566,13 +566,13 @@ TextDocument.fontBaselineOption
 
 ``textDocument.fontBaselineOption``
 
+.. note::
+   | This functionality was added in After Effects 24.0.
+   | This functionality is currently in Beta and is subject to change.
+
 **Description**
 
 The text layer's font baseline option. This is for setting a textDocument to superscript or subscript. 
-
-.. note::
-   This functionality was added in After Effects 24.0
-   This functionality is currently in Beta and is subject to change.
 
 .. warning::
    This value only reflects the first character in the text layer at the current time.
@@ -595,13 +595,13 @@ TextDocument.fontCapsOption
 
 ``textDocument.fontCapsOption``
 
+.. note::
+   | This functionality was added in After Effects 24.0.
+   | This functionality is currently in Beta and is subject to change.
+
 **Description**
 
 The text layer's font caps option.
-
-.. note::
-   This functionality was added in After Effects 24.0
-   This functionality is currently in Beta and is subject to change.
 
 .. warning::
    This value only reflects the first character in the text layer at the current time.
@@ -674,13 +674,13 @@ TextDocument.fontObject
 
 ``textDocument.fontObject``
 
+.. note::
+   | This functionality was added in After Effects 24.0.
+   | This functionality is currently in Beta and is subject to change.
+
 **Description**
 
 The text layer's :ref:`fontObject` specified by its PostScript name.
-
-.. note::
-   This functionality was added in After Effects 24.0
-   This functionality is currently in Beta and is subject to change.
 
 .. warning::
    This value only reflects the first character in the text layer at the current time.
@@ -742,13 +742,13 @@ TextDocument.hangingRoman
 
 ``textDocument.hangingRoman``
 
+.. note::
+   | This functionality was added in After Effects 24.0.
+   | This functionality is currently in Beta and is subject to change.
+
 **Description**
 
-The text layer's hanging roman paragraph option. This is only applicable to box text layers, and will allow punctuation to fit outside the box.
-
-.. note::
-   This functionality was added in After Effects 24.0
-   This functionality is currently in Beta and is subject to change.
+The text layer's Roman Hanging Punctuation paragraph option. This is only applicable to box text layers—it allows punctuation to fit outside the box rather than flow to the next line.
 
 .. warning::
    This value only reflects the first paragraph in the text layer at the current time.
@@ -827,13 +827,13 @@ TextDocument.kerning
 
 ``textDocument.kerning``
 
+.. note::
+   | This functionality was added in After Effects 24.0.
+   | This functionality is currently in Beta and is subject to change.
+
 **Description**
 
 The text layer's kerning option.
-
-.. note::
-   This functionality was added in After Effects 24.0
-   This functionality is currently in Beta and is subject to change.
 
 .. warning::
    This value only reflects the first character in the text layer at the current time.
@@ -889,13 +889,13 @@ TextDocument.leadingType
 
 ``textDocument.leadingType``
 
+.. note::
+   | This functionality was added in After Effects 24.0.
+   | This functionality is currently in Beta and is subject to change.
+
 **Description**
 
 The text layer's paragraph leading type option.
-
-.. note::
-   This functionality was added in After Effects 24.0
-   This functionality is currently in Beta and is subject to change.
 
 .. warning::
    This value only reflects the first paragraph in the text layer at the current time.
@@ -917,13 +917,13 @@ TextDocument.ligature
 
 ``textDocument.ligature``
 
+.. note::
+   | This functionality was added in After Effects 24.0.
+   | This functionality is currently in Beta and is subject to change.
+
 **Description**
 
 The text layer's ligature option.
-
-.. note::
-   This functionality was added in After Effects 24.0
-   This functionality is currently in Beta and is subject to change.
 
 .. warning::
    This value only reflects the first character in the text layer at the current time.
@@ -942,13 +942,13 @@ TextDocument.lineJoinType
 
 ``textDocument.lineJoinType``
 
+.. note::
+   | This functionality was added in After Effects 24.0.
+   | This functionality is currently in Beta and is subject to change.
+
 **Description**
 
-The text layer's line joint type option.
-
-.. note::
-   This functionality was added in After Effects 24.0
-   This functionality is currently in Beta and is subject to change.
+The text layer's line join type option for Stroke.
 
 .. warning::
    This value only reflects the first character in the text layer at the current time.
@@ -971,13 +971,13 @@ TextDocument.noBreak
 
 ``textDocument.noBreak``
 
+.. note::
+   | This functionality was added in After Effects 24.0.
+   | This functionality is currently in Beta and is subject to change.
+
 **Description**
 
-The text layer's no break option.
-
-.. note::
-   This functionality was added in After Effects 24.0
-   This functionality is currently in Beta and is subject to change.
+The text layer's no break attribute.
 
 .. warning::
    This value only reflects the first character in the text layer at the current time.
@@ -1036,13 +1036,13 @@ TextDocument.spaceAfter
 
 ``textDocument.spaceAfter``
 
+.. note::
+   | This functionality was added in After Effects 24.0.
+   | This functionality is currently in Beta and is subject to change.
+
 **Description**
 
 The text layer's paragraph space after option.
-
-.. note::
-   This functionality was added in After Effects 24.0
-   This functionality is currently in Beta and is subject to change.
 
 .. warning::
    This value only reflects the first paragraph in the text layer at the current time.
@@ -1061,13 +1061,13 @@ TextDocument.spaceBefore
 
 ``textDocument.spaceBefore``
 
+.. note::
+   | This functionality was added in After Effects 24.0.
+   | This functionality is currently in Beta and is subject to change.
+
 **Description**
 
 The text layer's paragraph space before option.
-
-.. note::
-   This functionality was added in After Effects 24.0
-   This functionality is currently in Beta and is subject to change.
 
 .. warning::
    This value only reflects the first paragraph in the text layer at the current time.
@@ -1086,13 +1086,13 @@ TextDocument.startIndent
 
 ``textDocument.startIndent``
 
+.. note::
+   | This functionality was added in After Effects 24.0.
+   | This functionality is currently in Beta and is subject to change.
+
 **Description**
 
 The text layer's paragraph start indent option.
-
-.. note::
-   This functionality was added in After Effects 24.0
-   This functionality is currently in Beta and is subject to change.
 
 .. warning::
    This value only reflects the first paragraph in the text layer at the current time.
