@@ -8,6 +8,60 @@ What's new and changed for scripting?
 
 ----
 
+.. _Changelog.24.0:
+
+`After Effects 24.0 Beta build 14 <https://community.adobe.com/t5/after-effects-beta-discussions/new-text-scripting-hooks-starting-after-effects-beta-24-0x12/m-p/13976407#M2981>`_ (August 2023)
+************************************************************************************************************************************
+
+- Scripting methods and attributes added
+	- Added: :ref:`getEnumAsString`
+	- Added: :ref:`app.fonts`
+	- Added: :ref:`FontsObject`
+	- Added: :ref:`FontsObject.allFonts`
+	- Added: :ref:`FontsObject.missingOrSubstituedFonts`
+	- Added: :ref:`FontsObject.getFontsByFamilyNameAndStyleName`
+	- Added: :ref:`FontsObject.getFontsByPostScriptName`
+	- Added: :ref:`TextDocument.autoHyphenate`
+	- Added: :ref:`TextDocument.autoKernType`
+	- Added: :ref:`TextDocument.baselineDirection`
+	- Added: :ref:`TextDocument.digitSet`
+	- Added: :ref:`TextDocument.direction`
+	- Added: :ref:`TextDocument.endIndent`
+	- Added: :ref:`TextDocument.everyLineComposer`
+	- Added: :ref:`TextDocument.firstLineIndent`
+	- Added: :ref:`TextDocument.fontBaselineOption`
+	- Added: :ref:`TextDocument.fontCapsOption`
+	- Added: :ref:`TextDocument.fontObject`
+	- Added: :ref:`TextDocument.hangingRoman`
+	- Added: :ref:`TextDocument.kerning`
+	- Added: :ref:`TextDocument.leadingType`
+	- Added: :ref:`TextDocument.ligature`
+	- Added: :ref:`TextDocument.lineJoinType`
+	- Added: :ref:`TextDocument.noBreak`
+	- Added: :ref:`TextDocument.spaceAfter`
+	- Added: :ref:`TextDocument.spaceBefore`
+	- Added: :ref:`TextDocument.startIndent`
+	- Added: :ref:`FontObject`
+	- Added: :ref:`FontObject.familyName`
+	- Added: :ref:`FontObject.fullName`
+	- Added: :ref:`FontObject.isFromAdobeFonts`
+	- Added: :ref:`FontObject.isSubstitute`
+	- Added: :ref:`FontObject.location`
+	- Added: :ref:`FontObject.nativefamilyName`
+	- Added: :ref:`FontObject.nativeFullName`
+	- Added: :ref:`FontObject.nativeStyleName`
+	- Added: :ref:`FontObject.postScriptName`
+	- Added: :ref:`FontObject.styleName`
+	- Added: :ref:`FontObject.technology`
+	- Added: :ref:`FontObject.type`
+	- Added: :ref:`FontObject.version`
+	- Added: :ref:`FontObject.writingScripts`
+
+- Scripting attributes updated
+	- Updated: :ref:`TextDocument.fauxBold`
+	- Updated: :ref:`TextDocument.fauxItalic`
+	- Updated: :ref:`TextDocument.justification`
+
 .. _Changelog.23.0:
 
 `After Effects 23.0 <https://helpx.adobe.com/after-effects/using/whats-new/2023.html>`_ (October 2022)
