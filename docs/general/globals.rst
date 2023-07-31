@@ -13,6 +13,7 @@ Global function             Description
 ``clearOutput()``           Clears text from the Info panel.
 ``currentFormatToTime()``   Converts string time value to a numeric time value.
 ``generateRandomNumber()``  Generates a random number.
+``getEnumAsString()``       Converts an Enum value to it's string name.
 ``timeToCurrentFormat()``   Converts a numeric time value to a string time
                             value.
 ``write()``                 Writes text to the Info panel, with no line break
@@ -113,6 +114,38 @@ Floating-point, pseudo-random number in the range [0, 1].
       var currentPos = myComp.layer(i).property("Position").value;
       myComp.layer(i).property("Position").setValue([currentPos[0] + x, currentPos[1]]);
     }
+
+----
+
+.. _getEnumAsString:
+
+getEnumAsString()
+*************
+
+``getEnumAsString()``
+
+**Description**
+
+Returns the string value of an Enum.
+
+.. note::
+   This functionality was added in After Effects 24.0
+   This functionality is currently in Beta and is subject to change.
+
+**Parameters**
+
+Enum.
+
+**Returns**
+
+String.
+
+**Example**
+
+.. code:: javascript
+
+    // Returns: "BlendingMode.ADD" 
+    alert(getEnumAsString(5220));
 
 ----
 
