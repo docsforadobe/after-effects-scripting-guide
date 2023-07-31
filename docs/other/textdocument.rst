@@ -13,7 +13,7 @@ The TextDocument object stores a value for a TextLayer's Source Text property. C
 
 **Examples**
 
-This sets a value of some source text and displays an alert showing the new value
+This sets a value of some source text and displays an alert showing the new value.
 
 .. code:: javascript
 
@@ -70,7 +70,7 @@ TextDocument.allCaps
 
 **Description**
 
-True if a text layer has allcaps enabled; otherwise false.
+True if a text layer has allcaps enabled; otherwise false. To set this value, use :ref:`TextDocument.fontCapsOption` added in After Effects 24.0.
 
 .. warning::
    This value only reflects the first character in the text layer at the current time.
@@ -112,6 +112,89 @@ When true, the text layer shows a stroke. Access the ``strokeColor`` attribute f
 **Type**
 
 Boolean; read/write.
+
+----
+
+.. _TextDocument.autoHyphenate:
+
+TextDocument.autoHyphenate
+*********************************************
+
+``textDocument.autoHyphenate``
+
+**Description**
+
+The text layer's auto hyphenate paragraph option.
+
+.. note::
+   This functionality was added in After Effects 24.0
+   This functionality is currently in Beta and is subject to change.
+
+.. warning::
+   This value only reflects the first paragraph in the text layer at the current time.
+   If you change this value, it resets all paragraph in the text layer to the specified setting.
+
+**Type**
+
+Boolean; read/write.
+
+----
+
+.. _TextDocument.autoKernType:
+
+TextDocument.autoKernType
+*********************************************
+
+``textDocument.autoKernType``
+
+**Description**
+
+The text layer's auto kern type option.
+
+.. note::
+   This functionality was added in After Effects 24.0
+   This functionality is currently in Beta and is subject to change.
+
+.. warning::
+   This value only reflects the first character in the text layer at the current time.
+   If you change this value, it resets all characters in the text layer to the specified setting.
+
+**Type**
+
+An ``AutoKernType`` enumerated value; read/write. One of:
+
+-  ``AutoKernType.NO_AUTO_KERN``
+-  ``AutoKernType.METRIC_KERN``
+-  ``AutoKernType.OPTICAL_KERN``
+
+----
+
+.. _TextDocument.baselineDirection:
+
+TextDocument.baselineDirection
+*********************************************
+
+``textDocument.baselineDirection``
+
+**Description**
+
+The text layer's baseline direction option. This is significant for Japanese language in vertical texts. "BASELINE_VERTICAL_CROSS_STREAM" is also know as Tate-Chu-Yoko.
+
+.. note::
+   This functionality was added in After Effects 24.0
+   This functionality is currently in Beta and is subject to change.
+
+.. warning::
+   This value only reflects the first character in the text layer at the current time.
+   If you change this value, it resets all characters in the text layer to the specified setting.
+
+**Type**
+
+A ``BaselineDirection`` enumerated value; read/write. One of:
+
+-  ``BaselineDirection.BASELINE_WITH_STREAM``
+-  ``BaselineDirection.BASELINE_VERTICAL_ROTATED``
+-  ``BaselineDirection.BASELINE_VERTICAL_CROSS_STREAM``
 
 ----
 
@@ -217,7 +300,7 @@ The layer coordinates from a paragraph (box) text layer's anchor point as a [wid
 
 **Type**
 
-Array of ([X,Y]) position coordinates; read-only.
+Array of ([X,Y]) position coordinates; read/write.
 
 **Example**
 
@@ -246,6 +329,115 @@ Array of two integers (minimum value of 1); read/write.
 
 ----
 
+.. _TextDocument.digitSet:
+
+TextDocument.digitSet
+*********************************************
+
+``textDocument.digitSet``
+
+**Description**
+
+The text layer's digit set option.
+
+.. note::
+   This functionality was added in After Effects 24.0
+   This functionality is currently in Beta and is subject to change.
+
+.. warning::
+   This value only reflects the first character in the text layer at the current time.
+   If you change this value, it resets all characters in the text layer to the specified setting.
+
+**Type**
+
+A ``DigitSet`` enumerated value; read/write. One of:
+
+-  ``DigitSet.DEFAULT_DIGITS``
+-  ``DigitSet.ARABIC_DIGITS``
+-  ``DigitSet.HINDI_DIGITS``
+-  ``DigitSet.FARSI_DIGITS``
+-  ``DigitSet.ARABIC_DIGITS_RTL``
+
+----
+
+.. _TextDocument.direction:
+
+TextDocument.direction
+*********************************************
+
+``textDocument.direction``
+
+**Description**
+
+The text layer's paragraph direction option.
+
+.. note::
+   This functionality was added in After Effects 24.0
+   This functionality is currently in Beta and is subject to change.
+
+.. warning::
+   This value only reflects the first paragraph in the text layer at the current time.
+   If you change this value, it resets all paragraphs in the text layer to the specified setting.
+
+**Type**
+
+A ``ParagraphDirection`` enumerated value; read/write. One of:
+
+-  ``ParagraphDirection.DIRECTION_LEFT_TO_RIGHT``
+-  ``ParagraphDirection.DIRECTION_RIGHT_TO_LEFT``
+
+----
+
+.. _TextDocument.endIndent:
+
+TextDocument.endIndent
+*********************************************
+
+``textDocument.endIndent``
+
+**Description**
+
+The text layer's paragraph end indent option.
+
+.. note::
+   This functionality was added in After Effects 24.0
+   This functionality is currently in Beta and is subject to change.
+
+.. warning::
+   This value only reflects the first paragraph in the text layer at the current time.
+   If you change this value, it resets all paragraph in the text layer to the specified setting.
+
+**Type**
+
+Floating-point value; read/write.
+
+----
+
+.. _TextDocument.everyLineComposer:
+
+TextDocument.everyLineComposer
+*********************************************
+
+``textDocument.everyLineComposer``
+
+**Description**
+
+The text layer's Every-Line Composer paragraph option. If set to false the TextDocument will use the Single-Line Composer.
+
+.. note::
+   This functionality was added in After Effects 24.0
+   This functionality is currently in Beta and is subject to change.
+   
+.. warning::
+   This value only reflects the first paragraph in the text layer at the current time.
+   If you change this value, it resets all paragraph in the text layer to the specified setting.
+
+**Type**
+
+Boolean; read/write.
+
+----
+
 .. _TextDocument.fauxBold:
 
 TextDocument.fauxBold
@@ -255,6 +447,7 @@ TextDocument.fauxBold
 
 .. note::
    This functionality was added in After Effects 13.2 (CC 2014.2)
+   The write functionality was added in After Effects 24.0
 
 **Description**
 
@@ -265,7 +458,7 @@ True if a text layer has faux bold enabled; otherwise false.
 
 **Type**
 
-Boolean; read-only.
+Boolean; read/write.
 
 **Example**
 
@@ -284,6 +477,7 @@ TextDocument.fauxItalic
 
 .. note::
    This functionality was added in After Effects 13.2 (CC 2014.2)
+   The write functionality was added in After Effects 24.0
 
 **Description**
 
@@ -294,7 +488,7 @@ True if a text layer has faux italic enabled; otherwise false.
 
 **Type**
 
-Boolean; read-only.
+Boolean; read/write.
 
 ----
 
@@ -319,6 +513,31 @@ Array ``[r, g, b]`` of floating-point values; read/write.
 
 ----
 
+.. _TextDocument.firstLineIndent:
+
+TextDocument.firstLineIndent
+*********************************************
+
+``textDocument.firstLineIndent``
+
+**Description**
+
+The text layer's paragraph first line indent option.
+
+.. note::
+   This functionality was added in After Effects 24.0
+   This functionality is currently in Beta and is subject to change.
+
+.. warning::
+   This value only reflects the first paragraph in the text layer at the current time.
+   If you change this value, it resets all paragraph in the text layer to the specified setting.
+
+**Type**
+
+Floating-point value; read/write.
+
+----
+
 .. _TextDocument.font:
 
 TextDocument.font
@@ -328,7 +547,7 @@ TextDocument.font
 
 **Description**
 
-The text layer's font specified by its PostScript name.
+The text layer's font specified by its PostScript name. This is just a string, you should use the :ref:`fontObject` property for precise control.
 
 .. warning::
    This value only reflects the first character in the text layer at the current time.
@@ -337,6 +556,65 @@ The text layer's font specified by its PostScript name.
 **Type**
 
 String; read/write.
+
+----
+
+.. _TextDocument.fontBaselineOption:
+
+TextDocument.fontBaselineOption
+*********************************************
+
+``textDocument.fontBaselineOption``
+
+**Description**
+
+The text layer's font baseline option. This is for setting a textDocument to superscript or subscript. 
+
+.. note::
+   This functionality was added in After Effects 24.0
+   This functionality is currently in Beta and is subject to change.
+
+.. warning::
+   This value only reflects the first character in the text layer at the current time.
+   If you change this value, it resets all characters in the text layer to the specified setting.
+
+**Type**
+
+A ``FontBaselineOption`` enumerated value; read/write. One of:
+
+-  ``FontBaselineOption.FONT_NORMAL_BASELINE``
+-  ``FontBaselineOption.FONT_FAUXED_SUPERSCRIPT``
+-  ``FontBaselineOption.FONT_FAUXED_SUBSCRIPT``
+
+----
+
+.. _TextDocument.fontCapsOption:
+
+TextDocument.fontCapsOption
+*********************************************
+
+``textDocument.fontCapsOption``
+
+**Description**
+
+The text layer's font caps option.
+
+.. note::
+   This functionality was added in After Effects 24.0
+   This functionality is currently in Beta and is subject to change.
+
+.. warning::
+   This value only reflects the first character in the text layer at the current time.
+   If you change this value, it resets all characters in the text layer to the specified setting.
+
+**Type**
+
+A ``FontCapsOption`` enumerated value; read/write. One of:
+
+-  ``FontCapsOption.FONT_NORMAL_CAPS``
+-  ``FontCapsOption.FONT_SMALL_CAPS``
+-  ``FontCapsOption.FONT_ALL_CAPS``
+-  ``FontCapsOption.FONT_ALL_SMALL_CAPS``
 
 ----
 
@@ -389,6 +667,30 @@ String; read-only.
 
 ----
 
+.. _TextDocument.fontObject:
+
+TextDocument.fontObject
+*********************************************
+
+``textDocument.fontObject``
+
+**Description**
+
+The text layer's :ref:`fontObject` specified by its PostScript name.
+
+.. note::
+   This functionality was added in After Effects 24.0
+   This functionality is currently in Beta and is subject to change.
+
+.. warning::
+   This value only reflects the first character in the text layer at the current time.
+
+**Type**
+
+:ref:`fontObject`; read/write.
+
+----
+
 .. _TextDocument.fontSize:
 
 TextDocument.fontSize
@@ -433,6 +735,31 @@ String; read-only.
 
 ----
 
+.. _TextDocument.hangingRoman:
+
+TextDocument.hangingRoman
+*********************************************
+
+``textDocument.hangingRoman``
+
+**Description**
+
+The text layer's hanging roman paragraph option. This is only applicable to box text layers, and will allow punctuation to fit outside the box.
+
+.. note::
+   This functionality was added in After Effects 24.0
+   This functionality is currently in Beta and is subject to change.
+
+.. warning::
+   This value only reflects the first paragraph in the text layer at the current time.
+   If you change this value, it resets all paragraph in the text layer to the specified setting.
+
+**Type**
+
+Boolean; read/write.
+
+----
+
 .. _TextDocument.horizontalScale:
 
 TextDocument.horizontalScale
@@ -473,9 +800,12 @@ TextDocument.justification
 
 The paragraph justification for the text layer.
 
+.. note::
+   This functionality was made read/write in After Effects 24.0
+
 **Type**
 
-A ``ParagraphJustification`` enumerated value; read-only. One of:
+A ``ParagraphJustification`` enumerated value; read/write. One of:
 
 -  ``ParagraphJustification.LEFT_JUSTIFY``
 -  ``ParagraphJustification.RIGHT_JUSTIFY``
@@ -484,6 +814,34 @@ A ``ParagraphJustification`` enumerated value; read-only. One of:
 -  ``ParagraphJustification.FULL_JUSTIFY_LASTLINE_RIGHT``
 -  ``ParagraphJustification.FULL_JUSTIFY_LASTLINE_CENTER``
 -  ``ParagraphJustification.FULL_JUSTIFY_LASTLINE_FULL``
+-  ``ParagraphJustification.MULTIPLE_JUSTIFICATIONS``
+
+Text layer with mixed justification values will be read as `ParagraphJustification.MULTIPLE_JUSTIFICATIONS`
+
+----
+
+.. _TextDocument.kerning:
+
+TextDocument.kerning
+*********************************************
+
+``textDocument.kerning``
+
+**Description**
+
+The text layer's kerning option.
+
+.. note::
+   This functionality was added in After Effects 24.0
+   This functionality is currently in Beta and is subject to change.
+
+.. warning::
+   This value only reflects the first character in the text layer at the current time.
+   If you change this value, it resets all characters in the text layer to the specified setting.
+
+**Type**
+
+Floating-point value; read/write.
 
 ----
 
@@ -524,6 +882,113 @@ Floating-point value; read/write.
 
 ----
 
+.. _TextDocument.leadingType:
+
+TextDocument.leadingType
+*********************************************
+
+``textDocument.leadingType``
+
+**Description**
+
+The text layer's paragraph leading type option.
+
+.. note::
+   This functionality was added in After Effects 24.0
+   This functionality is currently in Beta and is subject to change.
+
+.. warning::
+   This value only reflects the first paragraph in the text layer at the current time.
+   If you change this value, it resets all paragraphs in the text layer to the specified setting.
+
+**Type**
+
+A ``LeadingType`` enumerated value; read/write. One of:
+
+-  ``LeadingType.ROMAN_LEADING_TYPE``
+-  ``LeadingType.JAPANESE_LEADING_TYPE``
+
+----
+
+.. _TextDocument.ligature:
+
+TextDocument.ligature
+*********************************************
+
+``textDocument.ligature``
+
+**Description**
+
+The text layer's ligature option.
+
+.. note::
+   This functionality was added in After Effects 24.0
+   This functionality is currently in Beta and is subject to change.
+
+.. warning::
+   This value only reflects the first character in the text layer at the current time.
+   If you change this value, it resets all characters in the text layer to the specified setting.
+
+**Type**
+
+Boolean; read/write.
+
+----
+
+.. _TextDocument.lineJoinType:
+
+TextDocument.lineJoinType
+*********************************************
+
+``textDocument.lineJoinType``
+
+**Description**
+
+The text layer's line joint type option.
+
+.. note::
+   This functionality was added in After Effects 24.0
+   This functionality is currently in Beta and is subject to change.
+
+.. warning::
+   This value only reflects the first character in the text layer at the current time.
+   If you change this value, it resets all characters in the text layer to the specified setting.
+
+**Type**
+
+A ``LineJoinType`` enumerated value; read/write. One of:
+
+-  ``LineJoinType.LINE_JOIN_MITER``
+-  ``LineJoinType.LINE_JOIN_ROUND``
+-  ``LineJoinType.LINE_JOIN_BEVEL``
+
+----
+
+.. _TextDocument.noBreak:
+
+TextDocument.noBreak
+*********************************************
+
+``textDocument.noBreak``
+
+**Description**
+
+The text layer's no break option.
+
+.. note::
+   This functionality was added in After Effects 24.0
+   This functionality is currently in Beta and is subject to change.
+
+.. warning::
+   This value only reflects the first character in the text layer at the current time.
+   If you change this value, it resets all characters in the text layer to the specified setting.
+
+**Type**
+
+Boolean; read/write.
+
+----
+
 .. _TextDocument.pointText:
 
 TextDocument.pointText
@@ -553,7 +1018,7 @@ TextDocument.smallCaps
 
 **Description**
 
-True if a text layer has small caps enabled; otherwise false.
+True if a text layer has small caps enabled; otherwise false. To set this value, use :ref:`TextDocument.fontCapsOption` added in After Effects 24.0.
 
 .. warning::
    This value only reflects the first character in the text layer at the current time.
@@ -561,6 +1026,81 @@ True if a text layer has small caps enabled; otherwise false.
 **Type**
 
 Boolean; read-only.
+
+----
+
+.. _TextDocument.spaceAfter:
+
+TextDocument.spaceAfter
+*********************************************
+
+``textDocument.spaceAfter``
+
+**Description**
+
+The text layer's paragraph space after option.
+
+.. note::
+   This functionality was added in After Effects 24.0
+   This functionality is currently in Beta and is subject to change.
+
+.. warning::
+   This value only reflects the first paragraph in the text layer at the current time.
+   If you change this value, it resets all paragraph in the text layer to the specified setting.
+
+**Type**
+
+Floating-point value; read/write.
+
+----
+
+.. _TextDocument.spaceBefore:
+
+TextDocument.spaceBefore
+*********************************************
+
+``textDocument.spaceBefore``
+
+**Description**
+
+The text layer's paragraph space before option.
+
+.. note::
+   This functionality was added in After Effects 24.0
+   This functionality is currently in Beta and is subject to change.
+
+.. warning::
+   This value only reflects the first paragraph in the text layer at the current time.
+   If you change this value, it resets all paragraph in the text layer to the specified setting.
+
+**Type**
+
+Floating-point value; read/write.
+
+----
+
+.. _TextDocument.startIndent:
+
+TextDocument.startIndent
+*********************************************
+
+``textDocument.startIndent``
+
+**Description**
+
+The text layer's paragraph start indent option.
+
+.. note::
+   This functionality was added in After Effects 24.0
+   This functionality is currently in Beta and is subject to change.
+
+.. warning::
+   This value only reflects the first paragraph in the text layer at the current time.
+   If you change this value, it resets all paragraph in the text layer to the specified setting.
+
+**Type**
+
+Floating-point value; read/write.
 
 ----
 
@@ -639,7 +1179,7 @@ TextDocument.subscript
 
 **Description**
 
-True if a text layer has subscript enabled; otherwise false.
+True if a text layer has subscript enabled; otherwise false. To set this value, use :ref:`TextDocument.fontBaselineOption` added in After Effects 24.0.
 
 .. warning::
    This value only reflects the first character in the text layer at the current time.
@@ -662,7 +1202,7 @@ TextDocument.superscript
 
 **Description**
 
-True if a text layer has superscript enabled; otherwise false.
+True if a text layer has superscript enabled; otherwise false. To set this value, use :ref:`TextDocument.fontBaselineOption` added in After Effects 24.0.
 
 .. warning::
    This value only reflects the first character in the text layer at the current time.
