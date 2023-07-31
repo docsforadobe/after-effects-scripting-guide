@@ -77,6 +77,8 @@ Welcome to the After Effects Scripting Guide!
 
     other/collection
     other/importoptions
+    other/fontobject
+    other/fontsobject
     other/keyframeease
     other/markervalue
     other/settings
