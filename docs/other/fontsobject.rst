@@ -82,7 +82,7 @@ Methods
 .. _FontsObject.getFontsByFamilyNameAndStyleName:
 
 FontsObject.getFontsByFamilyNameAndStyleName()
-*******************
+**********************************************
 
 ``app.fonts.getFontsByFamilyNameAndStyleName(familyName, styleName)``
 
@@ -114,7 +114,7 @@ An array of fontObjects.
 .. _FontsObject.getFontsByPostScriptName:
 
 FontsObject.getFontsByPostScriptName()
-*******************
+**************************************
 
 ``app.fonts.getFontsByPostScriptName(postscriptName)``
 

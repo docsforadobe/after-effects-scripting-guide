@@ -120,7 +120,7 @@ Floating-point, pseudo-random number in the range [0, 1].
 .. _getEnumAsString:
 
 getEnumAsString()
-*************
+*****************
 
 ``getEnumAsString()``
 

@@ -11,7 +11,7 @@ What's new and changed for scripting?
 .. _Changelog.24.0:
 
 `After Effects 24.0 Beta build 14 <https://community.adobe.com/t5/after-effects-beta-discussions/new-text-scripting-hooks-starting-after-effects-beta-24-0x14/td-p/13976407>`_ (August 2023)
-************************************************************************************************************************************
+********************************************************************************************************************************************************************************************
 
 - Scripting methods and attributes added
 	- Added: :ref:`getEnumAsString`

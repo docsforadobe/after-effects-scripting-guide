@@ -816,7 +816,7 @@ A ``ParagraphJustification`` enumerated value; read/write. One of:
 -  ``ParagraphJustification.FULL_JUSTIFY_LASTLINE_FULL``
 -  ``ParagraphJustification.MULTIPLE_JUSTIFICATIONS``
 
-Text layer with mixed justification values will be read as `ParagraphJustification.MULTIPLE_JUSTIFICATIONS`
+Text layers with mixed justification values will be read as ``ParagraphJustification.MULTIPLE_JUSTIFICATIONS``, but setting a TextDocument to use this value will result in ``ParagraphJustification.CENTER_JUSTIFY`` instead.
 
 ----
 
@@ -841,7 +841,7 @@ The text layer's kerning option.
 
 **Type**
 
-Floating-point value; read/write.
+Integer value; read/write.
 
 ----
 
