@@ -130,9 +130,10 @@ TextDocument.autoHyphenate
 
 The text layer's auto hyphenate paragraph option.
 
+If this attribute has a mixed value on a TextDocument, it will be read as ``undefined``.
+
 .. warning::
-   This value only reflects the first paragraph in the text layer at the current time.
-   If you change this value, it resets all paragraph in the text layer to the specified setting.
+   If you change this value, it will reset all lines in the Text layer to the specified setting.
 
 **Type**
 
@@ -375,9 +376,10 @@ TextDocument.direction
 
 The text layer's paragraph direction option.
 
+If this attribute has a mixed value on a TextDocument, it will be read as ``undefined``.
+
 .. warning::
-   This value only reflects the first paragraph in the text layer at the current time.
-   If you change this value, it resets all paragraphs in the text layer to the specified setting.
+   If you change this value, it will reset all lines in the Text layer to the specified setting.
 
 **Type**
 
@@ -403,9 +405,10 @@ TextDocument.endIndent
 
 The text layer's paragraph end indent option.
 
+If this attribute has a mixed value on a TextDocument, it will be read as ``undefined``.
+
 .. warning::
-   This value only reflects the first paragraph in the text layer at the current time.
-   If you change this value, it resets all paragraph in the text layer to the specified setting.
+   If you change this value, it will reset all lines in the Text layer to the specified setting.
 
 **Type**
 
@@ -428,9 +431,10 @@ TextDocument.everyLineComposer
 
 The text layer's Every-Line Composer paragraph option. If set to false, the TextDocument will use the Single-Line Composer.
    
+If this attribute has a mixed value on a TextDocument, it will be read as ``undefined``.
+
 .. warning::
-   This value only reflects the first paragraph in the text layer at the current time.
-   If you change this value, it resets all paragraph in the text layer to the specified setting.
+   If you change this value, it will reset all lines in the Text layer to the specified setting.
 
 **Type**
 
@@ -528,9 +532,10 @@ TextDocument.firstLineIndent
 
 The text layer's paragraph first line indent option.
 
+If this attribute has a mixed value on a TextDocument, it will be read as ``undefined``.
+
 .. warning::
-   This value only reflects the first paragraph in the text layer at the current time.
-   If you change this value, it resets all paragraph in the text layer to the specified setting.
+   If you change this value, it will reset all lines in the Text layer to the specified setting.
 
 **Type**
 
@@ -750,9 +755,10 @@ TextDocument.hangingRoman
 
 The text layer's Roman Hanging Punctuation paragraph option. This is only applicable to box text layers—it allows punctuation to fit outside the box rather than flow to the next line.
 
+If this attribute has a mixed value on a TextDocument, it will be read as ``undefined``.
+
 .. warning::
-   This value only reflects the first paragraph in the text layer at the current time.
-   If you change this value, it resets all paragraph in the text layer to the specified setting.
+   If you change this value, it will reset all lines in the Text layer to the specified setting.
 
 **Type**
 
@@ -799,9 +805,6 @@ TextDocument.justification
 **Description**
 
 The paragraph justification for the text layer.
-
-.. note::
-   This functionality was made read/write in After Effects 24.0
 
 **Type**
 
@@ -897,9 +900,10 @@ TextDocument.leadingType
 
 The text layer's paragraph leading type option.
 
+If this attribute has a mixed value on a TextDocument, it will be read as ``undefined``.
+
 .. warning::
-   This value only reflects the first paragraph in the text layer at the current time.
-   If you change this value, it resets all paragraphs in the text layer to the specified setting.
+   If you change this value, it will reset all lines in the Text layer to the specified setting.
 
 **Type**
 
@@ -1044,9 +1048,10 @@ TextDocument.spaceAfter
 
 The text layer's paragraph space after option.
 
+If this attribute has a mixed value on a TextDocument, it will be read as ``undefined``.
+
 .. warning::
-   This value only reflects the first paragraph in the text layer at the current time.
-   If you change this value, it resets all paragraph in the text layer to the specified setting.
+   If you change this value, it will reset all lines in the Text layer to the specified setting.
 
 **Type**
 
@@ -1069,9 +1074,10 @@ TextDocument.spaceBefore
 
 The text layer's paragraph space before option.
 
+If this attribute has a mixed value on a TextDocument, it will be read as ``undefined``.
+
 .. warning::
-   This value only reflects the first paragraph in the text layer at the current time.
-   If you change this value, it resets all paragraph in the text layer to the specified setting.
+   If you change this value, it will reset all lines in the Text layer to the specified setting.
 
 **Type**
 
@@ -1094,9 +1100,10 @@ TextDocument.startIndent
 
 The text layer's paragraph start indent option.
 
+If this attribute has a mixed value on a TextDocument, it will be read as ``undefined``.
+
 .. warning::
-   This value only reflects the first paragraph in the text layer at the current time.
-   If you change this value, it resets all paragraph in the text layer to the specified setting.
+   If you change this value, it will reset all lines in the Text layer to the specified setting.
 
 **Type**
 
