@@ -47,7 +47,7 @@ What's new and changed for scripting?
 	- Added: :ref:`FontObject.isFromAdobeFonts`
 	- Added: :ref:`FontObject.isSubstitute`
 	- Added: :ref:`FontObject.location`
-	- Added: :ref:`FontObject.nativefamilyName`
+	- Added: :ref:`FontObject.nativeFamilyName`
 	- Added: :ref:`FontObject.nativeFullName`
 	- Added: :ref:`FontObject.nativeStyleName`
 	- Added: :ref:`FontObject.postScriptName`

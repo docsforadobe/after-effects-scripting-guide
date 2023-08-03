@@ -106,9 +106,9 @@ String; read-only.
 
 ----
 
-.. _FontObject.nativefamilyName:
+.. _FontObject.nativeFamilyName:
 
-FontObject.nativefamilyName
+FontObject.nativeFamilyName
 *********************************************
 
 ``app.fonts.allFonts[0][0].nativeFamilyName``
