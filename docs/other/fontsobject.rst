@@ -41,7 +41,7 @@ The Family Name in one font group is not guaranteed to have unique name compared
 
 In addition, it is perfectly acceptable to have multiple fonts with the same PostScript name, though only one will have the same (PostScript name, Technology, Primary Writing Script) tuple. In the case of true duplicates, it is undefined which will be returned and which will be suppressed.
 
-The family groups and :ref:`fontobject` in the group are sorted accordingly to the setting in the ``Character Panel`` dropdown ``Show Font Names in English``. If set to true, the ``Font.familyName`` and ``Font.styleName`` property is used, otherwise the ``Font.nativeFamilyName`` and ``Font.nativeStyleName`` property is used.
+The family groups and :ref:`Font objects <fontobject>` in the group are sorted accordingly to the setting in the Character Panel dropdown "Show Font Names in English". If set to true, the :ref:`familyName<FontObject.familyName>` and :ref:`styleName<FontObject.styleName>` property is used, otherwise the :ref:`nativeFamilyName<FontObject.nativeFamilyName>` and :ref:`nativeStyleName<FontObject.nativeStyleName>` property is used.
 
 :ref:`fontobject` for which ``Font.isSubstitute`` returns true are always sorted to the end as individual family groups.
 
