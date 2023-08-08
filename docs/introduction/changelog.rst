@@ -24,6 +24,7 @@ What's new and changed for scripting?
 	- Added: :ref:`TextDocument.autoHyphenate`
 	- Added: :ref:`TextDocument.autoKernType`
 	- Added: :ref:`TextDocument.baselineDirection`
+	- Added: :ref:`TextDocument.composerEngine`
 	- Added: :ref:`TextDocument.digitSet`
 	- Added: :ref:`TextDocument.direction`
 	- Added: :ref:`TextDocument.endIndent`
