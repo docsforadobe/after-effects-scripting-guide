@@ -37,7 +37,7 @@ They are grouped into what is named a family group which are Arrays of :ref:`fon
 
 The Family Name of the group is simply the ``Font.familyName`` of any of the :ref:`fontobject` in the group.
 
-The Family Name in one font group is not guaranteed to have unique name compared to different font groups - the grouping is determined by a number of factors including the returned value of ``Font.technology`` and ``Font.writingScripts``.
+The Family Name in one font group is not guaranteed to have unique name compared to different font groups - the grouping is determined by a number of factors including the returned value of :ref:`FontObject.technology` and :ref:`FontObject.writingScripts`.
 
 In addition, it is perfectly acceptable to have multiple fonts with the same PostScript name, though only one will have the same (PostScript name, Technology, Primary Writing Script) tuple. In the case of true duplicates, it is undefined which will be returned and which will be suppressed.
 
