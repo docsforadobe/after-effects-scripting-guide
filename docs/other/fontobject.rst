@@ -8,6 +8,8 @@ Font object
 
 The Font object provides information about a specific font, along with the font technology used, helping disambiguate when multiple fonts sharing the same Postscript name are installed on the system.
 
+Most of these APIs simply return information which is contained in the Font data file itself, seek more information there.
+
 .. note::
    | This functionality was added in After Effects 24.0.
    | This functionality is currently in Beta and is subject to change.
@@ -27,7 +29,7 @@ FontObject.familyName
 
 **Description**
 
-The family name of the font.
+The family name of the font, in the ASCII character set.
 
 **Type**
 
@@ -44,7 +46,8 @@ FontObject.fullName
 
 **Description**
 
-The full name of the font. Usually composed of the family name and the style name.
+The full name of the font, in the ASCII character set. Usually composed of the family name and the style name. 
+
 
 **Type**
 
@@ -78,7 +81,7 @@ FontObject.isSubstitute
 
 **Description**
 
-Returns true when the font is missing on project open.
+Returns true when this font instance represents a font reference which was missing on project open.
 
 **Type**
 
@@ -115,7 +118,7 @@ FontObject.nativeFamilyName
 
 **Description**
 
-The native family name of the font. The native name is the internal family name of the font and can be different from the usual family name.
+The native family name of the font in full 16 bit Unicode. Often different than what is returned from ``familyName`` for non-Latin fonts.
 
 **Type**
 
@@ -128,11 +131,11 @@ String; read-only.
 FontObject.nativeFullName
 *********************************************
 
-``app.fonts.allFonts[0][0].nativefullName``
+``app.fonts.allFonts[0][0].nativeFullName``
 
 **Description**
 
-The native full name of the font. It is usually composed of the native family name and native style name of the font.
+The native full name of the font in full 16 bit Unicode. Often different than what is returned from ``fullName`` for non-Latin fonts.
 
 **Type**
 
@@ -149,7 +152,7 @@ FontObject.nativeStyleName
 
 **Description**
 
-The native style name of the font. This is the internal name of the style and can be different from the usual style name.
+The native style name of the font in full 16 bit Unicode. Often different than what is returned from ``styleName`` for non-Latin fonts.
 
 **Type**
 
@@ -183,7 +186,7 @@ FontObject.styleName
 
 **Description**
 
-The style name of the font.
+The style name of the font, in the ASCII character set.
 
 **Type**
 

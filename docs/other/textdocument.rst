@@ -330,6 +330,32 @@ Array of two integers (minimum value of 1); read/write.
 
 ----
 
+.. _TextDocument.composerEngine:
+
+TextDocument.composerEngine
+*********************************************
+
+``textDocument.composerEngine``
+
+.. note::
+   | This functionality was added in After Effects 24.0.
+   | This functionality is currently in Beta and is subject to change.
+
+**Description**
+
+The text layer's paragraph composer engine option. By default new text layers will use the ``ComposerEngine.UNIVERSAL_TYPE_ENGINE``, the other enum value will only be encountered in projects created before the introduction of the new engine.
+
+If this attribute has a mixed value on a TextDocument, it will be read as ``undefined``.
+
+**Type**
+
+A ``ComposerEngine`` enumerated value; read-only. One of:
+
+-  ``ComposerEngine.LATIN_CJK_ENGINE``
+-  ``ComposerEngine.UNIVERSAL_TYPE_ENGINE``
+
+----
+
 .. _TextDocument.digitSet:
 
 TextDocument.digitSet
