@@ -79,6 +79,28 @@ Array of fontObjects; read-only.
 Methods
 =======
 
+.. _FontsObject.fontsWithDefaultDesignAxes:
+
+FontsObject.fontsWithDefaultDesignAxes()
+**********************************************
+
+``app.fonts.fontsWithDefaultDesignAxes()``
+
+**Description**
+
+This function will return an array of :ref:`fontobject` listing all the variable fonts available on the system.
+
+.. code:: javascript
+
+   var variableFontList = app.fonts.fontsWithDefaultDesignAxes()
+   alert(variableFontList.length);
+
+**Returns**
+
+An array of fontObjects.
+
+----
+
 .. _FontsObject.getFontsByFamilyNameAndStyleName:
 
 FontsObject.getFontsByFamilyNameAndStyleName()
@@ -138,4 +160,4 @@ postscriptName          A string containing the Postscript Name of the font.
 
 **Returns**
 
-An array of fontObjects.
+An array of Font Objects.

@@ -18,6 +18,59 @@ The Font object provides information about a specific font, along with the font 
 Attributes
 ==========
 
+.. _FontObject.designAxesData:
+
+FontObject.designAxesData
+*********************************************
+
+``app.fonts.allFonts[0][0].designAxesData``
+
+**Description**
+
+Retruns an Array of Objects, containing the design axes data from the font. 
+Each object is composed of the axis name, tag, min value and max value.
+
+**Example**
+
+This example will select the first returned Font Family Array.
+
+.. code:: javascript
+
+   // Getting the first available Variable Font on the system
+   var firstVariableFont = fontsWithDefaultDesignAxes()[0];
+   var axesData = firstVariableFont.designAxesData;
+
+   // Getting the first design axis for that Font 
+   var firstAxis = axesData[0];
+
+   alert(firstAxis.name+"\n"+firstAxis.tag+"\n"+firstAxis.min+"\n"+firstAxis.max);
+
+**Type**
+
+Array of Objects; read-only.
+
+----
+
+.. _FontObject.designVector:
+
+FontObject.designVector
+*********************************************
+
+``app.fonts.fontsWithDefaultDesignAxes()[0].designVector``
+
+**Description**
+
+For Variable fonts will return an ordered array of length matching the number of design axes defined by the font”
+
+.. note::
+Will return undefined for non variable fonts. 
+
+**Type**
+
+Array of Floats; read-only.
+
+----
+
 .. _FontObject.familyName:
 
 FontObject.familyName
@@ -28,6 +81,23 @@ FontObject.familyName
 **Description**
 
 The family name of the font.
+
+**Type**
+
+String; read-only.
+
+----
+
+.. _FontObject.familyPrefix:
+
+FontObject.familyPrefix
+*********************************************
+
+``app.fonts.fontsWithDefaultDesignAxes()[0].familyPrefix``
+
+**Description**
+
+The family prefix of the variable font.
 
 **Type**
 
@@ -49,6 +119,23 @@ The full name of the font. Usually composed of the family name and the style nam
 **Type**
 
 String; read-only.
+
+----
+
+.. _FontObject.hasDesignAxes:
+
+FontObject.hasDesignAxes
+*********************************************
+
+``app.fonts.allFonts[0][0].hasDesignAxes``
+
+**Description**
+
+Returns true if the font is a variable font.
+
+**Type**
+
+Boolean; read-only.
 
 ----
 
@@ -366,3 +453,54 @@ An array of ``CTScript`` enumerated value; read-only. One or more of:
 -  ``CTScript.CT_TAILE_SCRIPT``
 -  ``CTScript.CT_TAIVIET_SCRIPT``
 -  ``CTScript.CT_DONTKNOW_SCRIPT``
+
+=======
+Methods
+=======
+
+.. _FontObject.hasSameDict:
+
+FontObject.hasSameDict()
+**********************************************
+
+``app.fonts.fontsWithDefaultDesignAxes()[0].hasSameDict(Font)``
+
+**Description**
+
+This function will true if the Font Object passed as an argument share the same variable font dictionnary.
+
+.. note::
+  Can only return true when used on variable fonts with the argument being a Font Object of a variable font.
+
+**Parameters**
+
+====================  ========================================================
+Font                  A Font Object
+====================  ========================================================
+
+**Returns**
+
+A Boolean.
+
+----
+
+.. _FontObject.postScriptNameForDesignVector:
+
+FontObject.postScriptNameForDesignVector()
+**********************************************
+
+``app.fonts.fontsWithDefaultDesignAxes()[0].postScriptNameForDesignVector([Design Vector])``
+
+**Description**
+
+This function will return the postscript name of the variable font for the specific design vectors passed as the argument.
+
+**Parameters**
+
+====================  ========================================================
+Design Vector          An array of float values.
+====================  ========================================================
+
+**Returns**
+
+A String.
