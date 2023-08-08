@@ -86,7 +86,7 @@ The list of all the missing or substituted fonts of the current Project.
 
 **Type**
 
-Array of :ref:`fontobject`; read-only.
+Array of :ref:`Font objects<fontobject>`; read-only.
 
 ----
 
