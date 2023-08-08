@@ -122,7 +122,7 @@ StyleName               A string containing the Style Name of the font.
 
 **Returns**
 
-An array of :ref:`fontobject`.
+Array of :ref:`Font objects<fontobject>`; read-only.
 
 ----
 
