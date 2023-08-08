@@ -35,7 +35,7 @@ They are grouped into what is named a family group which are Arrays of :ref:`fon
 
 .. Naming and ordering::
 
-The Family Name of the group is simply the ``Font.familyName`` of any of the :ref:`fontobject` in the group.
+The Family Name of the group is simply the :ref:`familyName <FontObject.familyName>` of any of the :ref:`Font objects<fontobject>` in the group.
 
 The Family Name in one font group is not guaranteed to have unique name compared to different font groups - the grouping is determined by a number of factors including the returned value of :ref:`FontObject.technology` and :ref:`FontObject.writingScripts`.
 
