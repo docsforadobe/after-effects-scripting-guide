@@ -48,7 +48,7 @@ The family groups and :ref:`Font objects <fontobject>` in the group are sorted a
 
 **Type**
 
-Array of Arrays of :ref:`fontobject`; read-only.
+Array of Arrays of :ref:`Font objects <fontobject>`; read-only.
 
 **Example**
 
