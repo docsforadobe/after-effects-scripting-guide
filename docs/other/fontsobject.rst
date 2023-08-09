@@ -62,8 +62,7 @@ FontsObject.fontsWithDefaultDesignAxes
 
 **Description**
 
-This attribute will return an array of Variable fontobject with only one per [real(?)/font dictionary(?)] where the specific Font instance will be assigned the design vector with default values defined for each axis.
-This API is just a convenient way to quickly filter out a unique instance for each variable font.
+Returns an array of variable :ref:`Font objects<FontObject>`, each using a unique font dictionary and with default values for their design axes. This API is a convenient way to quickly filter for a unique instance for each installed variable font.
 
 .. code:: javascript
 
