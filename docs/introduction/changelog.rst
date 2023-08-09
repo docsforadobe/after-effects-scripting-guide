@@ -10,6 +10,14 @@ What's new and changed for scripting?
 
 .. _Changelog.24.0:
 
+After Effects 24.0 Beta build 19 (August 2023)
+********************************************************************************************************************************************************************************************
+
+- Scripting attributes added
+	- Added: :ref:`TextDocument.composerEngine`
+
+.. _Changelog.24.0:
+
 `After Effects 24.0 Beta build 14 <https://community.adobe.com/t5/after-effects-beta-discussions/new-text-scripting-hooks-starting-after-effects-beta-24-0x14/td-p/13976407>`_ (August 2023)
 ********************************************************************************************************************************************************************************************
 
@@ -24,6 +32,7 @@ What's new and changed for scripting?
 	- Added: :ref:`TextDocument.autoHyphenate`
 	- Added: :ref:`TextDocument.autoKernType`
 	- Added: :ref:`TextDocument.baselineDirection`
+	- Added: :ref:`TextDocument.composerEngine`
 	- Added: :ref:`TextDocument.digitSet`
 	- Added: :ref:`TextDocument.direction`
 	- Added: :ref:`TextDocument.endIndent`
