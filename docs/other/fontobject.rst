@@ -27,8 +27,11 @@ FontObject.designAxesData
 
 **Description**
 
-Retruns an Array of Objects, containing the design axes data from the font. 
+Returns an Array of Objects, containing the design axes data from the font. 
 Each object is composed of the axis name, tag, min value and max value.
+
+.. note::
+  Will return undefined for non variable fonts.
 
 **Example**
 
@@ -60,14 +63,14 @@ FontObject.designVector
 
 **Description**
 
-For Variable fonts will return an ordered array of length matching the number of design axes defined by the font”
+For Variable fonts will return an ordered array with a length matching the number of design axes defined by the font.
 
 .. note::
-Will return undefined for non variable fonts. 
+  Will return undefined for non variable fonts. 
 
 **Type**
 
-Array of Floats; read-only.
+Array of floating-point values; read-only.
 
 ----
 
@@ -97,7 +100,10 @@ FontObject.familyPrefix
 
 **Description**
 
-The family prefix of the variable font.
+The family prefix of the variable font. For example, the family of the PostScript name "SFPro-Bold" is "SFPro".
+
+.. note::
+  Will return undefined for non variable fonts.
 
 **Type**
 
@@ -463,11 +469,11 @@ Methods
 FontObject.hasSameDict()
 **********************************************
 
-``app.fonts.fontsWithDefaultDesignAxes()[0].hasSameDict(Font)``
+``app.fonts.fontsWithDefaultDesignAxes()[0].hasSameDict(fontObject)``
 
 **Description**
 
-This function will true if the Font Object passed as an argument share the same variable font dictionnary.
+This function will true if the Font Object passed as an argument shares the same variable font dictionnary as the Font object the function is called on.
 
 .. note::
   Can only return true when used on variable fonts with the argument being a Font Object of a variable font.
@@ -489,7 +495,7 @@ A Boolean.
 FontObject.postScriptNameForDesignVector()
 **********************************************
 
-``app.fonts.fontsWithDefaultDesignAxes()[0].postScriptNameForDesignVector([Design Vector])``
+``app.fonts.fontsWithDefaultDesignAxes()[0].postScriptNameForDesignVector([...vectorValues])``
 
 **Description**
 
@@ -498,7 +504,7 @@ This function will return the postscript name of the variable font for the speci
 **Parameters**
 
 ====================  ========================================================
-Design Vector          An array of float values.
+vectorValues          An array of float values that matches the length of :ref:`FontObject.designVector` for the given variable font.
 ====================  ========================================================
 
 **Returns**

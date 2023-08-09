@@ -53,6 +53,29 @@ This example will select the first returned Font Family Array.
 
 ----
 
+.. _FontsObject.fontsWithDefaultDesignAxes:
+
+FontsObject.fontsWithDefaultDesignAxes
+**********************************************
+
+``app.fonts.fontsWithDefaultDesignAxes``
+
+**Description**
+
+This attribute will return an array of Variable fontobject with only one per [real(?)/font dictionary(?)] where the specific Font instance will be assigned the design vector with default values defined for each axis.
+This API is just a convenient way to quickly filter out a unique instance for each variable font.
+
+.. code:: javascript
+
+   var variableFontList = app.fonts.fontsWithDefaultDesignAxes
+   alert(variableFontList.length);
+
+**Returns**
+
+An array of :ref:`Font objects<FontObject>`.
+
+----
+
 .. _FontsObject.missingOrSubstituedFonts:
 
 FontsObject.missingOrSubstitutedFonts
@@ -78,28 +101,6 @@ Array of fontObjects; read-only.
 =======
 Methods
 =======
-
-.. _FontsObject.fontsWithDefaultDesignAxes:
-
-FontsObject.fontsWithDefaultDesignAxes()
-**********************************************
-
-``app.fonts.fontsWithDefaultDesignAxes()``
-
-**Description**
-
-This function will return an array of :ref:`fontobject` listing all the variable fonts available on the system.
-
-.. code:: javascript
-
-   var variableFontList = app.fonts.fontsWithDefaultDesignAxes()
-   alert(variableFontList.length);
-
-**Returns**
-
-An array of fontObjects.
-
-----
 
 .. _FontsObject.getFontsByFamilyNameAndStyleName:
 
@@ -160,4 +161,4 @@ postscriptName          A string containing the Postscript Name of the font.
 
 **Returns**
 
-An array of Font Objects.
+An array of :ref:`Font objects<FontObject>`.
