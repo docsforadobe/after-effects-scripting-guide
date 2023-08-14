@@ -8,7 +8,22 @@ Fonts object
 
 **Description**
 
-The Fonts objects provides information about the current font ecosystem on your device. It will allow you to retreive all the available fonts and iterate them.
+The Fonts objects provides information about the current font ecosystem on your device.
+
+After Effects maintains an internal font proxy to a real font which it has enumerated in the font ecosystem. As the fonts in the font ecosystem are added and removed these internal font proxies are kept in sync as well by being added and removed.
+
+The properties we report via the proxy :ref:`fontobject` are the data that is available to us from the font files themselves, which of course will vary according to technology and type of font. It is not possible here to describe all the possible interesting variations and troubles that this causes us and in general it is advisable to be careful with assuming that the behavior and properties for one font type or technology are common to all other font types and technology - the answer as always is "it depends".
+
+
+A :ref:`fontobject` is a soft reference to one of these internal font proxies and as a consequence is not sufficient to keep the internal font proxy alive. As a result if the internal font proxy is removed, the referencing :ref:`fontobject` will throw an invalid exception for any property reference.
+
+
+On project open, and a few other situations, it may come to pass that the font which is being referenced in the persisted data cannot be found in the current font ecosystem. In these situations an internal font proxy will be created which will contain the desired properties, such as PostScript name, and will return true for :ref:`isSubstitute <FontObject.isSubstitute>`. There will be an underlying real font which will be selected to support this internal font proxy, but we do not reveal what it is and there is no way to influence this selection.
+
+
+Continuing the open process with created substitute fonts, an attempt will be made to sync matching fonts from Creative Cloud Adobe Fonts. This is an asynchronous activity and the project will usually finish opening and be ready for use before any fonts are brought down from Adobe Fonts. Depending on how many fonts are being synced, they may be installed at different times. There is no way to disable this attempt.
+
+After any change to the font ecosystem from installing new real fonts, the outstanding list of substitute fonts will be evaluated to see if there now exists a real font which is a valid replacement for it - currently only requiring the PostScript name to match - and if one is found automatically all the references in the project to the substitute will be replaced with the newly installed font.
 
 .. note::
    | This functionality was added in After Effects 24.0.
@@ -65,10 +80,34 @@ This example will select the first returned Font Family Array.
 
    alert(firstFontFamilyName+" "+firstFamilyStyle);
 
+----
+
+.. _FontsObject.fontsWithDefaultDesignAxes:
+
+FontsObject.fontsWithDefaultDesignAxes
+**********************************************
+
+``app.fonts.fontsWithDefaultDesignAxes``
+
+**Description**
+
+Returns an array of variable :ref:`Font objects<FontObject>`, each using a unique font dictionary and with default values for their design axes. This API is a convenient way to quickly filter for a unique instance of each installed variable font.
+
+**Type**
+
+Array of :ref:`Font objects<FontObject>`; read-only.
+
+**Example**
+
+.. code:: javascript
+
+   var variableFontList = app.fonts.fontsWithDefaultDesignAxes;
+   alert(variableFontList.length);
+
 
 ----
 
-.. _FontsObject.missingOrSubstituedFonts:
+.. _FontsObject.missingOrSubstitutedFonts:
 
 FontsObject.missingOrSubstitutedFonts
 *********************************************
@@ -80,8 +119,7 @@ FontsObject.missingOrSubstitutedFonts
 The list of all the missing or substituted fonts of the current Project.
 
 .. note::
-   A substituted font is a font that was already missing when the project is opened.
-   A missing font is a font that went missing (font being uninstalled, for example) while to project was open
+   A substituted font is a font that was already missing when the project is opened. A missing font is a font that went missing (font being uninstalled, for example) *while* the project was open.
 
 
 **Type**
@@ -135,11 +173,11 @@ FontsObject.getFontsByPostScriptName()
 
 **Description**
 
-This function will return an array of :ref:`fontobject` based on the PostScript name of previously found Fonts. 
+This function will return an array of :ref:`Font objects<fontobject>` based on the PostScript name of previously found Fonts. 
 
-It is perfectly valid to have multiple :ref:`fontobject` which share the same PostScript name, the order of these is determined by the order in which they were enumerated in the font environment. It is the entry at ``[0]`` which is used when setting the :ref::`TextDocument` ``font`` property.
+It is perfectly valid to have multiple :ref:`Font objects<fontobject>` which share the same PostScript name, the order of these is determined by the order in which they were enumerated in the font environment. The entry at ``[0]`` will be used when setting the :ref:`TextDocument.fontObject` property.
 
-In addition, there is a special property of this API with regards to Variable fonts. If no :ref:`fontobject` matching the requested PostScript exists, but we find that there exist a Variable font which matches the requested PostScript name prefix, then this Variable font instance will be requested to create a matching :ref:`fontobject`. This is the only way that we will return an instance which did not exist prior to invoking this method.
+In addition, there is a special property of this API with regards to Variable fonts. If no :ref:`fontobject` matching the requested PostScript exists, but we find that there exist a variable font which matches the requested PostScript name prefix, then this Variable font instance will be requested to create a matching :ref:`fontobject`. This is the only way that we will return an instance which did not exist prior to invoking this method.
 
 If no matching Font is found, it will return an empty Array.
 

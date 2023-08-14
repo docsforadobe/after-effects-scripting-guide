@@ -20,6 +20,64 @@ Most of these APIs simply return information which is contained in the Font data
 Attributes
 ==========
 
+.. _FontObject.designAxesData:
+
+FontObject.designAxesData
+*********************************************
+
+``app.fonts.allFonts[0][0].designAxesData``
+
+**Description**
+
+Returns an Array of Objects, containing the design axes data from the font. 
+Each object is composed of the axis ``name``, ``tag``, ``min`` value and ``max`` value.
+
+.. note::
+  Will return undefined for non-variable fonts.
+
+**Example**
+
+This example will select the first returned Font Family Array.
+
+.. code:: javascript
+
+   // Getting the first available Variable Font on the system
+   var firstVariableFont = fontsWithDefaultDesignAxes[0];
+   var axesData = firstVariableFont.designAxesData;
+
+   // Getting the first design axis for that Font 
+   var firstAxis = axesData[0];
+
+   alert(firstAxis.name+"\n"+firstAxis.tag+"\n"+firstAxis.min+"\n"+firstAxis.max);
+
+**Type**
+
+Array of Objects; read-only.
+
+----
+
+.. _FontObject.designVector:
+
+FontObject.designVector
+*********************************************
+
+``app.fonts.fontsWithDefaultDesignAxes[0].designVector``
+
+**Description**
+
+For Variable fonts will return an ordered array with a length matching the number of design axes defined by the font.
+
+.. note::
+  Will return undefined for non-variable fonts. 
+
+**Type**
+
+Array of floating-point values; read-only.
+
+----
+
+
+
 .. _FontObject.familyName:
 
 FontObject.familyName
@@ -30,6 +88,26 @@ FontObject.familyName
 **Description**
 
 The family name of the font, in the ASCII character set.
+
+**Type**
+
+String; read-only.
+
+----
+
+.. _FontObject.familyPrefix:
+
+FontObject.familyPrefix
+*********************************************
+
+``app.fonts.fontsWithDefaultDesignAxes[0].familyPrefix``
+
+**Description**
+
+The family prefix of the variable font. For example, the family of the PostScript name "SFPro-Bold" is "SFPro".
+
+.. note::
+  Will return undefined for non-variable fonts.
 
 **Type**
 
@@ -48,10 +126,26 @@ FontObject.fullName
 
 The full name of the font, in the ASCII character set. Usually composed of the family name and the style name. 
 
-
 **Type**
 
 String; read-only.
+
+----
+
+.. _FontObject.hasDesignAxes:
+
+FontObject.hasDesignAxes
+*********************************************
+
+``app.fonts.allFonts[0][0].hasDesignAxes``
+
+**Description**
+
+Returns true if the font is a variable font.
+
+**Type**
+
+Boolean; read-only.
 
 ----
 
@@ -369,3 +463,54 @@ An array of ``CTScript`` enumerated value; read-only. One or more of:
 -  ``CTScript.CT_TAILE_SCRIPT``
 -  ``CTScript.CT_TAIVIET_SCRIPT``
 -  ``CTScript.CT_DONTKNOW_SCRIPT``
+
+=======
+Methods
+=======
+
+.. _FontObject.hasSameDict:
+
+FontObject.hasSameDict()
+**********************************************
+
+``app.fonts.fontsWithDefaultDesignAxes[0].hasSameDict(fontObject)``
+
+**Description**
+
+This function will true if the :ref:`FontObject` passed as an argument shares the same variable font dictionnary as the :ref:`FontObject` the function is called on.
+
+.. note::
+  Can only return true when called on a variable :ref:`FontObject` with the argument also being a :ref:`FontObject` of a variable font.
+
+**Parameters**
+
+====================  ========================================================
+fontObject            A :ref:`FontObject`
+====================  ========================================================
+
+**Returns**
+
+A Boolean.
+
+----
+
+.. _FontObject.postScriptNameForDesignVector:
+
+FontObject.postScriptNameForDesignVector()
+**********************************************
+
+``app.fonts.fontsWithDefaultDesignAxes[0].postScriptNameForDesignVector([...vectorValues])``
+
+**Description**
+
+This function will return the postscript name of the variable font for the specific design vectors passed as the argument.
+
+**Parameters**
+
+====================  ===============================================================================================================
+vectorValues          An array of float values that matches the length of :ref:`FontObject.designVector` for the given variable font.
+====================  ===============================================================================================================
+
+**Returns**
+
+A String.
