@@ -10,6 +10,13 @@ What's new and changed for scripting?
 
 .. _Changelog.24.0:
 
+`After Effects 24.0 Beta build 37 <https://community.adobe.com/t5/after-effects-beta-discussions/new-text-scripting-hooks-for-font-replacement/m-p/14025889>`_ (August 2023)
+********************************************************************************************************************************************************************************************
+
+- Scripting methods and attributes added
+	- Added: :ref:`Project.usedFonts`
+	- Added: :ref:`Project.replaceFont`
+
 `After Effects 24.0 Beta build 25 <https://community.adobe.com/t5/after-effects-beta-discussions/new-scripting-hooks-for-variable-fonts/m-p/14007210>`_ (August 2023)
 ********************************************************************************************************************************************************************************************
 
