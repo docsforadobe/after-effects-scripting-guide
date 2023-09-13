@@ -115,6 +115,27 @@ String; read-only.
 
 ----
 
+.. _FontObject.fontID:
+
+FontObject.fontID
+*********************************************
+
+``app.fonts.allFonts[0][0].fontID``
+
+**Description**
+
+A unique number assigned to the FontObject instance when it is created, value is greater than or equal to 1. It never changes during the application session but may be different in subsequent launches of the application. 
+
+Can be used to compare two FontObject instances to see if they refer to the same underlying native font instance.
+
+FontObjects can be looked up by fontID with :ref:`getFontByID<FontsObject.getFontByID>` .
+
+**Type**
+
+Number; read-only.
+
+----
+
 .. _FontObject.fullName:
 
 FontObject.fullName

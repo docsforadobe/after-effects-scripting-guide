@@ -10,6 +10,14 @@ What's new and changed for scripting?
 
 .. _Changelog.24.0:
 
+After Effects 24.1 Beta build 10 (September 2023)
+********************************************************************************************************************************************************************************************
+
+- Scripting methods and attributes added
+	- Added: :ref:`FontsObject.fontServerRevision`
+	- Added: :ref:`FontsObject.getFontByID`
+	- Added: :ref:`FontObject.fontID`
+	
 `After Effects 24.0 Beta build 37 <https://community.adobe.com/t5/after-effects-beta-discussions/new-text-scripting-hooks-for-font-replacement/m-p/14025889>`_ (August 2023)
 ********************************************************************************************************************************************************************************************
 

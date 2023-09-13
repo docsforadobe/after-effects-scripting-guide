@@ -583,7 +583,7 @@ Project.usedFonts
 **Description**
 
 Returns an Array of Objects containing references to used fonts and the Text Layers on which they appear in the current :ref:`Project<Project>`.
-Each object is composed of ``font`` which is a :ref:`Font object<fontobject>`, and ``layerIDs`` which is an Array of IDs from :ref:`Layer.id`. See :ref:`Project.itemByID` to retrieve the layers.
+Each object is composed of ``font`` which is a :ref:`Font object<fontobject>`, and ``layerIDs`` which is an Array of IDs from :ref:`Layer.id`. See :ref:`Project.layerByID` to retrieve the layers.
 
 .. code:: javascript
 

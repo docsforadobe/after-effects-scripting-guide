@@ -56,7 +56,7 @@ The Family Name in one font group is not guaranteed to have unique name compared
 
 In addition, it is perfectly acceptable to have multiple fonts with the same PostScript name, though only one will have the same (PostScript name, Technology, Primary Writing Script) tuple. In the case of true duplicates, it is undefined which will be returned and which will be suppressed.
 
-The family groups and :ref:`Font objects <fontobject>` in the group are sorted accordingly to the setting in the Character Panel dropdown "Show Font Names in English". If set to true, the :ref:`familyName<FontObject.familyName>` and :ref:`styleName<FontObject.styleName>` property is used, otherwise the :ref:`nativeFamilyName<FontObject.nativeFamilyName>` and :ref:`nativeStyleName<FontObject.nativeStyleName>` property is used.
+The family groups and :ref:`Font objects <fontobject>` in the group are sorted according to the setting in the Character Panel dropdown "Show Font Names in English". If set to true, the :ref:`familyName<FontObject.familyName>` and :ref:`styleName<FontObject.styleName>` property is used, otherwise the :ref:`nativeFamilyName<FontObject.nativeFamilyName>` and :ref:`nativeStyleName<FontObject.nativeStyleName>` property is used.
 
 :ref:`fontobject` for which ``Font.isSubstitute`` returns true are always sorted to the end as individual family groups.
 
@@ -79,6 +79,34 @@ This example will select the first returned Font Family Array.
    var firstFamilyStyle = firstFontGroup[0].styleName;
 
    alert(firstFontFamilyName+" "+firstFamilyStyle);
+
+----
+
+.. _FontsObject.fontServerRevision:
+
+FontsObject.fontServerRevision
+**********************************************
+
+``app.fonts.fontServerRevision``
+
+**Description**
+
+Returns an unsigned number representing the current revision of the font environment.
+
+The revision is advanced when anything happens to the font environment which would change the contents, properties, or order of :ref:`Font objects<FontObject>` returned from a call to ``allFonts``.
+
+Among these are: installing or removing fonts in the font environment, opening or closing a project with substituted fonts, causing a custom Variable font instance to be created, and changing the setting in the Character Panel dropdown "Show Font Names in English".
+
+**Type**
+
+Number; read-only.
+
+**Example**
+
+.. code:: javascript
+
+   var fsRev = app.fonts.fontServerRevision;
+   alert(fsRev);
 
 ----
 
@@ -131,6 +159,37 @@ Array of :ref:`Font objects<fontobject>`; read-only.
 =======
 Methods
 =======
+
+.. _FontsObject.getFontByID:
+
+FontsObject.getFontByID()
+**************************************
+
+``app.fonts.getFontByID(fontID)``
+
+**Description**
+
+This function will return an instance of :ref:`Font object<fontobject>` based on the ID of a previously found Font. 
+
+If no matching Font is found, it will return undefined. This can occur with an unknown ID or if the original Font has been removed from the font environment.
+
+.. code:: javascript
+
+   var font1 = app.fonts.allFonts[0][0];
+   var font2 = app.fonts.getFontByID(font1.fontID);
+   alert(font1.fontID == font2.fontID);
+
+**Parameters**
+
+====================  ========================================================
+fontID                  A number containing the ID of the font.
+====================  ========================================================
+
+**Returns**
+
+:ref:`Font object<fontobject>`, or undefined if no Font by that ID.
+
+-----
 
 .. _FontsObject.getFontsByFamilyNameAndStyleName:
 
