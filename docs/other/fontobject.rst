@@ -4,15 +4,14 @@
 Font object
 ################################################
 
+.. note::
+   | This functionality was added in After Effects 24.0.
+
 **Description**
 
 The Font object provides information about a specific font, along with the font technology used, helping disambiguate when multiple fonts sharing the same Postscript name are installed on the system.
 
 Most of these APIs simply return information which is contained in the Font data file itself, seek more information there.
-
-.. note::
-   | This functionality was added in After Effects 24.0.
-   | This functionality is currently in Beta and is subject to change.
 
 ----
 
@@ -121,6 +120,10 @@ FontObject.fontID
 *********************************************
 
 ``app.fonts.allFonts[0][0].fontID``
+
+.. note::
+   | This functionality was added in After Effects 24.0.
+   | This functionality is currently in Beta and is subject to change.
 
 **Description**
 

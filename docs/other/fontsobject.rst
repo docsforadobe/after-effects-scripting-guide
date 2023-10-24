@@ -6,6 +6,9 @@ Fonts object
 
 ``app.fonts``
 
+.. note::
+   | This functionality was added in After Effects 24.0.
+
 **Description**
 
 The Fonts objects provides information about the current font ecosystem on your device.
@@ -24,10 +27,6 @@ On project open, and a few other situations, it may come to pass that the font w
 Continuing the open process with created substitute fonts, an attempt will be made to sync matching fonts from Creative Cloud Adobe Fonts. This is an asynchronous activity and the project will usually finish opening and be ready for use before any fonts are brought down from Adobe Fonts. Depending on how many fonts are being synced, they may be installed at different times. There is no way to disable this attempt.
 
 After any change to the font ecosystem from installing new real fonts, the outstanding list of substitute fonts will be evaluated to see if there now exists a real font which is a valid replacement for it - currently only requiring the PostScript name to match - and if one is found automatically all the references in the project to the substitute will be replaced with the newly installed font.
-
-.. note::
-   | This functionality was added in After Effects 24.0.
-   | This functionality is currently in Beta and is subject to change.
 
 ----
 
@@ -88,6 +87,10 @@ FontsObject.fontServerRevision
 **********************************************
 
 ``app.fonts.fontServerRevision``
+
+.. note::
+   | This functionality was added in After Effects 24.0.
+   | This functionality is currently in Beta and is subject to change.
 
 **Description**
 
@@ -166,6 +169,10 @@ FontsObject.getFontByID()
 **************************************
 
 ``app.fonts.getFontByID(fontID)``
+
+.. note::
+   | This functionality was added in After Effects 24.0.
+   | This functionality is currently in Beta and is subject to change.
 
 **Description**
 

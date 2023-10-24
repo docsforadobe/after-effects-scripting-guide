@@ -8,7 +8,7 @@ What's new and changed for scripting?
 
 ----
 
-.. _Changelog.24.0:
+.. _Changelog.24.1:
 
 After Effects 24.1 Beta build 10 (September 2023)
 ********************************************************************************************************************************************************************************************
@@ -25,25 +25,9 @@ After Effects 24.1 Beta build 10 (September 2023)
 	- Added: :ref:`Project.usedFonts`
 	- Added: :ref:`Project.replaceFont`
 
-`After Effects 24.0 Beta build 25 <https://community.adobe.com/t5/after-effects-beta-discussions/new-scripting-hooks-for-variable-fonts/m-p/14007210>`_ (August 2023)
-********************************************************************************************************************************************************************************************
+.. _Changelog.24.0:
 
-- Scripting methods and attributes added
-	- Added: :ref:`FontsObject.fontsWithDefaultDesignAxes`
-	- Added: :ref:`FontObject.designAxesData`
-	- Added: :ref:`FontObject.designVector`
-	- Added: :ref:`FontObject.familyPrefix`
-	- Added: :ref:`FontObject.hasDesignAxes`
-	- Added: :ref:`FontObject.hasSameDict`
-	- Added: :ref:`FontObject.postScriptNameForDesignVector`
-
-After Effects 24.0 Beta build 19 (August 2023)
-********************************************************************************************************************************************************************************************
-
-- Scripting attributes added
-	- Added: :ref:`TextDocument.composerEngine`
-
-`After Effects 24.0 Beta build 14 <https://community.adobe.com/t5/after-effects-beta-discussions/new-text-scripting-hooks-starting-after-effects-beta-24-0x14/td-p/13976407>`_ (August 2023)
+`After Effects 24.0 <https://helpx.adobe.com/after-effects/using/whats-new/2024.html>`_ (October 2023)
 ********************************************************************************************************************************************************************************************
 
 - Scripting methods and attributes added
@@ -51,9 +35,32 @@ After Effects 24.0 Beta build 19 (August 2023)
 	- Added: :ref:`app.fonts`
 	- Added: :ref:`FontsObject`
 	- Added: :ref:`FontsObject.allFonts`
-	- Added: :ref:`FontsObject.missingOrSubstitutedFonts`
+	- Added: :ref:`FontsObject.fontsWithDefaultDesignAxes`
 	- Added: :ref:`FontsObject.getFontsByFamilyNameAndStyleName`
 	- Added: :ref:`FontsObject.getFontsByPostScriptName`
+	- Added: :ref:`FontsObject.missingOrSubstitutedFonts`
+	- Added: :ref:`FontObject`
+	- Added: :ref:`FontObject.designAxesData`
+	- Added: :ref:`FontObject.designVector`
+	- Added: :ref:`FontObject.familyPrefix`
+	- Added: :ref:`FontObject.hasDesignAxes`
+	- Added: :ref:`FontObject.hasSameDict`
+	- Added: :ref:`FontObject.postScriptNameForDesignVector`
+	- Added: :ref:`FontObject.familyName`
+	- Added: :ref:`FontObject.fullName`
+	- Added: :ref:`FontObject.isFromAdobeFonts`
+	- Added: :ref:`FontObject.isSubstitute`
+	- Added: :ref:`FontObject.location`
+	- Added: :ref:`FontObject.nativeFamilyName`
+	- Added: :ref:`FontObject.nativeFullName`
+	- Added: :ref:`FontObject.nativeStyleName`
+	- Added: :ref:`FontObject.postScriptName`
+	- Added: :ref:`FontObject.styleName`
+	- Added: :ref:`FontObject.technology`
+	- Added: :ref:`FontObject.type`
+	- Added: :ref:`FontObject.version`
+	- Added: :ref:`FontObject.writingScripts`
+	- Added: :ref:`TextDocument.composerEngine`
 	- Added: :ref:`TextDocument.autoHyphenate`
 	- Added: :ref:`TextDocument.autoKernType`
 	- Added: :ref:`TextDocument.baselineDirection`
@@ -75,21 +82,6 @@ After Effects 24.0 Beta build 19 (August 2023)
 	- Added: :ref:`TextDocument.spaceAfter`
 	- Added: :ref:`TextDocument.spaceBefore`
 	- Added: :ref:`TextDocument.startIndent`
-	- Added: :ref:`FontObject`
-	- Added: :ref:`FontObject.familyName`
-	- Added: :ref:`FontObject.fullName`
-	- Added: :ref:`FontObject.isFromAdobeFonts`
-	- Added: :ref:`FontObject.isSubstitute`
-	- Added: :ref:`FontObject.location`
-	- Added: :ref:`FontObject.nativeFamilyName`
-	- Added: :ref:`FontObject.nativeFullName`
-	- Added: :ref:`FontObject.nativeStyleName`
-	- Added: :ref:`FontObject.postScriptName`
-	- Added: :ref:`FontObject.styleName`
-	- Added: :ref:`FontObject.technology`
-	- Added: :ref:`FontObject.type`
-	- Added: :ref:`FontObject.version`
-	- Added: :ref:`FontObject.writingScripts`
 
 - Scripting attributes updated
 	- Updated: :ref:`TextDocument.fauxBold`

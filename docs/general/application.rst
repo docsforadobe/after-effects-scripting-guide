@@ -234,7 +234,6 @@ app.fonts
 
 .. note::
    | This functionality was added in After Effects 24.0.
-   | This functionality is currently in Beta and is subject to change.
 
 **Description**
 
