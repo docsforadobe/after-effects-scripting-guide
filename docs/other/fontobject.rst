@@ -122,8 +122,7 @@ FontObject.fontID
 ``app.fonts.allFonts[0][0].fontID``
 
 .. note::
-   | This functionality was added in After Effects 24.0.
-   | This functionality is currently in Beta and is subject to change.
+   This functionality was added in After Effects (Beta) 24.0 and subject to change while it remains in Beta.
 
 **Description**
 

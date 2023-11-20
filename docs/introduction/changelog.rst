@@ -8,6 +8,19 @@ What's new and changed for scripting?
 
 ----
 
+.. _Changelog.24.2:
+
+`After Effects 24.2 Beta build 17 <https://community.adobe.com/t5/after-effects-beta-discussions/per-character-scripting-public-beta-announcement/m-p/14247138>`_ (November 2023)
+********************************************************************************************************************************************************************************************
+
+- Scripting methods and attributes added
+	- Added: :ref:`CharacterRange object<CharacterRange>`
+	- Added: :ref:`ParagraphRange object<ParagraphRange>`
+	- Added: :ref:`TextDocument.characterRange`
+	- Added: :ref:`TextDocument.paragraphRange`
+	- Added: :ref:`TextDocument.paragraphCount`
+	- Added: :ref:`TextDocument.paragraphCharacterIndexesAt`
+
 .. _Changelog.24.1:
 
 After Effects 24.1 Beta build 10 (September 2023)

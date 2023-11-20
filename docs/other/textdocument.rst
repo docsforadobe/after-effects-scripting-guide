@@ -70,10 +70,11 @@ TextDocument.allCaps
 
 **Description**
 
-True if a text layer has allcaps enabled; otherwise false. To set this value, use :ref:`TextDocument.fontCapsOption` added in After Effects 24.0.
+True if a Text layer has All Caps enabled; otherwise false. To set this value, use ``fontCapsOption`` added in After Effects 24.0.
+
 
 .. warning::
-   This value only reflects the first character in the text layer at the current time.
+   This value only reflects the first character in the Text layer.
 
 **Type**
 
@@ -90,7 +91,7 @@ TextDocument.applyFill
 
 **Description**
 
-When true, the text layer shows a fill. Access the ``fillColor`` attribute for the actual color. When false, only a stroke is shown.
+When true, the Text layer shows a fill. Access the ``fillColor`` attribute for the actual color. When false, only a stroke is shown.
 
 **Type**
 
@@ -107,7 +108,7 @@ TextDocument.applyStroke
 
 **Description**
 
-When true, the text layer shows a stroke. Access the ``strokeColor`` attribute for the actual color and ``strokeWidth`` for its thickness. When false, only a fill is shown.
+When true, the Text layer shows a stroke. Access the ``strokeColor`` attribute for the actual color and ``strokeWidth`` for its thickness. When false, only a fill is shown.
 
 **Type**
 
@@ -127,12 +128,36 @@ TextDocument.autoHyphenate
 
 **Description**
 
-The text layer's auto hyphenate paragraph option.
+The Text layer's auto hyphenate paragraph option.
 
-If this attribute has a mixed value on a TextDocument, it will be read as ``undefined``.
+If this attribute has a mixed value, it will be read as ``undefined``.
 
 .. warning::
-   If you change this value, it will reset all lines in the Text layer to the specified setting.
+   This value reflects all paragraphs in the Text layer.
+   If you change this value, it will set all paragraphs in the Text layer to the specified setting.
+
+**Type**
+
+Boolean; read/write.
+
+----
+
+.. _TextDocument.autoLeading:
+
+TextDocument.autoLeading
+*********************************************
+
+``textDocument.autoLeading``
+
+**Description**
+
+The Text layer's auto leading character option.
+
+If this attribute has a mixed value, it will be read as ``undefined``.
+
+.. warning::
+   This value reflects all paragraphs in the Text layer.
+   If you change this value, it will set all paragraphs in the Text layer to the specified setting.
 
 **Type**
 
@@ -152,11 +177,11 @@ TextDocument.autoKernType
 
 **Description**
 
-The text layer's auto kern type option.
+The Text layer's auto kern type option.
 
 .. warning::
-   This value only reflects the first character in the text layer at the current time.
-   If you change this value, it resets all characters in the text layer to the specified setting.
+   This value only reflects the first character in the Text layer.
+   If you change this value, it will set all characters in the Text layer to the specified setting.
 
 **Type**
 
@@ -180,11 +205,11 @@ TextDocument.baselineDirection
 
 **Description**
 
-The text layer's baseline direction option. This is significant for Japanese language in vertical texts. "BASELINE_VERTICAL_CROSS_STREAM" is also know as Tate-Chu-Yoko.
+The Text layer's baseline direction option. This is significant for Japanese language in vertical texts. "BASELINE_VERTICAL_CROSS_STREAM" is also know as Tate-Chu-Yoko.
 
 .. warning::
-   This value only reflects the first character in the text layer at the current time.
-   If you change this value, it resets all characters in the text layer to the specified setting.
+   This value only reflects the first character in the Text layer.
+   If you change this value, it will set all characters in the Text layer to the specified setting.
 
 **Type**
 
@@ -208,7 +233,7 @@ TextDocument.baselineLocs
 
 **Description**
 
-The baseline (x,y) locations for a text layer. Line wraps in a paragraph text box are treated as multiple lines.
+The baseline (x,y) locations for a Text layer. Line wraps in a paragraph text box are treated as multiple lines.
 
 .. note::
   If a line has no characters, the x and y values for start and end will be the maximum float value (3.402823466e+38F).
@@ -249,14 +274,15 @@ TextDocument.baselineShift
 
 **Description**
 
-This text layer's baseline shift in pixels.
+This Text layer's baseline shift in pixels.
 
 .. warning::
-   This value only reflects the first character in the text layer at the current time.
+   This value only reflects the first character in the Text layer.
+   If you change this value, it will set all characters in the Text layer to the specified setting.
 
 **Type**
 
-Floating-point value; read-only.
+Floating-point value; read-write.
 
 ----
 
@@ -269,7 +295,7 @@ TextDocument.boxText
 
 **Description**
 
-True if a text layer is a layer of paragraph (bounded) text; otherwise false.
+True if a Text layer is a layer of paragraph (bounded) text; otherwise false.
 
 **Type**
 
@@ -290,11 +316,10 @@ TextDocument.boxTextPos
 
 **Description**
 
-The layer coordinates from a paragraph (box) text layer's anchor point as a [width, height] array of pixel dimensions.
+The layer coordinates from a paragraph (box) Text layer's anchor point as a [width, height] array of pixel dimensions.
 
 .. warning::
-  This attribute only works on paragraph text layers.
-  This value only reflects the first character in the text layer at the current time.
+   Throws an exception if ``boxText`` does not return true for the Text layer.
 
 **Type**
 
@@ -304,7 +329,7 @@ Array of ([X,Y]) position coordinates; read/write.
 
 .. code:: javascript
 
-    // For a paragraph text layer returns [x, y] position from layer anchor point in layer coordinates.
+    // For a paragraph Text layer returns [x, y] position from layer anchor point in layer coordinates.
     // e.g. approximately [0, -25] with default character panel settings.
     var boxTextLayerPos = myTextLayer.sourceText.value.boxTextPos;
 
@@ -319,8 +344,11 @@ TextDocument.boxTextSize
 
 **Description**
 
-The size of a paragraph (box) text layer as a [width, height] array of pixel dimensions.
+The size of a paragraph (box) Text layer as a [width, height] array of pixel dimensions.
 
+.. warning::
+   Throws an exception if ``boxText`` does not return true for the Text layer.
+   
 **Type**
 
 Array of two integers (minimum value of 1); read/write.
@@ -339,9 +367,13 @@ TextDocument.composerEngine
 
 **Description**
 
-The text layer's paragraph composer engine option. By default new text layers will use the ``ComposerEngine.UNIVERSAL_TYPE_ENGINE``, the other enum value will only be encountered in projects created before the introduction of the new engine.
+The Text layer's paragraph composer engine option. By default new Text layers will use the ``ComposerEngine.UNIVERSAL_TYPE_ENGINE``, the other enum value will only be encountered in projects created before the introduction of the new engine.
 
-If this attribute has a mixed value on a TextDocument, it will be read as ``undefined``.
+If this attribute has a mixed value, it will be read as ``undefined``.
+
+.. warning::
+   This value reflects all paragraphs in the Text layer.
+   If you change this value, it will set all paragraphs in the Text layer to the specified setting.
 
 **Type**
 
@@ -364,11 +396,11 @@ TextDocument.digitSet
 
 **Description**
 
-The text layer's digit set option.
+The Text layer's digit set option.
 
 .. warning::
-   This value only reflects the first character in the text layer at the current time.
-   If you change this value, it resets all characters in the text layer to the specified setting.
+   This value only reflects the first character in the Text layer.
+   If you change this value, it will set all characters in the Text layer to the specified setting.
 
 **Type**
 
@@ -394,12 +426,13 @@ TextDocument.direction
 
 **Description**
 
-The text layer's paragraph direction option.
+The Text layer's paragraph direction option.
 
-If this attribute has a mixed value on a TextDocument, it will be read as ``undefined``.
+If this attribute has a mixed value, it will be read as ``undefined``.
 
 .. warning::
-   If you change this value, it will reset all lines in the Text layer to the specified setting.
+   This value reflects all paragraphs in the Text layer.
+   If you change this value, it will set all paragraphs in the Text layer to the specified setting.
 
 **Type**
 
@@ -422,12 +455,13 @@ TextDocument.endIndent
 
 **Description**
 
-The text layer's paragraph end indent option.
+The Text layer's paragraph end indent option.
 
-If this attribute has a mixed value on a TextDocument, it will be read as ``undefined``.
+If this attribute has a mixed value, it will be read as ``undefined``.
 
 .. warning::
-   If you change this value, it will reset all lines in the Text layer to the specified setting.
+   This value reflects all paragraphs in the Text layer.
+   If you change this value, it will set all paragraphs in the Text layer to the specified setting.
 
 **Type**
 
@@ -447,12 +481,13 @@ TextDocument.everyLineComposer
 
 **Description**
 
-The text layer's Every-Line Composer paragraph option. If set to false, the TextDocument will use the Single-Line Composer.
+The Text layer's Every-Line Composer paragraph option. If set to false, the TextDocument will use the Single-Line Composer.
    
-If this attribute has a mixed value on a TextDocument, it will be read as ``undefined``.
+If this attribute has a mixed value, it will be read as ``undefined``.
 
 .. warning::
-   If you change this value, it will reset all lines in the Text layer to the specified setting.
+   This value reflects all paragraphs in the Text layer.
+   If you change this value, it will set all paragraphs in the Text layer to the specified setting.
 
 **Type**
 
@@ -473,10 +508,11 @@ TextDocument.fauxBold
 
 **Description**
 
-True if a text layer has faux bold enabled; otherwise false.
+True if a Text layer has faux bold enabled; otherwise false.
 
 .. warning::
-   This value only reflects the first character in the text layer at the current time.
+   This value only reflects the first character in the Text layer.
+   If you change this value, it will set all characters in the Text layer to the specified setting.
 
 **Type**
 
@@ -503,10 +539,11 @@ TextDocument.fauxItalic
 
 **Description**
 
-True if a text layer has faux italic enabled; otherwise false.
+True if a Text layer has faux italic enabled; otherwise false.
 
 .. warning::
-   This value only reflects the first character in the text layer at the current time.
+   This value only reflects the first character in the Text layer.
+   If you change this value, it will set all characters in the Text layer to the specified setting.
 
 **Type**
 
@@ -523,11 +560,15 @@ TextDocument.fillColor
 
 **Description**
 
-The text layer's fill color, as an array of ``[r, g, b]`` floating-point values. For example, in an 8-bpc project, a red value of 255 would be 1.0, and in a 32-bpc project, an overbright blue value can be something like 3.2.
+The Text layer's fill color, as an array of ``[r, g, b]`` floating-point values. For example, in an 8-bpc project, a red value of 255 would be 1.0, and in a 32-bpc project, an overbright blue value can be something like 3.2.
+
+Throws an exception on read if ``applyFill`` is not true.
+
+Setting this value will also set ``applyFill`` to true across the affected characters.
 
 .. warning::
-   This value only reflects the first character in the text layer at the current time.
-   If you change this value, it resets all characters in the text layer to the specified setting.
+   This value only reflects the first character in the Text layer.
+   If you change this value, it will set all characters in the Text layer to the specified setting.
 
 **Type**
 
@@ -547,12 +588,13 @@ TextDocument.firstLineIndent
 
 **Description**
 
-The text layer's paragraph first line indent option.
+The Text layer's paragraph first line indent option.
 
-If this attribute has a mixed value on a TextDocument, it will be read as ``undefined``.
+If this attribute has a mixed value, it will be read as ``undefined``.
 
 .. warning::
-   If you change this value, it will reset all lines in the Text layer to the specified setting.
+   This value reflects all paragraphs in the Text layer.
+   If you change this value, it will set all paragraphs in the Text layer to the specified setting.
 
 **Type**
 
@@ -569,11 +611,16 @@ TextDocument.font
 
 **Description**
 
-The text layer's font specified by its PostScript name. This is just a string, you should use the :ref:`fontObject` property for precise control.
+The Text layer's font specified by its PostScript name.
+
+On write, there are very few resrictions on what can be supplied - if the underlying font management system does not have a matching :ref:`fontObject` instance matching the supplied PostScript name a substitute instance will be created.
+The Font instance returned in the case of duplicate PostScript names will be the 0th element of the array returned from :ref:`FontsObject.getFontsByPostScriptName`.
+
+You should use the :ref:`fontObject` property for precise control.
 
 .. warning::
-   This value only reflects the first character in the text layer at the current time.
-   If you change this value, it resets all characters in the text layer to the specified setting.
+   This value only reflects the first character in the Text layer.
+   If you change this value, it will set all characters in the Text layer to the specified setting.
 
 **Type**
 
@@ -593,11 +640,11 @@ TextDocument.fontBaselineOption
 
 **Description**
 
-The text layer's font baseline option. This is for setting a textDocument to superscript or subscript. 
+The Text layer's font baseline option. This is for setting a textDocument to superscript or subscript. 
 
 .. warning::
-   This value only reflects the first character in the text layer at the current time.
-   If you change this value, it resets all characters in the text layer to the specified setting.
+   This value only reflects the first character in the Text layer.
+   If you change this value, it will set all characters in the Text layer to the specified setting.
 
 **Type**
 
@@ -621,11 +668,11 @@ TextDocument.fontCapsOption
 
 **Description**
 
-The text layer's font caps option.
+The Text layer's font caps option.
 
 .. warning::
-   This value only reflects the first character in the text layer at the current time.
-   If you change this value, it resets all characters in the text layer to the specified setting.
+   This value only reflects the first character in the Text layer.
+   If you change this value, it will set all characters in the Text layer to the specified setting.
 
 **Type**
 
@@ -653,7 +700,7 @@ TextDocument.fontFamily
 String with with the name of the font family.
 
 .. warning::
-  This value only reflects the first character in the text layer at the current time.
+  This value only reflects the first character in the Text layer.
 
 **Type**
 
@@ -679,7 +726,7 @@ Path of font file, providing its location on disk.
   Not guaranteed to be returned for all font types; return value may be empty string for some kinds of fonts.
 
 .. warning::
-  This value only reflects the first character in the text layer at the current time.
+  This value only reflects the first character in the Text layer.
 
 **Type**
 
@@ -699,10 +746,10 @@ TextDocument.fontObject
 
 **Description**
 
-The text layer's :ref:`fontObject` specified by its PostScript name.
+The Text layer's :ref:`fontObject` specified by its PostScript name.
 
 .. warning::
-   This value only reflects the first character in the text layer at the current time.
+   This value only reflects the first character in the Text layer.
 
 **Type**
 
@@ -719,11 +766,11 @@ TextDocument.fontSize
 
 **Description**
 
-The text layer's font size in pixels.
+The Text layer's font size in pixels.
 
 .. warning::
-   This value only reflects the first character in the text layer at the current time.
-   If you change this value, it resets all characters in the text layer to the specified setting.
+   This value only reflects the first character in the Text layer.
+   If you change this value, it will set all characters in the Text layer to the specified setting.
 
 **Type**
 
@@ -746,7 +793,7 @@ TextDocument.fontStyle
 String with style information, e.g., "bold", "italic"
 
 .. warning::
-  This value only reflects the first character in the text layer at the current time.
+  This value only reflects the first character in the Text layer.
 
 **Type**
 
@@ -766,12 +813,13 @@ TextDocument.hangingRoman
 
 **Description**
 
-The text layer's Roman Hanging Punctuation paragraph option. This is only applicable to box text layers—it allows punctuation to fit outside the box rather than flow to the next line.
+The Text layer's Roman Hanging Punctuation paragraph option. This is only meaningful to box Text layers—it allows punctuation to fit outside the box rather than flow to the next line.
 
-If this attribute has a mixed value on a TextDocument, it will be read as ``undefined``.
+If this attribute has a mixed value, it will be read as ``undefined``.
 
 .. warning::
-   If you change this value, it will reset all lines in the Text layer to the specified setting.
+   This value reflects all paragraphs in the Text layer.
+   If you change this value, it will set all paragraphs in the Text layer to the specified setting.
 
 **Type**
 
@@ -791,14 +839,15 @@ TextDocument.horizontalScale
 
 **Description**
 
-This text layer's horizontal scale in pixels.
+This Text layer's horizontal scale in pixels.
 
 .. warning::
-   This value only reflects the first character in the text layer at the current time.
+   This value only reflects the first character in the Text layer.
+   If you change this value, it will set all characters in the Text layer to the specified setting.
 
 **Type**
 
-Floating-point value; read-only.
+Floating-point value; read-write.
 
 **Example**
 
@@ -817,7 +866,7 @@ TextDocument.justification
 
 **Description**
 
-The paragraph justification for the text layer.
+The paragraph justification for the Text layer.
 
 **Type**
 
@@ -832,7 +881,13 @@ A ``ParagraphJustification`` enumerated value; read/write. One of:
 -  ``ParagraphJustification.FULL_JUSTIFY_LASTLINE_FULL``
 -  ``ParagraphJustification.MULTIPLE_JUSTIFICATIONS``
 
-Text layers with mixed justification values will be read as ``ParagraphJustification.MULTIPLE_JUSTIFICATIONS``, but setting a TextDocument to use this value will result in ``ParagraphJustification.CENTER_JUSTIFY`` instead.
+Text layers with mixed justification values will be read as ``ParagraphJustification.MULTIPLE_JUSTIFICATIONS``.
+
+Setting a TextDocument to use ``ParagraphJustification.MULTIPLE_JUSTIFICATIONS`` will result in ``ParagraphJustification.CENTER_JUSTIFY`` instead.
+
+.. warning::
+   This value reflects all paragraphs in the Text layer.
+   If you change this value, it will set all paragraphs in the Text layer to the specified setting.
 
 ----
 
@@ -848,11 +903,15 @@ TextDocument.kerning
 
 **Description**
 
-The text layer's kerning option.
+The Text layer's kerning option.
+
+Returns zero for ``AutoKernType.METRIC_KERN`` and ``AutoKernType.OPTICAL_KERN``.
+
+Setting this value will also set ``AutoKernType.NO_AUTO_KERN`` to true across the affected characters.
 
 .. warning::
-   This value only reflects the first character in the text layer at the current time.
-   If you change this value, it resets all characters in the text layer to the specified setting.
+   This value only reflects the first character in the Text layer.
+   If you change this value, it will set all characters in the Text layer to the specified setting.
 
 **Type**
 
@@ -872,11 +931,17 @@ TextDocument.leading
 
 **Description**
 
-The text layer's spacing between lines.
+The Text layer's spacing between lines.
+
+Returns zero if :ref:`TextDocument.autoLeading` is true.
+
+Setting this value will also set :ref:`TextDocument.autoLeading` to true across the affected characters.
 
 .. warning::
-   If the text layer has different leading settings for each line, this attribute returns the setting for the first line.
-   Also, if you change the value, it resets all lines in the text layer to the specified setting..
+   This value only reflects the first character in the Text layer.
+   If you change this value, it will set all characters in the Text layer to the specified setting.
+
+   The minimum accepted value to set is 0, but this will be silently clipped to 0.01.
 
 **Type**
 
@@ -886,7 +951,7 @@ Floating-point value; read/write.
 
 .. code:: javascript
 
-    // This creates a text layer and sets the leading to 100
+    // This creates a Text layer and sets the leading to 100
 
     var composition = app.project.activeItem;
     var myTextLayer = comp.layers.addText("Spring\nSummer\nAutumn\nWinter");
@@ -909,12 +974,13 @@ TextDocument.leadingType
 
 **Description**
 
-The text layer's paragraph leading type option.
+The Text layer's paragraph leading type option.
 
-If this attribute has a mixed value on a TextDocument, it will be read as ``undefined``.
+If this attribute has a mixed value, it will be read as ``undefined``.
 
 .. warning::
-   If you change this value, it will reset all lines in the Text layer to the specified setting.
+   This value reflects all paragraphs in the Text layer.
+   If you change this value, it will set all paragraphs in the Text layer to the specified setting.
 
 **Type**
 
@@ -937,11 +1003,11 @@ TextDocument.ligature
 
 **Description**
 
-The text layer's ligature option.
+The Text layer's ligature option.
 
 .. warning::
-   This value only reflects the first character in the text layer at the current time.
-   If you change this value, it resets all characters in the text layer to the specified setting.
+   This value only reflects the first character in the Text layer.
+   If you change this value, it will set all characters in the Text layer to the specified setting.
 
 **Type**
 
@@ -961,11 +1027,11 @@ TextDocument.lineJoinType
 
 **Description**
 
-The text layer's line join type option for Stroke.
+The Text layer's line join type option for Stroke.
 
 .. warning::
-   This value only reflects the first character in the text layer at the current time.
-   If you change this value, it resets all characters in the text layer to the specified setting.
+   This value only reflects the first character in the Text layer.
+   If you change this value, it will set all characters in the Text layer to the specified setting.
 
 **Type**
 
@@ -989,15 +1055,32 @@ TextDocument.noBreak
 
 **Description**
 
-The text layer's no break attribute.
+The Text layer's no break attribute.
 
 .. warning::
-   This value only reflects the first character in the text layer at the current time.
-   If you change this value, it resets all characters in the text layer to the specified setting.
+   This value only reflects the first character in the Text layer.
+   If you change this value, it will set all characters in the Text layer to the specified setting.
 
 **Type**
 
 Boolean; read/write.
+
+----
+
+.. _TextDocument.paragraphCount:
+
+TextDocument.paragraphCount
+*********************************************
+
+``textDocument.paragraphCount``
+
+**Description**
+
+Returns the number of paragraphs in the text layer, always greater than or equal to 1.
+
+**Type**
+
+Number; read-only.
 
 ----
 
@@ -1010,7 +1093,7 @@ TextDocument.pointText
 
 **Description**
 
-True if a text layer is a layer of point (unbounded) text; otherwise false.
+True if a Text layer is a layer of point (unbounded) text; otherwise false.
 
 **Type**
 
@@ -1030,10 +1113,10 @@ TextDocument.smallCaps
 
 **Description**
 
-True if a text layer has small caps enabled; otherwise false. To set this value, use :ref:`TextDocument.fontCapsOption` added in After Effects 24.0.
+True if a Text layer has small caps enabled; otherwise false. To set this value, use :ref:`TextDocument.fontCapsOption` added in After Effects 24.0.
 
 .. warning::
-   This value only reflects the first character in the text layer at the current time.
+   This value only reflects the first character in the Text layer.
 
 **Type**
 
@@ -1053,12 +1136,13 @@ TextDocument.spaceAfter
 
 **Description**
 
-The text layer's paragraph space after option.
+The Text layer's paragraph space after option.
 
-If this attribute has a mixed value on a TextDocument, it will be read as ``undefined``.
+If this attribute has a mixed value, it will be read as ``undefined``.
 
 .. warning::
-   If you change this value, it will reset all lines in the Text layer to the specified setting.
+   This value reflects all paragraphs in the Text layer.
+   If you change this value, it will set all paragraphs in the Text layer to the specified setting.
 
 **Type**
 
@@ -1078,12 +1162,13 @@ TextDocument.spaceBefore
 
 **Description**
 
-The text layer's paragraph space before option.
+The Text layer's paragraph space before option.
 
-If this attribute has a mixed value on a TextDocument, it will be read as ``undefined``.
+If this attribute has a mixed value, it will be read as ``undefined``.
 
 .. warning::
-   If you change this value, it will reset all lines in the Text layer to the specified setting.
+   This value reflects all paragraphs in the Text layer.
+   If you change this value, it will set all paragraphs in the Text layer to the specified setting.
 
 **Type**
 
@@ -1103,12 +1188,13 @@ TextDocument.startIndent
 
 **Description**
 
-The text layer's paragraph start indent option.
+The Text layer's paragraph start indent option.
 
-If this attribute has a mixed value on a TextDocument, it will be read as ``undefined``.
+If this attribute has a mixed value, it will be read as ``undefined``.
 
 .. warning::
-   If you change this value, it will reset all lines in the Text layer to the specified setting.
+   This value reflects all paragraphs in the Text layer.
+   If you change this value, it will set all paragraphs in the Text layer to the specified setting.
 
 **Type**
 
@@ -1125,11 +1211,15 @@ TextDocument.strokeColor
 
 **Description**
 
-The text layer's stroke color, as an array of [r, g, b] floating-point values. For example, in an 8-bpc project, a red value of 255 would be 1.0, and in a 32-bpc project, an overbright blue value can be something like 3.2.
+The Text layer's stroke color, as an array of [r, g, b] floating-point values. For example, in an 8-bpc project, a red value of 255 would be 1.0, and in a 32-bpc project, an overbright blue value can be something like 3.2.
+
+Throws an exception on read if ``applyStroke`` is not true.
+
+Setting this value will also set ``applyStroke`` to true across the affected characters.
 
 .. warning::
-   This value only reflects the first character in the text layer at the current time.
-   If you change this value, it resets all characters in the text layer to the specified setting.
+   This value only reflects the first character in the Text layer.
+   If you change this value, it will set all characters in the Text layer to the specified setting.
 
 **Type**
 
@@ -1146,11 +1236,14 @@ TextDocument.strokeOverFill
 
 **Description**
 
-Indicates the rendering order for the fill and stroke of a text layer. When true, the stroke appears over the fill.
+Indicates the rendering order for the fill and stroke of a Text layer. When true, the stroke appears over the fill.
+
+The Text layer can override the per-character attribute setting if the Text layer is set to use All Strokes Over All Fills or All Fills Over All Strokes in the Character Panel. Thus the value returned here might be different than the actual attribute value set on the character. It is possible to set the Fill/Stroke render order via the "Fill & Stroke" property under More Options on the Text layer using `TextLayer.text("ADBE Text More Options")("ADBE Text Render Order")`.
+
 
 .. warning::
-   This value only reflects the first character in the text layer at the current time.
-   If you change this value, it resets all characters in the text layer to the specified setting.
+   This value only reflects the first character in the Text layer.
+   If you change this value, it will set all characters in the Text layer to the specified setting.
 
 **Type**
 
@@ -1167,11 +1260,13 @@ TextDocument.strokeWidth
 
 **Description**
 
-The text layer's stroke thickness in pixels.
+The Text layer's stroke thickness in pixels.
 
 .. warning::
-   This value only reflects the first character in the text layer at the current time.
-   If you change this value, it resets all characters in the text layer to the specified setting.
+   This value only reflects the first character in the Text layer.
+   If you change this value, it will set all characters in the Text layer to the specified setting.
+
+   The minimum accepted value to set is 0, but this will be silently clipped to 0.01.
 
 **Type**
 
@@ -1191,10 +1286,10 @@ TextDocument.subscript
 
 **Description**
 
-True if a text layer has subscript enabled; otherwise false. To set this value, use :ref:`TextDocument.fontBaselineOption` added in After Effects 24.0.
+True if a Text layer has subscript enabled; otherwise false. To set this value, use :ref:`TextDocument.fontBaselineOption` added in After Effects 24.0.
 
 .. warning::
-   This value only reflects the first character in the text layer at the current time.
+   This value only reflects the first character in the Text layer.
 
 **Type**
 
@@ -1214,10 +1309,10 @@ TextDocument.superscript
 
 **Description**
 
-True if a text layer has superscript enabled; otherwise false. To set this value, use :ref:`TextDocument.fontBaselineOption` added in After Effects 24.0.
+True if a Text layer has superscript enabled; otherwise false. To set this value, use :ref:`TextDocument.fontBaselineOption` added in After Effects 24.0.
 
 .. warning::
-   This value only reflects the first character in the text layer at the current time.
+   This value only reflects the first character in the Text layer.
 
 **Type**
 
@@ -1234,7 +1329,7 @@ TextDocument.text
 
 **Description**
 
-The text value for the text layer's Source Text property.
+The text value for the Text layer's Source Text property.
 
 **Type**
 
@@ -1251,11 +1346,11 @@ TextDocument.tracking
 
 **Description**
 
-The text layer's spacing between characters.
+The Text layer's spacing between characters.
 
 .. warning::
-   This value only reflects the first character in the text layer at the current time.
-   If you change this value, it resets all characters in the text layer to the specified setting.
+   This value only reflects the first character in the Text layer.
+   If you change this value, it will set all characters in the Text layer to the specified setting.
 
 **Type**
 
@@ -1275,16 +1370,17 @@ TextDocument.tsume
 
 **Description**
 
-This text layer's tsume value as a normalized percentage, from 0.0 -> 1.0.
+This Text layer's tsume value as a normalized percentage, from 0.0 -> 1.0.
 
 .. warning::
-   This value only reflects the first character in the text layer at the current time.
+   This value only reflects the first character in the Text layer.
+   If you change this value, it will set all characters in the Text layer to the specified setting.
 
    This property accepts values from 0.0 -> 100.0, however the value IS expecting a normalized value from 0.0 -> 1.0. Using a value higher than 1.0 will produce unexpected results; AE's Character Panel will clamp the value at 100%, despite the higher value set by scripting (ie ``TextDocument.tsume = 100`` _really_ sets a value of 10,000%)
 
 **Type**
 
-Floating-point value; read-only.
+Floating-point value; read-write.
 
 ----
 
@@ -1300,20 +1396,123 @@ TextDocument.verticalScale
 
 **Description**
 
-This text layer's vertical scale in pixels.
+This Text layer's vertical scale in pixels.
 
 .. warning::
-   This value only reflects the first character in the text layer at the current time.
+   This value only reflects the first character in the Text layer.
+   If you change this value, it will set all characters in the Text layer to the specified setting.
 
 **Type**
 
-Floating-point value; read-only.
+Floating-point value; read-write.
 
 ----
 
 =======
 Methods
 =======
+
+.. _TextDocument.characterRange:
+
+TextDocument.characterRange()
+*********************************************
+
+``textDocument.characterRange(characterStart, [signedCharacterEnd])``
+
+.. note::
+   This functionality was added in After Effects (Beta) 24.2 and is subject to change while it remains in Beta.
+
+**Description**
+
+Returns an instance of the Text layer range accessor CharacterRange.
+
+The instance will remember the parameters passed in the constructor - they remain constant and changes to the `TextDocument` length may cause the instance to throw exceptions on access until the `TextDocument` length is changed to a length which makes the range valid again. 
+
+Use toString() to find out what the constructed parameters were.
+
+**Parameters**
+
+======================== ====================================================
+ ``characterStart``       Unsigned integer. Starts at zero, must be the less
+                          than or equal to the (text) length of the :ref:`TextDocument`.
+ ``signedCharacterEnd``   | Optional signed integer. If not specified, will be computed at (characterStart + 1).
+                          | If set to -1, then the :ref:`CharacterRange` will dynamically calculate this on access to be equal to the (text) length of the :ref:`TextDocument`.
+                          | signedCharacterEnd must be greater than or equal to characterStart, and less than or equal to the (text) length of the :ref:`TextDocument`.
+======================== ====================================================
+
+Throws an exception if the parameters would result in an invalid range.
+
+It is not possible to create a :ref:`CharacterRange` which spans the final carriage return in the :ref:`TextDocument`.
+
+**Returns**
+
+An instance of :ref:`CharacterRange`
+
+----
+
+.. _TextDocument.paragraphCharacterIndexesAt:
+
+TextDocument.paragraphCharacterIndexesAt()
+*********************************************
+
+``textDocument.paragraphCharacterIndexesAt(characterIndex)``
+
+.. note::
+   This functionality was added in After Effects (Beta) 24.2 and is subject to change while it remains in Beta.
+
+**Description**
+
+Returns the character index bounds of a paragraph in the Text layer.
+
+**Parameters**
+
+==================== ======================================================================================================== 
+ ``characterIndex``   Unsigned integer. A text index in the Text layer, which will be mapped to the paragraph it intersects.  
+==================== ======================================================================================================== 
+
+**Returns**
+
+Generic object;
+Key ``start`` will be set to text index of the start of the paragraph (greater than or equal to zero).
+Key ``end`` will be set to text index of the end of the paragraph (greater than start, or equal to start if it is the last paragraph).
+
+----
+
+.. _TextDocument.paragraphRange:
+
+TextDocument.paragraphRange()
+*********************************************
+
+``textDocument.paragraphRange(paragraphIndexStart, [signedParagraphIndexEnd])``
+
+.. note::
+   This functionality was added in After Effects (Beta) 24.2 and is subject to change while it remains in Beta.
+
+**Description**
+
+Returns an instance of the Text layer range accessor ParagraphRange.
+
+The instance will remember the parameters passed in the constructor - they remain constant and changes to the `TextDocument` contents may cause the instance to throw exceptions on access until the `TextDocument` contents are changed which makes the range valid again. 
+
+Use toString() to find out what the constructed parameters were.
+
+**Parameters**
+
+============================= ===============================================
+ ``paragraphIndexStart``       Unsigned integer. Starts at zero, must be the less than the number of paragraphs in the :ref:`TextDocument`.
+ ``signedParagraphIndexEnd``   | Optional signed integer. If not specified, will be computed at (paragraphIndexStart + 1).
+                               | If set to -1, then the :ref:`ParagraphRange` will dynamically calculate this on access to the last paragraph of the :ref:`TextDocument`.
+                               | signedParagraphIndexEnd must be greater than paragraphIndexStart, and less than or equal to the number of paragraphs in the :ref:`TextDocument`.
+============================= ===============================================
+
+
+Throws an exception if the parameters would result in an invalid range.
+
+**Returns**
+
+An instance of :ref:`ParagraphRange`
+
+----
 
 .. _TextDocument.resetCharStyle:
 
@@ -1324,7 +1523,7 @@ TextDocument.resetCharStyle()
 
 **Description**
 
-Restores the default text character characteristics in the Character panel.
+Restores all characters in the Text layer to the default text character characteristics in the Character panel.
 
 **Parameters**
 
@@ -1345,7 +1544,7 @@ TextDocument.resetParagraphStyle()
 
 **Description**
 
-Restores the default text paragraph characteristics in the Paragraph panel.
+Restores all paragraphs in the Text layer to the default text paragraph characteristics in the Paragraph panel.
 
 **Parameters**
 

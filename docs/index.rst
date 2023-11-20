@@ -75,6 +75,7 @@ Welcome to the After Effects Scripting Guide!
     :maxdepth: 1
     :caption: Other
 
+    other/characterrange
     other/collection
     other/importoptions
     other/fontobject
@@ -82,6 +83,7 @@ Welcome to the After Effects Scripting Guide!
     other/keyframeease
     other/markervalue
     other/settings
+    other/paragraphrange
     other/preferences
     other/shape
     other/textdocument
