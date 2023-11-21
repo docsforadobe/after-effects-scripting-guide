@@ -33,13 +33,9 @@ The following attributes and methods are **not** available on instances of Chara
   Attributes                          Methods                      
  =================================== ============================= 
   `baselineLocs`                     `characterRange`              
-  `boxFirstBaselineAlignment`        `paragraphCharacterIndexesAt` 
-  `boxFirstBaselineAlignmentMinimum` `paragraphRange`              
-  `boxInsetSpacing`                                                
-  `boxText`                                                        
-  `boxTextPos`                                                     
+  `boxText`                          `paragraphCharacterIndexesAt` 
+  `boxTextPos`                       `paragraphRange`              
   `boxTextSize`                                                    
-  `boxVerticalAlignment`                                           
   `paragraphCount`                                                 
   `pointText`                                                      
  =================================== ============================= 
