@@ -36,6 +36,7 @@ The following attributes and methods are **not** available on instances of Parag
   `boxText`                          `paragraphCharacterIndexesAt` 
   `boxTextPos`                       `paragraphRange`              
   `boxTextSize`                                                    
+  `lineOrientation`                                                
   `paragraphCount`                                                 
   `pointText`                                                      
  =================================== ============================= 

@@ -7,7 +7,7 @@ Fonts object
 ``app.fonts``
 
 .. note::
-   | This functionality was added in After Effects 24.0.
+   This functionality was added in After Effects 24.0.
 
 **Description**
 

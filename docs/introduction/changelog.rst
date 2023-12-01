@@ -10,6 +10,15 @@ What's new and changed for scripting?
 
 .. _Changelog.24.2:
 
+`After Effects 24.2 Beta build 29 <https://community.adobe.com/t5/after-effects-beta-discussions/new-vertical-text-scripting-hooks-in-scripting/m-p/14271823>`_ (December 2023)
+********************************************************************************************************************************************************************************************
+
+- Scripting methods and attributes added or changed
+	- Added: :ref:`LayerCollection.addVerticalText`
+	- Added: :ref:`LayerCollection.addVerticalBoxText`
+	- Added: :ref:`TextDocument.lineOrientation`
+	- Changed: :ref:`TextDocument.composerEngine`
+
 `After Effects 24.2 Beta build 17 <https://community.adobe.com/t5/after-effects-beta-discussions/per-character-scripting-public-beta-announcement/m-p/14247138>`_ (November 2023)
 ********************************************************************************************************************************************************************************************
 
@@ -23,7 +32,7 @@ What's new and changed for scripting?
 
 .. _Changelog.24.1:
 
-After Effects 24.1 Beta build 10 (September 2023)
+`After Effects 24.1 Beta build 10 <https://community.adobe.com/t5/after-effects-beta-discussions/more-scripting-hooks/m-p/14083457>`_ (September 2023)
 ********************************************************************************************************************************************************************************************
 
 - Scripting methods and attributes added
@@ -73,7 +82,6 @@ After Effects 24.1 Beta build 10 (September 2023)
 	- Added: :ref:`FontObject.type`
 	- Added: :ref:`FontObject.version`
 	- Added: :ref:`FontObject.writingScripts`
-	- Added: :ref:`TextDocument.composerEngine`
 	- Added: :ref:`TextDocument.autoHyphenate`
 	- Added: :ref:`TextDocument.autoKernType`
 	- Added: :ref:`TextDocument.baselineDirection`
