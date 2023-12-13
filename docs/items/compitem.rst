@@ -788,4 +788,4 @@ None.
 
 **Returns**
 
-Viewer object for the Composition panel, or null if the composition could not be opened.
+:ref:`Viewer` object for the Composition panel, or null if the composition could not be opened.

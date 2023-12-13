@@ -79,11 +79,13 @@ Welcome to the After Effects Scripting Guide!
     other/importoptions
     other/keyframeease
     other/markervalue
-    other/settings
     other/preferences
+    other/settings
     other/shape
     other/textdocument
+    other/view
     other/viewer
+    other/viewoptions
 
 .. toctree::
     :maxdepth: 2

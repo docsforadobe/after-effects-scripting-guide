@@ -32,7 +32,7 @@ The Viewer object for the currently focused or active-focused viewer (Compositio
 
 **Type**
 
-Viewer object; read-only.
+:ref:`Viewer` object; read-only.
 
 ----
 
@@ -47,8 +47,6 @@ app.availableGPUAccelTypes
    This functionality was added in After Effects 14.0 (CC 2017)
 
 **Description**
-
-The Viewer object for the currently focused or active-focused viewer (Composition, Layer, or Footage) panel.
 
 Use this in conjunction with ``app.project.gpuAccelType`` to set the value for Project Settings > Video Rendering and Effects > Use.
 

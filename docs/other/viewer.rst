@@ -45,120 +45,20 @@ Boolean; read-only.
 
 ----
 
-.. _Viewer.fastPreview:
+.. _Viewer.activeViewIndex:
 
-Viewer.fastPreview
+Viewer.activeViewIndex
 *********************************************
 
-``viewer.fastPreview``
+``viewer.activeViewIndex``
 
 **Description**
 
-The state of the Fast Previews menuThis is a read/write attribute using an enumerated value:
-
-.. warning::
-	If you try to get or set the attribute's value in the Layer or Footage panel, you'll get an error message.
-
-.. note::
-	The Draft preview mode is only available in ray-traced 3D compositions. If you try to use it in a Classic 3D composition, you'll get an error: "Cannot set Draft fast preview mode in a Classic 3D composition."
+The index of the current active :ref:`View`, in the :ref:`Viewer.views` array.
 
 **Type**
 
-A ``FastPreviewType`` enumerated value; read/write. One of:
-
--  ``FastPreviewType.FP_OFF``: Off (Final Quality)
--  ``FastPreviewType.FP_ADAPTIVE_RESOLUTION``: Adaptive Resolution
--  ``FastPreviewType.FP_DRAFT``: Draft
--  ``FastPreviewType.FP_FAST_DRAFT``: Fast Draft
--  ``FastPreviewType.FP_WIREFRAME``: Wireframe
-
-**Example**
-
-.. code:: javascript
-
-    app.activeViewer.views[0].options.fastPreview === FastPreviewType.FP_ADAPTIVE_RESOLUTION;
-    app.activeViewer.views[0].options.fastPreview === FastPreviewType.FP_DRAFT;
-    app.activeViewer.views[0].options.fastPreview === FastPreviewType.FP_FAST_DRAFT;
-    app.activeViewer.views[0].options.fastPreview === FastPreviewType.FP_OFF;
-    app.activeViewer.views[0].options.fastPreview === FastPreviewType.FP_WIREFRAME;
-
-----
-
-.. _Viewer.guidesLocked:
-
-Viewer.guidesLocked
-*********************************************
-
-``viewer.guidesLocked``
-
-.. note::
-   This functionality was added in After Effects 16.1 (CC 2019)
-
-**Description**
-
-When true, indicates guides are locked in the viewer.
-
-**Type**
-
-Boolean; read/write.
-
-**Example**
-
-.. code:: javascript
-
-    app.activeViewer.views[0].options.guidesLocked;
-
-----
-
-.. _Viewer.guidesSnap:
-
-Viewer.guidesSnap
-*********************************************
-
-``viewer.guidesSnap``
-
-.. note::
-   This functionality was added in After Effects 16.1 (CC 2019)
-
-**Description**
-
-When true, indicates layers snap to guides when dragged in the viewer.
-
-**Type**
-
-Boolean; read/write.
-
-**Example**
-
-.. code:: javascript
-
-    app.activeViewer.views[0].options.guidesSnap;
-
-----
-
-.. _Viewer.guidesVisibility:
-
-Viewer.guidesVisibility
-*********************************************
-
-``viewer.guidesVisibility``
-
-.. note::
-   This functionality was added in After Effects 16.1 (CC 2019)
-
-**Description**
-
-When true, indicates guides are visible in the viewer.
-
-**Type**
-
-Boolean; read/write.
-
-**Example**
-
-.. code:: javascript
-
-    app.activeViewer.views[0].options.guidesVisibility;
+Number; read/write.
 
 ----
 
@@ -179,29 +79,20 @@ Boolean; read/write.
 
 ----
 
-.. _Viewer.rulers:
+.. _Viewer.views:
 
-Viewer.rulers
+Viewer.views
 *********************************************
 
-``viewer.rulers``
-
-.. note::
-   This functionality was added in After Effects 16.1 (CC 2019)
+``viewer.views``
 
 **Description**
 
-When true, indicates rulers are shown in the viewer.
+All of the Views associated with this viewer.
 
 **Type**
 
-Boolean; read/write.
-
-**Example**
-
-.. code:: javascript
-
-    app.activeViewer.views[0].options.rulers;
+Array of :ref:`View` objects; read-only.
 
 ----
 
@@ -239,7 +130,8 @@ Viewer.setActive()
 
 **Description**
 
-Moves the viewer panel to the front and places focus on it, making it active. Calling this method will set the :ref:`viewer's active attribute <viewer.active>` to true.
+Moves the viewer panel to the front and places focus on it, making it active.
+Calling this method will set the :ref:`viewer's active attribute <viewer.active>` to true.
 
 **Parameters**
 
