@@ -223,6 +223,26 @@ Integer; read/write.
 
 ----
 
+.. _app.fonts:
+
+app.fonts
+*********************************************
+
+``app.fonts``
+
+.. note::
+   This functionality was added in After Effects 24.0.
+
+**Description**
+
+Returns an object to navigate and retreive all the fonts currently available on your system.
+
+**Type**
+
+:ref:`FontsObject`; read-only.
+
+----
+
 .. _app.isoLanguage:
 
 app.isoLanguage

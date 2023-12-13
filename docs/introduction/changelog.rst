@@ -8,6 +8,107 @@ What's new and changed for scripting?
 
 ----
 
+.. _Changelog.24.2:
+
+`After Effects 24.2 Beta build 29 <https://community.adobe.com/t5/after-effects-beta-discussions/new-vertical-text-scripting-hooks-in-scripting/m-p/14271823>`_ (December 2023)
+********************************************************************************************************************************************************************************************
+
+- Scripting methods and attributes added or changed
+	- Added: :ref:`LayerCollection.addVerticalText`
+	- Added: :ref:`LayerCollection.addVerticalBoxText`
+	- Added: :ref:`TextDocument.lineOrientation`
+	- Changed: :ref:`TextDocument.composerEngine`
+
+`After Effects 24.2 Beta build 17 <https://community.adobe.com/t5/after-effects-beta-discussions/per-character-scripting-public-beta-announcement/m-p/14247138>`_ (November 2023)
+********************************************************************************************************************************************************************************************
+
+- Scripting methods and attributes added
+	- Added: :ref:`CharacterRange object<CharacterRange>`
+	- Added: :ref:`ParagraphRange object<ParagraphRange>`
+	- Added: :ref:`TextDocument.characterRange`
+	- Added: :ref:`TextDocument.paragraphRange`
+	- Added: :ref:`TextDocument.paragraphCount`
+	- Added: :ref:`TextDocument.paragraphCharacterIndexesAt`
+
+.. _Changelog.24.1:
+
+`After Effects 24.1 Beta build 10 <https://community.adobe.com/t5/after-effects-beta-discussions/more-scripting-hooks/m-p/14083457>`_ (September 2023)
+********************************************************************************************************************************************************************************************
+
+- Scripting methods and attributes added
+	- Added: :ref:`FontsObject.fontServerRevision`
+	- Added: :ref:`FontsObject.getFontByID`
+	- Added: :ref:`FontObject.fontID`
+	
+`After Effects 24.0 Beta build 37 <https://community.adobe.com/t5/after-effects-beta-discussions/new-text-scripting-hooks-for-font-replacement/m-p/14025889>`_ (August 2023)
+********************************************************************************************************************************************************************************************
+
+- Scripting methods and attributes added
+	- Added: :ref:`Project.usedFonts`
+	- Added: :ref:`Project.replaceFont`
+
+.. _Changelog.24.0:
+
+`After Effects 24.0 <https://helpx.adobe.com/after-effects/using/whats-new/2024.html>`_ (October 2023)
+********************************************************************************************************************************************************************************************
+
+- Scripting methods and attributes added
+	- Added: :ref:`getEnumAsString`
+	- Added: :ref:`app.fonts`
+	- Added: :ref:`FontsObject`
+	- Added: :ref:`FontsObject.allFonts`
+	- Added: :ref:`FontsObject.fontsWithDefaultDesignAxes`
+	- Added: :ref:`FontsObject.getFontsByFamilyNameAndStyleName`
+	- Added: :ref:`FontsObject.getFontsByPostScriptName`
+	- Added: :ref:`FontsObject.missingOrSubstitutedFonts`
+	- Added: :ref:`FontObject`
+	- Added: :ref:`FontObject.designAxesData`
+	- Added: :ref:`FontObject.designVector`
+	- Added: :ref:`FontObject.familyPrefix`
+	- Added: :ref:`FontObject.hasDesignAxes`
+	- Added: :ref:`FontObject.hasSameDict`
+	- Added: :ref:`FontObject.postScriptNameForDesignVector`
+	- Added: :ref:`FontObject.familyName`
+	- Added: :ref:`FontObject.fullName`
+	- Added: :ref:`FontObject.isFromAdobeFonts`
+	- Added: :ref:`FontObject.isSubstitute`
+	- Added: :ref:`FontObject.location`
+	- Added: :ref:`FontObject.nativeFamilyName`
+	- Added: :ref:`FontObject.nativeFullName`
+	- Added: :ref:`FontObject.nativeStyleName`
+	- Added: :ref:`FontObject.postScriptName`
+	- Added: :ref:`FontObject.styleName`
+	- Added: :ref:`FontObject.technology`
+	- Added: :ref:`FontObject.type`
+	- Added: :ref:`FontObject.version`
+	- Added: :ref:`FontObject.writingScripts`
+	- Added: :ref:`TextDocument.autoHyphenate`
+	- Added: :ref:`TextDocument.autoKernType`
+	- Added: :ref:`TextDocument.baselineDirection`
+	- Added: :ref:`TextDocument.composerEngine`
+	- Added: :ref:`TextDocument.digitSet`
+	- Added: :ref:`TextDocument.direction`
+	- Added: :ref:`TextDocument.endIndent`
+	- Added: :ref:`TextDocument.everyLineComposer`
+	- Added: :ref:`TextDocument.firstLineIndent`
+	- Added: :ref:`TextDocument.fontBaselineOption`
+	- Added: :ref:`TextDocument.fontCapsOption`
+	- Added: :ref:`TextDocument.fontObject`
+	- Added: :ref:`TextDocument.hangingRoman`
+	- Added: :ref:`TextDocument.kerning`
+	- Added: :ref:`TextDocument.leadingType`
+	- Added: :ref:`TextDocument.ligature`
+	- Added: :ref:`TextDocument.lineJoinType`
+	- Added: :ref:`TextDocument.noBreak`
+	- Added: :ref:`TextDocument.spaceAfter`
+	- Added: :ref:`TextDocument.spaceBefore`
+	- Added: :ref:`TextDocument.startIndent`
+
+- Scripting attributes updated
+	- Updated: :ref:`TextDocument.fauxBold`
+	- Updated: :ref:`TextDocument.fauxItalic`
+	- Updated: :ref:`TextDocument.justification`
+
 .. _Changelog.23.0:
 
 `After Effects 23.0 <https://helpx.adobe.com/after-effects/using/whats-new/2023.html>`_ (October 2022)

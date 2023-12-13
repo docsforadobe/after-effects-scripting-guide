@@ -622,10 +622,12 @@ The name in the Essential Graphics panel is used for the file name of the Motion
 Use the ``motionGraphicsTemplateName`` attribute to set the name.
 
 Optionally specify the path to the folder where the Motion Graphics template file is saved. If not specified, the file will be saved in the current
-user's Essential Graphics folder::
+user's Essential Graphics folder:
 
-    macOS: /Users/<name>/Library/Application Support/Adobe/Common/Essential Graphics/
-    Windows: C:\Users\<name>\AppData\Roaming\Adobe\Common\Essential Graphics\
+.. code-block:: text
+
+   macOS: /Users/<name>/Library/Application Support/Adobe/Common/Essential Graphics/
+   Windows: C:\Users\<name>\AppData\Roaming\Adobe\Common\Essential Graphics\
 
 If the project has been changed since the last time it was saved, After Effects will prompt the user to save the project. To avoid this, use the
 project ``save()`` method before exporting the Motion Graphics template.

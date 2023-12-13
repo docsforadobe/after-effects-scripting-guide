@@ -569,6 +569,42 @@ Boolean; read/write.
 
 ----
 
+.. _Project.usedFonts:
+
+Project.usedFonts
+*********************************************
+
+``app.project.usedFonts``
+
+.. note::
+   This functionality was added in After Effects (Beta) 24.0 and subject to change while it remains in Beta.
+
+**Description**
+
+Returns an Array of Objects containing references to used fonts and the Text Layers on which they appear in the current :ref:`Project<Project>`.
+Each object is composed of ``font`` which is a :ref:`Font object<fontobject>`, and ``layerIDs`` which is an Array of IDs from :ref:`Layer.id`. See :ref:`Project.layerByID` to retrieve the layers.
+
+.. code:: javascript
+
+   var usedList = app.project.usedFonts;
+   if (usedList.length) {
+       var font = usedList[0].font;
+       var layerIDs = usedList[0].layerIDs;
+   
+       var str = font.postScriptName + "\n";
+       for (var i = 0; i < layerIDs.length; i++) {
+            var layer = app.project.layerByID(layerIDs[i]);
+            str += "   Layer:'" + String(layer.property("Source Text").value) + "'\n";
+       }
+       alert(str);
+   }
+
+**Type**
+
+Array of Objects; read-only.
+
+----
+
 .. _Project.workingGamma:
 
 Project.workingGamma
@@ -769,43 +805,6 @@ Creates and returns a new FootageItem object from the file, and adds it to the p
 
 ----
 
-.. _Project.setDefaultImportFolder:
-
-Project.setDefaultImportFolder
-******************************
-
-``app.project.setDefaultImportFolder(folder)``
-
-**Description**
-
-Sets the folder that will be shown in the file import dialog. This location will be used as an override until setDefaultImportFolder() is called with no parameters, or until After Effects is quit.
-
-**Parameters**
-
-==========   ===========================
-``folder``   `Extendscript Folder <https://extendscript.docsforadobe.dev/file-system-access/folder-object.html>`_ object.
-==========   ===========================
-
-**Returns**
-
-Boolean; indicates if the operation was successful.
-
-**Examples**
-
-Any of the following will set the default import folder to C:/My Folder:
-
-* ``var myFolder = new Folder("C:/My Folder"); app.project.setDefaultImportFolder(myFolder);``
-* ``app.project.setDefaultImportFolder(new Folder("C:/My Folder"));``
-* ``app.project.setDefaultImportFolder(Folder("C:/My Folder"));``
-
-Note: if the path refers to an existing file and not a folder, the Folder function returns a File object instead of a Folder object, which will cause ``setDefaultImportFolder()`` to return false.
-
-To set the default import folder to the current user's desktop folder: ``app.project.setDefaultImportFolder(Folder.desktop);``
-
-To disable the default folder, call ``setDefaultImportFolder()`` with no parameters: ``app.project.setDefaultImportFolder();``
-
-----
-
 .. _Project.importFileWithDialog:
 
 Project.importFileWithDialog()
@@ -940,6 +939,26 @@ Instance method on Project which, when given a valid ID value, returns the Layer
       alert("You can get the Layer from the ID!");
    }
 
+----
+
+.. _Project.listColorProfiles:
+
+Project.listColorProfiles()
+***************************
+
+``app.project.listColorProfiles()``
+
+**Description**
+
+Returns an array of color profile descriptions that can be set as the project's color working space.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Array of strings.
 
 ----
 
@@ -997,6 +1016,43 @@ Integer; the total number of FootageItem objects removed.
 
 ----
 
+.. _Project.replaceFont:
+
+Project.replaceFont()
+**************************************
+
+``app.project.replaceFont(fromFont, toFont)``
+
+.. note::
+   This functionality was added in After Effects (Beta) 24.0 and subject to change while it remains in Beta.
+
+**Description**
+
+This function will replace all the usages of :ref:`fontobject` ``fromFont`` with :ref:`fontobject` ``toFont``. ``fromFont`` and ``toFont`` may be the the same.
+
+This operation is a complete and precise replacement, even on :ref:`TextDocuments<TextDocument>` which have mixed styling, preserving the character range the ``fromFont`` was applied to. If the ``toFont`` does not contain glyphs for all the characters which were in us by ``fromFont`` then invalid glyphs may result. There is no way at the current time to detect or report this.
+
+
+.. code:: javascript
+
+   var fromFont = app.project.usedFonts[0].font;
+   var fontList = app.fonts.getFontsByPostScriptName("Abolition")
+   var toFont = fontList[0];
+   app.project.replaceFont(fromFont, toFont);
+
+**Parameters**
+
+====================  ========================================================
+fromFont                A :ref:`fontobject` to be replaced.
+toFont                  A :ref:`fontobject` to replace it with.
+====================  ========================================================
+
+**Returns**
+
+Boolean.
+
+----
+
 .. _Project.save:
 
 Project.save()
@@ -1043,6 +1099,43 @@ Boolean; true if the project was saved.
 
 ----
 
+.. _Project.setDefaultImportFolder:
+
+Project.setDefaultImportFolder()
+********************************
+
+``app.project.setDefaultImportFolder(folder)``
+
+**Description**
+
+Sets the folder that will be shown in the file import dialog. This location will be used as an override until setDefaultImportFolder() is called with no parameters, or until After Effects is quit.
+
+**Parameters**
+
+==========   ===========================
+``folder``   `Extendscript Folder <https://extendscript.docsforadobe.dev/file-system-access/folder-object.html>`_ object.
+==========   ===========================
+
+**Returns**
+
+Boolean; indicates if the operation was successful.
+
+**Examples**
+
+Any of the following will set the default import folder to C:/My Folder:
+
+* ``var myFolder = new Folder("C:/My Folder"); app.project.setDefaultImportFolder(myFolder);``
+* ``app.project.setDefaultImportFolder(new Folder("C:/My Folder"));``
+* ``app.project.setDefaultImportFolder(Folder("C:/My Folder"));``
+
+Note: if the path refers to an existing file and not a folder, the Folder function returns a File object instead of a Folder object, which will cause ``setDefaultImportFolder()`` to return false.
+
+To set the default import folder to the current user's desktop folder: ``app.project.setDefaultImportFolder(Folder.desktop);``
+
+To disable the default folder, call ``setDefaultImportFolder()`` with no parameters: ``app.project.setDefaultImportFolder();``
+
+----
+
 .. _Project.showWindow:
 
 Project.showWindow()
@@ -1064,27 +1157,6 @@ Shows or hides the Project panel.
 **Returns**
 
 Nothing.
-
-----
-
-.. _Project.listColorProfiles:
-
-Project.listColorProfiles()
-***************************
-
-``app.project.listColorProfiles()``
-
-**Description**
-
-Returns an array of color profile descriptions that can be set as the project's color working space.
-
-**Parameters**
-
-None.
-
-**Returns**
-
-Array of strings.
 
 ----
 

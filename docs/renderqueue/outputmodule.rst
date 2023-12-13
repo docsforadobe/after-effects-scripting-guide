@@ -352,7 +352,7 @@ In this example, the output file is routed to the user directory, but this time 
 
   if ($.os.indexOf("Mac") == -1) {
     new_path = "C:\Users\myAccount\new_output";
-    separator = "\";
+    separator = "\\";
   }
 
   var new_data = {

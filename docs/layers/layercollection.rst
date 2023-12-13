@@ -73,7 +73,7 @@ LayerCollection.addBoxText()
 
 **Description**
 
-Creates a new paragraph (box) text layer and adds the new :ref:`TextLayer` to this collection. To create a point text layer, use the :ref:`LayerCollection.addText` method.
+Creates a new paragraph (box) text layer with :ref:`TextDocument.lineOrientation` set to ``LineOrientation.HORIZONTAL`` and adds the new :ref:`TextLayer` to this collection. To create a point text layer, use the :ref:`LayerCollection.addText` method.
 
 **Parameters**
 
@@ -237,7 +237,61 @@ LayerCollection.addText()
 
 **Description**
 
-Creates a new point text layer and adds the new :ref:`TextLayer` to this collection. To create a paragraph (box) text layer, use :ref:`LayerCollection.addBoxText`.
+Creates a new point text layer with :ref:`TextDocument.lineOrientation` set to ``LineOrientation.HORIZONTAL`` and adds the new :ref:`TextLayer` to this collection. To create a paragraph (box) text layer, use :ref:`LayerCollection.addBoxText`.
+
+**Parameters**
+
+==============  ===============================================================
+``sourceText``  Optional; a string containing the source text of the new
+                layer, or a :ref:`TextDocument` containing the source text of
+                the new layer.
+==============  ===============================================================
+
+**Returns**
+
+:ref:`TextLayer`.
+
+----
+
+.. _LayerCollection.addVerticalBoxText:
+
+LayerCollection.addVerticalBoxText()
+*********************************************
+
+``app.project.item(index).layers.addVerticalBoxText([width, height])``
+
+.. note::
+   This functionality was added in After Effects (Beta) 24.2 and subject to change while it remains in Beta.
+
+**Description**
+
+Creates a new paragraph (box) text layer with :ref:`TextDocument.lineOrientation` set to ``LineOrientation.VERTICAL_RIGHT_TO_LEFT`` and adds the new :ref:`TextLayer` to this collection. To create a point text layer, use the :ref:`LayerCollection.addText` or :ref:`LayerCollection.addVerticalText` methods.
+
+**Parameters**
+
+===================  =======================================================
+``[width, height]``  An Array containing the dimensions of the new text box.
+===================  =======================================================
+
+**Returns**
+
+TextLayer object.
+
+----
+
+.. _LayerCollection.addVerticalText:
+
+LayerCollection.addVerticalText()
+*********************************************
+
+``app.project.item(index).layers.addVerticalText([sourceText])``
+
+.. note::
+   This functionality was added in After Effects (Beta) 24.2 and subject to change while it remains in Beta.
+
+**Description**
+
+Creates a new point text layer with :ref:`TextDocument.lineOrientation` set to ``LineOrientation.VERTICAL_RIGHT_TO_LEFT`` and adds the new :ref:`TextLayer` to this collection. To create a paragraph (box) text layer, use the :ref:`LayerCollection.addBoxText` or :ref:`LayerCollection.addVerticalBoxText` methods.
 
 **Parameters**
 
