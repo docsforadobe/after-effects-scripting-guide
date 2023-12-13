@@ -39,7 +39,7 @@ What's new and changed for scripting?
 	- Added: :ref:`FontsObject.fontServerRevision`
 	- Added: :ref:`FontsObject.getFontByID`
 	- Added: :ref:`FontObject.fontID`
-	
+
 `After Effects 24.0 Beta build 37 <https://community.adobe.com/t5/after-effects-beta-discussions/new-text-scripting-hooks-for-font-replacement/m-p/14025889>`_ (August 2023)
 ********************************************************************************************************************************************************************************************
 
@@ -153,7 +153,7 @@ What's new and changed for scripting?
 	- Added: :ref:`Project.layerByID`
 	- Added: :ref:`Property.essentialPropertySource`
 - Scripting Access to Render Queue Notifications
-    - Added: :ref:`RenderQueue.queueNotify` 
+    - Added: :ref:`RenderQueue.queueNotify`
     - Added: :ref:`RenderQueueItem.queueItemNotify`
 - Scripting Access to Multi-Frame Rendering, Maximum CPU Percentage Overrides
     - Added: :ref:`app.setMultiFrameRenderingConfig`
@@ -207,11 +207,11 @@ What's new and changed for scripting?
 `After Effects 16.1`_
 ************************************************************************************************************************************
 
-- Scripting access to Viewer guide and ruler booleans:
-	- Added: :ref:`Viewer.guidesLocked`
-	- Added: :ref:`Viewer.guidesSnap`
-	- Added: :ref:`Viewer.guidesVisibility`
-	- Added: :ref:`Viewer.rulers`
+- Scripting access to :ref:`ViewOptions` guide and ruler booleans:
+	- Added: :ref:`ViewOptions.guidesLocked`
+	- Added: :ref:`ViewOptions.guidesSnap`
+	- Added: :ref:`ViewOptions.guidesVisibility`
+	- Added: :ref:`ViewOptions.rulers`
 - Scripting access to add, remove, and set existing guides:
 	- Added: :ref:`Item.addGuide`
 	- Added: :ref:`Item.removeGuide`
@@ -416,7 +416,7 @@ What's new and changed for scripting?
 - Access to effect's internal version string
 	- Added: Application effects object's version attribute, see :ref:`app.effects`
 - Ability to get and set preview mode
-	- Added: :ref:`Viewer.fastPreview`
+	- Added: :ref:`ViewOptions.fastPreview`
 - Access to layer sampling method (see :ref:`samplingQuality <AVLayer.samplingQuality>`)
 - Changed preference and settings methods (see :ref:`Settings`)
 - ScriptUI is now based on the same controls as the main application.
