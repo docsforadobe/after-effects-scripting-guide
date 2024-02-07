@@ -261,7 +261,7 @@ LayerCollection.addVerticalBoxText()
 ``app.project.item(index).layers.addVerticalBoxText([width, height])``
 
 .. note::
-   This functionality was added in After Effects (Beta) 24.2 and subject to change while it remains in Beta.
+   This functionality was added in After Effects 24.2.
 
 **Description**
 
@@ -287,7 +287,7 @@ LayerCollection.addVerticalText()
 ``app.project.item(index).layers.addVerticalText([sourceText])``
 
 .. note::
-   This functionality was added in After Effects (Beta) 24.2 and subject to change while it remains in Beta.
+   This functionality was added in After Effects 24.2.
 
 **Description**
 

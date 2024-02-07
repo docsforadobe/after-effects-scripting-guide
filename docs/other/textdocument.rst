@@ -286,6 +286,136 @@ Floating-point value; read-write.
 
 ----
 
+.. _TextDocument.boxAutoFitPolicy:
+
+TextDocument.boxAutoFitPolicy
+*********************************************
+
+``textDocument.boxAutoFitPolicy``
+
+.. note::
+   This functionality was added in After Effects (Beta) 24.3 and subject to change while it remains in Beta.
+
+**Description**
+
+Enables the automated change of the box height to fit the text content in the box.
+The box only grows down.
+
+Defaults to ``BoxAutoFitPolicy.NONE``.
+
+Will be disabled if :ref:`TextDocument.boxVerticalAlignment` is anything other than ``boxVerticalAlignment.TOP``.
+
+**Type**
+
+A ``BoxAutoFitPolicy`` enumerated value; read-write. One of:
+
+-  ``BoxAutoFitPolicy.NONE``
+-  ``BoxAutoFitPolicy.HEIGHT_CURSOR``
+-  ``BoxAutoFitPolicy.HEIGHT_PRECISE_BOUNDS``
+-  ``BoxAutoFitPolicy.HEIGHT_BASELINE``
+
+----
+
+.. _TextDocument.boxFirstBaselineAlignment:
+
+TextDocument.boxFirstBaselineAlignment
+*********************************************
+
+``textDocument.boxFirstBaselineAlignment``
+
+.. note::
+   This functionality was added in After Effects (Beta) 24.3 and subject to change while it remains in Beta.
+
+**Description**
+
+Controls the position of the first line of composed text relative to the top of the box.
+
+Disabled if :ref:`TextDocument.boxFirstBaselineAlignmentMinimum` is anything other than zero.
+
+Defaults to ``BoxFirstBaselineAlignment.ASCENT``.
+
+**Type**
+
+A ``BoxFirstBaselineAlignment`` enumerated value; read-write. One of:
+
+-  ``BoxFirstBaselineAlignment.ASCENT``
+-  ``BoxFirstBaselineAlignment.CAP_HEIGHT``
+-  ``BoxFirstBaselineAlignment.EM_BOX``
+-  ``BoxFirstBaselineAlignment.LEADING``
+-  ``BoxFirstBaselineAlignment.LEGACY_METRIC``
+-  ``BoxFirstBaselineAlignment.MINIMUM_VALUE_ASIAN``
+-  ``BoxFirstBaselineAlignment.MINIMUM_VALUE_ROMAN``
+-  ``BoxFirstBaselineAlignment.TYPO_ASCENT``
+-  ``BoxFirstBaselineAlignment.X_HEIGHT``
+
+----
+
+.. _TextDocument.boxFirstBaselineAlignmentMinimum:
+
+TextDocument.boxFirstBaselineAlignmentMinimum
+*********************************************
+
+``textDocument.boxFirstBaselineAlignmentMinimum``
+
+.. note::
+   This functionality was added in After Effects (Beta) 24.3 and subject to change while it remains in Beta.
+
+**Description**
+
+Manually controls the position of the first line of composed text relative to the top of the box.
+
+A value set here other than zero will override the effect of the :ref:`textDocument.boxFirstBaselineAlignment` value.
+
+Defaults to zero.
+
+**Type**
+
+Floating-point value; read/write.
+
+----
+
+.. _TextDocument.boxInsetSpacing:
+
+TextDocument.boxInsetSpacing
+*********************************************
+
+``textDocument.boxInsetSpacing``
+
+.. note::
+   This functionality was added in After Effects (Beta) 24.3 and subject to change while it remains in Beta.
+
+**Description**
+
+Controls the inner space between the box bounds and where the composable text box begins. The same value is applied to all four sides of the box.
+
+Defaults to zero.
+
+**Type**
+
+Floating-point value; read/write.
+
+----
+
+.. _TextDocument.boxOverflow:
+
+TextDocument.boxOverflow
+*********************************************
+
+``textDocument.boxOverflow``
+
+.. note::
+   This functionality was added in After Effects (Beta) 24.3 and subject to change while it remains in Beta.
+
+**Description**
+
+Returns true if some part of the text did not compose into the box.
+
+**Type**
+
+Boolean; read-only.
+
+----
+
 .. _TextDocument.boxText:
 
 TextDocument.boxText
@@ -352,6 +482,33 @@ The size of a paragraph (box) Text layer as a [width, height] array of pixel dim
 **Type**
 
 Array of two integers (minimum value of 1); read/write.
+
+----
+
+.. _TextDocument.boxVerticalAlignment:
+
+TextDocument.boxVerticalAlignment
+*********************************************
+
+``textDocument.boxVerticalAlignment``
+
+.. note::
+   This functionality was added in After Effects (Beta) 24.3 and subject to change while it remains in Beta.
+
+**Description**
+
+Enables the automated vertical alignment of the composed text in the box.
+
+Defaults to ``BoxVerticalAlignment.TOP``
+
+**Type**
+
+A ``BoxVerticalAlignment`` enumerated value; read-write. One of:
+
+-  ``BoxVerticalAlignment.TOP``
+-  ``BoxVerticalAlignment.CENTER``
+-  ``BoxVerticalAlignment.BOTTOM``
+-  ``BoxVerticalAlignment.JUSTIFY``
 
 ----
 
@@ -1055,7 +1212,7 @@ TextDocument.lineOrientation
 ``textDocument.lineOrientation``
 
 .. note::
-   This functionality was added in After Effects (Beta) 24.2 and is subject to change while it remains in Beta.
+   This functionality was added in After Effects 24.2.
 
 **Description**
 
