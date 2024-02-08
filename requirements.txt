@@ -1,4 +1,4 @@
-sphinx==4.4
+sphinx==5.0
 sphinx_rtd_theme
 sphinx_rtd_dark_mode
 docutils<0.18
