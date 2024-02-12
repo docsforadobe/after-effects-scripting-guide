@@ -512,6 +512,29 @@ A ``BoxVerticalAlignment`` enumerated value; read-write. One of:
 
 ----
 
+.. _TextDocument.composedLineCount:
+
+TextDocument.composedLineCount
+*********************************************
+
+``textDocument.composedLineCount``
+
+**Description**
+
+Returns the number of composed lines in the Text layer, may be zero if all text is overset.
+
+
+The ``TextDocument`` instance is initialized from the composed state and subsequent changes to the ``TextDocument`` instance does not cause recomposition.
+
+Even if you remove all the text from the ``TextDocument`` instance, the value returned here remains unchanged.
+
+
+**Type**
+
+Number; read-only.
+
+----
+
 .. _TextDocument.composerEngine:
 
 TextDocument.composerEngine
@@ -528,7 +551,7 @@ The Text layer's paragraph composer engine option. By default new Text layers wi
 
 If this attribute has a mixed value, it will be read as ``undefined``.
 
-This property is read-write, but an exception will be thrown if any enum value other than ``ComposerEngine.UNIVERSAL_TYPE_ENGINE`` is written.
+This attrribute is read-write, but an exception will be thrown if any enum value other than ``ComposerEngine.UNIVERSAL_TYPE_ENGINE`` is written.
 
 In effect, you can change an older document from ``ComposerEngine.LATIN_CJK_ENGINE`` to ``ComposerEngine.UNIVERSAL_TYPE_ENGINE``, but not the reverse.
 
@@ -777,7 +800,7 @@ The Text layer's font specified by its PostScript name.
 On write, there are very few resrictions on what can be supplied - if the underlying font management system does not have a matching :ref:`fontObject` instance matching the supplied PostScript name a substitute instance will be created.
 The Font instance returned in the case of duplicate PostScript names will be the 0th element of the array returned from :ref:`FontsObject.getFontsByPostScriptName`.
 
-You should use the :ref:`fontObject` property for precise control.
+You should use the :ref:`fontObject` attribute for precise control.
 
 .. warning::
    This value only reflects the first character in the Text layer.
@@ -1562,7 +1585,7 @@ This Text layer's tsume value as a normalized percentage, from 0.0 -> 1.0.
    This value only reflects the first character in the Text layer.
    If you change this value, it will set all characters in the Text layer to the specified setting.
 
-   This property accepts values from 0.0 -> 100.0, however the value IS expecting a normalized value from 0.0 -> 1.0. Using a value higher than 1.0 will produce unexpected results; AE's Character Panel will clamp the value at 100%, despite the higher value set by scripting (ie ``TextDocument.tsume = 100`` _really_ sets a value of 10,000%)
+   This attribute accepts values from 0.0 -> 100.0, however the value IS expecting a normalized value from 0.0 -> 1.0. Using a value higher than 1.0 will produce unexpected results; AE's Character Panel will clamp the value at 100%, despite the higher value set by scripting (ie ``TextDocument.tsume = 100`` _really_ sets a value of 10,000%)
 
 **Type**
 
@@ -1633,6 +1656,74 @@ It is not possible to create a :ref:`CharacterRange` which spans the final carri
 **Returns**
 
 An instance of :ref:`CharacterRange`
+
+----
+
+.. _TextDocument.composedLineCharacterIndexesAt:
+
+TextDocument.composedLineCharacterIndexesAt()
+*********************************************
+
+``textDocument.composedLineCharacterIndexesAt(characterIndex)``
+
+.. note::
+   This functionality was added in After Effects (Beta) 24.3 and is subject to change while it remains in Beta.
+
+**Description**
+
+Returns the character index bounds of a :ref:`ComposedLineRange` in the Text layer.
+
+**Parameters**
+
+==================== ======================================================================================================== 
+ ``characterIndex``   Unsigned integer. A text index in the Text layer, which will be mapped to the composed line it intersects.  
+==================== ======================================================================================================== 
+
+**Returns**
+
+Generic object;
+Key ``start`` will be set to text index of the start of the composed line (greater than or equal to zero).
+Key ``end`` will be set to text index of the end of the composed line (greater than start, or equal to start if it is the last composed line).
+
+Will throw an exception if the computed start and end are outside of the current ``TextDocument``.
+Remember that the composed lines are static and subsequent changes to the ``TextDocument`` instance which changes its length may render the composed line data invalid.
+
+----
+
+.. _TextDocument.composedLineRange:
+
+TextDocument.composedLineRange()
+*********************************************
+
+``textDocument.composedLineRange(composedLineIndexStart, [signedComposedLineIndexEnd])``
+
+.. note::
+   This functionality was added in After Effects (Beta) 24.3 and is subject to change while it remains in Beta.
+
+**Description**
+
+Returns an instance of the Text layer range accessor ComposedLineRange.
+
+The instance will remember the parameters passed in the constructor - they remain constant and changes to the `TextDocument` contents may cause the instance to throw exceptions on access until the `TextDocument` contents are changed which makes the range valid again. 
+
+Use toString() to find out what the constructed parameters were.
+
+**Parameters**
+
+=============================== ===============================================
+ ``composedLineIndexStart``     Unsigned integer. Starts at zero, must be the less than the number of composed lines in the :ref:`TextDocument`.
+ ``signedComposedLineIndexEnd`` | Optional signed integer. If not specified, will be computed at (composedLineIndexStart + 1).
+                                | If set to -1, then the :ref:`ComposedLineRange` will dynamically calculate this on access to the last composed line of the :ref:`TextDocument`.
+                                | signedComposedLineIndexEnd must be greater than composedLineIndexStart, and less than or equal to the number of composed lines in the :ref:`TextDocument`.
+=============================== ===============================================
+
+Throws an exception if the parameters would result in an invalid range.
+
+Remember that the composed lines are static and subsequent changes to the ``TextDocument`` instance which changes its length may render the composed line data invalid.
+
+**Returns**
+
+An instance of :ref:`ComposedLineRange`
 
 ----
 

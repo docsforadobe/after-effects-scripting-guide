@@ -77,6 +77,7 @@ Welcome to the After Effects Scripting Guide!
 
     other/characterrange
     other/collection
+    other/composedlinerange
     other/fontobject
     other/fontsobject
     other/importoptions

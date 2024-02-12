@@ -10,6 +10,18 @@ What's new and changed for scripting?
 
 .. _Changelog.24.3:
 
+`After Effects 24.3 Beta build 25 <https://community.adobe.com/t5/after-effects-beta-discussions/per-character-scripting-public-beta-announcement/m-p/14414997#M3325>`_ (February 2024)
+********************************************************************************************************************************************************************************************
+
+- Scripting methods and attributes added or changed
+	- Changed: :ref:`ParagraphRange object<ParagraphRange>` (all text attributes removed)
+	- Added: :ref:`ComposedLineRange object<ComposedLineRange>`
+	- Added: :ref:`ParagraphRange.characterRange`
+	- Added: :ref:`TextDocument.composedLineCharacterIndexesAt`
+	- Added: :ref:`TextDocument.composedLineCount`
+	- Added: :ref:`TextDocument.composedLineRange`
+
+
 `After Effects 24.3 Beta build 20 <https://community.adobe.com/t5/after-effects-beta-discussions/new-text-box-options-available-in-scripting/m-p/14409110>`_ (February 2024)
 ********************************************************************************************************************************************************************************************
 
