@@ -57,7 +57,7 @@ In addition, it is perfectly acceptable to have multiple fonts with the same Pos
 
 The family groups and :ref:`Font objects <fontobject>` in the group are sorted according to the setting in the Character Panel dropdown "Show Font Names in English". If set to true, the :ref:`familyName<FontObject.familyName>` and :ref:`styleName<FontObject.styleName>` property is used, otherwise the :ref:`nativeFamilyName<FontObject.nativeFamilyName>` and :ref:`nativeStyleName<FontObject.nativeStyleName>` property is used.
 
-:ref:`fontobject` for which ``Font.isSubstitute`` returns true are always sorted to the end as individual family groups.
+:ref:`fontobject` for which :ref:`FontObject.isSubstitute` returns true are always sorted to the end as individual family groups.
 
 
 **Type**
@@ -95,7 +95,7 @@ FontsObject.fontServerRevision
 
 Returns an unsigned number representing the current revision of the font environment.
 
-The revision is advanced when anything happens to the font environment which would change the contents, properties, or order of :ref:`Font objects<FontObject>` returned from a call to ``allFonts``.
+The revision is advanced when anything happens to the font environment which would change the contents, properties, or order of :ref:`Font objects<FontObject>` returned from a call to :ref:`FontsObject.allFonts`.
 
 Among these are: installing or removing fonts in the font environment, opening or closing a project with substituted fonts, causing a custom Variable font instance to be created, and changing the setting in the Character Panel dropdown "Show Font Names in English".
 

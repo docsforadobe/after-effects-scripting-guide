@@ -14,12 +14,12 @@ The CharacterRange object is an accessor to a character range of the :ref:`TextD
 
 Unlike the :ref:`TextDocument`, which looks at only the first character when returning character attributes, here the character range can span zero or more characters. As a consequence, two or more characters *may not have the same attribute value* and this mixed state will be signaled by returning ``undefined``.
 
-- The ``characterStart`` attribute is the first character index of the range.
-- The ``characterEnd`` attribue will report the (last + 1) character index of the range, such that (``characterEnd`` - ``characterStart``) represents the number of characters in the range.
+- The :ref:`characterStart<CharacterRange.characterStart>` attribute is the first character index of the range.
+- The :ref:`characterEnd<CharacterRange.characterEnd>` attribue will report the (last + 1) character index of the range, such that (:ref:`characterEnd<CharacterRange.characterEnd>` - :ref:`characterStart<CharacterRange.characterStart>`) represents the number of characters in the range.
 
 It is acceptable for most attributes for the effective range to be zero - otherwise known as an insertion point.
 
-When accessed, the CharacterRange object will check that ``characterStart`` and effective ``characterEnd`` of the range remains valid for the current span of the related :ref:`TextDocument`. This is the same rule as applied when the CharacterRange was created, but because the length of the related :ref:`TextDocument` can change through the addition or removal of characters, the ``characterStart`` and effective ``characterEnd`` may no longer be valid. In this situation an exception will be thrown on access, either read or write. The :ref:`isRangeValid<CharacterRange.isRangeValid>` attribute will return false if the effective range is no longer valid.
+When accessed, the CharacterRange object will check that :ref:`characterStart<CharacterRange.characterStart>` and effective :ref:`characterEnd<CharacterRange.characterEnd>` of the range remains valid for the current span of the related :ref:`TextDocument`. This is the same rule as applied when the CharacterRange was created, but because the length of the related :ref:`TextDocument` can change through the addition or removal of characters, the :ref:`characterStart<CharacterRange.characterStart>` and effective :ref:`characterEnd<CharacterRange.characterEnd>` may no longer be valid. In this situation an exception will be thrown on access, either read or write. The :ref:`isRangeValid<CharacterRange.isRangeValid>` attribute will return false if the effective range is no longer valid.
 
 Note that if the :ref:`TextDocument` length changes, the :ref:`CharacterRange` range could become valid again.
 
@@ -155,8 +155,8 @@ The Text layer range character attribute kerning option.
 
 This effectively reports the manual kerning value, and not the calculated kerning value from auto kerning.
 
-- If ``autoKernType`` in the range is set to ``AutoKernType.METRIC_KERN``, ``AutoKernType.OPTICAL_KERN``, or is mixed, then this attribute will be returned as ``undefined``.
-- If ``autoKernType`` in the range is set to ``AutoKernType.NO_AUTO_KERN``, and this attribute has a mixed value, it will be read as ``undefined``.
+- If :ref:`autoKernType<TextDocument.autoKernType>` in the range is set to ``AutoKernType.METRIC_KERN``, ``AutoKernType.OPTICAL_KERN``, or is mixed, then this attribute will be returned as ``undefined``.
+- If :ref:`autoKernType<TextDocument.autoKernType>` in the range is set to ``AutoKernType.NO_AUTO_KERN``, and this attribute has a mixed value, it will be read as ``undefined``.
 
 Setting this value will also set ``AutoKernType.NO_AUTO_KERN`` to true across the affected characters.
 
@@ -181,10 +181,10 @@ For example, in an 8-bpc project, a red value of 255 would be 1.0, and in a 32-b
 
 If this attribute has a mixed value, it will be read as ``undefined``.
 
-Setting this value will also set ``applyStroke`` to true across the affected characters.
+Setting this value will also set :ref:`applyStroke<TextDocument.applyStroke>` to true across the affected characters.
 
 .. warning::
-   In contrast to the same attribute on the TextDocument API, we will *not* throw an exception on read if ``applyStroke`` is not true.
+   In contrast to the same attribute on the TextDocument API, we will *not* throw an exception on read if :ref:`applyStroke<TextDocument.applyStroke>` is not true.
 
 **Type**
 

@@ -70,7 +70,7 @@ TextDocument.allCaps
 
 **Description**
 
-True if a Text layer has All Caps enabled; otherwise false. To set this value, use ``fontCapsOption`` added in After Effects 24.0.
+True if a Text layer has All Caps enabled; otherwise false. To set this value, use :ref:`fontCapsOption<TextDocument.fontCapsOption>` added in After Effects 24.0.
 
 
 .. warning::
@@ -91,7 +91,7 @@ TextDocument.applyFill
 
 **Description**
 
-When true, the Text layer shows a fill. Access the ``fillColor`` attribute for the actual color. When false, only a stroke is shown.
+When true, the Text layer shows a fill. Access the :ref:`fillColor<TextDocument.fillColor>` attribute for the actual color. When false, only a stroke is shown.
 
 **Type**
 
@@ -108,7 +108,7 @@ TextDocument.applyStroke
 
 **Description**
 
-When true, the Text layer shows a stroke. Access the ``strokeColor`` attribute for the actual color and ``strokeWidth`` for its thickness. When false, only a fill is shown.
+When true, the Text layer shows a stroke. Access the :ref:`strokeColor<TextDocument.strokeColor>` attribute for the actual color and :ref:`strokeWidth<TextDocument.strokeWidth>` for its thickness. When false, only a fill is shown.
 
 **Type**
 
@@ -449,7 +449,7 @@ TextDocument.boxTextPos
 The layer coordinates from a paragraph (box) Text layer's anchor point as a [width, height] array of pixel dimensions.
 
 .. warning::
-   Throws an exception if ``boxText`` does not return true for the Text layer.
+   Throws an exception if :ref:`boxText<TextDocument.boxText>` does not return true for the Text layer.
 
 **Type**
 
@@ -477,7 +477,7 @@ TextDocument.boxTextSize
 The size of a paragraph (box) Text layer as a [width, height] array of pixel dimensions.
 
 .. warning::
-   Throws an exception if ``boxText`` does not return true for the Text layer.
+   Throws an exception if :ref:`boxText<TextDocument.boxText>` does not return true for the Text layer.
    
 **Type**
 
@@ -524,9 +524,9 @@ TextDocument.composedLineCount
 Returns the number of composed lines in the Text layer, may be zero if all text is overset.
 
 
-The ``TextDocument`` instance is initialized from the composed state and subsequent changes to the ``TextDocument`` instance does not cause recomposition.
+The :ref:`TextDocument` instance is initialized from the composed state and subsequent changes to the :ref:`TextDocument` instance does not cause recomposition.
 
-Even if you remove all the text from the ``TextDocument`` instance, the value returned here remains unchanged.
+Even if you remove all the text from the :ref:`TextDocument` instance, the value returned here remains unchanged.
 
 
 **Type**
@@ -746,9 +746,9 @@ TextDocument.fillColor
 
 The Text layer's fill color, as an array of ``[r, g, b]`` floating-point values. For example, in an 8-bpc project, a red value of 255 would be 1.0, and in a 32-bpc project, an overbright blue value can be something like 3.2.
 
-Throws an exception on read if ``applyFill`` is not true.
+Throws an exception on read if :ref:`applyFill<TextDocument.applyFill>` is not true.
 
-Setting this value will also set ``applyFill`` to true across the affected characters.
+Setting this value will also set :ref:`applyFill<TextDocument.applyFill>` to true across the affected characters.
 
 .. warning::
    This value only reflects the first character in the Text layer.
@@ -1422,9 +1422,9 @@ TextDocument.strokeColor
 
 The Text layer's stroke color, as an array of [r, g, b] floating-point values. For example, in an 8-bpc project, a red value of 255 would be 1.0, and in a 32-bpc project, an overbright blue value can be something like 3.2.
 
-Throws an exception on read if ``applyStroke`` is not true.
+Throws an exception on read if :ref:`applyStroke<TextDocument.applyStroke>` is not true.
 
-Setting this value will also set ``applyStroke`` to true across the affected characters.
+Setting this value will also set :ref:`applyStroke<TextDocument.applyStroke>` to true across the affected characters.
 
 .. warning::
    This value only reflects the first character in the Text layer.
@@ -1635,7 +1635,7 @@ TextDocument.characterRange()
 
 Returns an instance of the Text layer range accessor CharacterRange.
 
-The instance will remember the parameters passed in the constructor - they remain constant and changes to the `TextDocument` length may cause the instance to throw exceptions on access until the `TextDocument` length is changed to a length which makes the range valid again. 
+The instance will remember the parameters passed in the constructor - they remain constant and changes to the :ref:`TextDocument<TextDocument>` length may cause the instance to throw exceptions on access until the :ref:`TextDocument<TextDocument>` length is changed to a length which makes the range valid again. 
 
 Use toString() to find out what the constructed parameters were.
 
@@ -1685,8 +1685,8 @@ Generic object;
 Key ``start`` will be set to text index of the start of the composed line (greater than or equal to zero).
 Key ``end`` will be set to text index of the end of the composed line (greater than start, or equal to start if it is the last composed line).
 
-Will throw an exception if the computed start and end are outside of the current ``TextDocument``.
-Remember that the composed lines are static and subsequent changes to the ``TextDocument`` instance which changes its length may render the composed line data invalid.
+Will throw an exception if the computed start and end are outside of the current :ref:`TextDocument` 
+Remember that the composed lines are static and subsequent changes to the :ref:`TextDocument` instance which changes its length may render the composed line data invalid.
 
 ----
 
@@ -1702,11 +1702,11 @@ TextDocument.composedLineRange()
 
 **Description**
 
-Returns an instance of the Text layer range accessor ComposedLineRange.
+Returns an instance of the Text layer range accessor :ref:`ComposedLineRange`.
 
-The instance will remember the parameters passed in the constructor - they remain constant and changes to the `TextDocument` contents may cause the instance to throw exceptions on access until the `TextDocument` contents are changed which makes the range valid again. 
+The instance will remember the parameters passed in the constructor - they remain constant and changes to the :ref:`TextDocument<TextDocument>` contents may cause the instance to throw exceptions on access until the :ref:`TextDocument<TextDocument>` contents are changed which makes the range valid again. 
 
-Use toString() to find out what the constructed parameters were.
+Use :ref:`ComposedLineRange.toString` to find out what the constructed parameters were.
 
 **Parameters**
 
@@ -1719,7 +1719,7 @@ Use toString() to find out what the constructed parameters were.
 
 Throws an exception if the parameters would result in an invalid range.
 
-Remember that the composed lines are static and subsequent changes to the ``TextDocument`` instance which changes its length may render the composed line data invalid.
+Remember that the composed lines are static and subsequent changes to the :ref:`TextDocument` instance which changes its length may render the composed line data invalid.
 
 **Returns**
 
@@ -1767,11 +1767,11 @@ TextDocument.paragraphRange()
 
 **Description**
 
-Returns an instance of the Text layer range accessor ParagraphRange.
+Returns an instance of the Text layer range accessor :ref:`ParagraphRange`.
 
-The instance will remember the parameters passed in the constructor - they remain constant and changes to the `TextDocument` contents may cause the instance to throw exceptions on access until the `TextDocument` contents are changed which makes the range valid again. 
+The instance will remember the parameters passed in the constructor - they remain constant and changes to the :ref:`TextDocument<TextDocument>` contents may cause the instance to throw exceptions on access until the :ref:`TextDocument<TextDocument>` contents are changed which makes the range valid again. 
 
-Use toString() to find out what the constructed parameters were.
+Use :ref:`ParagraphRange.toString` to find out what the constructed parameters were.
 
 **Parameters**
 

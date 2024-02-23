@@ -235,7 +235,7 @@ FontObject.nativeFamilyName
 
 **Description**
 
-The native family name of the font in full 16 bit Unicode. Often different than what is returned from ``familyName`` for non-Latin fonts.
+The native family name of the font in full 16 bit Unicode. Often different than what is returned by :ref:`FontObject.familyName` for non-Latin fonts.
 
 **Type**
 
@@ -252,7 +252,7 @@ FontObject.nativeFullName
 
 **Description**
 
-The native full name of the font in full 16 bit Unicode. Often different than what is returned from ``fullName`` for non-Latin fonts.
+The native full name of the font in full 16 bit Unicode. Often different than what is returned by :ref:`FontObject.fullName` for non-Latin fonts.
 
 **Type**
 
@@ -269,7 +269,7 @@ FontObject.nativeStyleName
 
 **Description**
 
-The native style name of the font in full 16 bit Unicode. Often different than what is returned from ``styleName`` for non-Latin fonts.
+The native style name of the font in full 16 bit Unicode. Often different than what is returned by :ref:`FontObject.styleName` for non-Latin fonts.
 
 **Type**
 
