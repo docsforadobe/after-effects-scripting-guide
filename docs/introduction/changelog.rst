@@ -21,7 +21,6 @@ What's new and changed for scripting?
 	- Added: :ref:`TextDocument.composedLineCount`
 	- Added: :ref:`TextDocument.composedLineRange`
 
-
 `After Effects 24.3 Beta build 20 <https://community.adobe.com/t5/after-effects-beta-discussions/new-text-box-options-available-in-scripting/m-p/14409110>`_ (February 2024)
 ********************************************************************************************************************************************************************************************
 
