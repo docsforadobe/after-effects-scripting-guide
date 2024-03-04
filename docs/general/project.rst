@@ -581,20 +581,22 @@ Project.usedFonts
 
 **Description**
 
-Returns an Array of Objects containing references to used fonts and the Text Layers on which they appear in the current :ref:`Project<Project>`.
-Each object is composed of ``font`` which is a :ref:`Font object<fontobject>`, and ``layerIDs`` which is an Array of IDs from :ref:`Layer.id`. See :ref:`Project.layerByID` to retrieve the layers.
+Returns an Array of Objects containing references to used fonts and the Text Layers and times on which they appear in the current :ref:`Project<Project>`. Each object is composed of ``font`` which is a :ref:`Font object<fontobject>`, and ``usedAt`` which is an Array of Objects, each composed of ``layerID``, a :ref:`Layer.id`, and ``timeD`` for when. See :ref:`Project.layerByID` to retrieve the layers.
 
 .. code:: javascript
 
    var usedList = app.project.usedFonts;
    if (usedList.length) {
        var font = usedList[0].font;
-       var layerIDs = usedList[0].layerIDs;
+       var usedAt = usedList[0].usedAt;
    
-       var str = font.postScriptName + "\n";
-       for (var i = 0; i < layerIDs.length; i++) {
-            var layer = app.project.layerByID(layerIDs[i]);
-            str += "   Layer:'" + String(layer.property("Source Text").value) + "'\n";
+       var str = "[0]:" + font.postScriptName + "\n";
+       for (var i = 0; i < usedAt.length; i++) {
+            var layerID = usedAt[i].layerID;
+            var timeD  = usedAt[i].timeD;
+
+            var layer = app.project.layerByID(layerID);
+            str += "   Layer:'" + String(layer.property("Source Text").valueAtTime(timeD) + "'\n";
        }
        alert(str);
    }
@@ -1021,16 +1023,22 @@ Integer; the total number of FootageItem objects removed.
 Project.replaceFont()
 **************************************
 
-``app.project.replaceFont(fromFont, toFont)``
+``app.project.replaceFont(fromFont, toFont, [noFontLocking = false])``
 
 .. note::
    This functionality was added in After Effects (Beta) 24.0 and subject to change while it remains in Beta.
 
 **Description**
 
-This function will replace all the usages of :ref:`fontobject` ``fromFont`` with :ref:`fontobject` ``toFont``. ``fromFont`` and ``toFont`` may be the the same.
+This function will replace all the usages of :ref:`fontobject` ``fromFont`` with :ref:`fontobject` ``toFont``.
 
-This operation is a complete and precise replacement, even on :ref:`TextDocuments<TextDocument>` which have mixed styling, preserving the character range the ``fromFont`` was applied to. If the ``toFont`` does not contain glyphs for all the characters which were in us by ``fromFont`` then invalid glyphs may result. There is no way at the current time to detect or report this.
+This operation exposes the same mechanism and policy used for automatic font replacement of missing or substituted fonts and is therefore a complete and precise replacement, even on :ref:`TextDocuments<TextDocument>` which have mixed styling, preserving the character range the ``fromFont`` was applied to.
+
+This operation is not undoable.
+
+The optional parameter ``noFontLocking`` controls what happens when the ``toFont`` has no glyphs for the text it is applied to. By default a fallback font will be selected which will have the necessary glyphs, but if this parameter is set to true then this fallback will not take place and missing glyphs will result. There is no way at the current time to detect or report this.
+
+Note that when ``fromFont`` is a substituted font and the ``toFont`` has the same font properties no fallback can occur and the parameter is ignored and treated as true.
 
 
 .. code:: javascript
@@ -1038,18 +1046,19 @@ This operation is a complete and precise replacement, even on :ref:`TextDocument
    var fromFont = app.project.usedFonts[0].font;
    var fontList = app.fonts.getFontsByPostScriptName("Abolition")
    var toFont = fontList[0];
-   app.project.replaceFont(fromFont, toFont);
+   var layerChanged = app.project.replaceFont(fromFont, toFont);
 
 **Parameters**
 
 ====================  ========================================================
-fromFont                A :ref:`fontobject` to be replaced.
-toFont                  A :ref:`fontobject` to replace it with.
+``fromFont``          A :ref:`fontobject` to be replaced.
+``toFont``            A :ref:`fontobject` to replace it with.
+``noFontLocking``     An optional Boolean, defaults to false
 ====================  ========================================================
 
 **Returns**
 
-Boolean.
+Boolean. True if at least one Layer was changed.
 
 ----
 

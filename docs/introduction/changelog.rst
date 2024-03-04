@@ -10,6 +10,13 @@ What's new and changed for scripting?
 
 .. _Changelog.24.3:
 
+`After Effects 24.4 Beta build 6 <https://community.adobe.com/t5/after-effects-beta-discussions/heads-up-revisions-fix-to-missing-font-replacement-behavior/td-p/14466683>`_ (March 2024)
+********************************************************************************************************************************************************************************************
+
+- Scripting methods and attributes added or changed
+	- Changed: :ref:`Project.replaceFont`
+	- Changed: :ref:`Project.usedFonts`
+
 `After Effects 24.3 Beta build 25 <https://community.adobe.com/t5/after-effects-beta-discussions/per-character-scripting-public-beta-announcement/m-p/14414997#M3325>`_ (February 2024)
 ********************************************************************************************************************************************************************************************
 
