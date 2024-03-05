@@ -596,7 +596,7 @@ Returns an Array of Objects containing references to used fonts and the Text Lay
             var timeD  = usedAt[i].timeD;
 
             var layer = app.project.layerByID(layerID);
-            str += "   Layer:'" + String(layer.property("Source Text").valueAtTime(timeD) + "'\n";
+            str += "   Layer:'" + String(layer.property("Source Text").valueAtTime(timeD, false)) + "'\n";
        }
        alert(str);
    }
@@ -1044,7 +1044,7 @@ Note that when ``fromFont`` is a substituted font and the ``toFont`` has the sam
 .. code:: javascript
 
    var fromFont = app.project.usedFonts[0].font;
-   var fontList = app.fonts.getFontsByPostScriptName("Abolition")
+   var fontList = app.fonts.getFontsByPostScriptName("TimesNewRomanPSMT");
    var toFont = fontList[0];
    var layerChanged = app.project.replaceFont(fromFont, toFont);
 
