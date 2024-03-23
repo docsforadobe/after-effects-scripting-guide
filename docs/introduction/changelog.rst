@@ -8,7 +8,17 @@ What's new and changed for scripting?
 
 ----
 
-.. _Changelog.24.3:
+.. _Changelog.24.4:
+
+`After Effects 24.4 Beta build 24 <https://community.adobe.com/t5/after-effects-beta-discussions/scripting-new-and-updated-apis-for-font-management/td-p/14508673>`_ (March 2024)
+********************************************************************************************************************************************************************************************
+
+	- Added: :ref:`FontsObject.favoriteFontFamilyList`
+	- Added: :ref:`FontsObject.fontsDuplicateByPostScriptName`
+	- Added: :ref:`FontsObject.freezeSyncSubstitutedFonts`
+	- Added: :ref:`FontsObject.mruFontFamilyList`
+	- Added: :ref:`FontsObject.substitutedFontReplacementMatchPolicy`
+	- Added: :ref:`FontsObject.pollForAndPushNonSystemFontFoldersChanges`
 
 `After Effects 24.4 Beta build 6 <https://community.adobe.com/t5/after-effects-beta-discussions/heads-up-revisions-fix-to-missing-font-replacement-behavior/td-p/14466683>`_ (March 2024)
 ********************************************************************************************************************************************************************************************

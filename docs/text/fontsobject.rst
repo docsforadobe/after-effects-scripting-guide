@@ -57,7 +57,7 @@ In addition, it is perfectly acceptable to have multiple fonts with the same Pos
 
 The family groups and :ref:`Font objects <fontobject>` in the group are sorted according to the setting in the Character Panel dropdown "Show Font Names in English". If set to true, the :ref:`familyName<FontObject.familyName>` and :ref:`styleName<FontObject.styleName>` property is used, otherwise the :ref:`nativeFamilyName<FontObject.nativeFamilyName>` and :ref:`nativeStyleName<FontObject.nativeStyleName>` property is used.
 
-:ref:`fontobject` for which :ref:`FontObject.isSubstitute` returns true are always sorted to the end as individual family groups.
+:ref:`fontobject` for which :ref:`isSubstitute <FontObject.isSubstitute>` returns true are always sorted to the end as individual family groups.
 
 
 **Type**
@@ -79,6 +79,48 @@ This example will select the first returned Font Family Array.
 
    alert(firstFontFamilyName+" "+firstFamilyStyle);
 
+----
+
+.. _FontsObject.favoriteFontFamilyList:
+
+FontsObject.favoriteFontFamilyList
+*********************************************
+
+``app.fonts.favoriteFontFamilyList``
+
+.. note::
+   This functionality was added in After Effects (Beta) 24.4 and subject to change while it remains in Beta.
+
+**Description**
+
+Provides access to the Favorites list presented in the Character panel and Properties panel. To set the Favorites simply provide an (unsorted) array of strings based on the :ref:`familyName <FontObject.familyName>`. To clear the list simply assign an empty Array.
+
+**Type**
+
+Array of Strings; read/write.
+    
+----
+
+.. _FontsObject.fontsDuplicateByPostScriptName:
+
+FontsObject.fontsDuplicateByPostScriptName
+*********************************************
+
+``app.fonts.fontsDuplicateByPostScriptName``
+
+.. note::
+   This functionality was added in After Effects (Beta) 24.4 and subject to change while it remains in Beta.
+
+**Description**
+
+It is perfectly legal and common for more than one :ref:`fontobject` to return the same value for :ref:`postScriptName<FontObject.postScriptName>` but as this can sometimes lead to confusion about what :ref:`fontobject` will actually be used when using :ref:`TextDocument.font` or the ``.font`` attribute of a :ref:`CharacterRange object<CharacterRange>`, this property exists to both reveal what duplicates exist and also their relative order.
+
+This an Array in which each element is an Array of :ref:`Font objects<FontObject>`, where the 0th element :ref:`fontobject` is considered the primary :ref:`fontobject` for the given PostScript name.
+
+**Type**
+
+Array of Arrays of :ref:`fontobject`; read-only.
+    
 ----
 
 .. _FontsObject.fontServerRevision:
@@ -134,6 +176,33 @@ Array of :ref:`Font objects<FontObject>`; read-only.
    var variableFontList = app.fonts.fontsWithDefaultDesignAxes;
    alert(variableFontList.length);
 
+----
+
+.. _FontsObject.freezeSyncSubstitutedFonts:
+
+FontsObject.freezeSyncSubstitutedFonts
+*********************************************
+
+``app.fonts.freezeSyncSubstitutedFonts``
+
+.. note::
+   This functionality was added in After Effects (Beta) 24.4 and subject to change while it remains in Beta.
+
+**Description**
+
+When a Project is opened and one or more fonts are not found in the local font environment, a *sync* process is initiated with Adobe Fonts to see if one or more Fonts could be activated and installed.
+
+By default this happens automatically—this property will disable it from happening.
+
+.. warning::
+   The rules for deciding if Adobe Fonts has a matching font is entirely based on the PostScript name. With some Variable Fonts, due to ambiguity about which font has which named instance, it is possible that more than one face (Regular/Italic) may be installed during an activation. Whether the installed font is a valid replacement is controlled by the :ref:`FontsObject.substitutedFontReplacementMatchPolicy`.
+
+**Type**
+
+Boolean; read/write. One of:
+
+   - ``false`` is the default—sync from Adobe Fonts may be attempted.
+   - ``true`` means that no sync or install will be attempted.
 
 ----
 
@@ -158,6 +227,55 @@ Array of :ref:`Font objects<fontobject>`; read-only.
 
 ----
 
+.. _FontsObject.mruFontFamilyList:
+
+FontsObject.mruFontFamilyList
+*****************************
+
+``app.fonts.mruFontFamilyList``
+
+.. note::
+   This functionality was added in After Effects (Beta) 24.4 and subject to change while it remains in Beta.
+
+**Description**
+
+Provides access to the Most Recently Used (MRU) list presented in the Character panel and Properties panel. To set the MRU simply provide an (unsorted) array of strings based on the :ref:`familyName <FontObject.familyName>`. To clear the list simply assign an empty Array.
+
+**Type**
+
+Array of Strings; read/write. 
+    
+----
+
+.. _FontsObject.substitutedFontReplacementMatchPolicy:
+
+FontsObject.substitutedFontReplacementMatchPolicy
+*************************************************
+
+``app.fonts.substitutedFontReplacementMatchPolicy``
+
+.. note::
+   This functionality was added in After Effects (Beta) 24.4 and subject to change while it remains in Beta.
+
+**Description**
+
+Controls the rules which are used to determine which fonts are considered matching for automatic replacement for a substituted :ref:`fontobject`.
+
+**Type**
+
+A ``SubstitutedFontReplacementMatchPolicy`` enumerated value; read/write. One of:
+    
+- ``SubstitutedFontReplacementMatchPolicy.POSTSCRIPT_NAME`` is the default; any :ref:`fontobject` which has the same PostScript name is a valid candidate for replacement of a substituted :ref:`fontobject`.
+- ``SubstitutedFontReplacementMatchPolicy.CTFI_EQUAL`` requires that the following properties of substituted :ref:`fontobject` must match to be considered a valid candidate:
+
+   - :ref:`postScriptName<FontObject.postScriptName>`
+   - :ref:`technology<FontObject.technology>`
+   - :ref:`writingScripts<FontObject.writingScripts>` (primary)
+   - :ref:`designVector<FontObject.designVector>`
+- ``SubstitutedFontReplacementMatchPolicy.DISABLED`` means that no :ref:`fontobject` is an acceptable replacement for a the substituted :ref:`fontobject`.
+
+----
+
 =======
 Methods
 =======
@@ -174,9 +292,9 @@ FontsObject.getFontByID()
 
 **Description**
 
-This function will return an instance of :ref:`Font object<fontobject>` based on the ID of a previously found Font. 
+This function will return an instance of :ref:`Font object<fontobject>` based on the ID of a previously found font. 
 
-If no matching Font is found, it will return undefined. This can occur with an unknown ID or if the original Font has been removed from the font environment.
+If no matching font is found, it will return undefined. This can occur with an unknown ID or if the original font has been removed from the font environment.
 
 .. code:: javascript
 
@@ -192,7 +310,7 @@ fontID                  A number containing the ID of the font.
 
 **Returns**
 
-:ref:`Font object<fontobject>`, or undefined if no Font by that ID.
+:ref:`Font object<fontobject>`, or undefined if no font by that ID.
 
 -----
 
@@ -205,7 +323,7 @@ FontsObject.getFontsByFamilyNameAndStyleName()
 
 **Description**
 
-This function will return an array of :ref:`fontobject` based on the Family Name and Style Name of a Font. If no suitable Font is found, it will return an empty Array.
+This function will return an array of :ref:`fontobject` based on the Family Name and Style Name of a font. If no suitable font is found, it will return an empty Array.
 
 .. note::
    The returned array length can be more than 1 if you have multiple copies of a same font.
@@ -243,7 +361,7 @@ It is perfectly valid to have multiple :ref:`Font objects<fontobject>` which sha
 
 In addition, there is a special property of this API with regards to Variable fonts. If no :ref:`fontobject` matching the requested PostScript exists, but we find that there exist a variable font which matches the requested PostScript name prefix, then this Variable font instance will be requested to create a matching :ref:`fontobject`. This is the only way that we will return an instance which did not exist prior to invoking this method.
 
-If no matching Font is found, it will return an empty Array.
+If no matching font is found, it will return an empty Array.
 
 .. code:: javascript
 
@@ -259,3 +377,37 @@ postscriptName          A string containing the PostScript Name of the font.
 **Returns**
 
 Array of :ref:`Font objects<fontobject>`; read-only.
+
+----
+
+.. _FontsObject.pollForAndPushNonSystemFontFoldersChanges:
+
+FontsObject.pollForAndPushNonSystemFontFoldersChanges()
+*******************************************************
+
+``app.fonts.pollForAndPushNonSystemFontFoldersChanges()``
+
+.. note::
+   This functionality was added in After Effects (Beta) 24.4 and subject to change while it remains in Beta.
+
+**Description**
+
+The addition and removal of font files in what is considered the *system font folders* is recognized and handled automatically without user intervention to update the font environment. Non-system font folders are not automatically handled and so additions and removal of font files in these folders are not recognized until the After Effects is restarted.
+
+This function will trigger a check against the known non-system font folders, and if it is recognized that there has been a change, an asynchronous update to the font environment will be scheduled to process this change.
+
+The non-system font folders After Effects knows about are here:
+
+.. code-block:: text
+
+   Windows: <systemDrive>:\Program Files\Common Files\Adobe\Fonts
+
+   Mac: /Library/Application Support/Adobe/Fonts
+
+**Returns**
+
+Boolean; One of:
+
+- ``false`` if no changes to the font environment are known.
+
+- ``true`` if a change in the font environment has been detected and an asynchronous update scheduled to deal with it. This state will be cleared once the update has been processed, at which time :ref:`FontsObject.fontServerRevision` will return an incremented value.
