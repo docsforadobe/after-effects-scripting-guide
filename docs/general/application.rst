@@ -850,7 +850,9 @@ app.purge()
 ``app.purge(target)``
 
 .. note::
-   This functionality was updated in After Effects 24.3 to allow the ALL_CACHES enumerated value to clear both the RAM and disk cache, with the ALL_MEMORY_CACHES enumerated value added to purge only the RAM.
+   | This functionality was updated in After Effects 24.3 to allow the ``ALL_CACHES`` enumerated value to clear both the RAM and disk cache, with the ALL_MEMORY_CACHES enumerated value added to purge only the RAM.
+   |
+   | In versions prior to 24.3, ``ALL_CACHES`` will only clear the RAM cache.
 
 **Description**
 
