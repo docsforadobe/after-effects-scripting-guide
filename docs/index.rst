@@ -42,6 +42,7 @@ Welcome to the After Effects Scripting Guide!
     layers/lightlayer
     layers/shapelayer
     layers/textlayer
+    layers/threedmodellayer
 
 .. toctree::
     :maxdepth: 1
