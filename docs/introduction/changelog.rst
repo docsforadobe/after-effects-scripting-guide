@@ -10,6 +10,11 @@ What's new and changed for scripting?
 
 .. _Changelog.24.4:
 
+`After Effects 24.4 Beta build 25 <https://community.adobe.com/t5/after-effects-beta-discussions/scripting-new-api-for-3d-model-layers/td-p/14580044>`_ (March 2024)
+********************************************************************************************************************************************************************************************
+
+	- Added: :ref:`ThreeDModelLayer`
+
 `After Effects 24.4 Beta build 24 <https://community.adobe.com/t5/after-effects-beta-discussions/scripting-new-and-updated-apis-for-font-management/td-p/14508673>`_ (March 2024)
 ********************************************************************************************************************************************************************************************
 
