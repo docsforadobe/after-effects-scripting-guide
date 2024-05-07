@@ -622,12 +622,12 @@ The name in the Essential Graphics panel is used for the file name of the Motion
 Use the ``motionGraphicsTemplateName`` attribute to set the name.
 
 Optionally specify the path to the folder where the Motion Graphics template file is saved. If not specified, the file will be saved in the current
-user's Essential Graphics folder:
+user's Motion Graphics Templates folder:
 
 .. code-block:: text
 
-   macOS: /Users/<name>/Library/Application Support/Adobe/Common/Essential Graphics/
-   Windows: C:\Users\<name>\AppData\Roaming\Adobe\Common\Essential Graphics\
+   macOS: /Users/<name>/Library/Application Support/Adobe/Common/Motion Graphics Templates/
+   Windows: C:\Users\<name>\AppData\Roaming\Adobe\Common\Motion Graphics Templates\
 
 If the project has been changed since the last time it was saved, After Effects will prompt the user to save the project. To avoid this, use the
 project ``save()`` method before exporting the Motion Graphics template.
@@ -635,7 +635,7 @@ project ``save()`` method before exporting the Motion Graphics template.
 **Parameters**
 
 =============================  =================================================================
-``doOverWriteFileIfExisting``  Whether to overwrite an exsiting file of the same name, boolean.
+``doOverWriteFileIfExisting``  Whether to overwrite an existing file of the same name, boolean.
                                Required.
 ``file_path``                  Path to the folder where the file will be saved. Optional.
 =============================  =================================================================
@@ -727,9 +727,9 @@ or:
 
 ==============  =============================================================
 ``otherLayer``  A Layer object in this composition. The ``relIndex`` value is
-                added to the index value of thislayer to findthe positionof
+                added to the index value of thislayer to find the position of
                 the desired layer.
-``relIndex``    The postion of the desired layer, relative to ``otherLayer``.
+``relIndex``    The position of the desired layer, relative to ``otherLayer``.
                 An integer in the range ``[1 – otherLayer.index...numLayers –
                 otherLayer.index]``, where ``numLayers`` is the number of
                 layers in the composition. This value is added to the
