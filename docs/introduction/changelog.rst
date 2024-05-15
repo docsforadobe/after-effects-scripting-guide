@@ -8,6 +8,14 @@ What's new and changed for scripting?
 
 ----
 
+.. _Changelog.24.5:
+
+`After Effects 24.5 Beta build 34 <https://community.adobe.com/t5/after-effects-beta-bugs/scripting-bug-in-v24-build-44-usedfonts-property-doesn-t-work-when-text-layer-is-duplicated/idc-p/14615580#M890>`_ (May 2024)
+***********************************************************************************************************************************************************************************************************************
+
+- Scripting methods and attributes added or changed
+	- Changed: :ref:`Project.usedFonts`
+
 .. _Changelog.24.4:
 
 `After Effects 24.4 Beta build 25 <https://community.adobe.com/t5/after-effects-beta-discussions/scripting-new-api-for-3d-model-layers/td-p/14580044>`_ (March 2024)
@@ -32,16 +40,23 @@ What's new and changed for scripting?
 	- Changed: :ref:`Project.replaceFont`
 	- Changed: :ref:`Project.usedFonts`
 
-`After Effects 24.3 Beta build 25 <https://community.adobe.com/t5/after-effects-beta-discussions/per-character-scripting-public-beta-announcement/m-p/14414997#M3325>`_ (February 2024)
+.. _Changelog.24.3:
+
+`After Effects 24.3 <https://helpx.adobe.com/after-effects/using/whats-new/2024-3.html>`_ (March 2024)
 ********************************************************************************************************************************************************************************************
 
-- Scripting methods and attributes added or changed
-	- Changed: :ref:`ParagraphRange object<ParagraphRange>` (all text attributes removed)
+- Scripting methods and attributes added
+	- Added: :ref:`CharacterRange object<CharacterRange>`
+	- Added: :ref:`ParagraphRange object<ParagraphRange>`
 	- Added: :ref:`ComposedLineRange object<ComposedLineRange>`
-	- Added: :ref:`ParagraphRange.characterRange`
+	- Added: :ref:`TextDocument.characterRange`
 	- Added: :ref:`TextDocument.composedLineCharacterIndexesAt`
 	- Added: :ref:`TextDocument.composedLineCount`
 	- Added: :ref:`TextDocument.composedLineRange`
+	- Added: :ref:`TextDocument.paragraphCharacterIndexesAt`
+	- Added: :ref:`TextDocument.paragraphCount`
+	- Added: :ref:`TextDocument.paragraphRange`
+	- Changed: :ref:`app.purge` - `PurgeTarget.ALL_CACHES` now includes the disk cache
 
 `After Effects 24.3 Beta build 20 <https://community.adobe.com/t5/after-effects-beta-discussions/new-text-box-options-available-in-scripting/m-p/14409110>`_ (February 2024)
 ********************************************************************************************************************************************************************************************
@@ -64,17 +79,6 @@ What's new and changed for scripting?
 	- Added: :ref:`FontsObject.fontServerRevision`
 	- Added: :ref:`FontsObject.getFontByID`
 	- Added: :ref:`FontObject.fontID`
-
-`After Effects 24.2 Beta build 17 <https://community.adobe.com/t5/after-effects-beta-discussions/per-character-scripting-public-beta-announcement/m-p/14247138>`_ (November 2023)
-********************************************************************************************************************************************************************************************
-
-- Scripting methods and attributes added
-	- Added: :ref:`CharacterRange object<CharacterRange>`
-	- Added: :ref:`ParagraphRange object<ParagraphRange>`
-	- Added: :ref:`TextDocument.characterRange`
-	- Added: :ref:`TextDocument.paragraphRange`
-	- Added: :ref:`TextDocument.paragraphCount`
-	- Added: :ref:`TextDocument.paragraphCharacterIndexesAt`
 
 .. _Changelog.24.0:
 

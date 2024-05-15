@@ -581,7 +581,7 @@ Project.usedFonts
 
 **Description**
 
-Returns an Array of Objects containing references to used fonts and the Text Layers and times on which they appear in the current :ref:`Project<Project>`. Each object is composed of ``font`` which is a :ref:`Font object<fontobject>`, and ``usedAt`` which is an Array of Objects, each composed of ``layerID``, a :ref:`Layer.id`, and ``timeD`` for when. See :ref:`Project.layerByID` to retrieve the layers.
+Returns an Array of Objects containing references to used fonts and the Text Layers and times on which they appear in the current :ref:`Project<Project>`. Each object is composed of ``font`` which is a :ref:`Font object<fontobject>`, and ``usedAt`` which is an Array of Objects, each composed of ``layerID``, a :ref:`Layer.id`, and ``layerTimeD`` for when. See :ref:`Project.layerByID` to retrieve the layers.
 
 .. code:: javascript
 
@@ -593,10 +593,15 @@ Returns an Array of Objects containing references to used fonts and the Text Lay
        var str = "[0]:" + font.postScriptName + "\n";
        for (var i = 0; i < usedAt.length; i++) {
             var layerID = usedAt[i].layerID;
-            var timeD  = usedAt[i].timeD;
+            // valueAtTime() for Source Text property is expecting timed
+            // to be in Layer Time instead of Comp Time, unlike any of
+            // the other properties. So we have adjusted the name returned
+            // by usedFonts to make this clear as we expect that is where
+            // it will be used next.
+            var layerTimeD  = usedAt[i].layerTimeD;
 
             var layer = app.project.layerByID(layerID);
-            str += "   Layer:'" + String(layer.property("Source Text").valueAtTime(timeD, false)) + "'\n";
+            str += "   Layer:'" + String(layer.property("Source Text").valueAtTime(layerTimeD, false)) + "'\n";
        }
        alert(str);
    }

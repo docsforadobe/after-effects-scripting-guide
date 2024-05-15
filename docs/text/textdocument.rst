@@ -1629,7 +1629,7 @@ TextDocument.characterRange()
 ``textDocument.characterRange(characterStart, [signedCharacterEnd])``
 
 .. note::
-   This functionality was added in After Effects (Beta) 24.2 and is subject to change while it remains in Beta.
+   This functionality was added in After Effects 24.3
 
 **Description**
 
@@ -1667,7 +1667,7 @@ TextDocument.composedLineCharacterIndexesAt()
 ``textDocument.composedLineCharacterIndexesAt(characterIndex)``
 
 .. note::
-   This functionality was added in After Effects (Beta) 24.3 and is subject to change while it remains in Beta.
+   This functionality was added in After Effects 24.3
 
 **Description**
 
@@ -1698,7 +1698,7 @@ TextDocument.composedLineRange()
 ``textDocument.composedLineRange(composedLineIndexStart, [signedComposedLineIndexEnd])``
 
 .. note::
-   This functionality was added in After Effects (Beta) 24.3 and is subject to change while it remains in Beta.
+   This functionality was added in After Effects 24.3
 
 **Description**
 
@@ -1735,7 +1735,7 @@ TextDocument.paragraphCharacterIndexesAt()
 ``textDocument.paragraphCharacterIndexesAt(characterIndex)``
 
 .. note::
-   This functionality was added in After Effects (Beta) 24.2 and is subject to change while it remains in Beta.
+   This functionality was added in After Effects 24.3
 
 **Description**
 
@@ -1763,7 +1763,7 @@ TextDocument.paragraphRange()
 ``textDocument.paragraphRange(paragraphIndexStart, [signedParagraphIndexEnd])``
 
 .. note::
-   This functionality was added in After Effects (Beta) 24.2 and is subject to change while it remains in Beta.
+   This functionality was added in After Effects 24.3
 
 **Description**
 

@@ -6,7 +6,7 @@ ComposedLineRange object
 |  ``app.project.item(index).layer(index).text.sourceText.value.composedLineRange(composedLineIndexStart, [signedComposedLineIndexEnd])``
 
 .. note::
-   This functionality was added in After Effects (Beta) 24.3 and is subject to change while it remains in Beta.
+   This functionality was added in After Effects 24.3
 
 **Description**
 
