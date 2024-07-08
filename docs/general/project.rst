@@ -577,7 +577,7 @@ Project.usedFonts
 ``app.project.usedFonts``
 
 .. note::
-   This functionality was added in After Effects (Beta) 24.0 and subject to change while it remains in Beta.
+   This functionality was added in After Effects 24.5
 
 **Description**
 
@@ -1031,7 +1031,7 @@ Project.replaceFont()
 ``app.project.replaceFont(fromFont, toFont, [noFontLocking = false])``
 
 .. note::
-   This functionality was added in After Effects (Beta) 24.0 and subject to change while it remains in Beta.
+   This functionality was added in After Effects 24.5
 
 **Description**
 

@@ -10,11 +10,12 @@ What's new and changed for scripting?
 
 .. _Changelog.24.5:
 
-`After Effects 24.5 Beta build 34 <https://community.adobe.com/t5/after-effects-beta-bugs/scripting-bug-in-v24-build-44-usedfonts-property-doesn-t-work-when-text-layer-is-duplicated/idc-p/14615580#M890>`_ (May 2024)
-***********************************************************************************************************************************************************************************************************************
+`After Effects 24.5 <https://helpx.adobe.com/after-effects/using/whats-new/2024-5.html>`_ (May 2024)
+********************************************************************************************************************************************************************************************
 
-- Scripting methods and attributes added or changed
-	- Changed: :ref:`Project.usedFonts`
+- Scripting methods and attributes added
+	- Added: :ref:`Project.replaceFont`
+	- Added: :ref:`Project.usedFonts`
 
 .. _Changelog.24.4:
 
@@ -32,13 +33,6 @@ What's new and changed for scripting?
 	- Added: :ref:`FontsObject.mruFontFamilyList`
 	- Added: :ref:`FontsObject.substitutedFontReplacementMatchPolicy`
 	- Added: :ref:`FontsObject.pollForAndPushNonSystemFontFoldersChanges`
-
-`After Effects 24.4 Beta build 6 <https://community.adobe.com/t5/after-effects-beta-discussions/heads-up-revisions-fix-to-missing-font-replacement-behavior/td-p/14466683>`_ (March 2024)
-********************************************************************************************************************************************************************************************
-
-- Scripting methods and attributes added or changed
-	- Changed: :ref:`Project.replaceFont`
-	- Changed: :ref:`Project.usedFonts`
 
 .. _Changelog.24.3:
 
@@ -81,13 +75,6 @@ What's new and changed for scripting?
 	- Added: :ref:`FontObject.fontID`
 
 .. _Changelog.24.0:
-
-`After Effects 24.0 Beta build 37 <https://community.adobe.com/t5/after-effects-beta-discussions/new-text-scripting-hooks-for-font-replacement/m-p/14025889>`_ (August 2023)
-********************************************************************************************************************************************************************************************
-
-- Scripting methods and attributes added
-	- Added: :ref:`Project.usedFonts`
-	- Added: :ref:`Project.replaceFont`
 
 `After Effects 24.0 <https://helpx.adobe.com/after-effects/using/whats-new/2024.html>`_ (October 2023)
 ********************************************************************************************************************************************************************************************
