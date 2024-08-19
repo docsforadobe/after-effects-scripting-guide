@@ -244,6 +244,41 @@ String; read/write.
 Methods
 =======
 
+.. _CharacterRange.pasteFrom:
+
+CharacterRange.pasteFrom()
+*********************************************
+
+``CharacterRange.pasteFrom(characterRange)``
+
+.. note::
+   This functionality was added in After Effects (Beta) 25.0 and is subject to change while it remains in Beta.
+
+**Description**
+
+Copies, using paste semantics, from the ``characterRange`` parameter to the callee :ref:`CharacterRange`. The two instances may be the same, and the spans may be different.
+
+Checks will be made that both :ref:`CharacterRange` instances are valid.
+
+The internal steps of the operation are:
+
+ - Delete the text from the target instance.
+ - Paste the text from the source instance.
+
+As the span of the :ref:`CharacterRange` is not adjusted by this call, when the source :ref:`CharacterRange` instance has a shorter span than the target :ref:`CharacterRange` instance, the target instance may become invalid.
+
+**Parameters**
+
+===================  =============================================================================================================
+``characterRange``    A :ref:`CharacterRange` whose text and styling will be pasted in place of the callee :ref:`CharacterRange`.
+===================  =============================================================================================================
+
+**Returns**
+
+None.
+
+----
+
 .. _CharacterRange.toString:
 
 CharacterRange.toString()
@@ -263,4 +298,4 @@ None.
 
 **Returns**
 
-String;
+String; read-only.

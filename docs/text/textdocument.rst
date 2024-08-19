@@ -124,7 +124,7 @@ TextDocument.autoHyphenate
 ``textDocument.autoHyphenate``
 
 .. note::
-   This functionality was added in After Effects 24.0.
+   This functionality was added in After Effects 24.0
 
 **Description**
 
@@ -173,7 +173,7 @@ TextDocument.autoKernType
 ``textDocument.autoKernType``
 
 .. note::
-   This functionality was added in After Effects 24.0.
+   This functionality was added in After Effects 24.0
 
 **Description**
 
@@ -201,7 +201,7 @@ TextDocument.baselineDirection
 ``textDocument.baselineDirection``
 
 .. note::
-   This functionality was added in After Effects 24.0.
+   This functionality was added in After Effects 24.0
 
 **Description**
 
@@ -294,7 +294,7 @@ TextDocument.boxAutoFitPolicy
 ``textDocument.boxAutoFitPolicy``
 
 .. note::
-   This functionality was added in After Effects (Beta) 24.3 and subject to change while it remains in Beta.
+   This functionality was added in After Effects (Beta) 24.3 and is subject to change while it remains in Beta.
 
 **Description**
 
@@ -324,7 +324,7 @@ TextDocument.boxFirstBaselineAlignment
 ``textDocument.boxFirstBaselineAlignment``
 
 .. note::
-   This functionality was added in After Effects (Beta) 24.3 and subject to change while it remains in Beta.
+   This functionality was added in After Effects (Beta) 24.3 and is subject to change while it remains in Beta.
 
 **Description**
 
@@ -358,7 +358,7 @@ TextDocument.boxFirstBaselineAlignmentMinimum
 ``textDocument.boxFirstBaselineAlignmentMinimum``
 
 .. note::
-   This functionality was added in After Effects (Beta) 24.3 and subject to change while it remains in Beta.
+   This functionality was added in After Effects (Beta) 24.3 and is subject to change while it remains in Beta.
 
 **Description**
 
@@ -382,7 +382,7 @@ TextDocument.boxInsetSpacing
 ``textDocument.boxInsetSpacing``
 
 .. note::
-   This functionality was added in After Effects (Beta) 24.3 and subject to change while it remains in Beta.
+   This functionality was added in After Effects (Beta) 24.3 and is subject to change while it remains in Beta.
 
 **Description**
 
@@ -404,7 +404,7 @@ TextDocument.boxOverflow
 ``textDocument.boxOverflow``
 
 .. note::
-   This functionality was added in After Effects (Beta) 24.3 and subject to change while it remains in Beta.
+   This functionality was added in After Effects (Beta) 24.3 and is subject to change while it remains in Beta.
 
 **Description**
 
@@ -493,7 +493,7 @@ TextDocument.boxVerticalAlignment
 ``textDocument.boxVerticalAlignment``
 
 .. note::
-   This functionality was added in After Effects (Beta) 24.3 and subject to change while it remains in Beta.
+   This functionality was added in After Effects (Beta) 24.3 and is subject to change while it remains in Beta.
 
 **Description**
 
@@ -543,7 +543,7 @@ TextDocument.composerEngine
 ``textDocument.composerEngine``
 
 .. note::
-   This functionality was added in After Effects 24.0.
+   This functionality was added in After Effects 24.0
 
 **Description**
 
@@ -576,7 +576,7 @@ TextDocument.digitSet
 ``textDocument.digitSet``
 
 .. note::
-   This functionality was added in After Effects 24.0.
+   This functionality was added in After Effects 24.0
 
 **Description**
 
@@ -606,7 +606,7 @@ TextDocument.direction
 ``textDocument.direction``
 
 .. note::
-   This functionality was added in After Effects 24.0.
+   This functionality was added in After Effects 24.0
 
 **Description**
 
@@ -635,7 +635,7 @@ TextDocument.endIndent
 ``textDocument.endIndent``
 
 .. note::
-   This functionality was added in After Effects 24.0.
+   This functionality was added in After Effects 24.0
 
 **Description**
 
@@ -661,7 +661,7 @@ TextDocument.everyLineComposer
 ``textDocument.everyLineComposer``
 
 .. note::
-   This functionality was added in After Effects 24.0.
+   This functionality was added in After Effects 24.0
 
 **Description**
 
@@ -688,7 +688,7 @@ TextDocument.fauxBold
 
 .. note::
    | The read functionality was added in After Effects 13.2 (CC 2014.2).
-   | The write functionality was added in After Effects 24.0.
+   | The write functionality was added in After Effects 24.0
 
 **Description**
 
@@ -719,7 +719,7 @@ TextDocument.fauxItalic
 
 .. note::
    | The read functionality was added in After Effects 13.2 (CC 2014.2).
-   | The write functionality was added in After Effects 24.0.
+   | The write functionality was added in After Effects 24.0
 
 **Description**
 
@@ -768,7 +768,7 @@ TextDocument.firstLineIndent
 ``textDocument.firstLineIndent``
 
 .. note::
-   This functionality was added in After Effects 24.0.
+   This functionality was added in After Effects 24.0
 
 **Description**
 
@@ -820,7 +820,7 @@ TextDocument.fontBaselineOption
 ``textDocument.fontBaselineOption``
 
 .. note::
-   This functionality was added in After Effects 24.0.
+   This functionality was added in After Effects 24.0
 
 **Description**
 
@@ -848,7 +848,7 @@ TextDocument.fontCapsOption
 ``textDocument.fontCapsOption``
 
 .. note::
-   This functionality was added in After Effects 24.0.
+   This functionality was added in After Effects 24.0
 
 **Description**
 
@@ -926,7 +926,7 @@ TextDocument.fontObject
 ``textDocument.fontObject``
 
 .. note::
-   This functionality was added in After Effects 24.0.
+   This functionality was added in After Effects 24.0
 
 **Description**
 
@@ -993,7 +993,7 @@ TextDocument.hangingRoman
 ``textDocument.hangingRoman``
 
 .. note::
-   This functionality was added in After Effects 24.0.
+   This functionality was added in After Effects 24.0
 
 **Description**
 
@@ -1083,7 +1083,7 @@ TextDocument.kerning
 ``textDocument.kerning``
 
 .. note::
-   This functionality was added in After Effects 24.0.
+   This functionality was added in After Effects 24.0
 
 **Description**
 
@@ -1154,7 +1154,7 @@ TextDocument.leadingType
 ``textDocument.leadingType``
 
 .. note::
-   This functionality was added in After Effects 24.0.
+   This functionality was added in After Effects 24.0
 
 **Description**
 
@@ -1183,7 +1183,7 @@ TextDocument.ligature
 ``textDocument.ligature``
 
 .. note::
-   This functionality was added in After Effects 24.0.
+   This functionality was added in After Effects 24.0
 
 **Description**
 
@@ -1207,7 +1207,7 @@ TextDocument.lineJoinType
 ``textDocument.lineJoinType``
 
 .. note::
-   This functionality was added in After Effects 24.0.
+   This functionality was added in After Effects 24.0
 
 **Description**
 
@@ -1235,7 +1235,7 @@ TextDocument.lineOrientation
 ``textDocument.lineOrientation``
 
 .. note::
-   This functionality was added in After Effects 24.2.
+   This functionality was added in After Effects 24.2
 
 **Description**
 
@@ -1260,7 +1260,7 @@ TextDocument.noBreak
 ``textDocument.noBreak``
 
 .. note::
-   This functionality was added in After Effects 24.0.
+   This functionality was added in After Effects 24.0
 
 **Description**
 
@@ -1341,7 +1341,7 @@ TextDocument.spaceAfter
 ``textDocument.spaceAfter``
 
 .. note::
-   This functionality was added in After Effects 24.0.
+   This functionality was added in After Effects 24.0
 
 **Description**
 
@@ -1367,7 +1367,7 @@ TextDocument.spaceBefore
 ``textDocument.spaceBefore``
 
 .. note::
-   This functionality was added in After Effects 24.0.
+   This functionality was added in After Effects 24.0
 
 **Description**
 
@@ -1393,7 +1393,7 @@ TextDocument.startIndent
 ``textDocument.startIndent``
 
 .. note::
-   This functionality was added in After Effects 24.0.
+   This functionality was added in After Effects 24.0
 
 **Description**
 

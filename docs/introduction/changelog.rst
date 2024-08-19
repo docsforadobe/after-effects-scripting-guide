@@ -8,6 +8,19 @@ What's new and changed for scripting?
 
 ----
 
+.. _Changelog.25.0:
+
+`After Effects 25.0 Beta build 26 <https://community.adobe.com/t5/after-effects-beta-discussions/new-in-ae-25-0-build-25-scripting-hooks-for-font-fallback-management/m-p/14809794>`_ (August 2024)
+***************************************************************************************************************************************************************************************************
+
+- Scripting methods and attributes added
+	- Added: :ref:`CharacterRange.pasteFrom`
+	- Added: :ref:`FontObject.hasGlyphsFor`
+	- Added: :ref:`FontObject.otherFontsWithSameDict`
+	- Added: :ref:`FontsObject.getCTScriptForString`
+	- Added: :ref:`FontsObject.getDefaultFontForCTScript`
+	- Added: :ref:`FontsObject.setDefaultFontForCTScript`
+
 .. _Changelog.24.5:
 
 `After Effects 24.5 <https://helpx.adobe.com/after-effects/using/whats-new/2024-5.html>`_ (May 2024)

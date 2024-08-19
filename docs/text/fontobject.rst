@@ -5,7 +5,7 @@ Font object
 ################################################
 
 .. note::
-   This functionality was added in After Effects 24.0.
+   This functionality was added in After Effects 24.0
 
 **Description**
 
@@ -122,7 +122,7 @@ FontObject.fontID
 ``app.fonts.allFonts[0][0].fontID``
 
 .. note::
-   This functionality was added in After Effects 24.2.
+   This functionality was added in After Effects 24.2
 
 **Description**
 
@@ -395,7 +395,7 @@ The supported character sets of the font.
 
 **Type**
 
-An array of ``CTScript`` enumerated value; read-only. One or more of:
+An array of ``CTScript`` enumerated values; read-only. One or more of:
 
 -  ``CTScript.CT_ROMAN_SCRIPT``
 -  ``CTScript.CT_JAPANESE_SCRIPT``
@@ -491,6 +491,36 @@ An array of ``CTScript`` enumerated value; read-only. One or more of:
 Methods
 =======
 
+.. _FontObject.hasGlyphsFor:
+
+FontObject.hasGlyphsFor()
+*********************************************
+
+``app.fonts.allFonts[0][0].hasGlyphsFor(charString)``
+
+.. note::
+   This functionality was added in After Effects (Beta) 25.0 and is subject to change while it remains in Beta.
+
+**Description**
+
+Fonts do not contain glyphs for all possible ranges of Unicode and this method gives the caller the opportunity to query the Font about support for one or more characters.
+
+Returns ``true`` if the font has a glyph for every character in the ``charString``. 
+
+The character order does not matter, and in the case of a parameter string with more than one character, it is not possible though this API to determine which character had no glyph support.
+
+**Parameters**
+
+================  =================================================================================================
+ ``charString``    A string with any number of characters that will be checked for support in the :ref:FontObject.
+================  =================================================================================================
+
+**Returns**
+
+Boolean.
+
+----
+
 .. _FontObject.hasSameDict:
 
 FontObject.hasSameDict()
@@ -500,20 +530,48 @@ FontObject.hasSameDict()
 
 **Description**
 
-This function will true if the :ref:`FontObject` passed as an argument shares the same variable font dictionnary as the :ref:`FontObject` the function is called on.
+This function will true if the :ref:`FontObject` passed as an argument shares the same variable font dictionary as the :ref:`FontObject` the function is called on.
 
 .. note::
   Can only return true when called on a variable :ref:`FontObject` with the argument also being a :ref:`FontObject` of a variable font.
 
 **Parameters**
 
-====================  ========================================================
-fontObject            A :ref:`FontObject`
-====================  ========================================================
+================  =====================
+ ``fontObject``    A :ref:`FontObject`
+================  =====================
 
 **Returns**
 
-A Boolean.
+Boolean.
+
+----
+
+.. _FontObject.otherFontsWithSameDict:
+
+FontObject.otherFontsWithSameDict()
+**********************************************
+
+``app.fonts.fontsWithDefaultDesignAxes[0].otherFontsWithSameDict(fontObject)``
+
+.. note::
+   This functionality was added in After Effects (Beta) 25.0 and is subject to change while it remains in Beta.
+
+**Description**
+
+Given an :ref:`FontObject` passed as an argument, returns an Array of :ref:`FontObject` instances which share the same font dictionary as the :ref:`FontObject` the function is called on.
+
+Will return an empty Array if the argument is not a Variable font, or the Variable font only has one instance (the parameter one).
+
+**Parameters**
+
+================  =====================
+ ``fontObject``    A :ref:`FontObject`
+================  =====================
+
+**Returns**
+
+Array of :ref:`Font objects<fontobject>`, may be empty.
 
 ----
 

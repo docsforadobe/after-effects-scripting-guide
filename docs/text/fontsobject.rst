@@ -7,7 +7,7 @@ Fonts object
 ``app.fonts``
 
 .. note::
-   This functionality was added in After Effects 24.0.
+   This functionality was added in After Effects 24.0
 
 **Description**
 
@@ -89,7 +89,7 @@ FontsObject.favoriteFontFamilyList
 ``app.fonts.favoriteFontFamilyList``
 
 .. note::
-   This functionality was added in After Effects (Beta) 24.4 and subject to change while it remains in Beta.
+   This functionality was added in After Effects (Beta) 24.4 and is subject to change while it remains in Beta.
 
 **Description**
 
@@ -109,7 +109,7 @@ FontsObject.fontsDuplicateByPostScriptName
 ``app.fonts.fontsDuplicateByPostScriptName``
 
 .. note::
-   This functionality was added in After Effects (Beta) 24.4 and subject to change while it remains in Beta.
+   This functionality was added in After Effects (Beta) 24.4 and is subject to change while it remains in Beta.
 
 **Description**
 
@@ -131,7 +131,7 @@ FontsObject.fontServerRevision
 ``app.fonts.fontServerRevision``
 
 .. note::
-   This functionality was added in After Effects 24.2.
+   This functionality was added in After Effects 24.2
 
 **Description**
 
@@ -186,7 +186,7 @@ FontsObject.freezeSyncSubstitutedFonts
 ``app.fonts.freezeSyncSubstitutedFonts``
 
 .. note::
-   This functionality was added in After Effects (Beta) 24.4 and subject to change while it remains in Beta.
+   This functionality was added in After Effects (Beta) 24.4 and is subject to change while it remains in Beta.
 
 **Description**
 
@@ -235,7 +235,7 @@ FontsObject.mruFontFamilyList
 ``app.fonts.mruFontFamilyList``
 
 .. note::
-   This functionality was added in After Effects (Beta) 24.4 and subject to change while it remains in Beta.
+   This functionality was added in After Effects (Beta) 24.4 and is subject to change while it remains in Beta.
 
 **Description**
 
@@ -255,7 +255,7 @@ FontsObject.substitutedFontReplacementMatchPolicy
 ``app.fonts.substitutedFontReplacementMatchPolicy``
 
 .. note::
-   This functionality was added in After Effects (Beta) 24.4 and subject to change while it remains in Beta.
+   This functionality was added in After Effects (Beta) 24.4 and is subject to change while it remains in Beta.
 
 **Description**
 
@@ -280,6 +280,89 @@ A ``SubstitutedFontReplacementMatchPolicy`` enumerated value; read/write. One of
 Methods
 =======
 
+.. _FontsObject.getCTScriptForString:
+
+FontsObject.getCTScriptForString()
+*********************************************
+
+``app.fonts.getCTScriptForString(charString, preferredCTScript)``
+
+.. note::
+   This functionality was added in After Effects (Beta) 25.0 and is subject to change while it remains in Beta.
+
+**Description**
+
+This function will return an array of generic objects describing the number of characters in the range and the ``CTScript`` enum assigned to them. See :ref:`FontObject.writingScripts` for a full list of ``CTScript`` enumerated values.
+
+If a character is deemed to be included in one or more ``CTScript`` values, the value specfied in the second argument ``preferredCTScript`` will break the tie.
+
+.. code:: javascript
+
+   var scriptsV = app.fonts.getCTScriptForString("ABヂ", CTScript.CT_ROMAN_SCRIPT);
+   var str = "[0] chars:" + scriptsV[0].chars +   // 2
+             " ctScript:" + getEnumAsString(scriptsV[0].ctScript) +
+             "\n[1] chars:" + scriptsV[1].chars + // 1
+             " ctScript:" + getEnumAsString(scriptsV[1].ctScript);
+   alert(str);
+
+**Parameters**
+
+=============================== ========================================================
+ ``charString``                  String; if empty, will return an empty array.
+ ``preferredCTScript``           A ``CTScript`` enumerated value.
+=============================== ========================================================
+
+**Returns**
+
+Array of generic objects;
+
+ - Key ``chars`` will be set to number of characters the in the range.
+ - Key ``ctScript`` will be set to the ``CTScript`` which applies to the characters in the range.
+
+---
+
+.. _FontsObject.getDefaultFontForCTScript:
+
+FontsObject.getDefaultFontForCTScript()
+*********************************************
+
+``app.fonts.getDefaultFontForCTScript(ctScript)``
+
+.. note::
+   This functionality was added in After Effects (Beta) 25.0 and is subject to change while it remains in Beta.
+
+**Description**
+
+This function will return an instance of :ref:`Font object<fontobject>` mapped as the default font based on ``CTScript``.
+
+After Effects uses these mappings when typing or applying a font where it finds
+that the font does not contain a glyph for the character.
+In this situation it will attempt to map the character to a ``CTScript`` value
+and then use this default mapping to select an alternate font which may have a
+glyph for the character.
+
+This mechanism is also used with text and fonts in Scripting thus providing a way
+to expose which fonts will be used for which ``CTScript`` values.
+
+There is no guarantee that what is returned will support all, or even any, of the
+Unicode characters mapped to the ``CTScript``.
+
+.. code:: javascript
+
+   var font = app.fonts.getDefaultFontForCTScript(CTScript.CT_JAPANESE_SCRIPT);
+
+**Parameters**
+
+====================  ======================================================================================
+ ``ctScript``          A member of the ``CTScript`` enum (see list :ref:`here<FontObject.writingScripts>`).
+====================  ======================================================================================
+
+**Returns**
+
+:ref:`Font object<fontobject>`
+
+-----
+
 .. _FontsObject.getFontByID:
 
 FontsObject.getFontByID()
@@ -288,7 +371,7 @@ FontsObject.getFontByID()
 ``app.fonts.getFontByID(fontID)``
 
 .. note::
-   This functionality was added in After Effects 24.2.
+   This functionality was added in After Effects 24.2
 
 **Description**
 
@@ -388,7 +471,7 @@ FontsObject.pollForAndPushNonSystemFontFoldersChanges()
 ``app.fonts.pollForAndPushNonSystemFontFoldersChanges()``
 
 .. note::
-   This functionality was added in After Effects (Beta) 24.4 and subject to change while it remains in Beta.
+   This functionality was added in After Effects (Beta) 24.4 and is subject to change while it remains in Beta.
 
 **Description**
 
@@ -411,3 +494,60 @@ Boolean; One of:
 - ``false`` if no changes to the font environment are known.
 
 - ``true`` if a change in the font environment has been detected and an asynchronous update scheduled to deal with it. This state will be cleared once the update has been processed, at which time :ref:`FontsObject.fontServerRevision` will return an incremented value.
+
+---
+
+.. _FontsObject.setDefaultFontForCTScript:
+
+FontsObject.setDefaultFontForCTScript()
+*********************************************
+
+``app.fonts.setDefaultFontForCTScript(ctScript, font)``
+
+.. note::
+   This functionality was added in After Effects (Beta) 25.0 and is subject to change while it remains in Beta.
+
+**Description**
+
+This function will set an instance of :ref:`Font object<fontobject>` mapped based on ``CTScript`` parameter.
+
+After Effects uses these mappings when typing or applying a font where it finds
+that the font does not contain a glyph for a given character.
+In this situation it will attempt to map the character to a ``CTScript`` value
+and then use this default mapping to select an alternate font which may have a glyph
+for the character.
+
+Variable fonts are not acceptable as defaults and will result in an exception being thrown.
+
+There is no requirement that the specfied font has glyphs for any or all of the characters
+mapped to the ``CTScript``.
+
+
+
+This mechanism is also used with text and fonts in Scripting thus providing a way
+to expose which fonts will be used for which ``CTScript`` values (see :ref:`FontsObject.getDefaultFontForCTScript`).
+
+The font assigned to the ``CTScript.CT_ROMAN_SCRIPT`` is the one which is used to re-initialize the Character Panel after resetting the character style.
+
+To reset the default for a specific ``CTScript`` back to the value it had at App launch, simply pass in ``null``.
+
+.. code:: javascript
+
+   var font = app.fonts.getFontsByPostScriptName("MyriadPro-Regular")[0];
+   var ret = app.fonts.setDefaultFontForCTScript(CTScript.CT_ROMAN_SCRIPT, font);
+   alert("set:" + ret);
+
+**Parameters**
+
+====================  ==========================================================================================
+ ``ctScript``          A member of the ``CTScript`` enum (see list :ref:`here<FontObject.writingScripts>`).
+ ``font``              :ref:`Font object<fontobject>` to be mapped. If ``null``, then current mapping is reset.
+====================  ==========================================================================================
+
+**Returns**
+
+Boolean; One of:
+
+- ``false`` if the specfied mapping is the same the current one.
+
+- ``true`` if the specified mapping is different from the current one.
