@@ -294,7 +294,7 @@ TextDocument.boxAutoFitPolicy
 ``textDocument.boxAutoFitPolicy``
 
 .. note::
-   This functionality was added in After Effects (Beta) 24.3 and is subject to change while it remains in Beta.
+   This functionality was added in After Effects 24.6
 
 **Description**
 
@@ -303,7 +303,7 @@ The box only grows down.
 
 Defaults to ``BoxAutoFitPolicy.NONE``.
 
-Will be disabled if :ref:`TextDocument.boxVerticalAlignment` is anything other than ``boxVerticalAlignment.TOP``.
+Will be disabled if :ref:`TextDocument.boxVerticalAlignment` is anything other than ``BoxVerticalAlignment.TOP``.
 
 **Type**
 
@@ -324,7 +324,7 @@ TextDocument.boxFirstBaselineAlignment
 ``textDocument.boxFirstBaselineAlignment``
 
 .. note::
-   This functionality was added in After Effects (Beta) 24.3 and is subject to change while it remains in Beta.
+   This functionality was added in After Effects 24.6
 
 **Description**
 
@@ -358,7 +358,7 @@ TextDocument.boxFirstBaselineAlignmentMinimum
 ``textDocument.boxFirstBaselineAlignmentMinimum``
 
 .. note::
-   This functionality was added in After Effects (Beta) 24.3 and is subject to change while it remains in Beta.
+   This functionality was added in After Effects 24.6
 
 **Description**
 
@@ -382,7 +382,7 @@ TextDocument.boxInsetSpacing
 ``textDocument.boxInsetSpacing``
 
 .. note::
-   This functionality was added in After Effects (Beta) 24.3 and is subject to change while it remains in Beta.
+   This functionality was added in After Effects 24.6
 
 **Description**
 
@@ -404,7 +404,7 @@ TextDocument.boxOverflow
 ``textDocument.boxOverflow``
 
 .. note::
-   This functionality was added in After Effects (Beta) 24.3 and is subject to change while it remains in Beta.
+   This functionality was added in After Effects 24.6
 
 **Description**
 
@@ -493,7 +493,7 @@ TextDocument.boxVerticalAlignment
 ``textDocument.boxVerticalAlignment``
 
 .. note::
-   This functionality was added in After Effects (Beta) 24.3 and is subject to change while it remains in Beta.
+   This functionality was added in After Effects 24.6
 
 **Description**
 

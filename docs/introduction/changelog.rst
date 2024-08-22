@@ -21,6 +21,23 @@ What's new and changed for scripting?
 	- Added: :ref:`FontsObject.getDefaultFontForCTScript`
 	- Added: :ref:`FontsObject.setDefaultFontForCTScript`
 
+`After Effects 24.6 <https://helpx.adobe.com/after-effects/using/whats-new/2024-6.html>`_ (August 2024)
+********************************************************************************************************************************************************************************************
+
+- Scripting methods and attributes added
+	- Added: :ref:`FontsObject.favoriteFontFamilyList`
+	- Added: :ref:`FontsObject.fontsDuplicateByPostScriptName`
+	- Added: :ref:`FontsObject.freezeSyncSubstitutedFonts`
+	- Added: :ref:`FontsObject.mruFontFamilyList`
+	- Added: :ref:`FontsObject.substitutedFontReplacementMatchPolicy`
+	- Added: :ref:`FontsObject.pollForAndPushNonSystemFontFoldersChanges`
+	- Added: :ref:`TextDocument.boxAutoFitPolicy`
+	- Added: :ref:`TextDocument.boxFirstBaselineAlignment`
+	- Added: :ref:`TextDocument.boxFirstBaselineAlignmentMinimum`
+	- Added: :ref:`TextDocument.boxInsetSpacing`
+	- Added: :ref:`TextDocument.boxOverflow`
+	- Added: :ref:`TextDocument.boxVerticalAlignment`
+
 .. _Changelog.24.5:
 
 `After Effects 24.5 <https://helpx.adobe.com/after-effects/using/whats-new/2024-5.html>`_ (May 2024)
@@ -36,16 +53,6 @@ What's new and changed for scripting?
 ********************************************************************************************************************************************************************************************
 
 	- Added: :ref:`ThreeDModelLayer`
-
-`After Effects 24.4 Beta build 24 <https://community.adobe.com/t5/after-effects-beta-discussions/scripting-new-and-updated-apis-for-font-management/td-p/14508673>`_ (March 2024)
-********************************************************************************************************************************************************************************************
-
-	- Added: :ref:`FontsObject.favoriteFontFamilyList`
-	- Added: :ref:`FontsObject.fontsDuplicateByPostScriptName`
-	- Added: :ref:`FontsObject.freezeSyncSubstitutedFonts`
-	- Added: :ref:`FontsObject.mruFontFamilyList`
-	- Added: :ref:`FontsObject.substitutedFontReplacementMatchPolicy`
-	- Added: :ref:`FontsObject.pollForAndPushNonSystemFontFoldersChanges`
 
 .. _Changelog.24.3:
 
@@ -64,17 +71,6 @@ What's new and changed for scripting?
 	- Added: :ref:`TextDocument.paragraphCount`
 	- Added: :ref:`TextDocument.paragraphRange`
 	- Changed: :ref:`app.purge` - `PurgeTarget.ALL_CACHES` now includes the disk cache
-
-`After Effects 24.3 Beta build 20 <https://community.adobe.com/t5/after-effects-beta-discussions/new-text-box-options-available-in-scripting/m-p/14409110>`_ (February 2024)
-********************************************************************************************************************************************************************************************
-
-- Scripting methods and attributes added or changed
-	- Added: :ref:`TextDocument.boxAutoFitPolicy`
-	- Added: :ref:`TextDocument.boxFirstBaselineAlignment`
-	- Added: :ref:`TextDocument.boxFirstBaselineAlignmentMinimum`
-	- Added: :ref:`TextDocument.boxInsetSpacing`
-	- Added: :ref:`TextDocument.boxOverflow`
-	- Added: :ref:`TextDocument.boxVerticalAlignment`
 
 `After Effects 24.2 <https://helpx.adobe.com/after-effects/using/whats-new/2024-2.html>`_ (February 2024)
 ********************************************************************************************************************************************************************************************

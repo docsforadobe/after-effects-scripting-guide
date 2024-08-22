@@ -89,7 +89,7 @@ FontsObject.favoriteFontFamilyList
 ``app.fonts.favoriteFontFamilyList``
 
 .. note::
-   This functionality was added in After Effects (Beta) 24.4 and is subject to change while it remains in Beta.
+   This functionality was added in After Effects 24.6
 
 **Description**
 
@@ -109,17 +109,17 @@ FontsObject.fontsDuplicateByPostScriptName
 ``app.fonts.fontsDuplicateByPostScriptName``
 
 .. note::
-   This functionality was added in After Effects (Beta) 24.4 and is subject to change while it remains in Beta.
+   This functionality was added in After Effects 24.6
 
 **Description**
 
 It is perfectly legal and common for more than one :ref:`fontobject` to return the same value for :ref:`postScriptName<FontObject.postScriptName>` but as this can sometimes lead to confusion about what :ref:`fontobject` will actually be used when using :ref:`TextDocument.font` or the ``.font`` attribute of a :ref:`CharacterRange object<CharacterRange>`, this property exists to both reveal what duplicates exist and also their relative order.
 
-This an Array in which each element is an Array of :ref:`Font objects<FontObject>`, where the 0th element :ref:`fontobject` is considered the primary :ref:`fontobject` for the given PostScript name.
+This returns an Array in which each element is an Array of :ref:`Font objects<FontObject>`, where the 0th element :ref:`fontobject` is considered the primary :ref:`fontobject` for the given PostScript name.
 
 **Type**
 
-Array of Arrays of :ref:`fontobject`; read-only.
+Array of Arrays of :ref:`Font Objects<fontobject>`; read-only.
     
 ----
 
@@ -186,7 +186,7 @@ FontsObject.freezeSyncSubstitutedFonts
 ``app.fonts.freezeSyncSubstitutedFonts``
 
 .. note::
-   This functionality was added in After Effects (Beta) 24.4 and is subject to change while it remains in Beta.
+   This functionality was added in After Effects 24.6
 
 **Description**
 
@@ -235,7 +235,7 @@ FontsObject.mruFontFamilyList
 ``app.fonts.mruFontFamilyList``
 
 .. note::
-   This functionality was added in After Effects (Beta) 24.4 and is subject to change while it remains in Beta.
+   This functionality was added in After Effects 24.6
 
 **Description**
 
@@ -255,7 +255,7 @@ FontsObject.substitutedFontReplacementMatchPolicy
 ``app.fonts.substitutedFontReplacementMatchPolicy``
 
 .. note::
-   This functionality was added in After Effects (Beta) 24.4 and is subject to change while it remains in Beta.
+   This functionality was added in After Effects 24.6
 
 **Description**
 
@@ -471,7 +471,7 @@ FontsObject.pollForAndPushNonSystemFontFoldersChanges()
 ``app.fonts.pollForAndPushNonSystemFontFoldersChanges()``
 
 .. note::
-   This functionality was added in After Effects (Beta) 24.4 and is subject to change while it remains in Beta.
+   This functionality was added in After Effects 24.6
 
 **Description**
 
