@@ -768,8 +768,10 @@ A new Project object for the specified project, or null if the user cancels the 
 app.openFast()
 *********************************************
 
-|  ``app.openFast()``
 |  ``app.openFast(file)``
+
+.. warning::
+  This method/property is officially undocumented and was found via research. The information here may be inaccurate, and this whole method/property may disappear or stop working some point. Please contribute if you have more information on it!
 
 **Description**
 
