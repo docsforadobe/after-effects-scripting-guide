@@ -763,6 +763,52 @@ A new Project object for the specified project, or null if the user cancels the 
 
 ----
 
+.. _app.openFast:
+
+app.openFast()
+*********************************************
+
+|  ``app.openFast()``
+|  ``app.openFast(file)``
+
+**Description**
+
+Opens a project faster than ``app.open()`` by skipping some checks.
+
+**Parameters**
+
+=========  ==============================
+``file``   An `Extendscript File <https://extendscript.docsforadobe.dev/file-system-access/file-object.html>`_ object for the project file to open.
+=========  ==============================
+
+**Returns**
+
+A new Project object for the specified project.
+
+**Example**
+
+.. code:: javascript
+
+    var projectFile = new File("someFile.aep");
+
+    $.hiresTimer;
+    app.openFast(projectFile);
+    var fastEnd = $.hiresTimer / 1000;
+    
+    app.project.close(CloseOptions.DO_NOT_SAVE_CHANGES);
+    
+    $.hiresTimer;
+    app.open(projectFile);
+    var normalEnd = $.hiresTimer / 1000;
+    
+    app.project.close(CloseOptions.DO_NOT_SAVE_CHANGES);
+    
+    alert( "The difference is " + parseInt(normalEnd-fastEnd) + " ms" +
+           "\n\nFast: " + fastEnd + " ms" +
+           "\nNormal:" + normalEnd + " ms" );
+
+----
+
 .. _app.parseSwatchFile:
 
 app.parseSwatchFile()
