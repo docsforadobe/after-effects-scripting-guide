@@ -386,7 +386,13 @@ Gets the PropertyGroup object for an ancestor group of this property at a specif
 
 **Returns**
 
-PropertyGroup object, or null if the count reaches the containing layer.
+PropertyGroup object, or :ref:`Layer object <Layer>` if the count reaches the containing layer.
+
+**Example**
+
+.. code:: javascript
+
+    var containing_layer = my_property.propertyGroup(my_property.propertyDepth);
 
 ----
 
