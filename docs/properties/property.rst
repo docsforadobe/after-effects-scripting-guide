@@ -1270,7 +1270,7 @@ Finds the specified keyframe or marker and returns its current value. If no keyf
 
 **Returns**
 
-Floating-point value for keyframes, MarkerValue object for markers.
+Returns the value of the type corresponding to the :ref:`PropertyValueType <property.propertyValueType>`.
 
 ----
 
