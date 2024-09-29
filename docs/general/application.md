@@ -1,5 +1,3 @@
-<a id="application"></a>
-
 # Application object
 
 `app`
@@ -14,8 +12,6 @@ Attributes of the Application object provide access to specific objects within A
 
 ## Attributes
 
-<a id="app-activeviewer"></a>
-
 ### app.activeViewer
 
 `app.activeViewer`
@@ -29,8 +25,6 @@ The Viewer object for the currently focused or active-focused viewer (Compositio
 [Viewer object](../other/viewer.md#viewer) object; read-only.
 
 ---
-
-<a id="app-availablegpuacceltypes"></a>
 
 ### app.availableGPUAccelTypes
 
@@ -79,8 +73,6 @@ if (canSet) {
 
 ---
 
-<a id="app-buildname"></a>
-
 ### app.buildName
 
 `app.buildName`
@@ -95,8 +87,6 @@ String; read-only.
 
 ---
 
-<a id="app-buildnumber"></a>
-
 ### app.buildNumber
 
 `app.buildNumber`
@@ -110,8 +100,6 @@ The number of the build of After Effects being run, used internally by Adobe for
 Integer; read-only.
 
 ---
-
-<a id="app-disablerendering"></a>
 
 ### app.disableRendering
 
@@ -129,8 +117,6 @@ When false (the default), rendering proceeds as normal. Set to true to disable r
 Boolean; read/write.
 
 ---
-
-<a id="app-effects"></a>
 
 ### app.effects
 
@@ -158,8 +144,6 @@ var effectName = app.effects[12].displayName;
 
 ---
 
-<a id="app-exitafterlaunchandeval"></a>
-
 ### app.exitAfterLaunchAndEval
 
 `app.exitAfterLaunchAndEval`
@@ -173,8 +157,6 @@ This attribute is used only when executing a script from a command line on Windo
 Boolean; read/write.
 
 ---
-
-<a id="app-exitcode"></a>
 
 ### app.exitCode
 
@@ -201,8 +183,6 @@ app.exitCode = 2; // on quit, if value is 2, an error has occurred
 
 ---
 
-<a id="app-fonts"></a>
-
 ### app.fonts
 
 `app.fonts`
@@ -219,8 +199,6 @@ Returns an object to navigate and retreive all the fonts currently available on 
 [Fonts object](../text/fontsobject.md#fontsobject); read-only.
 
 ---
-
-<a id="app-isolanguage"></a>
 
 ### app.isoLanguage
 
@@ -260,8 +238,6 @@ if (lang === "en_US") {
 
 ---
 
-<a id="app-isrenderengine"></a>
-
 ### app.isRenderEngine
 
 `app.isRenderEngine`
@@ -275,8 +251,6 @@ True if After Effects is running as a render engine.
 Boolean; read-only.
 
 ---
-
-<a id="app-iswatchfolder"></a>
 
 ### app.isWatchFolder
 
@@ -292,8 +266,6 @@ Boolean; read-only.
 
 ---
 
-<a id="app-memoryinuse"></a>
-
 ### app.memoryInUse
 
 `app.memoryInUse`
@@ -307,8 +279,6 @@ The number of bytes of memory currently used by this application.
 Number; read-only.
 
 ---
-
-<a id="app-onerror"></a>
 
 ### app.onError
 
@@ -333,8 +303,6 @@ app.onError = err;
 
 ---
 
-<a id="app-preferences"></a>
-
 ### app.preferences
 
 `app.preferences`
@@ -348,8 +316,6 @@ The currently loaded AE app preferences. See [Preferences object](../other/prefe
 Preferences object; read-only.
 
 ---
-
-<a id="app-project"></a>
 
 ### app.project
 
@@ -365,8 +331,6 @@ Project object; read-only.
 
 ---
 
-<a id="app-saveprojectoncrash"></a>
-
 ### app.saveProjectOnCrash
 
 `app.saveProjectOnCrash`
@@ -381,8 +345,6 @@ Boolean; read/write.
 
 ---
 
-<a id="app-settings"></a>
-
 ### app.settings
 
 `app.settings`
@@ -396,8 +358,6 @@ The currently loaded settings. See [Settings object](../other/settings.md#settin
 Settings object; read-only.
 
 ---
-
-<a id="app-version"></a>
 
 ### app.version
 
@@ -425,8 +385,6 @@ alert("This machine is running version " + ver + " of AfterEffects.");
 
 ## Methods
 
-<a id="app-activate"></a>
-
 ### app.activate()
 
 `app.activate()`
@@ -445,8 +403,6 @@ Nothing.
 
 ---
 
-<a id="app-beginsuppressdialogs"></a>
-
 ### app.beginSuppressDialogs()
 
 `app.beginSuppressDialogs()`
@@ -464,8 +420,6 @@ None.
 Nothing.
 
 ---
-
-<a id="app-beginundogroup"></a>
 
 ### app.beginUndoGroup()
 
@@ -488,8 +442,6 @@ Nothing.
 
 ---
 
-<a id="app-canceltask"></a>
-
 ### app.cancelTask()
 
 `app.cancelTask(taskID)`
@@ -508,8 +460,6 @@ Removes the specified task from the queue of tasks scheduled for delayed executi
 Nothing.
 
 ---
-
-<a id="app-endsuppressdialogs"></a>
 
 ### app.endSuppressDialogs()
 
@@ -530,8 +480,6 @@ Nothing.
 
 ---
 
-<a id="app-endundogroup"></a>
-
 ### app.endUndoGroup()
 
 `app.endUndoGroup()`
@@ -549,8 +497,6 @@ None.
 Nothing.
 
 ---
-
-<a id="app-endwatchfolder"></a>
 
 ### app.endWatchFolder()
 
@@ -575,8 +521,6 @@ Nothing.
 - [app.isWatchFolder]()
 
 ---
-
-<a id="app-executecommand"></a>
 
 ### app.executeCommand()
 
@@ -611,8 +555,6 @@ app.executeCommand(4162);
 
 ---
 
-<a id="app-findmenucommandid"></a>
-
 ### app.findMenuCommandId()
 
 `app.findMenuCommandId(Command)`
@@ -645,8 +587,6 @@ app.findMenuCommandId("Convert To Bezier Path")
 
 ---
 
-<a id="app-newproject"></a>
-
 ### app.newProject()
 
 `app.newProject()`
@@ -671,8 +611,6 @@ app.newProject();
 ```
 
 ---
-
-<a id="app-open"></a>
 
 ### app.open()
 
@@ -707,8 +645,6 @@ if (my_file.exists) {
 ```
 
 ---
-
-<a id="app-openfast"></a>
 
 ### app.openFast()
 
@@ -755,8 +691,6 @@ alert( "The difference is " + parseInt(normalEnd-fastEnd) + " ms" +
 
 ---
 
-<a id="app-parseswatchfile"></a>
-
 ### app.parseSwatchFile()
 
 `app.parseSwatchFile(file)`
@@ -784,8 +718,6 @@ The swatch data, in this format:
 
 ---
 
-<a id="app-pausewatchfolder"></a>
-
 ### app.pauseWatchFolder()
 
 `app.pauseWatchFolder(pause)`
@@ -810,8 +742,6 @@ Nothing.
 - [app.endWatchFolder()]()
 
 ---
-
-<a id="app-purge"></a>
 
 ### app.purge()
 
@@ -839,8 +769,6 @@ Nothing.
 
 ---
 
-<a id="app-quit"></a>
-
 ### app.quit()
 
 `app.quit()`
@@ -858,8 +786,6 @@ None.
 Nothing.
 
 ---
-
-<a id="app-scheduletask"></a>
 
 ### app.scheduleTask()
 
@@ -882,8 +808,6 @@ Integer, a unique identifier for this task, which can be used to cancel it with 
 
 ---
 
-<a id="app-setmemoryusagelimits"></a>
-
 ### app.setMemoryUsageLimits()
 
 `app.setMemoryUsageLimits(imageCachePercentage, maximumMemoryPercentage)`
@@ -903,8 +827,6 @@ Sets memory usage limits as in the Memory & Cache preferences area. For both val
 Nothing.
 
 ---
-
-<a id="app-setmultiframerenderingconfig"></a>
 
 ### app.setMultiFrameRenderingConfig()
 
@@ -930,8 +852,6 @@ Nothing.
 
 ---
 
-<a id="app-setsavepreferencesonquit"></a>
-
 ### app.setSavePreferencesOnQuit()
 
 `app.setSavePreferencesOnQuit(doSave)`
@@ -950,8 +870,6 @@ Set or clears the flag that determines whether preferences are saved when the ap
 Nothing.
 
 ---
-
-<a id="app-watchfolder"></a>
 
 ### app.watchFolder()
 

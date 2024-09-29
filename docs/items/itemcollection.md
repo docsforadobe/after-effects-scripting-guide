@@ -1,5 +1,3 @@
-<a id="itemcollection"></a>
-
 # ItemCollection object
 
 `app.project.items`
@@ -13,8 +11,6 @@ The ItemCollection object represents a collection of items. The ItemCollection b
 ---
 
 ## Methods
-
-<a id="itemcollection-addcomp"></a>
 
 ### ItemCollection.addComp()
 
@@ -39,8 +35,6 @@ Creates a new composition. Creates and returns a new CompItem object and adds it
 CompItem object.
 
 ---
-
-<a id="itemcollection-addfolder"></a>
 
 ### ItemCollection.addFolder()
 

@@ -1,5 +1,3 @@
-<a id="settings"></a>
-
 # Settings object
 
 `app.settings`
@@ -24,8 +22,6 @@ As of Version 12/CC, preferences and settings methods now take a third argument 
 ---
 
 ## Methods
-
-<a id="settings-getsetting"></a>
 
 ### Settings.getSetting()
 
@@ -60,8 +56,6 @@ alert("The setting is: " + trimPrecompsSetting);
 
 ---
 
-<a id="settings-havesetting"></a>
-
 ### Settings.haveSetting()
 
 `app.settings.haveSetting(sectionName, keyName[, prefType])`
@@ -82,8 +76,6 @@ Returns true if the specified script settings item exists and has a value.
 Boolean.
 
 ---
-
-<a id="settings-savesetting"></a>
 
 ### Settings.saveSetting()
 

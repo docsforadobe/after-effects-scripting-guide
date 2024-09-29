@@ -1,5 +1,3 @@
-<a id="matchnames-layer-3dlayer"></a>
-
 # 3d Layer Match Names
 
 | **Category**                    | **Match Name**                | **Display Name (EN)**   |

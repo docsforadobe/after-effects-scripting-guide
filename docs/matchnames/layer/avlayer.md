@@ -1,5 +1,3 @@
-<a id="matchnames-layer-avlayer"></a>
-
 # AVLayer Match Names
 
 | **Category**           | **Match Name**                | **Display Name (EN)**   |

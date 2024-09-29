@@ -1,5 +1,3 @@
-<a id="item"></a>
-
 # Item object
 
 `app.project.item(index)`
@@ -42,8 +40,6 @@ if (!(myFolder instanceof FolderItem)) {
 
 ## Attributes
 
-<a id="item-comment"></a>
-
 ### Item.comment
 
 `app.project.item(index).comment`
@@ -58,8 +54,6 @@ String; read/write.
 
 ---
 
-<a id="item-dynamiclinkguid"></a>
-
 ### Item.dynamicLinkGUID
 
 `app.project.item(index).dynamicLinkGUID`
@@ -73,8 +67,6 @@ A unique and persistent identification number used for the dynamic link, in form
 String; read-only.
 
 ---
-
-<a id="item-guides"></a>
 
 ### Item.guides
 
@@ -93,8 +85,6 @@ Array; read-only.
 
 ---
 
-<a id="item-id"></a>
-
 ### Item.id
 
 `app.project.item(index).id`
@@ -108,8 +98,6 @@ A unique and persistent identification number used internally to identify an ite
 Integer; read-only.
 
 ---
-
-<a id="item-label"></a>
 
 ### Item.label
 
@@ -128,8 +116,6 @@ Integer (0 to 16); read/write.
 
 ---
 
-<a id="item-name"></a>
-
 ### Item.name
 
 `app.project.item(index).name`
@@ -143,8 +129,6 @@ The name of the item as displayed in the Project panel.
 String; read/write.
 
 ---
-
-<a id="item-parentfolder"></a>
 
 ### Item.parentFolder
 
@@ -177,8 +161,6 @@ for (var i = 1; i <= app.project.numItems; i++){
 
 ---
 
-<a id="item-selected"></a>
-
 ### Item.selected
 
 `app.project.item(index).selected`
@@ -192,8 +174,6 @@ When true, this item is selected. Multiple items can be selected at the same tim
 Boolean; read/write.
 
 ---
-
-<a id="item-typename"></a>
 
 ### Item.typeName
 
@@ -235,8 +215,6 @@ if (/Composition|Komposition|Composición|Composizione|コンポジション|컴
 
 ## Methods
 
-<a id="item-addguide"></a>
-
 ### Item.addGuide()
 
 `app.project.item(index).addGuide(orientationType, position)`
@@ -268,8 +246,6 @@ app.project.activeItem.addGuide(1, 500);
 
 ---
 
-<a id="item-remove"></a>
-
 ### Item.remove()
 
 `app.project.item(index).remove()`
@@ -287,8 +263,6 @@ None.
 Nothing.
 
 ---
-
-<a id="item-removeguide"></a>
 
 ### Item.removeGuide()
 
@@ -322,8 +296,6 @@ app.project.activeItem.removeGuide(0);
 Removing a guide will cause all higher guide indexes to shift downward.
 
 ---
-
-<a id="item-setguide"></a>
 
 ### Item.setGuide()
 

@@ -1,5 +1,3 @@
-<a id="shapelayer"></a>
-
 # ShapeLayer object
 
 `app.project.item(index).layer(index)`

@@ -1,5 +1,3 @@
-<a id="property"></a>
-
 # Property object
 
 `app.project.item(index).layer(index).propertySpec`
@@ -12,8 +10,6 @@ The Property object contains value, keyframe, and expression information about a
 
 #### NOTE
 JavaScript objects commonly referred to as “properties” are called “attributes” in this guide, to avoid confusion with the After Effects definition of property.
-
-<a id="propertyexamples"></a>
 
 **Examples**
 
@@ -98,8 +94,6 @@ JavaScript objects commonly referred to as “properties” are called “attrib
 
 ## Attributes
 
-<a id="property-alternatesource"></a>
-
 ### Property.alternateSource
 
 `app.project.item(index).layer(index).propertySpec.alternateSource`
@@ -131,8 +125,6 @@ AVItem object; read-only.
 
 ---
 
-<a id="property-cansetalternatesource"></a>
-
 ### Property.canSetAlternateSource
 
 `app.project.item(index).layer(index).propertySpec.canSetAlternateSource`
@@ -152,8 +144,6 @@ Boolean; read-only.
 
 ---
 
-<a id="property-cansetexpression"></a>
-
 ### Property.canSetExpression
 
 `app.project.item(index).layer(index).propertySpec.canSetExpression`
@@ -168,8 +158,6 @@ Boolean; read-only.
 
 ---
 
-<a id="property-canvaryovertime"></a>
-
 ### Property.canVaryOverTime
 
 `app.project.item(index).layer(index).propertySpec.canVaryOverTime`
@@ -183,8 +171,6 @@ When true, the named property can vary over time—that is, keyframe values or e
 Boolean; read-only.
 
 ---
-
-<a id="property-dimensionsseparated"></a>
 
 ### Property.dimensionsSeparated
 
@@ -202,8 +188,6 @@ This attribute applies only when the [isSeparationLeader](#property-isseparation
 Boolean; read/write.
 
 ---
-
-<a id="property-essentialpropertysource"></a>
 
 ### Property.essentialPropertySource
 
@@ -243,8 +227,6 @@ if (essentialOpacity.essentialPropertySource == opacityProp) {
 
 ---
 
-<a id="property-expression"></a>
-
 ### Property.expression
 
 `app.project.item(index).layer(index).propertySpec.expression`
@@ -263,8 +245,6 @@ String; read/write if [canSetExpression](#property-cansetexpression) for the nam
 
 ---
 
-<a id="property-expressionenabled"></a>
-
 ### Property.expressionEnabled
 
 `app.project.item(index).layer(index).propertySpec.expressionEnabled`
@@ -278,8 +258,6 @@ When true, the named property uses its associated expression to generate a value
 Boolean; read/write.
 
 ---
-
-<a id="property-expressionerror"></a>
 
 ### Property.expressionError
 
@@ -295,8 +273,6 @@ String; read-only.
 
 ---
 
-<a id="property-hasmax"></a>
-
 ### Property.hasMax
 
 `app.project.item(index).layer(index).propertySpec.hasMax`
@@ -311,8 +287,6 @@ Boolean; read-only.
 
 ---
 
-<a id="property-hasmin"></a>
-
 ### Property.hasMin
 
 `app.project.item(index).layer(index).propertySpec.hasMin`
@@ -326,8 +300,6 @@ When true, there is a minimum permitted value for the named property; otherwise 
 Boolean; read-only.
 
 ---
-
-<a id="property-isdropdowneffect"></a>
 
 ### Property.isDropdownEffect
 
@@ -354,8 +326,6 @@ Boolean; read-only.
 
 ---
 
-<a id="property-isseparationfollower"></a>
-
 ### Property.isSeparationFollower
 
 `app.project.item(index).layer(index).propertySpec.isSeparationFollower`
@@ -372,8 +342,6 @@ The original, consolidated, multidimensional property is the “separation leade
 Boolean; read-only.
 
 ---
-
-<a id="property-isseparationleader"></a>
 
 ### Property.isSeparationLeader
 
@@ -392,8 +360,6 @@ Boolean; read-only.
 
 ---
 
-<a id="property-isspatial"></a>
-
 ### Property.isSpatial
 
 `app.project.item(index).layer(index).propertySpec.isSpatial`
@@ -407,8 +373,6 @@ When true, the named property defines a spatial value. Examples are position and
 Boolean; read-only.
 
 ---
-
-<a id="property-istimevarying"></a>
 
 ### Property.isTimeVarying
 
@@ -425,8 +389,6 @@ Boolean; read-only.
 
 ---
 
-<a id="property-maxvalue"></a>
-
 ### Property.maxValue
 
 `app.project.item(index).layer(index).propertySpec.maxValue`
@@ -440,8 +402,6 @@ The maximum permitted value of the named property. If the `hasMax` attribute is 
 Floating-point value; read-only.
 
 ---
-
-<a id="property-minvalue"></a>
 
 ### Property.minValue
 
@@ -457,8 +417,6 @@ Floating-point value; read-only.
 
 ---
 
-<a id="property-numkeys"></a>
-
 ### Property.numKeys
 
 `app.project.item(index).layer(index).propertySpec.numKeys`
@@ -473,8 +431,6 @@ Integer; read-only.
 
 ---
 
-<a id="property-propertyindex"></a>
-
 ### Property.propertyIndex
 
 `app.project.item(index).layer(index).propertySpec.propertyIndex`
@@ -488,8 +444,6 @@ The position index of the named property. The first property is at index positio
 Integer; read-only.
 
 ---
-
-<a id="property-propertyvaluetype"></a>
 
 ### Property.propertyValueType
 
@@ -528,8 +482,6 @@ A `PropertyValueType` enumerated value; read/write. One of:
 
 ---
 
-<a id="property-selectedkeys"></a>
-
 ### Property.selectedKeys
 
 `app.project.item(index).layer(index).propertySpec.selectedKeys`
@@ -544,8 +496,6 @@ Array of integers; read-only.
 
 ---
 
-<a id="property-separationdimension"></a>
-
 ### Property.separationDimension
 
 `app.project.item(index).layer(index).propertySpec.separationDimension`
@@ -559,8 +509,6 @@ For a separated follower, the dimension number it represents in the multidimensi
 Integer; read-only.
 
 ---
-
-<a id="property-separationleader"></a>
 
 ### Property.separationLeader
 
@@ -579,8 +527,6 @@ Property object; read-only.
 
 ---
 
-<a id="property-unitstext"></a>
-
 ### Property.unitsText
 
 `app.project.item(index).layer(index).propertySpec.unitsText`
@@ -594,8 +540,6 @@ The text description of the units in which the value is expressed.
 String; read-only.
 
 ---
-
-<a id="property-value"></a>
 
 ### Property.value
 
@@ -619,8 +563,6 @@ A value appropriate for the type of the property (see [Property.propertyValueTyp
 
 ## Methods
 
-<a id="property-addkey"></a>
-
 ### Property.addKey()
 
 `app.project.item(index).layer(index).propertySpec.addKey(time)`
@@ -639,8 +581,6 @@ Adds a new keyframe or marker to the named property at the specified time and re
 Integer; the index of the new keyframe or marker.
 
 ---
-
-<a id="property-addtomotiongraphicstemplate"></a>
 
 ### Property.addToMotionGraphicsTemplate()
 
@@ -670,8 +610,6 @@ Boolean.
 
 ---
 
-<a id="property-addtomotiongraphicstemplateas"></a>
-
 ### Property.addToMotionGraphicsTemplateAs()
 
 `app.project.item(index).layer(index).propertySpec.addToMotionGraphicsTemplateAs(comp, name)`
@@ -700,8 +638,6 @@ Use the [Property.canAddToMotionGraphicsTemplate()](#property-canaddtomotiongrap
 Boolean.
 
 ---
-
-<a id="property-canaddtomotiongraphicstemplate"></a>
 
 ### Property.canAddToMotionGraphicsTemplate()
 
@@ -736,8 +672,6 @@ Boolean.
 
 ---
 
-<a id="property-getseparationfollower"></a>
-
 ### Property.getSeparationFollower()
 
 `app.project.item(index).layer(index).propertySpec.getSeparationFollower(dim)`
@@ -759,8 +693,6 @@ This attribute applies only when the [isSeparationLeader](#property-isseparation
 Property object, or an error if the property is not multidimensional or does not have the specified dimension.
 
 ---
-
-<a id="property-isinterpolationtypevalid"></a>
 
 ### Property.isInterpolationTypeValid()
 
@@ -786,8 +718,6 @@ Boolean.
 
 ---
 
-<a id="property-keyininterpolationtype"></a>
-
 ### Property.keyInInterpolationType()
 
 `app.project.item(index).layer(index).propertySpec.keyInInterpolationType(keyIndex)`
@@ -810,8 +740,6 @@ A `KeyframeInterpolationType` enumerated value; one of:
 - `KeyframeInterpolationType.HOLD`
 
 ---
-
-<a id="property-keyinspatialtangent"></a>
 
 ### Property.keyInSpatialTangent()
 
@@ -836,8 +764,6 @@ Array of floating-point values:
 
 ---
 
-<a id="property-keyintemporalease"></a>
-
 ### Property.keyInTemporalEase()
 
 `app.project.item(index).layer(index).propertySpec.keyInTemporalEase(keyIndex)`
@@ -860,8 +786,6 @@ Array of [KeyframeEase objects](../other/keyframeease.md#keyframeease):
 - For any other value type, the array contains 1 object.
 
 ---
-
-<a id="property-keylabel"></a>
 
 ### Property.keyLabel()
 
@@ -887,8 +811,6 @@ Integer (0 to 16); read only.
 
 ---
 
-<a id="property-keyoutinterpolationtype"></a>
-
 ### Property.keyOutInterpolationType()
 
 `app.project.item(index).layer(index).propertySpec.keyOutInterpolationType(keyIndex)`
@@ -911,8 +833,6 @@ A `KeyframeInterpolationType` enumerated value; one of:
 - `KeyframeInterpolationType.HOLD`
 
 ---
-
-<a id="property-keyoutspatialtangent"></a>
 
 ### Property.keyOutSpatialTangent()
 
@@ -937,8 +857,6 @@ Array of floating-point values:
 
 ---
 
-<a id="property-keyouttemporalease"></a>
-
 ### Property.keyOutTemporalEase()
 
 `app.project.item(index).layer(index).propertySpec.keyOutTemporalEase(keyIndex)`
@@ -962,8 +880,6 @@ Array of KeyframeEase objects:
 
 ---
 
-<a id="property-keyroving"></a>
-
 ### Property.keyRoving()
 
 `app.project.item(index).layer(index).propertySpec.keyRoving(keyIndex)`
@@ -982,8 +898,6 @@ Returns true if the specified keyframe is roving. The first and last keyframe in
 Boolean.
 
 ---
-
-<a id="property-keyselected"></a>
 
 ### Property.keySelected()
 
@@ -1004,8 +918,6 @@ Boolean.
 
 ---
 
-<a id="property-keyspatialautobezier"></a>
-
 ### Property.keySpatialAutoBezier()
 
 `app.project.item(index).layer(index).propertySpec.keySpatialAutoBezier(keyIndex)`
@@ -1024,8 +936,6 @@ Returns true if the specified keyframe has spatial auto-Bezier interpolation. (T
 Boolean.
 
 ---
-
-<a id="property-keyspatialcontinuous"></a>
 
 ### Property.keySpatialContinuous()
 
@@ -1046,8 +956,6 @@ Boolean.
 
 ---
 
-<a id="property-keytemporalautobezier"></a>
-
 ### Property.keyTemporalAutoBezier()
 
 `app.project.item(index).layer(index).propertySpec.keyTemporalAutoBezier(keyIndex)`
@@ -1067,8 +975,6 @@ Boolean.
 
 ---
 
-<a id="property-keytemporalcontinuous"></a>
-
 ### Property.keyTemporalContinuous()
 
 `app.project.item(index).layer(index).propertySpec.keyTemporalContinuous(keyIndex)`
@@ -1087,8 +993,6 @@ Returns true if the specified keyframe has temporal continuity. Temporal continu
 Boolean.
 
 ---
-
-<a id="property-keytime"></a>
 
 ### Property.keyTime()
 
@@ -1110,8 +1014,6 @@ Finds the specified keyframe or marker and returns the time at which it occurs. 
 Floating-point value.
 
 ---
-
-<a id="property-keyvalue"></a>
 
 ### Property.keyValue()
 
@@ -1136,8 +1038,6 @@ Returns the value of the type corresponding to the [PropertyValueType](#property
 
 ---
 
-<a id="property-nearestkeyindex"></a>
-
 ### Property.nearestKeyIndex()
 
 `app.project.item(index).layer(index).propertySpec.nearestKeyIndex(time)`
@@ -1157,8 +1057,6 @@ Integer.
 
 ---
 
-<a id="property-removekey"></a>
-
 ### Property.removeKey()
 
 `app.project.item(index).layer(index).propertySpec.removeKey(keyIndex)`
@@ -1177,8 +1075,6 @@ Removes the specified keyframe from the named property. If no keyframe with the 
 Nothing.
 
 ---
-
-<a id="property-setalternatesource"></a>
 
 ### Property.setAlternateSource()
 
@@ -1207,8 +1103,6 @@ Nothing.
 
 ---
 
-<a id="property-setinterpolationtypeatkey"></a>
-
 ### Property.setInterpolationTypeAtKey()
 
 `app.project.item(index).layer(index).propertySpec.setInterpolationTypeAtKey(keyIndex, inType[, outType])`
@@ -1229,8 +1123,6 @@ Sets the `in` and `out` interpolation types for the specified keyframe.
 Nothing.
 
 ---
-
-<a id="property-setlabelatkey"></a>
 
 ### Property.setLabelAtKey()
 
@@ -1254,8 +1146,6 @@ Set the label color for the keyframe. Colors are represented by their number (0 
 Nothing.
 
 ---
-
-<a id="property-setpropertyparameters"></a>
 
 ### Property.setPropertyParameters()
 
@@ -1301,8 +1191,6 @@ Property object, the updated Dropdown Menu Control’s Menu property.
 
 ---
 
-<a id="property-setrovingatkey"></a>
-
 ### Property.setRovingAtKey()
 
 `app.project.item(index).layer(index).propertySpec.setRovingAtKey(keyIndex, newVal)`
@@ -1322,8 +1210,6 @@ Turns roving on or off for the specified keyframe. The first and last keyframe i
 Nothing.
 
 ---
-
-<a id="property-setselectedatkey"></a>
 
 ### Property.setSelectedAtKey()
 
@@ -1345,8 +1231,6 @@ Nothing.
 
 ---
 
-<a id="property-setspatialautobezieratkey"></a>
-
 ### Property.setSpatialAutoBezierAtKey()
 
 `app.project.item(index).layer(index).propertySpec.setSpatialAutoBezierAtKey(keyIndex, newVal)`
@@ -1367,8 +1251,6 @@ Nothing.
 
 ---
 
-<a id="property-setspatialcontinuousatkey"></a>
-
 ### Property.setSpatialContinuousAtKey()
 
 `app.project.item(index).layer(index).propertySpec.setSpatialContinuousAtKey(keyIndex, newVal)`
@@ -1388,8 +1270,6 @@ Turns spatial continuity on or off for the specified keyframe. If the property v
 Nothing.
 
 ---
-
-<a id="property-setspatialtangentsatkey"></a>
 
 ### Property.setSpatialTangentsAtKey()
 
@@ -1412,8 +1292,6 @@ Nothing.
 
 ---
 
-<a id="property-settemporalautobezieratkey"></a>
-
 ### Property.setTemporalAutoBezierAtKey()
 
 `app.project.item(index).layer(index).propertySpec.setTemporalAutoBezierAtKey(keyIndex, newVal)`
@@ -1434,8 +1312,6 @@ Nothing.
 
 ---
 
-<a id="property-settemporalcontinuousatkey"></a>
-
 ### Property.setTemporalContinuousAtKey()
 
 `app.project.item(index).layer(index).propertySpec.setTemporalContinuousAtKey(keyIndex, newVal)`
@@ -1455,8 +1331,6 @@ Turns temporal continuity on or off for the specified keyframe. When temporal co
 Nothing.
 
 ---
-
-<a id="property-settemporaleaseatkey"></a>
 
 ### Property.setTemporalEaseAtKey()
 
@@ -1479,8 +1353,6 @@ Nothing.
 
 ---
 
-<a id="property-setvalue"></a>
-
 ### Property.setValue()
 
 `app.project.item(index).layer(index).propertySpec.setValue(newValue)`
@@ -1499,8 +1371,6 @@ Sets the static value of a property that has no keyframes. If the named property
 Nothing.
 
 ---
-
-<a id="property-setvalueatkey"></a>
 
 ### Property.setValueAtKey()
 
@@ -1522,8 +1392,6 @@ Nothing.
 
 ---
 
-<a id="property-setvalueattime"></a>
-
 ### Property.setValueAtTime()
 
 `app.project.item(index).layer(index).propertySpec.setValueAtTime(time, newValue)`
@@ -1544,8 +1412,6 @@ Nothing.
 
 ---
 
-<a id="property-setvaluesattimes"></a>
-
 ### Property.setValuesAtTimes()
 
 `app.project.item(index).layer(index).propertySpec.setValuesAtTimes(times, newValues)`
@@ -1565,8 +1431,6 @@ Sets values for a set of keyframes at specified times. Creates a new keyframe fo
 Nothing.
 
 ---
-
-<a id="property-valueattime"></a>
 
 ### Property.valueAtTime()
 

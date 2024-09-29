@@ -1,5 +1,3 @@
-<a id="renderqueueitem"></a>
-
 # RenderQueueItem object
 
 `app.project.renderQueue.item(index)`
@@ -11,8 +9,6 @@ The RenderQueueItem object represents an individual item in the render queue. It
 ---
 
 ## Attributes
-
-<a id="renderqueueitem-comp"></a>
 
 ### RenderQueueItem.comp
 
@@ -28,8 +24,6 @@ The composition that will be rendered by this render-queue item. To change the c
 
 ---
 
-<a id="renderqueueitem-elapsedseconds"></a>
-
 ### RenderQueueItem.elapsedSeconds
 
 `app.project.renderQueue.item(index).elapsedSeconds`
@@ -43,8 +37,6 @@ The number of seconds spent rendering this item.
 Integer, or null if item has not been rendered; read-only.
 
 ---
-
-<a id="renderqueueitem-logtype"></a>
 
 ### RenderQueueItem.logType
 
@@ -64,8 +56,6 @@ A `LogType` enumerated value; (read/write). One of:
 
 ---
 
-<a id="renderqueueitem-numoutputmodules"></a>
-
 ### RenderQueueItem.numOutputModules
 
 `app.project.renderQueue.item(index).numOutputModules`
@@ -79,8 +69,6 @@ The total number of Output Modules assigned to this item.
 Integer; read-only.
 
 ---
-
-<a id="renderqueueitem-onstatus"></a>
 
 ### RenderQueueItem.onstatus
 
@@ -109,8 +97,6 @@ app.project.renderQueue.item(1).render = false; // changes status and shows dial
 
 ---
 
-<a id="renderqueueitem-outputmodules"></a>
-
 ### RenderQueueItem.outputModules
 
 `app.project.renderQueue.item(index).outputModules`
@@ -124,8 +110,6 @@ The collection of Output Modules for the item.
 [OMCollection object](omcollection.md#omcollection); read-only.
 
 ---
-
-<a id="renderqueueitem-queueitemnotify"></a>
 
 ### RenderQueueItem.queueItemNotify
 
@@ -146,8 +130,6 @@ Boolean; read/write.
 
 ---
 
-<a id="renderqueueitem-render"></a>
-
 ### RenderQueueItem.render
 
 `app.project.renderQueue.item(index).render`
@@ -163,8 +145,6 @@ Boolean; read/write.
 
 ---
 
-<a id="renderqueueitem-skipframes"></a>
-
 ### RenderQueueItem.skipFrames
 
 `app.project.renderQueue.item(index).skipFrames`
@@ -179,8 +159,6 @@ Integer in the range `[0..99]`; read/write.
 
 ---
 
-<a id="renderqueueitem-starttime"></a>
-
 ### RenderQueueItem.startTime
 
 `app.project.renderQueue.item(index).startTime`
@@ -194,8 +172,6 @@ The day and time that this item started rendering.
 Date object, or null if the item has not started rendering; read-only.
 
 ---
-
-<a id="renderqueueitem-status"></a>
 
 ### RenderQueueItem.status
 
@@ -220,8 +196,6 @@ An `RQItemStatus` enumerated value; read-only. One of:
 
 ---
 
-<a id="renderqueueitem-templates"></a>
-
 ### RenderQueueItem.templates
 
 `app.project.renderQueue.item(index).templates`
@@ -236,8 +210,6 @@ Array of strings; read-only.
 
 ---
 
-<a id="renderqueueitem-timespanduration"></a>
-
 ### RenderQueueItem.timeSpanDuration
 
 `app.project.renderQueue.item(index).timeSpanDuration`
@@ -251,8 +223,6 @@ The duration in seconds of the composition to be rendered. The duration is deter
 Floating-point value; read/write.
 
 ---
-
-<a id="renderqueueitem-timespanstart"></a>
 
 ### RenderQueueItem.timeSpanStart
 
@@ -269,8 +239,6 @@ Floating-point value; read/write.
 ---
 
 ## Methods
-
-<a id="renderqueueitem-applytemplate"></a>
 
 ### RenderQueueItem.applyTemplate()
 
@@ -290,8 +258,6 @@ Applies a Render Settings template to the item. See also [RenderQueueItem.saveAs
 Nothing.
 
 ---
-
-<a id="renderqueueitem-duplicate"></a>
 
 ### RenderQueueItem.duplicate()
 
@@ -313,8 +279,6 @@ None.
 RenderQueueItem object.
 
 ---
-
-<a id="renderqueueitem-getsetting"></a>
 
 ### RenderQueueItem.getSetting()
 
@@ -343,8 +307,6 @@ var rqItem1_proxyUse_str = app.project.renderQueue.item(1).getSetting("Proxy Use
 
 ---
 
-<a id="renderqueueitem-getsettings"></a>
-
 ### RenderQueueItem.getSettings()
 
 `app.project.renderQueue.item(index).getSettings()`
@@ -371,8 +333,6 @@ var rqItem1_spec_str_json = rqItem1_spec_str.toSource();
 
 ---
 
-<a id="renderqueueitem-outputmodule"></a>
-
 ### RenderQueueItem.outputModule()
 
 `app.project.renderQueue.item(index).outputModule(index)`
@@ -392,8 +352,6 @@ OutputModule object.
 
 ---
 
-<a id="renderqueueitem-remove"></a>
-
 ### RenderQueueItem.remove()
 
 `app.project.renderQueue.item(index).remove()`
@@ -411,8 +369,6 @@ None.
 Nothing.
 
 ---
-
-<a id="renderqueueitem-saveastemplate"></a>
 
 ### RenderQueueItem.saveAsTemplate()
 
@@ -432,8 +388,6 @@ Saves the item’s current render settings as a new template with the specified 
 Nothing.
 
 ---
-
-<a id="renderqueueitem-setsetting"></a>
 
 ### RenderQueueItem.setSetting()
 
@@ -464,8 +418,6 @@ app.project.renderQueue.item(1).setSetting("Proxy Use", 1);
 ```
 
 ---
-
-<a id="renderqueueitem-setsettings"></a>
 
 ### RenderQueueItem.setSettings()
 

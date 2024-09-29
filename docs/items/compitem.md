@@ -1,5 +1,3 @@
-<a id="compitem"></a>
-
 # CompItem object
 
 `app.project.item(index)`
@@ -27,8 +25,6 @@ alert("name of last layer is " + firstComp.layer(firstComp.numLayers).name);
 
 ## Attributes
 
-<a id="compitem-activecamera"></a>
-
 ### CompItem.activeCamera
 
 `app.project.item(index).activeCamera`
@@ -43,8 +39,6 @@ CameraLayer object; read-only.
 
 ---
 
-<a id="compitem-bgcolor"></a>
-
 ### CompItem.bgColor
 
 `app.project.item(index).bgColor`
@@ -58,8 +52,6 @@ The background color of the composition. The three array values specify the red,
 An array containing three floating-point values, `[R, G, B]`, in the range `[0.0..1.0]`; read/write.
 
 ---
-
-<a id="compitem-counters"></a>
 
 ### CompItem.counters
 
@@ -83,8 +75,6 @@ Boolean; read/write.
 
 ---
 
-<a id="compitem-displaystartframe"></a>
-
 ### CompItem.displayStartFrame
 
 `app.project.item(index).displayStartFrame`
@@ -104,8 +94,6 @@ Integer; read/write.
 
 ---
 
-<a id="compitem-displaystarttime"></a>
-
 ### CompItem.displayStartTime
 
 `app.project.item(index).displayStartTime`
@@ -123,8 +111,6 @@ Floating-point value in the range `[-10800.0...86339.0]` (-3:00:00:00 to 23:59:0
 
 ---
 
-<a id="compitem-draft3d"></a>
-
 ### CompItem.draft3d
 
 `app.project.item(index).draft3d`
@@ -138,8 +124,6 @@ When true, Draft 3D mode is enabled for the Composition panel. This corresponds 
 Boolean; read/write.
 
 ---
-
-<a id="compitem-dropframe"></a>
 
 ### CompItem.dropFrame
 
@@ -155,8 +139,6 @@ Boolean; read/write.
 
 ---
 
-<a id="compitem-frameblending"></a>
-
 ### CompItem.frameBlending
 
 `app.project.item(index).frameBlending`
@@ -170,8 +152,6 @@ When true, frame blending is enabled for this Composition. Corresponds to the va
 Boolean; if true, frame blending is enabled; read/write.
 
 ---
-
-<a id="compitem-frameduration"></a>
 
 ### CompItem.frameDuration
 
@@ -187,8 +167,6 @@ Floating-point; read/write.
 
 ---
 
-<a id="compitem-hideshylayers"></a>
-
 ### CompItem.hideShyLayers
 
 `app.project.item(index).hideShyLayers`
@@ -203,8 +181,6 @@ Boolean; read/write.
 
 ---
 
-<a id="compitem-layers"></a>
-
 ### CompItem.layers
 
 `app.project.item(index).layers`
@@ -218,8 +194,6 @@ A [LayerCollection object](../layers/layercollection.md#layercollection) that co
 LayerCollection object; read-only.
 
 ---
-
-<a id="compitem-markerproperty"></a>
 
 ### CompItem.markerProperty
 
@@ -261,8 +235,6 @@ comp.markerProperty.setValueAtTime(3, compMarker2);
 
 ---
 
-<a id="compitem-motionblur"></a>
-
 ### CompItem.motionBlur
 
 `app.project.item(index).motionBlur`
@@ -276,8 +248,6 @@ When true, motion blur is enabled for the composition. Corresponds to the value 
 Boolean; read/write.
 
 ---
-
-<a id="compitem-motionbluradaptivesamplelimit"></a>
 
 ### CompItem.motionBlurAdaptiveSampleLimit
 
@@ -293,8 +263,6 @@ Integer (between 16 and 256); read/write.
 
 ---
 
-<a id="compitem-motionblursamplesperframe"></a>
-
 ### CompItem.motionBlurSamplesPerFrame
 
 `app.project.item(index).motionBlurSamplesPerFrame`
@@ -308,8 +276,6 @@ The minimum number of motion blur samples per frame for Classic 3D layers, shape
 Integer (between 2 and 64); read/write.
 
 ---
-
-<a id="compitem-motiongraphicstemplatecontrollercount"></a>
 
 ### CompItem.motionGraphicsTemplateControllerCount
 
@@ -327,8 +293,6 @@ The number of properties in the Essential Graphics panel for the composition.
 Integer; read-only.
 
 ---
-
-<a id="compitem-motiongraphicstemplatename"></a>
 
 ### CompItem.motionGraphicsTemplateName
 
@@ -356,8 +320,6 @@ String; read/write.
 
 ---
 
-<a id="compitem-numlayers"></a>
-
 ### CompItem.numLayers
 
 `app.project.item(index).numLayers`
@@ -371,8 +333,6 @@ The number of layers in the composition.
 Integer; read-only.
 
 ---
-
-<a id="compitem-preservenestedframerate"></a>
 
 ### CompItem.preserveNestedFrameRate
 
@@ -388,8 +348,6 @@ Boolean; read/write.
 
 ---
 
-<a id="compitem-preservenestedresolution"></a>
-
 ### CompItem.preserveNestedResolution
 
 `app.project.item(index).preserveNestedResolution`
@@ -403,8 +361,6 @@ When true, the resolution of nested compositions is preserved in the current com
 Boolean; read/write.
 
 ---
-
-<a id="compitem-renderer"></a>
 
 ### CompItem.renderer
 
@@ -420,8 +376,6 @@ String; read/write.
 
 ---
 
-<a id="compitem-renderers"></a>
-
 ### CompItem.renderers
 
 `app.project.item(index).renderers`
@@ -435,8 +389,6 @@ The available rendering plug-in modules. Member strings reflect installed module
 Array of strings; read-only.
 
 ---
-
-<a id="compitem-resolutionfactor"></a>
 
 ### CompItem.resolutionFactor
 
@@ -452,8 +404,6 @@ Array of two integers in the range `[1..99]`; read/write.
 
 ---
 
-<a id="compitem-selectedlayers"></a>
-
 ### CompItem.selectedLayers
 
 `app.project.item(index).selectedLayers`
@@ -467,8 +417,6 @@ All of the selected layers in this composition. This is a 0-based array (the fir
 Array of [Layer](../layers/layer.md#layer) objects; read-only.
 
 ---
-
-<a id="compitem-selectedproperties"></a>
 
 ### CompItem.selectedProperties
 
@@ -484,8 +432,6 @@ Array of [Property](../properties/property.md#property) and [PropertyGroup](../p
 
 ---
 
-<a id="compitem-shutterangle"></a>
-
 ### CompItem.shutterAngle
 
 `app.project.item(index).shutterAngle`
@@ -499,8 +445,6 @@ The shutter angle setting for the composition. This corresponds to the Shutter A
 Integer in the range `[0...720]`; read/write.
 
 ---
-
-<a id="compitem-shutterphase"></a>
 
 ### CompItem.shutterPhase
 
@@ -516,8 +460,6 @@ Integer in the range `[–360...360]`; read/write.
 
 ---
 
-<a id="compitem-workareaduration"></a>
-
 ### CompItem.workAreaDuration
 
 `app.project.item(index).workAreaDuration`
@@ -531,8 +473,6 @@ The duration of the work area in seconds. This is the difference of the start-po
 Floating-point; read/write.
 
 ---
-
-<a id="compitem-workareastart"></a>
 
 ### CompItem.workAreaStart
 
@@ -549,8 +489,6 @@ Floating-point; read/write.
 ---
 
 ## Methods
-
-<a id="compitem-duplicate"></a>
 
 ### CompItem.duplicate()
 
@@ -569,8 +507,6 @@ None.
 CompItem object.
 
 ---
-
-<a id="compitem-exportasmotiongraphicstemplate"></a>
 
 ### CompItem.exportAsMotionGraphicsTemplate()
 
@@ -609,8 +545,6 @@ Boolean.
 
 ---
 
-<a id="compitem-getmotiongraphicstemplatecontrollername"></a>
-
 ### CompItem.getMotionGraphicsTemplateControllerName()
 
 `app.project.item(index).getMotionGraphicsTemplateControllerName(index)`
@@ -632,8 +566,6 @@ Gets the name of a single property in the Essential Graphics panel.
 String; read-only.
 
 ---
-
-<a id="compitem-setmotiongraphicscontrollername"></a>
 
 ### CompItem.setMotionGraphicsControllerName()
 
@@ -660,8 +592,6 @@ To rename a property as it is added to the EGP, see [Property.addToMotionGraphic
 String; read-only.
 
 ---
-
-<a id="compitem-layer"></a>
 
 ### CompItem.layer()
 
@@ -698,8 +628,6 @@ or:
 
 ---
 
-<a id="compitem-openinessentialgraphics"></a>
-
 ### CompItem.openInEssentialGraphics()
 
 `app.project.item(index).openInEssentialGraphics()`
@@ -720,8 +648,6 @@ None.
 Nothing.
 
 ---
-
-<a id="compitem-openinviewer"></a>
 
 ### CompItem.openInViewer()
 

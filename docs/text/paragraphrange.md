@@ -1,5 +1,3 @@
-<a id="paragraphrange"></a>
-
 # ParagraphRange object
 
 `app.project.item(index).layer(index).text.sourceText.value.paragraphRange(paragraphIndexStart, [signedParagraphIndexEnd])`
@@ -43,8 +41,6 @@ textDocument.paragraphRange(1,-1).characterRange().fontSize = 40;
 
 ## Attributes
 
-<a id="paragraphrange-characterend"></a>
-
 ### ParagraphRange.characterEnd
 
 `ParagraphRange.characterEnd`
@@ -60,8 +56,6 @@ Throws an exception on access if the effective value would exceed the bounds of 
 Unsigned integer; read-only.
 
 ---
-
-<a id="paragraphrange-characterstart"></a>
 
 ### ParagraphRange.characterStart
 
@@ -79,8 +73,6 @@ Unsigned integer; read-only.
 
 ---
 
-<a id="paragraphrange-israngevalid"></a>
-
 ### ParagraphRange.isRangeValid
 
 `ParagraphRange.isRangeValid`
@@ -96,8 +88,6 @@ Boolean; read-only.
 ---
 
 ## Methods
-
-<a id="paragraphrange-characterrange"></a>
 
 ### ParagraphRange.characterRange()
 
@@ -120,8 +110,6 @@ None.
 [CharacterRange object](characterrange.md#characterrange);
 
 ---
-
-<a id="paragraphrange-tostring"></a>
 
 ### ParagraphRange.toString()
 

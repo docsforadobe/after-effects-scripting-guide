@@ -1,5 +1,3 @@
-<a id="fontobject"></a>
-
 # Font object
 
 #### NOTE
@@ -14,8 +12,6 @@ Most of these APIs simply return information which is contained in the Font data
 ---
 
 ## Attributes
-
-<a id="fontobject-designaxesdata"></a>
 
 ### FontObject.designAxesData
 
@@ -50,8 +46,6 @@ Array of Objects; read-only.
 
 ---
 
-<a id="fontobject-designvector"></a>
-
 ### FontObject.designVector
 
 `app.fonts.fontsWithDefaultDesignAxes[0].designVector`
@@ -69,8 +63,6 @@ Array of floating-point values; read-only.
 
 ---
 
-<a id="fontobject-familyname"></a>
-
 ### FontObject.familyName
 
 `app.fonts.allFonts[0][0].familyName`
@@ -84,8 +76,6 @@ The family name of the font, in the ASCII character set.
 String; read-only.
 
 ---
-
-<a id="fontobject-familyprefix"></a>
 
 ### FontObject.familyPrefix
 
@@ -103,8 +93,6 @@ Will return undefined for non-variable fonts.
 String; read-only.
 
 ---
-
-<a id="fontobject-fontid"></a>
 
 ### FontObject.fontID
 
@@ -127,8 +115,6 @@ Number; read-only.
 
 ---
 
-<a id="fontobject-fullname"></a>
-
 ### FontObject.fullName
 
 `app.fonts.allFonts[0][0].fullName`
@@ -142,8 +128,6 @@ The full name of the font, in the ASCII character set. Usually composed of the f
 String; read-only.
 
 ---
-
-<a id="fontobject-hasdesignaxes"></a>
 
 ### FontObject.hasDesignAxes
 
@@ -159,8 +143,6 @@ Boolean; read-only.
 
 ---
 
-<a id="fontobject-isfromadobefonts"></a>
-
 ### FontObject.isFromAdobeFonts
 
 `app.fonts.allFonts[0][0].isFromAdobeFonts`
@@ -175,8 +157,6 @@ Boolean; read-only.
 
 ---
 
-<a id="fontobject-issubstitute"></a>
-
 ### FontObject.isSubstitute
 
 `app.fonts.allFonts[0][0].isSubstitute`
@@ -190,8 +170,6 @@ Returns true when this font instance represents a font reference which was missi
 Boolean; read-only.
 
 ---
-
-<a id="fontobject-location"></a>
 
 ### FontObject.location
 
@@ -210,8 +188,6 @@ String; read-only.
 
 ---
 
-<a id="fontobject-nativefamilyname"></a>
-
 ### FontObject.nativeFamilyName
 
 `app.fonts.allFonts[0][0].nativeFamilyName`
@@ -225,8 +201,6 @@ The native family name of the font in full 16 bit Unicode. Often different than 
 String; read-only.
 
 ---
-
-<a id="fontobject-nativefullname"></a>
 
 ### FontObject.nativeFullName
 
@@ -242,8 +216,6 @@ String; read-only.
 
 ---
 
-<a id="fontobject-nativestylename"></a>
-
 ### FontObject.nativeStyleName
 
 `app.fonts.allFonts[0][0].nativeStyleName`
@@ -257,8 +229,6 @@ The native style name of the font in full 16 bit Unicode. Often different than w
 String; read-only.
 
 ---
-
-<a id="fontobject-postscriptname"></a>
 
 ### FontObject.postScriptName
 
@@ -274,8 +244,6 @@ String; read-only.
 
 ---
 
-<a id="fontobject-stylename"></a>
-
 ### FontObject.styleName
 
 `app.fonts.allFonts[0][0].styleName`
@@ -289,8 +257,6 @@ The style name of the font, in the ASCII character set.
 String; read-only.
 
 ---
-
-<a id="fontobject-technology"></a>
 
 ### FontObject.technology
 
@@ -314,8 +280,6 @@ An `CTFontTechnology` enumerated value; read-only. One of:
 - `CTFontTechnology.CT_ANYTECHNOLOGY`
 
 ---
-
-<a id="fontobject-type"></a>
 
 ### FontObject.type
 
@@ -342,8 +306,6 @@ An `CTFontType` enumerated value; read-only. One of:
 
 ---
 
-<a id="fontobject-version"></a>
-
 ### FontObject.version
 
 `app.fonts.allFonts[0][0].version`
@@ -357,8 +319,6 @@ The version number of the font.
 String; read-only.
 
 ---
-
-<a id="fontobject-writingscripts"></a>
 
 ### FontObject.writingScripts
 
@@ -464,8 +424,6 @@ An array of `CTScript` enumerated values; read-only. One or more of:
 
 ## Methods
 
-<a id="fontobject-hasglyphsfor"></a>
-
 ### FontObject.hasGlyphsFor()
 
 `app.fonts.allFonts[0][0].hasGlyphsFor(charString)`
@@ -492,8 +450,6 @@ Boolean.
 
 ---
 
-<a id="fontobject-hassamedict"></a>
-
 ### FontObject.hasSameDict()
 
 `app.fonts.fontsWithDefaultDesignAxes[0].hasSameDict(fontObject)`
@@ -515,8 +471,6 @@ Can only return true when called on a variable [Font object](#fontobject) with t
 Boolean.
 
 ---
-
-<a id="fontobject-otherfontswithsamedict"></a>
 
 ### FontObject.otherFontsWithSameDict()
 
@@ -541,8 +495,6 @@ Will return an empty Array if the argument is not a Variable font, or the Variab
 Array of [Font objects](#fontobject), may be empty.
 
 ---
-
-<a id="fontobject-postscriptnamefordesignvector"></a>
 
 ### FontObject.postScriptNameForDesignVector()
 

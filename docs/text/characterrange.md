@@ -1,5 +1,3 @@
-<a id="characterrange"></a>
-
 # CharacterRange object
 
 `app.project.item(index).layer(index).text.sourceText.value.characterRange(characterIndexStart, [signedCharacterIndexEnd])`
@@ -55,8 +53,6 @@ textDocument.characterRange(1,-1).fontSize = 40;
 
 ## Attributes
 
-<a id="characterrange-characterend"></a>
-
 ### CharacterRange.characterEnd
 
 `CharacterRange.characterEnd`
@@ -73,8 +69,6 @@ Unsigned integer; read-only.
 
 ---
 
-<a id="characterrange-characterstart"></a>
-
 ### CharacterRange.characterStart
 
 `CharacterRange.characterStart`
@@ -90,8 +84,6 @@ Throws an exception on access if the effective value would exceed the bounds of 
 Unsigned integer; read-only.
 
 ---
-
-<a id="characterrange-fillcolor"></a>
 
 ### CharacterRange.fillColor
 
@@ -116,8 +108,6 @@ Array `[r, g, b]` of floating-point values; read/write.
 
 ---
 
-<a id="characterrange-israngevalid"></a>
-
 ### CharacterRange.isRangeValid
 
 `CharacterRange.isRangeValid`
@@ -131,8 +121,6 @@ Returns true if the current range is within the bounds of the related [TextDocum
 Boolean; read-only.
 
 ---
-
-<a id="characterrange-kerning"></a>
 
 ### CharacterRange.kerning
 
@@ -154,8 +142,6 @@ Setting this value will also set `AutoKernType.NO_AUTO_KERN` to true across the 
 Integer value; read/write.
 
 ---
-
-<a id="characterrange-strokecolor"></a>
 
 ### CharacterRange.strokeColor
 
@@ -179,8 +165,6 @@ In contrast to the same attribute on the TextDocument API, we will *not* throw a
 Array [r, g, b] of floating-point values; read/write.
 
 ---
-
-<a id="characterrange-strokeoverfill"></a>
 
 ### CharacterRange.strokeOverFill
 
@@ -206,8 +190,6 @@ Boolean; read/write.
 
 ---
 
-<a id="characterrange-text"></a>
-
 ### CharacterRange.text
 
 `CharacterRange.text`
@@ -229,8 +211,6 @@ String; read/write.
 ---
 
 ## Methods
-
-<a id="characterrange-pastefrom"></a>
 
 ### CharacterRange.pasteFrom()
 
@@ -262,8 +242,6 @@ As the span of the [CharacterRange object](#characterrange) is not adjusted by t
 None.
 
 ---
-
-<a id="characterrange-tostring"></a>
 
 ### CharacterRange.toString()
 

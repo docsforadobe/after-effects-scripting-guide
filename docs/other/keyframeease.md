@@ -1,5 +1,3 @@
-<a id="keyframeease"></a>
-
 # KeyframeEase object
 
 `myKey = new KeyframeEase(speed, influence);`
@@ -35,8 +33,6 @@ myScaleProperty.setTemporalEaseAtKey(2, [easeIn, easeIn, easeIn], [easeOut, ease
 
 ## Attributes
 
-<a id="keyframeease-influence"></a>
-
 ### KeyframeEase.influence
 
 `myKey.influence`
@@ -50,8 +46,6 @@ The influence value of the keyframe, as shown in the Keyframe Velocity dialog bo
 Floating-point value in the range `[0.1..100.0]`; read/write.
 
 ---
-
-<a id="keyframeease-speed"></a>
 
 ### KeyframeEase.speed
 

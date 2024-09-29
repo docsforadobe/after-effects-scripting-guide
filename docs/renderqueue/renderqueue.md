@@ -1,5 +1,3 @@
-<a id="renderqueue"></a>
-
 # RenderQueue object
 
 `app.project.renderQueue`
@@ -11,8 +9,6 @@ The RenderQueue object represents the render automation process, the data and fu
 ---
 
 ## Attributes
-
-<a id="renderqueue-canqueueiname"></a>
 
 ### RenderQueue.canQueueInAME
 
@@ -33,8 +29,6 @@ Boolean; read-only.
 
 ---
 
-<a id="renderqueue-queuenotify"></a>
-
 ### RenderQueue.queueNotify
 
 `app.project.renderQueue.queueNotify`
@@ -53,8 +47,6 @@ Boolean; read/write.
 
 ---
 
-<a id="renderqueue-items"></a>
-
 ### RenderQueue.items
 
 `app.project.renderQueue.items`
@@ -69,8 +61,6 @@ A collection of all items in the render queue. See [RenderQueueItem object](rend
 
 ---
 
-<a id="renderqueue-numitems"></a>
-
 ### RenderQueue.numItems
 
 `app.project.renderQueue.numItems`
@@ -84,8 +74,6 @@ The total number of items in the render queue.
 Integer; read-only.
 
 ---
-
-<a id="renderqueue-rendering"></a>
 
 ### RenderQueue.rendering
 
@@ -102,8 +90,6 @@ Boolean; read-only.
 ---
 
 ## Methods
-
-<a id="renderqueue-item"></a>
 
 ### RenderQueue.item()
 
@@ -124,8 +110,6 @@ The position index of the item. An integer in the range `[0..numItems]`.
 
 ---
 
-<a id="renderqueue-pauserendering"></a>
-
 ### RenderQueue.pauseRendering()
 
 `app.project.renderQueue.pauseRendering(pause)`
@@ -144,8 +128,6 @@ Pauses the current rendering process, or continues a paused rendering process. T
 Nothing.
 
 ---
-
-<a id="renderqueue-render"></a>
 
 ### RenderQueue.render()
 
@@ -168,8 +150,6 @@ Nothing.
 
 ---
 
-<a id="renderqueue-showwindow"></a>
-
 ### RenderQueue.showWindow()
 
 `app.project.renderQueue.showWindow(doShow)`
@@ -189,8 +169,6 @@ Nothing.
 
 ---
 
-<a id="renderqueue-stoprendering"></a>
-
 ### RenderQueue.stopRendering()
 
 `app.project.renderQueue.stopRendering()`
@@ -208,8 +186,6 @@ None.
 Nothing.
 
 ---
-
-<a id="renderqueue-queueiname"></a>
 
 ### RenderQueue.queueInAME()
 

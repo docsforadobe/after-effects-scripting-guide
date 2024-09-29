@@ -1,5 +1,3 @@
-<a id="cameralayer"></a>
-
 # CameraLayer object
 
 `app.project.item(index).layer(index)`

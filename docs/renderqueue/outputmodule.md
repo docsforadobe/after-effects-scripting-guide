@@ -1,5 +1,3 @@
-<a id="outputmodule"></a>
-
 # OutputModule object
 
 `app.project.renderQueue.item(index).outputModule(index)`
@@ -11,8 +9,6 @@ An OutputModule object of a [RenderQueueItem](renderqueueitem.md#renderqueueitem
 ---
 
 ## Attributes
-
-<a id="outputmodule-file"></a>
 
 ### OutputModule.file
 
@@ -28,8 +24,6 @@ The [Extendscript File](https://extendscript.docsforadobe.dev/file-system-access
 
 ---
 
-<a id="outputmodule-includesourcexmp"></a>
-
 ### OutputModule.includeSourceXMP
 
 `app.project.renderQueue.item(index).outputModule(index).includeSourceXMP`
@@ -44,8 +38,6 @@ Boolean; read/write.
 
 ---
 
-<a id="outputmodule-name"></a>
-
 ### OutputModule.name
 
 `app.project.renderQueue.item(index).outputModule(index).name`
@@ -59,8 +51,6 @@ The name of the output module, as shown in the user interface.
 String; read-only.
 
 ---
-
-<a id="outputmodule-postrenderaction"></a>
 
 ### OutputModule.postRenderAction
 
@@ -81,8 +71,6 @@ A `PostRenderAction` enumerated value (read/write); one of:
 
 ---
 
-<a id="outputmodule-templates"></a>
-
 ### OutputModule.templates
 
 `app.project.renderQueue.item(index).outputModule(index).templates`
@@ -98,8 +86,6 @@ Array of strings; read-only.
 ---
 
 ## Methods
-
-<a id="outputmodule-applytemplate"></a>
 
 ### OutputModule.applyTemplate()
 
@@ -120,8 +106,6 @@ Nothing.
 
 ---
 
-<a id="outputmodule-getsetting"></a>
-
 ### OutputModule.getSetting()
 
 `app.project.renderQueue.item(index).outputModule(index).getSetting()`
@@ -141,8 +125,6 @@ Gets a specific setting for a given Output Module.
 See the example in [RenderQueueItem.getSetting()](renderqueueitem.md#renderqueueitem-getsetting) for structure reference.
 
 ---
-
-<a id="outputmodule-getsettings"></a>
 
 ### OutputModule.getSettings()
 
@@ -191,8 +173,6 @@ var current_omFileTempalte = app.project.renderQueue.item(1).outputModule(1).get
 
 ---
 
-<a id="outputmodule-remove"></a>
-
 ### OutputModule.remove()
 
 `app.project.renderQueue.item(index).outputModule(index).remove()`
@@ -210,8 +190,6 @@ None.
 Nothing.
 
 ---
-
-<a id="outputmodule-saveastemplate"></a>
 
 ### OutputModule.saveAsTemplate()
 
@@ -232,8 +210,6 @@ Nothing.
 
 ---
 
-<a id="outputmodule-setsetting"></a>
-
 ### OutputModule.setSetting()
 
 `app.project.renderQueue.item(index).outputModule(index).setSetting()`
@@ -253,8 +229,6 @@ Sets a specific setting for a given Output Module.
 See the example in [RenderQueueItem.setSetting()](renderqueueitem.md#renderqueueitem-setsetting) for structure reference.
 
 ---
-
-<a id="outputmodule-setsettings"></a>
 
 ### OutputModule.setSettings()
 

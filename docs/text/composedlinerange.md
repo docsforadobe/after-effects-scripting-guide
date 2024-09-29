@@ -1,5 +1,3 @@
-<a id="composedlinerange"></a>
-
 # ComposedLineRange object
 
 `app.project.item(index).layer(index).text.sourceText.value.composedLineRange(composedLineIndexStart, [signedComposedLineIndexEnd])`
@@ -47,8 +45,6 @@ textDocument.composedLineRange(1,-1).characterRange().fillColor = [0, 0, 1.0];
 
 ## Attributes
 
-<a id="composedlinerange-characterend"></a>
-
 ### ComposedLineRange.characterEnd
 
 `ComposedLineRange.characterEnd`
@@ -64,8 +60,6 @@ Throws an exception on access if the effective value would exceed the bounds of 
 Unsigned integer; read-only.
 
 ---
-
-<a id="composedlinerange-characterstart"></a>
 
 ### ComposedLineRange.characterStart
 
@@ -83,8 +77,6 @@ Unsigned integer; read-only.
 
 ---
 
-<a id="composedlinerange-israngevalid"></a>
-
 ### ComposedLineRange.isRangeValid
 
 `ComposedLineRange.isRangeValid`
@@ -100,8 +92,6 @@ Boolean; read-only.
 ---
 
 ## Methods
-
-<a id="composedlinerange-characterrange"></a>
 
 ### ComposedLineRange.characterRange()
 
@@ -124,8 +114,6 @@ None.
 [CharacterRange object](characterrange.md#characterrange);
 
 ---
-
-<a id="composedlinerange-tostring"></a>
 
 ### ComposedLineRange.toString()
 

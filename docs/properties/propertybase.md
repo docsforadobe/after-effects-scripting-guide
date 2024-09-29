@@ -1,5 +1,3 @@
-<a id="propertybase"></a>
-
 # PropertyBase object
 
 `app.project.item(index).layer(index).propertySpec`
@@ -52,8 +50,6 @@ alert(effect2.name); // invalid reference because group index positions have cha
 
 ## Attributes
 
-<a id="propertybase-active"></a>
-
 ### PropertyBase.active
 
 `app.project.item(index).layer(index).active`
@@ -73,8 +69,6 @@ Boolean; read-only.
 
 ---
 
-<a id="propertybase-cansetenabled"></a>
-
 ### PropertyBase.canSetEnabled
 
 `app.project.item(index).layer(index).propertySpec.canSetEnabled`
@@ -88,8 +82,6 @@ When true, you can set the `enabled` attribute value. Generally, this is true if
 Boolean; read-only.
 
 ---
-
-<a id="propertybase-elided"></a>
 
 ### PropertyBase.elided
 
@@ -113,8 +105,6 @@ Boolean; read-only.
 
 ---
 
-<a id="propertybase-enabled"></a>
-
 ### PropertyBase.enabled
 
 `app.project.item(index).layer(index).enabled`
@@ -134,8 +124,6 @@ Boolean; read/write if `canSetEnabled` is true, read-only if `canSetEnabled` is 
 
 ---
 
-<a id="propertybase-iseffect"></a>
-
 ### PropertyBase.isEffect
 
 `app.project.item(index).layer(index).propertySpec.isEffect`
@@ -149,8 +137,6 @@ When true, this property is an effect PropertyGroup.
 Boolean; read-only.
 
 ---
-
-<a id="propertybase-ismask"></a>
 
 ### PropertyBase.isMask
 
@@ -166,8 +152,6 @@ Boolean; read-only.
 
 ---
 
-<a id="propertybase-ismodified"></a>
-
 ### PropertyBase.isModified
 
 `app.project.item(index).layer(index).propertySpec.isModified`
@@ -182,8 +166,6 @@ Boolean; read-only.
 
 ---
 
-<a id="propertybase-matchname"></a>
-
 ### PropertyBase.matchName
 
 `app.project.item(index).layer(index).propertySpec.matchName`
@@ -197,8 +179,6 @@ A special name for the property used to build unique naming paths. The match nam
 String; read-only.
 
 ---
-
-<a id="propertybase-name"></a>
 
 ### PropertyBase.name
 
@@ -219,8 +199,6 @@ String; read/write for a child of an indexed group; otherwise read-only.
 
 ---
 
-<a id="propertybase-parentproperty"></a>
-
 ### PropertyBase.parentProperty
 
 `app.project.item(index).layer(index).propertySpec.parentProperty`
@@ -234,8 +212,6 @@ The property group that is the immediate parent of this property, or null if thi
 PropertyGroup object or null; read-only.
 
 ---
-
-<a id="propertybase-propertydepth"></a>
 
 ### PropertyBase.propertyDepth
 
@@ -251,8 +227,6 @@ Integer; read-only.
 
 ---
 
-<a id="propertybase-propertyindex"></a>
-
 ### PropertyBase.propertyIndex
 
 `app.project.item(index).layer(index).propertySpec.propertyIndex`
@@ -266,8 +240,6 @@ The position index of this property within its parent group, if it is a child of
 Integer; read-only.
 
 ---
-
-<a id="propertybase-propertytype"></a>
 
 ### PropertyBase.propertyType
 
@@ -287,8 +259,6 @@ A `PropertyType` enumerated value; read/write. One of:
 
 ---
 
-<a id="propertybase-selected"></a>
-
 ### PropertyBase.selected
 
 `app.project.item(index).layer(index).propertySpec.selected`
@@ -302,8 +272,6 @@ When true, this property is selected. Set to true to select the property, or to 
 Boolean; read/write.
 
 ## Methods
-
-<a id="propertybase-duplicate"></a>
 
 ### PropertyBase.duplicate()
 
@@ -322,8 +290,6 @@ None.
 PropertyBase object.
 
 ---
-
-<a id="propertybase-moveto"></a>
 
 ### PropertyBase.moveTo()
 
@@ -346,8 +312,6 @@ Using this method invalidates existing references to other children in the same 
 Nothing.
 
 ---
-
-<a id="propertybase-propertygroup"></a>
 
 ### PropertyBase.propertyGroup()
 
@@ -373,8 +337,6 @@ var containing_layer = my_property.propertyGroup(my_property.propertyDepth);
 ```
 
 ---
-
-<a id="propertybase-remove"></a>
 
 ### PropertyBase.remove()
 

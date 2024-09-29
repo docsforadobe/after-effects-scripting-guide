@@ -1,5 +1,3 @@
-<a id="footagesource"></a>
-
 # FootageSource object
 
 `app.project.item(index).mainSource`
@@ -16,8 +14,6 @@ The FootageSource object holds information describing the source of some footage
 ---
 
 ## Attributes
-
-<a id="footagesource-alphamode"></a>
 
 ### FootageSource.alphaMode
 
@@ -40,8 +36,6 @@ An Alpha Mode enumerated value; (read/write). One of:
 
 ---
 
-<a id="footagesource-conformframerate"></a>
-
 ### FootageSource.conformFrameRate
 
 `app.project.item(index).mainSource.conformFrameRate`
@@ -59,8 +53,6 @@ Floating-point value in the range `[0.0..99.0]`; read/write.
 
 ---
 
-<a id="footagesource-displayframerate"></a>
-
 ### FootageSource.displayFrameRate
 
 `app.project.item(index).mainSource.displayFrameRate`
@@ -77,8 +69,6 @@ The effective frame rate as displayed and rendered in compositions by After Effe
 Floating-point value in the range `[0.0..99.0]`; read-only.
 
 ---
-
-<a id="footagesource-fieldseparationtype"></a>
 
 ### FootageSource.fieldSeparationType
 
@@ -101,8 +91,6 @@ A `FieldSeparationType` enumerated value; read/write. One of:
 
 ---
 
-<a id="footagesource-hasalpha"></a>
-
 ### FootageSource.hasAlpha
 
 `app.project.item(index).mainSource.hasAlpha`
@@ -119,8 +107,6 @@ When true, the footage has an alpha component. In this case, the attributes `alp
 Boolean; read-only.
 
 ---
-
-<a id="footagesource-highqualityfieldseparation"></a>
 
 ### FootageSource.highQualityFieldSeparation
 
@@ -139,8 +125,6 @@ Boolean; read/write.
 
 ---
 
-<a id="footagesource-invertalpha"></a>
-
 ### FootageSource.invertAlpha
 
 `app.project.item(index).mainSource.invertAlpha`
@@ -157,8 +141,6 @@ When true, an alpha channel in a footage clip or proxy should be inverted. This 
 Boolean; read/write.
 
 ---
-
-<a id="footagesource-isstill"></a>
 
 ### FootageSource.isStill
 
@@ -177,8 +159,6 @@ Boolean; read-only.
 
 ---
 
-<a id="footagesource-loop"></a>
-
 ### FootageSource.loop
 
 `app.project.item(index).mainSource.loop`
@@ -195,8 +175,6 @@ The number of times that the footage is to be played consecutively when used in 
 Integer in the range `[1..9999]`; default is 1; read/write.
 
 ---
-
-<a id="footagesource-nativeframerate"></a>
 
 ### FootageSource.nativeFrameRate
 
@@ -215,8 +193,6 @@ Floating-point; read-only.
 
 ---
 
-<a id="footagesource-premulcolor"></a>
-
 ### FootageSource.premulColor
 
 `app.project.item(index).mainSource.premulColor`
@@ -233,8 +209,6 @@ The color to be premultiplied. This attribute is valid only if the `alphaMode` i
 Array of three floating-point values `[R, G, B]`, in the range `[0.0..1.0]`; read/write.
 
 ---
-
-<a id="footagesource-removepulldown"></a>
 
 ### FootageSource.removePulldown
 
@@ -267,8 +241,6 @@ A `PulldownPhase` enumerated value; read/write. One of:
 
 ## Methods
 
-<a id="footagesource-guessalphamode"></a>
-
 ### FootageSource.guessAlphaMode()
 
 `app.project.item(index).mainSource.guessAlphaMode()`
@@ -289,8 +261,6 @@ None.
 Nothing.
 
 ---
-
-<a id="footagesource-guesspulldown"></a>
 
 ### FootageSource.guessPulldown()
 

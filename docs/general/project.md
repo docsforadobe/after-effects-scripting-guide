@@ -1,5 +1,3 @@
-<a id="project"></a>
-
 # Project object
 
 `app.project`
@@ -11,8 +9,6 @@ The project object represents an After Effects project. Attributes provide acces
 ---
 
 ## Attributes
-
-<a id="project-activeitem"></a>
 
 ### Project.activeItem
 
@@ -28,8 +24,6 @@ The item that is currently active and is to be acted upon, or a null if no item 
 
 ---
 
-<a id="project-bitsperchannel"></a>
-
 ### Project.bitsPerChannel
 
 `app.project.bitsPerChannel`
@@ -43,8 +37,6 @@ The color depth of the current project, either 8, 16, or 32 bits.
 Integer (8, 16, or 32 only); read/write.
 
 ---
-
-<a id="project-compensateforscenereferredprofiles"></a>
 
 ### Project.compensateForSceneReferredProfiles
 
@@ -62,8 +54,6 @@ True if Compensate for Scene-referred Profiles should be enabled for this projec
 Boolean; read/write.
 
 ---
-
-<a id="project-dirty"></a>
 
 ### Project.dirty
 
@@ -87,8 +77,6 @@ Boolean; read-only.
 
 ---
 
-<a id="project-displaystartframe"></a>
-
 ### Project.displayStartFrame
 
 `app.project.displayStartFrame`
@@ -102,8 +90,6 @@ An alternate way of setting the Frame Count menu setting in the Project Settings
 Integer (0 or 1); read/write.
 
 ---
-
-<a id="project-expressionengine"></a>
 
 ### Project.expressionEngine
 
@@ -125,8 +111,6 @@ String; read/write.
 
 ---
 
-<a id="project-feetframesfilmtype"></a>
-
 ### Project.feetFramesFilmType
 
 `app.project.feetFramesFilmType`
@@ -144,8 +128,6 @@ A `FeetFramesFilmType` enumerated value; read/write. One of:
 
 ---
 
-<a id="project-file"></a>
-
 ### Project.file
 
 `app.project.file`
@@ -159,8 +141,6 @@ The [Extendscript File](https://extendscript.docsforadobe.dev/file-system-access
 [File](https://extendscript.docsforadobe.dev/file-system-access/file-object.html) object or null if project has not been saved; read-only.
 
 ---
-
-<a id="project-footagetimecodedisplaystarttype"></a>
 
 ### Project.footageTimecodeDisplayStartType
 
@@ -178,8 +158,6 @@ A `FootageTimecodeDisplayStartType` enumerated value; read/write. One of:
 - `FootageTimecodeDisplayStartType.FTCS_USE_SOURCE_MEDIA`
 
 ---
-
-<a id="project-framescounttype"></a>
 
 ### Project.framesCountType
 
@@ -202,8 +180,6 @@ Setting this attribute to `FramesCountType.FC_TIMECODE_CONVERSION` resets the `d
 
 ---
 
-<a id="project-framesusefeetframes"></a>
-
 ### Project.framesUseFeetFrames
 
 `app.project.framesUseFeetFrames`
@@ -217,8 +193,6 @@ The Use Feet + Frames setting in the Project Settings dialog box. True if using 
 Boolean; read/write.
 
 ---
-
-<a id="project-gpuacceltype"></a>
 
 ### Project.gpuAccelType
 
@@ -276,8 +250,6 @@ app.project.gpuAccelType = GpuAccelType.METAL;
 
 ---
 
-<a id="project-items"></a>
-
 ### Project.items
 
 `app.project.items`
@@ -292,8 +264,6 @@ All of the items in the project.
 
 ---
 
-<a id="project-linearblending"></a>
-
 ### Project.linearBlending
 
 `app.project.linearBlending`
@@ -307,8 +277,6 @@ True if linear blending should be used for this project; otherwise false.
 Boolean; read/write.
 
 ---
-
-<a id="project-linearizeworkingspace"></a>
 
 ### Project.linearizeWorkingSpace
 
@@ -326,8 +294,6 @@ True if Linearize Working Space should be enabled for this project; otherwise fa
 Boolean; read/write.
 
 ---
-
-<a id="project-numitems"></a>
 
 ### Project.numItems
 
@@ -350,8 +316,6 @@ alert("There are " + numItems + " items in this project.")
 
 ---
 
-<a id="project-renderqueue"></a>
-
 ### Project.renderQueue
 
 `app.project.renderQueue`
@@ -365,8 +329,6 @@ The renderqueue of the project.
 [RenderQueue object](../renderqueue/renderqueue.md#renderqueue); read-only.
 
 ---
-
-<a id="project-revision"></a>
 
 ### Project.revision
 
@@ -382,8 +344,6 @@ Integer; the current revision version of the project; read-only.
 
 ---
 
-<a id="project-rootfolder"></a>
-
 ### Project.rootFolder
 
 `app.project.rootFolder`
@@ -398,8 +358,6 @@ The root folder containing the contents of the project; this is a virtual folder
 
 ---
 
-<a id="project-selection"></a>
-
 ### Project.selection
 
 `app.project.selection`
@@ -413,8 +371,6 @@ All items selected in the Project panel, in the sort order shown in the Project 
 Array of [Item objects](../items/item.md#item); read-only.
 
 ---
-
-<a id="project-timedisplaytype"></a>
 
 ### Project.timeDisplayType
 
@@ -432,8 +388,6 @@ A `TimeDisplayType` enumerated value; read/write. One of:
 - `TimeDisplayType.TIMECODE`
 
 ---
-
-<a id="project-tooltype"></a>
 
 ### Project.toolType
 
@@ -527,8 +481,6 @@ if (item !== null && (item.typeName === "Footage" || item.typeName === "Composit
 
 ---
 
-<a id="project-transparencygridthumbnails"></a>
-
 ### Project.transparencyGridThumbnails
 
 `app.project.transparencyGridThumbnails`
@@ -542,8 +494,6 @@ When true, thumbnail views use the transparency checkerboard pattern.
 Boolean; read/write.
 
 ---
-
-<a id="project-usedfonts"></a>
 
 ### Project.usedFonts
 
@@ -585,8 +535,6 @@ Array of Objects; read-only.
 
 ---
 
-<a id="project-workinggamma"></a>
-
 ### Project.workingGamma
 
 `app.project.workingGamma`
@@ -605,8 +553,6 @@ Number; read/write.
 * To get the current working gamma: `var currentGamma = app.project.workingGamma;`
 
 ---
-
-<a id="project-workingspace"></a>
 
 ### Project.workingSpace
 
@@ -629,8 +575,6 @@ String; read/write.
 * To get the current working space: `var currentSpace = app.project.workingSpace;`
 
 ---
-
-<a id="project-xmppacket"></a>
 
 ### Project.xmpPacket
 
@@ -672,8 +616,6 @@ app.project.xmpPacket = mdata.serialize();
 
 ## Methods
 
-<a id="project-autofixexpressions"></a>
-
 ### Project.autoFixExpressions()
 
 `app.project.autoFixExpressions(oldText, newText)`
@@ -694,8 +636,6 @@ Nothing.
 
 ---
 
-<a id="project-close"></a>
-
 ### Project.close()
 
 `app.project.close(closeOptions)`
@@ -715,8 +655,6 @@ Boolean. True on success. False if the file has not been previously saved, the u
 
 ---
 
-<a id="project-consolidatefootage"></a>
-
 ### Project.consolidateFootage()
 
 `app.project.consolidateFootage()`
@@ -734,8 +672,6 @@ None.
 Integer; the total number of footage items removed.
 
 ---
-
-<a id="project-importfile"></a>
 
 ### Project.importFile()
 
@@ -764,8 +700,6 @@ app.project.importFile(new ImportOptions(new File("sample.psd"));
 
 ---
 
-<a id="project-importfilewithdialog"></a>
-
 ### Project.importFileWithDialog()
 
 `app.project.importFileWithDialog()`
@@ -779,8 +713,6 @@ Shows an Import File dialog box. Same as the File > Import > File command.
 Array of [Item objects](../items/item.md#item) created during import; or null if the user cancels the dialog box.
 
 ---
-
-<a id="project-importplaceholder"></a>
 
 ### Project.importPlaceholder()
 
@@ -805,8 +737,6 @@ PlaceholderItem object.
 
 ---
 
-<a id="project-item"></a>
-
 ### Project.item()
 
 `app.project.item(index)`
@@ -825,8 +755,6 @@ Retrieves an item at a specified index position.
 [Item object](../items/item.md#item).
 
 ---
-
-<a id="project-itembyid"></a>
 
 ### Project.itemByID()
 
@@ -849,8 +777,6 @@ Retrieves an item by its [Item ID](../items/item.md#item-id)
 [Item object](../items/item.md#item).
 
 ---
-
-<a id="project-layerbyid"></a>
 
 ### Project.layerByID()
 
@@ -886,8 +812,6 @@ if (app.project.layerByID(layerID) === firstLayer) {
 
 ---
 
-<a id="project-listcolorprofiles"></a>
-
 ### Project.listColorProfiles()
 
 `app.project.listColorProfiles()`
@@ -905,8 +829,6 @@ None.
 Array of strings.
 
 ---
-
-<a id="project-reduceproject"></a>
 
 ### Project.reduceProject()
 
@@ -936,8 +858,6 @@ app.project.reduceProject(items);
 
 ---
 
-<a id="project-removeunusedfootage"></a>
-
 ### Project.removeUnusedFootage()
 
 `app.project.removeUnusedFootage()`
@@ -955,8 +875,6 @@ None.
 Integer; the total number of FootageItem objects removed.
 
 ---
-
-<a id="project-replacefont"></a>
 
 ### Project.replaceFont()
 
@@ -997,8 +915,6 @@ Boolean. True if at least one Layer was changed.
 
 ---
 
-<a id="project-save"></a>
-
 ### Project.save()
 
 `app.project.save([file])`
@@ -1020,8 +936,6 @@ None.
 
 ---
 
-<a id="project-savewithdialog"></a>
-
 ### Project.saveWithDialog()
 
 `app.project.saveWithDialog()`
@@ -1039,8 +953,6 @@ None.
 Boolean; true if the project was saved.
 
 ---
-
-<a id="project-setdefaultimportfolder"></a>
 
 ### Project.setDefaultImportFolder()
 
@@ -1075,8 +987,6 @@ To disable the default folder, call `setDefaultImportFolder()` with no parameter
 
 ---
 
-<a id="project-showwindow"></a>
-
 ### Project.showWindow()
 
 `app.project.showWindow(doShow)`
@@ -1097,8 +1007,6 @@ Nothing.
 ---
 
 ## Team Projects
-
-<a id="project-newteamproject"></a>
 
 ### Project.newTeamProject()
 
@@ -1123,8 +1031,6 @@ Boolean. `True` if the team project is successfully created, `false` otherwise.
 
 ---
 
-<a id="project-openteamproject"></a>
-
 ### Project.openTeamProject()
 
 `app.project.openTeamProject(teamProjectName)`
@@ -1146,8 +1052,6 @@ Opens a team project.
 Boolean. `True` if the team project is successfully opened, `false` otherwise.
 
 ---
-
-<a id="project-shareteamproject"></a>
 
 ### Project.shareTeamProject()
 
@@ -1171,8 +1075,6 @@ Boolean. `True` if the team project is successfully shared, `false` otherwise.
 
 ---
 
-<a id="project-syncteamproject"></a>
-
 ### Project.syncTeamProject()
 
 `app.project.syncTeamProject()`
@@ -1190,8 +1092,6 @@ Boolean. `True` if the team project is successfully synced, `false` otherwise.
 
 ---
 
-<a id="project-closeteamproject"></a>
-
 ### Project.closeTeamProject()
 
 `app.project.closeTeamProject()`
@@ -1208,8 +1108,6 @@ Closes a currently open team project.
 Boolean. `True` if the team project is successfully closed, `false` otherwise.
 
 ---
-
-<a id="project-convertteamprojecttoproject"></a>
 
 ### Project.convertTeamProjectToProject()
 
@@ -1233,8 +1131,6 @@ Boolean. `True` if the team project is successfully converted, `false` otherwise
 
 ---
 
-<a id="project-listteamprojects"></a>
-
 ### Project.listTeamProjects()
 
 `app.project.listTeamProjects()`
@@ -1252,8 +1148,6 @@ Archived Team Projects are not included.
 Array of strings.
 
 ---
-
-<a id="project-isteamprojectopen"></a>
 
 ### Project.isTeamProjectOpen()
 
@@ -1277,8 +1171,6 @@ Boolean. `True` if the specified team project is currently open, `false` otherwi
 
 ---
 
-<a id="project-isanyteamprojectopen"></a>
-
 ### Project.isAnyTeamProjectOpen()
 
 `app.project.isAnyTeamProjectOpen()`
@@ -1295,8 +1187,6 @@ Checks whether any team project is currently open.
 Boolean. `True` if any team project is currently open, `false` otherwise.
 
 ---
-
-<a id="project-isteamprojectenabled"></a>
 
 ### Project.isTeamProjectEnabled()
 
@@ -1315,8 +1205,6 @@ Boolean. `True` if team project is currently enabled, `false` otherwise.
 
 ---
 
-<a id="project-isloggedintoteamproject"></a>
-
 ### Project.isLoggedInToTeamProject()
 
 `app.project.isLoggedInToTeamProject()`
@@ -1333,8 +1221,6 @@ Checks whether or not the client (After Effects) is currently logged into the te
 Boolean. `True` if the client (After Effects) is currently logged into the team projects server, `false` otherwise.
 
 ---
-
-<a id="project-issynccommandenabled"></a>
 
 ### Project.isSyncCommandEnabled()
 
@@ -1353,8 +1239,6 @@ Boolean. `True` if the team projects Sync command is enabled, `false` otherwise.
 
 ---
 
-<a id="project-issharecommandenabled"></a>
-
 ### Project.isShareCommandEnabled()
 
 `app.project.isShareCommandEnabled()`
@@ -1372,8 +1256,6 @@ Boolean. `True` if the team projects Share command is enabled, `false` otherwise
 
 ---
 
-<a id="project-isresolvecommandenabled"></a>
-
 ### Project.isResolveCommandEnabled()
 
 `app.project.isResolveCommandEnabled()`
@@ -1390,8 +1272,6 @@ Checks whether or not the Resolve command is enabled.
 Boolean. `True` if the team projects Resolve command is enabled, `false` otherwise.
 
 ---
-
-<a id="project-resolveconflict"></a>
 
 ### Project.resolveConflict()
 

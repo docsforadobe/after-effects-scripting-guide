@@ -1,5 +1,3 @@
-<a id="fontsobject"></a>
-
 # Fonts object
 
 `app.fonts`
@@ -26,8 +24,6 @@ After any change to the font ecosystem from installing new real fonts, the outst
 ---
 
 ## Attributes
-
-<a id="fontsobject-allfonts"></a>
 
 ### FontsObject.allFonts
 
@@ -72,8 +68,6 @@ alert(firstFontFamilyName+" "+firstFamilyStyle);
 
 ---
 
-<a id="fontsobject-favoritefontfamilylist"></a>
-
 ### FontsObject.favoriteFontFamilyList
 
 `app.fonts.favoriteFontFamilyList`
@@ -90,8 +84,6 @@ Provides access to the Favorites list presented in the Character panel and Prope
 Array of Strings; read/write.
 
 ---
-
-<a id="fontsobject-fontsduplicatebypostscriptname"></a>
 
 ### FontsObject.fontsDuplicateByPostScriptName
 
@@ -111,8 +103,6 @@ This returns an Array in which each element is an Array of [Font objects](fontob
 Array of Arrays of [Font Objects](fontobject.md#fontobject); read-only.
 
 ---
-
-<a id="fontsobject-fontserverrevision"></a>
 
 ### FontsObject.fontServerRevision
 
@@ -142,8 +132,6 @@ alert(fsRev);
 
 ---
 
-<a id="fontsobject-fontswithdefaultdesignaxes"></a>
-
 ### FontsObject.fontsWithDefaultDesignAxes
 
 `app.fonts.fontsWithDefaultDesignAxes`
@@ -164,8 +152,6 @@ alert(variableFontList.length);
 ```
 
 ---
-
-<a id="fontsobject-freezesyncsubstitutedfonts"></a>
 
 ### FontsObject.freezeSyncSubstitutedFonts
 
@@ -192,8 +178,6 @@ Boolean; read/write. One of:
 
 ---
 
-<a id="fontsobject-missingorsubstitutedfonts"></a>
-
 ### FontsObject.missingOrSubstitutedFonts
 
 `app.fonts.missingOrSubstitutedFonts`
@@ -211,8 +195,6 @@ Array of [Font objects](fontobject.md#fontobject); read-only.
 
 ---
 
-<a id="fontsobject-mrufontfamilylist"></a>
-
 ### FontsObject.mruFontFamilyList
 
 `app.fonts.mruFontFamilyList`
@@ -229,8 +211,6 @@ Provides access to the Most Recently Used (MRU) list presented in the Character 
 Array of Strings; read/write.
 
 ---
-
-<a id="fontsobject-substitutedfontreplacementmatchpolicy"></a>
 
 ### FontsObject.substitutedFontReplacementMatchPolicy
 
@@ -258,8 +238,6 @@ A `SubstitutedFontReplacementMatchPolicy` enumerated value; read/write. One of:
 ---
 
 ## Methods
-
-<a id="fontsobject-getctscriptforstring"></a>
 
 ### FontsObject.getCTScriptForString()
 
@@ -297,8 +275,6 @@ Array of generic objects;
 > - Key `ctScript` will be set to the `CTScript` which applies to the characters in the range.
 
 —
-
-<a id="fontsobject-getdefaultfontforctscript"></a>
 
 ### FontsObject.getDefaultFontForCTScript()
 
@@ -338,8 +314,6 @@ var font = app.fonts.getDefaultFontForCTScript(CTScript.CT_JAPANESE_SCRIPT);
 
 ---
 
-<a id="fontsobject-getfontbyid"></a>
-
 ### FontsObject.getFontByID()
 
 `app.fonts.getFontByID(fontID)`
@@ -370,8 +344,6 @@ alert(font1.fontID == font2.fontID);
 
 ---
 
-<a id="fontsobject-getfontsbyfamilynameandstylename"></a>
-
 ### FontsObject.getFontsByFamilyNameAndStyleName()
 
 `app.fonts.getFontsByFamilyNameAndStyleName(familyName, styleName)`
@@ -399,8 +371,6 @@ alert(fontList.length);
 Array of [Font objects](fontobject.md#fontobject); read-only.
 
 ---
-
-<a id="fontsobject-getfontsbypostscriptname"></a>
 
 ### FontsObject.getFontsByPostScriptName()
 
@@ -432,8 +402,6 @@ Array of [Font objects](fontobject.md#fontobject); read-only.
 
 ---
 
-<a id="fontsobject-pollforandpushnonsystemfontfolderschanges"></a>
-
 ### FontsObject.pollForAndPushNonSystemFontFoldersChanges()
 
 `app.fonts.pollForAndPushNonSystemFontFoldersChanges()`
@@ -463,8 +431,6 @@ Boolean; One of:
 - `true` if a change in the font environment has been detected and an asynchronous update scheduled to deal with it. This state will be cleared once the update has been processed, at which time [FontsObject.fontServerRevision](#fontsobject-fontserverrevision) will return an incremented value.
 
 —
-
-<a id="fontsobject-setdefaultfontforctscript"></a>
 
 ### FontsObject.setDefaultFontForCTScript()
 

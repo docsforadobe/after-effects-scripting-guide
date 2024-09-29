@@ -1,5 +1,3 @@
-<a id="system"></a>
-
 # System object
 
 `system`
@@ -19,8 +17,6 @@ confirm("You are: " + system.userName + " running on " + system.machineName + ".
 
 ## Attributes
 
-<a id="system-machinename"></a>
-
 ### System.machineName
 
 `system.machineName`
@@ -34,8 +30,6 @@ The name of the computer on which After Effects is running.
 String; read-only.
 
 ---
-
-<a id="system-osname"></a>
 
 ### System.osName
 
@@ -54,8 +48,6 @@ String; read-only.
 
 ---
 
-<a id="system-osversion"></a>
-
 ### System.osVersion
 
 `system.osVersion`
@@ -69,8 +61,6 @@ The version of the current local operating system.
 String; read-only.
 
 ---
-
-<a id="system-username"></a>
 
 ### System.userName
 
@@ -87,8 +77,6 @@ String; read-only.
 ---
 
 ## Methods
-
-<a id="system-callsystem"></a>
 
 ### System.callSystem()
 

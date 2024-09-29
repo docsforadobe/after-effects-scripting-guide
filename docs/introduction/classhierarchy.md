@@ -1,5 +1,3 @@
-<a id="classhierarchy"></a>
-
 # After Effects Class Hierarchy
 
 This section lists the class hierarchies for relevant AE API elements. For a primer on what this means, see [Javascript Classes](javascript.md#javascript-classes)
@@ -18,8 +16,6 @@ Note that some classes exist only as base classes, and demonstrate unexpected be
 
 ---
 
-<a id="classhierarchy-properties"></a>
-
 ## Properties, Property Groups, and Layers
 
 - [PropertyBase object](../properties/propertybase.md#propertybase) ⚠
@@ -35,8 +31,6 @@ Note that some classes exist only as base classes, and demonstrate unexpected be
 
 ---
 
-<a id="classhierarchy-items"></a>
-
 ## Project Items
 
 - [Item object](../items/item.md#item) ❌
@@ -47,8 +41,6 @@ Note that some classes exist only as base classes, and demonstrate unexpected be
 
 ---
 
-<a id="classhierarchy-sources"></a>
-
 ## Footage Item Sources
 
 - [FootageSource object](../sources/footagesource.md#footagesource) ❌
@@ -57,8 +49,6 @@ Note that some classes exist only as base classes, and demonstrate unexpected be
   - [SolidSource object](../sources/solidsource.md#solidsource)
 
 ---
-
-<a id="classhierarchy-collections"></a>
 
 ## Collections
 

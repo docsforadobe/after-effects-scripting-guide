@@ -1,5 +1,3 @@
-<a id="footageitem"></a>
-
 # FootageItem object
 
 `app.project.item(index)`
@@ -14,8 +12,6 @@ The FootageItem object represents a footage item imported into a project, which 
 ---
 
 ## Attributes
-
-<a id="footageitem-file"></a>
 
 ### FootageItem.file
 
@@ -32,8 +28,6 @@ If the FootageItem’s `mainSource` is a FileSource, this is the same as [Footag
 [File](https://extendscript.docsforadobe.dev/file-system-access/file-object.html) object; read-only.
 
 ---
-
-<a id="footageitem-mainsource"></a>
 
 ### FootageItem.mainSource
 
@@ -57,8 +51,6 @@ If this is a FileSource object, and the [footageMissing](avitem.md#avitem-footag
 
 ## Methods
 
-<a id="footageitem-openinviewer"></a>
-
 ### FootageItem.openInViewer()
 
 `app.project.item(index).openInViewer()`
@@ -79,8 +71,6 @@ None.
 [Viewer object](../other/viewer.md#viewer) for the Footage panel, or null if the footage could not be opened.
 
 ---
-
-<a id="footageitem-replace"></a>
 
 ### FootageItem.replace()
 
@@ -103,8 +93,6 @@ If the specified file has an unlabeled alpha channel, the method estimates the a
 
 ---
 
-<a id="footageitem-replacewithplaceholder"></a>
-
 ### FootageItem.replaceWithPlaceholder()
 
 `app.project.item(index).replaceWithPlaceholder(name, width, height, frameRate, duration)`
@@ -123,8 +111,6 @@ Changes the source of this FootageItem to the specified placeholder. Creates a n
 | `duration`  | The duration of the placeholder in seconds, a<br/>floating-point value in the range `[0.0..10800.0]`. |
 
 ---
-
-<a id="footageitem-replacewithsequence"></a>
 
 ### FootageItem.replaceWithSequence()
 
@@ -145,8 +131,6 @@ The method preserves interpretation parameters from the previous `mainSource` ob
 | `forceAlphabetical` | When true, use the “Force alphabetical order” option.                                                                                                                                |
 
 ---
-
-<a id="footageitem-replacewithsolid"></a>
 
 ### FootageItem.replaceWithSolid()
 

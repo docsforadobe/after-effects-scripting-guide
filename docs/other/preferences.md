@@ -1,5 +1,3 @@
-<a id="preferences"></a>
-
 # Preferences object
 
 `app.preferences`
@@ -32,8 +30,6 @@ The third argument is enum `PREFType` value, one of:
 
 ## Methods
 
-<a id="preferences-deletepref"></a>
-
 ### Preferences.deletePref()
 
 `app.preferences.deletePref(sectionName, keyName[, prefType])`
@@ -62,8 +58,6 @@ app.preferences.deletePref("Settings_Precomp Cropper", "trimPrecomps");
 ```
 
 ---
-
-<a id="preferences-getprefasbool"></a>
 
 ### Preferences.getPrefAsBool()
 
@@ -102,8 +96,6 @@ alert("The setting is: " + debuggerEnabled);
 
 ---
 
-<a id="preferences-getprefasfloat"></a>
-
 ### Preferences.getPrefAsFloat()
 
 `app.preferences.getPrefAsFloat(sectionName, keyName[, prefType])`
@@ -124,8 +116,6 @@ Retrieves a preference value from the preferences file, and parses it as a float
 Float.
 
 ---
-
-<a id="preferences-getprefaslong"></a>
 
 ### Preferences.getPrefAsLong()
 
@@ -148,8 +138,6 @@ Long.
 
 ---
 
-<a id="preferences-getprefasstring"></a>
-
 ### Preferences.getPrefAsString()
 
 `app.preferences.getPrefAsString(sectionName, keyName[, prefType])`
@@ -170,8 +158,6 @@ Retrieves a preference value from the preferences file, and parses it as a strin
 String.
 
 ---
-
-<a id="preferences-havepref"></a>
 
 ### Preferences.havePref()
 
@@ -194,8 +180,6 @@ Boolean.
 
 ---
 
-<a id="preferences-reload"></a>
-
 ### Preferences.reload()
 
 `app.preferences.reload()`
@@ -213,8 +197,6 @@ None.
 Nothing.
 
 ---
-
-<a id="preferences-saveprefasbool"></a>
 
 ### Preferences.savePrefAsBool()
 
@@ -238,8 +220,6 @@ Nothing.
 
 ---
 
-<a id="preferences-saveprefasfloat"></a>
-
 ### Preferences.savePrefAsFloat()
 
 `app.preferences.savePrefAsFloat(sectionName, keyName, value[, prefType])`
@@ -261,8 +241,6 @@ Saves a preference item as a float.
 Nothing.
 
 ---
-
-<a id="preferences-saveprefaslong"></a>
 
 ### Preferences.savePrefAsLong()
 
@@ -286,8 +264,6 @@ Nothing.
 
 ---
 
-<a id="preferences-saveprefasstring"></a>
-
 ### Preferences.savePrefAsString()
 
 `app.preferences.savePrefAsString(sectionName, keyName, value[, prefType])`
@@ -309,8 +285,6 @@ Saves a preference item as a string.
 Nothing.
 
 ---
-
-<a id="preferences-savetodisk"></a>
 
 ### Preferences.saveToDisk()
 

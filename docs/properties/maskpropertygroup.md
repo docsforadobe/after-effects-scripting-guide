@@ -1,5 +1,3 @@
-<a id="maskpropertygroup"></a>
-
 # MaskPropertyGroup object
 
 `app.project.item(index).layer(index).mask`
@@ -13,8 +11,6 @@ The MaskPropertyGroup object encapsulates mask attributes in a layer.
 ---
 
 ## Attributes
-
-<a id="maskpropertygroup-color"></a>
 
 ### MaskPropertyGroup.color
 
@@ -30,8 +26,6 @@ Array of three floating-point values, [R, G, B], in the range `[0.0..1.0]`; read
 
 ---
 
-<a id="maskpropertygroup-inverted"></a>
-
 ### MaskPropertyGroup.inverted
 
 `app.project.item(index).layer(index).mask(index).inverted`
@@ -46,8 +40,6 @@ Boolean; read/write.
 
 ---
 
-<a id="maskpropertygroup-locked"></a>
-
 ### MaskPropertyGroup.locked
 
 `app.project.item(index).layer(index).mask(index).locked`
@@ -61,8 +53,6 @@ When true, the mask is locked and cannot be edited in the user interface; otherw
 Boolean; read/write.
 
 ---
-
-<a id="maskpropertygroup-maskfeatherfalloff"></a>
 
 ### MaskPropertyGroup.maskFeatherFalloff
 
@@ -80,8 +70,6 @@ A `MaskFeatherFalloff` enumerated value; read/write. One of:
 - `MaskFeatherFalloff.FFO_SMOOTH`
 
 ---
-
-<a id="maskpropertygroup-maskmode"></a>
 
 ### MaskPropertyGroup.maskMode
 
@@ -105,8 +93,6 @@ A `MaskMode` enumerated value; read/write. One of:
 
 ---
 
-<a id="maskpropertygroup-maskmotionblur"></a>
-
 ### MaskPropertyGroup.maskMotionBlur
 
 `app.project.item(index).layer(index).mask(index).maskMotionBlur`
@@ -124,8 +110,6 @@ A `MakMotionBlur` enumerated value; read/write. One of:
 - `MaskMotionBlur.OFF`
 
 ---
-
-<a id="maskpropertygroup-rotobezier"></a>
 
 ### MaskPropertyGroup.rotoBezier
 

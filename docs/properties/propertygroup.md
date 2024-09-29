@@ -1,5 +1,3 @@
-<a id="propertygroup"></a>
-
 # PropertyGroup object
 
 `app.project.item(index).layer(index).propertyGroupSpec`
@@ -15,8 +13,6 @@ The PropertyGroup object represents a group of properties. It can contain Proper
 ---
 
 ## Attributes
-
-<a id="propertygroup-numproperties"></a>
 
 ### PropertyGroup.numProperties
 
@@ -37,8 +33,6 @@ Integer; read-only.
 ---
 
 ## Methods
-
-<a id="propertygroup-addproperty"></a>
 
 ### PropertyGroup.addProperty()
 
@@ -91,8 +85,6 @@ One workaround is to store the index of the added property with property.propert
 
 ---
 
-<a id="propertygroup-canaddproperty"></a>
-
 ### PropertyGroup.canAddProperty()
 
 `app.project.item(index).layer(index).propertyGroupSpec.canAddProperty(name)`
@@ -119,8 +111,6 @@ maskGroup.canAddProperty("blend"); // returns false
 Boolean.
 
 ---
-
-<a id="propertygroup-property"></a>
 
 ### PropertyGroup.property()
 

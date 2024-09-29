@@ -1,5 +1,3 @@
-<a id="rqitemcollection"></a>
-
 # RQItemCollection object
 
 `app.project.renderQueue.items`
@@ -13,8 +11,6 @@ The RQItemCollection contains all of the render-queue items in a project, as sho
 ---
 
 ## Methods
-
-<a id="rqitemcollection-add"></a>
 
 ### RQItemCollection.add()
 

@@ -1,5 +1,3 @@
-<a id="view"></a>
-
 # View object
 
 `app.activeViewer.views[0]`
@@ -11,8 +9,6 @@ The View object represents a specific view.
 ---
 
 ## Attributes
-
-<a id="view-active"></a>
 
 ### View.active
 
@@ -27,8 +23,6 @@ When true, indicates if the viewer panel is focused, and thereby frontmost.
 Boolean; read-only.
 
 ---
-
-<a id="view-options"></a>
 
 ### View.options
 
@@ -45,8 +39,6 @@ Options object for this View
 ---
 
 ## Methods
-
-<a id="view-setactive"></a>
 
 ### View.setActive()
 

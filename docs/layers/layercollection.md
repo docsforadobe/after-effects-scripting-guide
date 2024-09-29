@@ -1,5 +1,3 @@
-<a id="layercollection"></a>
-
 # LayerCollection object
 
 `app.project.item(index).layers`
@@ -27,8 +25,6 @@ alert("number of layers after is " + layerCollection.length);
 
 ## Methods
 
-<a id="layercollection-add"></a>
-
 ### LayerCollection.add()
 
 `app.project.item(index).layers.add(item[, duration])`
@@ -49,8 +45,6 @@ Creates a new [AVLayer object](avlayer.md#avlayer) containing the specified item
 
 ---
 
-<a id="layercollection-addboxtext"></a>
-
 ### LayerCollection.addBoxText()
 
 `app.project.item(index).layers.addBoxText([width, height])`
@@ -69,8 +63,6 @@ Creates a new paragraph (box) text layer with [TextDocument.lineOrientation](../
 TextLayer object.
 
 ---
-
-<a id="layercollection-addcamera"></a>
 
 ### LayerCollection.addCamera()
 
@@ -92,8 +84,6 @@ Creates a new camera layer and adds the [CameraLayer object](cameralayer.md#came
 
 ---
 
-<a id="layercollection-addlight"></a>
-
 ### LayerCollection.addLight()
 
 `app.project.item(index).layers.addLight(name, centerPoint)`
@@ -114,8 +104,6 @@ Creates a new light layer and adds the [LightLayer object](lightlayer.md#lightla
 
 ---
 
-<a id="layercollection-addnull"></a>
-
 ### LayerCollection.addNull()
 
 `app.project.item(index).layers.addNull([duration])`
@@ -135,8 +123,6 @@ Creates a new null layer and adds the [AVLayer object](avlayer.md#avlayer) to th
 
 ---
 
-<a id="layercollection-addshape"></a>
-
 ### LayerCollection.addShape()
 
 `app.project.item(index).layers.addShape()`
@@ -154,8 +140,6 @@ None.
 ShapeLayer object.
 
 ---
-
-<a id="layercollection-addsolid"></a>
 
 ### LayerCollection.addSolid()
 
@@ -181,8 +165,6 @@ Creates a new [SolidSource object](../sources/solidsource.md#solidsource), with 
 
 ---
 
-<a id="layercollection-addtext"></a>
-
 ### LayerCollection.addText()
 
 `app.project.item(index).layers.addText([sourceText])`
@@ -201,8 +183,6 @@ Creates a new point text layer with [TextDocument.lineOrientation](../text/textd
 [TextLayer object](textlayer.md#textlayer).
 
 ---
-
-<a id="layercollection-addverticalboxtext"></a>
 
 ### LayerCollection.addVerticalBoxText()
 
@@ -226,8 +206,6 @@ TextLayer object.
 
 ---
 
-<a id="layercollection-addverticaltext"></a>
-
 ### LayerCollection.addVerticalText()
 
 `app.project.item(index).layers.addVerticalText([sourceText])`
@@ -250,8 +228,6 @@ Creates a new point text layer with [TextDocument.lineOrientation](../text/textd
 
 ---
 
-<a id="layercollection-byname"></a>
-
 ### LayerCollection.byName()
 
 `app.project.item(index).layers.byName(name)`
@@ -270,8 +246,6 @@ Returns the first (topmost) layer found in this collection with the specified na
 [Layer object](layer.md#layer) or null.
 
 ---
-
-<a id="layercollection-precompose"></a>
 
 ### LayerCollection.precompose()
 

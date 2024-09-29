@@ -1,5 +1,3 @@
-<a id="lightlayer"></a>
-
 # LightLayer object
 
 `app.project.item(index).layer(index)`
@@ -36,8 +34,6 @@ LightLayer defines no additional attributes, but has different AE properties tha
 ---
 
 ## Attributes
-
-<a id="lightlayer-lighttype"></a>
 
 ### LightLayer.lightType
 

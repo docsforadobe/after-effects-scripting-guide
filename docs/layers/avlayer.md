@@ -1,5 +1,3 @@
-<a id="avlayer"></a>
-
 # AVLayer object
 
 `app.project.item(index).layer(index)`
@@ -67,8 +65,6 @@ firstLayer.inPoint = 2;
 
 ## Attributes
 
-<a id="avlayer-adjustmentlayer"></a>
-
 ### AVLayer.adjustmentLayer
 
 `app.project.item(index).layer(index).adjustmentLayer`
@@ -82,8 +78,6 @@ True if the layer is an adjustment layer.
 Boolean; read/write.
 
 ---
-
-<a id="avlayer-audioactive"></a>
 
 ### AVLayer.audioActive
 
@@ -100,8 +94,6 @@ Boolean; read-only.
 
 ---
 
-<a id="avlayer-audioenabled"></a>
-
 ### AVLayer.audioEnabled
 
 `app.project.item(index).layer(index).audioEnabled`
@@ -115,8 +107,6 @@ When true, the layer’s audio is enabled. This value corresponds to the audio t
 Boolean; read/write.
 
 ---
-
-<a id="avlayer-blendingmode"></a>
 
 ### AVLayer.blendingMode
 
@@ -172,8 +162,6 @@ A BlendingMode enumerated value; read/write. One of:
 
 ---
 
-<a id="avlayer-cansetcollapsetransformation"></a>
-
 ### AVLayer.canSetCollapseTransformation
 
 `app.project.item(index).layer(index).canSetCollapseTransformation`
@@ -187,8 +175,6 @@ True if it is legal to change the value of the `collapseTransformation` attribut
 Boolean; read-only.
 
 ---
-
-<a id="avlayer-cansettimeremapenabled"></a>
 
 ### AVLayer.canSetTimeRemapEnabled
 
@@ -204,8 +190,6 @@ Boolean; read-only.
 
 ---
 
-<a id="avlayer-collapsetransformation"></a>
-
 ### AVLayer.collapseTransformation
 
 `app.project.item(index).layer(index).collapseTransformation`
@@ -219,8 +203,6 @@ True if collapse transformation is on for this layer.
 Boolean; read/write.
 
 ---
-
-<a id="avlayer-effectsactive"></a>
 
 ### AVLayer.effectsActive
 
@@ -236,8 +218,6 @@ Boolean; read/write.
 
 ---
 
-<a id="avlayer-environmentlayer"></a>
-
 ### AVLayer.environmentLayer
 
 `app.project.item(index).layer(index).environmentLayer`
@@ -252,8 +232,6 @@ Boolean; read/write.
 
 ---
 
-<a id="avlayer-frameblending"></a>
-
 ### AVLayer.frameBlending
 
 `app.project.item(index).layer(index).frameBlending`
@@ -267,8 +245,6 @@ True if frame blending is enabled for the layer.
 Boolean; read-only.
 
 ---
-
-<a id="avlayer-frameblendingtype"></a>
 
 ### AVLayer.frameBlendingType
 
@@ -288,8 +264,6 @@ A FrameBlendingType enumerated value; read/write. One of:
 
 ---
 
-<a id="avlayer-guidelayer"></a>
-
 ### AVLayer.guideLayer
 
 `app.project.item(index).layer(index).guideLayer`
@@ -304,8 +278,6 @@ Boolean; read/write.
 
 ---
 
-<a id="avlayer-hasaudio"></a>
-
 ### AVLayer.hasAudio
 
 `app.project.item(index).layer(index).hasAudio`
@@ -319,8 +291,6 @@ True if the layer contains an audio component, regardless of whether it is audio
 Boolean; read-only.
 
 ---
-
-<a id="avlayer-hastrackmatte"></a>
 
 ### AVLayer.hasTrackMatte
 
@@ -340,8 +310,6 @@ Boolean; read-only.
 
 ---
 
-<a id="avlayer-height"></a>
-
 ### AVLayer.height
 
 `app.project.item(index).layer(index).height`
@@ -356,8 +324,6 @@ Floating-point; read-only.
 
 ---
 
-<a id="avlayer-isnamefromsource"></a>
-
 ### AVLayer.isNameFromSource
 
 `app.project.item(index).layer(index).isNameFromSource`
@@ -371,8 +337,6 @@ True if the layer has no expressly set name, but contains a named source. In thi
 Boolean; read-only.
 
 ---
-
-<a id="avlayer-istrackmatte"></a>
 
 ### AVLayer.isTrackMatte
 
@@ -391,8 +355,6 @@ Boolean; read-only.
 
 ---
 
-<a id="avlayer-motionblur"></a>
-
 ### AVLayer.motionBlur
 
 `app.project.item(index).layer(index).motionBlur`
@@ -407,8 +369,6 @@ Boolean; read/write.
 
 ---
 
-<a id="avlayer-preservetransparency"></a>
-
 ### AVLayer.preserveTransparency
 
 `app.project.item(index).layer(index).preserveTransparency`
@@ -422,8 +382,6 @@ True if preserve transparency is enabled for the layer.
 Boolean; read/write.
 
 ---
-
-<a id="avlayer-quality"></a>
 
 ### AVLayer.quality
 
@@ -442,8 +400,6 @@ A `LayerQuality` enumerated value; read/write. One of:
 - `LayerQuality.WIREFRAME`
 
 ---
-
-<a id="avlayer-samplingquality"></a>
 
 ### AVLayer.samplingQuality
 
@@ -465,8 +421,6 @@ A `LayerSamplingQuality` enumerated value; read/write. One of:
 
 ---
 
-<a id="avlayer-source"></a>
-
 ### AVLayer.source
 
 `app.project.item(index).layer(index).source`
@@ -480,8 +434,6 @@ The source AVItem for this layer. The value is null in a Text layer. Use `AVLaye
 AVItem object; read-only.
 
 ---
-
-<a id="avlayer-threedlayer"></a>
 
 ### AVLayer.threeDLayer
 
@@ -497,8 +449,6 @@ Boolean; read/write.
 
 ---
 
-<a id="avlayer-threedperchar"></a>
-
 ### AVLayer.threeDPerChar
 
 `app.project.item(index).layer(index).threeDPerChar`
@@ -513,8 +463,6 @@ Boolean; read/write.
 
 ---
 
-<a id="avlayer-timeremapenabled"></a>
-
 ### AVLayer.timeRemapEnabled
 
 `app.project.item(index).layer(index).timeRemapEnabled`
@@ -528,8 +476,6 @@ True if time remapping is enabled for this layer.
 Boolean; read/write.
 
 ---
-
-<a id="avlayer-trackmattelayer"></a>
 
 ### AVLayer.trackMatteLayer
 
@@ -547,8 +493,6 @@ Returns the track matte layer for this layer. Returns `null` if this layer has n
 AVLayer object; read only.
 
 ---
-
-<a id="avlayer-trackmattetype"></a>
 
 ### AVLayer.trackMatteType
 
@@ -592,8 +536,6 @@ myLayer.trackMatteType = TrackMatteType.NO_TRACK_MATTE;
 
 ---
 
-<a id="avlayer-width"></a>
-
 ### AVLayer.width
 
 `app.project.item(index).layer(index).width`
@@ -609,8 +551,6 @@ Floating-point; read-only.
 ---
 
 ## Methods
-
-<a id="avlayer-addtomotiongraphicstemplate"></a>
 
 ### AVLayer.addToMotionGraphicsTemplate()
 
@@ -638,8 +578,6 @@ Returns true if the layer is successfully added, or false otherwise.
 Boolean.
 
 ---
-
-<a id="avlayer-addtomotiongraphicstemplateas"></a>
 
 ### AVLayer.addToMotionGraphicsTemplateAs()
 
@@ -669,8 +607,6 @@ Boolean.
 
 ---
 
-<a id="avlayer-audioactiveattime"></a>
-
 ### AVLayer.audioActiveAtTime()
 
 `app.project.item(index).layer(index).audioActiveAtTime(time)`
@@ -689,8 +625,6 @@ Returns true if this layer’s audio will be active at the specified time. For t
 Boolean.
 
 ---
-
-<a id="avlayer-calculatetransformfrompoints"></a>
 
 ### AVLayer.calculateTransformFromPoints()
 
@@ -724,8 +658,6 @@ for (var sel in transform) {
 ```
 
 ---
-
-<a id="avlayer-canaddtomotiongraphicstemplate"></a>
 
 ### AVLayer.canAddToMotionGraphicsTemplate()
 
@@ -763,8 +695,6 @@ Boolean.
 
 ---
 
-<a id="avlayer-comppointtosource"></a>
-
 ### AVLayer.compPointToSource()
 
 `app.project.item(index).layer(index).compPointToSource()`
@@ -790,8 +720,6 @@ Array of ([X,Y]) position coordinates; read-only.
 
 ---
 
-<a id="avlayer-openinviewer"></a>
-
 ### AVLayer.openInViewer()
 
 `app.project.item(index).layer(index).openInViewer()`
@@ -809,8 +737,6 @@ None.
 Viewer object for the Layer panel, or null if the layer could not be opened (e.g., for text or shape layers, which cannot be opened in the Layer panel).
 
 ---
-
-<a id="avlayer-removetrackmatte"></a>
 
 ### AVLayer.removeTrackMatte()
 
@@ -845,8 +771,6 @@ alert(myLayer.trackMatteType);
 
 ---
 
-<a id="avlayer-replacesource"></a>
-
 ### AVLayer.replaceSource()
 
 `app.project.item(index).layer(index).replaceSource(newSource, fixExpressions)`
@@ -869,8 +793,6 @@ Nothing.
 If this method is performed on a null layer, the layers `isNull` attribute is not changed from `true`. This causes the layer not to be visible in comp viewer and renders.
 
 ---
-
-<a id="avlayer-settrackmatte"></a>
 
 ### AVLayer.setTrackMatte()
 
@@ -919,8 +841,6 @@ myLayer.setTrackMatte(otherLayer, TrackMatteType.NO_TRACK_MATTE);
 
 ---
 
-<a id="avlayer-sourcepointtocomp"></a>
-
 ### AVLayer.sourcePointToComp()
 
 `app.project.item(index).layer(index).sourcePointToComp()`
@@ -953,8 +873,6 @@ var boxTextCompPos = myTextLayer.sourcePointToComp(boxTextLayerPos);
 ```
 
 ---
-
-<a id="avlayer-sourcerectattime"></a>
 
 ### AVLayer.sourceRectAtTime()
 

@@ -1,5 +1,3 @@
-<a id="threedmodellayer"></a>
-
 # ThreeDModelLayer object
 
 `app.project.item(index).layer(index)`

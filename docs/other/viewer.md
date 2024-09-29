@@ -1,5 +1,3 @@
-<a id="viewer"></a>
-
 # Viewer object
 
 `app.activeViewer`
@@ -24,8 +22,6 @@ if (activeViewer.type === ViewerType.VIEWER_COMPOSITION) {
 
 ## Attributes
 
-<a id="viewer-active"></a>
-
 ### Viewer.active
 
 `viewer.active`
@@ -39,8 +35,6 @@ When true, indicates if the viewer panel is focused, and thereby frontmost.
 Boolean; read-only.
 
 ---
-
-<a id="viewer-activeviewindex"></a>
 
 ### Viewer.activeViewIndex
 
@@ -56,8 +50,6 @@ Number; read/write.
 
 ---
 
-<a id="viewer-maximized"></a>
-
 ### Viewer.maximized
 
 `viewer.maximized`
@@ -72,8 +64,6 @@ Boolean; read/write.
 
 ---
 
-<a id="viewer-views"></a>
-
 ### Viewer.views
 
 `viewer.views`
@@ -87,8 +77,6 @@ All of the Views associated with this viewer.
 Array of [View object](view.md#view) objects; read-only.
 
 ---
-
-<a id="viewer-type"></a>
 
 ### Viewer.type
 
@@ -109,8 +97,6 @@ A `ViewerType` enumerated value; read-only. One of:
 ---
 
 ## Methods
-
-<a id="viewer-setactive"></a>
 
 ### Viewer.setActive()
 

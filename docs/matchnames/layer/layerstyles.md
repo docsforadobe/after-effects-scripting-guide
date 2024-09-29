@@ -1,5 +1,3 @@
-<a id="matchnames-layer-layerstyles"></a>
-
 # Layer Styles Match Names
 
 | **Category**                        | **Match Name**                 | **Display Name (EN)**   |

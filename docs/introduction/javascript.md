@@ -1,8 +1,4 @@
-<a id="javascript"></a>
-
 # Elements of basic JavaScript relevant to After Effects scripting
-
-<a id="javascript-variables"></a>
 
 ## Javascript Variables
 
@@ -34,8 +30,6 @@ Scripting shares a global environment, so any script executed at startup can def
 | `with`              | Standard JavaScript construct used to specify an object to<br/>use in subsequent statements.                                              |
 
 ---
-
-<a id="javascript-operators"></a>
 
 ## Javascript Operators
 
@@ -111,8 +105,6 @@ The following tables list and describe all operators recognized by the After Eff
 | ,                                                         | left to right   |
 
 ---
-
-<a id="javascript-classes"></a>
 
 ## Javascript Classes
 

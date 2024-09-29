@@ -1,5 +1,3 @@
-<a id="matchnames-layer-shapelayer"></a>
-
 # Shape Layer Match Names
 
 | **Category**                      | **Match Name**                   | **Display Name (EN)**   |

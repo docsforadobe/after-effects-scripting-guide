@@ -1,5 +1,3 @@
-<a id="matchnames-layer-textlayer"></a>
-
 # Text Layer Match Names
 
 | **Category**                      | **Match Name**             | **Display Name (EN)**   |

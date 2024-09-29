@@ -1,12 +1,8 @@
-<a id="changelog"></a>
-
 # Changelog
 
 What’s new and changed for scripting?
 
 ---
-
-<a id="changelog-25-0"></a>
 
 ## [After Effects 25.0 Beta build 26](https://community.adobe.com/t5/after-effects-beta-discussions/new-in-ae-25-0-build-25-scripting-hooks-for-font-fallback-management/m-p/14809794) (August 2024)
 
@@ -34,21 +30,15 @@ What’s new and changed for scripting?
     - Added: [TextDocument.boxOverflow](../text/textdocument.md#textdocument-boxoverflow)
     - Added: [TextDocument.boxVerticalAlignment](../text/textdocument.md#textdocument-boxverticalalignment)
 
-<a id="changelog-24-5"></a>
-
 ## [After Effects 24.5](https://helpx.adobe.com/after-effects/using/whats-new/2024-5.html) (May 2024)
 
 - Scripting methods and attributes added
   : - Added: [Project.replaceFont()](../general/project.md#project-replacefont)
     - Added: [Project.usedFonts](../general/project.md#project-usedfonts)
 
-<a id="changelog-24-4"></a>
-
 ## [After Effects 24.4 Beta build 25](https://community.adobe.com/t5/after-effects-beta-discussions/scripting-new-api-for-3d-model-layers/td-p/14580044) (March 2024)
 
 > - Added: [ThreeDModelLayer object](../layers/threedmodellayer.md#threedmodellayer)
-
-<a id="changelog-24-3"></a>
 
 ## [After Effects 24.3](https://helpx.adobe.com/after-effects/using/whats-new/2024-3.html) (March 2024)
 
@@ -74,8 +64,6 @@ What’s new and changed for scripting?
     - Added: [FontsObject.fontServerRevision](../text/fontsobject.md#fontsobject-fontserverrevision)
     - Added: [FontsObject.getFontByID()](../text/fontsobject.md#fontsobject-getfontbyid)
     - Added: [FontObject.fontID](../text/fontobject.md#fontobject-fontid)
-
-<a id="changelog-24-0"></a>
 
 ## [After Effects 24.0](https://helpx.adobe.com/after-effects/using/whats-new/2024.html) (October 2023)
 
@@ -135,8 +123,6 @@ What’s new and changed for scripting?
     - Updated: [TextDocument.fauxItalic](../text/textdocument.md#textdocument-fauxitalic)
     - Updated: [TextDocument.justification](../text/textdocument.md#textdocument-justification)
 
-<a id="changelog-23-0"></a>
-
 ## [After Effects 23.0](https://helpx.adobe.com/after-effects/using/whats-new/2023.html) (October 2022)
 
 - Scripting methods and attributes added
@@ -148,15 +134,11 @@ What’s new and changed for scripting?
     - Updated: [AVLayer.isTrackMatte](../layers/avlayer.md#avlayer-istrackmatte)
     - Updated: [AVLayer.hasTrackMatte](../layers/avlayer.md#avlayer-hastrackmatte)
 
-<a id="changelog-22-6"></a>
-
 ## [After Effects 22.6](https://helpx.adobe.com/after-effects/using/whats-new/2022-2.html) (August 2022)
 
 - Scripting methods added
   : - Added: [Property.keyLabel()](../properties/property.md#property-keylabel)
     - Added: [Property.setLabelAtKey()](../properties/property.md#property-setlabelatkey)
-
-<a id="changelog-22-3"></a>
 
 ## [After Effects 22.3](https://helpx.adobe.com/after-effects/using/whats-new/2022-2.html) (April 2022)
 
@@ -164,8 +146,6 @@ What’s new and changed for scripting?
   : - Added: [Layer.doSceneEditDetection()](../layers/layer.md#layer-dosceneeditdetection)
 
 ---
-
-<a id="changelog-22-0"></a>
 
 ## [After Effects 22.0](https://helpx.adobe.com/after-effects/using/whats-new/2022.html) (October 2021)
 
@@ -180,8 +160,6 @@ What’s new and changed for scripting?
   : - Added: [app.setMultiFrameRenderingConfig()](../general/application.md#app-setmultiframerenderingconfig)
 
 ---
-
-<a id="changelog-18-0"></a>
 
 ## [After Effects 18.0](https://helpx.adobe.com/after-effects/using/whats-new/2021-2.html) (March 2021)
 
@@ -198,8 +176,6 @@ What’s new and changed for scripting?
 
 ---
 
-<a id="changelog-17-1-1"></a>
-
 ## [After Effects 17.1.1](https://helpx.adobe.com/after-effects/using/whats-new/2020-1.html) (May 2020)
 
 - Scripting access to Shape Layer Stroke Taper, Stroke Waves, Offset Paths Copies, Offset Path Copy Offset
@@ -210,8 +186,6 @@ What’s new and changed for scripting?
 
 ---
 
-<a id="changelog-17-0-1"></a>
-
 ## [After Effects 17.0.1](https://helpx.adobe.com/after-effects/using/whats-new/2020.html) (November 2019)
 
 - Scripted creation and modification of Dropdown Menu Control items:
@@ -219,8 +193,6 @@ What’s new and changed for scripting?
     - Added: [Property.setPropertyParameters()](../properties/property.md#property-setpropertyparameters)
 
 ---
-
-<a id="changelog-16-1"></a>
 
 ## [After Effects 16.1]()
 
@@ -241,8 +213,6 @@ What’s new and changed for scripting?
 
 ---
 
-<a id="changelog-16-0"></a>
-
 ## [After Effects 16.0](https://helpx.adobe.com/after-effects/using/whats-new/2019.html) (October 2018)
 
 - Scripting access to marker label and protectedRegion attributes:
@@ -261,16 +231,12 @@ What’s new and changed for scripting?
 
 ---
 
-<a id="changelog-15-1"></a>
-
 ## [After Effects 15.1](https://helpx.adobe.com/after-effects/using/whats-new/2018.html) (April 2018)
 
 - [Project.autoFixExpressions()](../general/project.md#project-autofixexpressions) will now fix expression name references in single quotes (ex., (‘Effect Name’)), as well as double quotes.
 - Fixes [CompItem.exportAsMotionGraphicsTemplate()](../items/compitem.md#compitem-exportasmotiongraphicstemplate) not returning a boolean as expected
 
 ---
-
-<a id="changelog-15-0"></a>
 
 ## [After Effects 15.0](https://forums.adobe.com/docs/DOC-8872) (October 2017)
 
@@ -283,8 +249,6 @@ What’s new and changed for scripting?
 
 ---
 
-<a id="changelog-14-2-1"></a>
-
 ## [After Effects 14.2.1 (CC 2017.2)](https://blogs.adobe.com/creativecloud/a-june-2017-update-to-after-effects-cc-is-now-available/) (June 2017)
 
 - Buttons in ScriptUI panels have been reverted to the rectangular appearance seen in After Effects 14.1 and previous releases.
@@ -292,8 +256,6 @@ What’s new and changed for scripting?
 - The [System.callSystem()](../general/system.md#system-callsystem) scripting method now waits for all tasks called by the command to complete, instead of failing when the command takes a long time to complete.
 
 ---
-
-<a id="changelog-14-2"></a>
 
 ## [After Effects 14.2 (CC 2017.1)](https://blogs.adobe.com/creativecloud/after-effects-cc-april-2017-in-depth-scripting-improvements/) (April 2017)
 
@@ -322,8 +284,6 @@ What’s new and changed for scripting?
 
 ---
 
-<a id="changelog-14-0"></a>
-
 ## [After Effects 14.0 (CC 2017)](https://forums.adobe.com/message/9108589) (November 2016)
 
 - Scripting Access to Tools
@@ -337,8 +297,6 @@ What’s new and changed for scripting?
 
 ---
 
-<a id="changelog-13-8"></a>
-
 ## [After Effects 13.8 (CC 2015.3)](https://blogs.adobe.com/creativecloud/after-effects-cc-2015-3-in-depth-gpu-accelerated-effects/) (June 2016)
 
 - Enable GPU effect rendering via scripting
@@ -346,8 +304,6 @@ What’s new and changed for scripting?
 - New Gaussian Blur effect added w/ matchname `ADBE Gaussian Blur 2`
 
 ---
-
-<a id="changelog-13-6"></a>
 
 ## [After Effects 13.6 (CC 2015)](https://blogs.adobe.com/creativecloud/whats-new-and-changed-in-the-upcoming-update-to-after-effects-cc-2015/) (November 2015)
 
@@ -361,8 +317,6 @@ What’s new and changed for scripting?
 - After Effects no longer crashes when you click OK or Cancel buttons in a scriptUI dialog with tabbed panels.
 
 ---
-
-<a id="changelog-13-2"></a>
 
 ## [After Effects 13.2 (CC 2014.2)](https://blogs.adobe.com/creativecloud/after-effects-cc-2014-2-13-2/) (December 2014)
 
@@ -387,8 +341,6 @@ What’s new and changed for scripting?
 
 ---
 
-<a id="changelog-13-1"></a>
-
 ## [After Effects 13.1 (CC 2014.1)](https://blogs.adobe.com/creativecloud/after-effects-cc-2014-1-13-1/) (September 2014)
 
 - Scripting improvements for text layers (read-only)
@@ -399,8 +351,6 @@ What’s new and changed for scripting?
 - “Use Legacy UI” toggle implemented
 
 ---
-
-<a id="changelog-13-0"></a>
 
 ## [After Effects 13.0 (CC 2014)](https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/) (June 2014)
 
@@ -414,8 +364,6 @@ What’s new and changed for scripting?
 
 ---
 
-<a id="changelog-12-0"></a>
-
 ## [After Effects 12.0 (CC)](https://blogs.adobe.com/creativecloud/scripting-changes-in-after-effects-cc-12-0-12-2/) (June 2013)
 
 - Access to effect’s internal version string
@@ -427,8 +375,6 @@ What’s new and changed for scripting?
 - ScriptUI is now based on the same controls as the main application.
 
 ---
-
-<a id="changelog-11-0"></a>
 
 ## [After Effects 11.0 (CS6)](https://web.archive.org/web/20120623073355/https://blogs.adobe.com/toddkopriva/2012/06/scripting-changes-in-after-effects-cs6-plus-new-scripting-guide.html/) (April 2012)
 
@@ -450,8 +396,6 @@ What’s new and changed for scripting?
     - Added: [Shape.featherRelCornerAngles](../other/shape.md#shape-featherrelcornerangles)
 
 ---
-
-<a id="changelog-10-5"></a>
 
 ## [After Effects 10.5 (CS5.5)](https://web.archive.org/web/20121022055915/http://blogs.adobe.com/toddkopriva/2008/12/after-effects-cs4-scripting-ch.html/) (April 2011)
 
@@ -478,8 +422,6 @@ What’s new and changed for scripting?
 - Added [LightLayer.lightType](../layers/lightlayer.md#lightlayer-lighttype)
 
 ---
-
-<a id="changelog-9-0"></a>
 
 ## [After Effects 9.0 (CS4)](https://web.archive.org/web/20121022055915/http://blogs.adobe.com/toddkopriva/2008/12/after-effects-cs4-scripting-ch.html/) (September 2008)
 

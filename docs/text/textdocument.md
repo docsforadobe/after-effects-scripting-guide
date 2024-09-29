@@ -1,5 +1,3 @@
-<a id="textdocument"></a>
-
 # TextDocument object
 
 `new TextDocument(docText)`
@@ -56,8 +54,6 @@ textProp.setValue(textDocument);
 
 ## Attributes
 
-<a id="textdocument-allcaps"></a>
-
 ### TextDocument.allCaps
 
 `textDocument.allCaps`
@@ -78,8 +74,6 @@ Boolean; read-only.
 
 ---
 
-<a id="textdocument-applyfill"></a>
-
 ### TextDocument.applyFill
 
 `textDocument.applyFill`
@@ -94,8 +88,6 @@ Boolean; read/write.
 
 ---
 
-<a id="textdocument-applystroke"></a>
-
 ### TextDocument.applyStroke
 
 `textDocument.applyStroke`
@@ -109,8 +101,6 @@ When true, the Text layer shows a stroke. Access the [strokeColor](#textdocument
 Boolean; read/write.
 
 ---
-
-<a id="textdocument-autohyphenate"></a>
 
 ### TextDocument.autoHyphenate
 
@@ -135,8 +125,6 @@ Boolean; read/write.
 
 ---
 
-<a id="textdocument-autoleading"></a>
-
 ### TextDocument.autoLeading
 
 `textDocument.autoLeading`
@@ -156,8 +144,6 @@ If you change this value, it will set all paragraphs in the Text layer to the sp
 Boolean; read/write.
 
 ---
-
-<a id="textdocument-autokerntype"></a>
 
 ### TextDocument.autoKernType
 
@@ -184,8 +170,6 @@ An `AutoKernType` enumerated value; read/write. One of:
 
 ---
 
-<a id="textdocument-baselinedirection"></a>
-
 ### TextDocument.baselineDirection
 
 `textDocument.baselineDirection`
@@ -210,8 +194,6 @@ A `BaselineDirection` enumerated value; read/write. One of:
 - `BaselineDirection.BASELINE_VERTICAL_CROSS_STREAM`
 
 ---
-
-<a id="textdocument-baselinelocs"></a>
 
 ### TextDocument.baselineLocs
 
@@ -251,8 +233,6 @@ Array of floating-point values in the form of
 
 ---
 
-<a id="textdocument-baselineshift"></a>
-
 ### TextDocument.baselineShift
 
 `textDocument.baselineShift`
@@ -273,8 +253,6 @@ If you change this value, it will set all characters in the Text layer to the sp
 Floating-point value; read-write.
 
 ---
-
-<a id="textdocument-boxautofitpolicy"></a>
 
 ### TextDocument.boxAutoFitPolicy
 
@@ -302,8 +280,6 @@ A `BoxAutoFitPolicy` enumerated value; read-write. One of:
 - `BoxAutoFitPolicy.HEIGHT_BASELINE`
 
 ---
-
-<a id="textdocument-boxfirstbaselinealignment"></a>
 
 ### TextDocument.boxFirstBaselineAlignment
 
@@ -336,8 +312,6 @@ A `BoxFirstBaselineAlignment` enumerated value; read-write. One of:
 
 ---
 
-<a id="textdocument-boxfirstbaselinealignmentminimum"></a>
-
 ### TextDocument.boxFirstBaselineAlignmentMinimum
 
 `textDocument.boxFirstBaselineAlignmentMinimum`
@@ -359,8 +333,6 @@ Floating-point value; read/write.
 
 ---
 
-<a id="textdocument-boxinsetspacing"></a>
-
 ### TextDocument.boxInsetSpacing
 
 `textDocument.boxInsetSpacing`
@@ -380,8 +352,6 @@ Floating-point value; read/write.
 
 ---
 
-<a id="textdocument-boxoverflow"></a>
-
 ### TextDocument.boxOverflow
 
 `textDocument.boxOverflow`
@@ -399,8 +369,6 @@ Boolean; read-only.
 
 ---
 
-<a id="textdocument-boxtext"></a>
-
 ### TextDocument.boxText
 
 `textDocument.boxText`
@@ -414,8 +382,6 @@ True if a Text layer is a layer of paragraph (bounded) text; otherwise false.
 Boolean; read-only.
 
 ---
-
-<a id="textdocument-boxtextpos"></a>
 
 ### TextDocument.boxTextPos
 
@@ -446,8 +412,6 @@ var boxTextLayerPos = myTextLayer.sourceText.value.boxTextPos;
 
 ---
 
-<a id="textdocument-boxtextsize"></a>
-
 ### TextDocument.boxTextSize
 
 `textDocument.boxTextSize`
@@ -464,8 +428,6 @@ Throws an exception if [boxText](#textdocument-boxtext) does not return true for
 Array of two integers (minimum value of 1); read/write.
 
 ---
-
-<a id="textdocument-boxverticalalignment"></a>
 
 ### TextDocument.boxVerticalAlignment
 
@@ -491,8 +453,6 @@ A `BoxVerticalAlignment` enumerated value; read-write. One of:
 
 ---
 
-<a id="textdocument-composedlinecount"></a>
-
 ### TextDocument.composedLineCount
 
 `textDocument.composedLineCount`
@@ -510,8 +470,6 @@ Even if you remove all the text from the [TextDocument object](#textdocument) in
 Number; read-only.
 
 ---
-
-<a id="textdocument-composerengine"></a>
 
 ### TextDocument.composerEngine
 
@@ -543,8 +501,6 @@ A `ComposerEngine` enumerated value; read-write. One of:
 
 ---
 
-<a id="textdocument-digitset"></a>
-
 ### TextDocument.digitSet
 
 `textDocument.digitSet`
@@ -572,8 +528,6 @@ A `DigitSet` enumerated value; read/write. One of:
 
 ---
 
-<a id="textdocument-direction"></a>
-
 ### TextDocument.direction
 
 `textDocument.direction`
@@ -600,8 +554,6 @@ A `ParagraphDirection` enumerated value; read/write. One of:
 
 ---
 
-<a id="textdocument-endindent"></a>
-
 ### TextDocument.endIndent
 
 `textDocument.endIndent`
@@ -625,8 +577,6 @@ Floating-point value; read/write.
 
 ---
 
-<a id="textdocument-everylinecomposer"></a>
-
 ### TextDocument.everyLineComposer
 
 `textDocument.everyLineComposer`
@@ -649,8 +599,6 @@ If you change this value, it will set all paragraphs in the Text layer to the sp
 Boolean; read/write.
 
 ---
-
-<a id="textdocument-fauxbold"></a>
 
 ### TextDocument.fauxBold
 
@@ -682,8 +630,6 @@ var isFauxBold = myTextLayer.sourceText.value.fauxBold;
 
 ---
 
-<a id="textdocument-fauxitalic"></a>
-
 ### TextDocument.fauxItalic
 
 `textDocument.fauxItalic`
@@ -708,8 +654,6 @@ Boolean; read/write.
 
 ---
 
-<a id="textdocument-fillcolor"></a>
-
 ### TextDocument.fillColor
 
 `textDocument.fillColor`
@@ -731,8 +675,6 @@ If you change this value, it will set all characters in the Text layer to the sp
 Array `[r, g, b]` of floating-point values; read/write.
 
 ---
-
-<a id="textdocument-firstlineindent"></a>
 
 ### TextDocument.firstLineIndent
 
@@ -757,8 +699,6 @@ Floating-point value; read/write.
 
 ---
 
-<a id="textdocument-font"></a>
-
 ### TextDocument.font
 
 `textDocument.font`
@@ -781,8 +721,6 @@ If you change this value, it will set all characters in the Text layer to the sp
 String; read/write.
 
 ---
-
-<a id="textdocument-fontbaselineoption"></a>
 
 ### TextDocument.fontBaselineOption
 
@@ -808,8 +746,6 @@ A `FontBaselineOption` enumerated value; read/write. One of:
 - `FontBaselineOption.FONT_FAUXED_SUBSCRIPT`
 
 ---
-
-<a id="textdocument-fontcapsoption"></a>
 
 ### TextDocument.fontCapsOption
 
@@ -837,8 +773,6 @@ A `FontCapsOption` enumerated value; read/write. One of:
 
 ---
 
-<a id="textdocument-fontfamily"></a>
-
 ### TextDocument.fontFamily
 
 `textDocument.fontFamily`
@@ -858,8 +792,6 @@ This value only reflects the first character in the Text layer.
 String; read-only.
 
 ---
-
-<a id="textdocument-fontlocation"></a>
 
 ### TextDocument.fontLocation
 
@@ -884,8 +816,6 @@ String; read-only.
 
 ---
 
-<a id="textdocument-fontobject"></a>
-
 ### TextDocument.fontObject
 
 `textDocument.fontObject`
@@ -906,8 +836,6 @@ This value only reflects the first character in the Text layer.
 
 ---
 
-<a id="textdocument-fontsize"></a>
-
 ### TextDocument.fontSize
 
 `textDocument.fontSize`
@@ -925,8 +853,6 @@ If you change this value, it will set all characters in the Text layer to the sp
 Floating-point value (0.1 to 1296, inclusive); read/write.
 
 ---
-
-<a id="textdocument-fontstyle"></a>
 
 ### TextDocument.fontStyle
 
@@ -947,8 +873,6 @@ This value only reflects the first character in the Text layer.
 String; read-only.
 
 ---
-
-<a id="textdocument-hangingroman"></a>
 
 ### TextDocument.hangingRoman
 
@@ -972,8 +896,6 @@ If you change this value, it will set all paragraphs in the Text layer to the sp
 Boolean; read/write.
 
 ---
-
-<a id="textdocument-horizontalscale"></a>
 
 ### TextDocument.horizontalScale
 
@@ -1001,8 +923,6 @@ var valOfHScale = myTextLayer.sourceText.value.horizontalScale;
 ```
 
 ---
-
-<a id="textdocument-justification"></a>
 
 ### TextDocument.justification
 
@@ -1035,8 +955,6 @@ If you change this value, it will set all paragraphs in the Text layer to the sp
 
 ---
 
-<a id="textdocument-kerning"></a>
-
 ### TextDocument.kerning
 
 `textDocument.kerning`
@@ -1061,8 +979,6 @@ If you change this value, it will set all characters in the Text layer to the sp
 Integer value; read/write.
 
 ---
-
-<a id="textdocument-leading"></a>
 
 ### TextDocument.leading
 
@@ -1104,8 +1020,6 @@ myTextSource.setValue(myTextDocument);
 
 ---
 
-<a id="textdocument-leadingtype"></a>
-
 ### TextDocument.leadingType
 
 `textDocument.leadingType`
@@ -1132,8 +1046,6 @@ A `LeadingType` enumerated value; read/write. One of:
 
 ---
 
-<a id="textdocument-ligature"></a>
-
 ### TextDocument.ligature
 
 `textDocument.ligature`
@@ -1154,8 +1066,6 @@ If you change this value, it will set all characters in the Text layer to the sp
 Boolean; read/write.
 
 ---
-
-<a id="textdocument-linejointype"></a>
 
 ### TextDocument.lineJoinType
 
@@ -1182,8 +1092,6 @@ A `LineJoinType` enumerated value; read/write. One of:
 
 ---
 
-<a id="textdocument-lineorientation"></a>
-
 ### TextDocument.lineOrientation
 
 `textDocument.lineOrientation`
@@ -1204,8 +1112,6 @@ A `LineOrientation` enumerated value; read/write. One of:
 - `LineOrientation.VERTICAL_LEFT_TO_RIGHT`
 
 ---
-
-<a id="textdocument-nobreak"></a>
 
 ### TextDocument.noBreak
 
@@ -1228,8 +1134,6 @@ Boolean; read/write.
 
 ---
 
-<a id="textdocument-paragraphcount"></a>
-
 ### TextDocument.paragraphCount
 
 `textDocument.paragraphCount`
@@ -1244,8 +1148,6 @@ Number; read-only.
 
 ---
 
-<a id="textdocument-pointtext"></a>
-
 ### TextDocument.pointText
 
 `textDocument.pointText`
@@ -1259,8 +1161,6 @@ True if a Text layer is a layer of point (unbounded) text; otherwise false.
 Boolean; read-only.
 
 ---
-
-<a id="textdocument-smallcaps"></a>
 
 ### TextDocument.smallCaps
 
@@ -1281,8 +1181,6 @@ This value only reflects the first character in the Text layer.
 Boolean; read-only.
 
 ---
-
-<a id="textdocument-spaceafter"></a>
 
 ### TextDocument.spaceAfter
 
@@ -1307,8 +1205,6 @@ Floating-point value; read/write.
 
 ---
 
-<a id="textdocument-spacebefore"></a>
-
 ### TextDocument.spaceBefore
 
 `textDocument.spaceBefore`
@@ -1331,8 +1227,6 @@ If you change this value, it will set all paragraphs in the Text layer to the sp
 Floating-point value; read/write.
 
 ---
-
-<a id="textdocument-startindent"></a>
 
 ### TextDocument.startIndent
 
@@ -1357,8 +1251,6 @@ Floating-point value; read/write.
 
 ---
 
-<a id="textdocument-strokecolor"></a>
-
 ### TextDocument.strokeColor
 
 `textDocument.strokeColor`
@@ -1381,8 +1273,6 @@ Array [r, g, b] of floating-point values; read/write.
 
 ---
 
-<a id="textdocument-strokeoverfill"></a>
-
 ### TextDocument.strokeOverFill
 
 `textDocument.strokeOverFill`
@@ -1402,8 +1292,6 @@ If you change this value, it will set all characters in the Text layer to the sp
 Boolean; read/write.
 
 ---
-
-<a id="textdocument-strokewidth"></a>
 
 ### TextDocument.strokeWidth
 
@@ -1425,8 +1313,6 @@ Floating-point value (0 to 1000, inclusive); read/write.
 
 ---
 
-<a id="textdocument-subscript"></a>
-
 ### TextDocument.subscript
 
 `textDocument.subscript`
@@ -1446,8 +1332,6 @@ This value only reflects the first character in the Text layer.
 Boolean; read-only.
 
 ---
-
-<a id="textdocument-superscript"></a>
 
 ### TextDocument.superscript
 
@@ -1469,8 +1353,6 @@ Boolean; read-only.
 
 ---
 
-<a id="textdocument-text"></a>
-
 ### TextDocument.text
 
 `textDocument.text`
@@ -1484,8 +1366,6 @@ The text value for the Text layer’s Source Text property.
 String; read/write.
 
 ---
-
-<a id="textdocument-tracking"></a>
 
 ### TextDocument.tracking
 
@@ -1504,8 +1384,6 @@ If you change this value, it will set all characters in the Text layer to the sp
 Floating-point value; read/write.
 
 ---
-
-<a id="textdocument-tsume"></a>
 
 ### TextDocument.tsume
 
@@ -1530,8 +1408,6 @@ Floating-point value; read-write.
 
 ---
 
-<a id="textdocument-verticalscale"></a>
-
 ### TextDocument.verticalScale
 
 `textDocument.verticalScale`
@@ -1554,8 +1430,6 @@ Floating-point value; read-write.
 ---
 
 ## Methods
-
-<a id="textdocument-characterrange"></a>
 
 ### TextDocument.characterRange()
 
@@ -1588,8 +1462,6 @@ An instance of [CharacterRange object](characterrange.md#characterrange)
 
 ---
 
-<a id="textdocument-composedlinecharacterindexesat"></a>
-
 ### TextDocument.composedLineCharacterIndexesAt()
 
 `textDocument.composedLineCharacterIndexesAt(characterIndex)`
@@ -1616,8 +1488,6 @@ Will throw an exception if the computed start and end are outside of the current
 Remember that the composed lines are static and subsequent changes to the [TextDocument object](#textdocument) instance which changes its length may render the composed line data invalid.
 
 ---
-
-<a id="textdocument-composedlinerange"></a>
 
 ### TextDocument.composedLineRange()
 
@@ -1650,8 +1520,6 @@ An instance of [ComposedLineRange object](composedlinerange.md#composedlinerange
 
 ---
 
-<a id="textdocument-paragraphcharacterindexesat"></a>
-
 ### TextDocument.paragraphCharacterIndexesAt()
 
 `textDocument.paragraphCharacterIndexesAt(characterIndex)`
@@ -1675,8 +1543,6 @@ Key `start` will be set to text index of the start of the paragraph (greater tha
 Key `end` will be set to text index of the end of the paragraph (greater than start, or equal to start if it is the last paragraph).
 
 ---
-
-<a id="textdocument-paragraphrange"></a>
 
 ### TextDocument.paragraphRange()
 
@@ -1707,8 +1573,6 @@ An instance of [ParagraphRange object](paragraphrange.md#paragraphrange)
 
 ---
 
-<a id="textdocument-resetcharstyle"></a>
-
 ### TextDocument.resetCharStyle()
 
 `textDocument.resetCharStyle()`
@@ -1726,8 +1590,6 @@ None.
 Nothing.
 
 ---
-
-<a id="textdocument-resetparagraphstyle"></a>
 
 ### TextDocument.resetParagraphStyle()
 

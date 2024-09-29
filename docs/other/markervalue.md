@@ -1,5 +1,3 @@
-<a id="markervalue"></a>
-
 # MarkerValue object
 
 `new MarkerValue(comment, chapter, url, frameTarget, cuePointName, params)`
@@ -56,8 +54,6 @@ comp.markerProperty.setValueAtTime(2, myMarker);
 
 ## Attributes
 
-<a id="markervalue-chapter"></a>
-
 ### MarkerValue.chapter
 
 `app.project.item(index).layer(index).property("Marker").keyValue(index).chapter`
@@ -71,8 +67,6 @@ A text chapter link for this marker. Chapter links initiate a jump to a chapter 
 String; read/write.
 
 ---
-
-<a id="markervalue-comment"></a>
 
 ### MarkerValue.comment
 
@@ -88,8 +82,6 @@ String; read/write.
 
 ---
 
-<a id="markervalue-cuepointname"></a>
-
 ### MarkerValue.cuePointName
 
 `app.project.item(index).layer(index).property("Marker").keyValue(index).cuePointName`
@@ -103,8 +95,6 @@ The Flash Video cue point name, as shown in the Marker dialog box.
 String; read/write.
 
 ---
-
-<a id="markervalue-duration"></a>
 
 ### MarkerValue.duration
 
@@ -120,8 +110,6 @@ Floating point; read/write.
 
 ---
 
-<a id="markervalue-eventcuepoint"></a>
-
 ### MarkerValue.eventCuePoint
 
 `app.project.item(index).layer(index).property("Marker").keyValue(index).eventCuePoint`
@@ -135,8 +123,6 @@ When true, the FlashVideo cue point is for an event; otherwise, it is for naviga
 Boolean; read/write.
 
 ---
-
-<a id="markervalue-frametarget"></a>
 
 ### MarkerValue.frameTarget
 
@@ -152,8 +138,6 @@ String; read/write.
 
 ---
 
-<a id="markervalue-url"></a>
-
 ### MarkerValue.url
 
 `app.project.item(index).layer(index).property("Marker").keyValue(index).url`
@@ -167,8 +151,6 @@ A URL for this marker. This URL is an automatic link to a Web page.
 String; read/write.
 
 ---
-
-<a id="markervalue-label"></a>
 
 ### MarkerValue.label
 
@@ -185,8 +167,6 @@ Available in After Effects 16.0 or later.
 Integer (0 to 16); read/write.
 
 ---
-
-<a id="markervalue-protectedregion"></a>
 
 ### MarkerValue.protectedRegion
 
@@ -206,8 +186,6 @@ Boolean; read/write.
 
 ## Methods
 
-<a id="markervalue-getparameters"></a>
-
 ### MarkerValue.getParameters()
 
 `app.project.item(index).layer(index).property("Marker").keyValue(index).getParameters()`
@@ -225,8 +203,6 @@ None.
 An object with an attribute matching each parameter name, containing that parameter’s value.
 
 ---
-
-<a id="markervalue-setparameters"></a>
 
 ### MarkerValue.setParameters()
 

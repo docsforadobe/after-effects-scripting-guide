@@ -1,5 +1,3 @@
-<a id="matchnames-layer-lightlayer"></a>
-
 # Light Layer Match Names
 
 | **Category**                  | **Match Name**               | **Display Name (EN)**   |

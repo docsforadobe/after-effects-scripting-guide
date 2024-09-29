@@ -1,5 +1,3 @@
-<a id="solidsource"></a>
-
 # SolidSource object
 
 `app.project.item(index).mainSource`
@@ -16,8 +14,6 @@ The SolidSource object represents a solid-color footage source.
 ---
 
 ## Attributes
-
-<a id="solidsource-color"></a>
 
 ### SolidSource.color
 

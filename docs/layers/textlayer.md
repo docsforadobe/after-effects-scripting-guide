@@ -1,5 +1,3 @@
-<a id="textlayer"></a>
-
 # TextLayer object
 
 `app.project.item(index).layer(index)`

@@ -1,5 +1,3 @@
-<a id="importoptions"></a>
-
 # ImportOptions object
 
 `new ImportOptions();`
@@ -23,8 +21,6 @@ new ImportOptions().file = new File("myfile.psd");
 
 ## Attributes
 
-<a id="importoptions-file"></a>
-
 ### ImportOptions.file
 
 `importOptions.file`
@@ -39,8 +35,6 @@ The file to be imported. If a file is set in the constructor, you can access it 
 
 ---
 
-<a id="importoptions-forcealphabetical"></a>
-
 ### ImportOptions.forceAlphabetical
 
 `importOptions.forceAlphabetical`
@@ -54,8 +48,6 @@ When true, has the same effect as setting the “Force alphabetical order” opt
 Boolean; read/write.
 
 ---
-
-<a id="importoptions-importas"></a>
 
 ### ImportOptions.importAs
 
@@ -75,8 +67,6 @@ An `ImportAsType` enumerated value; read/write. One of:
 - `ImportAsType.PROJECT`
 
 ---
-
-<a id="importoptions-rangeend"></a>
 
 ### ImportOptions.rangeEnd
 
@@ -99,8 +89,6 @@ Sets the end clipping range of the sequence, that is going to be imported.
 Integer; read/write.
 
 ---
-
-<a id="importoptions-rangestart"></a>
 
 ### ImportOptions.rangeStart
 
@@ -142,8 +130,6 @@ var item = app.project.importFile(importOptions);
 
 ---
 
-<a id="importoptions-sequence"></a>
-
 ### ImportOptions.sequence
 
 `importOptions.sequence`
@@ -159,8 +145,6 @@ Boolean; read/write.
 ---
 
 ## Methods
-
-<a id="importoptions-canimportas"></a>
 
 ### ImportOptions.canImportAs()
 
@@ -189,8 +173,6 @@ if (io.canImportAs(ImportAsType.COMP)) {
 ```
 
 ---
-
-<a id="importoptions-isfilenamenumbered"></a>
 
 ### ImportOptions.isFileNameNumbered()
 

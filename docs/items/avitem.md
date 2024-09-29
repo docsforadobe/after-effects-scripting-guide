@@ -1,5 +1,3 @@
-<a id="avitem"></a>
-
 # AVItem object
 
 `app.project.item(index)`
@@ -21,8 +19,6 @@ See [Javascript Classes](../introduction/javascript.md#javascript-classes) and [
 
 ## Attributes
 
-<a id="avitem-duration"></a>
-
 ### AVItem.duration
 
 `app.project.item(index).duration`
@@ -40,8 +36,6 @@ Floating-point value in the range [0.0..10800.0]; read/write for a `CompItem`; o
 
 ---
 
-<a id="avitem-footagemissing"></a>
-
 ### AVItem.footageMissing
 
 `app.project.item(index).footageMissing`
@@ -56,8 +50,6 @@ Boolean; read-only.
 
 ---
 
-<a id="avitem-frameduration"></a>
-
 ### AVItem.frameDuration
 
 `app.project.item(index).frameDuration`
@@ -71,8 +63,6 @@ Returns the length of a frame for this AVItem, in seconds. This is the reciproca
 Floating-point value in the range [1/99.. 1.0]; read-only for a FootageItem, otherwise read/write.
 
 ---
-
-<a id="avitem-framerate"></a>
 
 ### AVItem.frameRate
 
@@ -91,8 +81,6 @@ Floating-point value in the range [1.0..99.0]; read-only for a FootageItem, othe
 
 ---
 
-<a id="avitem-hasaudio"></a>
-
 ### AVItem.hasAudio
 
 `app.project.item(index).hasAudio`
@@ -109,8 +97,6 @@ When true, the AVItem has an audio component.
 Boolean; read-only.
 
 ---
-
-<a id="avitem-hasvideo"></a>
 
 ### AVItem.hasVideo
 
@@ -129,8 +115,6 @@ Boolean; read-only.
 
 ---
 
-<a id="avitem-height"></a>
-
 ### AVItem.height
 
 `app.project.item(index).height`
@@ -147,8 +131,6 @@ The height of the item in pixels.
 Integer in the range [1…30000]; read/write, except as noted.
 
 ---
-
-<a id="avitem-ismediareplacementcompatible"></a>
 
 ### AVItem.isMediaReplacementCompatible
 
@@ -175,8 +157,6 @@ Boolean; read only.
 
 ---
 
-<a id="avitem-name"></a>
-
 ### AVItem.name
 
 `app.project.item(index).name`
@@ -192,8 +172,6 @@ The name of the item, as shown in the Project panel.
 String; read/write.
 
 ---
-
-<a id="avitem-pixelaspect"></a>
 
 ### AVItem.pixelAspect
 
@@ -225,8 +203,6 @@ Floating-point value, in the range [0.01..100.0]; read/write.
 
 ---
 
-<a id="avitem-proxysource"></a>
-
 ### AVItem.proxySource
 
 `app.project.item(index).proxySource`
@@ -239,8 +215,6 @@ The FootageSource being used as a proxy. The attribute is read-only; to change i
 `FootageSource` object; read-only.
 
 ---
-
-<a id="avitem-time"></a>
 
 ### AVItem.time
 
@@ -256,8 +230,6 @@ Floating-point value; read/write.
 
 ---
 
-<a id="avitem-usedin"></a>
-
 ### AVItem.usedIn
 
 `app.project.item(index).usedIn`
@@ -272,8 +244,6 @@ Array of CompItem objects; read-only.
 
 ---
 
-<a id="avitem-useproxy"></a>
-
 ### AVItem.useProxy
 
 `app.project.item(index).useProxy`
@@ -287,8 +257,6 @@ When true, a proxy is used for the item. It is set to true by all the `SetProxy`
 Boolean; read/write.
 
 ---
-
-<a id="avitem-width"></a>
 
 ### AVItem.width
 
@@ -308,8 +276,6 @@ Integer in the range [1…30000]; read/write, except as noted.
 ---
 
 ## Methods
-
-<a id="avitem-setproxy"></a>
 
 ### AVItem.setProxy()
 
@@ -336,8 +302,6 @@ None.
 
 ---
 
-<a id="avitem-setproxytonone"></a>
-
 ### AVItem.setProxyToNone()
 
 `app.project.item(index).setProxyToNone()`
@@ -355,8 +319,6 @@ None.
 Nothing.
 
 ---
-
-<a id="avitem-setproxywithplaceholder"></a>
 
 ### AVItem.setProxyWithPlaceholder()
 
@@ -381,8 +343,6 @@ Nothing.
 
 ---
 
-<a id="avitem-setproxywithsequence"></a>
-
 ### AVItem.setProxyWithSequence()
 
 `app.project.item(index).setProxyWithSequence(file,forceAlphabetical)`
@@ -406,8 +366,6 @@ If any file has an unlabeled alpha channel, and the user preference says to ask 
 Nothing.
 
 ---
-
-<a id="avitem-setproxywithsolid"></a>
 
 ### AVItem.setProxyWithSolid()
 

@@ -1,5 +1,3 @@
-<a id="viewoptions"></a>
-
 # ViewOptions object
 
 `app.activeViewer.views[0].options`
@@ -22,8 +20,6 @@ viewOptions.guidesLocked = true;
 ---
 
 ## Attributes
-
-<a id="viewoptions-channels"></a>
 
 ### ViewOptions.channels
 
@@ -51,8 +47,6 @@ A `ChannelType` enumerated value; read/write. One of:
 
 ---
 
-<a id="viewoptions-checkerboards"></a>
-
 ### ViewOptions.checkerboards
 
 `app.activeViewer.views[0].options.checkerboards`
@@ -67,8 +61,6 @@ Boolean; read/write.
 
 ---
 
-<a id="viewoptions-exposure"></a>
-
 ### ViewOptions.exposure
 
 `app.activeViewer.views[0].options.exposure`
@@ -82,8 +74,6 @@ The exposure value for the current view.
 Floating-point value in the range `[-40..40]`
 
 ---
-
-<a id="viewoptions-fastpreview"></a>
 
 ### ViewOptions.fastPreview
 
@@ -124,8 +114,6 @@ app.activeViewer.views[0].options.fastPreview === FastPreviewType.FP_WIREFRAME;
 
 ---
 
-<a id="viewoptions-guideslocked"></a>
-
 ### ViewOptions.guidesLocked
 
 `app.activeViewer.views[0].options.guidesLocked`
@@ -148,8 +136,6 @@ app.activeViewer.views[0].options.guidesLocked;
 ```
 
 ---
-
-<a id="viewoptions-guidessnap"></a>
 
 ### ViewOptions.guidesSnap
 
@@ -174,8 +160,6 @@ app.activeViewer.views[0].options.guidesSnap;
 
 ---
 
-<a id="viewoptions-guidesvisibility"></a>
-
 ### ViewOptions.guidesVisibility
 
 `app.activeViewer.views[0].options.guidesVisibility`
@@ -199,8 +183,6 @@ app.activeViewer.views[0].options.guidesVisibility;
 
 ---
 
-<a id="viewoptions-rulers"></a>
-
 ### ViewOptions.rulers
 
 `app.activeViewer.views[0].options.rulers`
@@ -223,8 +205,6 @@ app.activeViewer.views[0].options.rulers;
 ```
 
 ---
-
-<a id="viewoptions-zoom"></a>
 
 ### ViewOptions.zoom
 

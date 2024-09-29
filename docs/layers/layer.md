@@ -1,5 +1,3 @@
-<a id="layer"></a>
-
 # Layer object
 
 `app.project.item(index).layer(index)`
@@ -26,8 +24,6 @@ firstLayer.name = "DisabledLayer";
 
 ## Attributes
 
-<a id="layer-autoorient"></a>
-
 ### Layer.autoOrient
 
 `app.project.item(index).layer(index).autoOrient`
@@ -47,8 +43,6 @@ An `AutoOrientType` enumerated value; read/write. One of:
 
 ---
 
-<a id="layer-comment"></a>
-
 ### Layer.comment
 
 `app.project.item(index).layer(index).comment`
@@ -62,8 +56,6 @@ A descriptive comment for the layer.
 String; read/write.
 
 ---
-
-<a id="layer-containingcomp"></a>
 
 ### Layer.containingComp
 
@@ -79,8 +71,6 @@ CompItem object; read-only.
 
 ---
 
-<a id="layer-hasvideo"></a>
-
 ### Layer.hasVideo
 
 `app.project.item(index).layer(index).hasVideo`
@@ -94,8 +84,6 @@ When true, the layer has a video switch (the eyeball icon) in the Timeline panel
 Boolean; read-only.
 
 ---
-
-<a id="layer-id"></a>
 
 ### Layer.id
 
@@ -117,8 +105,6 @@ Integer; read-only.
 
 ---
 
-<a id="layer-index"></a>
-
 ### Layer.index
 
 `app.project.item(index).layer(index).index`
@@ -133,8 +119,6 @@ Integer in the range `[1..numLayers]`; read-only.
 
 ---
 
-<a id="layer-inpoint"></a>
-
 ### Layer.inPoint
 
 `app.project.item(index).layer(index).inPoint`
@@ -148,8 +132,6 @@ The “in” point of the layer, expressed in composition time (seconds).
 Floating-point value in the range `[-10800.0..10800.0]` (minus or plus three hours); read/write.
 
 ---
-
-<a id="layer-isnameset"></a>
 
 ### Layer.isNameSet
 
@@ -168,8 +150,6 @@ Boolean; read-only.
 
 ---
 
-<a id="layer-label"></a>
-
 ### Layer.label
 
 `app.project.item(index).layer(index).label`
@@ -187,8 +167,6 @@ Integer (0 to 16); read/write.
 
 ---
 
-<a id="layer-locked"></a>
-
 ### Layer.locked
 
 `app.project.item(index).layer(index).locked`
@@ -202,8 +180,6 @@ When true, the layer is locked; otherwise false. This corresponds to the lock to
 Boolean; read/write.
 
 ---
-
-<a id="layer-marker"></a>
 
 ### Layer.marker
 
@@ -238,8 +214,6 @@ solidLayer.marker.setValueAtTime(3, layerMarker2);
 
 ---
 
-<a id="layer-nulllayer"></a>
-
 ### Layer.nullLayer
 
 `app.project.item(index).layer(index).nullLayer`
@@ -254,8 +228,6 @@ Boolean; read-only.
 
 ---
 
-<a id="layer-outpoint"></a>
-
 ### Layer.outPoint
 
 `app.project.item(index).layer(index).outPoint`
@@ -269,8 +241,6 @@ The “out” point of the layer, expressed in composition time (seconds).
 Floating-point value in the range `[-10800.0..10800.0]` (minus or plus three hours); read/write.
 
 ---
-
-<a id="layer-parent"></a>
 
 ### Layer.parent
 
@@ -292,8 +262,6 @@ Layer object or null; read/write.
 
 ---
 
-<a id="layer-selectedproperties"></a>
-
 ### Layer.selectedProperties
 
 `app.project.item(index).layer(index).selectedProperties`
@@ -307,8 +275,6 @@ An array containing all of the currently selected Property and PropertyGroup obj
 Array of PropertyBase objects; read-only.
 
 ---
-
-<a id="layer-shy"></a>
 
 ### Layer.shy
 
@@ -324,8 +290,6 @@ Boolean; read/write.
 
 ---
 
-<a id="layer-solo"></a>
-
 ### Layer.solo
 
 `app.project.item(index).layer(index).solo`
@@ -339,8 +303,6 @@ When true, the layer is soloed, otherwise false.
 Boolean; read/write.
 
 ---
-
-<a id="layer-starttime"></a>
 
 ### Layer.startTime
 
@@ -356,8 +318,6 @@ Floating-point value in the range `[-10800.0..10800.0]` (minus or plus three hou
 
 ---
 
-<a id="layer-stretch"></a>
-
 ### Layer.stretch
 
 `app.project.item(index).layer(index).stretch`
@@ -371,8 +331,6 @@ The layer’s time stretch, expressed as a percentage. A value of 100 means no s
 Floating-point value in the range `[-9900.0..9900.0]`; read/write.
 
 ---
-
-<a id="layer-time"></a>
 
 ### Layer.time
 
@@ -389,8 +347,6 @@ Floating-point value; read-only.
 ---
 
 ## Methods
-
-<a id="layer-activeattime"></a>
 
 ### Layer.activeAtTime()
 
@@ -412,8 +368,6 @@ To return `true`, the layer must be enabled, no other layer may be soloing unles
 Boolean.
 
 ---
-
-<a id="layer-applypreset"></a>
 
 ### Layer.applyPreset()
 
@@ -438,8 +392,6 @@ The animation preset is applied to the the selected layer(s) of the comp, not to
 Nothing.
 
 ---
-
-<a id="layer-copytocomp"></a>
 
 ### Layer.copyToComp()
 
@@ -472,8 +424,6 @@ Nothing.
 
 ---
 
-<a id="layer-dosceneeditdetection"></a>
-
 ### Layer.doSceneEditDetection()
 
 `app.project.item(index).layer(index).doSceneEditDetection(applyOptions)`
@@ -498,8 +448,6 @@ Array of floating-point values; the times of the detected edit points expressed 
 
 ---
 
-<a id="layer-duplicate"></a>
-
 ### Layer.duplicate()
 
 `app.project.item(index).layer(index).duplicate()`
@@ -517,8 +465,6 @@ None.
 Layer object.
 
 ---
-
-<a id="layer-moveafter"></a>
 
 ### Layer.moveAfter()
 
@@ -539,8 +485,6 @@ Nothing.
 
 ---
 
-<a id="layer-movebefore"></a>
-
 ### Layer.moveBefore()
 
 `app.project.item(index).layer(index).moveBefore(layer)`
@@ -560,8 +504,6 @@ Nothing.
 
 ---
 
-<a id="layer-movetobeginning"></a>
-
 ### Layer.moveToBeginning()
 
 `app.project.item(index).layer(index).moveToBeginning()`
@@ -579,8 +521,6 @@ None.
 Nothing.
 
 ---
-
-<a id="layer-movetoend"></a>
 
 ### Layer.moveToEnd()
 
@@ -600,8 +540,6 @@ Nothing.
 
 ---
 
-<a id="layer-remove"></a>
-
 ### Layer.remove()
 
 `app.project.item(index).layer(index).remove()`
@@ -619,8 +557,6 @@ None.
 Nothing.
 
 ---
-
-<a id="layer-setparentwithjump"></a>
 
 ### Layer.setParentWithJump()
 

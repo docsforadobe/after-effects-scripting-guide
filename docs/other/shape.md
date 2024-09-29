@@ -1,5 +1,3 @@
-<a id="shape"></a>
-
 # Shape object
 
 `app.project.item(index).layer(index).property(index).property("maskShape").value`
@@ -57,8 +55,6 @@ The feather points on a mask are listed in an array in the order that they were 
 
 ## Attributes
 
-<a id="shape-closed"></a>
-
 ### Shape.closed
 
 `shapeObject.value.closed`
@@ -72,8 +68,6 @@ When true, the first and last vertices are connected to form a closed curve. Whe
 Boolean; read/write.
 
 ---
-
-<a id="shape-featherinterps"></a>
 
 ### Shape.featherInterps
 
@@ -92,8 +86,6 @@ Array of integers (0 or 1); read/write.
 
 ---
 
-<a id="shape-featherradii"></a>
-
 ### Shape.featherRadii
 
 `shapeObject.value.featherRadii`
@@ -110,8 +102,6 @@ Values are stored in the array in the order that feather points are created.
 Array of floating-point values; read/write.
 
 ---
-
-<a id="shape-featherrelcornerangles"></a>
 
 ### Shape.featherRelCornerAngles
 
@@ -130,8 +120,6 @@ Array of floating-point percentage values (0 to 100); read/write.
 
 ---
 
-<a id="shape-featherrelseglocs"></a>
-
 ### Shape.featherRelSegLocs
 
 `shapeObject.value.featherRelSegLocs`
@@ -148,8 +136,6 @@ Values are stored in the array in the order that feather points are created. To 
 Array of floating-point values (0 to 1); read/write.
 
 ---
-
-<a id="shape-featherseglocs"></a>
 
 ### Shape.featherSegLocs
 
@@ -188,8 +174,6 @@ layer.mask(1).property("ADBE Mask Shape").setValue(my_maskShape);
 
 ---
 
-<a id="shape-feathertensions"></a>
-
 ### Shape.featherTensions
 
 `shapeObject.value.featherTensions`
@@ -206,8 +190,6 @@ Values are stored in the array in the order that feather points are created.
 Array of floating-point values (0 to 1); read/write.
 
 ---
-
-<a id="shape-feathertypes"></a>
 
 ### Shape.featherTypes
 
@@ -229,8 +211,6 @@ Array of integers (0 or 1); read/write.
 
 ---
 
-<a id="shape-intangents"></a>
-
 ### Shape.inTangents
 
 `shapeObject.value.inTangents`
@@ -249,8 +229,6 @@ Array of floating-point pair arrays; read/write.
 
 ---
 
-<a id="shape-outtangents"></a>
-
 ### Shape.outTangents
 
 `shapeObject.value.outTangents`
@@ -268,8 +246,6 @@ If the shape is in a RotoBezier mask, all tangent values are ignored and the tan
 Array of floating-point pair arrays; read/write.
 
 ---
-
-<a id="shape-vertices"></a>
 
 ### Shape.vertices
 

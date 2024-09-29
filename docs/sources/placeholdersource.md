@@ -1,5 +1,3 @@
-<a id="placeholdersource"></a>
-
 # PlaceholderSource object
 
 `app.project.item(index).mainSource`

@@ -1,5 +1,3 @@
-<a id="filesource"></a>
-
 # FileSource object
 
 `app.project.item(index).mainSource`
@@ -16,8 +14,6 @@ The FileSource object describes footage that comes from a file.
 ---
 
 ## Attributes
-
-<a id="filesource-file"></a>
 
 ### FileSource.file
 
@@ -39,8 +35,6 @@ The [Extendscript File](https://extendscript.docsforadobe.dev/file-system-access
 
 ---
 
-<a id="filesource-missingfootagepath"></a>
-
 ### FileSource.missingFootagePath
 
 `app.project.item(index).mainSource.missingFootagePath`
@@ -59,8 +53,6 @@ String; read-only.
 ---
 
 ## Methods
-
-<a id="filesource-reload"></a>
 
 ### FileSource.reload()
 

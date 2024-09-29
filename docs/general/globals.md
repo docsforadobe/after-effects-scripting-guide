@@ -1,5 +1,3 @@
-<a id="globals"></a>
-
 # Global functions
 
 These globally available functions that are specific to After Effects. Any JavaScript object or function can call these functions, which allow you to display text in a small (3-line) area of the Info panel, to convert numeric time values to and from string values, or to generate a random number.
@@ -19,8 +17,6 @@ Additional global functions for standard user I/O (`alert`, `confirm` , and `pro
 
 ---
 
-<a id="clearoutput"></a>
-
 ## clearOutput()
 
 `clearOutput()`
@@ -38,8 +34,6 @@ None.
 Nothing.
 
 ---
-
-<a id="currentformattotime"></a>
 
 ## currentFormatToTime()
 
@@ -61,8 +55,6 @@ Converts a formatted string for a frame time value to a number of seconds, given
 Floating-point value, the number of seconds.
 
 ---
-
-<a id="generaterandomnumber"></a>
 
 ## generateRandomNumber()
 
@@ -102,8 +94,6 @@ for (var i = 1; i <= myComp.numLayers; i++) {
 
 ---
 
-<a id="getenumasstring"></a>
-
 ## getEnumAsString()
 
 `getEnumAsString()`
@@ -131,8 +121,6 @@ alert(getEnumAsString(5220));
 ```
 
 ---
-
-<a id="isvalid"></a>
 
 ## isValid()
 
@@ -165,8 +153,6 @@ alert(isValid(mask1)); // displays "false"; mask2 and mask3 do as well
 
 ---
 
-<a id="timetocurrentformat"></a>
-
 ## timeToCurrentFormat()
 
 `timeToCurrentFormat(time, fps[, isDuration])`
@@ -187,8 +173,6 @@ Converts a numeric time value (a number of seconds) to a frame time value; that 
 String in the project’s current time display format.
 
 ---
-
-<a id="write"></a>
 
 ## write()
 
@@ -214,8 +198,6 @@ write("with more on same line.");
 ```
 
 ---
-
-<a id="writeln"></a>
 
 ## writeLn()
 

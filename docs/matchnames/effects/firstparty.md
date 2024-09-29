@@ -1,5 +1,3 @@
-<a id="matchnames-effects-firstparty"></a>
-
 # First-Party Effect Match Names
 
 This list also details effect Bits Per Channel (BPC) and the AE version GPU-acceleration was introduced, if applicable.

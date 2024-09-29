@@ -1,5 +1,3 @@
-<a id="omcollection"></a>
-
 # OMCollection object
 
 `app.project.renderQueue.items.outputModules`
@@ -13,8 +11,6 @@ The OMCollection contains all of the output modules in a render queue. The colle
 ---
 
 ## Methods
-
-<a id="omcollection-add"></a>
 
 ### OMCollection.add()
 

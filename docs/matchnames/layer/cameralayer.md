@@ -1,5 +1,3 @@
-<a id="matchnames-layer-cameralayer"></a>
-
 # Camera Layer Match Names
 
 | **Category**                      | **Match Name**              | **Display Name (EN)**   |

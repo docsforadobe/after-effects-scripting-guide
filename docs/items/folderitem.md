@@ -1,5 +1,3 @@
-<a id="folderitem"></a>
-
 # FolderItem object
 
 `app.project.FolderItem`
@@ -27,8 +25,6 @@ if (!(secondItem instanceof FolderItem)) {
 
 ## Attributes
 
-<a id="folderitem-items"></a>
-
 ### FolderItem.items
 
 `app.project.item(index).items`
@@ -44,8 +40,6 @@ Unlike the ItemCollection in the Project object, this collection contains only t
 ItemCollection object; read-only.
 
 ---
-
-<a id="folderitem-numitems"></a>
 
 ### FolderItem.numItems
 
@@ -64,8 +58,6 @@ Integer; read-only.
 ---
 
 ## Methods
-
-<a id="folderitem-item"></a>
 
 ### FolderItem.item()
 
