@@ -19,5 +19,5 @@
   - [x] Delete legacy items
   - [x] Update legacy items
     - [x] Update readme
-- [ ] Apply / develop css style
-- [ ] Set up GH Pages deploy
+  - [ ] Apply / develop css style
+  - [ ] Set up GH Pages deploy

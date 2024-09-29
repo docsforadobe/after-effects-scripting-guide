@@ -100,7 +100,7 @@ The following are three examples of AppleScript scripts that will send an existi
 
 In the first example, you copy your After Effects script directly into the Script Editor and then run it. The script text appears within quotation marks following the DoScript command, so internal quotes in the script must be escaped using the backslash escape character, as follows
 
-```AppleScript
+```applescript
 tell application "Adobe After Effects CS6"
     DoScript "alert(\"You just sent an alert to After Effects\")"
 end tell
@@ -108,7 +108,7 @@ end tell
 
 Alternatively, you could display a dialog box asking for the location of the JSX file to be executed, as follows:
 
-```AppleScript
+```applescript
 set theFile to choose file
 tell application "Adobe After Effects CS6"
     DoScript theFile
@@ -121,7 +121,7 @@ Finally, this script is perhaps most useful when you are working directly on edi
 
 Simply highlight the script text that you want to run, and then activate this AppleScript:
 
-```AppleScript
+```applescript
 (*
 This script sends the current selection to After Effects as a script.
 *)
