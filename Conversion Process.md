@@ -97,7 +97,7 @@ Write a general intro sort of thing here; again, see AE scripting docs or refere
 4. Update case-sensitive syntax highlighting languages
     - Using regex, search for `` ```AppleScript `` and replace with `` ```applescript ``
 5. Replace nonstandard
-    - Using regex, search for `"|"` and replace with `"`
+    - Using regex, search for `“|”` and replace with `"`
     - Using regex, search for `‘|’` and replace with `'`
     - Using regex, search for `–` and replace with `-`
 6. Update offset sublist settings
