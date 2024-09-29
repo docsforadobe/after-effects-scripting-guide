@@ -4,7 +4,7 @@
 
 **Description**
 
-The Preferences object provides an easy way to manage internal AE preferences, such as you’d find in AE’s Preferences menu. These are saved in the After Effects preference files, and are persistent between application sessions.
+The Preferences object provides an easy way to manage internal AE preferences, such as you'd find in AE's Preferences menu. These are saved in the After Effects preference files, and are persistent between application sessions.
 
 Preferences are identified by section and key within the file, and each key name is associated with a value.
 
@@ -12,9 +12,9 @@ In the preferences file, section names are enclosed in brackets and quotation ma
 
 You can create new preferences with this object, as well as accessing existing preferences.
 
-As of Version 12/CC, preferences and settings methods now take a third argument to specify the target preferences file if Section/Key is not in “Adobe After Effects $versionNumber.x Prefs.txt”.
+As of Version 12/CC, preferences and settings methods now take a third argument to specify the target preferences file if Section/Key is not in "Adobe After Effects $versionNumber.x Prefs.txt".
 
-If the third argument is not passed, default value (`PREFType.PREF_Type_MACHINE_SPECIFIC`) is used and After Effects tries to save/get from the “Adobe After Effects $versionNumber.x Prefs.txt” preferences file.
+If the third argument is not passed, default value (`PREFType.PREF_Type_MACHINE_SPECIFIC`) is used and After Effects tries to save/get from the "Adobe After Effects $versionNumber.x Prefs.txt" preferences file.
 
 The third argument is enum `PREFType` value, one of:
 
@@ -51,7 +51,7 @@ Nothing.
 
 **Example**
 
-If you have saved a setting named with the key name “trimPrecomps” in a section called “Precomp Cropper”, you can delete the setting by:
+If you have saved a setting named with the key name "trimPrecomps" in a section called "Precomp Cropper", you can delete the setting by:
 
 ```javascript
 app.preferences.deletePref("Settings_Precomp Cropper", "trimPrecomps");
@@ -80,14 +80,14 @@ Boolean.
 
 **Example**
 
-To retrieve the value of the Flow Chart “Expand Flowchart Comps by Default” preference:
+To retrieve the value of the Flow Chart "Expand Flowchart Comps by Default" preference:
 
 ```javascript
 var expandByDefault = app.preferences.getPrefAsBool("Flowchart Settings", "Expand Flowchart Comps by Default");
 alert("The setting is: " + expandByDefault);
 ```
 
-To retrieve the value of the main preference “Javascript Debugger Enabled”:
+To retrieve the value of the main preference "Javascript Debugger Enabled":
 
 ```javascript
 var debuggerEnabled = app.preferences.getPrefAsBool("Main Pref Section v2", "Pref_JAVASCRIPT_DEBUGGER", PREFType.PREF_Type_MACHINE_INDEPENDENT);

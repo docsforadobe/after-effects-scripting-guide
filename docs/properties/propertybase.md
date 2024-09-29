@@ -19,7 +19,7 @@ See also [PropertyGroup.property()](propertygroup.md#propertygroup-property).
 
 **Reference invalidation**
 
-When something occurs that changes an object sufficiently for the reference to become invalid, script references to that object can generate errors. In simple cases this is straightforward. For example, if you delete anobject, a reference to the deleted object generates the warning “Object is Invalid”:
+When something occurs that changes an object sufficiently for the reference to become invalid, script references to that object can generate errors. In simple cases this is straightforward. For example, if you delete anobject, a reference to the deleted object generates the warning "Object is Invalid":
 
 ```javascript
 var layer1 = app.project.item(1).layer(1);
@@ -36,7 +36,7 @@ layer1.remove();
 alert(layer1position.value); // invalid reference to property inselected object
 ```
 
-A less straightforward case is when a property is removed from a property group. In this case, After Effectsgenerates the “Object is Invalid” error when you subsequently reference that item or other items in the group,because their index positions have changed. For example:
+A less straightforward case is when a property is removed from a property group. In this case, After Effectsgenerates the "Object is Invalid" error when you subsequently reference that item or other items in the group,because their index positions have changed. For example:
 
 ```javascript
 var effect1 = app.project.item(1).layer(1).effect(1);
@@ -59,9 +59,9 @@ alert(effect2.name); // invalid reference because group index positions have cha
 
 **Description**
 
-For a layer, this corresponds to the setting of the eyeball icon. When true, the layer’s video is active at the current time. For this to be true, the layer must be enabled, no other layer may be soloing unless this layer is soloed too, and the time must be between the `inPoint` and `outPoint` values of this layer. This value is never true in an audio layer; there is a separate `audioActive` attribute in the AVLayer object [AVLayer.audioActive](../layers/avlayer.md#avlayer-audioactive).
+For a layer, this corresponds to the setting of the eyeball icon. When true, the layer's video is active at the current time. For this to be true, the layer must be enabled, no other layer may be soloing unless this layer is soloed too, and the time must be between the `inPoint` and `outPoint` values of this layer. This value is never true in an audio layer; there is a separate `audioActive` attribute in the AVLayer object [AVLayer.audioActive](../layers/avlayer.md#avlayer-audioactive).
 
-For an effect and all properties, it is the same as the enabled attribute, except that it’s read-only.
+For an effect and all properties, it is the same as the enabled attribute, except that it's read-only.
 
 **Type**
 
@@ -97,7 +97,7 @@ When true, this property is a group used to organize other properties. The prope
 - `Animator1`
 - `Animator2`
 
-In this example, “Animator 1” and “Animator 2” are contained in a PropertyBase called “Text Animators.” This parent group is not displayed in the user interface, and so the two child properties are not indented in the Timeline panel.
+In this example, "Animator 1" and "Animator 2" are contained in a PropertyBase called "Text Animators." This parent group is not displayed in the user interface, and so the two child properties are not indented in the Timeline panel.
 
 **Type**
 
@@ -299,8 +299,7 @@ PropertyBase object.
 
 Moves this property to a new position in its parent property group. This method is valid only for children of indexed groups; if it is not, or if the index value is not valid, the method generates an exception and displays an error. (An indexed group has the type `PropertyType.INDEXED_GROUP`; see [PropertyBase.propertyType](#propertybase-propertytype).)
 
-#### WARNING
-Using this method invalidates existing references to other children in the same indexed group. For example, if you have three effects on a layer, each effect assigned to a different variable, moving one of the effects invalidates the references for all of these variables. You will need to reassign them.
+!> **Warning:** Using this method invalidates existing references to other children in the same indexed group. For example, if you have three effects on a layer, each effect assigned to a different variable, moving one of the effects invalidates the references for all of these variables. You will need to reassign them.
 
 **Parameters**
 

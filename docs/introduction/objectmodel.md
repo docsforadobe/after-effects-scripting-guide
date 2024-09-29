@@ -12,8 +12,7 @@ Note that the [File](https://extendscript.docsforadobe.dev/file-system-access/fi
 
 The application contains a Project panel, which displays a project. The project contains compositions, which contain layers. The source for a layer can be a footage file, placeholder, or solid, also listed in the Project panel. Each layer contains settings known as properties, and these can contain markers and keyframes. The renderqueue contains render-queue items as well as render settings and output modules. All of these entities are represented by objects in scripting.
 
-#### NOTE
-To avoid ambiguity, this manual uses the term “attribute” to refer to JavaScript object properties, and the term “property” or “AE property” to refer to After Effects layer properties.
+?> **Note:** To avoid ambiguity, this manual uses the term "attribute" to refer to JavaScript object properties, and the term "property" or "AE property" to refer to After Effects layer properties.
 
 **Object summary**
 

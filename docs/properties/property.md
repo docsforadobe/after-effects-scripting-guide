@@ -8,8 +8,7 @@ The Property object contains value, keyframe, and expression information about a
 
 > Property is a subclass of [PropertyBase](propertybase.md#propertybase). All methods and attributes of PropertyBase, in addition to those listed below, are available when working with Property.
 
-#### NOTE
-JavaScript objects commonly referred to as “properties” are called “attributes” in this guide, to avoid confusion with the After Effects definition of property.
+?> **Note:** JavaScript objects commonly referred to as "properties" are called "attributes" in this guide, to avoid confusion with the After Effects definition of property.
 
 **Examples**
 
@@ -37,7 +36,7 @@ JavaScript objects commonly referred to as “properties” are called “attrib
   > myShape.closed = false;
   > myProperty.setValue(myShape);
   > ```
-- Get the value of a color at a particular time. A color is stored as an array of four floats, `[r, g, b, opacity]`. This sets the value of the red component of a light’s color at time 4 to be half of that at time 2
+- Get the value of a color at a particular time. A color is stored as an array of four floats, `[r, g, b, opacity]`. This sets the value of the red component of a light's color at time 4 to be half of that at time 2
   > ```javascript
   > var myProperty = myLight.color;
   > var colorValue = myProperty.valueAtTime(2, true);
@@ -98,8 +97,7 @@ JavaScript objects commonly referred to as “properties” are called “attrib
 
 `app.project.item(index).layer(index).propertySpec.alternateSource`
 
-#### NOTE
-This functionality was added in After Effects 18.0 (2021)
+?> **Note:** This functionality was added in After Effects 18.0 (2021)
 
 **Description**
 
@@ -112,7 +110,7 @@ Use [Property.canSetAlternateSource](#property-cansetalternatesource) to determi
 
 All Media Replacement Layers have an alternate source item that can be set.
 
-A layer is “marked” for media replacement when the layer is added to the Essential Graphics Panel (see [AVLayer.addToMotionGraphicsTemplate()](../layers/avlayer.md#avlayer-addtomotiongraphicstemplate) or [AVLayer.addToMotionGraphicsTemplateAs()](../layers/avlayer.md#avlayer-addtomotiongraphicstemplateas)).
+A layer is "marked" for media replacement when the layer is added to the Essential Graphics Panel (see [AVLayer.addToMotionGraphicsTemplate()](../layers/avlayer.md#avlayer-addtomotiongraphicstemplate) or [AVLayer.addToMotionGraphicsTemplateAs()](../layers/avlayer.md#avlayer-addtomotiongraphicstemplateas)).
 
 - If present, the render workflow will pick up the alternate source while rendering the layer.
 - If the alternate source for the layer is not set, then the source layer of the Media Replacement control is used for rendering (this is the normal workflow).
@@ -129,8 +127,7 @@ AVItem object; read-only.
 
 `app.project.item(index).layer(index).propertySpec.canSetAlternateSource`
 
-#### NOTE
-This functionality was added in After Effects 18.0 (2021)
+?> **Note:** This functionality was added in After Effects 18.0 (2021)
 
 **Description**
 
@@ -178,10 +175,9 @@ Boolean; read-only.
 
 **Description**
 
-When true, the property’s dimensions are represented as separate properties. For example, if the layer’s position is represented as X Position and Y Position properties in the Timeline panel, the Position property has this attribute set to true.
+When true, the property's dimensions are represented as separate properties. For example, if the layer's position is represented as X Position and Y Position properties in the Timeline panel, the Position property has this attribute set to true.
 
-#### NOTE
-This attribute applies only when the [isSeparationLeader](#property-isseparationleader) attribute is true.
+?> **Note:** This attribute applies only when the [isSeparationLeader](#property-isseparationleader) attribute is true.
 
 **Type**
 
@@ -193,8 +189,7 @@ Boolean; read/write.
 
 `app.project.item(index).layer(index).essentialProperty.property(index).essentialPropertySource`
 
-#### NOTE
-This functionality was added in After Effects 22.0 (2022)
+?> **Note:** This functionality was added in After Effects 22.0 (2022)
 
 **Description**
 
@@ -305,8 +300,7 @@ Boolean; read-only.
 
 `app.project.item(index).layer(index).propertySpec.isDropdownEffect`
 
-#### NOTE
-This functionality was added in After Effects 17.0.1 (2020)
+?> **Note:** This functionality was added in After Effects 17.0.1 (2020)
 
 **Description**
 
@@ -334,8 +328,7 @@ Boolean; read-only.
 
 When true, the property represents one of the separated dimensions for a multidimensional property. For example, the X Position property has this attribute set to true.
 
-#### NOTE
-The original, consolidated, multidimensional property is the “separation leader” and the new, separated, single-dimensional properties are its “separation followers”.
+?> **Note:** The original, consolidated, multidimensional property is the "separation leader" and the new, separated, single-dimensional properties are its "separation followers".
 
 **Type**
 
@@ -351,8 +344,7 @@ Boolean; read-only.
 
 When true, the property is multidimensional and can be separated. For example, the Position property has this attribute set to true.
 
-#### NOTE
-The original, consolidated, multidimensional property is the “separation leader” and the new, separated, single-dimensional properties are its “separation followers”.
+?> **Note:** The original, consolidated, multidimensional property is the "separation leader" and the new, separated, single-dimensional properties are its "separation followers".
 
 **Type**
 
@@ -451,9 +443,9 @@ Integer; read-only.
 
 **Description**
 
-The type of value stored in the named property. The `PropertyValueType` enumeration has one value for each type of data that can be stored in or retrieved from a property. Each type of data is stored and retrieved in a different kind of structure. All property objects store data according to one of these categories. For example, a 3D spatial property (such as a layer’s position) is stored as an array of three floating-point values. When setting a value for position, pass in such an array, as follows: `mylayer.property("position").setValue([10, 20, 0]);`
+The type of value stored in the named property. The `PropertyValueType` enumeration has one value for each type of data that can be stored in or retrieved from a property. Each type of data is stored and retrieved in a different kind of structure. All property objects store data according to one of these categories. For example, a 3D spatial property (such as a layer's position) is stored as an array of three floating-point values. When setting a value for position, pass in such an array, as follows: `mylayer.property("position").setValue([10, 20, 0]);`
 
-In contrast, a shape property (such as a layer’s mask shape) is stored as a Shape object. When setting a value for a shape, pass a Shape object, as follows:
+In contrast, a shape property (such as a layer's mask shape) is stored as a Shape object. When setting a value for a shape, pass a Shape object, as follows:
 
 ```javascript
 var myShape = new Shape();
@@ -516,10 +508,9 @@ Integer; read-only.
 
 **Description**
 
-The original multidimensional property for this separated follower. For example, if the current property is Y Position, this attribute’s value points to the Position property.
+The original multidimensional property for this separated follower. For example, if the current property is Y Position, this attribute's value points to the Position property.
 
-#### NOTE
-The original, consolidated, multidimensional property is the “separation leader” and the new, separated, single-dimensional properties are its “separation followers”.
+?> **Note:** The original, consolidated, multidimensional property is the "separation leader" and the new, separated, single-dimensional properties are its "separation followers".
 
 **Type**
 
@@ -586,8 +577,7 @@ Integer; the index of the new keyframe or marker.
 
 `app.project.item(index).layer(index).propertySpec.addToMotionGraphicsTemplate(comp)`
 
-#### NOTE
-This functionality was added in After Effects 15.0 (CC 2018)
+?> **Note:** This functionality was added in After Effects 15.0 (CC 2018)
 
 **Description**
 
@@ -614,8 +604,7 @@ Boolean.
 
 `app.project.item(index).layer(index).propertySpec.addToMotionGraphicsTemplateAs(comp, name)`
 
-#### NOTE
-This functionality was added in After Effects 16.1 (CC 2019)
+?> **Note:** This functionality was added in After Effects 16.1 (CC 2019)
 
 **Description**
 
@@ -643,8 +632,7 @@ Boolean.
 
 `app.project.item(index).layer(index).propertySpec.canAddToMotionGraphicsTemplate(comp)`
 
-#### NOTE
-This functionality was added in After Effects 15.0 (CC 2018)
+?> **Note:** This functionality was added in After Effects 15.0 (CC 2018)
 
 **Description**
 
@@ -680,8 +668,7 @@ Boolean.
 
 For a separated, multidimensional property, retrieves a specific follower property. For example, you can use this method on the Position property to access the separated X Position and Y Position properties
 
-#### NOTE
-This attribute applies only when the [isSeparationLeader](#property-isseparationleader) attribute is true.
+?> **Note:** This attribute applies only when the [isSeparationLeader](#property-isseparationleader) attribute is true.
 
 **Parameters**
 
@@ -724,7 +711,7 @@ Boolean.
 
 **Description**
 
-Returns the ‘in’ interpolation type for the specified keyframe.
+Returns the 'in' interpolation type for the specified keyframe.
 
 **Parameters**
 
@@ -791,8 +778,7 @@ Array of [KeyframeEase objects](../other/keyframeease.md#keyframeease):
 
 `app.project.item(index).layer(index).propertySpec.keyLabel(keyIndex)`
 
-#### NOTE
-This functionality was added in After Effects 22.6.
+?> **Note:** This functionality was added in After Effects 22.6.
 
 **Description**
 
@@ -1080,8 +1066,7 @@ Nothing.
 
 `app.project.item(index).layer(index).propertySpec.setAlternateSource(newSource)`
 
-#### NOTE
-This functionality was added in After Effects 18.0 (2021)
+?> **Note:** This functionality was added in After Effects 18.0 (2021)
 
 **Description**
 
@@ -1116,7 +1101,7 @@ Sets the `in` and `out` interpolation types for the specified keyframe.
 | `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#property-addkey) or<br/>[nearestKeyIndex](#property-nearestkeyindex).                                                                                                                          |
 |--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `inType`     | The incoming interpolation type. A `KeyframeInterpolationType`<br/>enumerated value; one of:<br/><br/>- `KeyframeInterpolationType.LINEAR`<br/>- `KeyframeInterpolationType.BEZIER`<br/>- `KeyframeInterpolationType.HOLD`                                                                              |
-| `outType`    | (Optional) The outgoing interpolation type. If not supplied, the<br/>‘out’ type is set to the `inType` value. A<br/>`KeyframeInterpolationType` enumerated value; one of:<br/><br/>- `KeyframeInterpolationType.LINEAR`<br/>- `KeyframeInterpolationType.BEZIER`<br/>- `KeyframeInterpolationType.HOLD` |
+| `outType`    | (Optional) The outgoing interpolation type. If not supplied, the<br/>'out' type is set to the `inType` value. A<br/>`KeyframeInterpolationType` enumerated value; one of:<br/><br/>- `KeyframeInterpolationType.LINEAR`<br/>- `KeyframeInterpolationType.BEZIER`<br/>- `KeyframeInterpolationType.HOLD` |
 
 **Returns**
 
@@ -1128,8 +1113,7 @@ Nothing.
 
 `app.project.item(index).layer(index).propertySpec.setLabelAtKey(keyIndex, labelIndex)`
 
-#### NOTE
-This functionality was added in After Effects 22.6 (2022)
+?> **Note:** This functionality was added in After Effects 22.6 (2022)
 
 **Description**
 
@@ -1151,24 +1135,22 @@ Nothing.
 
 `app.project.item(index).layer(index).propertySpec.setPropertyParameters(items)`
 
-#### NOTE
-This functionality was added in After Effects 17.0.1 (2020)
+?> **Note:** This functionality was added in After Effects 17.0.1 (2020)
 
 **Description**
 
-Sets parameters for a Dropdown Menu Control’s Menu Property. This method will overwrite the existing set of Menu items with the provided array of strings.
+Sets parameters for a Dropdown Menu Control's Menu Property. This method will overwrite the existing set of Menu items with the provided array of strings.
 
-- The Dropdown Menu Control effect’s Menu property is the only property that allows parameters to be set.
+- The Dropdown Menu Control effect's Menu property is the only property that allows parameters to be set.
 - To check if a property allows parameters to be set, check with [isDropdownEffect](#property-isdropdowneffect) before calling this method.
 - An exception is raised whenever this method fails.
 
 **Parameters**
 
-| `items`   | An array of strings which will replace the existing<br/>menu entries in a Dropdown Menu Control.<br/><br/>- Only strings are allowed.<br/>- Empty item strings are not allowed.<br/>- Duplicate item strings are not allowed.<br/>- The character “|” is not allowed in the item strings.<br/>- The string “(-” - can be specified as of the item strings. These appear as separator lines in the dropdown menu. The separator lines will claim an index for each of themselves.   |
+| `items`   | An array of strings which will replace the existing<br/>menu entries in a Dropdown Menu Control.<br/><br/>- Only strings are allowed.<br/>- Empty item strings are not allowed.<br/>- Duplicate item strings are not allowed.<br/>- The character "|" is not allowed in the item strings.<br/>- The string "(-" - can be specified as of the item strings. These appear as separator lines in the dropdown menu. The separator lines will claim an index for each of themselves.   |
 |-----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
-#### NOTE
-Item strings should be in ASCII or MultiByte encodable in the current code-page. In other words, the item strings should be provided in the script of the running system. For example: Specifying the item strings in Japanese while running the script on an English system will create a dropdown effect with illegible characters in the item strings.
+?> **Note:** Item strings should be in ASCII or MultiByte encodable in the current code-page. In other words, the item strings should be provided in the script of the running system. For example: Specifying the item strings in Japanese while running the script on an English system will create a dropdown effect with illegible characters in the item strings.
 
 **Example**
 
@@ -1187,7 +1169,7 @@ dropdownEffect.property(1).setPropertyParameters(dropdownItems);
 
 **Returns**
 
-Property object, the updated Dropdown Menu Control’s Menu property.
+Property object, the updated Dropdown Menu Control's Menu property.
 
 ---
 
@@ -1440,8 +1422,7 @@ Nothing.
 
 The value of the named property as evaluated at the specified time. Note that the type of value returned is not made explicit; it will be of a different type, depending on the property evaluated.
 
-#### NOTE
-As After Effects 13.6, this method now waits for time-intensive expressions, like `sampleImage`, to finish evaluating before it returns the result.
+?> **Note:** As After Effects 13.6, this method now waits for time-intensive expressions, like `sampleImage`, to finish evaluating before it returns the result.
 
 **Parameters**
 
@@ -1451,4 +1432,4 @@ As After Effects 13.6, this method now waits for time-intensive expressions, lik
 
 **Returns**
 
-A value appropriate for the type of the property (see “Property propertyValueType attribute” on page 138).
+A value appropriate for the type of the property (see "Property propertyValueType attribute" on page 138).

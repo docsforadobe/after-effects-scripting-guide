@@ -10,7 +10,7 @@ The LayerCollection object represents a set of layers. The LayerCollection belon
 
 **Example**
 
-Given that the first item in the project is a CompItem and the second item is an AVItem, this example shows the number of layers in the CompItem’s layer collection, adds a new layer based on an AVItem in the project, then displays the new number of layers.
+Given that the first item in the project is a CompItem and the second item is an AVItem, this example shows the number of layers in the CompItem's layer collection, adds a new layer based on an AVItem in the project, then displays the new number of layers.
 
 ```javascript
 var firstComp = app.project.item(1);
@@ -31,7 +31,7 @@ alert("number of layers after is " + layerCollection.length);
 
 **Description**
 
-Creates a new [AVLayer object](avlayer.md#avlayer) containing the specified item, and adds it to this collection. The new layer honors the “Create Layers at Composition Start Time” preference. This method generates an exception if the item cannot be added as a layer to this CompItem.
+Creates a new [AVLayer object](avlayer.md#avlayer) containing the specified item, and adds it to this collection. The new layer honors the "Create Layers at Composition Start Time" preference. This method generates an exception if the item cannot be added as a layer to this CompItem.
 
 **Parameters**
 
@@ -70,13 +70,13 @@ TextLayer object.
 
 **Description**
 
-Creates a new camera layer and adds the [CameraLayer object](cameralayer.md#cameralayer) to this collection. The new layer honors the “Create Layers at Composition Start Time” preference.
+Creates a new camera layer and adds the [CameraLayer object](cameralayer.md#cameralayer) to this collection. The new layer honors the "Create Layers at Composition Start Time" preference.
 
 **Parameters**
 
 | `name`        | A string containing the name of the new layer.                                                                                                                                               |
 |---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `centerPoint` | The center of the new camera, a floating-point array [x, y].<br/>This is used to set the initial x and y values of the new<br/>camera’s Point of Interest property. The z value is set to 0. |
+| `centerPoint` | The center of the new camera, a floating-point array [x, y].<br/>This is used to set the initial x and y values of the new<br/>camera's Point of Interest property. The z value is set to 0. |
 
 **Returns**
 
@@ -90,7 +90,7 @@ Creates a new camera layer and adds the [CameraLayer object](cameralayer.md#came
 
 **Description**
 
-Creates a new light layer and adds the [LightLayer object](lightlayer.md#lightlayer) to this collection. The new layer honors the “Create Layers at Composition Start Time” preference.
+Creates a new light layer and adds the [LightLayer object](lightlayer.md#lightlayer) to this collection. The new layer honors the "Create Layers at Composition Start Time" preference.
 
 **Parameters**
 
@@ -129,7 +129,7 @@ Creates a new null layer and adds the [AVLayer object](avlayer.md#avlayer) to th
 
 **Description**
 
-Creates a new [ShapeLayer object](shapelayer.md#shapelayer) for a new, empty Shape layer. Use the ShapeLayer object to add properties, such as shape, fill, stroke, and path filters. This is the same as using a shape tool in “Tool Creates Shape” mode. Tools automatically add a vector group that includes Fill and Stroke as specified in the tool options.
+Creates a new [ShapeLayer object](shapelayer.md#shapelayer) for a new, empty Shape layer. Use the ShapeLayer object to add properties, such as shape, fill, stroke, and path filters. This is the same as using a shape tool in "Tool Creates Shape" mode. Tools automatically add a vector group that includes Fill and Stroke as specified in the tool options.
 
 **Parameters**
 
@@ -188,8 +188,7 @@ Creates a new point text layer with [TextDocument.lineOrientation](../text/textd
 
 `app.project.item(index).layers.addVerticalBoxText([width, height])`
 
-#### NOTE
-This functionality was added in After Effects 24.2
+?> **Note:** This functionality was added in After Effects 24.2
 
 **Description**
 
@@ -210,8 +209,7 @@ TextLayer object.
 
 `app.project.item(index).layers.addVerticalText([sourceText])`
 
-#### NOTE
-This functionality was added in After Effects 24.2
+?> **Note:** This functionality was added in After Effects 24.2
 
 **Description**
 
@@ -260,7 +258,7 @@ Creates a new [CompItem object](../items/compitem.md#compitem) and moves the spe
 | `layerIndices`      | The position indexes of the layers to be collected. An<br/>array of integers.                                                                                                                                                                                                                                                                                                                                                 |
 |---------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `name`              | The name of the new CompItem object.                                                                                                                                                                                                                                                                                                                                                                                          |
-| `moveAllAttributes` | Optional. When true (the default), retains all<br/>attributes in the new composition. This is the same as<br/>selecting the “Move all attributes into the new<br/>composition” option in the Pre-compose dialog box. You<br/>can only set this to false if there is just one index in<br/>the `layerIndices` array. This is the same as<br/>selecting the “Leave all attributes in” option in the<br/>Pre-compose dialog box. |
+| `moveAllAttributes` | Optional. When true (the default), retains all<br/>attributes in the new composition. This is the same as<br/>selecting the "Move all attributes into the new<br/>composition" option in the Pre-compose dialog box. You<br/>can only set this to false if there is just one index in<br/>the `layerIndices` array. This is the same as<br/>selecting the "Leave all attributes in" option in the<br/>Pre-compose dialog box. |
 
 **Returns**
 

@@ -4,7 +4,7 @@
 
 **Description**
 
-The Layer object provides access to layers within compositions. It can be accessed from an item’s layer collection either by index number or by a name string.
+The Layer object provides access to layers within compositions. It can be accessed from an item's layer collection either by index number or by a name string.
 
 > Layer is a subclass of [PropertyGroup](../properties/propertygroup.md#propertygroup), which is a subclass of [PropertyBase](../properties/propertybase.md#propertybase). All methods and attributes of PropertyGroup, in addition to those listed below, are available when working with Layer, with the exception that `propertyIndex` attribute is set to `undefined`.
 
@@ -89,8 +89,7 @@ Boolean; read-only.
 
 `app.project.item(index).layer(index).id`
 
-#### NOTE
-This functionality was added in After Effects 22.0 (2022)
+?> **Note:** This functionality was added in After Effects 22.0 (2022)
 
 **Description**
 
@@ -125,7 +124,7 @@ Integer in the range `[1..numLayers]`; read-only.
 
 **Description**
 
-The “in” point of the layer, expressed in composition time (seconds).
+The "in" point of the layer, expressed in composition time (seconds).
 
 **Type**
 
@@ -141,8 +140,7 @@ Floating-point value in the range `[-10800.0..10800.0]` (minus or plus three hou
 
 True if the value of the name attribute has been set explicitly, rather than automatically from the source.
 
-#### NOTE
-This always returns true for layers that do not have a [AVLayer.source](avlayer.md#avlayer-source)
+?> **Note:** This always returns true for layers that do not have a [AVLayer.source](avlayer.md#avlayer-source)
 
 **Type**
 
@@ -158,8 +156,7 @@ Boolean; read-only.
 
 The label color for the item. Colors are represented by their number (0 for None, or 1 to 16 for one of the preset colors in the Labels preferences).
 
-#### NOTE
-Custom label colors cannot be set programmatically.
+?> **Note:** Custom label colors cannot be set programmatically.
 
 **Type**
 
@@ -187,7 +184,7 @@ Boolean; read/write.
 
 **Description**
 
-A [PropertyGroup object](../properties/propertygroup.md#propertygroup) that contains all a layer’s markers. Layer marker scripting has the same functionality as [Comp markers](../items/compitem.md#compitem-markerproperty).
+A [PropertyGroup object](../properties/propertygroup.md#propertygroup) that contains all a layer's markers. Layer marker scripting has the same functionality as [Comp markers](../items/compitem.md#compitem-markerproperty).
 
 See [MarkerValue object](../other/markervalue.md#markervalue).
 
@@ -234,7 +231,7 @@ Boolean; read-only.
 
 **Description**
 
-The “out” point of the layer, expressed in composition time (seconds).
+The "out" point of the layer, expressed in composition time (seconds).
 
 **Type**
 
@@ -250,11 +247,11 @@ Floating-point value in the range `[-10800.0..10800.0]` (minus or plus three hou
 
 The parent of this layer; can be null.
 
-Offset values are calculated to counterbalance any transforms above this layer in the hierarchy, so that when you set the parent there is no apparent jump in the layer’s transform.
+Offset values are calculated to counterbalance any transforms above this layer in the hierarchy, so that when you set the parent there is no apparent jump in the layer's transform.
 
 For example, if the new parent has a rotation of 30 degrees, the child layer is assigned a rotation of -30 degrees.
 
-To set the parent without changing the child layer’s transform values, use the [setParentWithJump](#layer-setparentwithjump) method.
+To set the parent without changing the child layer's transform values, use the [setParentWithJump](#layer-setparentwithjump) method.
 
 **Type**
 
@@ -282,7 +279,7 @@ Array of PropertyBase objects; read-only.
 
 **Description**
 
-When true, the layer is “shy”, meaning that it is hidden in the Layer panel if the composition’s “Hide all shy layers” option is toggled on.
+When true, the layer is "shy", meaning that it is hidden in the Layer panel if the composition's "Hide all shy layers" option is toggled on.
 
 **Type**
 
@@ -324,7 +321,7 @@ Floating-point value in the range `[-10800.0..10800.0]` (minus or plus three hou
 
 **Description**
 
-The layer’s time stretch, expressed as a percentage. A value of 100 means no stretch. Values between 0 and 1 are set to 1, and values between -1 and 0 (not including 0) are set to -1.
+The layer's time stretch, expressed as a percentage. A value of 100 means no stretch. Values between 0 and 1 are set to 1, and values between -1 and 0 (not including 0) are set to -1.
 
 **Type**
 
@@ -379,8 +376,7 @@ Applies the specified collection of animation settings (an animation preset) to 
 
 Predefined animation preset files are installed in the Presets folder, and users can create new animation presets through the user interface.
 
-#### WARNING
-The animation preset is applied to the the selected layer(s) of the comp, not to the layer whose applyPreset function is called. Hence, the layer whose applyPreset function is called effectively just determines the comp whose layers are processed.
+!> **Warning:** The animation preset is applied to the the selected layer(s) of the comp, not to the layer whose applyPreset function is called. Hence, the layer whose applyPreset function is called effectively just determines the comp whose layers are processed.
 
 **Parameters**
 
@@ -407,11 +403,9 @@ Copying in a layer changes the index positions of previously existing layers in 
 
 This is the same as copying and pasting a layer through the user interface.
 
-#### NOTE
-As of After Effects 13.6, this method no longer causes After Effects to crash when the layer has a parent.
+?> **Note:** As of After Effects 13.6, this method no longer causes After Effects to crash when the layer has a parent.
 
-#### WARNING
-As of After Effects 13.7 (13.6, has not been tested), if the copied layer has an effect on it and the user undoes the action, After Effects will Crash.
+!> **Warning:** As of After Effects 13.7 (13.6, has not been tested), if the copied layer has an effect on it and the user undoes the action, After Effects will Crash.
 
 **Parameters**
 
@@ -428,12 +422,11 @@ Nothing.
 
 `app.project.item(index).layer(index).doSceneEditDetection(applyOptions)`
 
-#### NOTE
-This functionality was added in After Effects 22.3 (2022)
+?> **Note:** This functionality was added in After Effects 22.3 (2022)
 
 **Description**
 
-Runs Scene Edit Detection on the layer that the method is called on and returns an array containing the times of any detected scenes. This is the same as selecting a layer in the Timeline and choosing “Layer > Scene Edit Detection” with the single argument determining whether the edits are applied as markers, layer splits, pre-comps, or are not applied to the layer.
+Runs Scene Edit Detection on the layer that the method is called on and returns an array containing the times of any detected scenes. This is the same as selecting a layer in the Timeline and choosing "Layer > Scene Edit Detection" with the single argument determining whether the edits are applied as markers, layer splits, pre-comps, or are not applied to the layer.
 
 Just as in the UI, `doSceneEditDetection` will fail and error if called on a non-video layer or a video layer with Time Remapping enabled.
 
@@ -566,9 +559,9 @@ Nothing.
 
 Sets the parent of this layer to the specified layer, without changing the transform values of the child layer.
 
-There may be an apparent jump in the rotation, translation, or scale of the child layer, as this layer’s transform values are combined with those of its ancestors.
+There may be an apparent jump in the rotation, translation, or scale of the child layer, as this layer's transform values are combined with those of its ancestors.
 
-If you do not want the child layer to jump, set the [parent](#layer-parent) attribute directly. In this case, an offset is calculated and set in the child layer’s transform fields, to prevent the jump from occurring.
+If you do not want the child layer to jump, set the [parent](#layer-parent) attribute directly. In this case, an offset is calculated and set in the child layer's transform fields, to prevent the jump from occurring.
 
 **Parameters**
 

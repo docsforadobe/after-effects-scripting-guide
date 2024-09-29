@@ -16,11 +16,11 @@ To associate a marker with a layer, set the MarkerValue object in the [Layer.mar
 
 To associate a marker with a composition, set the MarkerValue object in the [CompItem.markerProperty](../items/compitem.md#compitem-markerproperty) property of the comp: `compObject.markerProperty.setValueAtTime(time, markerValueObject);`
 
-For information on the usage of markers see “Using markers” in After Effects Help.
+For information on the usage of markers see "Using markers" in After Effects Help.
 
 **Examples**
 
-- To set a **layer** marker that says “Fade Up” at the 2 second mark:
+- To set a **layer** marker that says "Fade Up" at the 2 second mark:
 
 > ```javascript
 > var myMarker = new MarkerValue("FadeUp");
@@ -28,7 +28,7 @@ For information on the usage of markers see “Using markers” in After Effects
 > // or
 > myLayer.marker.setValueAtTime(2, myMarker);
 > ```
-- To set a **comp** marker that says “Fade Up” at the 2 second mark:
+- To set a **comp** marker that says "Fade Up" at the 2 second mark:
 
 ```javascript
 var myMarker = new MarkerValue("FadeUp");
@@ -102,7 +102,7 @@ String; read/write.
 
 **Description**
 
-The marker’s duration, in seconds. The duration appears in the Timeline panel as a short bar extending from the marker location.
+The marker's duration, in seconds. The duration appears in the Timeline panel as a short bar extending from the marker location.
 
 **Type**
 
@@ -200,7 +200,7 @@ None.
 
 **Returns**
 
-An object with an attribute matching each parameter name, containing that parameter’s value.
+An object with an attribute matching each parameter name, containing that parameter's value.
 
 ---
 
@@ -214,7 +214,7 @@ Associates a set of key-value pairs for Flash Video cue-point parameters, for a 
 
 **Parameters**
 
-| `keyValuePairs`   | An object containing the key-value pairs as attributes and<br/>values. The object’s `toString()` method is called to<br/>assign the string value of each attribute to the named key.   |
+| `keyValuePairs`   | An object containing the key-value pairs as attributes and<br/>values. The object's `toString()` method is called to<br/>assign the string value of each attribute to the named key.   |
 |-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 **Returns**

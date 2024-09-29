@@ -7,7 +7,7 @@
 
 **Description**
 
-The CompItem object represents a composition, and allows you to manipulate and get information about it. Access the objects by position index number in a project’s item collection.
+The CompItem object represents a composition, and allows you to manipulate and get information about it. Access the objects by position index number in a project's item collection.
 
 > CompItem is a subclass of [AVItem object](avitem.md#avitem), which is a subclass of [Item object](item.md#item). All methods and attributes of AVItem and Item, in addition to those listed below, are available when working with CompItem.
 
@@ -57,17 +57,15 @@ An array containing three floating-point values, `[R, G, B]`, in the range `[0.0
 
 `app.project.item(index).counters`
 
-#### NOTE
-This functionality was added in After Effects 13.2 (CC2014).
+?> **Note:** This functionality was added in After Effects 13.2 (CC2014).
 
-#### WARNING
-This method/property is officially undocumented and was found via research. The information here may be inaccurate, and this whole method/property may disappear or stop working some point. Please contribute if you have more information on it!
+!> **Warning:** This method/property is officially undocumented and was found via research. The information here may be inaccurate, and this whole method/property may disappear or stop working some point. Please contribute if you have more information on it!
 
 **Description**
 
 This attribute works app-wide: if changed on one CompItem, it will change it for every CompItem in the project. The value stays until restarting AE. Once restarted, it will revert to false.
 
-This parameter doesn’t do anything.
+This parameter doesn't do anything.
 
 **Type**
 
@@ -85,8 +83,7 @@ The frame value of the beginning of the composition.
 
 This value is an alternative to calculating the start frame using [CompItem.displayStartTime](#compitem-displaystarttime) and [CompItem.frameDuration](#compitem-frameduration) to compensate for floating-point problems.
 
-#### NOTE
-This functionality was added in After Effects 17.1.
+?> **Note:** This functionality was added in After Effects 17.1.
 
 **Type**
 
@@ -102,8 +99,7 @@ Integer; read/write.
 
 The time set as the beginning of the composition, in seconds. This is the equivalent of the Start Timecode or Start Frame setting in the Composition Settings dialog box.
 
-#### NOTE
-As of After Effects 17.1, the minimum value is `-10800.0`. Before 17.1, the minimum value was 0.0
+?> **Note:** As of After Effects 17.1, the minimum value is `-10800.0`. Before 17.1, the minimum value was 0.0
 
 **Type**
 
@@ -199,12 +195,11 @@ LayerCollection object; read-only.
 
 `app.project.item(index).markerProperty`
 
-#### NOTE
-This functionality was added in After Effects 14.0 (CC 2017)
+?> **Note:** This functionality was added in After Effects 14.0 (CC 2017)
 
 **Description**
 
-A [PropertyGroup object](../properties/propertygroup.md#propertygroup) that contains all a composition’s markers. Composition marker scripting has the same functionality as [Layer markers](../layers/layer.md#layer-marker).
+A [PropertyGroup object](../properties/propertygroup.md#propertygroup) that contains all a composition's markers. Composition marker scripting has the same functionality as [Layer markers](../layers/layer.md#layer-marker).
 
 See [MarkerValue object](../other/markervalue.md#markervalue).
 
@@ -281,8 +276,7 @@ Integer (between 2 and 64); read/write.
 
 `app.project.item(index).motionGraphicsTemplateControllerCount`
 
-#### NOTE
-This functionality was added in After Effects 16.1 (CC 2019)
+?> **Note:** This functionality was added in After Effects 16.1 (CC 2019)
 
 **Description**
 
@@ -298,14 +292,13 @@ Integer; read-only.
 
 `app.project.item(index).motionGraphicsTemplateName`
 
-#### NOTE
-This functionality was added in After Effects 15.0 (CC 2018)
+?> **Note:** This functionality was added in After Effects 15.0 (CC 2018)
 
 **Description**
 
 Read or write the name property in the Essential Graphics panel for the composition.
 
-The name in the Essential Graphics panel is used for the file name of an exported Motion Graphics template (ex., “My Template.mogrt”).
+The name in the Essential Graphics panel is used for the file name of an exported Motion Graphics template (ex., "My Template.mogrt").
 
 The following example will set the name for the active composition and then return it as an alert
 
@@ -340,7 +333,7 @@ Integer; read-only.
 
 **Description**
 
-When true, the frame rate of nested compositions is preserved in the current composition. Corresponds to the value of the “Preserve frame rate when nested or in render queue” option in the Advanced tab of the Composition Settings dialog box.
+When true, the frame rate of nested compositions is preserved in the current composition. Corresponds to the value of the "Preserve frame rate when nested or in render queue" option in the Advanced tab of the Composition Settings dialog box.
 
 **Type**
 
@@ -354,7 +347,7 @@ Boolean; read/write.
 
 **Description**
 
-When true, the resolution of nested compositions is preserved in the current composition. Corresponds to the value of the “Preserve Resolution When Nested” option in the Advanced tab of the Composition Settings dialog box.
+When true, the resolution of nested compositions is preserved in the current composition. Corresponds to the value of the "Preserve Resolution When Nested" option in the Advanced tab of the Composition Settings dialog box.
 
 **Type**
 
@@ -456,7 +449,7 @@ The shutter phase setting for the composition. This corresponds to the Shutter P
 
 **Type**
 
-Integer in the range `[–360...360]`; read/write.
+Integer in the range `[-360...360]`; read/write.
 
 ---
 
@@ -512,18 +505,17 @@ CompItem object.
 
 `app.project.item(index).exportAsMotionGraphicsTemplate(doOverWriteFileIfExisting, file_path)`
 
-#### NOTE
-This functionality was added in After Effects 15.0 (CC 2018)
+?> **Note:** This functionality was added in After Effects 15.0 (CC 2018)
 
 **Description**
 
 Exports the composition as a Motion Graphics template. Returns true if the Motion Graphics template is successfully exported, false otherwise.
 
-The name in the Essential Graphics panel is used for the file name of the Motion Graphics template (ex., “My Template.mogrt”).
+The name in the Essential Graphics panel is used for the file name of the Motion Graphics template (ex., "My Template.mogrt").
 Use the `motionGraphicsTemplateName` attribute to set the name.
 
 Optionally specify the path to the folder where the Motion Graphics template file is saved. If not specified, the file will be saved in the current
-user’s Motion Graphics Templates folder:
+user's Motion Graphics Templates folder:
 
 ```text
 macOS: /Users/<name>/Library/Application Support/Adobe/Common/Motion Graphics Templates/
@@ -549,8 +541,7 @@ Boolean.
 
 `app.project.item(index).getMotionGraphicsTemplateControllerName(index)`
 
-#### NOTE
-This functionality was added in After Effects 16.1 (CC 2019)
+?> **Note:** This functionality was added in After Effects 16.1 (CC 2019)
 
 **Description**
 
@@ -571,15 +562,13 @@ String; read-only.
 
 `app.project.item(index).setMotionGraphicsControllerName(index,newName)`
 
-#### NOTE
-This functionality was added in After Effects 16.1 (CC 2019)
+?> **Note:** This functionality was added in After Effects 16.1 (CC 2019)
 
 **Description**
 
 Sets the name of a single property in the Essential Graphics panel.
 
-#### NOTE
-To rename a property as it is added to the EGP, see [Property.addToMotionGraphicsTemplateAs()](../properties/property.md#property-addtomotiongraphicstemplateas).
+?> **Note:** To rename a property as it is added to the EGP, see [Property.addToMotionGraphicsTemplateAs()](../properties/property.md#property-addtomotiongraphicstemplateas).
 
 **Parameters**
 
@@ -615,7 +604,7 @@ or:
 
 | `otherLayer`   | A Layer object in this composition. The `relIndex` value is<br/>added to the index value of thislayer to find the position of<br/>the desired layer.                                                                                                                                                                               |
 |----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `relIndex`     | The position of the desired layer, relative to `otherLayer`.<br/>An integer in the range `[1 – otherLayer.index...numLayers –<br/>otherLayer.index]`, where `numLayers` is the number of<br/>layers in the composition. This value is added to the<br/>`otherLayer` value to derive the absolute index of the<br/>layer to return. |
+| `relIndex`     | The position of the desired layer, relative to `otherLayer`.<br/>An integer in the range `[1 - otherLayer.index...numLayers -<br/>otherLayer.index]`, where `numLayers` is the number of<br/>layers in the composition. This value is added to the<br/>`otherLayer` value to derive the absolute index of the<br/>layer to return. |
 
 —or—
 
@@ -632,8 +621,7 @@ or:
 
 `app.project.item(index).openInEssentialGraphics()`
 
-#### NOTE
-This functionality was added in After Effects 15.0 (CC 2018)
+?> **Note:** This functionality was added in After Effects 15.0 (CC 2018)
 
 **Description**
 

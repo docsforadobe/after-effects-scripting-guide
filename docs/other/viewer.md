@@ -105,7 +105,7 @@ A `ViewerType` enumerated value; read-only. One of:
 **Description**
 
 Moves the viewer panel to the front and places focus on it, making it active.
-Calling this method will set the [viewer’s active attribute](#viewer-active) to true.
+Calling this method will set the [viewer's active attribute](#viewer-active) to true.
 
 **Parameters**
 

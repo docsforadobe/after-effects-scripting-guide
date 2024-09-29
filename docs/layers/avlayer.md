@@ -85,7 +85,7 @@ Boolean; read/write.
 
 **Description**
 
-True if the layer’s audio is active at the current time. For this value to be true, `audioEnabled` must be true, no other layer with audio may be soloing unless this layer is soloed too, and the time must be between the `inPoint`
+True if the layer's audio is active at the current time. For this value to be true, `audioEnabled` must be true, no other layer with audio may be soloing unless this layer is soloed too, and the time must be between the `inPoint`
 and `outPoint` of this layer.
 
 **Type**
@@ -100,7 +100,7 @@ Boolean; read-only.
 
 **Description**
 
-When true, the layer’s audio is enabled. This value corresponds to the audio toggle switch in the Timeline panel.
+When true, the layer's audio is enabled. This value corresponds to the audio toggle switch in the Timeline panel.
 
 **Type**
 
@@ -152,7 +152,7 @@ A BlendingMode enumerated value; read/write. One of:
 - `BlendingMode.SATURATION`
 - `BlendingMode.SCREEN`
 - `BlendingMode.SUBTRACT`
-- `BlendingMode.SILHOUETE_ALPHA` - note the mispelling of ‘SILHOUETTE’!
+- `BlendingMode.SILHOUETE_ALPHA` - note the mispelling of 'SILHOUETTE'!
 - `BlendingMode.SILHOUETTE_LUMA`
 - `BlendingMode.SOFT_LIGHT`
 - `BlendingMode.STENCIL_ALPHA`
@@ -210,7 +210,7 @@ Boolean; read/write.
 
 **Description**
 
-True if the layer’s effects are active, as indicated by the `<f>` icon next to it in the user interface.
+True if the layer's effects are active, as indicated by the `<f>` icon next to it in the user interface.
 
 **Type**
 
@@ -296,12 +296,11 @@ Boolean; read-only.
 
 `app.project.item(index).layer(index).hasTrackMatte`
 
-#### NOTE
-This functionality was updated in After Effects 23.0. Track Matte is no longer dependent on layer order.
+?> **Note:** This functionality was updated in After Effects 23.0. Track Matte is no longer dependent on layer order.
 
 **Description**
 
-True if this layer has track matte. When true, this layer’s `trackMatteType` value controls how the matte is applied.
+True if this layer has track matte. When true, this layer's `trackMatteType` value controls how the matte is applied.
 See [AVLayer.trackMatteType](#avlayer-trackmattetype) for available track matte types.
 
 **Type**
@@ -342,8 +341,7 @@ Boolean; read-only.
 
 `app.project.item(index)layer(index).isTrackMatte`
 
-#### NOTE
-This functionality was updated in After Effects 23.0. Track Matte is no longer dependent on layer order.
+?> **Note:** This functionality was updated in After Effects 23.0. Track Matte is no longer dependent on layer order.
 
 **Description**
 
@@ -405,8 +403,7 @@ A `LayerQuality` enumerated value; read/write. One of:
 
 `app.project.item(index).layer(index).samplingQuality`
 
-#### NOTE
-This functionality was added in After Effects 12.0 (CC)
+?> **Note:** This functionality was added in After Effects 12.0 (CC)
 
 **Description**
 
@@ -481,8 +478,7 @@ Boolean; read/write.
 
 `app.project.item(index).layer(index).trackMatteLayer`
 
-#### NOTE
-This functionality was added in After Effects 23.0
+?> **Note:** This functionality was added in After Effects 23.0
 
 **Description**
 
@@ -498,11 +494,9 @@ AVLayer object; read only.
 
 `app.project.item(index).layer(index).trackMatteType`
 
-#### NOTE
-This functionality was updated in After Effects 23.0
+?> **Note:** This functionality was updated in After Effects 23.0
 
-#### WARNING
-This is a Legacy API we don’t recommend using for setting Track Matte Type in new scripts. Please consider using the latest track matte APIs [AVLayer.setTrackMatte()](#avlayer-settrackmatte) and [AVLayer.removeTrackMatte()](#avlayer-removetrackmatte) for your tasks.
+!> **Warning:** This is a Legacy API we don't recommend using for setting Track Matte Type in new scripts. Please consider using the latest track matte APIs [AVLayer.setTrackMatte()](#avlayer-settrackmatte) and [AVLayer.removeTrackMatte()](#avlayer-removetrackmatte) for your tasks.
 
 **Description**
 
@@ -556,8 +550,7 @@ Floating-point; read-only.
 
 `app.project.item(index).layer(index).addToMotionGraphicsTemplate(comp)`
 
-#### NOTE
-This functionality was added in After Effects 18.0 (2021)
+?> **Note:** This functionality was added in After Effects 18.0 (2021)
 
 **Description**
 
@@ -583,8 +576,7 @@ Boolean.
 
 `app.project.item(index).layer(index).addToMotionGraphicsTemplateAs(comp, name)`
 
-#### NOTE
-This functionality was added in After Effects 18.0 (2021)
+?> **Note:** This functionality was added in After Effects 18.0 (2021)
 
 **Description**
 
@@ -613,7 +605,7 @@ Boolean.
 
 **Description**
 
-Returns true if this layer’s audio will be active at the specified time. For this method to return true, `audioEnabled` must be true, no other layer with audio may be soloing unless this layer is soloed too, and the time must be between the `inPoint` and `outPoint` of this layer.
+Returns true if this layer's audio will be active at the specified time. For this method to return true, `audioEnabled` must be true, no other layer with audio may be soloing unless this layer is soloed too, and the time must be between the `inPoint` and `outPoint` of this layer.
 
 **Parameters**
 
@@ -663,8 +655,7 @@ for (var sel in transform) {
 
 `app.project.item(index).layer(index).canAddToMotionGraphicsTemplate(comp)`
 
-#### NOTE
-This functionality was added in After Effects 18.0 (2021)
+?> **Note:** This functionality was added in After Effects 18.0 (2021)
 
 **Description**
 
@@ -699,15 +690,13 @@ Boolean.
 
 `app.project.item(index).layer(index).compPointToSource()`
 
-#### NOTE
-This functionality was added in After Effects 13.2 (CC 2014.2)
+?> **Note:** This functionality was added in After Effects 13.2 (CC 2014.2)
 
 **Description**
 
 Converts composition coordinates, such as `sourcePointToComp`, to layer coordinates.
 
-#### WARNING
-This value only reflects the first character in the text layer at the current time.
+!> **Warning:** This value only reflects the first character in the text layer at the current time.
 
 **Parameters**
 
@@ -742,8 +731,7 @@ Viewer object for the Layer panel, or null if the layer could not be opened (e.g
 
 `app.project.item(index).layer(index).removeTrackMatte()`
 
-#### NOTE
-This functionality was added in After Effects 23.0
+?> **Note:** This functionality was added in After Effects 23.0
 
 **Description**
 
@@ -789,8 +777,7 @@ Replaces the source for this layer.
 
 Nothing.
 
-#### WARNING
-If this method is performed on a null layer, the layers `isNull` attribute is not changed from `true`. This causes the layer not to be visible in comp viewer and renders.
+!> **Warning:** If this method is performed on a null layer, the layers `isNull` attribute is not changed from `true`. This causes the layer not to be visible in comp viewer and renders.
 
 ---
 
@@ -798,8 +785,7 @@ If this method is performed on a null layer, the layers `isNull` attribute is no
 
 `app.project.item(index).layer(index).setTrackMatte(trackMatteLayer, trackMatteType)`
 
-#### NOTE
-This functionality was added in After Effects 23.0
+?> **Note:** This functionality was added in After Effects 23.0
 
 **Description**
 
@@ -812,8 +798,7 @@ See [AVLayer.removeTrackMatte()](#avlayer-removetrackmatte) for another way of r
 |---------------------|---------------------------------------------------------------------------------------------------------------------------|
 | `trackMatteType`    | The type of the track matte to be used. Please see [AVLayer.trackMatteType](#avlayer-trackmattetype) for available types. |
 
-#### WARNING
-Passing in `TrackMatteType.NO_TRACK_MATTE` as type is invalid and will result in no-op.
+!> **Warning:** Passing in `TrackMatteType.NO_TRACK_MATTE` as type is invalid and will result in no-op.
 
 **Returns**
 
@@ -845,15 +830,13 @@ myLayer.setTrackMatte(otherLayer, TrackMatteType.NO_TRACK_MATTE);
 
 `app.project.item(index).layer(index).sourcePointToComp()`
 
-#### NOTE
-This functionality was added in After Effects 13.2 (CC 2014.2)
+?> **Note:** This functionality was added in After Effects 13.2 (CC 2014.2)
 
 **Description**
 
 Converts layer coordinates, such as `boxTextPos`, to composition coordinates.
 
-#### WARNING
-This value only reflects the first character in the text layer at the current time.
+!> **Warning:** This value only reflects the first character in the text layer at the current time.
 
 **Parameters**
 

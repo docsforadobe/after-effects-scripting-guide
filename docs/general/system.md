@@ -4,7 +4,7 @@
 
 **Description**
 
-The System object provides access to attributes found on the user’s system, such as the user name and the name and version of the operating system. It is available through the `system` global variable.
+The System object provides access to attributes found on the user's system, such as the user name and the name and version of the operating system. It is available through the `system` global variable.
 
 **Example**
 
@@ -39,8 +39,7 @@ String; read-only.
 
 The name of the operating system on which After Effects is running.
 
-#### WARNING
-As of Windows 7, this attribute returns a blank value. Use $.os instead.
+!> **Warning:** As of Windows 7, this attribute returns a blank value. Use $.os instead.
 
 **Type**
 
@@ -84,7 +83,7 @@ String; read-only.
 
 **Description**
 
-Executes a system command, as if you had typed it on the operating system’s command line. Returns whatever the system outputs in response to the command, if anything. In Windows, you can invoke commands using the `/c` switch for the `cmd.exe` command, passing the command to run in escaped quotes (`\"...\"`). For example, the following retrieves the current time and displays it to the user:
+Executes a system command, as if you had typed it on the operating system's command line. Returns whatever the system outputs in response to the command, if anything. In Windows, you can invoke commands using the `/c` switch for the `cmd.exe` command, passing the command to run in escaped quotes (`\"...\"`). For example, the following retrieves the current time and displays it to the user:
 
 ```javascript
 var timeStr = system.callSystem("cmd.exe /c \"time /t\"");

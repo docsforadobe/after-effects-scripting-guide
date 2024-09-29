@@ -8,7 +8,7 @@ The FolderItem object corresponds to a folder in your Project panel. It can cont
 
 **Example**
 
-Given that the second item in the project is a FolderItem, the following code puts up an alert for each top-level item in the folder, showing that item’s name.
+Given that the second item in the project is a FolderItem, the following code puts up an alert for each top-level item in the folder, showing that item's name.
 
 ```javascript
 var secondItem = app.project.item(2);
@@ -67,7 +67,7 @@ Integer; read-only.
 
 Returns the top-level item in this folder at the specified index position.
 
-Note that “top-level” here means top-level within the folder, not necessarily within the project.
+Note that "top-level" here means top-level within the folder, not necessarily within the project.
 
 **Parameters**
 

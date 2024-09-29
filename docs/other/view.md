@@ -47,7 +47,7 @@ Options object for this View
 **Description**
 
 Moves this view panel to the front and places focus on it, making it active.
-Calling this method will set the [view’s active attribute](#view-active) to true.
+Calling this method will set the [view's active attribute](#view-active) to true.
 
 **Parameters**
 

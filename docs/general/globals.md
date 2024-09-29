@@ -7,7 +7,7 @@ These globally available functions that are specific to After Effects. Any JavaS
 | `clearOutput()`          | Clears text from the Info panel.                                   |
 | `currentFormatToTime()`  | Converts string time value to a numeric time value.                |
 | `generateRandomNumber()` | Generates a random number.                                         |
-| `getEnumAsString()`      | Converts an Enum value to it’s string name.                        |
+| `getEnumAsString()`      | Converts an Enum value to it's string name.                        |
 | `timeToCurrentFormat()`  | Converts a numeric time value to a string time<br/>value.          |
 | `write()`                | Writes text to the Info panel, with no line break<br/>added.       |
 | `writeLn()`              | Writes text to the Info panel, adding a line break<br/>at the end. |
@@ -41,14 +41,14 @@ Nothing.
 
 **Description**
 
-Converts a formatted string for a frame time value to a number of seconds, given a specified frame rate. For example, if the formatted frame time value is 0:00:12 (the exact string format is determined by a project setting), and the frame rate is 24 fps, the time would be 0.5 seconds (12/24). If the frame rate is 30 fps, the time would be 0.4 seconds (12/30). If the time is a duration, the frames are counted from 0. Otherwise, the frames are counted from the project’s starting frame (see [Project.displayStartFrame](project.md#project-displaystartframe)).
+Converts a formatted string for a frame time value to a number of seconds, given a specified frame rate. For example, if the formatted frame time value is 0:00:12 (the exact string format is determined by a project setting), and the frame rate is 24 fps, the time would be 0.5 seconds (12/24). If the frame rate is 30 fps, the time would be 0.4 seconds (12/30). If the time is a duration, the frames are counted from 0. Otherwise, the frames are counted from the project's starting frame (see [Project.displayStartFrame](project.md#project-displaystartframe)).
 
 **Parameters**
 
-| `formattedTime`   | The frame time value, a string specifying a number of<br/>frames in the project’s current time display format.                                                 |
+| `formattedTime`   | The frame time value, a string specifying a number of<br/>frames in the project's current time display format.                                                 |
 |-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `fps`             | The frames-per-second, a floating-point value.                                                                                                                 |
-| `isDuration`      | Optional. When true, the time is a duration (measured from<br/>frame 0). When false (the default), the time is measured<br/>from the project’s starting frame. |
+| `isDuration`      | Optional. When true, the time is a duration (measured from<br/>frame 0). When false (the default), the time is measured<br/>from the project's starting frame. |
 
 **Returns**
 
@@ -60,8 +60,7 @@ Floating-point value, the number of seconds.
 
 `generateRandomNumber()`
 
-#### NOTE
-This functionality was added in After Effects 13.6 (CC 2015)
+?> **Note:** This functionality was added in After Effects 13.6 (CC 2015)
 
 **Description**
 
@@ -83,7 +82,7 @@ var x = 0;
 
 for (var i = 1; i <= myComp.numLayers; i++) {
   // If you use Math.random(), this does not work
-  // x = 400 * (Math.random()) – 200;
+  // x = 400 * (Math.random()) - 200;
   // use new generateRandomNumber() instead
 
   x = 400 * generateRandomNumber() - 200;
@@ -98,8 +97,7 @@ for (var i = 1; i <= myComp.numLayers; i++) {
 
 `getEnumAsString()`
 
-#### NOTE
-This functionality was added in After Effects 24.0
+?> **Note:** This functionality was added in After Effects 24.0
 
 **Description**
 
@@ -159,18 +157,18 @@ alert(isValid(mask1)); // displays "false"; mask2 and mask3 do as well
 
 **Description**
 
-Converts a numeric time value (a number of seconds) to a frame time value; that is, a formatted string thatshows which frame corresponds to that time, at the specified rate. For example, if the time is 0.5 seconds, andthe frame rate is 24 fps, the frame would be 0:00:12 (when the project is set to display as timecode). If the framerate is 30 fps, the frame would be 0:00:15. The format of the timecode string is determined by a project setting. If the time is a duration, the frames are counted from 0. Otherwise, the frames are counted from the project’s starting frame (see [Project displayStartFrame](project.md#project-displaystartframe) attribute).
+Converts a numeric time value (a number of seconds) to a frame time value; that is, a formatted string thatshows which frame corresponds to that time, at the specified rate. For example, if the time is 0.5 seconds, andthe frame rate is 24 fps, the frame would be 0:00:12 (when the project is set to display as timecode). If the framerate is 30 fps, the frame would be 0:00:15. The format of the timecode string is determined by a project setting. If the time is a duration, the frames are counted from 0. Otherwise, the frames are counted from the project's starting frame (see [Project displayStartFrame](project.md#project-displaystartframe) attribute).
 
 **Parameters**
 
 | `time`       | The number of seconds, a floating-point value.                                                                                                                 |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `fps`        | The frames-per-second, a floating-point value.                                                                                                                 |
-| `isDuration` | Optional. When true, the time is a duration (measured from<br/>frame 0). When false (the default), the time is measured from<br/>the project’s starting frame. |
+| `isDuration` | Optional. When true, the time is a duration (measured from<br/>frame 0). When false (the default), the time is measured from<br/>the project's starting frame. |
 
 **Returns**
 
-String in the project’s current time display format.
+String in the project's current time display format.
 
 ---
 

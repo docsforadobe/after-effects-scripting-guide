@@ -7,7 +7,7 @@
 
 **Description**
 
-The TextDocument object stores a value for a TextLayer’s Source Text property. Create it with the constructor, passing the string to be encapsulated.
+The TextDocument object stores a value for a TextLayer's Source Text property. Create it with the constructor, passing the string to be encapsulated.
 
 **Examples**
 
@@ -58,15 +58,13 @@ textProp.setValue(textDocument);
 
 `textDocument.allCaps`
 
-#### NOTE
-This functionality was added in After Effects 13.2 (CC 2014.2)
+?> **Note:** This functionality was added in After Effects 13.2 (CC 2014.2)
 
 **Description**
 
 True if a Text layer has All Caps enabled; otherwise false. To set this value, use [fontCapsOption](#textdocument-fontcapsoption) added in After Effects 24.0.
 
-#### WARNING
-This value only reflects the first character in the Text layer.
+!> **Warning:** This value only reflects the first character in the Text layer.
 
 **Type**
 
@@ -106,17 +104,15 @@ Boolean; read/write.
 
 `textDocument.autoHyphenate`
 
-#### NOTE
-This functionality was added in After Effects 24.0
+?> **Note:** This functionality was added in After Effects 24.0
 
 **Description**
 
-The Text layer’s auto hyphenate paragraph option.
+The Text layer's auto hyphenate paragraph option.
 
 If this attribute has a mixed value, it will be read as `undefined`.
 
-#### WARNING
-This value reflects all paragraphs in the Text layer.
+!> **Warning:** This value reflects all paragraphs in the Text layer.
 If you change this value, it will set all paragraphs in the Text layer to the specified setting.
 
 **Type**
@@ -131,12 +127,11 @@ Boolean; read/write.
 
 **Description**
 
-The Text layer’s auto leading character option.
+The Text layer's auto leading character option.
 
 If this attribute has a mixed value, it will be read as `undefined`.
 
-#### WARNING
-This value reflects all paragraphs in the Text layer.
+!> **Warning:** This value reflects all paragraphs in the Text layer.
 If you change this value, it will set all paragraphs in the Text layer to the specified setting.
 
 **Type**
@@ -149,15 +144,13 @@ Boolean; read/write.
 
 `textDocument.autoKernType`
 
-#### NOTE
-This functionality was added in After Effects 24.0
+?> **Note:** This functionality was added in After Effects 24.0
 
 **Description**
 
-The Text layer’s auto kern type option.
+The Text layer's auto kern type option.
 
-#### WARNING
-This value only reflects the first character in the Text layer.
+!> **Warning:** This value only reflects the first character in the Text layer.
 If you change this value, it will set all characters in the Text layer to the specified setting.
 
 **Type**
@@ -174,15 +167,13 @@ An `AutoKernType` enumerated value; read/write. One of:
 
 `textDocument.baselineDirection`
 
-#### NOTE
-This functionality was added in After Effects 24.0
+?> **Note:** This functionality was added in After Effects 24.0
 
 **Description**
 
-The Text layer’s baseline direction option. This is significant for Japanese language in vertical texts. “BASELINE_VERTICAL_CROSS_STREAM” is also know as Tate-Chu-Yoko.
+The Text layer's baseline direction option. This is significant for Japanese language in vertical texts. "BASELINE_VERTICAL_CROSS_STREAM" is also know as Tate-Chu-Yoko.
 
-#### WARNING
-This value only reflects the first character in the Text layer.
+!> **Warning:** This value only reflects the first character in the Text layer.
 If you change this value, it will set all characters in the Text layer to the specified setting.
 
 **Type**
@@ -199,15 +190,13 @@ A `BaselineDirection` enumerated value; read/write. One of:
 
 `textDocument.baselineLocs`
 
-#### NOTE
-This functionality was added in After Effects 13.6 (CC 2015)
+?> **Note:** This functionality was added in After Effects 13.6 (CC 2015)
 
 **Description**
 
 The baseline (x,y) locations for a Text layer. Line wraps in a paragraph text box are treated as multiple lines.
 
-#### NOTE
-If a line has no characters, the x and y values for start and end will be the maximum float value (3.402823466e+38F).
+?> **Note:** If a line has no characters, the x and y values for start and end will be the maximum float value (3.402823466e+38F).
 
 **Type**
 
@@ -237,15 +226,13 @@ Array of floating-point values in the form of
 
 `textDocument.baselineShift`
 
-#### NOTE
-This functionality was added in After Effects 13.2 (CC 2014.2)
+?> **Note:** This functionality was added in After Effects 13.2 (CC 2014.2)
 
 **Description**
 
-This Text layer’s baseline shift in pixels.
+This Text layer's baseline shift in pixels.
 
-#### WARNING
-This value only reflects the first character in the Text layer.
+!> **Warning:** This value only reflects the first character in the Text layer.
 If you change this value, it will set all characters in the Text layer to the specified setting.
 
 **Type**
@@ -258,8 +245,7 @@ Floating-point value; read-write.
 
 `textDocument.boxAutoFitPolicy`
 
-#### NOTE
-This functionality was added in After Effects 24.6
+?> **Note:** This functionality was added in After Effects 24.6
 
 **Description**
 
@@ -285,8 +271,7 @@ A `BoxAutoFitPolicy` enumerated value; read-write. One of:
 
 `textDocument.boxFirstBaselineAlignment`
 
-#### NOTE
-This functionality was added in After Effects 24.6
+?> **Note:** This functionality was added in After Effects 24.6
 
 **Description**
 
@@ -316,8 +301,7 @@ A `BoxFirstBaselineAlignment` enumerated value; read-write. One of:
 
 `textDocument.boxFirstBaselineAlignmentMinimum`
 
-#### NOTE
-This functionality was added in After Effects 24.6
+?> **Note:** This functionality was added in After Effects 24.6
 
 **Description**
 
@@ -337,8 +321,7 @@ Floating-point value; read/write.
 
 `textDocument.boxInsetSpacing`
 
-#### NOTE
-This functionality was added in After Effects 24.6
+?> **Note:** This functionality was added in After Effects 24.6
 
 **Description**
 
@@ -356,8 +339,7 @@ Floating-point value; read/write.
 
 `textDocument.boxOverflow`
 
-#### NOTE
-This functionality was added in After Effects 24.6
+?> **Note:** This functionality was added in After Effects 24.6
 
 **Description**
 
@@ -387,16 +369,14 @@ Boolean; read-only.
 
 `textDocument.boxTextPos`
 
-#### NOTE
-This functionality was added in After Effects 13.2 (CC 2014.2)
+?> **Note:** This functionality was added in After Effects 13.2 (CC 2014.2)
 As of After Effects 14 (CC2017), it seems this is also writeable.
 
 **Description**
 
-The layer coordinates from a paragraph (box) Text layer’s anchor point as a [width, height] array of pixel dimensions.
+The layer coordinates from a paragraph (box) Text layer's anchor point as a [width, height] array of pixel dimensions.
 
-#### WARNING
-Throws an exception if [boxText](#textdocument-boxtext) does not return true for the Text layer.
+!> **Warning:** Throws an exception if [boxText](#textdocument-boxtext) does not return true for the Text layer.
 
 **Type**
 
@@ -420,8 +400,7 @@ var boxTextLayerPos = myTextLayer.sourceText.value.boxTextPos;
 
 The size of a paragraph (box) Text layer as a [width, height] array of pixel dimensions.
 
-#### WARNING
-Throws an exception if [boxText](#textdocument-boxtext) does not return true for the Text layer.
+!> **Warning:** Throws an exception if [boxText](#textdocument-boxtext) does not return true for the Text layer.
 
 **Type**
 
@@ -433,8 +412,7 @@ Array of two integers (minimum value of 1); read/write.
 
 `textDocument.boxVerticalAlignment`
 
-#### NOTE
-This functionality was added in After Effects 24.6
+?> **Note:** This functionality was added in After Effects 24.6
 
 **Description**
 
@@ -475,12 +453,11 @@ Number; read-only.
 
 `textDocument.composerEngine`
 
-#### NOTE
-This functionality was added in After Effects 24.0
+?> **Note:** This functionality was added in After Effects 24.0
 
 **Description**
 
-The Text layer’s paragraph composer engine option. By default new Text layers will use the `ComposerEngine.UNIVERSAL_TYPE_ENGINE`; the other enum value will only be encountered in projects created before the Universal Type Engine engine (formerly known as the South Asian and Middle Eastern engine) became the default in [After Effects 22.1.1](https://helpx.adobe.com/after-effects/using/whats-new/2022-1.html).
+The Text layer's paragraph composer engine option. By default new Text layers will use the `ComposerEngine.UNIVERSAL_TYPE_ENGINE`; the other enum value will only be encountered in projects created before the Universal Type Engine engine (formerly known as the South Asian and Middle Eastern engine) became the default in [After Effects 22.1.1](https://helpx.adobe.com/after-effects/using/whats-new/2022-1.html).
 
 If this attribute has a mixed value, it will be read as `undefined`.
 
@@ -488,8 +465,7 @@ This attrribute is read-write, but an exception will be thrown if any enum value
 
 In effect, you can change an older document from `ComposerEngine.LATIN_CJK_ENGINE` to `ComposerEngine.UNIVERSAL_TYPE_ENGINE`, but not the reverse.
 
-#### WARNING
-This value reflects all paragraphs in the Text layer.
+!> **Warning:** This value reflects all paragraphs in the Text layer.
 If you change this value, it will set all paragraphs in the Text layer to the specified setting.
 
 **Type**
@@ -505,15 +481,13 @@ A `ComposerEngine` enumerated value; read-write. One of:
 
 `textDocument.digitSet`
 
-#### NOTE
-This functionality was added in After Effects 24.0
+?> **Note:** This functionality was added in After Effects 24.0
 
 **Description**
 
-The Text layer’s digit set option.
+The Text layer's digit set option.
 
-#### WARNING
-This value only reflects the first character in the Text layer.
+!> **Warning:** This value only reflects the first character in the Text layer.
 If you change this value, it will set all characters in the Text layer to the specified setting.
 
 **Type**
@@ -532,17 +506,15 @@ A `DigitSet` enumerated value; read/write. One of:
 
 `textDocument.direction`
 
-#### NOTE
-This functionality was added in After Effects 24.0
+?> **Note:** This functionality was added in After Effects 24.0
 
 **Description**
 
-The Text layer’s paragraph direction option.
+The Text layer's paragraph direction option.
 
 If this attribute has a mixed value, it will be read as `undefined`.
 
-#### WARNING
-This value reflects all paragraphs in the Text layer.
+!> **Warning:** This value reflects all paragraphs in the Text layer.
 If you change this value, it will set all paragraphs in the Text layer to the specified setting.
 
 **Type**
@@ -558,17 +530,15 @@ A `ParagraphDirection` enumerated value; read/write. One of:
 
 `textDocument.endIndent`
 
-#### NOTE
-This functionality was added in After Effects 24.0
+?> **Note:** This functionality was added in After Effects 24.0
 
 **Description**
 
-The Text layer’s paragraph end indent option.
+The Text layer's paragraph end indent option.
 
 If this attribute has a mixed value, it will be read as `undefined`.
 
-#### WARNING
-This value reflects all paragraphs in the Text layer.
+!> **Warning:** This value reflects all paragraphs in the Text layer.
 If you change this value, it will set all paragraphs in the Text layer to the specified setting.
 
 **Type**
@@ -581,17 +551,15 @@ Floating-point value; read/write.
 
 `textDocument.everyLineComposer`
 
-#### NOTE
-This functionality was added in After Effects 24.0
+?> **Note:** This functionality was added in After Effects 24.0
 
 **Description**
 
-The Text layer’s Every-Line Composer paragraph option. If set to false, the TextDocument will use the Single-Line Composer.
+The Text layer's Every-Line Composer paragraph option. If set to false, the TextDocument will use the Single-Line Composer.
 
 If this attribute has a mixed value, it will be read as `undefined`.
 
-#### WARNING
-This value reflects all paragraphs in the Text layer.
+!> **Warning:** This value reflects all paragraphs in the Text layer.
 If you change this value, it will set all paragraphs in the Text layer to the specified setting.
 
 **Type**
@@ -604,8 +572,7 @@ Boolean; read/write.
 
 `textDocument.fauxBold`
 
-#### NOTE
-The read functionality was added in After Effects 13.2 (CC 2014.2).
+?> **Note:** The read functionality was added in After Effects 13.2 (CC 2014.2).
 <br/>
 The write functionality was added in After Effects 24.0
 <br/>
@@ -614,8 +581,7 @@ The write functionality was added in After Effects 24.0
 
 True if a Text layer has faux bold enabled; otherwise false.
 
-#### WARNING
-This value only reflects the first character in the Text layer.
+!> **Warning:** This value only reflects the first character in the Text layer.
 If you change this value, it will set all characters in the Text layer to the specified setting.
 
 **Type**
@@ -634,8 +600,7 @@ var isFauxBold = myTextLayer.sourceText.value.fauxBold;
 
 `textDocument.fauxItalic`
 
-#### NOTE
-The read functionality was added in After Effects 13.2 (CC 2014.2).
+?> **Note:** The read functionality was added in After Effects 13.2 (CC 2014.2).
 <br/>
 The write functionality was added in After Effects 24.0
 <br/>
@@ -644,8 +609,7 @@ The write functionality was added in After Effects 24.0
 
 True if a Text layer has faux italic enabled; otherwise false.
 
-#### WARNING
-This value only reflects the first character in the Text layer.
+!> **Warning:** This value only reflects the first character in the Text layer.
 If you change this value, it will set all characters in the Text layer to the specified setting.
 
 **Type**
@@ -660,14 +624,13 @@ Boolean; read/write.
 
 **Description**
 
-The Text layer’s fill color, as an array of `[r, g, b]` floating-point values. For example, in an 8-bpc project, a red value of 255 would be 1.0, and in a 32-bpc project, an overbright blue value can be something like 3.2.
+The Text layer's fill color, as an array of `[r, g, b]` floating-point values. For example, in an 8-bpc project, a red value of 255 would be 1.0, and in a 32-bpc project, an overbright blue value can be something like 3.2.
 
 Throws an exception on read if [applyFill](#textdocument-applyfill) is not true.
 
 Setting this value will also set [applyFill](#textdocument-applyfill) to true across the affected characters.
 
-#### WARNING
-This value only reflects the first character in the Text layer.
+!> **Warning:** This value only reflects the first character in the Text layer.
 If you change this value, it will set all characters in the Text layer to the specified setting.
 
 **Type**
@@ -680,17 +643,15 @@ Array `[r, g, b]` of floating-point values; read/write.
 
 `textDocument.firstLineIndent`
 
-#### NOTE
-This functionality was added in After Effects 24.0
+?> **Note:** This functionality was added in After Effects 24.0
 
 **Description**
 
-The Text layer’s paragraph first line indent option.
+The Text layer's paragraph first line indent option.
 
 If this attribute has a mixed value, it will be read as `undefined`.
 
-#### WARNING
-This value reflects all paragraphs in the Text layer.
+!> **Warning:** This value reflects all paragraphs in the Text layer.
 If you change this value, it will set all paragraphs in the Text layer to the specified setting.
 
 **Type**
@@ -705,15 +666,14 @@ Floating-point value; read/write.
 
 **Description**
 
-The Text layer’s font specified by its PostScript name.
+The Text layer's font specified by its PostScript name.
 
 On write, there are very few resrictions on what can be supplied - if the underlying font management system does not have a matching [Font object](fontobject.md#fontobject) instance matching the supplied PostScript name a substitute instance will be created.
 The Font instance returned in the case of duplicate PostScript names will be the 0th element of the array returned from [FontsObject.getFontsByPostScriptName()](fontsobject.md#fontsobject-getfontsbypostscriptname).
 
 You should use the [Font object](fontobject.md#fontobject) attribute for precise control.
 
-#### WARNING
-This value only reflects the first character in the Text layer.
+!> **Warning:** This value only reflects the first character in the Text layer.
 If you change this value, it will set all characters in the Text layer to the specified setting.
 
 **Type**
@@ -726,15 +686,13 @@ String; read/write.
 
 `textDocument.fontBaselineOption`
 
-#### NOTE
-This functionality was added in After Effects 24.0
+?> **Note:** This functionality was added in After Effects 24.0
 
 **Description**
 
-The Text layer’s font baseline option. This is for setting a textDocument to superscript or subscript.
+The Text layer's font baseline option. This is for setting a textDocument to superscript or subscript.
 
-#### WARNING
-This value only reflects the first character in the Text layer.
+!> **Warning:** This value only reflects the first character in the Text layer.
 If you change this value, it will set all characters in the Text layer to the specified setting.
 
 **Type**
@@ -751,15 +709,13 @@ A `FontBaselineOption` enumerated value; read/write. One of:
 
 `textDocument.fontCapsOption`
 
-#### NOTE
-This functionality was added in After Effects 24.0
+?> **Note:** This functionality was added in After Effects 24.0
 
 **Description**
 
-The Text layer’s font caps option.
+The Text layer's font caps option.
 
-#### WARNING
-This value only reflects the first character in the Text layer.
+!> **Warning:** This value only reflects the first character in the Text layer.
 If you change this value, it will set all characters in the Text layer to the specified setting.
 
 **Type**
@@ -777,15 +733,13 @@ A `FontCapsOption` enumerated value; read/write. One of:
 
 `textDocument.fontFamily`
 
-#### NOTE
-This functionality was added in After Effects 13.1 (CC 2014.1)
+?> **Note:** This functionality was added in After Effects 13.1 (CC 2014.1)
 
 **Description**
 
 String with with the name of the font family.
 
-#### WARNING
-This value only reflects the first character in the Text layer.
+!> **Warning:** This value only reflects the first character in the Text layer.
 
 **Type**
 
@@ -797,18 +751,15 @@ String; read-only.
 
 `textDocument.fontLocation`
 
-#### NOTE
-This functionality was added in After Effects 13.1 (CC 2014.1)
+?> **Note:** This functionality was added in After Effects 13.1 (CC 2014.1)
 
 **Description**
 
 Path of font file, providing its location on disk.
 
-#### WARNING
-Not guaranteed to be returned for all font types; return value may be empty string for some kinds of fonts.
+!> **Warning:** Not guaranteed to be returned for all font types; return value may be empty string for some kinds of fonts.
 
-#### WARNING
-This value only reflects the first character in the Text layer.
+!> **Warning:** This value only reflects the first character in the Text layer.
 
 **Type**
 
@@ -820,15 +771,13 @@ String; read-only.
 
 `textDocument.fontObject`
 
-#### NOTE
-This functionality was added in After Effects 24.0
+?> **Note:** This functionality was added in After Effects 24.0
 
 **Description**
 
-The Text layer’s [Font object](fontobject.md#fontobject) specified by its PostScript name.
+The Text layer's [Font object](fontobject.md#fontobject) specified by its PostScript name.
 
-#### WARNING
-This value only reflects the first character in the Text layer.
+!> **Warning:** This value only reflects the first character in the Text layer.
 
 **Type**
 
@@ -842,10 +791,9 @@ This value only reflects the first character in the Text layer.
 
 **Description**
 
-The Text layer’s font size in pixels.
+The Text layer's font size in pixels.
 
-#### WARNING
-This value only reflects the first character in the Text layer.
+!> **Warning:** This value only reflects the first character in the Text layer.
 If you change this value, it will set all characters in the Text layer to the specified setting.
 
 **Type**
@@ -858,15 +806,13 @@ Floating-point value (0.1 to 1296, inclusive); read/write.
 
 `textDocument.fontStyle`
 
-#### NOTE
-This functionality was added in After Effects 13.1 (CC 2014.1)
+?> **Note:** This functionality was added in After Effects 13.1 (CC 2014.1)
 
 **Description**
 
-String with style information, e.g., “bold”, “italic”
+String with style information, e.g., "bold", "italic"
 
-#### WARNING
-This value only reflects the first character in the Text layer.
+!> **Warning:** This value only reflects the first character in the Text layer.
 
 **Type**
 
@@ -878,17 +824,15 @@ String; read-only.
 
 `textDocument.hangingRoman`
 
-#### NOTE
-This functionality was added in After Effects 24.0
+?> **Note:** This functionality was added in After Effects 24.0
 
 **Description**
 
-The Text layer’s Roman Hanging Punctuation paragraph option. This is only meaningful to box Text layers—it allows punctuation to fit outside the box rather than flow to the next line.
+The Text layer's Roman Hanging Punctuation paragraph option. This is only meaningful to box Text layers—it allows punctuation to fit outside the box rather than flow to the next line.
 
 If this attribute has a mixed value, it will be read as `undefined`.
 
-#### WARNING
-This value reflects all paragraphs in the Text layer.
+!> **Warning:** This value reflects all paragraphs in the Text layer.
 If you change this value, it will set all paragraphs in the Text layer to the specified setting.
 
 **Type**
@@ -901,15 +845,13 @@ Boolean; read/write.
 
 `textDocument.horizontalScale`
 
-#### NOTE
-This functionality was added in After Effects 13.2 (CC 2014.2)
+?> **Note:** This functionality was added in After Effects 13.2 (CC 2014.2)
 
 **Description**
 
-This Text layer’s horizontal scale in pixels.
+This Text layer's horizontal scale in pixels.
 
-#### WARNING
-This value only reflects the first character in the Text layer.
+!> **Warning:** This value only reflects the first character in the Text layer.
 If you change this value, it will set all characters in the Text layer to the specified setting.
 
 **Type**
@@ -949,8 +891,7 @@ Text layers with mixed justification values will be read as `ParagraphJustificat
 
 Setting a TextDocument to use `ParagraphJustification.MULTIPLE_JUSTIFICATIONS` will result in `ParagraphJustification.CENTER_JUSTIFY` instead.
 
-#### WARNING
-This value reflects all paragraphs in the Text layer.
+!> **Warning:** This value reflects all paragraphs in the Text layer.
 If you change this value, it will set all paragraphs in the Text layer to the specified setting.
 
 ---
@@ -959,19 +900,17 @@ If you change this value, it will set all paragraphs in the Text layer to the sp
 
 `textDocument.kerning`
 
-#### NOTE
-This functionality was added in After Effects 24.0
+?> **Note:** This functionality was added in After Effects 24.0
 
 **Description**
 
-The Text layer’s kerning option.
+The Text layer's kerning option.
 
 Returns zero for `AutoKernType.METRIC_KERN` and `AutoKernType.OPTICAL_KERN`.
 
 Setting this value will also set `AutoKernType.NO_AUTO_KERN` to true across the affected characters.
 
-#### WARNING
-This value only reflects the first character in the Text layer.
+!> **Warning:** This value only reflects the first character in the Text layer.
 If you change this value, it will set all characters in the Text layer to the specified setting.
 
 **Type**
@@ -984,19 +923,17 @@ Integer value; read/write.
 
 `textDocument.leading`
 
-#### NOTE
-This functionality was added in After Effects 14.2 (CC 2017.1)
+?> **Note:** This functionality was added in After Effects 14.2 (CC 2017.1)
 
 **Description**
 
-The Text layer’s spacing between lines.
+The Text layer's spacing between lines.
 
 Returns zero if [TextDocument.autoLeading](#textdocument-autoleading) is true.
 
 Setting this value will also set [TextDocument.autoLeading](#textdocument-autoleading) to true across the affected characters.
 
-#### WARNING
-This value only reflects the first character in the Text layer.
+!> **Warning:** This value only reflects the first character in the Text layer.
 If you change this value, it will set all characters in the Text layer to the specified setting.
 
 The minimum accepted value to set is 0, but this will be silently clipped to 0.01.
@@ -1024,17 +961,15 @@ myTextSource.setValue(myTextDocument);
 
 `textDocument.leadingType`
 
-#### NOTE
-This functionality was added in After Effects 24.0
+?> **Note:** This functionality was added in After Effects 24.0
 
 **Description**
 
-The Text layer’s paragraph leading type option.
+The Text layer's paragraph leading type option.
 
 If this attribute has a mixed value, it will be read as `undefined`.
 
-#### WARNING
-This value reflects all paragraphs in the Text layer.
+!> **Warning:** This value reflects all paragraphs in the Text layer.
 If you change this value, it will set all paragraphs in the Text layer to the specified setting.
 
 **Type**
@@ -1050,15 +985,13 @@ A `LeadingType` enumerated value; read/write. One of:
 
 `textDocument.ligature`
 
-#### NOTE
-This functionality was added in After Effects 24.0
+?> **Note:** This functionality was added in After Effects 24.0
 
 **Description**
 
-The Text layer’s ligature option.
+The Text layer's ligature option.
 
-#### WARNING
-This value only reflects the first character in the Text layer.
+!> **Warning:** This value only reflects the first character in the Text layer.
 If you change this value, it will set all characters in the Text layer to the specified setting.
 
 **Type**
@@ -1071,15 +1004,13 @@ Boolean; read/write.
 
 `textDocument.lineJoinType`
 
-#### NOTE
-This functionality was added in After Effects 24.0
+?> **Note:** This functionality was added in After Effects 24.0
 
 **Description**
 
-The Text layer’s line join type option for Stroke.
+The Text layer's line join type option for Stroke.
 
-#### WARNING
-This value only reflects the first character in the Text layer.
+!> **Warning:** This value only reflects the first character in the Text layer.
 If you change this value, it will set all characters in the Text layer to the specified setting.
 
 **Type**
@@ -1096,12 +1027,11 @@ A `LineJoinType` enumerated value; read/write. One of:
 
 `textDocument.lineOrientation`
 
-#### NOTE
-This functionality was added in After Effects 24.2
+?> **Note:** This functionality was added in After Effects 24.2
 
 **Description**
 
-The Text layer’s line orientation, in general horizontal vs vertical, which affects how all text in the layer is composed.
+The Text layer's line orientation, in general horizontal vs vertical, which affects how all text in the layer is composed.
 
 **Type**
 
@@ -1117,15 +1047,13 @@ A `LineOrientation` enumerated value; read/write. One of:
 
 `textDocument.noBreak`
 
-#### NOTE
-This functionality was added in After Effects 24.0
+?> **Note:** This functionality was added in After Effects 24.0
 
 **Description**
 
-The Text layer’s no break attribute.
+The Text layer's no break attribute.
 
-#### WARNING
-This value only reflects the first character in the Text layer.
+!> **Warning:** This value only reflects the first character in the Text layer.
 If you change this value, it will set all characters in the Text layer to the specified setting.
 
 **Type**
@@ -1166,15 +1094,13 @@ Boolean; read-only.
 
 `textDocument.smallCaps`
 
-#### NOTE
-This functionality was added in After Effects 13.2 (CC 2014.2)
+?> **Note:** This functionality was added in After Effects 13.2 (CC 2014.2)
 
 **Description**
 
 True if a Text layer has small caps enabled; otherwise false. To set this value, use [TextDocument.fontCapsOption](#textdocument-fontcapsoption) added in After Effects 24.0.
 
-#### WARNING
-This value only reflects the first character in the Text layer.
+!> **Warning:** This value only reflects the first character in the Text layer.
 
 **Type**
 
@@ -1186,17 +1112,15 @@ Boolean; read-only.
 
 `textDocument.spaceAfter`
 
-#### NOTE
-This functionality was added in After Effects 24.0
+?> **Note:** This functionality was added in After Effects 24.0
 
 **Description**
 
-The Text layer’s paragraph space after option.
+The Text layer's paragraph space after option.
 
 If this attribute has a mixed value, it will be read as `undefined`.
 
-#### WARNING
-This value reflects all paragraphs in the Text layer.
+!> **Warning:** This value reflects all paragraphs in the Text layer.
 If you change this value, it will set all paragraphs in the Text layer to the specified setting.
 
 **Type**
@@ -1209,17 +1133,15 @@ Floating-point value; read/write.
 
 `textDocument.spaceBefore`
 
-#### NOTE
-This functionality was added in After Effects 24.0
+?> **Note:** This functionality was added in After Effects 24.0
 
 **Description**
 
-The Text layer’s paragraph space before option.
+The Text layer's paragraph space before option.
 
 If this attribute has a mixed value, it will be read as `undefined`.
 
-#### WARNING
-This value reflects all paragraphs in the Text layer.
+!> **Warning:** This value reflects all paragraphs in the Text layer.
 If you change this value, it will set all paragraphs in the Text layer to the specified setting.
 
 **Type**
@@ -1232,17 +1154,15 @@ Floating-point value; read/write.
 
 `textDocument.startIndent`
 
-#### NOTE
-This functionality was added in After Effects 24.0
+?> **Note:** This functionality was added in After Effects 24.0
 
 **Description**
 
-The Text layer’s paragraph start indent option.
+The Text layer's paragraph start indent option.
 
 If this attribute has a mixed value, it will be read as `undefined`.
 
-#### WARNING
-This value reflects all paragraphs in the Text layer.
+!> **Warning:** This value reflects all paragraphs in the Text layer.
 If you change this value, it will set all paragraphs in the Text layer to the specified setting.
 
 **Type**
@@ -1257,14 +1177,13 @@ Floating-point value; read/write.
 
 **Description**
 
-The Text layer’s stroke color, as an array of [r, g, b] floating-point values. For example, in an 8-bpc project, a red value of 255 would be 1.0, and in a 32-bpc project, an overbright blue value can be something like 3.2.
+The Text layer's stroke color, as an array of [r, g, b] floating-point values. For example, in an 8-bpc project, a red value of 255 would be 1.0, and in a 32-bpc project, an overbright blue value can be something like 3.2.
 
 Throws an exception on read if [applyStroke](#textdocument-applystroke) is not true.
 
 Setting this value will also set [applyStroke](#textdocument-applystroke) to true across the affected characters.
 
-#### WARNING
-This value only reflects the first character in the Text layer.
+!> **Warning:** This value only reflects the first character in the Text layer.
 If you change this value, it will set all characters in the Text layer to the specified setting.
 
 **Type**
@@ -1281,10 +1200,9 @@ Array [r, g, b] of floating-point values; read/write.
 
 Indicates the rendering order for the fill and stroke of a Text layer. When true, the stroke appears over the fill.
 
-The Text layer can override the per-character attribute setting if the Text layer is set to use All Strokes Over All Fills or All Fills Over All Strokes in the Character Panel. Thus the value returned here might be different than the actual attribute value set on the character. It is possible to set the Fill/Stroke render order via the “Fill & Stroke” property under More Options on the Text layer using TextLayer.text(“ADBE Text More Options”)(“ADBE Text Render Order”).
+The Text layer can override the per-character attribute setting if the Text layer is set to use All Strokes Over All Fills or All Fills Over All Strokes in the Character Panel. Thus the value returned here might be different than the actual attribute value set on the character. It is possible to set the Fill/Stroke render order via the "Fill & Stroke" property under More Options on the Text layer using TextLayer.text("ADBE Text More Options")("ADBE Text Render Order").
 
-#### WARNING
-This value only reflects the first character in the Text layer.
+!> **Warning:** This value only reflects the first character in the Text layer.
 If you change this value, it will set all characters in the Text layer to the specified setting.
 
 **Type**
@@ -1299,10 +1217,9 @@ Boolean; read/write.
 
 **Description**
 
-The Text layer’s stroke thickness in pixels.
+The Text layer's stroke thickness in pixels.
 
-#### WARNING
-This value only reflects the first character in the Text layer.
+!> **Warning:** This value only reflects the first character in the Text layer.
 If you change this value, it will set all characters in the Text layer to the specified setting.
 
 The minimum accepted value to set is 0, but this will be silently clipped to 0.01.
@@ -1317,15 +1234,13 @@ Floating-point value (0 to 1000, inclusive); read/write.
 
 `textDocument.subscript`
 
-#### NOTE
-This functionality was added in After Effects 13.2 (CC 2014.2)
+?> **Note:** This functionality was added in After Effects 13.2 (CC 2014.2)
 
 **Description**
 
 True if a Text layer has subscript enabled; otherwise false. To set this value, use [TextDocument.fontBaselineOption](#textdocument-fontbaselineoption) added in After Effects 24.0.
 
-#### WARNING
-This value only reflects the first character in the Text layer.
+!> **Warning:** This value only reflects the first character in the Text layer.
 
 **Type**
 
@@ -1337,15 +1252,13 @@ Boolean; read-only.
 
 `textDocument.superscript`
 
-#### NOTE
-This functionality was added in After Effects 13.2 (CC 2014.2)
+?> **Note:** This functionality was added in After Effects 13.2 (CC 2014.2)
 
 **Description**
 
 True if a Text layer has superscript enabled; otherwise false. To set this value, use [TextDocument.fontBaselineOption](#textdocument-fontbaselineoption) added in After Effects 24.0.
 
-#### WARNING
-This value only reflects the first character in the Text layer.
+!> **Warning:** This value only reflects the first character in the Text layer.
 
 **Type**
 
@@ -1359,7 +1272,7 @@ Boolean; read-only.
 
 **Description**
 
-The text value for the Text layer’s Source Text property.
+The text value for the Text layer's Source Text property.
 
 **Type**
 
@@ -1373,10 +1286,9 @@ String; read/write.
 
 **Description**
 
-The Text layer’s spacing between characters.
+The Text layer's spacing between characters.
 
-#### WARNING
-This value only reflects the first character in the Text layer.
+!> **Warning:** This value only reflects the first character in the Text layer.
 If you change this value, it will set all characters in the Text layer to the specified setting.
 
 **Type**
@@ -1389,18 +1301,16 @@ Floating-point value; read/write.
 
 `textDocument.tsume`
 
-#### NOTE
-This functionality was added in After Effects 13.2 (CC 2014.2)
+?> **Note:** This functionality was added in After Effects 13.2 (CC 2014.2)
 
 **Description**
 
-This Text layer’s tsume value as a normalized percentage, from 0.0 -> 1.0.
+This Text layer's tsume value as a normalized percentage, from 0.0 -> 1.0.
 
-#### WARNING
-This value only reflects the first character in the Text layer.
+!> **Warning:** This value only reflects the first character in the Text layer.
 If you change this value, it will set all characters in the Text layer to the specified setting.
 
-This attribute accepts values from 0.0 -> 100.0, however the value IS expecting a normalized value from 0.0 -> 1.0. Using a value higher than 1.0 will produce unexpected results; AE’s Character Panel will clamp the value at 100%, despite the higher value set by scripting (ie `TextDocument.tsume = 100` \_really_ sets a value of 10,000%)
+This attribute accepts values from 0.0 -> 100.0, however the value IS expecting a normalized value from 0.0 -> 1.0. Using a value higher than 1.0 will produce unexpected results; AE's Character Panel will clamp the value at 100%, despite the higher value set by scripting (ie `TextDocument.tsume = 100` \_really_ sets a value of 10,000%)
 
 **Type**
 
@@ -1412,15 +1322,13 @@ Floating-point value; read-write.
 
 `textDocument.verticalScale`
 
-#### NOTE
-This functionality was added in After Effects 13.2 (CC 2014.2)
+?> **Note:** This functionality was added in After Effects 13.2 (CC 2014.2)
 
 **Description**
 
-This Text layer’s vertical scale in pixels.
+This Text layer's vertical scale in pixels.
 
-#### WARNING
-This value only reflects the first character in the Text layer.
+!> **Warning:** This value only reflects the first character in the Text layer.
 If you change this value, it will set all characters in the Text layer to the specified setting.
 
 **Type**
@@ -1435,8 +1343,7 @@ Floating-point value; read-write.
 
 `textDocument.characterRange(characterStart, [signedCharacterEnd])`
 
-#### NOTE
-This functionality was added in After Effects 24.3
+?> **Note:** This functionality was added in After Effects 24.3
 
 **Description**
 
@@ -1466,8 +1373,7 @@ An instance of [CharacterRange object](characterrange.md#characterrange)
 
 `textDocument.composedLineCharacterIndexesAt(characterIndex)`
 
-#### NOTE
-This functionality was added in After Effects 24.3
+?> **Note:** This functionality was added in After Effects 24.3
 
 **Description**
 
@@ -1493,8 +1399,7 @@ Remember that the composed lines are static and subsequent changes to the [TextD
 
 `textDocument.composedLineRange(composedLineIndexStart, [signedComposedLineIndexEnd])`
 
-#### NOTE
-This functionality was added in After Effects 24.3
+?> **Note:** This functionality was added in After Effects 24.3
 
 **Description**
 
@@ -1524,8 +1429,7 @@ An instance of [ComposedLineRange object](composedlinerange.md#composedlinerange
 
 `textDocument.paragraphCharacterIndexesAt(characterIndex)`
 
-#### NOTE
-This functionality was added in After Effects 24.3
+?> **Note:** This functionality was added in After Effects 24.3
 
 **Description**
 
@@ -1548,8 +1452,7 @@ Key `end` will be set to text index of the end of the paragraph (greater than st
 
 `textDocument.paragraphRange(paragraphIndexStart, [signedParagraphIndexEnd])`
 
-#### NOTE
-This functionality was added in After Effects 24.3
+?> **Note:** This functionality was added in After Effects 24.3
 
 **Description**
 

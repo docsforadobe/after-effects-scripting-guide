@@ -30,8 +30,7 @@ The Viewer object for the currently focused or active-focused viewer (Compositio
 
 `app.availableGPUAccelTypes`
 
-#### NOTE
-This functionality was added in After Effects 14.0 (CC 2017)
+?> **Note:** This functionality was added in After Effects 14.0 (CC 2017)
 
 **Description**
 
@@ -47,7 +46,7 @@ Array of `GpuAccelType` enums, or null if no viewers are open; read-only. One of
 - `SOFTWARE`
 
 **Example**
-The following sample code checks the current computer’s available GPU acceleration types, and sets it to Metal if available.
+The following sample code checks the current computer's available GPU acceleration types, and sets it to Metal if available.
 
 ```javascript
 // app.availableGPUAccelTypes returns GPU acceleration types available on the current system.
@@ -105,8 +104,7 @@ Integer; read-only.
 
 `app.disableRendering`
 
-#### NOTE
-This functionality was added in After Effects 16.0 (CC 2019)
+?> **Note:** This functionality was added in After Effects 16.0 (CC 2019)
 
 **Description**
 
@@ -132,9 +130,9 @@ Array, with each element containing the following properties; read-only:
 
 | `displayName`   | String representing the localized display name of the<br/>effect as seen in the Effect menu.                                                                          |
 |-----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `category`      | String representing the localized category label as seen<br/>in the Effect menu. This can be “” for synthetic effects<br/>that aren’t normally shown to the user.     |
+| `category`      | String representing the localized category label as seen<br/>in the Effect menu. This can be "" for synthetic effects<br/>that aren't normally shown to the user.     |
 | `matchName`     | String representing the internal unique name for the effect.<br/>This name does not change between versions of After Effects.<br/>Use this value to apply the effect. |
-| `version`       | Effect’s internal version string.<br/>This value might be different than the version number the<br/>plug-in vendor decides to show in the effect’s about box.         |
+| `version`       | Effect's internal version string.<br/>This value might be different than the version number the<br/>plug-in vendor decides to show in the effect's about box.         |
 
 **Example**
 
@@ -150,7 +148,7 @@ var effectName = app.effects[12].displayName;
 
 **Description**
 
-This attribute is used only when executing a script from a command line on Windows. When the application is launched from the command line, the `–r` or `–s` command line flag causes the application to run a script (from a file or from a string, respectively). If this attribute is set to true, After Effects will exit after the script is run; if it is false, the application will remain open. This attribute only has an effect when After Effects is run from the Windows command line. It has no effect in Mac OS.
+This attribute is used only when executing a script from a command line on Windows. When the application is launched from the command line, the `-r` or `-s` command line flag causes the application to run a script (from a file or from a string, respectively). If this attribute is set to true, After Effects will exit after the script is run; if it is false, the application will remain open. This attribute only has an effect when After Effects is run from the Windows command line. It has no effect in Mac OS.
 
 **Type**
 
@@ -166,7 +164,7 @@ Boolean; read/write.
 
 A numeric status code used when executing a script externally (that is, from a command line or AppleScript).
 
-- In Windows, the value is returned on the command line when After Effects was launched on the command line (using the `afterfx` or `afterfx –m` command), and a script was specified with the `–r` or `–s` option.
+- In Windows, the value is returned on the command line when After Effects was launched on the command line (using the `afterfx` or `afterfx -m` command), and a script was specified with the `-r` or `-s` option.
 - in Mac OS, the value is returned as the AppleScript `DoScript` result for each script.
 
 In both Mac OS and Windows, the value is set to 0 (`EXIT_SUCCESS`) at the beginning of each script evaluation. In the event of an error while the script is running, the script can set this to a positive integer that indicates what error occurred.
@@ -187,8 +185,7 @@ app.exitCode = 2; // on quit, if value is 2, an error has occurred
 
 `app.fonts`
 
-#### NOTE
-This functionality was added in After Effects 24.0
+?> **Note:** This functionality was added in After Effects 24.0
 
 **Description**
 
@@ -208,8 +205,7 @@ Returns an object to navigate and retreive all the fonts currently available on 
 
 A string indicating the locale (language and regional designations) After Effects is running.
 
-#### NOTE
-`$.locale` returns the operating system language, not the language of the After Effects application.
+?> **Note:** `$.locale` returns the operating system language, not the language of the After Effects application.
 
 **Type**
 
@@ -363,8 +359,7 @@ Settings object; read-only.
 
 `app.version`
 
-#### NOTE
-This functionality was added in After Effects 12.0 (CC)
+?> **Note:** This functionality was added in After Effects 12.0 (CC)
 
 **Description**
 
@@ -433,7 +428,7 @@ Marks the beginning of an undo group, which allows a script to logically group a
 
 **Parameters**
 
-| `undoString`   | The text that will appear for the Undo command in the<br/>Edit menu (that is, “Undo “)   |
+| `undoString`   | The text that will appear for the Undo command in the<br/>Edit menu (that is, "Undo ")   |
 |----------------|------------------------------------------------------------------------------------------|
 
 **Returns**
@@ -563,7 +558,7 @@ app.executeCommand(4162);
 
 Menu Commands in the GUI application have an individual ID number, which can be used as a parameter for the [app.executeCommand()](#app-executecommand) command. For some functions not included in the API this is the only way to access them.
 
-It should be noted that this method is not reliable across different language packages of AE, so you’ll likely want to find the command ID number during development and then call it directly using the number in production.
+It should be noted that this method is not reliable across different language packages of AE, so you'll likely want to find the command ID number during development and then call it directly using the number in production.
 
 These web sites have more information and lists of the known numbers:
 
@@ -651,8 +646,7 @@ if (my_file.exists) {
 `app.openFast(file)`
 <br/>
 
-#### WARNING
-This method/property is officially undocumented and was found via research. The information here may be inaccurate, and this whole method/property may disappear or stop working some point. Please contribute if you have more information on it!
+!> **Warning:** This method/property is officially undocumented and was found via research. The information here may be inaccurate, and this whole method/property may disappear or stop working some point. Please contribute if you have more information on it!
 
 **Description**
 
@@ -711,9 +705,9 @@ The swatch data, in this format:
 | `data.majorVersion`<br/>`data.minorVersion`                                          | The ASE version number.                                                                                                                                                                                                         |
 |--------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `data.values`                                                                        | An array of Swatch Value.                                                                                                                                                                                                       |
-| `SwatchValue.type`                                                                   | One of “RGB”, “CMYK”, “LAB”, “Gray”                                                                                                                                                                                             |
+| `SwatchValue.type`                                                                   | One of "RGB", "CMYK", "LAB", "Gray"                                                                                                                                                                                             |
 | `SwatchValue.r`<br/><br/>`SwatchValue.g`<br/>`SwatchValue.b`                         | When `type = "RGB"`, the color values in the<br/>range `[0.0..1.0]`.<br/>0, 0, 0 is Black.                                                                                                                                      |
-| `SwatchValue.c`<br/><br/>`SwatchValue.m`<br/>`SwatchValue.y`<br/>`SwatchValue.k`     | When `type` = “CMYK”, the color values in the<br/>range  [0.0..1.0].<br/>0, 0, 0, 0 is White.                                                                                                                                   |
+| `SwatchValue.c`<br/><br/>`SwatchValue.m`<br/>`SwatchValue.y`<br/>`SwatchValue.k`     | When `type` = "CMYK", the color values in the<br/>range  [0.0..1.0].<br/>0, 0, 0, 0 is White.                                                                                                                                   |
 | `SwatchValue.L`<br/>`SwatchValue.a`<br/><br/>`SwatchValue.b`<br/>`SwatchValue.value` | When `type = "LAB"`, the color values.<br/>`L` is in the range [0.0..1.0]. `a` and `b`<br/>are in the range [-128.0..+128.0]<br/>0, 0, 0 is Black.<br/>When `type = "Gray"`, the `value` range is<br/>[0.0..1.0]. 0.0 is Black. |
 
 ---
@@ -747,8 +741,7 @@ Nothing.
 
 `app.purge(target)`
 
-#### NOTE
-This functionality was updated in After Effects 24.3 to allow the `ALL_CACHES` enumerated value to clear both the RAM and disk cache, with the ALL_MEMORY_CACHES enumerated value added to purge only the RAM.
+?> **Note:** This functionality was updated in After Effects 24.3 to allow the `ALL_CACHES` enumerated value to clear both the RAM and disk cache, with the ALL_MEMORY_CACHES enumerated value added to purge only the RAM.
 <br/>
 <br/>
 In versions prior to 24.3, `ALL_CACHES` will only clear the RAM cache.
@@ -832,8 +825,7 @@ Nothing.
 
 `app.setMultiFrameRenderingConfig(mfr_on, max_cpu_perc)`
 
-#### NOTE
-This functionality was added in After Effects 22.0 (2022)
+?> **Note:** This functionality was added in After Effects 22.0 (2022)
 
 **Description**
 

@@ -2,8 +2,7 @@
 
 Like an array, a collection associates a set of objects or values as a logical group and provides access to them by index. However, most collection objects are read-only. You do not assign objects to them yourself—their contents update automatically as objects are created or deleted.
 
-#### NOTE
-The index numbering of a collection starts with 1, not 0.
+?> **Note:** The index numbering of a collection starts with 1, not 0.
 
 ## Objects
 

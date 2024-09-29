@@ -3,8 +3,7 @@
 `app.project.item(index).layer(index).text.sourceText.value.characterRange(characterIndexStart, [signedCharacterIndexEnd])`
 <br/>
 
-#### NOTE
-This functionality was added in After Effects 24.3
+?> **Note:** This functionality was added in After Effects 24.3
 
 **Description**
 
@@ -99,8 +98,7 @@ Setting this value will also set `applyFill` to true across the affected charact
 
 If this attribute has a mixed value for the range of characters, it will be read as `undefined`.
 
-#### WARNING
-In contrast to the same attribute on the TextDocument API, we will *not* throw an exception on read if `applyFill` is not true.
+!> **Warning:** In contrast to the same attribute on the TextDocument API, we will *not* throw an exception on read if `applyFill` is not true.
 
 **Type**
 
@@ -157,8 +155,7 @@ If this attribute has a mixed value, it will be read as `undefined`.
 
 Setting this value will also set [applyStroke](textdocument.md#textdocument-applystroke) to true across the affected characters.
 
-#### WARNING
-In contrast to the same attribute on the TextDocument API, we will *not* throw an exception on read if [applyStroke](textdocument.md#textdocument-applystroke) is not true.
+!> **Warning:** In contrast to the same attribute on the TextDocument API, we will *not* throw an exception on read if [applyStroke](textdocument.md#textdocument-applystroke) is not true.
 
 **Type**
 
@@ -178,8 +175,7 @@ Indicates the rendering order for the fill and stroke for characters in the rang
 
 If this attribute has a mixed value, it will be read as `undefined`.
 
-#### WARNING
-The Text layer can override per-character attribute setting via the All Strokes First or All Fills First setting on the CharPanel.
+!> **Warning:** The Text layer can override per-character attribute setting via the All Strokes First or All Fills First setting on the CharPanel.
 <br/>
 The value returned here represents what is applied to the characters, without regard to the possible Text layer override.
 <br/>
@@ -216,8 +212,7 @@ String; read/write.
 
 `CharacterRange.pasteFrom(characterRange)`
 
-#### NOTE
-This functionality was added in After Effects (Beta) 25.0 and is subject to change while it remains in Beta.
+?> **Note:** This functionality was added in After Effects (Beta) 25.0 and is subject to change while it remains in Beta.
 
 **Description**
 

@@ -10,8 +10,7 @@ The heart of a scriptable application is the object model. When you use Adobe Af
 
 The After Effects object model is composed of a project, items, compositions, layers, and render queue items. Each object has its own special attributes, and every object in an After Effects project has its own identity (although not all are accessible to scripting). You should be familiar with the After Effects object model in order to create scripts.
 
-#### NOTE
-JavaScript objects normally referred to as “properties” are consistently called “attributes” in this guide, to avoid confusion with After Effects’ own definition of a property (an animatable value of an effect, mask, or transform within an individual layer).
+?> **Note:** JavaScript objects normally referred to as "properties" are consistently called "attributes" in this guide, to avoid confusion with After Effects' own definition of a property (an animatable value of an effect, mask, or transform within an individual layer).
 
 Nearly all of what scripting can accomplish replicates what can be done by means of the After Effects graphical user interface. A thorough knowledge of the application itself and its graphical user interface is essential to understanding how to use scripting in After Effects.
 
@@ -37,7 +36,7 @@ After Effects includes a script editor and debugger, the ExtendScript Toolkit (E
 
 To start the ESTK, choose File > Scripts > Open Script Editor.
 
-If you choose to use another text editor to create, edit, and save scripts, be sure to choose an application that does not automatically add header information when saving files and that saves with Unicode (UTF-8) encoding. In many text editors, you can set preferences for saving with UTF-8 encoding. Some applications (such as Microsoft Word) by default add header information to files that can cause “line 0” errors in scripts, causing them to fail.
+If you choose to use another text editor to create, edit, and save scripts, be sure to choose an application that does not automatically add header information when saving files and that saves with Unicode (UTF-8) encoding. In many text editors, you can set preferences for saving with UTF-8 encoding. Some applications (such as Microsoft Word) by default add header information to files that can cause "line 0" errors in scripts, causing them to fail.
 
 For detailed information on the ExtendScript Toolkit, see the [JavaScript Tools Guide](https://extendscript.docsforadobe.dev/).
 
@@ -116,10 +115,9 @@ tell application "Adobe After Effects CS6"
 end tell
 ```
 
-#### NOTE
-This documentation is incorrect, the correct invocation in this instance is `DoScriptFile`
+?> **Note:** This documentation is incorrect, the correct invocation in this instance is `DoScriptFile`
 
-Finally, this script is perhaps most useful when you are working directly on editing a JSX script and want to send it to After Effects for testing or to run. To use it effectively you must enter the application that contains the open JSX file (in this example it is TextEdit); if you do not know the proper name of the application, type in your best guess to replace “TextEdit” and AppleScript prompts you to locate it.
+Finally, this script is perhaps most useful when you are working directly on editing a JSX script and want to send it to After Effects for testing or to run. To use it effectively you must enter the application that contains the open JSX file (in this example it is TextEdit); if you do not know the proper name of the application, type in your best guess to replace "TextEdit" and AppleScript prompts you to locate it.
 
 Simply highlight the script text that you want to run, and then activate this AppleScript:
 
@@ -185,4 +183,4 @@ var myToolsPanel = createUI(this);
 
 ### Stopping a running script
 
-A script can be stopped by pressing Esc or Cmd+period (in Mac OS) when the After Effects or the script’s user interface has focus. However, a script that is busy processing a lot of data might not be very responsive.
+A script can be stopped by pressing Esc or Cmd+period (in Mac OS) when the After Effects or the script's user interface has focus. However, a script that is busy processing a lot of data might not be very responsive.

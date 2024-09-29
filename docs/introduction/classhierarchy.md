@@ -4,7 +4,7 @@ This section lists the class hierarchies for relevant AE API elements. For a pri
 
 When using this guide, any objects that exist as part of a class hierarchy will note whether they exist as a subclass or base class (or both) of another object.
 
-As it can be useful to see all available class hierarchies in one place, we’ve created this list below.
+As it can be useful to see all available class hierarchies in one place, we've created this list below.
 
 Note that some classes exist only as base classes, and demonstrate unexpected behaviour when type checking via `instanceof`, as noted in the table below. Classes with no symbol behave as expected.
 

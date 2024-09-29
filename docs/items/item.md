@@ -46,7 +46,7 @@ if (!(myFolder instanceof FolderItem)) {
 
 **Description**
 
-A string that holds a comment, up to 15,999 bytes in length after any encoding conversion. The comment is for the user’s purpose only; it has no effect on the item’s appearance or behavior.
+A string that holds a comment, up to 15,999 bytes in length after any encoding conversion. The comment is for the user's purpose only; it has no effect on the item's appearance or behavior.
 
 **Type**
 
@@ -72,8 +72,7 @@ String; read-only.
 
 `app.project.item(index).guides`
 
-#### NOTE
-This functionality was added in After Effects 16.1 (CC 2019)
+?> **Note:** This functionality was added in After Effects 16.1 (CC 2019)
 
 **Description**
 
@@ -107,8 +106,7 @@ Integer; read-only.
 
 The label color for the item. Colors are represented by their number (0 for None, or 1 to 16 for one of the preset colors in the Labels preferences).
 
-#### NOTE
-Custom label colors cannot be set programmatically.
+?> **Note:** Custom label colors cannot be set programmatically.
 
 **Type**
 
@@ -136,7 +134,7 @@ String; read/write.
 
 **Description**
 
-The FolderItem object for the folder that contains this item. If this item is at the top level of the project, this is the project’s root folder (`app.project.rootFolder`). You can use [ItemCollection.addFolder()](itemcollection.md#itemcollection-addfolder) to add a new folder, and set this value to put items in the new folder.
+The FolderItem object for the folder that contains this item. If this item is at the top level of the project, this is the project's root folder (`app.project.rootFolder`). You can use [ItemCollection.addFolder()](itemcollection.md#itemcollection-addfolder) to add a new folder, and set this value to put items in the new folder.
 
 **Type**
 
@@ -181,7 +179,7 @@ Boolean; read/write.
 
 **Description**
 
-A user-readable name for the item type; for example, “Folder”, “Footage”, or “Composition”. These names are application locale-dependent, meaning that they are different depending on the application’s interface language.
+A user-readable name for the item type; for example, "Folder", "Footage", or "Composition". These names are application locale-dependent, meaning that they are different depending on the application's interface language.
 
 **Type**
 
@@ -219,8 +217,7 @@ if (/Composition|Komposition|Composición|Composizione|コンポジション|컴
 
 `app.project.item(index).addGuide(orientationType, position)`
 
-#### NOTE
-This functionality was added in After Effects 16.1 (CC 2019)
+?> **Note:** This functionality was added in After Effects 16.1 (CC 2019)
 
 **Description**
 
@@ -268,8 +265,7 @@ Nothing.
 
 `app.project.item(index).removeGuide(guideIndex)`
 
-#### NOTE
-This functionality was added in After Effects 16.1 (CC 2019)
+?> **Note:** This functionality was added in After Effects 16.1 (CC 2019)
 
 **Description**
 
@@ -292,8 +288,7 @@ Removes the first guide in `activeItem`.
 app.project.activeItem.removeGuide(0);
 ```
 
-#### WARNING
-Removing a guide will cause all higher guide indexes to shift downward.
+!> **Warning:** Removing a guide will cause all higher guide indexes to shift downward.
 
 ---
 
@@ -301,14 +296,13 @@ Removing a guide will cause all higher guide indexes to shift downward.
 
 `app.project.item(index).setGuide(position,guideIndex)`
 
-#### NOTE
-This functionality was added in After Effects 16.1 (CC 2019)
+?> **Note:** This functionality was added in After Effects 16.1 (CC 2019)
 
 **Description**
 
 Modifies the `position` of an existing guide. Choose the guide based on its `guideIndex` inside the `Item.guides` array.
 
-A guide’s `orientationType` may not be changed after it is created.
+A guide's `orientationType` may not be changed after it is created.
 
 **Parameters**
 

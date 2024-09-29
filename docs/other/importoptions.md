@@ -41,7 +41,7 @@ The file to be imported. If a file is set in the constructor, you can access it 
 
 **Description**
 
-When true, has the same effect as setting the “Force alphabetical order” option in the File > Import > File dialog box.
+When true, has the same effect as setting the "Force alphabetical order" option in the File > Import > File dialog box.
 
 **Type**
 
@@ -72,14 +72,13 @@ An `ImportAsType` enumerated value; read/write. One of:
 
 `importOptions.rangeEnd`
 
-#### WARNING
-This method/property is officially undocumented and was found via research. The information here may be inaccurate, and this whole method/property may disappear or stop working some point. Please contribute if you have more information on it!
+!> **Warning:** This method/property is officially undocumented and was found via research. The information here may be inaccurate, and this whole method/property may disappear or stop working some point. Please contribute if you have more information on it!
 
 **Description**
 
 Sets the end clipping range of the sequence, that is going to be imported.
 
-- Creates ‘missing frames’ (video-bards) if the `rangeEnd` exceeds the duration of the sequence to be imported.
+- Creates 'missing frames' (video-bards) if the `rangeEnd` exceeds the duration of the sequence to be imported.
 - Has no effect if [sequence](#importoptions-sequence) is set to false.
 - Throws an exception if [forceAlphabetical](#importoptions-forcealphabetical) is set to true.
 - Throws an exception if `rangeEnd` is less then [rangeStart](#importoptions-rangestart) and resets the range to include all the files.
@@ -94,8 +93,7 @@ Integer; read/write.
 
 `importOptions.rangeStart`
 
-#### WARNING
-This method/property is officially undocumented and was found via research. The information here may be inaccurate, and this whole method/property may disappear or stop working some point. Please contribute if you have more information on it!
+!> **Warning:** This method/property is officially undocumented and was found via research. The information here may be inaccurate, and this whole method/property may disappear or stop working some point. Please contribute if you have more information on it!
 
 **Description**
 
@@ -178,8 +176,7 @@ if (io.canImportAs(ImportAsType.COMP)) {
 
 `importOptions.isFileNameNumbered(file)`
 
-#### WARNING
-This method/property is officially undocumented and was found via research. The information here may be inaccurate, and this whole method/property may disappear or stop working some point. Please contribute if you have more information on it!
+!> **Warning:** This method/property is officially undocumented and was found via research. The information here may be inaccurate, and this whole method/property may disappear or stop working some point. Please contribute if you have more information on it!
 
 **Description**
 

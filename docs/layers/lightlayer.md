@@ -4,7 +4,7 @@
 
 **Description**
 
-The LightLayer object represents a light layer within a composition. Create it using the [LayerCollection.addLight()](layercollection.md#layercollection-addlight) method. It can be accessed in an item’s layer collection either by index number or by a name string.
+The LightLayer object represents a light layer within a composition. Create it using the [LayerCollection.addLight()](layercollection.md#layercollection-addlight) method. It can be accessed in an item's layer collection either by index number or by a name string.
 
 > LightLayer is a subclass of [Layer object](layer.md#layer). All methods and attributes of Layer are available when working with Light-Layer.
 
@@ -13,8 +13,8 @@ The LightLayer object represents a light layer within a composition. Create it u
 LightLayer defines no additional attributes, but has different AE properties than other layer types. It has thefollowing properties and property groups:
 
 - `Marker`
-- `Transform`
-  : - `PointofInterest`
+- `Transform`:
+    - `PointofInterest`
     - `Position`
     - `Scale`
     - `Orientation`
@@ -22,8 +22,8 @@ LightLayer defines no additional attributes, but has different AE properties tha
     - `YRotation`
     - `Rotation`
     - `Opacity`
-- `LightOptions`
-  : - `Intensity`
+- `LightOptions`:
+    - `Intensity`
     - `Color`
     - `ConeAngle`
     - `ConeFeather`

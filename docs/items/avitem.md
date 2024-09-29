@@ -10,8 +10,7 @@ The AVItem object provides access to attributes and methods of audio/visual file
 
 > AVItem is the base class for both CompItem and FootageItem, so AVItem attributes and methods are also available when working with CompItem and FootageItem objects. See [CompItem object](compitem.md#compitem) and [FootageItem object](footageitem.md#footageitem).
 
-#### WARNING
-CompItems and FootageItems, while logical descendants of AVItem, are not *really* subclasses of AVItem as AVItem doesn’t exist in Extendscript, ie. attempting to check if `item instanceof AVItem` will fail because AVItem is undefined. This is also true for `Item` itself.
+!> **Warning:** CompItems and FootageItems, while logical descendants of AVItem, are not *really* subclasses of AVItem as AVItem doesn't exist in Extendscript, ie. attempting to check if `item instanceof AVItem` will fail because AVItem is undefined. This is also true for `Item` itself.
 
 See [Javascript Classes](../introduction/javascript.md#javascript-classes) and [After Effects Class Hierarchy](../introduction/classhierarchy.md#classhierarchy) for more info.
 
@@ -42,7 +41,7 @@ Floating-point value in the range [0.0..10800.0]; read/write for a `CompItem`; o
 
 **Description**
 
-When true, the AVItem is a placeholder, or represents footage with a source file that cannot be found. In this case, the path of the missing source file is in the `missingFootagePath` attribute of the footage item’s source-file object. See [FootageItem.mainSource](footageitem.md#footageitem-mainsource) and [FileSource.missingFootagePath](../sources/filesource.md#filesource-missingfootagepath).
+When true, the AVItem is a placeholder, or represents footage with a source file that cannot be found. In this case, the path of the missing source file is in the `missingFootagePath` attribute of the footage item's source-file object. See [FootageItem.mainSource](footageitem.md#footageitem-mainsource) and [FileSource.missingFootagePath](../sources/filesource.md#filesource-missingfootagepath).
 
 **Type**
 
@@ -136,8 +135,7 @@ Integer in the range [1…30000]; read/write, except as noted.
 
 `app.project.item(index).isMediaReplacementCompatible`
 
-#### NOTE
-This functionality was added in After Effects 18.0 (2021)
+?> **Note:** This functionality was added in After Effects 18.0 (2021)
 
 **Description**
 
@@ -289,7 +287,7 @@ Loads the specified file into a new FileSource object, sets this as the value of
 
 It does not preserve the interpretation parameters, instead using the user preferences. If the file has an unlabeled alpha channel, and the user preference says to ask the user what to do, the method estimates the alpha interpretation, rather than asking the user.
 
-This differs from setting a FootageItem’s `mainSource`, but both actions are performed as in the user interface.
+This differs from setting a FootageItem's `mainSource`, but both actions are performed as in the user interface.
 
 **Parameters**
 
@@ -328,8 +326,7 @@ Nothing.
 
 Creates a PlaceholderSource object with specified values, sets this as the value of the `proxySource` attribute, and sets `useProxy` to true. It does not preserve the interpretation parameters, instead using the user preferences.
 
-#### NOTE
-There is no direct way to set a placeholder as a proxy in the user interface; this behavior occurs when a proxy has been set and then moved or deleted.
+?> **Note:** There is no direct way to set a placeholder as a proxy in the user interface; this behavior occurs when a proxy has been set and then moved or deleted.
 
 **parameters**
 
@@ -359,7 +356,7 @@ If any file has an unlabeled alpha channel, and the user preference says to ask 
 
 | `file`              | An [Extendscript File](https://extendscript.docsforadobe.dev/file-system-access/file-object.html) object for the first file in the sequence.   |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
-| `forceAlphabetical` | When true, use the “Force alphabetical order” option.                                                                                          |
+| `forceAlphabetical` | When true, use the "Force alphabetical order" option.                                                                                          |
 
 **Returns**
 
@@ -375,8 +372,7 @@ Nothing.
 
 Creates a [SolidSource object](../sources/solidsource.md#solidsource) with specified values, sets this as the value of the `proxySource` attribute, and sets `useProxy` to true. It does not preserve the interpretation parameters, instead using the user preferences.
 
-#### NOTE
-There is no way, using the user interface, to set a solid as a proxy; this feature is available only through scripting.
+?> **Note:** There is no way, using the user interface, to set a solid as a proxy; this feature is available only through scripting.
 
 **parameters**
 

@@ -115,8 +115,7 @@ The collection of Output Modules for the item.
 
 `app.project.renderQueue.item(index).queueItemNotify`
 
-#### NOTE
-This functionality was added in After Effects 22.0 (2022)
+?> **Note:** This functionality was added in After Effects 22.0 (2022)
 
 **Description**
 
@@ -151,7 +150,7 @@ Boolean; read/write.
 
 **Description**
 
-The number of frames to skip when rendering this item. Use this to do rendering tests that are faster than a full render. A value of 0 skip no frames, and results in regular rendering of all frames. A value of 1 skips every other frame. This is equivalent to “rendering on twos.” Higher values skip a larger number of frames. The total length of time remains unchanged. For example, if skip has a value of 1, a sequence output would have half the number of frames and in movie output, each frame would be double the duration.
+The number of frames to skip when rendering this item. Use this to do rendering tests that are faster than a full render. A value of 0 skip no frames, and results in regular rendering of all frames. A value of 1 skips every other frame. This is equivalent to "rendering on twos." Higher values skip a larger number of frames. The total length of time remains unchanged. For example, if skip has a value of 1, a sequence output would have half the number of frames and in movie output, each frame would be double the duration.
 
 **Type**
 
@@ -267,8 +266,7 @@ Nothing.
 
 Creates a duplicate of this item and adds it this render queue.
 
-#### NOTE
-Duplicating an item whose status is “Done” sets the new item’s status to “Queued”.
+?> **Note:** Duplicating an item whose status is "Done" sets the new item's status to "Queued".
 
 **Parameters**
 
@@ -284,8 +282,7 @@ RenderQueueItem object.
 
 `app.project.renderQueue.item(index).getSetting()`
 
-#### NOTE
-This functionality was added in After Effects 13.0 (CC 2014)
+?> **Note:** This functionality was added in After Effects 13.0 (CC 2014)
 
 **Description**
 
@@ -311,8 +308,7 @@ var rqItem1_proxyUse_str = app.project.renderQueue.item(1).getSetting("Proxy Use
 
 `app.project.renderQueue.item(index).getSettings()`
 
-#### NOTE
-This functionality was added in After Effects 13.0 (CC 2014)
+?> **Note:** This functionality was added in After Effects 13.0 (CC 2014)
 
 **Description**
 
@@ -376,7 +372,7 @@ Nothing.
 
 **Description**
 
-Saves the item’s current render settings as a new template with the specified name.
+Saves the item's current render settings as a new template with the specified name.
 
 **Parameters**
 
@@ -393,8 +389,7 @@ Nothing.
 
 `app.project.renderQueue.item(index).setSetting()`
 
-#### NOTE
-This functionality was added in After Effects 13.0 (CC 2014)
+?> **Note:** This functionality was added in After Effects 13.0 (CC 2014)
 
 **Description**
 
@@ -423,8 +418,7 @@ app.project.renderQueue.item(1).setSetting("Proxy Use", 1);
 
 `app.project.renderQueue.item(index).setSettings()`
 
-#### NOTE
-This functionality was added in After Effects 13.0 (CC 2014)
+?> **Note:** This functionality was added in After Effects 13.0 (CC 2014)
 
 **Description**
 

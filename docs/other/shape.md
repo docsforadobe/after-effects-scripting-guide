@@ -4,7 +4,7 @@
 
 **Description**
 
-The Shape object encapsulates information describing a shape in a shape layer, or the outline shape of a Mask. It is the value of the “Mask Path” AE properties, and of the “Path” AE property of a shape layer. Use the constructor, `new Shape()`, to create a new, empty Shape object, then set the attributes individually to define the shape.
+The Shape object encapsulates information describing a shape in a shape layer, or the outline shape of a Mask. It is the value of the "Mask Path" AE properties, and of the "Path" AE property of a shape layer. Use the constructor, `new Shape()`, to create a new, empty Shape object, then set the attributes individually to define the shape.
 
 A shape has a set of anchor points, or vertices, and a pair of direction handles, or tangent vectors, for each anchor point. A tangent vector (in a non-RotoBezier mask) determines the direction of the line that is drawn to or from an anchor point. There is one incoming tangent vector and one outgoing tangent vector associated with each vertex in the shape.
 
@@ -16,8 +16,7 @@ RotoBezier masks calculate their tangents automatically. (See [MaskPropertyGroup
 
 For closed mask shapes, variable-width mask feather points can exist anywhere along the mask path. Feather points are part of the Mask Path property. Reference a specific feather point by the number of the mask path segment (portion of the path between adjacent vertices) where it appears.
 
-#### NOTE
-The feather points on a mask are listed in an array in the order that they were created.
+?> **Note:** The feather points on a mask are listed in an array in the order that they were created.
 
 **Examples**
 
@@ -27,7 +26,7 @@ The feather points on a mask are listed in an array in the order that they were 
   > myShape.vertices = [[0,0], [0,100], [100,100], [100,0]];
   > myShape.closed = true;
   > ```
-- Create a “U” shaped mask. A “U” is an open shape with the same 4 vertices used in the square.
+- Create a "U" shaped mask. A "U" is an open shape with the same 4 vertices used in the square.
   > ```javascript
   > var myShape = new Shape();
   > myShape.vertices = [[0,0], [0,100], [100,100], [100,0]];
@@ -75,10 +74,9 @@ Boolean; read/write.
 
 **Description**
 
-An array containing each feather point’s radius interpolation type (0 for non-Hold feather points, 1 for Hold feather points).
+An array containing each feather point's radius interpolation type (0 for non-Hold feather points, 1 for Hold feather points).
 
-#### NOTE
-Values are stored in the array in the order that feather points are created.
+?> **Note:** Values are stored in the array in the order that feather points are created.
 
 **Type**
 
@@ -92,10 +90,9 @@ Array of integers (0 or 1); read/write.
 
 **Description**
 
-An array containing each feather point’s radius (feather amount); inner feather points have negative values.
+An array containing each feather point's radius (feather amount); inner feather points have negative values.
 
-#### NOTE
-Values are stored in the array in the order that feather points are created.
+?> **Note:** Values are stored in the array in the order that feather points are created.
 
 **Type**
 
@@ -109,10 +106,9 @@ Array of floating-point values; read/write.
 
 **Description**
 
-An array containing each feather point’s relative angle percentage between the two normals on either side of a curved outer feather boundary at a corner on a mask path. The angle value is 0% for feather points not at corners.
+An array containing each feather point's relative angle percentage between the two normals on either side of a curved outer feather boundary at a corner on a mask path. The angle value is 0% for feather points not at corners.
 
-#### NOTE
-Values are stored in the array in the order that feather points are created.
+?> **Note:** Values are stored in the array in the order that feather points are created.
 
 **Type**
 
@@ -126,10 +122,9 @@ Array of floating-point percentage values (0 to 100); read/write.
 
 **Description**
 
-An array containing each feather point’s relative position, from 0 to 1, on its mask path segment (section of the mask path between vertices, numbered starting at 0).
+An array containing each feather point's relative position, from 0 to 1, on its mask path segment (section of the mask path between vertices, numbered starting at 0).
 
-#### NOTE
-Values are stored in the array in the order that feather points are created. To move a feather point to a different mask path segment, first change the [featherSegLocs](#shape-featherseglocs) attribute value, then this attribute.
+?> **Note:** Values are stored in the array in the order that feather points are created. To move a feather point to a different mask path segment, first change the [featherSegLocs](#shape-featherseglocs) attribute value, then this attribute.
 
 **Type**
 
@@ -143,10 +138,9 @@ Array of floating-point values (0 to 1); read/write.
 
 **Description**
 
-An array containing each feather point’s mask path segment number (section of the mask path between vertices, numbered starting at 0).
+An array containing each feather point's mask path segment number (section of the mask path between vertices, numbered starting at 0).
 
-#### NOTE
-Values are stored in the array in the order that feather points are created. Move a feather point to a different segment by changing both its segment number (this attribute) and, optionally, its [featherRelSegLocs](#shape-featherrelseglocs) attribute value.
+?> **Note:** Values are stored in the array in the order that feather points are created. Move a feather point to a different segment by changing both its segment number (this attribute) and, optionally, its [featherRelSegLocs](#shape-featherrelseglocs) attribute value.
 
 **Type**
 
@@ -180,10 +174,9 @@ layer.mask(1).property("ADBE Mask Shape").setValue(my_maskShape);
 
 **Description**
 
-An array containing each feather point’s tension amount, from 0 (0% tension) to 1 (100% tension).
+An array containing each feather point's tension amount, from 0 (0% tension) to 1 (100% tension).
 
-#### NOTE
-Values are stored in the array in the order that feather points are created.
+?> **Note:** Values are stored in the array in the order that feather points are created.
 
 **Type**
 
@@ -197,13 +190,11 @@ Array of floating-point values (0 to 1); read/write.
 
 **Description**
 
-An array containing each feather point’s direction, either 0 (outer feather point) or 1 (inner feather point).
+An array containing each feather point's direction, either 0 (outer feather point) or 1 (inner feather point).
 
-#### NOTE
-You cannot change the direction of a feather point after it has been created.
+?> **Note:** You cannot change the direction of a feather point after it has been created.
 
-#### NOTE
-Values are stored in the array in the order that feather points are created.
+?> **Note:** Values are stored in the array in the order that feather points are created.
 
 **Type**
 

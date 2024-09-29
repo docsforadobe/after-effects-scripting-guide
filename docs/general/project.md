@@ -42,8 +42,7 @@ Integer (8, 16, or 32 only); read/write.
 
 `app.project.compensateForSceneReferredProfiles`
 
-#### NOTE
-This functionality was added in After Effects 16.0 (CC 2019)
+?> **Note:** This functionality was added in After Effects 16.0 (CC 2019)
 
 **Description**
 
@@ -59,17 +58,15 @@ Boolean; read/write.
 
 `app.project.dirty`
 
-#### NOTE
-This functionality was added in After Effects 17.5 (CC2020).
+?> **Note:** This functionality was added in After Effects 17.5 (CC2020).
 
-#### WARNING
-This method/property is officially undocumented and was found via research. The information here may be inaccurate, and this whole method/property may disappear or stop working some point. Please contribute if you have more information on it!
+!> **Warning:** This method/property is officially undocumented and was found via research. The information here may be inaccurate, and this whole method/property may disappear or stop working some point. Please contribute if you have more information on it!
 
 **Description**
 
 True if the project has been modified from the last save; otherwise false.
 
-“Dirty” projects will have an `*` in the project window title.
+"Dirty" projects will have an `*` in the project window title.
 
 **Type**
 
@@ -95,8 +92,7 @@ Integer (0 or 1); read/write.
 
 `app.project.expressionEngine`
 
-#### NOTE
-This functionality was added in After Effects 16.0 (CC 2019)
+?> **Note:** This functionality was added in After Effects 16.0 (CC 2019)
 
 **Description**
 
@@ -175,8 +171,7 @@ A `FramesCountType` enumerated value; read/write. One of:
 - `FramesCountType.FC_START_0`
 - `FramesCountType.FC_TIMECODE_CONVERSION`
 
-#### WARNING
-Setting this attribute to `FramesCountType.FC_TIMECODE_CONVERSION` resets the `displayStartFrame` attribute to 0.
+!> **Warning:** Setting this attribute to `FramesCountType.FC_TIMECODE_CONVERSION` resets the `displayStartFrame` attribute to 0.
 
 ---
 
@@ -198,8 +193,7 @@ Boolean; read/write.
 
 `app.project.gpuAccelType`
 
-#### NOTE
-This functionality was added in After Effects 13.8 (CC 2015.3)
+?> **Note:** This functionality was added in After Effects 13.8 (CC 2015.3)
 
 **Description**
 
@@ -282,8 +276,7 @@ Boolean; read/write.
 
 `app.project.linearizeWorkingSpace`
 
-#### NOTE
-This functionality was added in After Effects 16.0 (CC 2019)
+?> **Note:** This functionality was added in After Effects 16.0 (CC 2019)
 
 **Description**
 
@@ -393,8 +386,7 @@ A `TimeDisplayType` enumerated value; read/write. One of:
 
 `app.project.toolType`
 
-#### NOTE
-This functionality was added in After Effects 14.0 (CC 2017)
+?> **Note:** This functionality was added in After Effects 14.0 (CC 2017)
 
 **Description**
 
@@ -499,8 +491,7 @@ Boolean; read/write.
 
 `app.project.usedFonts`
 
-#### NOTE
-This functionality was added in After Effects 24.5
+?> **Note:** This functionality was added in After Effects 24.5
 
 **Description**
 
@@ -541,7 +532,7 @@ Array of Objects; read-only.
 
 **Description**
 
-The current project’s working gamma value, either 2.2 or 2.4. Setting values other than 2.2 or 2.4 will cause a scripting error. Note that when the project’s color working space is set, the working gamma value is ignored by After Effects.
+The current project's working gamma value, either 2.2 or 2.4. Setting values other than 2.2 or 2.4 will cause a scripting error. Note that when the project's color working space is set, the working gamma value is ignored by After Effects.
 
 **Type**
 
@@ -560,7 +551,7 @@ Number; read/write.
 
 **Description**
 
-A string which is the color profile description for the project’s color working space. To set the working space to None, set `workingSpace` to an empty string.
+A string which is the color profile description for the project's color working space. To set the working space to None, set `workingSpace` to an empty string.
 
 Use `app.project.listColorProfiles()` to return an array of available color profile descriptions that can be used to set the color working space.
 
@@ -582,7 +573,7 @@ String; read/write.
 
 **Description**
 
-The project’s XMP metadata, stored as RDF (XML-based). For more information on XMP, see the [JavaScript Tools Guide](https://extendscript.docsforadobe.dev/).
+The project's XMP metadata, stored as RDF (XML-based). For more information on XMP, see the [JavaScript Tools Guide](https://extendscript.docsforadobe.dev/).
 
 **Type**
 
@@ -681,7 +672,7 @@ Integer; the total number of footage items removed.
 
 Imports the file specified in the specified ImportOptions object, using the specified options. Same as the File > Import File command.
 
-Creates and returns a new FootageItem object from the file, and adds it to the project’s items array.
+Creates and returns a new FootageItem object from the file, and adds it to the project's items array.
 
 **Parameters**
 
@@ -720,7 +711,7 @@ Array of [Item objects](../items/item.md#item) created during import; or null if
 
 **Description**
 
-Creates and returns a new PlaceholderItem and adds it to the project’s items array. Same as the File > Import > Placeholder command.
+Creates and returns a new PlaceholderItem and adds it to the project's items array. Same as the File > Import > Placeholder command.
 
 **Parameters**
 
@@ -760,8 +751,7 @@ Retrieves an item at a specified index position.
 
 `app.project.itemByID(id)`
 
-#### NOTE
-This functionality was added in After Effects 13.0 (CC 2014)
+?> **Note:** This functionality was added in After Effects 13.0 (CC 2014)
 
 **Description**
 
@@ -782,8 +772,7 @@ Retrieves an item by its [Item ID](../items/item.md#item-id)
 
 `app.project.layerByID(id)`
 
-#### NOTE
-This functionality was added in After Effects 22.0 (2022)
+?> **Note:** This functionality was added in After Effects 22.0 (2022)
 
 **Description**
 
@@ -818,7 +807,7 @@ if (app.project.layerByID(layerID) === firstLayer) {
 
 **Description**
 
-Returns an array of color profile descriptions that can be set as the project’s color working space.
+Returns an array of color profile descriptions that can be set as the project's color working space.
 
 **Parameters**
 
@@ -880,8 +869,7 @@ Integer; the total number of FootageItem objects removed.
 
 `app.project.replaceFont(fromFont, toFont, [noFontLocking = false])`
 
-#### NOTE
-This functionality was added in After Effects 24.5
+?> **Note:** This functionality was added in After Effects 24.5
 
 **Description**
 
@@ -981,7 +969,7 @@ Any of the following will set the default import folder to C:/My Folder:
 
 Note: if the path refers to an existing file and not a folder, the Folder function returns a File object instead of a Folder object, which will cause `setDefaultImportFolder()` to return false.
 
-To set the default import folder to the current user’s desktop folder: `app.project.setDefaultImportFolder(Folder.desktop);`
+To set the default import folder to the current user's desktop folder: `app.project.setDefaultImportFolder(Folder.desktop);`
 
 To disable the default folder, call `setDefaultImportFolder()` with no parameters: `app.project.setDefaultImportFolder();`
 
@@ -1012,8 +1000,7 @@ Nothing.
 
 `app.project.newTeamProject(teamProjectName, description)`
 
-#### NOTE
-This functionality was added in After Effects 14.2 (CC 2017.1)
+?> **Note:** This functionality was added in After Effects 14.2 (CC 2017.1)
 
 **Description**
 
@@ -1035,8 +1022,7 @@ Boolean. `True` if the team project is successfully created, `false` otherwise.
 
 `app.project.openTeamProject(teamProjectName)`
 
-#### NOTE
-This functionality was added in After Effects 14.2 (CC 2017.1)
+?> **Note:** This functionality was added in After Effects 14.2 (CC 2017.1)
 
 **Description**
 
@@ -1057,8 +1043,7 @@ Boolean. `True` if the team project is successfully opened, `false` otherwise.
 
 `app.project.shareTeamProject(comment)`
 
-#### NOTE
-This functionality was added in After Effects 14.2 (CC 2017.1)
+?> **Note:** This functionality was added in After Effects 14.2 (CC 2017.1)
 
 **Description**
 
@@ -1079,8 +1064,7 @@ Boolean. `True` if the team project is successfully shared, `false` otherwise.
 
 `app.project.syncTeamProject()`
 
-#### NOTE
-This functionality was added in After Effects 14.2 (CC 2017.1)
+?> **Note:** This functionality was added in After Effects 14.2 (CC 2017.1)
 
 **Description**
 
@@ -1096,8 +1080,7 @@ Boolean. `True` if the team project is successfully synced, `false` otherwise.
 
 `app.project.closeTeamProject()`
 
-#### NOTE
-This functionality was added in After Effects 14.2 (CC 2017.1)
+?> **Note:** This functionality was added in After Effects 14.2 (CC 2017.1)
 
 **Description**
 
@@ -1113,8 +1096,7 @@ Boolean. `True` if the team project is successfully closed, `false` otherwise.
 
 `app.project.convertTeamProjectToProject(project_file)`
 
-#### NOTE
-This functionality was added in After Effects 14.2 (CC 2017.1)
+?> **Note:** This functionality was added in After Effects 14.2 (CC 2017.1)
 
 **Description**
 
@@ -1135,8 +1117,7 @@ Boolean. `True` if the team project is successfully converted, `false` otherwise
 
 `app.project.listTeamProjects()`
 
-#### NOTE
-This functionality was added in After Effects 14.2 (CC 2017.1)
+?> **Note:** This functionality was added in After Effects 14.2 (CC 2017.1)
 
 **Description**
 
@@ -1153,8 +1134,7 @@ Array of strings.
 
 `app.project.isTeamProjectOpen(teamProjectName)`
 
-#### NOTE
-This functionality was added in After Effects 14.2 (CC 2017.1)
+?> **Note:** This functionality was added in After Effects 14.2 (CC 2017.1)
 
 **Description**
 
@@ -1175,8 +1155,7 @@ Boolean. `True` if the specified team project is currently open, `false` otherwi
 
 `app.project.isAnyTeamProjectOpen()`
 
-#### NOTE
-This functionality was added in After Effects 14.2 (CC 2017.1)
+?> **Note:** This functionality was added in After Effects 14.2 (CC 2017.1)
 
 **Description**
 
@@ -1192,8 +1171,7 @@ Boolean. `True` if any team project is currently open, `false` otherwise.
 
 `app.project.isTeamProjectEnabled()`
 
-#### NOTE
-This functionality was added in After Effects 14.2 (CC 2017.1)
+?> **Note:** This functionality was added in After Effects 14.2 (CC 2017.1)
 
 **Description**
 
@@ -1209,8 +1187,7 @@ Boolean. `True` if team project is currently enabled, `false` otherwise.
 
 `app.project.isLoggedInToTeamProject()`
 
-#### NOTE
-This functionality was added in After Effects 14.2 (CC 2017.1)
+?> **Note:** This functionality was added in After Effects 14.2 (CC 2017.1)
 
 **Description**
 
@@ -1226,8 +1203,7 @@ Boolean. `True` if the client (After Effects) is currently logged into the team 
 
 `app.project.isSyncCommandEnabled()`
 
-#### NOTE
-This functionality was added in After Effects 14.2 (CC 2017.1)
+?> **Note:** This functionality was added in After Effects 14.2 (CC 2017.1)
 
 **Description**
 
@@ -1243,8 +1219,7 @@ Boolean. `True` if the team projects Sync command is enabled, `false` otherwise.
 
 `app.project.isShareCommandEnabled()`
 
-#### NOTE
-This functionality was added in After Effects 14.2 (CC 2017.1)
+?> **Note:** This functionality was added in After Effects 14.2 (CC 2017.1)
 
 **Description**
 
@@ -1260,8 +1235,7 @@ Boolean. `True` if the team projects Share command is enabled, `false` otherwise
 
 `app.project.isResolveCommandEnabled()`
 
-#### NOTE
-This functionality was added in After Effects 14.2 (CC 2017.1)
+?> **Note:** This functionality was added in After Effects 14.2 (CC 2017.1)
 
 **Description**
 
@@ -1277,8 +1251,7 @@ Boolean. `True` if the team projects Resolve command is enabled, `false` otherwi
 
 `app.project.resolveConflict(ResolveType)`
 
-#### NOTE
-This functionality was added in After Effects 14.2 (CC 2017.1)
+?> **Note:** This functionality was added in After Effects 14.2 (CC 2017.1)
 
 **Description**
 

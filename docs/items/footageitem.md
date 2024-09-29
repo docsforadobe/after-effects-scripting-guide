@@ -5,7 +5,7 @@
 
 **Description**
 
-The FootageItem object represents a footage item imported into a project, which appears in the Project panel. These are accessed by position index number in a project’s item collection.
+The FootageItem object represents a footage item imported into a project, which appears in the Project panel. These are accessed by position index number in a project's item collection.
 
 > FootageItem is a subclass of [AVItem object](avitem.md#avitem), which is a subclass of [Item object](item.md#item). All methods and attributes of AVItem and Item, in addition to those listed below, are available when working with FootageItem.
 
@@ -19,9 +19,9 @@ The FootageItem object represents a footage item imported into a project, which 
 
 **Description**
 
-The [Extendscript File](https://extendscript.docsforadobe.dev/file-system-access/file-object.html) object for the footage’s source file.
+The [Extendscript File](https://extendscript.docsforadobe.dev/file-system-access/file-object.html) object for the footage's source file.
 
-If the FootageItem’s `mainSource` is a FileSource, this is the same as [FootageItem.mainSource.file](../sources/filesource.md#filesource-file). Otherwise it is null.
+If the FootageItem's `mainSource` is a FileSource, this is the same as [FootageItem.mainSource.file](../sources/filesource.md#filesource-file). Otherwise it is null.
 
 **Type**
 
@@ -35,7 +35,7 @@ If the FootageItem’s `mainSource` is a FileSource, this is the same as [Footag
 
 **Description**
 
-The footage source, an object that contains all of the settings related to that footage item, including those that are normally accessed through the Interpret Footage dialog box. The attribute is read-only. To change its value, call one of the FootageItem “replace” methods. See the [FootageSource object](../sources/footagesource.md#footagesource), and its three types:
+The footage source, an object that contains all of the settings related to that footage item, including those that are normally accessed through the Interpret Footage dialog box. The attribute is read-only. To change its value, call one of the FootageItem "replace" methods. See the [FootageSource object](../sources/footagesource.md#footagesource), and its three types:
 
 - [SolidSource object](../sources/solidsource.md#solidsource)
 - [FileSource object](../sources/filesource.md#filesource)
@@ -59,8 +59,7 @@ If this is a FileSource object, and the [footageMissing](avitem.md#avitem-footag
 
 Opens the footage in a Footage panel, and moves the Footage panel to front and gives it focus.
 
-#### NOTE
-Missing and placeholder footage can be opened using this method, but cannot manually (via double-clicking it).
+?> **Note:** Missing and placeholder footage can be opened using this method, but cannot manually (via double-clicking it).
 
 **Parameters**
 
@@ -128,7 +127,7 @@ The method preserves interpretation parameters from the previous `mainSource` ob
 
 | `file`              | An [Extendscript File](https://extendscript.docsforadobe.dev/file-system-access/file-object.html) object for the first file in the sequence to be used as the footage main source.   |
 |---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `forceAlphabetical` | When true, use the “Force alphabetical order” option.                                                                                                                                |
+| `forceAlphabetical` | When true, use the "Force alphabetical order" option.                                                                                                                                |
 
 ---
 

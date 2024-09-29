@@ -21,7 +21,7 @@ Scripting shares a global environment, so any script executed at startup can def
 | `new`               | Standard JavaScript constructor statement.                                                                                                |
 | `null`              | Assigned to a variable, array element, or object property<br/>to indicate that it does not contain a legalvalue.                          |
 | `return`            | Standard JavaScript way of returning a value from a<br/>function or exiting a function.                                                   |
-| `switch`            | Standard JavaScript way of evaluating a JavaScript<br/>expression and attempting to match the expression’s value<br/>to a `case` label.   |
+| `switch`            | Standard JavaScript way of evaluating a JavaScript<br/>expression and attempting to match the expression's value<br/>to a `case` label.   |
 | `this`              | Standard JavaScript method of indicating the current object.                                                                              |
 | `true`              | Literal representing the Boolean true value.                                                                                              |
 | `undefined`         | Indicates that the variable, array element, or object<br/>property has not yet been assigned a value.                                     |
@@ -89,7 +89,7 @@ The following tables list and describe all operators recognized by the After Eff
 | Operators (highest precedence to lowest)                  | Associativity   |
 |-----------------------------------------------------------|-----------------|
 | [], (), .                                                 | left to right   |
-| new, delete, - (unary negation), !, type of, void , ++, – | right to left   |
+| new, delete, - (unary negation), !, type of, void , ++, - | right to left   |
 | \*, /, %                                                  | left to right   |
 | +, - (subtraction)                                        | left to right   |
 | <<, >>, >>>                                               | left to right   |
@@ -112,24 +112,23 @@ The following tables list and describe all operators recognized by the After Eff
 
 This is section gives you a brief overview in oriented programming and inheritance. If you already know about this, you can skip this section.
 
-In Javascript/Extendscript, Class Inheritance is the idea that you can define some properties or methods for a given object, and then create a *subclass* (or “child class”) that inherits all of those properties & methods and adds more, further refining it.
+In Javascript/Extendscript, Class Inheritance is the idea that you can define some properties or methods for a given object, and then create a *subclass* (or "child class") that inherits all of those properties & methods and adds more, further refining it.
 
-For example, “automobile” could be one base class, with “cars” being a subclass of the “automobile” base class, with “sedan” and “convertible” being two subclasses of the “car” base class. Any properties or methods from “automobile” are also accessible by “convertible,” because there’s a direct inheritance from “automobile” -> “car” -> “convertible”.
+For example, "automobile" could be one base class, with "cars" being a subclass of the "automobile" base class, with "sedan" and "convertible" being two subclasses of the "car" base class. Any properties or methods from "automobile" are also accessible by "convertible," because there's a direct inheritance from "automobile" -> "car" -> "convertible".
 
 ### Class Inheritance in After Effects
 
 As a script developer, this is useful to know because many elements in the After Effects scripting environment follows this pattern.
 
-As a user, you can see this in After Effects layers; every layer exists in the timeline, has a Name and Index and Label Color, but some types of layers have different properties than others – for example, Audio layers can’t be enable/disabled, and Camera and Light layers can’t have effects. They share the base “Layer” features, but are each **subclasses** with their own properties.
+As a user, you can see this in After Effects layers; every layer exists in the timeline, has a Name and Index and Label Color, but some types of layers have different properties than others - for example, Audio layers can't be enable/disabled, and Camera and Light layers can't have effects. They share the base "Layer" features, but are each **subclasses** with their own properties.
 
 The same idea exists in After Effects scripting. Many API-accessible elements are part of class hierarchies that inherit and refine properties & methods. This lets the After Effects developers use existing structures to create new API-accessible components, and it allows script developers to use this same hierarchy to work with the After Effects DOM.
 
 For the same example above, [Layer object](../layers/layer.md#layer) (itself a subclass of [PropertyGroup object](../properties/propertygroup.md#propertygroup)) is the *base class* for [AVLayer object](../layers/avlayer.md#avlayer), [CameraLayer object](../layers/cameralayer.md#cameralayer), and [LightLayer object](../layers/lightlayer.md#lightlayer). This means that CameraLayer inherits everything from the Layer object, which inherits everything from the PropertyGroup object, which inherits everything from the PropertyBase object.
 
-This is why you won’t see the `name` property on the Layer page, but you can still use `layer.name` in your script; `name` is inherited from [PropertyBase.name](../properties/propertybase.md#propertybase-name).
+This is why you won't see the `name` property on the Layer page, but you can still use `layer.name` in your script; `name` is inherited from [PropertyBase.name](../properties/propertybase.md#propertybase-name).
 
-#### WARNING
-In a few specific cases, properties & methods are **removed** with inheritance, not just added. Those cases are noted on the relevant object page.
+!> **Warning:** In a few specific cases, properties & methods are **removed** with inheritance, not just added. Those cases are noted on the relevant object page.
 
 ### Checking Classes
 
