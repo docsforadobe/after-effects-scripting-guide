@@ -1,0 +1,21 @@
+# Todo
+
+- [x] Bulk convert .rst -> md
+- [-] Initialize docsify
+  - [x] Set global docsify settings in index.html
+  - [x] Create the sidebar
+  - [ ] Update index.md
+- [-] Docs Cleanup
+  - [x] Bulk cleanup
+    - [x] Search & replace
+    - [x] Handle lingering bulk-conversion issues
+  - [-] Manual cleanup
+    - [x] Fix internal links
+    - [x] Fix empty links
+    - [ ] Update tables
+      - [ ] Add new "Type" field, because it's a Good Thing
+    - [x] Fix images
+- [ ] Project Cleanup
+  - [ ] Delete legacy items
+  - [ ] Update legacy items
+    - [ ] Update readme
