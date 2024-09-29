@@ -180,7 +180,7 @@ What's new and changed for scripting?
 
 - Scripting access to Shape Layer Stroke Taper, Stroke Waves, Offset Paths Copies, Offset Path Copy Offset:
     - Added relevant [match names](../matchnames/layer/shapelayer.md#matchnames-layer-shapelayer)
-- Fixed an issue to allow negative values for [CompItem.displayStartTime](../items/compitem.md#compitem-displaystarttime)::
+- Fixed an issue to allow negative values for [CompItem.displayStartTime](../items/compitem.md#compitem-displaystarttime):
     - Added [CompItem.displayStartFrame](../items/compitem.md#compitem-displaystartframe)
     - Now matches the valid range allowed when setting the Start Timecode in the Composition Settings Dialog (-3:00:00:00 to 23:59:00:00).
 
@@ -188,7 +188,7 @@ What's new and changed for scripting?
 
 ## [After Effects 17.0.1](https://helpx.adobe.com/after-effects/using/whats-new/2020.html) (November 2019)
 
-- Scripted creation and modification of Dropdown Menu Control items::
+- Scripted creation and modification of Dropdown Menu Control items:
     - Added: [Property.isDropdownEffect](../properties/property.md#property-isdropdowneffect)
     - Added: [Property.setPropertyParameters()](../properties/property.md#property-setpropertyparameters)
 
@@ -196,16 +196,16 @@ What's new and changed for scripting?
 
 ## [After Effects 16.1]()
 
-- Scripting access to [ViewOptions object](../other/viewoptions.md#viewoptions) guide and ruler booleans::
+- Scripting access to [ViewOptions object](../other/viewoptions.md#viewoptions) guide and ruler booleans:
     - Added: [ViewOptions.guidesLocked](../other/viewoptions.md#viewoptions-guideslocked)
     - Added: [ViewOptions.guidesSnap](../other/viewoptions.md#viewoptions-guidessnap)
     - Added: [ViewOptions.guidesVisibility](../other/viewoptions.md#viewoptions-guidesvisibility)
     - Added: [ViewOptions.rulers](../other/viewoptions.md#viewoptions-rulers)
-- Scripting access to add, remove, and set existing guides::
+- Scripting access to add, remove, and set existing guides:
     - Added: [Item.addGuide()](../items/item.md#item-addguide)
     - Added: [Item.removeGuide()](../items/item.md#item-removeguide)
     - Added: [Item.setGuide()](../items/item.md#item-setguide)
-- Scripting access to additional EGP property attributes::
+- Scripting access to additional EGP property attributes:
     - Added: [CompItem.motionGraphicsTemplateControllerCount](../items/compitem.md#compitem-motiongraphicstemplatecontrollercount)
     - Added: [CompItem.getMotionGraphicsTemplateControllerName()](../items/compitem.md#compitem-getmotiongraphicstemplatecontrollername)
     - Added: [CompItem.setMotionGraphicsControllerName()](../items/compitem.md#compitem-setmotiongraphicscontrollername)
@@ -215,16 +215,16 @@ What's new and changed for scripting?
 
 ## [After Effects 16.0](https://helpx.adobe.com/after-effects/using/whats-new/2019.html) (October 2018)
 
-- Scripting access to marker label and protectedRegion attributes::
+- Scripting access to marker label and protectedRegion attributes:
     - Added: [MarkerValue.label](../other/markervalue.md#markervalue-label)
     - Added: [MarkerValue.protectedRegion](../other/markervalue.md#markervalue-protectedregion)
-- Scripting access to additional project color management settings::
+- Scripting access to additional project color management settings:
     - Added: [Project.workingSpace](../general/project.md#project-workingspace)
     - Added: [Project.workingGamma](../general/project.md#project-workinggamma)
     - Added: [Project.listColorProfiles()](../general/project.md#project-listcolorprofiles)
     - Added: [Project.linearizeWorkingSpace](../general/project.md#project-linearizeworkingspace)
     - Added: [Project.compensateForSceneReferredProfiles](../general/project.md#project-compensateforscenereferredprofiles)
-- Scripting access to the expression engine attribute::
+- Scripting access to the expression engine attribute:
     - Added: [Project.expressionEngine](../general/project.md#project-expressionengine)
 - Added project method [Project.setDefaultImportFolder()](../general/project.md#project-setdefaultimportfolder), which sets the folder that will be shown in the file import dialog.
 - Added app property [app.disableRendering](../general/application.md#app-disablerendering), which disables rendering via the same mechanism as the Caps Lock key.
@@ -335,7 +335,7 @@ What's new and changed for scripting?
         - Added: [tsume](../text/textdocument.md#textdocument-tsume)
     - Returns array of ([X,Y]) position coordinates (paragraph text layers only):
       : - Added: [boxTextPos](../text/textdocument.md#textdocument-boxtextpos)
-- Layer space / comp space conversion::
+- Layer space / comp space conversion:
     - Added: [sourcePointToComp()](../layers/avlayer.md#avlayer-sourcepointtocomp)
     - Added: [compPointToSource()](../layers/avlayer.md#avlayer-comppointtosource)
 
@@ -399,13 +399,13 @@ What's new and changed for scripting?
 
 ## [After Effects 10.5 (CS5.5)](https://web.archive.org/web/20121022055915/http://blogs.adobe.com/toddkopriva/2008/12/after-effects-cs4-scripting-ch.html/) (April 2011)
 
-- Added to the [Project object](../general/project.md#project) object::
+- Added to the [Project object](../general/project.md#project) object:
     - [Project.framesCountType](../general/project.md#project-framescounttype)
     - [Project.feetFramesFilmType](../general/project.md#project-feetframesfilmtype)
     - [Project.framesUseFeetFrames](../general/project.md#project-framesusefeetframes)
     - [Project.footageTimecodeDisplayStartType](../general/project.md#project-footagetimecodedisplaystarttype)
     - [Project.timeDisplayType](../general/project.md#project-timedisplaytype)
-- Removed from the [Project object](../general/project.md#project) object::
+- Removed from the [Project object](../general/project.md#project) object:
     - `timecodeDisplayType` attribute
     - `timecodeBaseType` attribute
     - `timecodeNTSCDropFrame` attribute
@@ -414,7 +414,7 @@ What's new and changed for scripting?
     - `TimecodeFilmType` enum
     - `TimecodeBaseType` enum
 - Added: [CompItem.dropFrame](../items/compitem.md#compitem-dropframe)
-- Added support for Paragraph Box Text::
+- Added support for Paragraph Box Text:
     - Added [LayerCollection.addBoxText()](../layers/layercollection.md#layercollection-addboxtext)
     - Added [TextDocument.boxText](../text/textdocument.md#textdocument-boxtext)
     - Added [TextDocument.pointText](../text/textdocument.md#textdocument-pointtext)
@@ -429,14 +429,14 @@ What's new and changed for scripting?
 - Added: [MarkerValue.duration](../other/markervalue.md#markervalue-duration)
 - Added: [OutputModule.includeSourceXMP](../renderqueue/outputmodule.md#outputmodule-includesourcexmp)
 - Added: [Project.xmpPacket](../general/project.md#project-xmppacket)
-- Added the following Property methods and attributes related to the Separate Dimensions feature::
+- Added the following Property methods and attributes related to the Separate Dimensions feature:
     - [Property.dimensionsSeparated](../properties/property.md#property-dimensionsseparated)
     - [Property.getSeparationFollower()](../properties/property.md#property-getseparationfollower)
     - [Property.isSeparationFollower](../properties/property.md#property-isseparationfollower)
     - [Property.isSeparationLeader](../properties/property.md#property-isseparationleader)
     - [Property.separationDimension](../properties/property.md#property-separationdimension)
     - [Property.separationLeader](../properties/property.md#property-separationleader)
-- Added [TextDocument object](../text/textdocument.md#textdocument) access, including::
+- Added [TextDocument object](../text/textdocument.md#textdocument) access, including:
     - Added: [TextDocument.applyFill](../text/textdocument.md#textdocument-applyfill)
     - Added: [TextDocument.applyStroke](../text/textdocument.md#textdocument-applystroke)
     - Added: [TextDocument.fillColor](../text/textdocument.md#textdocument-fillcolor)

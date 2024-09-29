@@ -434,7 +434,7 @@ The character order does not matter, and in the case of a parameter string with 
 
 **Parameters**
 
-| `charString`   | A string with any number of characters that will be checked for support in the :ref:FontObject.   |
+| `charString`   | A string with any number of characters that will be checked for support in the [Font object](#fontobject).   |
 |----------------|---------------------------------------------------------------------------------------------------|
 
 **Returns**

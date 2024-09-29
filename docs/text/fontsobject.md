@@ -34,8 +34,6 @@ The list of all the fonts currently available on your system.
 
 They are grouped into what is named a family group which are Arrays of [Font object](fontobject.md#fontobject).
 
-<!-- Naming and ordering:: -->
-
 The Family Name of the group is simply the [familyName](fontobject.md#fontobject-familyname) of any of the [Font objects](fontobject.md#fontobject) in the group.
 
 The Family Name in one font group is not guaranteed to have unique name compared to different font groups - the grouping is determined by a number of factors including the returned value of [FontObject.technology](fontobject.md#fontobject-technology) and [FontObject.writingScripts](fontobject.md#fontobject-writingscripts).

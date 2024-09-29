@@ -59,7 +59,7 @@ Returns the length of a frame for this AVItem, in seconds. This is the reciproca
 
 **Type**
 
-Floating-point value in the range [1/99.. 1.0]; read-only for a FootageItem, otherwise read/write.
+Floating-point value in the range [1/99 .. 1.0]; read-only for a FootageItem, otherwise read/write.
 
 ---
 
