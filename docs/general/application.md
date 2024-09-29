@@ -165,9 +165,8 @@ Boolean; read/write.
 A numeric status code used when executing a script externally (that is, from a command line or AppleScript).
 
 - In Windows, the value is returned on the command line when After Effects was launched on the command line (using the `afterfx` or `afterfx -m` command), and a script was specified with the `-r` or `-s` option.
-- in Mac OS, the value is returned as the AppleScript `DoScript` result for each script.
-
-In both Mac OS and Windows, the value is set to 0 (`EXIT_SUCCESS`) at the beginning of each script evaluation. In the event of an error while the script is running, the script can set this to a positive integer that indicates what error occurred.
+- In Mac OS, the value is returned as the AppleScript `DoScript` result for each script.
+- In both Mac OS and Windows, the value is set to 0 (`EXIT_SUCCESS`) at the beginning of each script evaluation. In the event of an error while the script is running, the script can set this to a positive integer that indicates what error occurred.
 
 **Type**
 
