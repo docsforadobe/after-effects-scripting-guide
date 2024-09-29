@@ -159,7 +159,7 @@ Array, with each element containing the following properties; read-only:
 ``displayName``  String representing the localized display name of the
                  effect as seen in the Effect menu.
 ``category``     String representing the localized category label as seen
-                 in the Effect menu. This can be "" for synthetic effects
+                 in the Effect menu. This can be for synthetic effects
                  that aren't normally shown to the user.
 ``matchName``    String representing the internal unique name for the effect.
                  This name does not change between versions of After Effects.
@@ -207,9 +207,9 @@ A numeric status code used when executing a script externally (that is, from a c
 
 -  In Windows, the value is returned on the command line when After Effects was launched on the command line (using the ``afterfx`` or ``afterfx –m`` command), and a script was specified with the ``–r`` or ``–s`` option.
 
--  in Mac OS, the value is returned as the AppleScript ``DoScript`` result for each script.
+-  In Mac OS, the value is returned as the AppleScript ``DoScript`` result for each script.
 
-In both Mac OS and Windows, the value is set to 0 (``EXIT_SUCCESS``) at the beginning of each script evaluation. In the event of an error while the script is running, the script can set this to a positive integer that indicates what error occurred.
+-  In both Mac OS and Windows, the value is set to 0 (``EXIT_SUCCESS``) at the beginning of each script evaluation. In the event of an error while the script is running, the script can set this to a positive integer that indicates what error occurred.
 
 **Type**
 
