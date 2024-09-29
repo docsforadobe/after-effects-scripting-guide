@@ -404,7 +404,7 @@ Nothing.
 
 **Description**
 
-Begins suppression of script error dialog boxes in the user interface. Use [app.endSuppressDialogs()]() to resume the display of error dialogs.
+Begins suppression of script error dialog boxes in the user interface. Use [app.endSuppressDialogs()](#appendsuppressdialogs) to resume the display of error dialogs.
 
 **Parameters**
 
@@ -422,7 +422,7 @@ Nothing.
 
 **Description**
 
-Marks the beginning of an undo group, which allows a script to logically group all of its actions as a single undoable action (for use with the Edit > Undo/Redo menu items). Use the [app.endUndoGroup()]() method to mark the end of the group.
+Marks the beginning of an undo group, which allows a script to logically group all of its actions as a single undoable action (for use with the Edit > Undo/Redo menu items). Use the [app.endUndoGroup()](#appendundogroup) method to mark the end of the group.
 
 `beginUndoGroup()` and `endUndoGroup()` pairs can be nested. Groups within groups become part of the larger group, and will undo correctly. In this case, the names of inner groups are ignored.
 
@@ -447,7 +447,7 @@ Removes the specified task from the queue of tasks scheduled for delayed executi
 
 **Parameters**
 
-| `taskID`   | An integer that identifies the task, as returned by<br/>[app.scheduleTask()]().   |
+| `taskID`   | An integer that identifies the task, as returned by<br/>[app.scheduleTask()](#appscheduletask).   |
 |------------|-----------------------------------------------------------------------------------|
 
 **Returns**
@@ -462,7 +462,7 @@ Nothing.
 
 **Description**
 
-Ends the suppression of script error dialog boxes in the user interface. Error dialogs are displayed by default;call this method only if [app.beginSuppressDialogs()]() has previously been called.
+Ends the suppression of script error dialog boxes in the user interface. Error dialogs are displayed by default;call this method only if [app.beginSuppressDialogs()](#appbeginsuppressdialogs) has previously been called.
 
 **Parameters**
 
@@ -481,7 +481,7 @@ Nothing.
 
 **Description**
 
-Marks the end of an undo group begun with the [app.beginUndoGroup()]() method. You can use this method to place an end to an undo group in the middle of a script, should you wish to use more than one undo group for a single script. If you are using only a single undo group for a given script, you do not need to use this method; in its absence at the end of a script, the system will close the undo group automatically. Calling this method without having set a `beginUndoGroup()` method yields an error.
+Marks the end of an undo group begun with the [app.beginUndoGroup()](#appbeginundogroup) method. You can use this method to place an end to an undo group in the middle of a script, should you wish to use more than one undo group for a single script. If you are using only a single undo group for a given script, you do not need to use this method; in its absence at the end of a script, the system will close the undo group automatically. Calling this method without having set a `beginUndoGroup()` method yields an error.
 
 **Parameters**
 
@@ -511,9 +511,9 @@ Nothing.
 
 **See also**
 
-- [app.watchFolder()]()
-- [app.parseSwatchFile()]()
-- [app.isWatchFolder]()
+- [app.watchFolder()](#appwatchfolder)
+- [app.parseSwatchFile()](#appparseswatchfile)
+- [app.isWatchFolder](#appiswatchfolder)
 
 ---
 
@@ -731,9 +731,9 @@ Nothing.
 
 **See also**
 
-- [app.isWatchFolder]()
-- [app.watchFolder()]()
-- [app.endWatchFolder()]()
+- [app.isWatchFolder](#appiswatchfolder)
+- [app.watchFolder()](#appwatchfolder)
+- [app.endWatchFolder()](#appendwatchfolder)
 
 ---
 
@@ -797,7 +797,7 @@ Schedules the specified JavaScript for delayed execution.
 
 **Returns**
 
-Integer, a unique identifier for this task, which can be used to cancel it with [app.cancelTask()]().
+Integer, a unique identifier for this task, which can be used to cancel it with [app.cancelTask()](#appcanceltask).
 
 ---
 
@@ -889,6 +889,6 @@ app.watchFolder(theFolder);
 
 **See also**
 
-- [app.endWatchFolder()]()
-- [app.parseSwatchFile()]()
-- [app.isWatchFolder]()
+- [app.endWatchFolder()](#appendwatchfolder)
+- [app.parseSwatchFile()](#appparseswatchfile)
+- [app.isWatchFolder](#appiswatchfolder)

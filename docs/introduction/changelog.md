@@ -194,7 +194,7 @@ What's new and changed for scripting?
 
 ---
 
-## [After Effects 16.1]()
+## After Effects 16.1
 
 - Scripting access to [ViewOptions object](../other/viewoptions.md#viewoptions) guide and ruler booleans:
     - Added: [ViewOptions.guidesLocked](../other/viewoptions.md#viewoptionsguideslocked)
