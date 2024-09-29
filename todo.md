@@ -17,5 +17,7 @@
     - [x] Fix images
 - [ ] Project Cleanup
   - [x] Delete legacy items
-  - [ ] Update legacy items
-    - [ ] Update readme
+  - [x] Update legacy items
+    - [x] Update readme
+- [ ] Apply / develop css style
+- [ ] Set up GH Pages deploy
