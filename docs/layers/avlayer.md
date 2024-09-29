@@ -301,7 +301,7 @@ Boolean; read-only.
 **Description**
 
 True if this layer has track matte. When true, this layer's `trackMatteType` value controls how the matte is applied.
-See [AVLayer.trackMatteType](#avlayer-trackmattetype) for available track matte types.
+See [AVLayer.trackMatteType](#avlayertrackmattetype) for available track matte types.
 
 **Type**
 
@@ -496,7 +496,7 @@ AVLayer object; read only.
 
 ?> **Note:** This functionality was updated in After Effects 23.0
 
-!> **Warning:** This is a Legacy API we don't recommend using for setting Track Matte Type in new scripts. Please consider using the latest track matte APIs [AVLayer.setTrackMatte()](#avlayer-settrackmatte) and [AVLayer.removeTrackMatte()](#avlayer-removetrackmatte) for your tasks.
+!> **Warning:** This is a Legacy API we don't recommend using for setting Track Matte Type in new scripts. Please consider using the latest track matte APIs [AVLayer.setTrackMatte()](#avlayersettrackmatte) and [AVLayer.removeTrackMatte()](#avlayerremovetrackmatte) for your tasks.
 
 **Description**
 
@@ -559,7 +559,7 @@ Adds the layer to the Essential Graphics Panel for the specified composition.
 Returns true if the layer is successfully added, or false otherwise.
 
 - If the layer cannot be added, it is either because it is not a layer type for which media can be replaced (referred to as Media Replacement Layers), or the layer has already been added to the EGP for that composition. After Effects will present a warning dialog if the layer cannot be added to the EGP.
-- Use the [AVLayer.canAddToMotionGraphicsTemplate()](#avlayer-canaddtomotiongraphicstemplate) method to test whether the layer can be added to a Motion Graphics template.
+- Use the [AVLayer.canAddToMotionGraphicsTemplate()](#avlayercanaddtomotiongraphicstemplate) method to test whether the layer can be added to a Motion Graphics template.
 
 **Parameters**
 
@@ -585,7 +585,7 @@ Adds the layer to the Essential Graphics Panel for the specified composition.
 Returns true if the layer is successfully added, or false otherwise.
 
 - If the layer cannot be added, it is either because it is not a layer type for which media can be replaced (referred to as Media Replacement Layers), or the layer has already been added to the EGP for that composition. After Effects will present a warning dialog if the layer cannot be added to the EGP.
-- Use the [AVLayer.canAddToMotionGraphicsTemplate()](#avlayer-canaddtomotiongraphicstemplate) method to test whether the layer can be added to a Motion Graphics template.
+- Use the [AVLayer.canAddToMotionGraphicsTemplate()](#avlayercanaddtomotiongraphicstemplate) method to test whether the layer can be added to a Motion Graphics template.
 
 **Parameters**
 
@@ -665,15 +665,15 @@ Returns true if the layer can be added, or false otherwise.
 
 If the layer cannot be added, it is either because it is not a layer type for which media can be replaced (referred to as Media Replacement Layers), or the layer has already been added to the EGP for that composition.
 
-Media Replacement layers are recognized as AVLayers with an [AVLayer.source](#avlayer-source) set to a [FootageItem object](../items/footageitem.md#footageitem) (with specific source types) or a [CompItem object](../items/compitem.md#compitem).
+Media Replacement layers are recognized as AVLayers with an [AVLayer.source](#avlayersource) set to a [FootageItem object](../items/footageitem.md#footageitem) (with specific source types) or a [CompItem object](../items/compitem.md#compitem).
 
 The AVLayer needs to comply with the restrictions below in order to be treated as a Media Replacement layer:
 
-- [Layer.hasVideo](layer.md#layer-hasvideo) should return true.
-- [AVLayer.adjustmentLayer](#avlayer-adjustmentlayer) should return false.
-- [Layer.nullLayer](layer.md#layer-nulllayer) should return false.
-- If the [AVLayer.source](#avlayer-source) is a [FootageItem object](../items/footageitem.md#footageitem), then FootageItem.FootageSource should not be a [SolidSource object](../sources/solidsource.md#solidsource).
-- If the [AVLayer.source](#avlayer-source) is a [FootageItem object](../items/footageitem.md#footageitem) and the FootageItem.FootageSource is a [FileSource object](../sources/filesource.md#filesource) then that FileSource should not point to a non-media file e.g. a JSX script file.
+- [Layer.hasVideo](layer.md#layerhasvideo) should return true.
+- [AVLayer.adjustmentLayer](#avlayeradjustmentlayer) should return false.
+- [Layer.nullLayer](layer.md#layernulllayer) should return false.
+- If the [AVLayer.source](#avlayersource) is a [FootageItem object](../items/footageitem.md#footageitem), then FootageItem.FootageSource should not be a [SolidSource object](../sources/solidsource.md#solidsource).
+- If the [AVLayer.source](#avlayersource) is a [FootageItem object](../items/footageitem.md#footageitem) and the FootageItem.FootageSource is a [FileSource object](../sources/filesource.md#filesource) then that FileSource should not point to a non-media file e.g. a JSX script file.
 
 **Parameters**
 
@@ -736,7 +736,7 @@ Viewer object for the Layer panel, or null if the layer could not be opened (e.g
 **Description**
 
 Removes the track matte for this layer while preserving the TrackMatteType.
-See [AVLayer.setTrackMatte()](#avlayer-settrackmatte) for another way of removing track matte.
+See [AVLayer.setTrackMatte()](#avlayersettrackmatte) for another way of removing track matte.
 
 **Parameters**
 
@@ -771,7 +771,7 @@ Replaces the source for this layer.
 
 | `newSource`      | The new source AVItem object.                                                                                                                                                                                                                                                                                      |
 |------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `fixExpressions` | `True` to adjust expressions for the new source,<br/>`false` otherwise. Note that this feature can be<br/>resource-intensive; if replacing a large amount of<br/>footage, do this only at the end of the operation. See<br/>also [Project.autoFixExpressions()](../general/project.md#project-autofixexpressions). |
+| `fixExpressions` | `True` to adjust expressions for the new source,<br/>`false` otherwise. Note that this feature can be<br/>resource-intensive; if replacing a large amount of<br/>footage, do this only at the end of the operation. See<br/>also [Project.autoFixExpressions()](../general/project.md#projectautofixexpressions). |
 
 **Returns**
 
@@ -790,13 +790,13 @@ Nothing.
 **Description**
 
 Sets the track matte layer and type for this layer. Passing in `null` to trackMatteLayer parameter removes the track matte.
-See [AVLayer.removeTrackMatte()](#avlayer-removetrackmatte) for another way of removing track matte.
+See [AVLayer.removeTrackMatte()](#avlayerremovetrackmatte) for another way of removing track matte.
 
 **Parameters**
 
 | `trackMatteLayer`   | The AVLayer to be used as the track matte layer.                                                                          |
 |---------------------|---------------------------------------------------------------------------------------------------------------------------|
-| `trackMatteType`    | The type of the track matte to be used. Please see [AVLayer.trackMatteType](#avlayer-trackmattetype) for available types. |
+| `trackMatteType`    | The type of the track matte to be used. Please see [AVLayer.trackMatteType](#avlayertrackmattetype) for available types. |
 
 !> **Warning:** Passing in `TrackMatteType.NO_TRACK_MATTE` as type is invalid and will result in no-op.
 

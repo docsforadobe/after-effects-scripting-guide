@@ -4,7 +4,7 @@
 
 **Description**
 
-The RenderQueueItem object represents an individual item in the render queue. It provides access to the specific settings for an item to be rendered. Create the object by adding a composition to the Render Queue with the [RQItemCollection object](rqitemcollection.md#rqitemcollection); see [RQItemCollection.add()](rqitemcollection.md#rqitemcollection-add).
+The RenderQueueItem object represents an individual item in the render queue. It provides access to the specific settings for an item to be rendered. Create the object by adding a composition to the Render Queue with the [RQItemCollection object](rqitemcollection.md#rqitemcollection); see [RQItemCollection.add()](rqitemcollection.md#rqitemcollectionadd).
 
 ---
 
@@ -76,9 +76,9 @@ Integer; read-only.
 
 **Description**
 
-The name of a callback function that is called whenever the value of the [RenderQueueItem.status](#renderqueueitem-status) attribute changes.
+The name of a callback function that is called whenever the value of the [RenderQueueItem.status](#renderqueueitemstatus) attribute changes.
 
-You cannot make changes to render queue items or to the application while rendering is in progress or paused; you can, however, use this callback to pause or stop the rendering process. See [RenderQueue.pauseRendering()](renderqueue.md#renderqueue-pauserendering) and [RenderQueue.stopRendering()](renderqueue.md#renderqueue-stoprendering). See also [app.onError](../general/application.md#app-onerror).
+You cannot make changes to render queue items or to the application while rendering is in progress or paused; you can, however, use this callback to pause or stop the rendering process. See [RenderQueue.pauseRendering()](renderqueue.md#renderqueuepauserendering) and [RenderQueue.stopRendering()](renderqueue.md#renderqueuestoprendering). See also [app.onError](../general/application.md#apponerror).
 
 **Type**
 
@@ -135,7 +135,7 @@ Boolean; read/write.
 
 **Description**
 
-When true, the item will be rendered when the render queue is started. When set to true, the [RenderQueueItem.status](#renderqueueitem-status) is set to `RQItemStatus.QUEUED`. When set to false, `status` is set to
+When true, the item will be rendered when the render queue is started. When set to true, the [RenderQueueItem.status](#renderqueueitemstatus) is set to `RQItemStatus.QUEUED`. When set to false, `status` is set to
 `RQItemStatus.UNQUEUED`.
 
 **Type**
@@ -201,7 +201,7 @@ An `RQItemStatus` enumerated value; read-only. One of:
 
 **Description**
 
-The names of all Render Settings templates available for the item. See also [RenderQueueItem.saveAsTemplate()](#renderqueueitem-saveastemplate).
+The names of all Render Settings templates available for the item. See also [RenderQueueItem.saveAsTemplate()](#renderqueueitemsaveastemplate).
 
 **Type**
 
@@ -245,7 +245,7 @@ Floating-point value; read/write.
 
 **Description**
 
-Applies a Render Settings template to the item. See also [RenderQueueItem.saveAsTemplate()](#renderqueueitem-saveastemplate) and [RenderQueueItem.templates](#renderqueueitem-templates).
+Applies a Render Settings template to the item. See also [RenderQueueItem.saveAsTemplate()](#renderqueueitemsaveastemplate) and [RenderQueueItem.templates](#renderqueueitemtemplates).
 
 **Parameters**
 

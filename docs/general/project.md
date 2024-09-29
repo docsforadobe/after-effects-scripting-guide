@@ -80,7 +80,7 @@ Boolean; read-only.
 
 **Description**
 
-An alternate way of setting the Frame Count menu setting in the Project Settings dialog box to 0 or 1, and is equivalent to using the `FramesCountType.FC_START_0` or `FramesCountType.FC_START_1` enumerated values for the [framesCountType](#project-framescounttype).
+An alternate way of setting the Frame Count menu setting in the Project Settings dialog box to 0 or 1, and is equivalent to using the `FramesCountType.FC_START_0` or `FramesCountType.FC_START_1` enumerated values for the [framesCountType](#projectframescounttype).
 
 **Type**
 
@@ -198,7 +198,7 @@ Boolean; read/write.
 **Description**
 
 Get or set the current projects GPU Acceleration option.
-see [app.availableGPUAccelTypes](application.md#app-availablegpuacceltypes)
+see [app.availableGPUAccelTypes](application.md#appavailablegpuacceltypes)
 
 **Type**
 
@@ -495,7 +495,7 @@ Boolean; read/write.
 
 **Description**
 
-Returns an Array of Objects containing references to used fonts and the Text Layers and times on which they appear in the current [Project](#project). Each object is composed of `font` which is a [Font object](../text/fontobject.md#fontobject), and `usedAt` which is an Array of Objects, each composed of `layerID`, a [Layer.id](../layers/layer.md#layer-id), and `layerTimeD` for when. See [Project.layerByID()](#project-layerbyid) to retrieve the layers.
+Returns an Array of Objects containing references to used fonts and the Text Layers and times on which they appear in the current [Project](#project). Each object is composed of `font` which is a [Font object](../text/fontobject.md#fontobject), and `usedAt` which is an Array of Objects, each composed of `layerID`, a [Layer.id](../layers/layer.md#layerid), and `layerTimeD` for when. See [Project.layerByID()](#projectlayerbyid) to retrieve the layers.
 
 ```javascript
 var usedList = app.project.usedFonts;
@@ -755,7 +755,7 @@ Retrieves an item at a specified index position.
 
 **Description**
 
-Retrieves an item by its [Item ID](../items/item.md#item-id)
+Retrieves an item by its [Item ID](../items/item.md#itemid)
 
 **Parameters**
 

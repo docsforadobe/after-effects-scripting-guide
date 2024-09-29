@@ -140,7 +140,7 @@ Floating-point value in the range `[-10800.0..10800.0]` (minus or plus three hou
 
 True if the value of the name attribute has been set explicitly, rather than automatically from the source.
 
-?> **Note:** This always returns true for layers that do not have a [AVLayer.source](avlayer.md#avlayer-source)
+?> **Note:** This always returns true for layers that do not have a [AVLayer.source](avlayer.md#avlayersource)
 
 **Type**
 
@@ -184,7 +184,7 @@ Boolean; read/write.
 
 **Description**
 
-A [PropertyGroup object](../properties/propertygroup.md#propertygroup) that contains all a layer's markers. Layer marker scripting has the same functionality as [Comp markers](../items/compitem.md#compitem-markerproperty).
+A [PropertyGroup object](../properties/propertygroup.md#propertygroup) that contains all a layer's markers. Layer marker scripting has the same functionality as [Comp markers](../items/compitem.md#compitemmarkerproperty).
 
 See [MarkerValue object](../other/markervalue.md#markervalue).
 
@@ -251,7 +251,7 @@ Offset values are calculated to counterbalance any transforms above this layer i
 
 For example, if the new parent has a rotation of 30 degrees, the child layer is assigned a rotation of -30 degrees.
 
-To set the parent without changing the child layer's transform values, use the [setParentWithJump](#layer-setparentwithjump) method.
+To set the parent without changing the child layer's transform values, use the [setParentWithJump](#layersetparentwithjump) method.
 
 **Type**
 
@@ -561,7 +561,7 @@ Sets the parent of this layer to the specified layer, without changing the trans
 
 There may be an apparent jump in the rotation, translation, or scale of the child layer, as this layer's transform values are combined with those of its ancestors.
 
-If you do not want the child layer to jump, set the [parent](#layer-parent) attribute directly. In this case, an offset is calculated and set in the child layer's transform fields, to prevent the jump from occurring.
+If you do not want the child layer to jump, set the [parent](#layerparent) attribute directly. In this case, an offset is calculated and set in the child layer's transform fields, to prevent the jump from occurring.
 
 **Parameters**
 

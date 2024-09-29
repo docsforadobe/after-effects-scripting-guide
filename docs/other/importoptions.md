@@ -7,7 +7,7 @@
 
 **Description**
 
-The ImportOptions object encapsulates the options used to import a file with the [Project.importFile()](../general/project.md#project-importfile) methods.
+The ImportOptions object encapsulates the options used to import a file with the [Project.importFile()](../general/project.md#projectimportfile) methods.
 
 The constructor takes an optional parameter, an [Extendscript File](https://extendscript.docsforadobe.dev/file-system-access/file-object.html) object for the file.
 
@@ -55,7 +55,7 @@ Boolean; read/write.
 
 **Description**
 
-The type of object for which the imported file is to be the source. Before setting, use [canImportAs](#importoptions-canimportas) to check that a given file can be imported as the source of the given object type.
+The type of object for which the imported file is to be the source. Before setting, use [canImportAs](#importoptionscanimportas) to check that a given file can be imported as the source of the given object type.
 
 **Type**
 
@@ -79,9 +79,9 @@ An `ImportAsType` enumerated value; read/write. One of:
 Sets the end clipping range of the sequence, that is going to be imported.
 
 - Creates 'missing frames' (video-bards) if the `rangeEnd` exceeds the duration of the sequence to be imported.
-- Has no effect if [sequence](#importoptions-sequence) is set to false.
-- Throws an exception if [forceAlphabetical](#importoptions-forcealphabetical) is set to true.
-- Throws an exception if `rangeEnd` is less then [rangeStart](#importoptions-rangestart) and resets the range to include all the files.
+- Has no effect if [sequence](#importoptionssequence) is set to false.
+- Throws an exception if [forceAlphabetical](#importoptionsforcealphabetical) is set to true.
+- Throws an exception if `rangeEnd` is less then [rangeStart](#importoptionsrangestart) and resets the range to include all the files.
 
 **Type**
 
@@ -99,10 +99,10 @@ Integer; read/write.
 
 Sets the start clipping range of the sequence, that is going to be imported.
 
-- Has no effect if [sequence](#importoptions-sequence) is set to false.
-- Throws an exception if [forceAlphabetical](#importoptions-forcealphabetical) is set to true.
-- Throws an exception if [rangeEnd](#importoptions-rangeend) value is 0.
-- Throws an exception if `rangeStart` is greater then [rangeEnd](#importoptions-rangeend) and resets the range to include all the files.
+- Has no effect if [sequence](#importoptionssequence) is set to false.
+- Throws an exception if [forceAlphabetical](#importoptionsforcealphabetical) is set to true.
+- Throws an exception if [rangeEnd](#importoptionsrangeend) value is 0.
+- Throws an exception if `rangeStart` is greater then [rangeEnd](#importoptionsrangeend) and resets the range to include all the files.
 
 **Type**
 
@@ -150,7 +150,7 @@ Boolean; read/write.
 
 **Description**
 
-Reports whether the file can be imported as the source of a particular object type. If this method returns true, you can set the given type as the value of the [importAs](#importoptions-importas) attribute.
+Reports whether the file can be imported as the source of a particular object type. If this method returns true, you can set the given type as the value of the [importAs](#importoptionsimportas) attribute.
 
 **Parameters**
 

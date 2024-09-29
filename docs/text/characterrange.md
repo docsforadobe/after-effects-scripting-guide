@@ -11,12 +11,12 @@ The CharacterRange object is an accessor to a character range of the [TextDocume
 
 Unlike the [TextDocument object](textdocument.md#textdocument), which looks at only the first character when returning character attributes, here the character range can span zero or more characters. As a consequence, two or more characters *may not have the same attribute value* and this mixed state will be signaled by returning `undefined`.
 
-- The [characterStart](#characterrange-characterstart) attribute is the first character index of the range.
-- The [characterEnd](#characterrange-characterend) attribue will report the (last + 1) character index of the range, such that ([characterEnd](#characterrange-characterend) - [characterStart](#characterrange-characterstart)) represents the number of characters in the range.
+- The [characterStart](#characterrangecharacterstart) attribute is the first character index of the range.
+- The [characterEnd](#characterrangecharacterend) attribue will report the (last + 1) character index of the range, such that ([characterEnd](#characterrangecharacterend) - [characterStart](#characterrangecharacterstart)) represents the number of characters in the range.
 
 It is acceptable for most attributes for the effective range to be zero - otherwise known as an insertion point.
 
-When accessed, the CharacterRange object will check that [characterStart](#characterrange-characterstart) and effective [characterEnd](#characterrange-characterend) of the range remains valid for the current span of the related [TextDocument object](textdocument.md#textdocument). This is the same rule as applied when the CharacterRange was created, but because the length of the related [TextDocument object](textdocument.md#textdocument) can change through the addition or removal of characters, the [characterStart](#characterrange-characterstart) and effective [characterEnd](#characterrange-characterend) may no longer be valid. In this situation an exception will be thrown on access, either read or write. The [isRangeValid](#characterrange-israngevalid) attribute will return false if the effective range is no longer valid.
+When accessed, the CharacterRange object will check that [characterStart](#characterrangecharacterstart) and effective [characterEnd](#characterrangecharacterend) of the range remains valid for the current span of the related [TextDocument object](textdocument.md#textdocument). This is the same rule as applied when the CharacterRange was created, but because the length of the related [TextDocument object](textdocument.md#textdocument) can change through the addition or removal of characters, the [characterStart](#characterrangecharacterstart) and effective [characterEnd](#characterrangecharacterend) may no longer be valid. In this situation an exception will be thrown on access, either read or write. The [isRangeValid](#characterrangeisrangevalid) attribute will return false if the effective range is no longer valid.
 
 Note that if the [TextDocument object](textdocument.md#textdocument) length changes, the [CharacterRange object](#characterrange) range could become valid again.
 
@@ -130,8 +130,8 @@ The Text layer range character attribute kerning option.
 
 This effectively reports the manual kerning value, and not the calculated kerning value from auto kerning.
 
-- If [autoKernType](textdocument.md#textdocument-autokerntype) in the range is set to `AutoKernType.METRIC_KERN`, `AutoKernType.OPTICAL_KERN`, or is mixed, then this attribute will be returned as `undefined`.
-- If [autoKernType](textdocument.md#textdocument-autokerntype) in the range is set to `AutoKernType.NO_AUTO_KERN`, and this attribute has a mixed value, it will be read as `undefined`.
+- If [autoKernType](textdocument.md#textdocumentautokerntype) in the range is set to `AutoKernType.METRIC_KERN`, `AutoKernType.OPTICAL_KERN`, or is mixed, then this attribute will be returned as `undefined`.
+- If [autoKernType](textdocument.md#textdocumentautokerntype) in the range is set to `AutoKernType.NO_AUTO_KERN`, and this attribute has a mixed value, it will be read as `undefined`.
 
 Setting this value will also set `AutoKernType.NO_AUTO_KERN` to true across the affected characters.
 
@@ -153,9 +153,9 @@ For example, in an 8-bpc project, a red value of 255 would be 1.0, and in a 32-b
 
 If this attribute has a mixed value, it will be read as `undefined`.
 
-Setting this value will also set [applyStroke](textdocument.md#textdocument-applystroke) to true across the affected characters.
+Setting this value will also set [applyStroke](textdocument.md#textdocumentapplystroke) to true across the affected characters.
 
-!> **Warning:** In contrast to the same attribute on the TextDocument API, we will *not* throw an exception on read if [applyStroke](textdocument.md#textdocument-applystroke) is not true.
+!> **Warning:** In contrast to the same attribute on the TextDocument API, we will *not* throw an exception on read if [applyStroke](textdocument.md#textdocumentapplystroke) is not true.
 
 **Type**
 
@@ -198,7 +198,7 @@ On read, the same number of characters as the span of the range will be returned
 
 On write, the characters in the range will be replaced with whatever string value is supplied. If an empty string, then the characters in the range will be effectively deleted.
 
-To insert characters without deleting any existing, call [TextDocument.characterRange()](textdocument.md#textdocument-characterrange) with the same value for start as end to get an insertion point range.
+To insert characters without deleting any existing, call [TextDocument.characterRange()](textdocument.md#textdocumentcharacterrange) with the same value for start as end to get an insertion point range.
 
 **Type**
 

@@ -81,7 +81,7 @@ Boolean; read/write.
 
 The frame value of the beginning of the composition.
 
-This value is an alternative to calculating the start frame using [CompItem.displayStartTime](#compitem-displaystarttime) and [CompItem.frameDuration](#compitem-frameduration) to compensate for floating-point problems.
+This value is an alternative to calculating the start frame using [CompItem.displayStartTime](#compitemdisplaystarttime) and [CompItem.frameDuration](#compitemframeduration) to compensate for floating-point problems.
 
 ?> **Note:** This functionality was added in After Effects 17.1.
 
@@ -199,7 +199,7 @@ LayerCollection object; read-only.
 
 **Description**
 
-A [PropertyGroup object](../properties/propertygroup.md#propertygroup) that contains all a composition's markers. Composition marker scripting has the same functionality as [Layer markers](../layers/layer.md#layer-marker).
+A [PropertyGroup object](../properties/propertygroup.md#propertygroup) that contains all a composition's markers. Composition marker scripting has the same functionality as [Layer markers](../layers/layer.md#layermarker).
 
 See [MarkerValue object](../other/markervalue.md#markervalue).
 
@@ -361,7 +361,7 @@ Boolean; read/write.
 
 **Description**
 
-The current rendering plug-in module to be used to render this composition, as set in the Advanced tab of the Composition Settings dialog box. Allowed values are the members of [CompItem.renderers](#compitem-renderers).
+The current rendering plug-in module to be used to render this composition, as set in the Advanced tab of the Composition Settings dialog box. Allowed values are the members of [CompItem.renderers](#compitemrenderers).
 
 **Type**
 
@@ -568,7 +568,7 @@ String; read-only.
 
 Sets the name of a single property in the Essential Graphics panel.
 
-?> **Note:** To rename a property as it is added to the EGP, see [Property.addToMotionGraphicsTemplateAs()](../properties/property.md#property-addtomotiongraphicstemplateas).
+?> **Note:** To rename a property as it is added to the EGP, see [Property.addToMotionGraphicsTemplateAs()](../properties/property.md#propertyaddtomotiongraphicstemplateas).
 
 **Parameters**
 

@@ -102,7 +102,7 @@ A unique number assigned to the FontObject instance when it is created, value is
 
 Can be used to compare two FontObject instances to see if they refer to the same underlying native font instance.
 
-FontObjects can be looked up by fontID with [getFontByID](fontsobject.md#fontsobject-getfontbyid) .
+FontObjects can be looked up by fontID with [getFontByID](fontsobject.md#fontsobjectgetfontbyid) .
 
 **Type**
 
@@ -188,7 +188,7 @@ String; read-only.
 
 **Description**
 
-The native family name of the font in full 16 bit Unicode. Often different than what is returned by [FontObject.familyName](#fontobject-familyname) for non-Latin fonts.
+The native family name of the font in full 16 bit Unicode. Often different than what is returned by [FontObject.familyName](#fontobjectfamilyname) for non-Latin fonts.
 
 **Type**
 
@@ -202,7 +202,7 @@ String; read-only.
 
 **Description**
 
-The native full name of the font in full 16 bit Unicode. Often different than what is returned by [FontObject.fullName](#fontobject-fullname) for non-Latin fonts.
+The native full name of the font in full 16 bit Unicode. Often different than what is returned by [FontObject.fullName](#fontobjectfullname) for non-Latin fonts.
 
 **Type**
 
@@ -216,7 +216,7 @@ String; read-only.
 
 **Description**
 
-The native style name of the font in full 16 bit Unicode. Often different than what is returned by [FontObject.styleName](#fontobject-stylename) for non-Latin fonts.
+The native style name of the font in full 16 bit Unicode. Often different than what is returned by [FontObject.styleName](#fontobjectstylename) for non-Latin fonts.
 
 **Type**
 
@@ -497,7 +497,7 @@ This function will return the postscript name of the variable font for the speci
 
 **Parameters**
 
-| vectorValues   | An array of float values that matches the length of [FontObject.designVector](#fontobject-designvector) for the given variable font.   |
+| vectorValues   | An array of float values that matches the length of [FontObject.designVector](#fontobjectdesignvector) for the given variable font.   |
 |----------------|----------------------------------------------------------------------------------------------------------------------------------------|
 
 **Returns**

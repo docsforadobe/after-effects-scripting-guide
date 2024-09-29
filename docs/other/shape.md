@@ -12,7 +12,7 @@ A tangent value is a pair of x,y coordinates specified relative to the associate
 
 If a shape is not closed, the `inTangent` for the first vertex and the `outTangent` for the final vertex are ignored. If the shape is closed, these two vectors specify the direction handles of the final connecting segment out of the final vertex and back into the first vertex.
 
-RotoBezier masks calculate their tangents automatically. (See [MaskPropertyGroup.rotoBezier](../properties/maskpropertygroup.md#maskpropertygroup-rotobezier)) If a shape is used in a RotoBezier mask, the tangent values are ignored. This means that, for RotoBezier masks, you can construct a shape by setting only the `vertices` attribute and setting both `inTangents` and `outTangents` to null. When you access the new shape, its tangent values are filled with the automatically calculated tangent values.
+RotoBezier masks calculate their tangents automatically. (See [MaskPropertyGroup.rotoBezier](../properties/maskpropertygroup.md#maskpropertygrouprotobezier)) If a shape is used in a RotoBezier mask, the tangent values are ignored. This means that, for RotoBezier masks, you can construct a shape by setting only the `vertices` attribute and setting both `inTangents` and `outTangents` to null. When you access the new shape, its tangent values are filled with the automatically calculated tangent values.
 
 For closed mask shapes, variable-width mask feather points can exist anywhere along the mask path. Feather points are part of the Mask Path property. Reference a specific feather point by the number of the mask path segment (portion of the path between adjacent vertices) where it appears.
 
@@ -124,7 +124,7 @@ Array of floating-point percentage values (0 to 100); read/write.
 
 An array containing each feather point's relative position, from 0 to 1, on its mask path segment (section of the mask path between vertices, numbered starting at 0).
 
-?> **Note:** Values are stored in the array in the order that feather points are created. To move a feather point to a different mask path segment, first change the [featherSegLocs](#shape-featherseglocs) attribute value, then this attribute.
+?> **Note:** Values are stored in the array in the order that feather points are created. To move a feather point to a different mask path segment, first change the [featherSegLocs](#shapefeatherseglocs) attribute value, then this attribute.
 
 **Type**
 
@@ -140,7 +140,7 @@ Array of floating-point values (0 to 1); read/write.
 
 An array containing each feather point's mask path segment number (section of the mask path between vertices, numbered starting at 0).
 
-?> **Note:** Values are stored in the array in the order that feather points are created. Move a feather point to a different segment by changing both its segment number (this attribute) and, optionally, its [featherRelSegLocs](#shape-featherrelseglocs) attribute value.
+?> **Note:** Values are stored in the array in the order that feather points are created. Move a feather point to a different segment by changing both its segment number (this attribute) and, optionally, its [featherRelSegLocs](#shapefeatherrelseglocs) attribute value.
 
 **Type**
 

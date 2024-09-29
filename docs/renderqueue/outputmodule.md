@@ -121,7 +121,7 @@ Gets a specific setting for a given Output Module.
 
 **Example**
 
-See the example in [RenderQueueItem.getSetting()](renderqueueitem.md#renderqueueitem-getsetting) for structure reference.
+See the example in [RenderQueueItem.getSetting()](renderqueueitem.md#renderqueueitemgetsetting) for structure reference.
 
 ---
 
@@ -223,7 +223,7 @@ Sets a specific setting for a given Output Module.
 
 **Example**
 
-See the example in [RenderQueueItem.setSetting()](renderqueueitem.md#renderqueueitem-setsetting) for structure reference.
+See the example in [RenderQueueItem.setSetting()](renderqueueitem.md#renderqueueitemsetsetting) for structure reference.
 
 ---
 

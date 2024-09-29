@@ -20,7 +20,7 @@ The RenderQueue object represents the render automation process, the data and fu
 
 indicates whether or not there are queued render items in the After Effects render queue. Only queued items can be added to the AME queue.
 
-[RenderQueue.queueInAME()](#renderqueue-queueiname)
+[RenderQueue.queueInAME()](#renderqueuequeueiname)
 
 **Type**
 
@@ -114,7 +114,7 @@ The position index of the item. An integer in the range `[0..numItems]`.
 
 **Description**
 
-Pauses the current rendering process, or continues a paused rendering process. This is the same as clicking Pause in the Render Queue panel during a render. You can call this method from an [RenderQueueItem.onstatus](renderqueueitem.md#renderqueueitem-onstatus) or [app.onError](../general/application.md#app-onerror) callback.
+Pauses the current rendering process, or continues a paused rendering process. This is the same as clicking Pause in the Render Queue panel during a render. You can call this method from an [RenderQueueItem.onstatus](renderqueueitem.md#renderqueueitemonstatus) or [app.onError](../general/application.md#apponerror) callback.
 
 **Parameters**
 
@@ -133,10 +133,10 @@ Nothing.
 
 **Description**
 
-Starts the rendering process. This is the same as clicking Render in the Render Queue panel. The method does not return until the render process is complete. To pause or stop the rendering process, call [RenderQueue.pauseRendering()](#renderqueue-pauserendering) or [RenderQueue.stopRendering()](#renderqueue-stoprendering) from an `onError` or `onstatus` callback.
+Starts the rendering process. This is the same as clicking Render in the Render Queue panel. The method does not return until the render process is complete. To pause or stop the rendering process, call [RenderQueue.pauseRendering()](#renderqueuepauserendering) or [RenderQueue.stopRendering()](#renderqueuestoprendering) from an `onError` or `onstatus` callback.
 
-- To respond to errors during the rendering process, define a callback function in [app.onError](../general/application.md#app-onerror).
-- To respond to changes in the status of a particular item while the render is progressing, define a callback function in [RenderQueueItem.onstatus](renderqueueitem.md#renderqueueitem-onstatus) in the associated RenderQueueItem object.
+- To respond to errors during the rendering process, define a callback function in [app.onError](../general/application.md#apponerror).
+- To respond to changes in the status of a particular item while the render is progressing, define a callback function in [RenderQueueItem.onstatus](renderqueueitem.md#renderqueueitemonstatus) in the associated RenderQueueItem object.
 
 **Parameters**
 
@@ -173,7 +173,7 @@ Nothing.
 
 **Description**
 
-Stops the rendering process. This is the same as clicking Stop in the Render Queue panel during a render. You can call this method from an [RenderQueueItem.onstatus](renderqueueitem.md#renderqueueitem-onstatus) or [app.onError](../general/application.md#app-onerror) callback.
+Stops the rendering process. This is the same as clicking Stop in the Render Queue panel during a render. You can call this method from an [RenderQueueItem.onstatus](renderqueueitem.md#renderqueueitemonstatus) or [app.onError](../general/application.md#apponerror) callback.
 
 **Parameters**
 

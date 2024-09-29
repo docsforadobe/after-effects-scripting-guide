@@ -41,7 +41,7 @@ Nothing.
 
 **Description**
 
-Converts a formatted string for a frame time value to a number of seconds, given a specified frame rate. For example, if the formatted frame time value is 0:00:12 (the exact string format is determined by a project setting), and the frame rate is 24 fps, the time would be 0.5 seconds (12/24). If the frame rate is 30 fps, the time would be 0.4 seconds (12/30). If the time is a duration, the frames are counted from 0. Otherwise, the frames are counted from the project's starting frame (see [Project.displayStartFrame](project.md#project-displaystartframe)).
+Converts a formatted string for a frame time value to a number of seconds, given a specified frame rate. For example, if the formatted frame time value is 0:00:12 (the exact string format is determined by a project setting), and the frame rate is 24 fps, the time would be 0.5 seconds (12/24). If the frame rate is 30 fps, the time would be 0.4 seconds (12/30). If the time is a duration, the frames are counted from 0. Otherwise, the frames are counted from the project's starting frame (see [Project.displayStartFrame](project.md#projectdisplaystartframe)).
 
 **Parameters**
 
@@ -126,7 +126,7 @@ alert(getEnumAsString(5220));
 
 **Description**
 
-Determines if the specified After Effects object (e.g., composition, layer, mask, etc.) still exists. Some operations, such as [PropertyBase.moveTo()](../properties/propertybase.md#propertybase-moveto), might invalidate existing variable assignments to related objects. This function allows you to test whether those assignments are still valid before attempting to access them.
+Determines if the specified After Effects object (e.g., composition, layer, mask, etc.) still exists. Some operations, such as [PropertyBase.moveTo()](../properties/propertybase.md#propertybasemoveto), might invalidate existing variable assignments to related objects. This function allows you to test whether those assignments are still valid before attempting to access them.
 
 **Parameters**
 
@@ -157,7 +157,7 @@ alert(isValid(mask1)); // displays "false"; mask2 and mask3 do as well
 
 **Description**
 
-Converts a numeric time value (a number of seconds) to a frame time value; that is, a formatted string thatshows which frame corresponds to that time, at the specified rate. For example, if the time is 0.5 seconds, andthe frame rate is 24 fps, the frame would be 0:00:12 (when the project is set to display as timecode). If the framerate is 30 fps, the frame would be 0:00:15. The format of the timecode string is determined by a project setting. If the time is a duration, the frames are counted from 0. Otherwise, the frames are counted from the project's starting frame (see [Project displayStartFrame](project.md#project-displaystartframe) attribute).
+Converts a numeric time value (a number of seconds) to a frame time value; that is, a formatted string thatshows which frame corresponds to that time, at the specified rate. For example, if the time is 0.5 seconds, andthe frame rate is 24 fps, the frame would be 0:00:12 (when the project is set to display as timecode). If the framerate is 30 fps, the frame would be 0:00:15. The format of the timecode string is determined by a project setting. If the time is a duration, the frames are counted from 0. Otherwise, the frames are counted from the project's starting frame (see [Project displayStartFrame](project.md#projectdisplaystartframe) attribute).
 
 **Parameters**
 

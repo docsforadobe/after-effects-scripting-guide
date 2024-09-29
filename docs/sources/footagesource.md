@@ -45,7 +45,7 @@ An Alpha Mode enumerated value; (read/write). One of:
 
 **Description**
 
-A frame rate to use instead of the `nativeFrameRate` value. If set to 0, the `nativeFrameRate` is used instead. It is an error to set this value if [FootageSource.isStill](#footagesource-isstill) is true. It is an error to set this value to 0 if [removePulldown](#footagesource-removepulldown) is not set to `PulldownPhase.OFF`. If this is 0 when you set `removePulldown` to a value other than `PulldownPhase.OFF`, then this is automatically set to the value of `nativeFrameRate`.
+A frame rate to use instead of the `nativeFrameRate` value. If set to 0, the `nativeFrameRate` is used instead. It is an error to set this value if [FootageSource.isStill](#footagesourceisstill) is true. It is an error to set this value to 0 if [removePulldown](#footagesourceremovepulldown) is not set to `PulldownPhase.OFF`. If this is 0 when you set `removePulldown` to a value other than `PulldownPhase.OFF`, then this is automatically set to the value of `nativeFrameRate`.
 
 **Type**
 
@@ -62,7 +62,7 @@ Floating-point value in the range `[0.0..99.0]`; read/write.
 
 **Description**
 
-The effective frame rate as displayed and rendered in compositions by After Effects. If [removePulldown](#footagesource-removepulldown) is `PulldownPhase.OFF`, then this is the same as the `conformFrameRate` (if non-zero) or the `nativeFrameRate` (if `conformFrameRate` is 0). If `removePulldown` is not `PulldownPhase.OFF`, this is `conformFrameRate * 0.8`, the effective frame rate after removing 1 of every 5 frames.
+The effective frame rate as displayed and rendered in compositions by After Effects. If [removePulldown](#footagesourceremovepulldown) is `PulldownPhase.OFF`, then this is the same as the `conformFrameRate` (if non-zero) or the `nativeFrameRate` (if `conformFrameRate` is 0). If `removePulldown` is not `PulldownPhase.OFF`, this is `conformFrameRate * 0.8`, the effective frame rate after removing 1 of every 5 frames.
 
 **Type**
 
@@ -79,7 +79,7 @@ Floating-point value in the range `[0.0..99.0]`; read-only.
 
 **Description**
 
-How the fields are to be separated in non-still footage. It is an error to set this attribute if `isStill` is true. It is an error to set this value to `FieldSeparationType.OFF` if [removePulldown](#footagesource-removepulldown) is not `PulldownPhase.OFF`.
+How the fields are to be separated in non-still footage. It is an error to set this attribute if `isStill` is true. It is an error to set this value to `FieldSeparationType.OFF` if [removePulldown](#footagesourceremovepulldown) is not `PulldownPhase.OFF`.
 
 **Type**
 
@@ -271,7 +271,7 @@ Nothing.
 
 **Description**
 
-Sets `fieldSeparationType` and [removePulldown](#footagesource-removepulldown) to the best estimates for this footage source. If `isStill` is true, no change is made.
+Sets `fieldSeparationType` and [removePulldown](#footagesourceremovepulldown) to the best estimates for this footage source. If `isStill` is true, no change is made.
 
 **Parameters**
 

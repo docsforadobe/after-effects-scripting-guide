@@ -21,7 +21,7 @@ The FootageItem object represents a footage item imported into a project, which 
 
 The [Extendscript File](https://extendscript.docsforadobe.dev/file-system-access/file-object.html) object for the footage's source file.
 
-If the FootageItem's `mainSource` is a FileSource, this is the same as [FootageItem.mainSource.file](../sources/filesource.md#filesource-file). Otherwise it is null.
+If the FootageItem's `mainSource` is a FileSource, this is the same as [FootageItem.mainSource.file](../sources/filesource.md#filesourcefile). Otherwise it is null.
 
 **Type**
 
@@ -41,7 +41,7 @@ The footage source, an object that contains all of the settings related to that 
 - [FileSource object](../sources/filesource.md#filesource)
 - [PlaceholderSource object](../sources/placeholdersource.md#placeholdersource)
 
-If this is a FileSource object, and the [footageMissing](avitem.md#avitem-footagemissing) value is true, the path to the missing footage file is in the [FileSource.missingFootagePath](../sources/filesource.md#filesource-missingfootagepath) attribute.
+If this is a FileSource object, and the [footageMissing](avitem.md#avitemfootagemissing) value is true, the path to the missing footage file is in the [FileSource.missingFootagePath](../sources/filesource.md#filesourcemissingfootagepath) attribute.
 
 **Type**
 

@@ -4,7 +4,7 @@
 
 **Description**
 
-The KeyframeEase object encapsulates the keyframe ease settings of a layer's AE property. Keyframe ease is determined by the speed and influence values that you set using the property's [setTemporalEaseAtKey](../properties/property.md#property-settemporaleaseatkey) method. The constructor creates a KeyframeEase object. Both parameters are required.
+The KeyframeEase object encapsulates the keyframe ease settings of a layer's AE property. Keyframe ease is determined by the speed and influence values that you set using the property's [setTemporalEaseAtKey](../properties/property.md#propertysettemporaleaseatkey) method. The constructor creates a KeyframeEase object. Both parameters are required.
 
 - `speed`: A floating-point value. Sets the `speed` attribute.
 - `influence`: A floating-pointvalue in the range `[0.1..100.0]`. Sets the `influence` attribute.

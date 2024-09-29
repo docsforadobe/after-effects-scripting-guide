@@ -42,7 +42,7 @@ Boolean; read-only.
 
 **Description**
 
-The index of the current active [View object](view.md#view), in the [Viewer.views](#viewer-views) array.
+The index of the current active [View object](view.md#view), in the [Viewer.views](#viewerviews) array.
 
 **Type**
 
@@ -105,7 +105,7 @@ A `ViewerType` enumerated value; read-only. One of:
 **Description**
 
 Moves the viewer panel to the front and places focus on it, making it active.
-Calling this method will set the [viewer's active attribute](#viewer-active) to true.
+Calling this method will set the [viewer's active attribute](#vieweractive) to true.
 
 **Parameters**
 

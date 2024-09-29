@@ -4,7 +4,7 @@
 
 **Description**
 
-The PropertyGroup object represents a group of properties. It can contain Property objects and other PropertyGroup objects. Property groups can be nested to provide a parent-child hierarchy, with a Layer object at the top (root) down to a single Property object, such as the mask feather of the third mask. To traverse the group hierarchy, use PropertyBase methods and attributes; see [PropertyBase.propertyGroup()](propertybase.md#propertybase-propertygroup). For examples of how to access properties and property groups, see [PropertyBase object](propertybase.md#propertybase).
+The PropertyGroup object represents a group of properties. It can contain Property objects and other PropertyGroup objects. Property groups can be nested to provide a parent-child hierarchy, with a Layer object at the top (root) down to a single Property object, such as the mask feather of the third mask. To traverse the group hierarchy, use PropertyBase methods and attributes; see [PropertyBase.propertyGroup()](propertybase.md#propertybasepropertygroup). For examples of how to access properties and property groups, see [PropertyBase object](propertybase.md#propertybase).
 
 > PropertyGroup is a subclass of [PropertyBase](propertybase.md#propertybase). All methods and attributes of PropertyBase, in addition to those listed below, are available when working with PropertyGroup.
 
@@ -24,7 +24,7 @@ The number of indexed properties in this group.
 
 For layers, this method returns a value of 3, corresponding to the mask, effect, and motion tracker groups, which are the indexed groups within the layer.
 
-However, layers also have many other properties available only by name; see [PropertyGroup.property()](#propertygroup-property).
+However, layers also have many other properties available only by name; see [PropertyGroup.property()](#propertygroupproperty).
 
 **Type**
 
@@ -42,12 +42,12 @@ Integer; read-only.
 
 Creates and returns a PropertyBase object with the specified name, and adds it to this group.
 
-In general, you can only add properties to an indexed group (a property group that has the type `PropertyType.INDEXED_GROUP`; see [PropertyBase.propertyType](propertybase.md#propertybase-propertytype)).
+In general, you can only add properties to an indexed group (a property group that has the type `PropertyType.INDEXED_GROUP`; see [PropertyBase.propertyType](propertybase.md#propertybasepropertytype)).
 The only exception is a text animator property, which can be added to a named group (a property group that has the type `PropertyType.NAMED_GROUP`).
 
 If this method cannot create a property with the specified name, it generates an exception.
 
-To check that you can add a particular property to this group, call `canAddProperty` before calling this method. (See [PropertyGroup.canAddProperty()](#propertygroup-canaddproperty).)
+To check that you can add a particular property to this group, call `canAddProperty` before calling this method. (See [PropertyGroup.canAddProperty()](#propertygroupcanaddproperty).)
 
 !> **Warning:** When you add a new property to an indexed group, the indexed group gets recreated from scratch, invalidating all existing references to properties.
 
@@ -75,7 +75,7 @@ One workaround is to store the index of the added property with property.propert
 
 **Parameters**
 
-| `name`   | The display name or match name of the property to add. (See<br/>[PropertyBase.matchName](propertybase.md#propertybase-matchname)). The following names are supported:<br/><br/>- Any match name for a property that can be added through the user<br/>  interface. For example, "ADBE Mask Atom", "ADBE Paint Atom", "ADBE<br/>  Text Position", "ADBE Text Anchor Point".<br/>- When adding to an ADBE Mask Parade: "ADBE Mask Atom", "Mask".<br/>- When adding to an ADBE Effect Parade, any effect by match name,<br/>  such as "ADBE Bulge", "ADBE Glo2", "APC Vegas".<br/>- Any effect by display name, such as "Bulge", "Glow", "Vegas".<br/>- For text animators, "ADBE Text Animator".<br/>- For selectors, Range Selector has the name "ADBE Text Selector",<br/>  Wiggly Selector has the name "ADBE Text Wiggly Selector", and<br/>  Expression Selector has the name "ADBE Text Expressible Selector".   |
+| `name`   | The display name or match name of the property to add. (See<br/>[PropertyBase.matchName](propertybase.md#propertybasematchname)). The following names are supported:<br/><br/>- Any match name for a property that can be added through the user<br/>  interface. For example, "ADBE Mask Atom", "ADBE Paint Atom", "ADBE<br/>  Text Position", "ADBE Text Anchor Point".<br/>- When adding to an ADBE Mask Parade: "ADBE Mask Atom", "Mask".<br/>- When adding to an ADBE Effect Parade, any effect by match name,<br/>  such as "ADBE Bulge", "ADBE Glo2", "APC Vegas".<br/>- Any effect by display name, such as "Bulge", "Glow", "Vegas".<br/>- For text animators, "ADBE Text Animator".<br/>- For selectors, Range Selector has the name "ADBE Text Selector",<br/>  Wiggly Selector has the name "ADBE Text Wiggly Selector", and<br/>  Expression Selector has the name "ADBE Text Expressible Selector".   |
 |----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 **Returns**
@@ -102,7 +102,7 @@ maskGroup.canAddProperty("blend"); // returns false
 
 **Parameters**
 
-| `name`   | The display name or match name of the property to be checked. (See<br/>[PropertyGroup.addProperty()](#propertygroup-addproperty).   |
+| `name`   | The display name or match name of the property to be checked. (See<br/>[PropertyGroup.addProperty()](#propertygroupaddproperty).   |
 |----------|-------------------------------------------------------------------------------------------------------------------------------------|
 
 **Returns**

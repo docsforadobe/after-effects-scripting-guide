@@ -282,7 +282,7 @@ Number; read-only.
 
 **Description**
 
-The name of a callback function that is called when an error occurs. By creating a function and assigning it to this attribute, you can respond to errors systematically; for example, you can close and restart the application, noting the error in a log file if it occurred during rendering. See [RenderQueue.render()](../renderqueue/renderqueue.md#renderqueue-render). The callback function is passed the error string and a severity string. It should not return any value.
+The name of a callback function that is called when an error occurs. By creating a function and assigning it to this attribute, you can respond to errors systematically; for example, you can close and restart the application, noting the error in a log file if it occurred during rendering. See [RenderQueue.render()](../renderqueue/renderqueue.md#renderqueuerender). The callback function is passed the error string and a severity string. It should not return any value.
 
 **Type**
 
@@ -525,7 +525,7 @@ Nothing.
 
 Menu Commands in the GUI application have an individual ID number, which can be used as the parameter for this method. For some functions not included in the API this is the only way to access them.
 
-The [app.findMenuCommandId()](#app-findmenucommandid) method can be used to find the ID number for a command.
+The [app.findMenuCommandId()](#appfindmenucommandid) method can be used to find the ID number for a command.
 
 These web sites have more information and lists of the known numbers:
 
@@ -556,7 +556,7 @@ app.executeCommand(4162);
 
 **Description**
 
-Menu Commands in the GUI application have an individual ID number, which can be used as a parameter for the [app.executeCommand()](#app-executecommand) command. For some functions not included in the API this is the only way to access them.
+Menu Commands in the GUI application have an individual ID number, which can be used as a parameter for the [app.executeCommand()](#appexecutecommand) command. For some functions not included in the API this is the only way to access them.
 
 It should be noted that this method is not reliable across different language packages of AE, so you'll likely want to find the command ID number during development and then call it directly using the number in production.
 
@@ -588,7 +588,7 @@ app.findMenuCommandId("Convert To Bezier Path")
 
 **Description**
 
-Creates a new project in After Effects, replicating the File > New > New Project menu command. If the current project has been edited, the user is prompted to save it. If the user cancels out of the Save dialog box, the new project is not created and the method returns null. Use `app.project.close(CloseOptions.DO_NOT_SAVE_CHANGES)` to close the current project before opening a new one. See [Project.close()](project.md#project-close)
+Creates a new project in After Effects, replicating the File > New > New Project menu command. If the current project has been edited, the user is prompted to save it. If the user cancels out of the Save dialog box, the new project is not created and the method returns null. Use `app.project.close(CloseOptions.DO_NOT_SAVE_CHANGES)` to close the current project before opening a new one. See [Project.close()](project.md#projectclose)
 
 **Parameters**
 

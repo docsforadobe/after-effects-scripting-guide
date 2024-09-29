@@ -12,7 +12,7 @@ The AVItem object provides access to attributes and methods of audio/visual file
 
 !> **Warning:** CompItems and FootageItems, while logical descendants of AVItem, are not *really* subclasses of AVItem as AVItem doesn't exist in Extendscript, ie. attempting to check if `item instanceof AVItem` will fail because AVItem is undefined. This is also true for `Item` itself.
 
-See [Javascript Classes](../introduction/javascript.md#javascript-classes) and [After Effects Class Hierarchy](../introduction/classhierarchy.md#classhierarchy) for more info.
+See [Javascript Classes](../introduction/javascript.md#javascriptclasses) and [After Effects Class Hierarchy](../introduction/classhierarchy.md#classhierarchy) for more info.
 
 ---
 
@@ -41,7 +41,7 @@ Floating-point value in the range [0.0..10800.0]; read/write for a `CompItem`; o
 
 **Description**
 
-When true, the AVItem is a placeholder, or represents footage with a source file that cannot be found. In this case, the path of the missing source file is in the `missingFootagePath` attribute of the footage item's source-file object. See [FootageItem.mainSource](footageitem.md#footageitem-mainsource) and [FileSource.missingFootagePath](../sources/filesource.md#filesource-missingfootagepath).
+When true, the AVItem is a placeholder, or represents footage with a source file that cannot be found. In this case, the path of the missing source file is in the `missingFootagePath` attribute of the footage item's source-file object. See [FootageItem.mainSource](footageitem.md#footageitemmainsource) and [FileSource.missingFootagePath](../sources/filesource.md#filesourcemissingfootagepath).
 
 **Type**
 
@@ -139,7 +139,7 @@ Integer in the range [1…30000]; read/write, except as noted.
 
 **Description**
 
-Test whether the AVItem can be used as an alternate source when calling [Property.setAlternateSource()](../properties/property.md#property-setalternatesource).
+Test whether the AVItem can be used as an alternate source when calling [Property.setAlternateSource()](../properties/property.md#propertysetalternatesource).
 
 Returns true if the item can be used, or false otherwise.
 

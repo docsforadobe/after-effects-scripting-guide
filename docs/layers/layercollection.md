@@ -51,7 +51,7 @@ Creates a new [AVLayer object](avlayer.md#avlayer) containing the specified item
 
 **Description**
 
-Creates a new paragraph (box) text layer with [TextDocument.lineOrientation](../text/textdocument.md#textdocument-lineorientation) set to `LineOrientation.HORIZONTAL` and adds the new [TextLayer object](textlayer.md#textlayer) to this collection. To create a point text layer, use the [LayerCollection.addText()](#layercollection-addtext) method.
+Creates a new paragraph (box) text layer with [TextDocument.lineOrientation](../text/textdocument.md#textdocumentlineorientation) set to `LineOrientation.HORIZONTAL` and adds the new [TextLayer object](textlayer.md#textlayer) to this collection. To create a point text layer, use the [LayerCollection.addText()](#layercollectionaddtext) method.
 
 **Parameters**
 
@@ -171,7 +171,7 @@ Creates a new [SolidSource object](../sources/solidsource.md#solidsource), with 
 
 **Description**
 
-Creates a new point text layer with [TextDocument.lineOrientation](../text/textdocument.md#textdocument-lineorientation) set to `LineOrientation.HORIZONTAL` and adds the new [TextLayer object](textlayer.md#textlayer) to this collection. To create a paragraph (box) text layer, use [LayerCollection.addBoxText()](#layercollection-addboxtext).
+Creates a new point text layer with [TextDocument.lineOrientation](../text/textdocument.md#textdocumentlineorientation) set to `LineOrientation.HORIZONTAL` and adds the new [TextLayer object](textlayer.md#textlayer) to this collection. To create a paragraph (box) text layer, use [LayerCollection.addBoxText()](#layercollectionaddboxtext).
 
 **Parameters**
 
@@ -192,7 +192,7 @@ Creates a new point text layer with [TextDocument.lineOrientation](../text/textd
 
 **Description**
 
-Creates a new paragraph (box) text layer with [TextDocument.lineOrientation](../text/textdocument.md#textdocument-lineorientation) set to `LineOrientation.VERTICAL_RIGHT_TO_LEFT` and adds the new [TextLayer object](textlayer.md#textlayer) to this collection. To create a point text layer, use the [LayerCollection.addText()](#layercollection-addtext) or [LayerCollection.addVerticalText()](#layercollection-addverticaltext) methods.
+Creates a new paragraph (box) text layer with [TextDocument.lineOrientation](../text/textdocument.md#textdocumentlineorientation) set to `LineOrientation.VERTICAL_RIGHT_TO_LEFT` and adds the new [TextLayer object](textlayer.md#textlayer) to this collection. To create a point text layer, use the [LayerCollection.addText()](#layercollectionaddtext) or [LayerCollection.addVerticalText()](#layercollectionaddverticaltext) methods.
 
 **Parameters**
 
@@ -213,7 +213,7 @@ TextLayer object.
 
 **Description**
 
-Creates a new point text layer with [TextDocument.lineOrientation](../text/textdocument.md#textdocument-lineorientation) set to `LineOrientation.VERTICAL_RIGHT_TO_LEFT` and adds the new [TextLayer object](textlayer.md#textlayer) to this collection. To create a paragraph (box) text layer, use the [LayerCollection.addBoxText()](#layercollection-addboxtext) or [LayerCollection.addVerticalBoxText()](#layercollection-addverticalboxtext) methods.
+Creates a new point text layer with [TextDocument.lineOrientation](../text/textdocument.md#textdocumentlineorientation) set to `LineOrientation.VERTICAL_RIGHT_TO_LEFT` and adds the new [TextLayer object](textlayer.md#textlayer) to this collection. To create a paragraph (box) text layer, use the [LayerCollection.addBoxText()](#layercollectionaddboxtext) or [LayerCollection.addVerticalBoxText()](#layercollectionaddverticalboxtext) methods.
 
 **Parameters**
 

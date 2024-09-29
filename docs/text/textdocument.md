@@ -62,7 +62,7 @@ textProp.setValue(textDocument);
 
 **Description**
 
-True if a Text layer has All Caps enabled; otherwise false. To set this value, use [fontCapsOption](#textdocument-fontcapsoption) added in After Effects 24.0.
+True if a Text layer has All Caps enabled; otherwise false. To set this value, use [fontCapsOption](#textdocumentfontcapsoption) added in After Effects 24.0.
 
 !> **Warning:** This value only reflects the first character in the Text layer.
 
@@ -78,7 +78,7 @@ Boolean; read-only.
 
 **Description**
 
-When true, the Text layer shows a fill. Access the [fillColor](#textdocument-fillcolor) attribute for the actual color. When false, only a stroke is shown.
+When true, the Text layer shows a fill. Access the [fillColor](#textdocumentfillcolor) attribute for the actual color. When false, only a stroke is shown.
 
 **Type**
 
@@ -92,7 +92,7 @@ Boolean; read/write.
 
 **Description**
 
-When true, the Text layer shows a stroke. Access the [strokeColor](#textdocument-strokecolor) attribute for the actual color and [strokeWidth](#textdocument-strokewidth) for its thickness. When false, only a fill is shown.
+When true, the Text layer shows a stroke. Access the [strokeColor](#textdocumentstrokecolor) attribute for the actual color and [strokeWidth](#textdocumentstrokewidth) for its thickness. When false, only a fill is shown.
 
 **Type**
 
@@ -254,7 +254,7 @@ The box only grows down.
 
 Defaults to `BoxAutoFitPolicy.NONE`.
 
-Will be disabled if [TextDocument.boxVerticalAlignment](#textdocument-boxverticalalignment) is anything other than `BoxVerticalAlignment.TOP`.
+Will be disabled if [TextDocument.boxVerticalAlignment](#textdocumentboxverticalalignment) is anything other than `BoxVerticalAlignment.TOP`.
 
 **Type**
 
@@ -277,7 +277,7 @@ A `BoxAutoFitPolicy` enumerated value; read-write. One of:
 
 Controls the position of the first line of composed text relative to the top of the box.
 
-Disabled if [TextDocument.boxFirstBaselineAlignmentMinimum](#textdocument-boxfirstbaselinealignmentminimum) is anything other than zero.
+Disabled if [TextDocument.boxFirstBaselineAlignmentMinimum](#textdocumentboxfirstbaselinealignmentminimum) is anything other than zero.
 
 Defaults to `BoxFirstBaselineAlignment.ASCENT`.
 
@@ -307,7 +307,7 @@ A `BoxFirstBaselineAlignment` enumerated value; read-write. One of:
 
 Manually controls the position of the first line of composed text relative to the top of the box.
 
-A value set here other than zero will override the effect of the [TextDocument.boxFirstBaselineAlignment](#textdocument-boxfirstbaselinealignment) value.
+A value set here other than zero will override the effect of the [TextDocument.boxFirstBaselineAlignment](#textdocumentboxfirstbaselinealignment) value.
 
 Defaults to zero.
 
@@ -376,7 +376,7 @@ As of After Effects 14 (CC2017), it seems this is also writeable.
 
 The layer coordinates from a paragraph (box) Text layer's anchor point as a [width, height] array of pixel dimensions.
 
-!> **Warning:** Throws an exception if [boxText](#textdocument-boxtext) does not return true for the Text layer.
+!> **Warning:** Throws an exception if [boxText](#textdocumentboxtext) does not return true for the Text layer.
 
 **Type**
 
@@ -400,7 +400,7 @@ var boxTextLayerPos = myTextLayer.sourceText.value.boxTextPos;
 
 The size of a paragraph (box) Text layer as a [width, height] array of pixel dimensions.
 
-!> **Warning:** Throws an exception if [boxText](#textdocument-boxtext) does not return true for the Text layer.
+!> **Warning:** Throws an exception if [boxText](#textdocumentboxtext) does not return true for the Text layer.
 
 **Type**
 
@@ -626,9 +626,9 @@ Boolean; read/write.
 
 The Text layer's fill color, as an array of `[r, g, b]` floating-point values. For example, in an 8-bpc project, a red value of 255 would be 1.0, and in a 32-bpc project, an overbright blue value can be something like 3.2.
 
-Throws an exception on read if [applyFill](#textdocument-applyfill) is not true.
+Throws an exception on read if [applyFill](#textdocumentapplyfill) is not true.
 
-Setting this value will also set [applyFill](#textdocument-applyfill) to true across the affected characters.
+Setting this value will also set [applyFill](#textdocumentapplyfill) to true across the affected characters.
 
 !> **Warning:** This value only reflects the first character in the Text layer.
 If you change this value, it will set all characters in the Text layer to the specified setting.
@@ -669,7 +669,7 @@ Floating-point value; read/write.
 The Text layer's font specified by its PostScript name.
 
 On write, there are very few resrictions on what can be supplied - if the underlying font management system does not have a matching [Font object](fontobject.md#fontobject) instance matching the supplied PostScript name a substitute instance will be created.
-The Font instance returned in the case of duplicate PostScript names will be the 0th element of the array returned from [FontsObject.getFontsByPostScriptName()](fontsobject.md#fontsobject-getfontsbypostscriptname).
+The Font instance returned in the case of duplicate PostScript names will be the 0th element of the array returned from [FontsObject.getFontsByPostScriptName()](fontsobject.md#fontsobjectgetfontsbypostscriptname).
 
 You should use the [Font object](fontobject.md#fontobject) attribute for precise control.
 
@@ -929,9 +929,9 @@ Integer value; read/write.
 
 The Text layer's spacing between lines.
 
-Returns zero if [TextDocument.autoLeading](#textdocument-autoleading) is true.
+Returns zero if [TextDocument.autoLeading](#textdocumentautoleading) is true.
 
-Setting this value will also set [TextDocument.autoLeading](#textdocument-autoleading) to true across the affected characters.
+Setting this value will also set [TextDocument.autoLeading](#textdocumentautoleading) to true across the affected characters.
 
 !> **Warning:** This value only reflects the first character in the Text layer.
 If you change this value, it will set all characters in the Text layer to the specified setting.
@@ -1098,7 +1098,7 @@ Boolean; read-only.
 
 **Description**
 
-True if a Text layer has small caps enabled; otherwise false. To set this value, use [TextDocument.fontCapsOption](#textdocument-fontcapsoption) added in After Effects 24.0.
+True if a Text layer has small caps enabled; otherwise false. To set this value, use [TextDocument.fontCapsOption](#textdocumentfontcapsoption) added in After Effects 24.0.
 
 !> **Warning:** This value only reflects the first character in the Text layer.
 
@@ -1179,9 +1179,9 @@ Floating-point value; read/write.
 
 The Text layer's stroke color, as an array of [r, g, b] floating-point values. For example, in an 8-bpc project, a red value of 255 would be 1.0, and in a 32-bpc project, an overbright blue value can be something like 3.2.
 
-Throws an exception on read if [applyStroke](#textdocument-applystroke) is not true.
+Throws an exception on read if [applyStroke](#textdocumentapplystroke) is not true.
 
-Setting this value will also set [applyStroke](#textdocument-applystroke) to true across the affected characters.
+Setting this value will also set [applyStroke](#textdocumentapplystroke) to true across the affected characters.
 
 !> **Warning:** This value only reflects the first character in the Text layer.
 If you change this value, it will set all characters in the Text layer to the specified setting.
@@ -1238,7 +1238,7 @@ Floating-point value (0 to 1000, inclusive); read/write.
 
 **Description**
 
-True if a Text layer has subscript enabled; otherwise false. To set this value, use [TextDocument.fontBaselineOption](#textdocument-fontbaselineoption) added in After Effects 24.0.
+True if a Text layer has subscript enabled; otherwise false. To set this value, use [TextDocument.fontBaselineOption](#textdocumentfontbaselineoption) added in After Effects 24.0.
 
 !> **Warning:** This value only reflects the first character in the Text layer.
 
@@ -1256,7 +1256,7 @@ Boolean; read-only.
 
 **Description**
 
-True if a Text layer has superscript enabled; otherwise false. To set this value, use [TextDocument.fontBaselineOption](#textdocument-fontbaselineoption) added in After Effects 24.0.
+True if a Text layer has superscript enabled; otherwise false. To set this value, use [TextDocument.fontBaselineOption](#textdocumentfontbaselineoption) added in After Effects 24.0.
 
 !> **Warning:** This value only reflects the first character in the Text layer.
 
@@ -1407,7 +1407,7 @@ Returns an instance of the Text layer range accessor [ComposedLineRange object](
 
 The instance will remember the parameters passed in the constructor - they remain constant and changes to the [TextDocument](#textdocument) contents may cause the instance to throw exceptions on access until the [TextDocument](#textdocument) contents are changed which makes the range valid again.
 
-Use [ComposedLineRange.toString()](composedlinerange.md#composedlinerange-tostring) to find out what the constructed parameters were.
+Use [ComposedLineRange.toString()](composedlinerange.md#composedlinerangetostring) to find out what the constructed parameters were.
 
 **Parameters**
 
@@ -1460,7 +1460,7 @@ Returns an instance of the Text layer range accessor [ParagraphRange object](par
 
 The instance will remember the parameters passed in the constructor - they remain constant and changes to the [TextDocument](#textdocument) contents may cause the instance to throw exceptions on access until the [TextDocument](#textdocument) contents are changed which makes the range valid again.
 
-Use [ParagraphRange.toString()](paragraphrange.md#paragraphrange-tostring) to find out what the constructed parameters were.
+Use [ParagraphRange.toString()](paragraphrange.md#paragraphrangetostring) to find out what the constructed parameters were.
 
 **Parameters**
 

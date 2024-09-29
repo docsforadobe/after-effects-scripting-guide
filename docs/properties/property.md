@@ -4,7 +4,7 @@
 
 **Description**
 
-The Property object contains value, keyframe, and expression information about a particular AE property of a layer. An AE property is a value, often animatable, of an effect, mask, or transform within an individual layer. For examples of how to access properties, see [PropertyBase object](propertybase.md#propertybase) and [PropertyGroup.property()](propertygroup.md#propertygroup-property).
+The Property object contains value, keyframe, and expression information about a particular AE property of a layer. An AE property is a value, often animatable, of an effect, mask, or transform within an individual layer. For examples of how to access properties, see [PropertyBase object](propertybase.md#propertybase) and [PropertyGroup.property()](propertygroup.md#propertygroupproperty).
 
 > Property is a subclass of [PropertyBase](propertybase.md#propertybase). All methods and attributes of PropertyBase, in addition to those listed below, are available when working with Property.
 
@@ -106,16 +106,16 @@ The value is null when:
 - The alternate source is not set for the associated layer.
 - The property cannot be used to set an alternate source.
 
-Use [Property.canSetAlternateSource](#property-cansetalternatesource) to determine if the property is a Media Replacement Essential Property.
+Use [Property.canSetAlternateSource](#propertycansetalternatesource) to determine if the property is a Media Replacement Essential Property.
 
 All Media Replacement Layers have an alternate source item that can be set.
 
-A layer is "marked" for media replacement when the layer is added to the Essential Graphics Panel (see [AVLayer.addToMotionGraphicsTemplate()](../layers/avlayer.md#avlayer-addtomotiongraphicstemplate) or [AVLayer.addToMotionGraphicsTemplateAs()](../layers/avlayer.md#avlayer-addtomotiongraphicstemplateas)).
+A layer is "marked" for media replacement when the layer is added to the Essential Graphics Panel (see [AVLayer.addToMotionGraphicsTemplate()](../layers/avlayer.md#avlayeraddtomotiongraphicstemplate) or [AVLayer.addToMotionGraphicsTemplateAs()](../layers/avlayer.md#avlayeraddtomotiongraphicstemplateas)).
 
 - If present, the render workflow will pick up the alternate source while rendering the layer.
 - If the alternate source for the layer is not set, then the source layer of the Media Replacement control is used for rendering (this is the normal workflow).
 
-Use [Property.setAlternateSource()](#property-setalternatesource) to change the value.
+Use [Property.setAlternateSource()](#propertysetalternatesource) to change the value.
 
 **Type**
 
@@ -147,7 +147,7 @@ Boolean; read-only.
 
 **Description**
 
-When true, the named property is of a type whose expression can be set by a script. See also [Property expression](#property-expression) attribute.
+When true, the named property is of a type whose expression can be set by a script. See also [Property expression](#propertyexpression) attribute.
 
 **Type**
 
@@ -177,7 +177,7 @@ Boolean; read-only.
 
 When true, the property's dimensions are represented as separate properties. For example, if the layer's position is represented as X Position and Y Position properties in the Timeline panel, the Position property has this attribute set to true.
 
-?> **Note:** This attribute applies only when the [isSeparationLeader](#property-isseparationleader) attribute is true.
+?> **Note:** This attribute applies only when the [isSeparationLeader](#propertyisseparationleader) attribute is true.
 
 **Type**
 
@@ -228,15 +228,15 @@ if (essentialOpacity.essentialPropertySource == opacityProp) {
 
 **Description**
 
-The expression for the named property. Writeable only when [canSetExpression](#property-cansetexpression) for the named property is true. When you specify a value for this attribute, the string is evaluated.
+The expression for the named property. Writeable only when [canSetExpression](#propertycansetexpression) for the named property is true. When you specify a value for this attribute, the string is evaluated.
 
-- If the string contains a valid expression, [expressionEnabled](#property-expressionenabled) becomes true.
-- If the string does not contain a valid expression, an error is generated, and [expressionEnabled](#property-expressionenabled) becomes false.
-- If you set the attribute to the empty string, [expressionEnabled](#property-expressionenabled) becomes false, but no error is generated.
+- If the string contains a valid expression, [expressionEnabled](#propertyexpressionenabled) becomes true.
+- If the string does not contain a valid expression, an error is generated, and [expressionEnabled](#propertyexpressionenabled) becomes false.
+- If you set the attribute to the empty string, [expressionEnabled](#propertyexpressionenabled) becomes false, but no error is generated.
 
 **Type**
 
-String; read/write if [canSetExpression](#property-cansetexpression) for the named property is true.
+String; read/write if [canSetExpression](#propertycansetexpression) for the named property is true.
 
 ---
 
@@ -246,7 +246,7 @@ String; read/write if [canSetExpression](#property-cansetexpression) for the nam
 
 **Description**
 
-When true, the named property uses its associated expression to generate a value. When false, the keyframe information or static value of the property is used. This attribute can be set to true only if [canSetExpression](#property-cansetexpression) for the named property is true and [expression](#property-expression) contains a valid expression string.
+When true, the named property uses its associated expression to generate a value. When false, the keyframe information or static value of the property is used. This attribute can be set to true only if [canSetExpression](#propertycansetexpression) for the named property is true and [expression](#propertyexpression) contains a valid expression string.
 
 **Type**
 
@@ -260,7 +260,7 @@ Boolean; read/write.
 
 **Description**
 
-Contains the error, if any, generated by evaluation of the string most recently set in [expression](#property-expression). If no expression string has been specified, or if the last expression string evaluated without error, contains the empty string `("")`.
+Contains the error, if any, generated by evaluation of the string most recently set in [expression](#propertyexpression). If no expression string has been specified, or if the last expression string evaluated without error, contains the empty string `("")`.
 
 **Type**
 
@@ -304,7 +304,7 @@ Boolean; read-only.
 
 **Description**
 
-When true, the property is the Menu property of a Dropdown Menu Control effect and can have its items updated with [setPropertyParameters](#property-setpropertyparameters).
+When true, the property is the Menu property of a Dropdown Menu Control effect and can have its items updated with [setPropertyParameters](#propertysetpropertyparameters).
 
 **Examples**
 
@@ -548,7 +548,7 @@ The type of value returned depends on the property value type. See [examples for
 
 **Type**
 
-A value appropriate for the type of the property (see [Property.propertyValueType](#property-propertyvaluetype)); read-only.
+A value appropriate for the type of the property (see [Property.propertyValueType](#propertypropertyvaluetype)); read-only.
 
 ---
 
@@ -587,7 +587,7 @@ Returns true if the property is successfully added, false otherwise.
 
 If the property is not added, it is either because it is not one of the supported property types or the property has already been added to the EGP for that composition. After Effects will present a warning dialog if the property cannot be added to the EGP.
 
-Use the [Property.canAddToMotionGraphicsTemplate()](#property-canaddtomotiongraphicstemplate) method to test whether the property can be added to a Motion Graphics template.
+Use the [Property.canAddToMotionGraphicsTemplate()](#propertycanaddtomotiongraphicstemplate) method to test whether the property can be added to a Motion Graphics template.
 
 **Parameters**
 
@@ -614,7 +614,7 @@ Returns true if the property is successfully added, false otherwise.
 
 If the property is not added, it is either because it is not one of the supported property types or the property has already been added to the EGP for that composition. After Effects will present a warning dialog if the property cannot be added to the EGP.
 
-Use the [Property.canAddToMotionGraphicsTemplate()](#property-canaddtomotiongraphicstemplate) method to test whether the property can be added to a Motion Graphics template.
+Use the [Property.canAddToMotionGraphicsTemplate()](#propertycanaddtomotiongraphicstemplate) method to test whether the property can be added to a Motion Graphics template.
 
 **Parameters**
 
@@ -668,7 +668,7 @@ Boolean.
 
 For a separated, multidimensional property, retrieves a specific follower property. For example, you can use this method on the Position property to access the separated X Position and Y Position properties
 
-?> **Note:** This attribute applies only when the [isSeparationLeader](#property-isseparationleader) attribute is true.
+?> **Note:** This attribute applies only when the [isSeparationLeader](#propertyisseparationleader) attribute is true.
 
 **Parameters**
 
@@ -715,7 +715,7 @@ Returns the 'in' interpolation type for the specified keyframe.
 
 **Parameters**
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#property-addkey) or<br/>[nearestKeyIndex](#property-nearestkeyindex).   |
+| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 **Returns**
@@ -738,7 +738,7 @@ Returns the incoming spatial tangent for the specified keyframe, if the named pr
 
 **Parameters**
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#property-addkey) or<br/>[nearestKeyIndex](#property-nearestkeyindex).   |
+| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 **Returns**
@@ -761,7 +761,7 @@ Returns the incoming temporal ease for the specified keyframe.
 
 **Parameters**
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#property-addkey) or<br/>[nearestKeyIndex](#property-nearestkeyindex).   |
+| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 **Returns**
@@ -784,11 +784,11 @@ Array of [KeyframeEase objects](../other/keyframeease.md#keyframeease):
 
 The label color for the keyframe. Colors are represented by their number (0 for None, or 1 to 16 for one of the preset colors in the Labels preferences).
 
-Read only. Keyframe color labels can be set by [setLabelAtKey](#property-setlabelatkey).
+Read only. Keyframe color labels can be set by [setLabelAtKey](#propertysetlabelatkey).
 
 **Parameters**
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#property-addkey) or<br/>[nearestKeyIndex](#property-nearestkeyindex).   |
+| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 **Returns**
@@ -807,7 +807,7 @@ Returns the outgoing interpolation type for the specified keyframe.
 
 **Parameters**
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#property-addkey) or<br/>[nearestKeyIndex](#property-nearestkeyindex).   |
+| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 **Returns**
@@ -830,7 +830,7 @@ Returns the outgoing spatial tangent for the specified keyframe.
 
 **Parameters**
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#property-addkey) or<br/>[nearestKeyIndex](#property-nearestkeyindex).   |
+| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 **Returns**
@@ -853,7 +853,7 @@ Returns the outgoing temporal ease for the specified keyframe.
 
 **Parameters**
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#property-addkey) or<br/>[nearestKeyIndex](#property-nearestkeyindex).   |
+| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 **Returns**
@@ -876,7 +876,7 @@ Returns true if the specified keyframe is roving. The first and last keyframe in
 
 **Parameters**
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#property-addkey) or<br/>[nearestKeyIndex](#property-nearestkeyindex).   |
+| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 **Returns**
@@ -895,7 +895,7 @@ Returns true if the specified keyframe is selected.
 
 **Parameters**
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#property-addkey) or<br/>[nearestKeyIndex](#property-nearestkeyindex).   |
+| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 **Returns**
@@ -914,7 +914,7 @@ Returns true if the specified keyframe has spatial auto-Bezier interpolation. (T
 
 **Parameters**
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#property-addkey) or<br/>[nearestKeyIndex](#property-nearestkeyindex).   |
+| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 **Returns**
@@ -933,7 +933,7 @@ Returns true if the specified keyframe has spatial continuity. If the property v
 
 **Parameters**
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#property-addkey) or<br/>[nearestKeyIndex](#property-nearestkeyindex).   |
+| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 **Returns**
@@ -952,7 +952,7 @@ Returns true if the specified keyframe has temporal auto-Bezier interpolation. T
 
 **Parameters**
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#property-addkey) or<br/>[nearestKeyIndex](#property-nearestkeyindex).   |
+| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 **Returns**
@@ -971,7 +971,7 @@ Returns true if the specified keyframe has temporal continuity. Temporal continu
 
 **Parameters**
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#property-addkey) or<br/>[nearestKeyIndex](#property-nearestkeyindex).   |
+| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 **Returns**
@@ -991,9 +991,9 @@ Finds the specified keyframe or marker and returns the time at which it occurs. 
 
 **Parameters**
 
-| `keyIndex`      | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#property-addkey) or<br/>[nearestKeyIndex](#property-nearestkeyindex).   |
+| `keyIndex`      | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |-----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `markerComment` | The comment string attached to a marker (see<br/>[MarkerValue.comment](../other/markervalue.md#markervalue-comment) attribute).                                                  |
+| `markerComment` | The comment string attached to a marker (see<br/>[MarkerValue.comment](../other/markervalue.md#markervaluecomment) attribute).                                                  |
 
 **Returns**
 
@@ -1014,13 +1014,13 @@ Finds the specified keyframe or marker and returns its current value. If no keyf
 
 **Parameters**
 
-| `keyIndex`      | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#property-addkey) or<br/>[nearestKeyIndex](#property-nearestkeyindex).   |
+| `keyIndex`      | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |-----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `markerComment` | The comment string attached to a marker (see<br/>[MarkerValue.comment](../other/markervalue.md#markervalue-comment) attribute).                                                  |
+| `markerComment` | The comment string attached to a marker (see<br/>[MarkerValue.comment](../other/markervalue.md#markervaluecomment) attribute).                                                  |
 
 **Returns**
 
-Returns the value of the type corresponding to the [PropertyValueType](#property-propertyvaluetype).
+Returns the value of the type corresponding to the [PropertyValueType](#propertypropertyvaluetype).
 
 ---
 
@@ -1053,7 +1053,7 @@ Removes the specified keyframe from the named property. If no keyframe with the 
 
 **Parameters**
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#property-addkey) or<br/>[nearestKeyIndex](#property-nearestkeyindex).   |
+| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 **Returns**
@@ -1074,8 +1074,8 @@ Set the alternate source for this property.
 
 The Property object and the input parameters for the AVItem that is being called needs to be Media Replacement compatible for the action to go through.
 
-- Use the [AVItem.isMediaReplacementCompatible](../items/avitem.md#avitem-ismediareplacementcompatible) method to test whether the AVItem can be used as an alternate source for Media Replacement.
-- Use [Property.canSetAlternateSource](#property-cansetalternatesource) to test if the property allows Media Replacement.
+- Use the [AVItem.isMediaReplacementCompatible](../items/avitem.md#avitemismediareplacementcompatible) method to test whether the AVItem can be used as an alternate source for Media Replacement.
+- Use [Property.canSetAlternateSource](#propertycansetalternatesource) to test if the property allows Media Replacement.
 
 **Parameters**
 
@@ -1098,7 +1098,7 @@ Sets the `in` and `out` interpolation types for the specified keyframe.
 
 **Parameters**
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#property-addkey) or<br/>[nearestKeyIndex](#property-nearestkeyindex).                                                                                                                          |
+| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).                                                                                                                          |
 |--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `inType`     | The incoming interpolation type. A `KeyframeInterpolationType`<br/>enumerated value; one of:<br/><br/>- `KeyframeInterpolationType.LINEAR`<br/>- `KeyframeInterpolationType.BEZIER`<br/>- `KeyframeInterpolationType.HOLD`                                                                              |
 | `outType`    | (Optional) The outgoing interpolation type. If not supplied, the<br/>'out' type is set to the `inType` value. A<br/>`KeyframeInterpolationType` enumerated value; one of:<br/><br/>- `KeyframeInterpolationType.LINEAR`<br/>- `KeyframeInterpolationType.BEZIER`<br/>- `KeyframeInterpolationType.HOLD` |
@@ -1121,7 +1121,7 @@ Set the label color for the keyframe. Colors are represented by their number (0 
 
 **Parameters**
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#property-addkey) or<br/>[nearestKeyIndex](#property-nearestkeyindex).   |
+| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `labelIndex` | The index for the new label value. An integer in<br/>the range 0-16.                                                                                                             |
 
@@ -1142,7 +1142,7 @@ Nothing.
 Sets parameters for a Dropdown Menu Control's Menu Property. This method will overwrite the existing set of Menu items with the provided array of strings.
 
 - The Dropdown Menu Control effect's Menu property is the only property that allows parameters to be set.
-- To check if a property allows parameters to be set, check with [isDropdownEffect](#property-isdropdowneffect) before calling this method.
+- To check if a property allows parameters to be set, check with [isDropdownEffect](#propertyisdropdowneffect) before calling this method.
 - An exception is raised whenever this method fails.
 
 **Parameters**
@@ -1183,7 +1183,7 @@ Turns roving on or off for the specified keyframe. The first and last keyframe i
 
 **Parameters**
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#property-addkey) or<br/>[nearestKeyIndex](#property-nearestkeyindex).   |
+| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `newVal`     | True to turn roving on, false to turn roving off.                                                                                                                                |
 
@@ -1203,7 +1203,7 @@ Selects or deselects the specified keyframe.
 
 **Parameters**
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#property-addkey) or<br/>[nearestKeyIndex](#property-nearestkeyindex).   |
+| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `onOff`      | True to select the keyframe, false to deselect it.                                                                                                                               |
 
@@ -1223,7 +1223,7 @@ Turns spatial auto-Bezier interpolation on or off for the specified keyframe. If
 
 **Parameters**
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#property-addkey) or<br/>[nearestKeyIndex](#property-nearestkeyindex).   |
+| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `newVal`     | True to turn spatial auto-Bezier on, false to turn it off.                                                                                                                       |
 
@@ -1243,7 +1243,7 @@ Turns spatial continuity on or off for the specified keyframe. If the property v
 
 **Parameters**
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#property-addkey) or<br/>[nearestKeyIndex](#property-nearestkeyindex).   |
+| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `newVal`     | True to turn spatial auto-Bezier on, false to turn it off.                                                                                                                       |
 
@@ -1263,7 +1263,7 @@ Sets the incoming and outgoing tangent vectors for the specified keyframe. If th
 
 **Parameters**
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the [addKey](#property-addkey) or [nearestKeyIndex()](#property-nearestkeyindex) method.                                                                                                                                                                                                                    |
+| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the [addKey](#propertyaddkey) or [nearestKeyIndex()](#propertynearestkeyindex) method.                                                                                                                                                                                                                    |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `inTangent`  | The incoming tangent vector. An array of 2 or 3 floating-point<br/>values.<br/><br/>- If the property value type is<br/>  `PropertyValueType.TwoD_SPATIAL`, the array contains 2<br/>  values.<br/>- If the property value type is<br/>  `PropertyValueType.ThreeD_SPATIAL`, the array contains 3<br/>  values.                                                                                    |
 | `outTangent` | (Optional) The outgoing tangent vector. If not supplied, the<br/>`out` tangent is set to the `inTangent` value. An array of<br/>2 or 3 floating-point values.<br/><br/>- If the property value type is<br/>  `PropertyValueType.TwoD_SPATIAL`, the array contains 2<br/>  values.<br/>- If the property value type is<br/>  `PropertyValueType.ThreeD_SPATIAL`, the array contains 3<br/>  values. |
@@ -1284,7 +1284,7 @@ Turns temporal auto-Bezier interpolation on or off for the specified keyframe. W
 
 **Parameters**
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#property-addkey) or<br/>[nearestKeyIndex](#property-nearestkeyindex).   |
+| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `newVal`     | True to turn temporal auto-Bezier on, false to turn it off.                                                                                                                      |
 
@@ -1304,7 +1304,7 @@ Turns temporal continuity on or off for the specified keyframe. When temporal co
 
 **Parameters**
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#property-addkey) or<br/>[nearestKeyIndex](#property-nearestkeyindex).   |
+| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `newVal`     | True to turn temporal continuity on, false to turn it off.                                                                                                                       |
 
@@ -1324,7 +1324,7 @@ Sets the incoming and outgoing temporal ease for the specified keyframe. See [Ke
 
 **Parameters**
 
-| `keyIndex`        | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#property-addkey) or<br/>[nearestKeyIndex](#property-nearestkeyindex).                                                                                                                                                                                                                                                                            |
+| `keyIndex`        | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).                                                                                                                                                                                                                                                                            |
 |-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `inTemporalEase`  | The incoming temporal ease. An array of 1, 2, or 3<br/>KeyframeEase objects.<br/><br/>- If the property value type is<br/>  `PropertyValueType.TwoD`, the array contains 2<br/>  objects.<br/>- If the property value type is<br/>  `PropertyValueType.ThreeD`, the array contains 3<br/>  objects.<br/>- For all other value types, the array contains 1 object.                                                                                         |
 | `outTemporalEase` | (Optional) The outgoing temporal ease. If not supplied,<br/>the outgoing ease is set to the `inTemporalEase` value.<br/>An array of 1, 2, or 3 KeyframeEase objects.<br/><br/>- If the property value type is<br/>  `PropertyValueType.TwoD`, the array contains 2<br/>  objects.<br/>- If the property value type is<br/>  `PropertyValueType.ThreeD`, the array contains 3<br/>  objects.<br/>- For all other value types, the array contains 1 object. |
@@ -1341,11 +1341,11 @@ Nothing.
 
 **Description**
 
-Sets the static value of a property that has no keyframes. If the named property has keyframes, this method generates an exception and displays an error. To set the value of a property with keyframes, use [Property.setValueAtTime()](#property-setvalueattime) or [Property.setValueAtKey()](#property-setvalueatkey).
+Sets the static value of a property that has no keyframes. If the named property has keyframes, this method generates an exception and displays an error. To set the value of a property with keyframes, use [Property.setValueAtTime()](#propertysetvalueattime) or [Property.setValueAtKey()](#propertysetvalueatkey).
 
 **Parameters**
 
-| `newValue`   | A value appropriate for the type of property being set; see<br/>[Property.propertyValueType](#property-propertyvaluetype).   |
+| `newValue`   | A value appropriate for the type of property being set; see<br/>[Property.propertyValueType](#propertypropertyvaluetype).   |
 |--------------|------------------------------------------------------------------------------------------------------------------------------|
 
 **Returns**
@@ -1364,9 +1364,9 @@ Finds the specified keyframe and sets its value. If the named property has no ke
 
 **Parameters**
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#property-addkey) or<br/>[nearestKeyIndex](#property-nearestkeyindex).   |
+| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `newValue`   | A value appropriate for the type of property being set; see<br/>[Property.propertyValueType](#property-propertyvaluetype).                                                       |
+| `newValue`   | A value appropriate for the type of property being set; see<br/>[Property.propertyValueType](#propertypropertyvaluetype).                                                       |
 
 **Returns**
 
@@ -1386,7 +1386,7 @@ Sets the value of a keyframe at the specified time. Creates a new keyframe for t
 
 | `time`     | The time in seconds, a floating-point value. The beginning of<br/>the composition is 0.                                    |
 |------------|----------------------------------------------------------------------------------------------------------------------------|
-| `newValue` | A value appropriate for the type of property being set; see<br/>[Property.propertyValueType](#property-propertyvaluetype). |
+| `newValue` | A value appropriate for the type of property being set; see<br/>[Property.propertyValueType](#propertypropertyvaluetype). |
 
 **Returns**
 
@@ -1406,7 +1406,7 @@ Sets values for a set of keyframes at specified times. Creates a new keyframe fo
 
 | `times`     | An array of times, in seconds. Each time is a floating-point<br/>value. The beginning of the composition is 0.                       |
 |-------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| `newValues` | A array of values appropriate for the type of property being<br/>set; see [Property.propertyValueType](#property-propertyvaluetype). |
+| `newValues` | A array of values appropriate for the type of property being<br/>set; see [Property.propertyValueType](#propertypropertyvaluetype). |
 
 **Returns**
 

@@ -134,7 +134,7 @@ String; read/write.
 
 **Description**
 
-The FolderItem object for the folder that contains this item. If this item is at the top level of the project, this is the project's root folder (`app.project.rootFolder`). You can use [ItemCollection.addFolder()](itemcollection.md#itemcollection-addfolder) to add a new folder, and set this value to put items in the new folder.
+The FolderItem object for the folder that contains this item. If this item is at the top level of the project, this is the project's root folder (`app.project.rootFolder`). You can use [ItemCollection.addFolder()](itemcollection.md#itemcollectionaddfolder) to add a new folder, and set this value to put items in the new folder.
 
 **Type**
 
