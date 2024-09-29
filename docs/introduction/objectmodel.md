@@ -2,13 +2,13 @@
 
 As you look through this reference section, which is organized alphabetically by object, you can refer to the following diagrams for an overview of where the various objects fall within the hierarchy, and their correspondence to the user interface.
 
-![After Effects Object Model](introduction/_static/objectmodel.png)
+![After Effects Object Model](../_static/objectmodel.png)
 
 Hierarchy diagram of the main After Effects scripting objects
 
 Note that the [File](https://extendscript.docsforadobe.dev/file-system-access/file-object.html), Folder, and Socket objects are defined by ExtendScript, and are documented in the [JavaScript Tools Guide](https://extendscript.docsforadobe.dev/). ExtendScript also defines the ScriptUI module, a set of window and user-interface control objects, which are available to After Effects scripts. These are also documented in the [JavaScript Tools Guide](https://extendscript.docsforadobe.dev/). The hierarchy of objects in scripting corresponds to the hierarchy in the user interface.
 
-![After Effects User Interface](introduction/_static/application.png)
+![After Effects User Interface](../_static/application.png)
 
 The application contains a Project panel, which displays a project. The project contains compositions, which contain layers. The source for a layer can be a footage file, placeholder, or solid, also listed in the Project panel. Each layer contains settings known as properties, and these can contain markers and keyframes. The renderqueue contains render-queue items as well as render settings and output modules. All of these entities are represented by objects in scripting.
 

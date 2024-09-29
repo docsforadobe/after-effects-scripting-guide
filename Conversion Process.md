@@ -56,10 +56,6 @@ This works in several main phases:
 
 Navigate to the provided url above to check your progress as you work through the cleanup stages below.
 
-### Big-Picture Stuff
-
-This is very barebones, and doesn't yet have anything shared from the other docsforadobe docsify repos.
-
 #### Set Global Docsify Settings
 
 This specifies how Docisfy works & feels across the site.
@@ -147,6 +143,10 @@ Here are the table header formats to use:
 | -------- | ---- | ----------- |
 ```
 
+#### Other
+
+- Check that images are properly linked to the root `./docs/_static` folder
+
 ---
 
 ## 5. Project Cleanup
@@ -155,6 +155,7 @@ Now that we've got a full suite of .md files, we can remove the old source .rst 
 
 1. Delete Stuff:
     - `./.readthedocs.yaml`
+    - `./build/`
     - `./docs/**/*.rst`
     - `./docs/conf.py`
     - `./make.bat`
@@ -163,12 +164,3 @@ Now that we've got a full suite of .md files, we can remove the old source .rst 
 2. Change Stuff:
     - `./.gitignore` – remove any `build`-related items (as there's no more build system)
     - `./readme.md` – update this to reflect the new language, the fact that things have changed, etc.
-3. Move Stuff:
-    - Move all of the built `./build/markdown/**/` files over to `./docs/`
-    - Delete the `./build/` folder – we don't need the `./build/doctrees/` folder
-
----
-
-## Todo
-
-- [ ] Static elements aren't accounted for or brought over
