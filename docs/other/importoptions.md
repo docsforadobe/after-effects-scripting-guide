@@ -154,8 +154,9 @@ Reports whether the file can be imported as the source of a particular object ty
 
 #### Parameters
 
-| `type`   | The type of file that can be imported. An `ImportAsType` enumerated value. One of:<br/>- `ImportAsType.COMP`<br/>- `ImportAsType.FOOTAGE`<br/>- `ImportAsType.COMP_CROPPED_LAYERS`<br/>- `ImportAsType.PROJECT`   |
-|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Parameter |         Type         |                                                                                 Description                                                                                 |
+| --------- | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `type`    | `ImportAsType` enum. | The type of file that can be imported. One of:<br/>- `ImportAsType.COMP`<br/>- `ImportAsType.FOOTAGE`<br/>- `ImportAsType.COMP_CROPPED_LAYERS`<br/>- `ImportAsType.PROJECT` |
 
 #### Returns
 
@@ -184,8 +185,9 @@ Reports whether the file object is numbered, i.e. file name has a digit.
 
 #### Parameters
 
-| `file`   | [Extendscript File](https://extendscript.docsforadobe.dev/file-system-access/file-object.html) object.   |
-|----------|----------------------------------------------------------------------------------------------------------|
+| Parameter |                                                 Type                                                  |    Description    |
+| --------- | ----------------------------------------------------------------------------------------------------- | ----------------- |
+| `file`    | [Extendscript File](https://extendscript.docsforadobe.dev/file-system-access/file-object.html) object | The file to check |
 
 #### Returns
 

@@ -16,6 +16,8 @@ As of Version 12/CC, preferences and settings methods now take a third argument 
 
 If the third argument is not passed, default value (`PREFType.PREF_Type_MACHINE_SPECIFIC`) is used and After Effects tries to save/get from the "Adobe After Effects $versionNumber.x Prefs.txt" preferences file.
 
+#### PREFType Enum
+
 The third argument is enum `PREFType` value, one of:
 
 - `PREF_Type_MACHINE_SPECIFIC`: Adobe After Effects $versionNumber.x Prefs.txt
@@ -40,10 +42,11 @@ Deletes a preference from the preference file.
 
 #### Parameters
 
-| `sectionName`   | A string containing the name of a preferences section     |
-|-----------------|-----------------------------------------------------------|
-| `keyName`       | A string containing the key name of the preference        |
-| `prefType`      | Optional. An enum indicating which preference file to use |
+|   Parameter   |               Type                |               Description               |
+| ------------- | --------------------------------- | --------------------------------------- |
+| `sectionName` | String                            | The name of a preferences section.      |
+| `keyName`     | String                            | The key name of the preference.         |
+| `prefType`    | [`PREFType` enum](#preftype-enum) | Optional. Which preference file to use. |
 
 #### Returns
 
@@ -69,10 +72,11 @@ Retrieves a preference value from the preferences file, and parses it as a boole
 
 #### Parameters
 
-| `sectionName`   | A string containing the name of a preferences section     |
-|-----------------|-----------------------------------------------------------|
-| `keyName`       | A string containing the key name of the preference        |
-| `prefType`      | Optional. An enum indicating which preference file to use |
+|   Parameter   |               Type                |               Description               |
+| ------------- | --------------------------------- | --------------------------------------- |
+| `sectionName` | String                            | The name of a preferences section.      |
+| `keyName`     | String                            | The key name of the preference.         |
+| `prefType`    | [`PREFType` enum](#preftype-enum) | Optional. Which preference file to use. |
 
 #### Returns
 
@@ -106,10 +110,11 @@ Retrieves a preference value from the preferences file, and parses it as a float
 
 #### Parameters
 
-| `sectionName`   | A string containing the name of a preferences section     |
-|-----------------|-----------------------------------------------------------|
-| `keyName`       | A string containing the key name of the preference        |
-| `prefType`      | Optional. An enum indicating which preference file to use |
+|   Parameter   |               Type                |               Description               |
+| ------------- | --------------------------------- | --------------------------------------- |
+| `sectionName` | String                            | The name of a preferences section.      |
+| `keyName`     | String                            | The key name of the preference.         |
+| `prefType`    | [`PREFType` enum](#preftype-enum) | Optional. Which preference file to use. |
 
 #### Returns
 
@@ -127,10 +132,11 @@ Retrieves a preference value from the preferences file, and parses it as a long 
 
 #### Parameters
 
-| `sectionName`   | A string containing the name of a preferences section     |
-|-----------------|-----------------------------------------------------------|
-| `keyName`       | A string containing the key name of the preference        |
-| `prefType`      | Optional. An enum indicating which preference file to use |
+|   Parameter   |               Type                |               Description               |
+| ------------- | --------------------------------- | --------------------------------------- |
+| `sectionName` | String                            | The name of a preferences section.      |
+| `keyName`     | String                            | The key name of the preference.         |
+| `prefType`    | [`PREFType` enum](#preftype-enum) | Optional. Which preference file to use. |
 
 #### Returns
 
@@ -148,10 +154,11 @@ Retrieves a preference value from the preferences file, and parses it as a strin
 
 #### Parameters
 
-| `sectionName`   | A string containing the name of a preferences section     |
-|-----------------|-----------------------------------------------------------|
-| `keyName`       | A string containing the key name of the preference        |
-| `prefType`      | Optional. An enum indicating which preference file to use |
+|   Parameter   |               Type                |               Description               |
+| ------------- | --------------------------------- | --------------------------------------- |
+| `sectionName` | String                            | The name of a preferences section.      |
+| `keyName`     | String                            | The key name of the preference.         |
+| `prefType`    | [`PREFType` enum](#preftype-enum) | Optional. Which preference file to use. |
 
 #### Returns
 
@@ -169,10 +176,11 @@ Returns `true` if the specified preference item exists and has a value.
 
 #### Parameters
 
-| `sectionName`   | A string containing the name of a preferences section     |
-|-----------------|-----------------------------------------------------------|
-| `keyName`       | A string containing the key name of the preference        |
-| `prefType`      | Optional. An enum indicating which preference file to use |
+|   Parameter   |               Type                |               Description               |
+| ------------- | --------------------------------- | --------------------------------------- |
+| `sectionName` | String                            | The name of a preferences section.      |
+| `keyName`     | String                            | The key name of the preference.         |
+| `prefType`    | [`PREFType` enum](#preftype-enum) | Optional. Which preference file to use. |
 
 #### Returns
 
@@ -208,11 +216,12 @@ Saves a preference item as a boolean.
 
 #### Parameters
 
-| `sectionName`   | A string containing the name of a preferences section     |
-|-----------------|-----------------------------------------------------------|
-| `keyName`       | A string containing the key name of the preference        |
-| `value`         | A boolean containing the new value                        |
-| `prefType`      | Optional. An enum indicating which preference file to use |
+|   Parameter   |               Type                |               Description               |
+| ------------- | --------------------------------- | --------------------------------------- |
+| `sectionName` | String                            | The name of a preferences section.      |
+| `keyName`     | String                            | The key name of the preference.         |
+| `value`       | Boolean                           | The new value.                          |
+| `prefType`    | [`PREFType` enum](#preftype-enum) | Optional. Which preference file to use. |
 
 #### Returns
 
@@ -230,11 +239,12 @@ Saves a preference item as a float.
 
 #### Parameters
 
-| `sectionName`   | A string containing the name of a preferences section     |
-|-----------------|-----------------------------------------------------------|
-| `keyName`       | A string containing the key name of the preference        |
-| `value`         | A float containing the new value                          |
-| `prefType`      | Optional. An enum indicating which preference file to use |
+|   Parameter   |               Type                |               Description               |
+| ------------- | --------------------------------- | --------------------------------------- |
+| `sectionName` | String                            | The name of a preferences section.      |
+| `keyName`     | String                            | The key name of the preference.         |
+| `value`       | Floating-point value              | The new value.                          |
+| `prefType`    | [`PREFType` enum](#preftype-enum) | Optional. Which preference file to use. |
 
 #### Returns
 
@@ -252,11 +262,12 @@ Saves a preference item as a long.
 
 #### Parameters
 
-| `sectionName`   | A string containing the name of a preferences section     |
-|-----------------|-----------------------------------------------------------|
-| `keyName`       | A string containing the key name of the preference        |
-| `value`         | A long containing the new value                           |
-| `prefType`      | Optional. An enum indicating which preference file to use |
+|   Parameter   |               Type                |               Description               |
+| ------------- | --------------------------------- | --------------------------------------- |
+| `sectionName` | String                            | The name of a preferences section.      |
+| `keyName`     | String                            | The key name of the preference.         |
+| `value`       | Long value                        | The new value.                          |
+| `prefType`    | [`PREFType` enum](#preftype-enum) | Optional. Which preference file to use. |
 
 #### Returns
 
@@ -274,11 +285,12 @@ Saves a preference item as a string.
 
 #### Parameters
 
-| `sectionName`   | A string containing the name of a preferences section     |
-|-----------------|-----------------------------------------------------------|
-| `keyName`       | A string containing the key name of the preference        |
-| `value`         | A string containing the new value                         |
-| `prefType`      | Optional. An enum indicating which preference file to use |
+|   Parameter   |               Type                |               Description               |
+| ------------- | --------------------------------- | --------------------------------------- |
+| `sectionName` | String                            | The name of a preferences section.      |
+| `keyName`     | String                            | The key name of the preference.         |
+| `value`       | String                            | The new value.                          |
+| `prefType`    | [`PREFType` enum](#preftype-enum) | Optional. Which preference file to use. |
 
 #### Returns
 

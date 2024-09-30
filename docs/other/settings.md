@@ -34,10 +34,12 @@ Retrieves a script settings item value from the preferences file.
 
 #### Parameters
 
-| `sectionName`   | A string containing the name of a settings section.        |
-|-----------------|------------------------------------------------------------|
-| `keyName`       | A string containing the key name of the setting item.      |
-| `prefType`      | Optional. An enum indicating which preference file to use. |
+|   Parameter   |                       Type                        |               Description               |
+| ------------- | ------------------------------------------------- | --------------------------------------- |
+| `sectionName` | String                                            | The name of a settings section.         |
+| `keyName`     | String                                            | The key name of the setting item.       |
+| `prefType`    | [`PREFType` enum](./preferences.md#preftype-enum) | Optional. Which preference file to use. |
+
 
 #### Returns
 
@@ -64,10 +66,11 @@ Returns `true` if the specified script settings item exists and has a value.
 
 #### Parameters
 
-| `sectionName`   | A string containing the name of a settings section.        |
-|-----------------|------------------------------------------------------------|
-| `keyName`       | A string containing the key name of the setting item.      |
-| `prefType`      | Optional. An enum indicating which preference file to use. |
+|   Parameter   |                       Type                        |               Description               |
+| ------------- | ------------------------------------------------- | --------------------------------------- |
+| `sectionName` | String                                            | The name of a settings section.         |
+| `keyName`     | String                                            | The key name of the setting item.       |
+| `prefType`    | [`PREFType` enum](./preferences.md#preftype-enum) | Optional. Which preference file to use. |
 
 #### Returns
 
@@ -87,11 +90,12 @@ Saves a value for a script settings item.
 
 #### Parameters
 
-| `sectionName`   | A string containing the name of a settings section.        |
-|-----------------|------------------------------------------------------------|
-| `keyName`       | A string containing the key name of the setting item.      |
-| `value`         | A string containing the new value.                         |
-| `prefType`      | Optional. An enum indicating which preference file to use. |
+|   Parameter   |                       Type                        |               Description               |
+| ------------- | ------------------------------------------------- | --------------------------------------- |
+| `sectionName` | String                                            | The name of a settings section.         |
+| `keyName`     | String                                            | The key name of the setting item.       |
+| `value`       | String                                            | The new value.                          |
+| `prefType`    | [`PREFType` enum](./preferences.md#preftype-enum) | Optional. Which preference file to use. |
 
 #### Returns
 
