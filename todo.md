@@ -18,7 +18,7 @@
       - [ ] ./introduction
       - [ ] ./items
       - [ ] ./layers
-      - [ ] ./matchnames
+      - [x] ./matchnames
       - [ ] ./other
       - [ ] ./properties
       - [ ] ./renderqueue
