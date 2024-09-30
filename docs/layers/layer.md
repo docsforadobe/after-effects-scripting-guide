@@ -94,7 +94,9 @@ Boolean; read-only.
 #### Description
 
 Instance property on Layer which returns a unique and persistent identification number used internally to identify a Layer between sessions.
+
 The value of the ID remains the same when the project is saved to a file and later reloaded.
+
 However, when you import this project into another project, new IDs are assigned to all Layers in the imported project.
 The ID is not displayed anywhere in the user interface..
 
@@ -265,11 +267,11 @@ Layer object or `null`; read/write.
 
 #### Description
 
-An array containing all of the currently selected Property and PropertyGroup objects in the layer.
+An array containing all of the currently selected [Property](../properties/property.md) and [PropertyGroup](../properties/propertygroup.md) objects in the layer.
 
 #### Type
 
-Array of PropertyBase objects; read-only.
+Array of [PropertyBase](../properties/propertybase.md) objects; read-only.
 
 ---
 
@@ -357,8 +359,9 @@ To return `true`, the layer must be enabled, no other layer may be soloing unles
 
 #### Parameters
 
-| `time`   | The time in seconds, a floating-point value.   |
-|----------|------------------------------------------------|
+| Parameter |         Type         |     Description      |
+| --------- | -------------------- | -------------------- |
+| `time`    | Floating-point value | The time in seconds. |
 
 #### Returns
 
@@ -380,8 +383,9 @@ Predefined animation preset files are installed in the Presets folder, and users
 
 #### Parameters
 
-| `presetName`   | An [Extendscript File](https://extendscript.docsforadobe.dev/file-system-access/file-object.html) object for the file containing the animation preset.   |
-|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
+|  Parameter   |                                                 Type                                                  |                Description                |
+| ------------ | ----------------------------------------------------------------------------------------------------- | ----------------------------------------- |
+| `presetName` | [Extendscript File](https://extendscript.docsforadobe.dev/file-system-access/file-object.html) object | The file containing the animation preset. |
 
 #### Returns
 
@@ -409,8 +413,9 @@ This is the same as copying and pasting a layer through the user interface.
 
 #### Parameters
 
-| `intoComp`   | The target composition, and [CompItem object](../items/compitem.md).   |
-|--------------|---------------------------------------------------------------------------------|
+| Parameter  |                  Type                   |       Description       |
+| ---------- | --------------------------------------- | ----------------------- |
+| `intoComp` | [CompItem object](../items/compitem.md) | The target composition. |
 
 #### Returns
 
@@ -432,8 +437,9 @@ Just as in the UI, `doSceneEditDetection` will fail and error if called on a non
 
 #### Parameters
 
-| `applyOptions`   | How the detected edits will be applied. A `SceneEditDetectionMode`<br/>enumerated value, one of:<br/><br/>- `SceneEditDetectionMode.MARKERS`: Create markers at edit points.<br/>- `SceneEditDetectionMode.SPLIT`: Split layer .<br/>- `SceneEditDetectionMode.SPLIT_PRECOMP`: Split layer at edit<br/>  points and pre-compose each one.<br/>- `SceneEditDetectionMode.NONE`: Detected edits are not applied<br/>  to the layer.   |
-|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|   Parameter    |             Type              |                                                                                                                                                                          Description                                                                                                                                                                           |
+| -------------- | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `applyOptions` | `SceneEditDetectionMode` enum | How the detected edits will be applied. One of:<br/>- `SceneEditDetectionMode.MARKERS`: Create markers at edit points.<br/>- `SceneEditDetectionMode.SPLIT`: Split layer.<br/>- `SceneEditDetectionMode.SPLIT_PRECOMP`: Split layer at edit points and pre-compose each one.<br/>- `SceneEditDetectionMode.NONE`: Detected edits are not applied to the layer. |
 
 #### Returns
 
@@ -469,8 +475,8 @@ Moves this layer to a position immediately after (below) the specified layer.
 
 #### Parameters
 
-| `layer`   | The target layer, a layer object in the same composition.   |
-|-----------|-------------------------------------------------------------|
+| `layer` | The target layer, a layer object in the same composition. |
+| ------- | --------------------------------------------------------- |
 
 #### Returns
 
@@ -488,8 +494,8 @@ Moves this layer to a position immediately before (above) the specified layer.
 
 #### Parameters
 
-| `layer`   | The target layer, a layer object in the same composition.   |
-|-----------|-------------------------------------------------------------|
+| `layer` | The target layer, a layer object in the same composition. |
+| ------- | --------------------------------------------------------- |
 
 #### Returns
 
@@ -565,8 +571,9 @@ If you do not want the child layer to jump, set the [parent](#layerparent) attri
 
 #### Parameters
 
-| `newParent`   | Optional, a layer object in the same composition. If not<br/>specified, it sets the parent to None.   |
-|---------------|-------------------------------------------------------------------------------------------------------|
+|  Parameter  |                Type                |                                       Description                                        |
+| ----------- | ---------------------------------- | ---------------------------------------------------------------------------------------- |
+| `newParent` | [Layer object](../layers/layer.md) | Optional, a layer in the same composition. If not specified, it sets the parent to None. |
 
 #### Returns
 

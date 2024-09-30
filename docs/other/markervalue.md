@@ -214,7 +214,7 @@ Associates a set of key-value pairs for Flash Video cue-point parameters, for a 
 
 #### Parameters
 
-| `keyValuePairs`   | An object containing the key-value pairs as attributes and<br/>values. The object's `toString()` method is called to<br/>assign the string value of each attribute to the named key.   |
+| `keyValuePairs`   | An object containing the key-value pairs as attributes and values. The object's `toString()` method is called to assign the string value of each attribute to the named key.   |
 |-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 #### Returns

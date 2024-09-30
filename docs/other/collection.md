@@ -24,5 +24,5 @@ Like an array, a collection associates a set of objects or values as a logical g
 
 ## Methods
 
-| `[]`   | Retrieves an object in the collection by its index number. The<br/>first object is at index 1.   |
+| `[]`   | Retrieves an object in the collection by its index number. The first object is at index 1.   |
 |--------|--------------------------------------------------------------------------------------------------|

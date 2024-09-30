@@ -117,7 +117,7 @@ Pauses the current rendering process, or continues a paused rendering process. T
 
 #### Parameters
 
-| `pause`   | `true` to pause a current render process, `false` to continue a paused<br/>render.   |
+| `pause`   | `true` to pause a current render process, `false` to continue a paused render.   |
 |-----------|----------------------------------------------------------------------------------|
 
 #### Returns
@@ -200,7 +200,7 @@ Calls the Queue In AME command. This method requires passing a boolean value, te
 
 #### Parameters
 
-| `render_immediately_in_AME`   | Telling AME whether to only queue the render items (`false`)<br/>or if AME should also start processing its queue (`true`).   |
+| `render_immediately_in_AME`   | Telling AME whether to only queue the render items (`false`) or if AME should also start processing its queue (`true`).   |
 |-------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
 
 #### Returns

@@ -593,10 +593,10 @@ Use the [AVLayer.canAddToMotionGraphicsTemplate()](#avlayercanaddtomotiongraphic
 
 #### Parameters
 
-| Parameter |                  Type                   |                            Description                             |
-| --------- | --------------------------------------- | ------------------------------------------------------------------ |
-| `comp`    | [CompItem object](../items/compitem.md) | The composition where you wish to add<br/>the property to the EGP. |
-| `name`    | String                                  | The new name.                                                      |
+| Parameter |                  Type                   |                          Description                           |
+| --------- | --------------------------------------- | -------------------------------------------------------------- |
+| `comp`    | [CompItem object](../items/compitem.md) | The composition where you wish to add the property to the EGP. |
+| `name`    | String                                  | The new name.                                                  |
 
 #### Returns
 
@@ -780,10 +780,10 @@ Replaces the source for this layer.
 
 #### Parameters
 
-|    Parameter     |                Type                 |                                                                                                                                              Description                                                                                                                                               |
-| ---------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `newSource`      | [AVItem object](../items/avitem.md) | The new source AVItem object.                                                                                                                                                                                                                                                                          |
-| `fixExpressions` | Boolean                             | `true` to adjust expressions for the new source, otherwise `false`.<br />Note that this feature can be resource-intensive; if replacing a large amount of footage, do this only at the end of the operation. See also [Project.autoFixExpressions()](../general/project.md#projectautofixexpressions). |
+|    Parameter     |                Type                 |                                                                                                                                              Description                                                                                                                                              |
+| ---------------- | ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `newSource`      | [AVItem object](../items/avitem.md) | The new source AVItem object.                                                                                                                                                                                                                                                                         |
+| `fixExpressions` | Boolean                             | `true` to adjust expressions for the new source, otherwise `false`.<br/>Note that this feature can be resource-intensive; if replacing a large amount of footage, do this only at the end of the operation. See also [Project.autoFixExpressions()](../general/project.md#projectautofixexpressions). |
 
 #### Returns
 
@@ -881,11 +881,10 @@ Retrieves the rectangle bounds of the layer at the specified time index, correct
 
 #### Parameters
 
-| Parameter | Type | Description |
-| --------- | ---- | ----------- |
-|  `timeT`  | Floating-point                                              The time index, in seconds. A floating-point value.                                               |
-| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `extents` | `true` to include the extents, otherwise `false`. Extents<br/>apply to shape layers, increasing the size of the layer bounds<br/>as necessary. |
+| Parameter |         Type         |                                                              Description                                                               |
+| --------- | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `timeT`   | Floating-point value | The time index, in seconds.                                                                                                            |
+| `extents` | Boolean              | `true` to include the extents, otherwise `false`. Extents apply to shape layers, increasing the size of the layer bounds as necessary. |
 
 #### Returns
 

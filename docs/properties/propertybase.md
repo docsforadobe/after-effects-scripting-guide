@@ -305,7 +305,7 @@ Moves this property to a new position in its parent property group. This method 
 
 #### Parameters
 
-| `newIndex`   | The new index position at which to place this property in its<br/>group. An integer.   |
+| `newIndex`   | The new index position at which to place this property in its group. An integer.   |
 |--------------|----------------------------------------------------------------------------------------|
 
 #### Returns
@@ -324,7 +324,7 @@ Gets the PropertyGroup object for an ancestor group of this property at a specif
 
 #### Parameters
 
-| `countUp`   | Optional. The number of levels to ascend within the parent-child<br/>hierarchy. Integer, in the range `[1..propertyDepth]`. Default<br/>is 1, which gets the immediate parent.   |
+| `countUp`   | Optional. The number of levels to ascend within the parent-child hierarchy. Integer, in the range `[1..propertyDepth]`. Default is 1, which gets the immediate parent.   |
 |-------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 #### Returns

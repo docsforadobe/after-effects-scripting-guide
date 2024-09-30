@@ -339,7 +339,7 @@ Gets an output module with the specified index position.
 
 #### Parameters
 
-| `index`   | The position index of the output module. An integer, in the range<br/>`[1..numOutputModules]`.   |
+| `index`   | The position index of the output module. An integer, in the range `[1..numOutputModules]`.   |
 |-----------|-------------------------------------------------------------------------------------------------|
 
 #### Returns
