@@ -14,21 +14,35 @@ The After Effects object model is composed of a project, items, compositions, la
 
 Nearly all of what scripting can accomplish replicates what can be done by means of the After Effects graphical user interface. A thorough knowledge of the application itself and its graphical user interface is essential to understanding how to use scripting in After Effects.
 
+---
+
 ## The ExtendScript language
 
 After Effects scripts use the Adobe ExtendScript language, which is an extended form of JavaScript used by several Adobe applications, including Photoshop, Illustrator, and InDesign. ExtendScript implements the JavaScript language according to the ECMA-262 specification. The After Effects scripting engine supports the 3rd Edition of the ECMA-262 Standard, including its notational and lexical conventions, types, objects, expressions, and statements. ExtendScript also implements the E4X ECMA-357 specification, which defines access to data in XML format.
 
 ExtendScript defines a global debugging object, the dollar (`$`) object, and a reporting utility for ExtendScript elements, the ExtendScript Reflection interface.
 
-**File and Folder Objects:** Because pathname syntax is very different in different operating systems, Adobe ExtendScript defines [File](https://extendscript.docsforadobe.dev/file-system-access/file-object.html) and [Folder](https://extendscript.docsforadobe.dev/file-system-access/folder-object.html) objects to provide platform-independent access to the underlying file system.
+### File and Folder Objects
 
-**ScriptUI User Interface Module:** The ExtendScript ScriptUI module provides the ability to create and interact with user interface elements. ScriptUI provides an object model for windows and UI control elements that you can use to create a user interface for your scripts.
+Because pathname syntax is very different in different operating systems, Adobe ExtendScript defines [Extendscript File](https://extendscript.docsforadobe.dev/file-system-access/file-object.html) and [Extendscript Folder](https://extendscript.docsforadobe.dev/file-system-access/folder-object.html) objects to provide platform-independent access to the underlying file system.
 
-**Tools and Utilities:** In addition, ExtendScript provides tools and features such as a localization utility for providing user-interface string values in different languages and global functions for displaying short messages in dialog boxes (alert, confirm, and prompt).
+### ScriptUI User Interface Module
 
-**External Communication:** ExtendScript provides a Socket object that allows you to communicate with remote systems from your After Effects scripts.
+The ExtendScript ScriptUI module provides the ability to create and interact with user interface elements. ScriptUI provides an object model for windows and UI control elements that you can use to create a user interface for your scripts.
 
-**Interapplication Communication:** ExtendScript provide s a common scripting environment for all Adobe applications, and allows inter-application communication through scripts.
+### Tools and Utilities
+
+In addition, ExtendScript provides tools and features such as a localization utility for providing user-interface string values in different languages and global functions for displaying short messages in dialog boxes (alert, confirm, and prompt).
+
+### External Communication
+
+ExtendScript provides a Socket object that allows you to communicate with remote systems from your After Effects scripts.
+
+### Interapplication Communication
+
+ExtendScript provide s a common scripting environment for all Adobe applications, and allows inter-application communication through scripts.
+
+---
 
 ## The ExtendScript Toolkit (ESTK)
 
@@ -40,17 +54,23 @@ If you choose to use another text editor to create, edit, and save scripts, be s
 
 For detailed information on the ExtendScript Toolkit, see the [JavaScript Tools Guide](https://extendscript.docsforadobe.dev/).
 
+---
+
 ## The .jsx and .jsxbin file-name extensions
 
 ExtendScript script files are distinguished by the `.jsx` file-name extension, a variation on the standard `.js` extension used with JavaScript files. After Effects scripts must include the `.jsx` file extension in order to be properly recognized by the application. Any UTF-8-encoded text file with the `.jsx` extension is recognized as an ExtendScript file.
 
 You can use the ExtendScript Toolkit to export a binary version of an ExtendScript file, which has the extension .jsxbin. Such a binary file may not be usable with all of the scripting integration features in After Effects.
 
+---
+
 ## Activating full scripting features
 
 The default is for scripts to not be allowed to write files or send or receive communication over a network. To allow scripts to write files and communicate over a network, choose Edit > Preferences > General (Windows) or After Effects > Preferences > General (Mac OS), and select the Allow Scripts To Write Files And Access Network option.
 
 Any After Effects script that contains an error preventing it from being completed generates an error message from the application. This error message includes information about the nature of the error and the line of the script on which it occurred. The ExtendScript Toolkit (ESTK) debugger can open automatically when the application encounters a script error. This feature is disabled by default so that casual users do not encounter it. To activate this feature, choose Preferences > General, and select Enable JavaScript Debugger.
+
+---
 
 ## Loading and running scripts
 
@@ -82,7 +102,7 @@ You can use this command-line technique—together with the software that comes 
 
 Following are examples of Windows command-line entries that will send an After Effects script to the application without using the After Effects user interface to execute the script.
 
-In the first example, you copy and paste your After Effects script directly on the command line and then run it. The script text appears in quotation marks following the afterfx.exe -s command:
+In the first example, you copy and paste your After Effects script directly on the command line and then run it. The script text appears in quotation marks following the `afterfx.exe -s` command:
 
 ```javascript
 afterfx.exe -s "alert("You just sent an alert to After Effects")"
@@ -111,11 +131,9 @@ Alternatively, you could display a dialog box asking for the location of the JSX
 ```applescript
 set theFile to choose file
 tell application "Adobe After Effects CS6"
-    DoScript theFile
+    DoScriptFile theFile
 end tell
 ```
-
-?> **Note:** This documentation is incorrect, the correct invocation in this instance is `DoScriptFile`
 
 Finally, this script is perhaps most useful when you are working directly on editing a JSX script and want to send it to After Effects for testing or to run. To use it effectively you must enter the application that contains the open JSX file (in this example it is TextEdit); if you do not know the proper name of the application, type in your best guess to replace "TextEdit" and AppleScript prompts you to locate it.
 

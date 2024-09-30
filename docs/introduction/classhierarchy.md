@@ -10,9 +10,10 @@ Note that some classes exist only as base classes, and demonstrate unexpected be
 
 #### Symbol Legend
 
-| ⚠   | `instanceof` is always `false`                       |
-|-----|------------------------------------------------------|
-| ❌   | Class is undefined; `instanceof` will throw an error |
+| Symbol |                      Definition                      |
+| ------ | ---------------------------------------------------- |
+| ⚠      | `instanceof` is always `false`                       |
+| ❌      | Class is undefined; `instanceof` will throw an error |
 
 ---
 
