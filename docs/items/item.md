@@ -187,17 +187,18 @@ String; read-only.
 
 #### Localized strings
 
-| `en_US`   | **Composition**   | **Folder**   | **Footage**         |
-|-----------|-------------------|--------------|---------------------|
-| `de_DE`   | Komposition       | Ordner       | Footage             |
-| `es_ES`   | Composición       | Carpeta      | Material de archivo |
-| `fr_FR`   | Composition       | Dossier      | Métrage             |
-| `it_IT`   | Composizione      | Cartella     | Metraggio           |
-| `ja_JP`   | コンポジション           | フォルダー        | フッテージ               |
-| `ko_KR`   | 컴포지션              | 폴더           | 푸티지                 |
-| `pt_BR`   | Composição        | Pasta        | Gravação            |
-| `ru_ru`   | Композиция        | Папка        | Видеоряд            |
-| `zh_CN`   | 合成                | 文件夹          | 素材                  |
+| Locale  |  Composition   |   Folder   |       Footage       |
+| ------- | -------------- | ---------- | ------------------- |
+| `en_US` | Composition    | Folder     | Footage             |
+| `de_DE` | Komposition    | Ordner     | Footage             |
+| `es_ES` | Composición    | Carpeta    | Material de archivo |
+| `fr_FR` | Composition    | Dossier    | Métrage             |
+| `it_IT` | Composizione   | Cartella   | Metraggio           |
+| `ja_JP` | コンポジション | フォルダー | フッテージ          |
+| `ko_KR` | 컴포지션       | 폴더       | 푸티지              |
+| `pt_BR` | Composição     | Pasta      | Gravação            |
+| `ru_ru` | Композиция     | Папка      | Видеоряд            |
+| `zh_CN` | 合成           | 文件夹     | 素材                |
 
 #### Example
 
@@ -225,9 +226,10 @@ Creates a new guide and adds it to the `guides` object of the Item.
 
 #### Parameters
 
-| `orientationType`   | An integer; 0 for a horizontal guide, 1 for a vertical guide.<br/>Any other value defaults to horizontal.   |
-|---------------------|-------------------------------------------------------------------------------------------------------------|
-| `position`          | An integer; the X or Y coordinate position of the guide in<br/>pixels, depending on its `orientationType`.  |
+|     Parameter     |  Type   |                                          Description                                          |
+| ----------------- | ------- | --------------------------------------------------------------------------------------------- |
+| `orientationType` | Integer | `0` for a horizontal guide, `1` for a vertical guide. Any other value defaults to horizontal. |
+| `position`        | Integer | The X or Y coordinate position of the guide in pixels, depending on its `orientationType`.    |
 
 #### Returns
 
@@ -273,8 +275,9 @@ Removes an existing guide. Choose the guide based on its index inside the `Item.
 
 #### Parameters
 
-| `guideIndex`   | An integer; the index of the guide to be removed.   |
-|----------------|-----------------------------------------------------|
+|  Parameter   |  Type   |              Description              |
+| ------------ | ------- | ------------------------------------- |
+| `guideIndex` | Integer | The index of the guide to be removed. |
 
 #### Returns
 
@@ -306,9 +309,10 @@ A guide's `orientationType` may not be changed after it is created.
 
 #### Parameters
 
-| `position`   | An integer; the new X or Y coordinate position of the guide in<br/>pixels, depending on its existing `orientationType`.   |
-|--------------|---------------------------------------------------------------------------------------------------------------------------|
-| `guideIndex` | An integer; the index of the guide to be modified.                                                                        |
+|  Parameter   |  Type   |                                               Description                                               |
+| ------------ | ------- | ------------------------------------------------------------------------------------------------------- |
+| `position`   | Integer | The new X or Y coordinate position of the guide in pixels, depending on its existing `orientationType`. |
+| `guideIndex` | Integer | The index of the guide to be modified.                                                                  |
 
 #### Returns
 

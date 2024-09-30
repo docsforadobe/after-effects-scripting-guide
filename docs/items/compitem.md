@@ -103,7 +103,7 @@ The time set as the beginning of the composition, in seconds. This is the equiva
 
 #### Type
 
-Floating-point value in the range `[-10800.0...86339.0]` (-3:00:00:00 to 23:59:00:00); read/write.
+Floating-point value in the range [-10800.0..86339.0] (-3:00:00:00 to 23:59:00:00); read/write.
 
 ---
 
@@ -435,7 +435,7 @@ The shutter angle setting for the composition. This corresponds to the Shutter A
 
 #### Type
 
-Integer in the range `[0...720]`; read/write.
+Integer in the range `[0..720]`; read/write.
 
 ---
 
@@ -449,7 +449,7 @@ The shutter phase setting for the composition. This corresponds to the Shutter P
 
 #### Type
 
-Integer in the range `[-360...360]`; read/write.
+Integer in the range `[-360..360]`; read/write.
 
 ---
 
@@ -503,7 +503,7 @@ CompItem object.
 
 ### CompItem.exportAsMotionGraphicsTemplate()
 
-`app.project.item(index).exportAsMotionGraphicsTemplate(doOverWriteFileIfExisting, file_path)`
+`app.project.item(index).exportAsMotionGraphicsTemplate(doOverWriteFileIfExisting[, file_path])`
 
 ?> **Note:** This functionality was added in After Effects 15.0 (CC 2018)
 
@@ -527,9 +527,10 @@ project `save()` method before exporting the Motion Graphics template.
 
 #### Parameters
 
-| `doOverWriteFileIfExisting`   | Whether to overwrite an existing file of the same name, boolean.<br/>Required.   |
-|-------------------------------|----------------------------------------------------------------------------------|
-| `file_path`                   | Path to the folder where the file will be saved. Optional.                       |
+|          Parameter          |  Type   |                        Description                         |
+| --------------------------- | ------- | ---------------------------------------------------------- |
+| `doOverWriteFileIfExisting` | Boolean | Whether to overwrite an existing file of the same name.    |
+| `file_path`                 | String  | Optional. Path to the folder where the file will be saved. |
 
 #### Returns
 
@@ -549,8 +550,9 @@ Gets the name of a single property in the Essential Graphics panel.
 
 #### Parameters
 
-| `index`   | Integer; the index of the EGP property whose name will be returned.   |
-|-----------|-----------------------------------------------------------------------|
+| Parameter |  Type   |                        Description                         |
+| --------- | ------- | ---------------------------------------------------------- |
+| `index`   | Integer | The index of the EGP property whose name will be returned. |
 
 #### Returns
 
@@ -560,7 +562,7 @@ String; read-only.
 
 ### CompItem.setMotionGraphicsControllerName()
 
-`app.project.item(index).setMotionGraphicsControllerName(index,newName)`
+`app.project.item(index).setMotionGraphicsControllerName(index, newName)`
 
 ?> **Note:** This functionality was added in After Effects 16.1 (CC 2019)
 
@@ -572,9 +574,10 @@ Sets the name of a single property in the Essential Graphics panel.
 
 #### Parameters
 
-| `index`   | Integer; the index of the EGP property to be renamed.   |
-|-----------|---------------------------------------------------------|
-| `newName` | String; the new name for the EGP property.              |
+| Parameter |  Type   |                 Description                  |
+| --------- | ------- | -------------------------------------------- |
+| `index`   | Integer | The index of the EGP property to be renamed. |
+| `newName` | String  | The new name for the EGP property.           |
 
 #### Returns
 
@@ -597,19 +600,22 @@ Returns a Layer object, which can be specified by name, an index position in thi
 
 #### Parameters
 
-| `index`   | The index number of the desired layer in this composition. An<br/>integer in the range `[1...numLayers]`, where `numLayers` is<br/>the number of layers in the composition.   |
-|-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Parameter |                                               Type                                                |                        Description                         |
+| --------- | ------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
+| `index`   | Integer in the range [1..numLayers], where `numLayers` is the number of layers in the composition | The index number of the desired layer in this composition. |
 
 or:
 
-| `otherLayer`   | A Layer object in this composition. The `relIndex` value is<br/>added to the index value of thislayer to find the position of<br/>the desired layer.                                                                                                                                                                               |
-|----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `relIndex`     | The position of the desired layer, relative to `otherLayer`.<br/>An integer in the range `[1 - otherLayer.index...numLayers -<br/>otherLayer.index]`, where `numLayers` is the number of<br/>layers in the composition. This value is added to the<br/>`otherLayer` value to derive the absolute index of the<br/>layer to return. |
+|  Parameter   |                                                                     Type                                                                     |                                                                           Description                                                                           |
+| ------------ | -------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `otherLayer` | [Layer object](../layers/layer.md) in this composition.                                                                                      | The `relIndex` value is added to the index value of this layer to find the position of the desired layer.                                                       |
+| `relIndex`   | Integer in the range `[1 - otherLayer.index .. numLayers - otherLayer.index]`, where `numLayers` is the number of layers in the composition. | The position of the desired layer, relative to `otherLayer`. This value is added to the `otherLayer` value to derive the absolute index of the layer to return. |
 
-—or—
+or:
 
-| `name`   | The string containing the name of the desired layer.   |
-|----------|--------------------------------------------------------|
+| Parameter |  Type  |          Description           |
+| --------- | ------ | ------------------------------ |
+| `name`    | String | The name of the desired layer. |
 
 #### Returns
 

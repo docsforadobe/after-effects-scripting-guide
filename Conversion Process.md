@@ -130,7 +130,11 @@ Write a general intro sort of thing here; again, see AE scripting docs or refere
 
 In RST, tables didn't need to have header rows. In markdown, they do (should). This, unfortunately, means a lot of work is needed as the conversion method isn't capable of generating table headers.
 
-We're also going to use this opportunity to add in property types for arguments & parameters, making the docs more useful.
+?> **Note:** We're also going to use this opportunity to add in property types for arguments & parameters, making the docs friendlier to use.
+
+- Set up table headers (see below)
+- Remove any html linebreaks (`<br>`) unless explicitly required – *this is very rare, but sometimes does occur*
+- Format tables
 
 Here are the table header formats to use:
 
@@ -160,6 +164,7 @@ Here are the table header formats to use:
 #### Other
 
 - Check that images are properly linked to the root `./docs/_static` folder
+- Value ranges should be formatted as: `` `[0.0..10800.0]` `` (surrounded by backticks, two periods between min and max)
 
 ---
 

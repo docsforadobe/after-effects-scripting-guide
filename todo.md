@@ -4,7 +4,6 @@
 - [ ] Initialize docsify
   - [x] Set global docsify settings in index.html
   - [x] Create the sidebar
-  - [ ] Update index.md
 - [ ] Docs Cleanup
   - [x] Bulk cleanup
     - [x] Search & replace
@@ -15,8 +14,8 @@
     - [ ] Update tables
       - [ ] Add new "Type" field, because it's a Good Thing
       - [x] ./general
-      - [ ] ./introduction
-      - [ ] ./items
+      - [x] ./introduction
+      - [x] ./items
       - [ ] ./layers
       - [x] ./matchnames
       - [ ] ./other
@@ -26,6 +25,7 @@
       - [ ] ./text
     - [x] Fix images
     - [x] Fix headers
+  - [ ] Update index.md
 - [ ] Project Cleanup
   - [x] Delete legacy items
   - [x] Update legacy items

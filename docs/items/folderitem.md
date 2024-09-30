@@ -71,8 +71,9 @@ Note that "top-level" here means top-level within the folder, not necessarily wi
 
 #### Parameters
 
-| `subIndex`   | An integer, the position index of the item to retrieve.<br/>The first item is at index 1.   |
-|--------------|---------------------------------------------------------------------------------------------|
+| Parameter  |  Type   |                                Description                                |
+| ---------- | ------- | ------------------------------------------------------------------------- |
+| `subIndex` | Integer | The position index of the item to retrieve. The first item is at index 1. |
 
 #### Returns
 Item object.

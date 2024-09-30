@@ -127,7 +127,7 @@ The height of the item in pixels.
 
 #### Type
 
-Integer in the range [1…30000]; read/write, except as noted.
+Integer in the range [1..30000]; read/write, except as noted.
 
 ---
 
@@ -184,16 +184,16 @@ The pixel aspect ratio (PAR) of the item.
 
 The value you retrieve after setting may be slightly different from the value you supplied. The following table compares the value as it appears in the UI with the more accurate value returned by this attribute.
 
-|   PAR in the After Effects UI |   PAR returned by the pixelAspect attribute |
-|-------------------------------|---------------------------------------------|
-|                          0.91 |                                    0.909091 |
-|                          1    |                                    1        |
-|                          1.5  |                                    1.5      |
-|                          1.09 |                                    1.09402  |
-|                          1.21 |                                    1.21212  |
-|                          1.33 |                                    1.33333  |
-|                          1.46 |                                    1.45869  |
-|                          2    |                                    2        |
+| PAR in the After Effects UI | PAR returned by the pixelAspect attribute |
+| --------------------------- | ----------------------------------------- |
+| 0.91                        | 0.909091                                  |
+| 1                           | 1                                         |
+| 1.5                         | 1.5                                       |
+| 1.09                        | 1.09402                                   |
+| 1.21                        | 1.21212                                   |
+| 1.33                        | 1.33333                                   |
+| 1.46                        | 1.45869                                   |
+| 2                           | 2                                         |
 
 #### Type
 
@@ -269,7 +269,7 @@ The width of the item, in pixels.
 
 #### Type
 
-Integer in the range [1…30000]; read/write, except as noted.
+Integer in the range [1..30000]; read/write, except as noted.
 
 ---
 
@@ -291,8 +291,9 @@ This differs from setting a FootageItem's `mainSource`, but both actions are per
 
 #### Parameters
 
-| `file`   | An [Extendscript File](https://extendscript.docsforadobe.dev/file-system-access/file-object.html) object for the file to be used as a proxy.   |
-|----------|------------------------------------------------------------------------------------------------------------------------------------------------|
+| Parameter |                                                 Type                                                  |           Description           |
+| --------- | ----------------------------------------------------------------------------------------------------- | ------------------------------- |
+| `file`    | [Extendscript File](https://extendscript.docsforadobe.dev/file-system-access/file-object.html) object | The file to be used as a proxy. |
 
 #### Returns
 
@@ -330,9 +331,13 @@ Creates a PlaceholderSource object with specified values, sets this as the value
 
 #### Parameters
 
-| `name`            | A string containing the name of the new object.                                                                                                                                                                                                                 |
-|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `width`, `height` | The pixel dimensions of the placeholder, an integer<br/>in the range [4..30000]. `frameRate` The<br/>frames-per-second, an integer in the range [1..99].<br/>`duration` The total length in seconds, up to 3<br/>hours. An integer in the range [0.0..10800.0]. |
+|  Parameter  |                Type                 |                 Description                 |
+| ----------- | ----------------------------------- | ------------------------------------------- |
+| `name`      | String                              | The name of the new object.                 |
+| `width`     | Integer in the range [4..30000]     | The pixel dimensions of the placeholder.    |
+| `height`    | Integer in the range [4..30000]     | The pixel dimensions of the placeholder.    |
+| `frameRate` | Integer in the range [1..99]        | Frame rate for the proxy.                   |
+| `duration`  | Integer in the range [0.0..10800.0] | The total length in seconds, up to 3 hours. |
 
 #### Returns
 
@@ -354,9 +359,10 @@ If any file has an unlabeled alpha channel, and the user preference says to ask 
 
 #### Parameters
 
-| `file`              | An [Extendscript File](https://extendscript.docsforadobe.dev/file-system-access/file-object.html) object for the first file in the sequence.   |
-|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
-| `forceAlphabetical` | When `true`, use the "Force alphabetical order" option.                                                                                          |
+|      Parameter      |                                                 Type                                                  |                       Description                       |
+| ------------------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
+| `file`              | [Extendscript File](https://extendscript.docsforadobe.dev/file-system-access/file-object.html) object | The first file in the sequence.                         |
+| `forceAlphabetical` | Boolean                                                                                               | When `true`, use the "Force alphabetical order" option. |
 
 #### Returns
 
@@ -376,9 +382,12 @@ Creates a [SolidSource object](../sources/solidsource.md) with specified values,
 
 #### Parameters
 
-| `color`           | The color of the solid, an array of 3 floating-point<br/>values, [R, G, B], in the range [0.0..1.0]. `name`<br/>A string containing the name of the new object.                         |
-|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `width`, `height` | The pixel dimensions of the placeholder, an integer<br/>in the range [1…30000]. `pixelAspect` The pixel<br/>aspect of the solid, a floating-point value in the<br/>range [0.01… 100.0]. |
+|     Parameter     |                                 Type                                 |               Description                |
+| ----------------- | -------------------------------------------------------------------- | ---------------------------------------- |
+| `color`           | Array of 3 floating-point values ([R, G, B]) in the range [0.0..1.0] | The color of the solid.                  |
+| `name`            | String                                                               | The name of the new object.              |
+| `width`, `height` | Integer in the range [1..30000]                                      | The pixel dimensions of the placeholder. |
+| `pixelAspect`     | Floating-point value in the range [0.01..100.0]                      | The pixel aspect ratio of the solid.     |
 
 #### Returns
 
