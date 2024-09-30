@@ -22,7 +22,7 @@ The color used to draw the mask outline as it appears in the user interface (Com
 
 #### Type
 
-Array of three floating-point values, [R, G, B], in the range `[0.0..1.0]`; read/write.
+Array of three floating-point values, `[R, G, B]`, in the range `[0.0..1.0]`; read/write.
 
 ---
 

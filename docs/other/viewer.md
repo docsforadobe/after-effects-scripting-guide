@@ -46,7 +46,7 @@ The index of the current active [View object](view.md), in the [Viewer.views](#v
 
 #### Type
 
-Number; read/write.
+Integer; read/write.
 
 ---
 

@@ -115,7 +115,7 @@ Among these are: installing or removing fonts in the font environment, opening o
 
 #### Type
 
-Number; read-only.
+Floating-point value; read-only.
 
 #### Example
 

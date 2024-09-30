@@ -136,7 +136,7 @@ For example, the following call searches two levels down, and returns the first 
 
 #### Parameters
 
-| `index`   | The index for the child property, in this is an indexed group. An<br/>integer in the range `[1..numProperties]`.                                                                                                                                                                                              |
+| `index`   | The index for the child property, in this is an indexed group. Integer, in the range `[1..numProperties]`.                                                                                                                                                                                              |
 |-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `name`    | The name of the child property. This can be:<br/><br/>- Any match name<br/>- Any name in expression "parenthesis style" syntax, meaning the<br/>  display name or the compact English name<br/>- Any name in expression "intercap style" syntax<br/><br/>For supported property names, see the table below. |
 

@@ -114,7 +114,7 @@ The index position of the layer.
 
 #### Type
 
-Integer in the range `[1..numLayers]`; read-only.
+Integer, in the range `[1..numLayers]`; read-only.
 
 ---
 
@@ -128,7 +128,7 @@ The "in" point of the layer, expressed in composition time (seconds).
 
 #### Type
 
-Floating-point value in the range `[-10800.0..10800.0]` (minus or plus three hours); read/write.
+Floating-point value, in the range `[-10800.0..10800.0]` (minus or plus three hours); read/write.
 
 ---
 
@@ -235,7 +235,7 @@ The "out" point of the layer, expressed in composition time (seconds).
 
 #### Type
 
-Floating-point value in the range `[-10800.0..10800.0]` (minus or plus three hours); read/write.
+Floating-point value, in the range `[-10800.0..10800.0]` (minus or plus three hours); read/write.
 
 ---
 
@@ -311,7 +311,7 @@ The start time of the layer, expressed in composition time (seconds).
 
 #### Type
 
-Floating-point value in the range `[-10800.0..10800.0]` (minus or plus three hours); read/write.
+Floating-point value, in the range `[-10800.0..10800.0]` (minus or plus three hours); read/write.
 
 ---
 
@@ -325,7 +325,7 @@ The layer's time stretch, expressed as a percentage. A value of 100 means no str
 
 #### Type
 
-Floating-point value in the range `[-9900.0..9900.0]`; read/write.
+Floating-point value, in the range `[-9900.0..9900.0]`; read/write.
 
 ---
 

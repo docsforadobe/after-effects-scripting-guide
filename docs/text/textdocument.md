@@ -445,7 +445,7 @@ Even if you remove all the text from the [TextDocument object](#textdocument) in
 
 #### Type
 
-Number; read-only.
+Integer; read-only.
 
 ---
 
@@ -1072,7 +1072,7 @@ Returns the number of paragraphs in the text layer, always greater than or equal
 
 #### Type
 
-Number; read-only.
+Integer; read-only.
 
 ---
 

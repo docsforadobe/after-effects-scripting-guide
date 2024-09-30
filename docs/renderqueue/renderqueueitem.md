@@ -154,7 +154,7 @@ The number of frames to skip when rendering this item. Use this to do rendering 
 
 #### Type
 
-Integer in the range `[0..99]`; read/write.
+Integer, in the range `[0..99]`; read/write.
 
 ---
 
@@ -339,7 +339,7 @@ Gets an output module with the specified index position.
 
 #### Parameters
 
-| `index`   | The position index of the output module. An integer in the range<br/>`[1..numOutputModules]`.   |
+| `index`   | The position index of the output module. An integer, in the range<br/>`[1..numOutputModules]`.   |
 |-----------|-------------------------------------------------------------------------------------------------|
 
 #### Returns

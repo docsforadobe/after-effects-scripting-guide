@@ -106,7 +106,7 @@ FontObjects can be looked up by fontID with [getFontByID](fontsobject.md#fontsob
 
 #### Type
 
-Number; read-only.
+Integer; read-only.
 
 ---
 

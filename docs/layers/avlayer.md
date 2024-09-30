@@ -301,6 +301,7 @@ Boolean; read-only.
 #### Description
 
 `true` if this layer has track matte. When `true`, this layer's `trackMatteType` value controls how the matte is applied.
+
 See [AVLayer.trackMatteType](#avlayertrackmattetype) for available track matte types.
 
 #### Type
@@ -319,7 +320,7 @@ The height of the layer in pixels.
 
 #### Type
 
-Floating-point; read-only.
+Floating-point value; read-only.
 
 ---
 
@@ -424,7 +425,7 @@ A `LayerSamplingQuality` enumerated value; read/write. One of:
 
 #### Description
 
-The source AVItem for this layer. The value is `null` in a Text layer. Use `AVLayer.replaceSource()` to change the value.
+The source AVItem for this layer. The value is `null` in a Text layer. Use [AVLayer.replaceSource()](#avlayerreplacesource) to change the value.
 
 #### Type
 
@@ -540,7 +541,7 @@ The width of the layer in pixels.
 
 #### Type
 
-Floating-point; read-only.
+Floating-point value; read-only.
 
 ---
 
@@ -558,13 +559,15 @@ Adds the layer to the Essential Graphics Panel for the specified composition.
 
 Returns `true` if the layer is successfully added, or otherwise `false`.
 
-- If the layer cannot be added, it is either because it is not a layer type for which media can be replaced (referred to as Media Replacement Layers), or the layer has already been added to the EGP for that composition. After Effects will present a warning dialog if the layer cannot be added to the EGP.
-- Use the [AVLayer.canAddToMotionGraphicsTemplate()](#avlayercanaddtomotiongraphicstemplate) method to test whether the layer can be added to a Motion Graphics template.
+If the layer cannot be added, it is either because it is not a layer type for which media can be replaced (referred to as Media Replacement Layers), or the layer has already been added to the EGP for that composition. After Effects will present a warning dialog if the layer cannot be added to the EGP.
+
+Use the [AVLayer.canAddToMotionGraphicsTemplate()](#avlayercanaddtomotiongraphicstemplate) method to test whether the layer can be added to a Motion Graphics template.
 
 #### Parameters
 
-| `comp`   | A CompItem object; the composition where you wish to add the property to the EGP. Required.   |
-|----------|-----------------------------------------------------------------------------------------------|
+| Parameter |                  Type                   |                          Description                           |
+| --------- | --------------------------------------- | -------------------------------------------------------------- |
+| `comp`    | [CompItem object](../items/compitem.md) | The composition where you wish to add the property to the EGP. |
 
 #### Returns
 
@@ -584,14 +587,16 @@ Adds the layer to the Essential Graphics Panel for the specified composition.
 
 Returns `true` if the layer is successfully added, or otherwise `false`.
 
-- If the layer cannot be added, it is either because it is not a layer type for which media can be replaced (referred to as Media Replacement Layers), or the layer has already been added to the EGP for that composition. After Effects will present a warning dialog if the layer cannot be added to the EGP.
-- Use the [AVLayer.canAddToMotionGraphicsTemplate()](#avlayercanaddtomotiongraphicstemplate) method to test whether the layer can be added to a Motion Graphics template.
+If the layer cannot be added, it is either because it is not a layer type for which media can be replaced (referred to as Media Replacement Layers), or the layer has already been added to the EGP for that composition. After Effects will present a warning dialog if the layer cannot be added to the EGP.
+
+Use the [AVLayer.canAddToMotionGraphicsTemplate()](#avlayercanaddtomotiongraphicstemplate) method to test whether the layer can be added to a Motion Graphics template.
 
 #### Parameters
 
-| `comp`   | A CompItem object; the composition where you wish to add<br/>the property to the EGP. Required.   |
-|----------|---------------------------------------------------------------------------------------------------|
-| `name`   | A string for the new name. Required.                                                              |
+| Parameter |                  Type                   |                            Description                             |
+| --------- | --------------------------------------- | ------------------------------------------------------------------ |
+| `comp`    | [CompItem object](../items/compitem.md) | The composition where you wish to add<br/>the property to the EGP. |
+| `name`    | String                                  | The new name.                                                      |
 
 #### Returns
 
@@ -605,12 +610,15 @@ Boolean.
 
 #### Description
 
-Returns `true` if this layer's audio will be active at the specified time. For this method to return `true`, `audioEnabled` must be `true`, no other layer with audio may be soloing unless this layer is soloed too, and the time must be between the `inPoint` and `outPoint` of this layer.
+Returns `true` if this layer's audio will be active at the specified time.
+
+For this method to return `true`, `audioEnabled` must be `true`, no other layer with audio may be soloing unless this layer is soloed too, and the time must be between the `inPoint` and `outPoint` of this layer.
 
 #### Parameters
 
-| `time`   | The time, in seconds. A floating-point value.   |
-|----------|-------------------------------------------------|
+| Parameter |         Type         |      Description      |
+| --------- | -------------------- | --------------------- |
+| `time`    | Floating-point value | The time, in seconds. |
 
 #### Returns
 
@@ -628,10 +636,11 @@ Calculates a transformation from a set of points in this layer.
 
 #### Parameters
 
-| `pointTopLeft`     | The top left point coordinates in the form of an array,<br/>[x , y, z] .      |
-|--------------------|-------------------------------------------------------------------------------|
-| `pointTopRight`    | The top right point coordinates in the form of an array,<br/>[ x, y, z ] .    |
-| `pointBottomRight` | The bottom right point coordinates in the form of an<br/>array, [ x, y, z ] . |
+|     Parameter      |                    Type                     |             Description             |
+| ------------------ | ------------------------------------------- | ----------------------------------- |
+| `pointTopLeft`     | Array of floating-point values, `[x, y, z]` | The top left point coordinates.     |
+| `pointTopRight`    | Array of floating-point values, `[x, y, z]` | The top right point coordinates.    |
+| `pointBottomRight` | Array of floating-point values, `[x, y, z]` | The bottom right point coordinates. |
 
 #### Returns
 
@@ -677,8 +686,9 @@ The AVLayer needs to comply with the restrictions below in order to be treated a
 
 #### Parameters
 
-| `comp`   | A CompItem object; the composition where you wish to add the property to the EGP. Required.   |
-|----------|-----------------------------------------------------------------------------------------------|
+| Parameter |                  Type                   |                          Description                           |
+| --------- | --------------------------------------- | -------------------------------------------------------------- |
+| `comp`    | [CompItem object](../items/compitem.md) | The composition where you wish to add the property to the EGP. |
 
 #### Returns
 
@@ -700,8 +710,9 @@ Converts composition coordinates, such as `sourcePointToComp`, to layer coordina
 
 #### Parameters
 
-| `sourcePointToComp`   | A position array of composition coordinates in ([X, Y]) format.   |
-|-----------------------|-------------------------------------------------------------------|
+|      Parameter      |                   Type                   |                Description                |
+| ------------------- | ---------------------------------------- | ----------------------------------------- |
+| `sourcePointToComp` | Array of floating-point values, `[x, y]` | Position array of composition coordinates |
 
 #### Returns
 
@@ -769,9 +780,10 @@ Replaces the source for this layer.
 
 #### Parameters
 
-| `newSource`      | The new source AVItem object.                                                                                                                                                                                                                                                                                      |
-|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `fixExpressions` | `true` to adjust expressions for the new source,<br/>otherwise `false`. Note that this feature can be<br/>resource-intensive; if replacing a large amount of<br/>footage, do this only at the end of the operation. See<br/>also [Project.autoFixExpressions()](../general/project.md#projectautofixexpressions). |
+|    Parameter     |                Type                 |                                                                                                                                              Description                                                                                                                                               |
+| ---------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `newSource`      | [AVItem object](../items/avitem.md) | The new source AVItem object.                                                                                                                                                                                                                                                                          |
+| `fixExpressions` | Boolean                             | `true` to adjust expressions for the new source, otherwise `false`.<br />Note that this feature can be resource-intensive; if replacing a large amount of footage, do this only at the end of the operation. See also [Project.autoFixExpressions()](../general/project.md#projectautofixexpressions). |
 
 #### Returns
 
@@ -794,9 +806,10 @@ See [AVLayer.removeTrackMatte()](#avlayerremovetrackmatte) for another way of re
 
 #### Parameters
 
-| `trackMatteLayer`   | The AVLayer to be used as the track matte layer.                                                                          |
-|---------------------|---------------------------------------------------------------------------------------------------------------------------|
-| `trackMatteType`    | The type of the track matte to be used. Please see [AVLayer.trackMatteType](#avlayertrackmattetype) for available types. |
+|     Parameter     |                     Type                      |                  Description                   |
+| ----------------- | --------------------------------------------- | ---------------------------------------------- |
+| `trackMatteLayer` | [AVLayer](../layers/avlayer.md)               | The layer to be used as the track matte layer. |
+| `trackMatteType`  | [TrackMatteType](#avlayertrackmattetype) enum | The type of the track matte to be used.        |
 
 !> **Warning:** Passing in `TrackMatteType.NO_TRACK_MATTE` as type is invalid and will result in no-op.
 
@@ -840,8 +853,9 @@ Converts layer coordinates, such as `boxTextPos`, to composition coordinates.
 
 #### Parameters
 
-| `boxTextPos`   | A position array of layer coordinates in ([X, Y]) format.   |
-|----------------|-------------------------------------------------------------|
+|  Parameter   |                   Type                   |              Description               |
+| ------------ | ---------------------------------------- | -------------------------------------- |
+| `boxTextPos` | Array of floating-point values, `[x, y]` | A position array of layer coordinates. |
 
 #### Returns
 
@@ -867,8 +881,10 @@ Retrieves the rectangle bounds of the layer at the specified time index, correct
 
 #### Parameters
 
-| `timeT`   | The time index, in seconds. A floating-point value.                                                                                            |
-|-----------|------------------------------------------------------------------------------------------------------------------------------------------------|
+| Parameter | Type | Description |
+| --------- | ---- | ----------- |
+|  `timeT`  | Floating-point                                              The time index, in seconds. A floating-point value.                                               |
+| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
 | `extents` | `true` to include the extents, otherwise `false`. Extents<br/>apply to shape layers, increasing the size of the layer bounds<br/>as necessary. |
 
 #### Returns

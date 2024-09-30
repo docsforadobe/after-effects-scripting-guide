@@ -99,8 +99,7 @@ Gets a specified item from the ite ms collection.
 
 #### Parameters
 
-`index`
-The position index of the item. An integer in the range `[0..numItems]`.
+`index` | The position index of the item. Integer, in the range `[0..numItems]`.
 
 #### Returns
 

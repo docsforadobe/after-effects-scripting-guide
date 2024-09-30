@@ -103,7 +103,7 @@ The time set as the beginning of the composition, in seconds. This is the equiva
 
 #### Type
 
-Floating-point value in the range `[-10800.0..86339.0]` (-3:00:00:00 to 23:59:00:00); read/write.
+Floating-point valuem in the range `[-10800.0..86339.0]` (-3:00:00:00 to 23:59:00:00); read/write.
 
 ---
 
@@ -159,7 +159,7 @@ The duration of a frame, in seconds. This is the inverse of the `frameRate` valu
 
 #### Type
 
-Floating-point; read/write.
+Floating-point value; read/write.
 
 ---
 
@@ -435,7 +435,7 @@ The shutter angle setting for the composition. This corresponds to the Shutter A
 
 #### Type
 
-Integer in the range `[0..720]`; read/write.
+Integer, in the range `[0..720]`; read/write.
 
 ---
 
@@ -449,7 +449,7 @@ The shutter phase setting for the composition. This corresponds to the Shutter P
 
 #### Type
 
-Integer in the range `[-360..360]`; read/write.
+Integer, in the range `[-360..360]`; read/write.
 
 ---
 
@@ -463,7 +463,7 @@ The duration of the work area in seconds. This is the difference of the start-po
 
 #### Type
 
-Floating-point; read/write.
+Floating-point value; read/write.
 
 ---
 
@@ -477,7 +477,7 @@ The time when the Composition work area begins, in seconds.
 
 #### Type
 
-Floating-point; read/write.
+Floating-point value; read/write.
 
 ---
 
@@ -601,16 +601,16 @@ Returns a Layer object, which can be specified by name, an index position in thi
 
 #### Parameters
 
-| Parameter |                                                Type                                                 |                        Description                         |
-| --------- | --------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
-| `index`   | Integer in the range `[1..numLayers]`, where `numLayers` is the number of layers in the composition | The index number of the desired layer in this composition. |
+| Parameter |                                                 Type                                                 |                        Description                         |
+| --------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
+| `index`   | Integer, in the range `[1..numLayers]`, where `numLayers` is the number of layers in the composition | The index number of the desired layer in this composition. |
 
 or:
 
-|  Parameter   |                                                                     Type                                                                     |                                                                           Description                                                                           |
-| ------------ | -------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `otherLayer` | [Layer object](../layers/layer.md) in this composition.                                                                                      | The `relIndex` value is added to the index value of this layer to find the position of the desired layer.                                                       |
-| `relIndex`   | Integer in the range `[1 - otherLayer.index .. numLayers - otherLayer.index]`, where `numLayers` is the number of layers in the composition. | The position of the desired layer, relative to `otherLayer`. This value is added to the `otherLayer` value to derive the absolute index of the layer to return. |
+|  Parameter   |                                                                     Type                                                                      |                                                                           Description                                                                           |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `otherLayer` | [Layer object](../layers/layer.md) in this composition.                                                                                       | The `relIndex` value is added to the index value of this layer to find the position of the desired layer.                                                       |
+| `relIndex`   | Integer, in the range `[1 - otherLayer.index .. numLayers - otherLayer.index]`, where `numLayers` is the number of layers in the composition. | The position of the desired layer, relative to `otherLayer`. This value is added to the `otherLayer` value to derive the absolute index of the layer to return. |
 
 or:
 

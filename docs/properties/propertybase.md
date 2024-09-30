@@ -324,7 +324,7 @@ Gets the PropertyGroup object for an ancestor group of this property at a specif
 
 #### Parameters
 
-| `countUp`   | Optional. The number of levels to ascend within the parent-child<br/>hierarchy. An integer in the range `[1..propertyDepth]`. Default<br/>is 1, which gets the immediate parent.   |
+| `countUp`   | Optional. The number of levels to ascend within the parent-child<br/>hierarchy. Integer, in the range `[1..propertyDepth]`. Default<br/>is 1, which gets the immediate parent.   |
 |-------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 #### Returns

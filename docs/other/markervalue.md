@@ -106,7 +106,7 @@ The marker's duration, in seconds. The duration appears in the Timeline panel as
 
 #### Type
 
-Floating point; read/write.
+Floating-point value; read/write.
 
 ---
 

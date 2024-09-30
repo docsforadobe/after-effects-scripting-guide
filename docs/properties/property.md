@@ -715,7 +715,7 @@ Returns the 'in' interpolation type for the specified keyframe.
 
 #### Parameters
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
+| `keyIndex`   | The index for the keyframe. Integer, in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 #### Returns
@@ -738,7 +738,7 @@ Returns the incoming spatial tangent for the specified keyframe, if the named pr
 
 #### Parameters
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
+| `keyIndex`   | The index for the keyframe. Integer, in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 #### Returns
@@ -761,7 +761,7 @@ Returns the incoming temporal ease for the specified keyframe.
 
 #### Parameters
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
+| `keyIndex`   | The index for the keyframe. Integer, in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 #### Returns
@@ -788,7 +788,7 @@ Read only. Keyframe color labels can be set by [setLabelAtKey](#propertysetlabel
 
 #### Parameters
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
+| `keyIndex`   | The index for the keyframe. Integer, in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 #### Returns
@@ -807,7 +807,7 @@ Returns the outgoing interpolation type for the specified keyframe.
 
 #### Parameters
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
+| `keyIndex`   | The index for the keyframe. Integer, in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 #### Returns
@@ -830,7 +830,7 @@ Returns the outgoing spatial tangent for the specified keyframe.
 
 #### Parameters
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
+| `keyIndex`   | The index for the keyframe. Integer, in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 #### Returns
@@ -853,7 +853,7 @@ Returns the outgoing temporal ease for the specified keyframe.
 
 #### Parameters
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
+| `keyIndex`   | The index for the keyframe. Integer, in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 #### Returns
@@ -876,7 +876,7 @@ Returns `true` if the specified keyframe is roving. The first and last keyframe 
 
 #### Parameters
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
+| `keyIndex`   | The index for the keyframe. Integer, in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 #### Returns
@@ -895,7 +895,7 @@ Returns `true` if the specified keyframe is selected.
 
 #### Parameters
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
+| `keyIndex`   | The index for the keyframe. Integer, in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 #### Returns
@@ -914,7 +914,7 @@ Returns `true` if the specified keyframe has spatial auto-Bezier interpolation. 
 
 #### Parameters
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
+| `keyIndex`   | The index for the keyframe. Integer, in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 #### Returns
@@ -933,7 +933,7 @@ Returns `true` if the specified keyframe has spatial continuity. If the property
 
 #### Parameters
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
+| `keyIndex`   | The index for the keyframe. Integer, in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 #### Returns
@@ -952,7 +952,7 @@ Returns `true` if the specified keyframe has temporal auto-Bezier interpolation.
 
 #### Parameters
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
+| `keyIndex`   | The index for the keyframe. Integer, in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 #### Returns
@@ -971,7 +971,7 @@ Returns `true` if the specified keyframe has temporal continuity. Temporal conti
 
 #### Parameters
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
+| `keyIndex`   | The index for the keyframe. Integer, in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 #### Returns
@@ -991,7 +991,7 @@ Finds the specified keyframe or marker and returns the time at which it occurs. 
 
 #### Parameters
 
-| `keyIndex`      | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
+| `keyIndex`      | The index for the keyframe. Integer, in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |-----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `markerComment` | The comment string attached to a marker (see<br/>[MarkerValue.comment](../other/markervalue.md#markervaluecomment) attribute).                                                  |
 
@@ -1014,7 +1014,7 @@ Finds the specified keyframe or marker and returns its current value. If no keyf
 
 #### Parameters
 
-| `keyIndex`      | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
+| `keyIndex`      | The index for the keyframe. Integer, in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |-----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `markerComment` | The comment string attached to a marker (see<br/>[MarkerValue.comment](../other/markervalue.md#markervaluecomment) attribute).                                                  |
 
@@ -1053,7 +1053,7 @@ Removes the specified keyframe from the named property. If no keyframe with the 
 
 #### Parameters
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
+| `keyIndex`   | The index for the keyframe. Integer, in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 #### Returns
@@ -1098,7 +1098,7 @@ Sets the `in` and `out` interpolation types for the specified keyframe.
 
 #### Parameters
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).                                                                                                                          |
+| `keyIndex`   | The index for the keyframe. Integer, in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).                                                                                                                          |
 |--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `inType`     | The incoming interpolation type. A `KeyframeInterpolationType`<br/>enumerated value; one of:<br/><br/>- `KeyframeInterpolationType.LINEAR`<br/>- `KeyframeInterpolationType.BEZIER`<br/>- `KeyframeInterpolationType.HOLD`                                                                              |
 | `outType`    | (Optional) The outgoing interpolation type. If not supplied, the<br/>'out' type is set to the `inType` value. A<br/>`KeyframeInterpolationType` enumerated value; one of:<br/><br/>- `KeyframeInterpolationType.LINEAR`<br/>- `KeyframeInterpolationType.BEZIER`<br/>- `KeyframeInterpolationType.HOLD` |
@@ -1121,7 +1121,7 @@ Set the label color for the keyframe. Colors are represented by their number (0 
 
 #### Parameters
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
+| `keyIndex`   | The index for the keyframe. Integer, in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `labelIndex` | The index for the new label value. An integer in<br/>the range 0-16.                                                                                                             |
 
@@ -1183,7 +1183,7 @@ Turns roving on or off for the specified keyframe. The first and last keyframe i
 
 #### Parameters
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
+| `keyIndex`   | The index for the keyframe. Integer, in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `newVal`     | `true` to turn roving on, `false` to turn roving off.                                                                                                                                |
 
@@ -1203,7 +1203,7 @@ Selects or deselects the specified keyframe.
 
 #### Parameters
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
+| `keyIndex`   | The index for the keyframe. Integer, in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `onOff`      | `true` to select the keyframe, `false` to deselect it.                                                                                                                               |
 
@@ -1223,7 +1223,7 @@ Turns spatial auto-Bezier interpolation on or off for the specified keyframe. If
 
 #### Parameters
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
+| `keyIndex`   | The index for the keyframe. Integer, in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `newVal`     | `true` to turn spatial auto-Bezier on, `false` to turn it off.                                                                                                                       |
 
@@ -1243,7 +1243,7 @@ Turns spatial continuity on or off for the specified keyframe. If the property v
 
 #### Parameters
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
+| `keyIndex`   | The index for the keyframe. Integer, in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `newVal`     | `true` to turn spatial auto-Bezier on, `false` to turn it off.                                                                                                                       |
 
@@ -1263,7 +1263,7 @@ Sets the incoming and outgoing tangent vectors for the specified keyframe. If th
 
 #### Parameters
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the [addKey](#propertyaddkey) or [nearestKeyIndex()](#propertynearestkeyindex) method.                                                                                                                                                                                                                    |
+| `keyIndex`   | The index for the keyframe. Integer, in the range<br/>`[1..numKeys]`, as returned by the [addKey](#propertyaddkey) or [nearestKeyIndex()](#propertynearestkeyindex) method.                                                                                                                                                                                                                    |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `inTangent`  | The incoming tangent vector. An array of 2 or 3 floating-point<br/>values.<br/><br/>- If the property value type is<br/>  `PropertyValueType.TwoD_SPATIAL`, the array contains 2<br/>  values.<br/>- If the property value type is<br/>  `PropertyValueType.ThreeD_SPATIAL`, the array contains 3<br/>  values.                                                                                    |
 | `outTangent` | (Optional) The outgoing tangent vector. If not supplied, the<br/>`out` tangent is set to the `inTangent` value. An array of<br/>2 or 3 floating-point values.<br/><br/>- If the property value type is<br/>  `PropertyValueType.TwoD_SPATIAL`, the array contains 2<br/>  values.<br/>- If the property value type is<br/>  `PropertyValueType.ThreeD_SPATIAL`, the array contains 3<br/>  values. |
@@ -1284,7 +1284,7 @@ Turns temporal auto-Bezier interpolation on or off for the specified keyframe. W
 
 #### Parameters
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
+| `keyIndex`   | The index for the keyframe. Integer, in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `newVal`     | `true` to turn temporal auto-Bezier on, `false` to turn it off.                                                                                                                      |
 
@@ -1304,7 +1304,7 @@ Turns temporal continuity on or off for the specified keyframe. When temporal co
 
 #### Parameters
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
+| `keyIndex`   | The index for the keyframe. Integer, in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `newVal`     | `true` to turn temporal continuity on, `false` to turn it off.                                                                                                                       |
 
@@ -1324,7 +1324,7 @@ Sets the incoming and outgoing temporal ease for the specified keyframe. See [Ke
 
 #### Parameters
 
-| `keyIndex`        | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).                                                                                                                                                                                                                                                                            |
+| `keyIndex`        | The index for the keyframe. Integer, in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).                                                                                                                                                                                                                                                                            |
 |-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `inTemporalEase`  | The incoming temporal ease. An array of 1, 2, or 3<br/>KeyframeEase objects.<br/><br/>- If the property value type is<br/>  `PropertyValueType.TwoD`, the array contains 2<br/>  objects.<br/>- If the property value type is<br/>  `PropertyValueType.ThreeD`, the array contains 3<br/>  objects.<br/>- For all other value types, the array contains 1 object.                                                                                         |
 | `outTemporalEase` | (Optional) The outgoing temporal ease. If not supplied,<br/>the outgoing ease is set to the `inTemporalEase` value.<br/>An array of 1, 2, or 3 KeyframeEase objects.<br/><br/>- If the property value type is<br/>  `PropertyValueType.TwoD`, the array contains 2<br/>  objects.<br/>- If the property value type is<br/>  `PropertyValueType.ThreeD`, the array contains 3<br/>  objects.<br/>- For all other value types, the array contains 1 object. |
@@ -1364,7 +1364,7 @@ Finds the specified keyframe and sets its value. If the named property has no ke
 
 #### Parameters
 
-| `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
+| `keyIndex`   | The index for the keyframe. Integer, in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `newValue`   | A value appropriate for the type of property being set; see<br/>[Property.propertyValueType](#propertypropertyvaluetype).                                                       |
 

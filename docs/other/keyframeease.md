@@ -43,7 +43,7 @@ The influence value of the keyframe, as shown in the Keyframe Velocity dialog bo
 
 #### Type
 
-Floating-point value in the range `[0.1..100.0]`; read/write.
+Floating-point value, in the range `[0.1..100.0]`; read/write.
 
 ---
 

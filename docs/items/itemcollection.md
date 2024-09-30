@@ -22,14 +22,14 @@ Creates a new composition. Creates and returns a new CompItem object and adds it
 
 #### Parameters
 
-|   Parameter   |                        Type                        |                 Description                 |
-| ------------- | -------------------------------------------------- | ------------------------------------------- |
-| `name`        | String                                             | The name of the composition.                |
-| `width`       | Integer in the range `[4..30000]`                  | The width of the composition in pixels.     |
-| `height`      | Integer in the range `[4..30000]`                  | The height of the composition in pixels.    |
-| `pixelAspect` | Floating-point value in the range `[0.01..100.0]`  | The pixel aspect ratio of the composition.  |
-| `duration`    | Floating-point value in the range `[0.0..10800.0]` | The duration of the composition in seconds. |
-| `frameRate`   | Floating-point value in the range `[1.0..99.0]`    | The frame rate of the composition.          |
+|   Parameter   |                        Type                         |                 Description                 |
+| ------------- | --------------------------------------------------- | ------------------------------------------- |
+| `name`        | String                                              | The name of the composition.                |
+| `width`       | Integer, in the range `[4..30000]`                  | The width of the composition in pixels.     |
+| `height`      | Integer, in the range `[4..30000]`                  | The height of the composition in pixels.    |
+| `pixelAspect` | Floating-point value, in the range `[0.01..100.0]`  | The pixel aspect ratio of the composition.  |
+| `duration`    | Floating-point value, in the range `[0.0..10800.0]` | The duration of the composition in seconds. |
+| `frameRate`   | Floating-point value, in the range `[1.0..99.0]`    | The frame rate of the composition.          |
 
 #### Returns
 

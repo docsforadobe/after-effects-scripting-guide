@@ -49,7 +49,7 @@ A frame rate to use instead of the `nativeFrameRate` value. If set to 0, the `na
 
 #### Type
 
-Floating-point value in the range `[0.0..99.0]`; read/write.
+Floating-point value, in the range `[0.0..99.0]`; read/write.
 
 ---
 
@@ -66,7 +66,7 @@ The effective frame rate as displayed and rendered in compositions by After Effe
 
 #### Type
 
-Floating-point value in the range `[0.0..99.0]`; read-only.
+Floating-point value, in the range `[0.0..99.0]`; read-only.
 
 ---
 
@@ -172,7 +172,7 @@ The number of times that the footage is to be played consecutively when used in 
 
 #### Type
 
-Integer in the range `[1..9999]`; default is 1; read/write.
+Integer, in the range `[1..9999]`; default is 1; read/write.
 
 ---
 
@@ -189,7 +189,7 @@ The native frame rate of the footage.
 
 #### Type
 
-Floating-point; read-only.
+Floating-point value; read-only.
 
 ---
 
@@ -206,7 +206,7 @@ The color to be premultiplied. This attribute is valid only if the `alphaMode` i
 
 #### Type
 
-Array of three floating-point values `[R, G, B]`, in the range `[0.0..1.0]`; read/write.
+Array of three floating-point values, `[R, G, B]`, in the range `[0.0..1.0]`; read/write.
 
 ---
 

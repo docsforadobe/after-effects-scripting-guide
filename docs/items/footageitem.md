@@ -103,13 +103,13 @@ Changes the source of this FootageItem to the specified placeholder. Creates a n
 
 #### Parameters
 
-|  Parameter  |                        Type                        |                 Description                 |
-| ----------- | -------------------------------------------------- | ------------------------------------------- |
-| `name`      | String                                             | The name of the placeholder.                |
-| `width`     | Integer in the range `[4..30000]`                  | The width of the placeholder in pixels.     |
-| `height`    | Integer in the range `[4..30000]`                  | The height of the placeholder in pixels.    |
-| `frameRate` | Floating-point value in the range `[1.0..99.0]`    | The frame rate of the placeholder.          |
-| `duration`  | Floating-point value in the range `[0.0..10800.0]` | The duration of the placeholder in seconds. |
+|  Parameter  |                        Type                         |                 Description                 |
+| ----------- | --------------------------------------------------- | ------------------------------------------- |
+| `name`      | String                                              | The name of the placeholder.                |
+| `width`     | Integer, in the range `[4..30000]`                  | The width of the placeholder in pixels.     |
+| `height`    | Integer, in the range `[4..30000]`                  | The height of the placeholder in pixels.    |
+| `frameRate` | Floating-point value, in the range `[1.0..99.0]`    | The frame rate of the placeholder.          |
+| `duration`  | Floating-point value, in the range `[0.0..10800.0]` | The duration of the placeholder in seconds. |
 
 ---
 
@@ -148,6 +148,6 @@ Changes the source of this FootageItem to the specified solid. Creates a new Sol
 | ------------- | ----------------------------------------------------------------------------- | ------------------------------------ |
 | `color`       | Array of three floating-point values, `[R, G, B]`, in the range `[0.0..1.0]`. | The color of the solid.              |
 | `name`        | String                                                                        | The name of the solid.               |
-| `width`       | Integer in the range `[4..30000]`                                             | The width of the solid in pixels.    |
-| `height`      | Integer in the range `[4..30000]`                                             | The height of the solid in pixels.   |
-| `pixelAspect` | Floating-point value in the range `[0.01..100.0]`                             | The pixel aspect ratio of the solid. |
+| `width`       | Integer, in the range `[4..30000]`                                            | The width of the solid in pixels.    |
+| `height`      | Integer, in the range `[4..30000]`                                            | The height of the solid in pixels.   |
+| `pixelAspect` | Floating-point value, in the range `[0.01..100.0]`                            | The pixel aspect ratio of the solid. |

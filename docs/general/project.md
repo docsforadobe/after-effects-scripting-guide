@@ -545,7 +545,7 @@ Setting values other than 2.2 or 2.4 will cause a scripting error.
 
 #### Type
 
-Number; read/write.
+`2.2` or `2.4`; read/write.
 
 #### Examples
 
@@ -728,13 +728,13 @@ Creates and returns a new PlaceholderItem and adds it to the project's items arr
 
 #### Parameters
 
-|  Parameter  |                 Type                 |                 Description                 |
-| ----------- | ------------------------------------ | ------------------------------------------- |
-| `name`      | String                               | The name of the placeholder.                |
-| `width`     | Integer, in the range `[4..30000]`   | The width of the placeholder in pixels.     |
-| `height`    | Integer, in the range `[4..30000]`   | The height of the placeholder in pixels.    |
-| `frameRate` | Float, in the range `[1.0..99.0]`    | The frame rate of the placeholder.          |
-| `duration`  | Float, in the range `[0.0..10800.0]` | The duration of the placeholder in seconds. |
+|  Parameter  |                        Type                         |                 Description                 |
+| ----------- | --------------------------------------------------- | ------------------------------------------- |
+| `name`      | String                                              | The name of the placeholder.                |
+| `width`     | Integer, in the range `[4..30000]`                  | The width of the placeholder in pixels.     |
+| `height`    | Integer, in the range `[4..30000]`                  | The height of the placeholder in pixels.    |
+| `frameRate` | Floating-point value, in the range `[1.0..99.0]`    | The frame rate of the placeholder.          |
+| `duration`  | Floating-point value, in the range `[0.0..10800.0]` | The duration of the placeholder in seconds. |
 
 #### Returns
 

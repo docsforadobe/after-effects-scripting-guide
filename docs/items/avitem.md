@@ -31,7 +31,7 @@ Returns the duration, in seconds, of the item. Still footage items have a durati
 
 #### Type
 
-Floating-point value in the range `[0.0..10800.0]`; read/write for a [CompItem](../items/compitem.md); otherwise, read-only.
+Floating-point value, in the range `[0.0..10800.0]`; read/write for a [CompItem](../items/compitem.md); otherwise, read-only.
 
 ---
 
@@ -59,7 +59,7 @@ Returns the length of a frame for this AVItem, in seconds. This is the reciproca
 
 #### Type
 
-Floating-point value in the range `[1/99..1.0]`; read-only for a [FootageItem](../items/footageitem.md), otherwise read/write.
+Floating-point value, in the range `[1/99..1.0]`; read-only for a [FootageItem](../items/footageitem.md), otherwise read/write.
 
 ---
 
@@ -76,7 +76,7 @@ The frame rate of the AVItem, in frames-per-second. This is the reciprocal of th
 
 #### Type
 
-Floating-point value in the range `[1.0..99.0]`; read-only for a [FootageItem](../items/footageitem.md), otherwise read/write.
+Floating-point value, in the range `[1.0..99.0]`; read-only for a [FootageItem](../items/footageitem.md), otherwise read/write.
 
 ---
 
@@ -127,7 +127,7 @@ The height of the item in pixels.
 
 #### Type
 
-Integer in the range `[1..30000]`; read/write, except as noted.
+Integer, in the range `[1..30000]`; read/write, except as noted.
 
 ---
 
@@ -269,7 +269,7 @@ The width of the item, in pixels.
 
 #### Type
 
-Integer in the range `[1..30000]`; read/write, except as noted.
+Integer, in the range `[1..30000]`; read/write, except as noted.
 
 ---
 
@@ -331,13 +331,13 @@ Creates a PlaceholderSource object with specified values, sets this as the value
 
 #### Parameters
 
-|  Parameter  |                 Type                  |                 Description                 |
-| ----------- | ------------------------------------- | ------------------------------------------- |
-| `name`      | String                                | The name of the new object.                 |
-| `width`     | Integer in the range `[4..30000]`     | The pixel dimensions of the placeholder.    |
-| `height`    | Integer in the range `[4..30000]`     | The pixel dimensions of the placeholder.    |
-| `frameRate` | Integer in the range `[1..99]`        | Frame rate for the proxy.                   |
-| `duration`  | Integer in the range `[0.0..10800.0]` | The total length in seconds, up to 3 hours. |
+|  Parameter  |                  Type                  |                 Description                 |
+| ----------- | -------------------------------------- | ------------------------------------------- |
+| `name`      | String                                 | The name of the new object.                 |
+| `width`     | Integer, in the range `[4..30000]`     | The pixel dimensions of the placeholder.    |
+| `height`    | Integer, in the range `[4..30000]`     | The pixel dimensions of the placeholder.    |
+| `frameRate` | Integer, in the range `[1..99]`        | Frame rate for the proxy.                   |
+| `duration`  | Integer, in the range `[0.0..10800.0]` | The total length in seconds, up to 3 hours. |
 
 #### Returns
 
@@ -386,8 +386,8 @@ Creates a [SolidSource object](../sources/solidsource.md) with specified values,
 | ----------------- | ----------------------------------------------------------------------------- | ---------------------------------------- |
 | `color`           | Array of three floating-point values, `[R, G, B]`, in the range `[0.0..1.0]`. | The color of the solid.                  |
 | `name`            | String                                                                        | The name of the new object.              |
-| `width`, `height` | Integer in the range `[1..30000]`                                             | The pixel dimensions of the placeholder. |
-| `pixelAspect`     | Floating-point value in the range `[0.01..100.0]`                             | The pixel aspect ratio of the solid.     |
+| `width`, `height` | Integer, in the range `[1..30000]`                                            | The pixel dimensions of the placeholder. |
+| `pixelAspect`     | Floating-point value, in the range `[0.01..100.0]`                            | The pixel aspect ratio of the solid.     |
 
 #### Returns
 

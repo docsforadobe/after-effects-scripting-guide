@@ -71,7 +71,7 @@ The exposure value for the current view.
 
 #### Type
 
-Floating-point value in the range `[-40..40]`
+Floating-point value, in the range `[-40..40]`
 
 ---
 
@@ -209,4 +209,4 @@ Sets the current zoom value for the view, as a normalized percentage between 1% 
 
 #### Type
 
-Floating-point value in the range `[0.01..16]`
+Floating-point value, in the range `[0.01..16]`

@@ -849,10 +849,10 @@ After execution of the script is complete, these settings will be reset to what 
 
 #### Parameters
 
-|   Parameter    |       Type        |                                                 Description                                                  |
-| -------------- | ----------------- | ------------------------------------------------------------------------------------------------------------ |
-| `mfr_on`       | Boolean           | Set to `true` to enable Multi-Frame Rendering.                                                               |
-| `max_cpu_perc` | Float, from 1-100 | The maximum CPU percentage Multi-Frame Rendering should utilize. If `mfr_on` is set to `false`, pass in 100. |
+|   Parameter    |                     Type                      |                                                 Description                                                  |
+| -------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| `mfr_on`       | Boolean                                       | Set to `true` to enable Multi-Frame Rendering.                                                               |
+| `max_cpu_perc` | Floating-point value, in the range `[1..100]` | The maximum CPU percentage Multi-Frame Rendering should utilize. If `mfr_on` is set to `false`, pass in 100. |
 
 #### Returns
 
