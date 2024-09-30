@@ -131,7 +131,7 @@ Array, with each element containing the following properties; read-only:
 |   Property    |  Type  |                                                                           Description                                                                           |
 | ------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `displayName` | String | A string representing the localized display name of the effect as seen in the Effect menu.                                                                      |
-| `category`    | String | A string representing the localized category label as seen in the Effect menu. This can be `""` for synthetic effects that aren't normally shown to the user.     |
+| `category`    | String | A string representing the localized category label as seen in the Effect menu. This can be `""` for synthetic effects that aren't normally shown to the user.   |
 | `matchName`   | String | A string representing the internal unique name for the effect. This name does not change between versions of After Effects. Use this value to apply the effect. |
 | `version`     | String | Effect's internal version string. This value might be different than the version number the plug-in vendor decides to show in the effect's about box.           |
 
@@ -472,8 +472,8 @@ Ends the suppression of script error dialog boxes in the user interface. Error d
 
 #### Parameters
 
-| Parameter |  Type   |                                                     Description                                                     |
-| --------- | ------- | ------------------------------------------------------------------------------------------------------------------- |
+| Parameter |  Type   |                                                     Description                                                      |
+| --------- | ------- | -------------------------------------------------------------------------------------------------------------------- |
 | `alert`   | Boolean | When `true`, errors that have occurred following the call to `beginSuppressDialogs()` are displayed in a dialog box. |
 
 #### Returns
@@ -708,22 +708,22 @@ Loads color swatch data from an Adobe Swatch Exchange (ASE) file.
 
 #### Parameters
 
-| Parameter |                                              Type                                              |      Description      |
-| --------- | ---------------------------------------------------------------------------------------------- | --------------------- |
-| `file`    | [Extendscript File](https://extendscript.docsforadobe.dev/file-system-access/file-object.html) | The ASE file to parse |
+| Parameter |                                              Type                                              |      Description       |
+| --------- | ---------------------------------------------------------------------------------------------- | ---------------------- |
+| `file`    | [Extendscript File](https://extendscript.docsforadobe.dev/file-system-access/file-object.html) | The ASE file to parse. |
 
 #### Returns
 
 The swatch data, in this format:
 
-|                                       Property                                       |                                                                                                           Description                                                                                                           |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `data.majorVersion`<br/>`data.minorVersion`                                          | The ASE version number.                                                                                                                                                                                                         |
-| `data.values`                                                                        | An array of Swatch Value.                                                                                                                                                                                                       |
-| `SwatchValue.type`                                                                   | One of "RGB", "CMYK", "LAB", "Gray"                                                                                                                                                                                             |
-| `SwatchValue.r`<br/><br/>`SwatchValue.g`<br/>`SwatchValue.b`                         | When `type = "RGB"`, the color values in the<br/>range `[0.0..1.0]`.<br/>0, 0, 0 is Black.                                                                                                                                      |
-| `SwatchValue.c`<br/><br/>`SwatchValue.m`<br/>`SwatchValue.y`<br/>`SwatchValue.k`     | When `type` = "CMYK", the color values in the<br/>range  [0.0..1.0].<br/>0, 0, 0, 0 is White.                                                                                                                                   |
-| `SwatchValue.L`<br/>`SwatchValue.a`<br/><br/>`SwatchValue.b`<br/>`SwatchValue.value` | When `type = "LAB"`, the color values.<br/>`L` is in the range [0.0..1.0]. `a` and `b`<br/>are in the range [-128.0..+128.0]<br/>0, 0, 0 is Black.<br/>When `type = "Gray"`, the `value` range is<br/>[0.0..1.0]. 0.0 is Black. |
+|                                    Property                                     |                                                                                                                 Description                                                                                                                 |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `data.majorVersion`<br/>`data.minorVersion`                                     | The ASE version number.                                                                                                                                                                                                                     |
+| `data.values`                                                                   | An array of Swatch Value.                                                                                                                                                                                                                   |
+| `SwatchValue.type`                                                              | One of "RGB", "CMYK", "LAB", "Gray"                                                                                                                                                                                                         |
+| `SwatchValue.r`<br/>`SwatchValue.g`<br/>`SwatchValue.b`                         | When `type = "RGB"`, the color values in the<br/>range `[0.0..1.0]`.<br/>`[0, 0, 0]` is Black.                                                                                                                                              |
+| `SwatchValue.c`<br/>`SwatchValue.m`<br/>`SwatchValue.y`<br/>`SwatchValue.k`     | When `type` = "CMYK", the color values in the<br/>range `[0.0..1.0]`.<br/>`[0, 0, 0, 0]` is White.                                                                                                                                          |
+| `SwatchValue.L`<br/>`SwatchValue.a`<br/>`SwatchValue.b`<br/>`SwatchValue.value` | When `type = "LAB"`, the color values.<br/>`L` is in the range `[0.0..1.0]`. `a` and `b`<br/>are in the range `[-128.0..+128.0]`<br/>`[0, 0, 0]` is Black.<br/>When `type = "Gray"`, the `value` range is<br/>`[0.0..1.0]`. `0.0` is Black. |
 
 ---
 

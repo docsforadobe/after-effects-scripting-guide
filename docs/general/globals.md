@@ -75,7 +75,7 @@ This method avoids a problem where `Math.random()` would not return random value
 
 #### Returns
 
-Floating-point, pseudo-random number in the range [0, 1].
+Floating-point, pseudo-random number in the range `[0..1]`.
 
 #### Example
 

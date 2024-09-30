@@ -103,7 +103,7 @@ The time set as the beginning of the composition, in seconds. This is the equiva
 
 #### Type
 
-Floating-point value in the range [-10800.0..86339.0] (-3:00:00:00 to 23:59:00:00); read/write.
+Floating-point value in the range `[-10800.0..86339.0]` (-3:00:00:00 to 23:59:00:00); read/write.
 
 ---
 
@@ -517,10 +517,11 @@ Use the `motionGraphicsTemplateName` attribute to set the name.
 Optionally specify the path to the folder where the Motion Graphics template file is saved. If not specified, the file will be saved in the current
 user's Motion Graphics Templates folder:
 
-```text
-macOS: /Users/<name>/Library/Application Support/Adobe/Common/Motion Graphics Templates/
-Windows: C:\Users\<name>\AppData\Roaming\Adobe\Common\Motion Graphics Templates\
-```
+|   OS    |                                        Path                                         |
+| ------- | ----------------------------------------------------------------------------------- |
+| macOS   | `/Users/<name>/Library/Application Support/Adobe/Common/Motion Graphics Templates/` |
+| Windows | `C:\Users\<name>\AppData\Roaming\Adobe\Common\Motion Graphics Templates\`           |
+
 
 If the project has been changed since the last time it was saved, After Effects will prompt the user to save the project. To avoid this, use the
 project `save()` method before exporting the Motion Graphics template.
@@ -600,9 +601,9 @@ Returns a Layer object, which can be specified by name, an index position in thi
 
 #### Parameters
 
-| Parameter |                                               Type                                                |                        Description                         |
-| --------- | ------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
-| `index`   | Integer in the range [1..numLayers], where `numLayers` is the number of layers in the composition | The index number of the desired layer in this composition. |
+| Parameter |                                                Type                                                 |                        Description                         |
+| --------- | --------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
+| `index`   | Integer in the range `[1..numLayers]`, where `numLayers` is the number of layers in the composition | The index number of the desired layer in this composition. |
 
 or:
 
