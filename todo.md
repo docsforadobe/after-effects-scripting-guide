@@ -14,6 +14,16 @@
     - [x] Fix empty links
     - [ ] Update tables
       - [ ] Add new "Type" field, because it's a Good Thing
+      - [x] ./general
+      - [ ] ./introduction
+      - [ ] ./items
+      - [ ] ./layers
+      - [ ] ./matchnames
+      - [ ] ./other
+      - [ ] ./properties
+      - [ ] ./renderqueue
+      - [ ] ./sources
+      - [ ] ./text
     - [x] Fix images
     - [x] Fix headers
 - [ ] Project Cleanup

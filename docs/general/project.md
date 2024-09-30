@@ -181,7 +181,9 @@ A `FramesCountType` enumerated value; read/write. One of:
 
 #### Description
 
-The Use Feet + Frames setting in the Project Settings dialog box. `true` if using Feet + Frames; `false` if using Frames.
+The "Use Feet + Frames" setting in the Project Settings dialog box.
+
+`true` if using Feet + Frames; `false` if using Frames.
 
 #### Type
 
@@ -220,20 +222,20 @@ var type_str = "";
 // check the current value and alert the user
 
 switch (currentGPUSettings) {
-    case GpuAccelType.CUDA:
-        type_str = "CUDA";
-        break;
-    case GpuAccelType.METAL:
-        type_str = "Metal";
-        break;
-    case GpuAccelType.OPENCL:
-        type_str = "OpenCL";
-        break;
-    case GpuAccelType.SOFTWARE:
-        type_str = "Software";
-        break;
-    default:
-        type_str = "UNKNOWN";
+   case GpuAccelType.CUDA:
+      type_str = "CUDA";
+      break;
+   case GpuAccelType.METAL:
+      type_str = "Metal";
+      break;
+   case GpuAccelType.OPENCL:
+      type_str = "OpenCL";
+      break;
+   case GpuAccelType.SOFTWARE:
+      type_str = "Software";
+      break;
+   default:
+      type_str = "UNKNOWN";
 }
 
 alert("Your current setting is " + type_str);
@@ -315,7 +317,8 @@ alert("There are " + numItems + " items in this project.")
 
 #### Description
 
-The renderqueue of the project.
+The [Render Queue](renderqueue/renderqueue) of the project.
+
 
 #### Type
 
@@ -495,7 +498,9 @@ Boolean; read/write.
 
 #### Description
 
-Returns an Array of Objects containing references to used fonts and the Text Layers and times on which they appear in the current [Project](#project). Each object is composed of `font` which is a [Font object](../text/fontobject.md#fontobject), and `usedAt` which is an Array of Objects, each composed of `layerID`, a [Layer.id](../layers/layer.md#layerid), and `layerTimeD` for when. See [Project.layerByID()](#projectlayerbyid) to retrieve the layers.
+Returns an Array of Objects containing references to used fonts and the Text Layers and times on which they appear in the current [Project](#project).
+
+Each object is composed of `font` which is a [Font object](../text/fontobject.md#fontobject), and `usedAt` which is an Array of Objects, each composed of `layerID`, a [Layer.id](../layers/layer.md#layerid), and `layerTimeD` for when. See [Project.layerByID()](#projectlayerbyid) to retrieve the layers.
 
 ```javascript
 var usedList = app.project.usedFonts;
@@ -532,7 +537,11 @@ Array of Objects; read-only.
 
 #### Description
 
-The current project's working gamma value, either 2.2 or 2.4. Setting values other than 2.2 or 2.4 will cause a scripting error. Note that when the project's color working space is set, the working gamma value is ignored by After Effects.
+The current project's working gamma value, either 2.2 or 2.4.
+
+Setting values other than 2.2 or 2.4 will cause a scripting error.
+
+?> **Note:** When the project's color working space is set, the working gamma value is ignored by After Effects.
 
 #### Type
 
@@ -617,9 +626,10 @@ Automatically replaces text found in broken expressions in the project, if the n
 
 #### Parameters
 
-| `oldText`   | The text to replace.   |
-|-------------|------------------------|
-| `newText`   | The new text.          |
+| Parameter |  Type  |     Description      |
+| --------- | ------ | -------------------- |
+| `oldText` | String | The text to replace. |
+| `newText` | String | The new text.        |
 
 #### Returns
 
@@ -637,8 +647,10 @@ Closes the project with the option of saving changes automatically, prompting th
 
 #### Parameters
 
-| `closeOptions`   | Action to be performed on close. A `CloseOptions`<br/>enumerated value, one of:<br/><br/>- `CloseOptions.DO_NOT_SAVE_CHANGES`: Close without<br/>  saving.<br/>- `CloseOptions.PROMPT_TO_SAVE_CHANGES`:Prompt for<br/>  whether to save changes before close.<br/>- `CloseOptions.SAVE_CHANGES`: Save automatically on<br/>  close.   |
-|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|   Parameter    |        Type         |                                                                                                                                                          Description                                                                                                                                                           |
+| -------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `closeOptions` | `CloseOptions` enum | Action to be performed on close. A `CloseOptions`<br/>enumerated value, one of:<br/>- `CloseOptions.DO_NOT_SAVE_CHANGES`: Close without<br/>  saving.<br/>- `CloseOptions.PROMPT_TO_SAVE_CHANGES`:Prompt for<br/>  whether to save changes before close.<br/>- `CloseOptions.SAVE_CHANGES`: Save automatically on<br/>  close. |
+
 
 #### Returns
 
@@ -676,8 +688,9 @@ Creates and returns a new FootageItem object from the file, and adds it to the p
 
 #### Parameters
 
-| `importOptions`   | An [ImportOptions object](../other/importoptions.md#importoptions) specifying the file to<br/>import and the options for the operation.   |
-|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+|    Parameter    |                    Type                    |                               Description                                |
+| --------------- | ------------------------------------------ | ------------------------------------------------------------------------ |
+| `importOptions` | [ImportOptions](../other/importoptions.md) | Options specifying the file to import and the options for the operation. |
 
 #### Returns
 
@@ -715,12 +728,13 @@ Creates and returns a new PlaceholderItem and adds it to the project's items arr
 
 #### Parameters
 
-| `name`      | A string containing the name of the placeholder.                                                      |
-|-------------|-------------------------------------------------------------------------------------------------------|
-| `width`     | The width of the placeholder in pixels, an integer in the range<br/>`[4..30000]`.                     |
-| `height`    | The height of the placeholder in pixels, an integer in the<br/>range `[4..30000]`.                    |
-| `frameRate` | The frame rate of the placeholder, a floating-point value in<br/>the range `[1.0..99.0]`.             |
-| `duration`  | The duration of the placeholder in seconds, a floating-point<br/>value in the range `[0.0..10800.0]`. |
+|  Parameter  |                 Type                 |                Description                 |
+| ----------- | ------------------------------------ | ------------------------------------------ |
+| `name`      | String                               | The name of the placeholder                |
+| `width`     | Integer, in the range `[4..30000]`   | The width of the placeholder in pixels     |
+| `height`    | Integer, in the range `[4..30000]`   | The height of the placeholder in pixels    |
+| `frameRate` | Float, in the range `[1.0..99.0]`    | The frame rate of the placeholder          |
+| `duration`  | Float, in the range `[0.0..10800.0]` | The duration of the placeholder in seconds |
 
 #### Returns
 
@@ -738,8 +752,9 @@ Retrieves an item at a specified index position.
 
 #### Parameters
 
-| `index`   | The index position of the item, an integer. The first item is at<br/>index 1.   |
-|-----------|---------------------------------------------------------------------------------|
+| Parameter |  Type   |                          Description                          |
+| --------- | ------- | ------------------------------------------------------------- |
+| `index`   | Integer | The index position of the item. The first item is at index 1. |
 
 #### Returns
 
@@ -759,8 +774,9 @@ Retrieves an item by its [Item ID](../items/item.md#itemid)
 
 #### Parameters
 
-| `id`   | The ID of an item, an integer.   |
-|--------|----------------------------------|
+| Parameter |  Type   |    Description    |
+| --------- | ------- | ----------------- |
+| `id`      | Integer | The ID of an item |
 
 #### Returns
 
@@ -780,8 +796,9 @@ Instance method on Project which, when given a valid ID value, returns the Layer
 
 #### Parameters
 
-| `id`   | A non-negative integer representing the ID of the Layer to be retrieved from the Project.   |
-|--------|---------------------------------------------------------------------------------------------|
+| Parameter |          Type          |                      Description                      |
+| --------- | ---------------------- | ----------------------------------------------------- |
+| `id`      | Integer (non-negative) | The ID of the Layer to be retrieved from the Project. |
 
 #### Returns
 
@@ -829,8 +846,9 @@ Removes all items from the project except those specified. Same as the File > Re
 
 #### Parameters
 
-| `array_of_items`   | An array containing the [Item objects](../items/item.md#item) that are<br/>to be kept.   |
-|--------------------|------------------------------------------------------------------------------------------|
+|    Parameter     |                   Type                    |      Description      |
+| ---------------- | ----------------------------------------- | --------------------- |
+| `array_of_items` | Array of [Item objects](../items/item.md) | The items to be kept. |
 
 #### Returns
 
@@ -892,10 +910,11 @@ var layerChanged = app.project.replaceFont(fromFont, toFont);
 
 #### Parameters
 
-| `fromFont`      | A [Font object](../text/fontobject.md#fontobject) to be replaced.     |
-|-----------------|-----------------------------------------------------------------------|
-| `toFont`        | A [Font object](../text/fontobject.md#fontobject) to replace it with. |
-| `noFontLocking` | An optional Boolean, defaults to `false`                                |
+|    Parameter    |                 Type                 |          Description          |
+| --------------- | ------------------------------------ | ----------------------------- |
+| `fromFont`      | [Font object](../text/fontobject.md) | Font to be replaced.          |
+| `toFont`        | [Font object](../text/fontobject.md) | Font to replace it with.      |
+| `noFontLocking` | Boolean                              | Optional, defaults to `false` |
 
 #### Returns
 
@@ -915,8 +934,9 @@ Pass a [File](https://extendscript.docsforadobe.dev/file-system-access/file-obje
 
 #### Parameters
 
-| `file`   | Optional. An [Extendscript File](https://extendscript.docsforadobe.dev/file-system-access/file-object.html) object for the file to save.   |
-|----------|--------------------------------------------------------------------------------------------------------------------------------------------|
+| Parameter |                                              Type                                              |         Description         |
+| --------- | ---------------------------------------------------------------------------------------------- | --------------------------- |
+| `file`    | [Extendscript File](https://extendscript.docsforadobe.dev/file-system-access/file-object.html) | Optional. The file to save. |
 
 #### Returns
 
@@ -952,8 +972,9 @@ Sets the folder that will be shown in the file import dialog. This location will
 
 #### Parameters
 
-| `folder`   | [Extendscript Folder](https://extendscript.docsforadobe.dev/file-system-access/folder-object.html) object.   |
-|------------|--------------------------------------------------------------------------------------------------------------|
+| Parameter |                                                Type                                                |       Description        |
+| --------- | -------------------------------------------------------------------------------------------------- | ------------------------ |
+| `folder`  | [Extendscript Folder](https://extendscript.docsforadobe.dev/file-system-access/folder-object.html) | Folder to set as default |
 
 #### Returns
 
@@ -985,8 +1006,9 @@ Shows or hides the Project panel.
 
 #### Parameters
 
-| `doShow`   | When `true`, show the Project panel. When `false`, hide the Project<br/>panel.   |
-|------------|------------------------------------------------------------------------------|
+| Parameter |  Type   |                                Description                                 |
+| --------- | ------- | -------------------------------------------------------------------------- |
+| `doShow`  | Boolean | When `true`, show the Project panel. When `false`, hide the Project panel. |
 
 #### Returns
 
@@ -1008,9 +1030,10 @@ Creates a new team project.
 
 #### Parameters
 
-| `teamProjectName`   | Team project name, string value.                  |
-|---------------------|---------------------------------------------------|
-| `description`       | Optional. Team project description, string value. |
+|     Parameter     |  Type  |          Description          |
+| ----------------- | ------ | ----------------------------- |
+| `teamProjectName` | String | Team project name             |
+| `description`     | String | Optional. Project description |
 
 #### Returns
 
@@ -1030,8 +1053,9 @@ Opens a team project.
 
 #### Parameters
 
-| `teamProjectName`   | Team project name, string value.   |
-|---------------------|------------------------------------|
+|     Parameter     |  Type  |    Description    |
+| ----------------- | ------ | ----------------- |
+| `teamProjectName` | String | Team project name |
 
 #### Returns
 
@@ -1051,8 +1075,9 @@ Shares the currently open team project.
 
 #### Parameters
 
-| `comment`   | Comment, string value. Optional.   |
-|-------------|------------------------------------|
+| Parameter |  Type  |    Description     |
+| --------- | ------ | ------------------ |
+| `comment` | String | Optional. Comment. |
 
 #### Returns
 
@@ -1104,8 +1129,9 @@ Converts a team project to an After Effects project on a local disk.
 
 #### Parameters
 
-| `project_file`   | File object for the local After Effects project.<br/>File extension should be either .aep or .aet (.aepx is not supported).   |
-|------------------|-------------------------------------------------------------------------------------------------------------------------------|
+|   Parameter    |                                              Type                                              |                                               Description                                               |
+| -------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `project_file` | [Extendscript File](https://extendscript.docsforadobe.dev/file-system-access/file-object.html) | The local After Effects project. File extension should be either .aep or .aet (.aepx is not supported). |
 
 #### Returns
 
@@ -1142,8 +1168,9 @@ Checks whether specified team project is currently open.
 
 #### Parameters
 
-| `teamProjectName`   | Team project name, string value.   |
-|---------------------|------------------------------------|
+|     Parameter     |  Type  |    Description    |
+| ----------------- | ------ | ----------------- |
+| `teamProjectName` | String | Team project name |
 
 #### Returns
 
@@ -1259,8 +1286,10 @@ Resolves a conflict between the open team project and the version on the team pr
 
 #### Parameters
 
-| `ResolveType`   | The type of conflict resolution to use. A `ResolveType` enumerated value, one of:<br/><br/>> - `ResolveType.ACCEPT_THEIRS`: Take the shared version.<br/>>   The shared version replaces your version.<br/>> - `ResolveType.ACCEPT_YOURS`: Keep your version of the project.<br/>>   The shared version is not taken.<br/>> - `ResolveType.ACCEPT_THEIRS_AND_COPY`: Copy and rename your version,<br/>>   then take the shared version. The shared version replaces your original version   |
-|-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|   Parameter   |        Type        |                                                                                                                                                                                                                        Description                                                                                                                                                                                                                        |
+| ------------- | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ResolveType` | `ResolveType` enum | The type of conflict resolution to use. A `ResolveType` enumerated value, one of:<br/> - `ResolveType.ACCEPT_THEIRS`: Take the shared version. The shared version replaces your version.<br/> - `ResolveType.ACCEPT_YOURS`: Keep your version of the project. The shared version is not taken.<br/> - `ResolveType.ACCEPT_THEIRS_AND_COPY`: Copy and rename your version, then take the shared version. The shared version replaces your original version |
+
 
 #### Returns
 

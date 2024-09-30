@@ -92,8 +92,9 @@ alert("Current time is " + timeStr);
 
 #### Parameters
 
-| `cmdLineToExecute`   | A string containing the command and its parameters.   |
-|----------------------|-------------------------------------------------------|
+|     Parameter      |  Type  |           Description           |
+| ------------------ | ------ | ------------------------------- |
+| `cmdLineToExecute` | String | The command and its parameters. |
 
 #### Returns
 

@@ -432,8 +432,9 @@ Marks the beginning of an undo group, which allows a script to logically group a
 
 #### Parameters
 
-| `undoString`   | The text that will appear for the Undo command in the<br/>Edit menu (that is, "Undo ")   |
-|----------------|------------------------------------------------------------------------------------------|
+|  Parameter   |  Type  |                                    Description                                    |
+| ------------ | ------ | --------------------------------------------------------------------------------- |
+| `undoString` | String | The text that will appear for the Undo command in the Edit menu (that is, "Undo") |
 
 #### Returns
 
@@ -451,8 +452,9 @@ Removes the specified task from the queue of tasks scheduled for delayed executi
 
 #### Parameters
 
-| `taskID`   | An integer that identifies the task, as returned by<br/>[app.scheduleTask()](#appscheduletask).   |
-|------------|-----------------------------------------------------------------------------------|
+| Parameter |  Type   |                                         Description                                         |
+| --------- | ------- | ------------------------------------------------------------------------------------------- |
+| `taskID`  | Integer | An integer that identifies the task, as returned by [app.scheduleTask()](#appscheduletask). |
 
 #### Returns
 
@@ -470,8 +472,9 @@ Ends the suppression of script error dialog boxes in the user interface. Error d
 
 #### Parameters
 
-| `alert`   | Boolean;   | When `true`, errors that have occurred following<br/>the call to `beginSuppressDialogs()` are<br/>displayed in adialog box.   |
-|-----------|------------|-----------------------------------------------------------------------------------------------------------------------------|
+| Parameter |  Type   |                                                     Description                                                     |
+| --------- | ------- | ------------------------------------------------------------------------------------------------------------------- |
+| `alert`   | Boolean | When `true`, errors that have occurred following the call to `beginSuppressDialogs()` are displayed in a dialog box. |
 
 #### Returns
 
@@ -538,8 +541,9 @@ These web sites have more information and lists of the known numbers:
 
 #### Parameters
 
-| `id`   | The ID number of the command.   |
-|--------|---------------------------------|
+| Parameter |  Type   |          Description          |
+| --------- | ------- | ----------------------------- |
+| `id`      | Integer | The ID number of the command. |
 
 #### Returns
 
@@ -556,7 +560,7 @@ app.executeCommand(4162);
 
 ### app.findMenuCommandId()
 
-`app.findMenuCommandId(Command)`
+`app.findMenuCommandId(command)`
 
 #### Description
 
@@ -571,8 +575,9 @@ These web sites have more information and lists of the known numbers:
 
 #### Parameters
 
-| `Command`   | The text of the menu command, exactly as it is shown in the UI.   |
-|-------------|-------------------------------------------------------------------|
+| Parameter |  Type  |                           Description                           |
+| --------- | ------ | --------------------------------------------------------------- |
+| `command` | String | The text of the menu command, exactly as it is shown in the UI. |
 
 #### Returns
 
@@ -626,8 +631,9 @@ Opens a project.
 
 #### Parameters
 
-| `file`   | Optional   | An [Extendscript File](https://extendscript.docsforadobe.dev/file-system-access/file-object.html) object for the project file to open. If not supplied, the method prompts the user to select a project file.   |
-|----------|------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Parameter |                                              Type                                              |                                              Description                                               |
+| --------- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| `file`    | [Extendscript File](https://extendscript.docsforadobe.dev/file-system-access/file-object.html) | Optional. Project file to open. If not supplied, the method prompts the user to select a project file. |
 
 #### Returns
 
@@ -660,8 +666,9 @@ Opens a project faster than `app.open()` by skipping some checks.
 
 #### Parameters
 
-| `file`   | An [Extendscript File](https://extendscript.docsforadobe.dev/file-system-access/file-object.html) object for the project file to open.   |
-|----------|------------------------------------------------------------------------------------------------------------------------------------------|
+| Parameter |                                              Type                                              |      Description      |
+| --------- | ---------------------------------------------------------------------------------------------- | --------------------- |
+| `file`    | [Extendscript File](https://extendscript.docsforadobe.dev/file-system-access/file-object.html) | Project file to open. |
 
 #### Returns
 
@@ -701,15 +708,17 @@ Loads color swatch data from an Adobe Swatch Exchange (ASE) file.
 
 #### Parameters
 
-| `file`   | The file specification, an [Extendscript File](https://extendscript.docsforadobe.dev/file-system-access/file-object.html) object.   |
-|----------|-------------------------------------------------------------------------------------------------------------------------------------|
+| Parameter |                                              Type                                              |      Description      |
+| --------- | ---------------------------------------------------------------------------------------------- | --------------------- |
+| `file`    | [Extendscript File](https://extendscript.docsforadobe.dev/file-system-access/file-object.html) | The ASE file to parse |
 
 #### Returns
 
 The swatch data, in this format:
 
+|                                       Property                                       |                                                                                                           Description                                                                                                           |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `data.majorVersion`<br/>`data.minorVersion`                                          | The ASE version number.                                                                                                                                                                                                         |
-|--------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `data.values`                                                                        | An array of Swatch Value.                                                                                                                                                                                                       |
 | `SwatchValue.type`                                                                   | One of "RGB", "CMYK", "LAB", "Gray"                                                                                                                                                                                             |
 | `SwatchValue.r`<br/><br/>`SwatchValue.g`<br/>`SwatchValue.b`                         | When `type = "RGB"`, the color values in the<br/>range `[0.0..1.0]`.<br/>0, 0, 0 is Black.                                                                                                                                      |
@@ -728,8 +737,9 @@ Pauses or resumes the search of the target watch folder for items to render.
 
 #### Parameters
 
-| `pause`   | `true` to pause, `false` to resume.   |
-|-----------|-----------------------------------|
+| Parameter |  Type   |             Description             |
+| --------- | ------- | ----------------------------------- |
+| `pause`   | Boolean | `true` to pause, `false` to resume. |
 
 #### Returns
 
@@ -747,11 +757,7 @@ Nothing.
 
 `app.purge(target)`
 
-?> **Note:** This functionality was updated in After Effects 24.3 to allow the `ALL_CACHES` enumerated value to clear both the RAM and disk cache, with the ALL_MEMORY_CACHES enumerated value added to purge only the RAM.
-<br/>
-<br/>
-In versions prior to 24.3, `ALL_CACHES` will only clear the RAM cache.
-<br/>
+?> **Note:** This functionality was updated in After Effects 24.3 to allow the `ALL_CACHES` enumerated value to clear both the RAM and disk cache, with the ALL_MEMORY_CACHES enumerated value added to purge only the RAM. In versions prior to 24.3, `ALL_CACHES` will only clear the RAM cache.
 
 #### Description
 
@@ -759,8 +765,9 @@ Purges unused data of the specified types. Replicates the Purge options in the E
 
 #### Parameters
 
-| `target`   | The type of elements to purge from memory; a PurgeTarget enumerated value, one of:<br/><br/><br/>∙ `PurgeTarget.ALL_CACHES`: Purges all data that After Effects has cached to both RAM and disk cache.<br/><br/><br/>∙ `PurgeTarget.ALL_MEMORY_CACHES`: Purges all data that After Effects has cached to RAM.  *(new in 24.3)*<br/><br/><br/>∙ `PurgeTarget.UNDO_CACHES`: Purges all data saved in the undo cache.<br/><br/><br/>∙ `PurgeTarget.SNAPSHOT_CACHES`: Purges all data cached as composition/layer snapshots.<br/><br/><br/>∙ `PurgeTarget.IMAGE_CACHES`: Purges all saved image data.<br/><br/>   |
-|------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Parameter |        Type        |                                                                                                                                                                                                                                                                        Description                                                                                                                                                                                                                                                                        |
+| --------- | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `target`  | `PurgeTarget` enum | The type of elements to purge from memory; a PurgeTarget enumerated value, one of:<br/>- `PurgeTarget.ALL_CACHES`: Purges all data that After Effects has cached to both RAM and disk cache.<br/>- `PurgeTarget.ALL_MEMORY_CACHES`: Purges all data that After Effects has cached to RAM.  *(new in 24.3)*<br/>- `PurgeTarget.UNDO_CACHES`: Purges all data saved in the undo cache.<br/>- `PurgeTarget.SNAPSHOT_CACHES`: Purges all data cached as composition/layer snapshots.<br/>- `PurgeTarget.IMAGE_CACHES`: Purges all saved image data.<br/><br/> |
 
 #### Returns
 
@@ -796,10 +803,11 @@ Schedules the specified JavaScript for delayed execution.
 
 #### Parameters
 
-| `stringToExecute`   | A string containing JavaScript to be executed.                                                                                                  |
-|---------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
-| `delay`             | A number of milliseconds to wait before executing<br/>the JavaScript. A floating-point value.                                                   |
-| `repeat`            | When `true`, execute the script repeatedly, with the<br/>specified delay between each execution. When `false` the script is executed only once. |
+|     Parameter     |  Type   |                                                                 Description                                                                  |
+| ----------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| `stringToExecute` | String  | A string containing JavaScript to be executed.                                                                                               |
+| `delay`           | Float   | A number of milliseconds to wait before executing the JavaScript.                                                                            |
+| `repeat`          | Boolean | When `true`, execute the script repeatedly, with the specified delay between each execution. When `false`, the script is executed only once. |
 
 #### Returns
 
@@ -817,9 +825,10 @@ Sets memory usage limits as in the Memory & Cache preferences area. For both val
 
 #### Parameters
 
-| `imageCachePercentage`    | Floating-point value, the percentage of memory<br/>assigned to image cache.   |
-|---------------------------|-------------------------------------------------------------------------------|
-| `maximumMemoryPercentage` | Floating-point value, the maximum usable<br/>percentage of memory.            |
+|         Parameter         | Type  |                    Description                    |
+| ------------------------- | ----- | ------------------------------------------------- |
+| `imageCachePercentage`    | Float | The percentage of memory assigned to image cache. |
+| `maximumMemoryPercentage` | Float | The maximum usable percentage of memory.          |
 
 #### Returns
 
@@ -840,9 +849,10 @@ After execution of the script is complete, these settings will be reset to what 
 
 #### Parameters
 
-| `mfr_on`       | Boolean value. Set to `true` to enable Multi-Frame Rendering.                                                                              |
-|----------------|--------------------------------------------------------------------------------------------------------------------------------------------|
-| `max_cpu_perc` | Value from 1-100 representing the maximum CPU percentage Multi-Frame Rendering should utilize. If `mfr_on` is set to `false`, pass in 100. |
+|   Parameter    |       Type        |                                                 Description                                                  |
+| -------------- | ----------------- | ------------------------------------------------------------------------------------------------------------ |
+| `mfr_on`       | Boolean           | Set to `true` to enable Multi-Frame Rendering.                                                               |
+| `max_cpu_perc` | Float, from 1-100 | The maximum CPU percentage Multi-Frame Rendering should utilize. If `mfr_on` is set to `false`, pass in 100. |
 
 #### Returns
 
@@ -860,8 +870,9 @@ Set or clears the flag that determines whether preferences are saved when the ap
 
 #### Parameters
 
-| `doSave`   | When `true`, preferences saved on quit, when `false` they are not.   |
-|------------|------------------------------------------------------------------|
+| Parameter |  Type   |                            Description                             |
+| --------- | ------- | ------------------------------------------------------------------ |
+| `doSave`  | Boolean | When `true`, preferences saved on quit, when `false` they are not. |
 
 #### Returns
 
@@ -879,8 +890,9 @@ Starts a Watch Folder (network rendering) process pointed at a specified folder.
 
 #### Parameters
 
-| `folder_object_to_watch`   | The [Folder](https://extendscript.docsforadobe.dev/file-system-access/folder-object.html) object for the folder to watch.   |
-|----------------------------|-----------------------------------------------------------------------------------------------------------------------------|
+|        Parameter         |                                                Type                                                |     Description      |
+| ------------------------ | -------------------------------------------------------------------------------------------------- | -------------------- |
+| `folder_object_to_watch` | [Extendscript Folder](https://extendscript.docsforadobe.dev/file-system-access/folder-object.html) | The folder to watch. |
 
 #### Returns
 
