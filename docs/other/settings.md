@@ -37,7 +37,7 @@ Retrieves a script settings item value from the preferences file.
 | `sectionName`   | A string containing the name of a settings section.        |
 |-----------------|------------------------------------------------------------|
 | `keyName`       | A string containing the key name of the setting item.      |
-| `prefType`      | Optional, an enum indicating which preference file to use. |
+| `prefType`      | Optional. An enum indicating which preference file to use. |
 
 #### Returns
 
@@ -67,7 +67,7 @@ Returns `true` if the specified script settings item exists and has a value.
 | `sectionName`   | A string containing the name of a settings section.        |
 |-----------------|------------------------------------------------------------|
 | `keyName`       | A string containing the key name of the setting item.      |
-| `prefType`      | Optional, an enum indicating which preference file to use. |
+| `prefType`      | Optional. An enum indicating which preference file to use. |
 
 #### Returns
 
@@ -91,7 +91,7 @@ Saves a value for a script settings item.
 |-----------------|------------------------------------------------------------|
 | `keyName`       | A string containing the key name of the setting item.      |
 | `value`         | A string containing the new value.                         |
-| `prefType`      | Optional, an enum indicating which preference file to use. |
+| `prefType`      | Optional. An enum indicating which preference file to use. |
 
 #### Returns
 

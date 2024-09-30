@@ -914,7 +914,7 @@ var layerChanged = app.project.replaceFont(fromFont, toFont);
 | --------------- | ------------------------------------ | ----------------------------- |
 | `fromFont`      | [Font object](../text/fontobject.md) | Font to be replaced.          |
 | `toFont`        | [Font object](../text/fontobject.md) | Font to replace it with.      |
-| `noFontLocking` | Boolean                              | Optional, defaults to `false` |
+| `noFontLocking` | Boolean                              | Optional. Defaults to `false` |
 
 #### Returns
 

@@ -43,7 +43,7 @@ Deletes a preference from the preference file.
 | `sectionName`   | A string containing the name of a preferences section     |
 |-----------------|-----------------------------------------------------------|
 | `keyName`       | A string containing the key name of the preference        |
-| `prefType`      | Optional, an enum indicating which preference file to use |
+| `prefType`      | Optional. An enum indicating which preference file to use |
 
 #### Returns
 
@@ -72,7 +72,7 @@ Retrieves a preference value from the preferences file, and parses it as a boole
 | `sectionName`   | A string containing the name of a preferences section     |
 |-----------------|-----------------------------------------------------------|
 | `keyName`       | A string containing the key name of the preference        |
-| `prefType`      | Optional, an enum indicating which preference file to use |
+| `prefType`      | Optional. An enum indicating which preference file to use |
 
 #### Returns
 
@@ -109,7 +109,7 @@ Retrieves a preference value from the preferences file, and parses it as a float
 | `sectionName`   | A string containing the name of a preferences section     |
 |-----------------|-----------------------------------------------------------|
 | `keyName`       | A string containing the key name of the preference        |
-| `prefType`      | Optional, an enum indicating which preference file to use |
+| `prefType`      | Optional. An enum indicating which preference file to use |
 
 #### Returns
 
@@ -130,7 +130,7 @@ Retrieves a preference value from the preferences file, and parses it as a long 
 | `sectionName`   | A string containing the name of a preferences section     |
 |-----------------|-----------------------------------------------------------|
 | `keyName`       | A string containing the key name of the preference        |
-| `prefType`      | Optional, an enum indicating which preference file to use |
+| `prefType`      | Optional. An enum indicating which preference file to use |
 
 #### Returns
 
@@ -151,7 +151,7 @@ Retrieves a preference value from the preferences file, and parses it as a strin
 | `sectionName`   | A string containing the name of a preferences section     |
 |-----------------|-----------------------------------------------------------|
 | `keyName`       | A string containing the key name of the preference        |
-| `prefType`      | Optional, an enum indicating which preference file to use |
+| `prefType`      | Optional. An enum indicating which preference file to use |
 
 #### Returns
 
@@ -172,7 +172,7 @@ Returns `true` if the specified preference item exists and has a value.
 | `sectionName`   | A string containing the name of a preferences section     |
 |-----------------|-----------------------------------------------------------|
 | `keyName`       | A string containing the key name of the preference        |
-| `prefType`      | Optional, an enum indicating which preference file to use |
+| `prefType`      | Optional. An enum indicating which preference file to use |
 
 #### Returns
 
@@ -212,7 +212,7 @@ Saves a preference item as a boolean.
 |-----------------|-----------------------------------------------------------|
 | `keyName`       | A string containing the key name of the preference        |
 | `value`         | A boolean containing the new value                        |
-| `prefType`      | Optional, an enum indicating which preference file to use |
+| `prefType`      | Optional. An enum indicating which preference file to use |
 
 #### Returns
 
@@ -234,7 +234,7 @@ Saves a preference item as a float.
 |-----------------|-----------------------------------------------------------|
 | `keyName`       | A string containing the key name of the preference        |
 | `value`         | A float containing the new value                          |
-| `prefType`      | Optional, an enum indicating which preference file to use |
+| `prefType`      | Optional. An enum indicating which preference file to use |
 
 #### Returns
 
@@ -256,7 +256,7 @@ Saves a preference item as a long.
 |-----------------|-----------------------------------------------------------|
 | `keyName`       | A string containing the key name of the preference        |
 | `value`         | A long containing the new value                           |
-| `prefType`      | Optional, an enum indicating which preference file to use |
+| `prefType`      | Optional. An enum indicating which preference file to use |
 
 #### Returns
 
@@ -278,7 +278,7 @@ Saves a preference item as a string.
 |-----------------|-----------------------------------------------------------|
 | `keyName`       | A string containing the key name of the preference        |
 | `value`         | A string containing the new value                         |
-| `prefType`      | Optional, an enum indicating which preference file to use |
+| `prefType`      | Optional. An enum indicating which preference file to use |
 
 #### Returns
 
