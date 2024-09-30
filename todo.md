@@ -16,7 +16,7 @@
       - [x] ./general
       - [x] ./introduction
       - [x] ./items
-      - [ ] ./layers
+      - [x] ./layers
       - [x] ./matchnames
       - [ ] ./other
       - [ ] ./properties

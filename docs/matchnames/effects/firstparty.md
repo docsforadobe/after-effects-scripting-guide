@@ -235,7 +235,7 @@ This list also details effect Bits Per Channel (BPC) and the AE version GPU-acce
 | `ADBE Linear Color Key2`    | Linear Color Key          | 32  |     |
 
 ---
-|                             |                           |         |         |
+
 ## Matte
 
 |        Match Name        | Display Name (EN) | BPC | GPU |
