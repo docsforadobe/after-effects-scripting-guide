@@ -475,8 +475,10 @@ Moves this layer to a position immediately after (below) the specified layer.
 
 #### Parameters
 
-| `layer` | The target layer, a layer object in the same composition. |
-| ------- | --------------------------------------------------------- |
+| Parameter |                Type                |                Description                |
+| --------- | ---------------------------------- | ----------------------------------------- |
+| `layer`   | [Layer object](../layers/layer.md) | The target layer in the same composition. |
+
 
 #### Returns
 
@@ -494,8 +496,9 @@ Moves this layer to a position immediately before (above) the specified layer.
 
 #### Parameters
 
-| `layer` | The target layer, a layer object in the same composition. |
-| ------- | --------------------------------------------------------- |
+| Parameter |                Type                |                Description                |
+| --------- | ---------------------------------- | ----------------------------------------- |
+| `layer`   | [Layer object](../layers/layer.md) | The target layer in the same composition. |
 
 #### Returns
 
@@ -573,7 +576,7 @@ If you do not want the child layer to jump, set the [parent](#layerparent) attri
 
 |  Parameter  |                Type                |                                       Description                                        |
 | ----------- | ---------------------------------- | ---------------------------------------------------------------------------------------- |
-| `newParent` | [Layer object](../layers/layer.md) | Optional, a layer in the same composition. If not specified, it sets the parent to None. |
+| `newParent` | [Layer object](../layers/layer.md) | Optional. A layer in the same composition. If not specified, it sets the parent to None. |
 
 #### Returns
 
