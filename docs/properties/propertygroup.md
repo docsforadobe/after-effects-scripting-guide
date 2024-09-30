@@ -90,13 +90,13 @@ One workaround is to store the index of the added property with property.propert
 
 #### Description
 
-Returns true if a property with the given name can be added to this property group.
+Returns `true` if a property with the given name can be added to this property group.
 
 For example, you can only add mask to a mask group. The only legal input arguments are "mask" or "ADBE Mask Atom".
 
 ```javascript
-maskGroup.canAddProperty("mask"); // returns true
-maskGroup.canAddProperty("ADBE Mask Atom"); // returns true
+maskGroup.canAddProperty("mask"); // returns `true`
+maskGroup.canAddProperty("ADBE Mask Atom"); // returns `true`
 maskGroup.canAddProperty("blend"); // returns false
 ```
 

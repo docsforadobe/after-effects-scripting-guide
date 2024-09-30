@@ -30,7 +30,7 @@ The [Extendscript File](https://extendscript.docsforadobe.dev/file-system-access
 
 #### Description
 
-When true, writes all source footage XMP metadata to the output file. Corresponds to the Include Source XMP Metadata option in the Output Module Settings dialog box.
+When `true`, writes all source footage XMP metadata to the output file. Corresponds to the Include Source XMP Metadata option in the Output Module Settings dialog box.
 
 #### Type
 

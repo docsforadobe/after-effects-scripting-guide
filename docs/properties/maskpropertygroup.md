@@ -32,7 +32,7 @@ Array of three floating-point values, [R, G, B], in the range `[0.0..1.0]`; read
 
 #### Description
 
-When true, the mask is inverted; otherwise false.
+When `true`, the mask is inverted; otherwise `false`.
 
 #### Type
 
@@ -46,7 +46,7 @@ Boolean; read/write.
 
 #### Description
 
-When true, the mask is locked and cannot be edited in the user interface; otherwise, false.
+When `true`, the mask is locked and cannot be edited in the user interface; otherwise `false`.
 
 #### Type
 
@@ -117,7 +117,7 @@ A `MakMotionBlur` enumerated value; read/write. One of:
 
 #### Description
 
-When true, the mask is a RotoBezier shape; otherwise, false.
+When `true`, the mask is a RotoBezier shape; otherwise `false`.
 
 #### Type
 

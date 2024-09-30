@@ -46,7 +46,7 @@ Integer (8, 16, or 32 only); read/write.
 
 #### Description
 
-True if Compensate for Scene-referred Profiles should be enabled for this project; otherwise false.
+`true` if Compensate for Scene-referred Profiles should be enabled for this project; otherwise `false`.
 
 #### Type
 
@@ -64,7 +64,7 @@ Boolean; read/write.
 
 #### Description
 
-True if the project has been modified from the last save; otherwise false.
+`true` if the project has been modified from the last save; otherwise `false`.
 
 "Dirty" projects will have an `*` in the project window title.
 
@@ -181,7 +181,7 @@ A `FramesCountType` enumerated value; read/write. One of:
 
 #### Description
 
-The Use Feet + Frames setting in the Project Settings dialog box. True if using Feet + Frames; false if using Frames.
+The Use Feet + Frames setting in the Project Settings dialog box. `true` if using Feet + Frames; `false` if using Frames.
 
 #### Type
 
@@ -264,7 +264,7 @@ All of the items in the project.
 
 #### Description
 
-True if linear blending should be used for this project; otherwise false.
+`true` if linear blending should be used for this project; otherwise `false`.
 
 #### Type
 
@@ -280,7 +280,7 @@ Boolean; read/write.
 
 #### Description
 
-True if Linearize Working Space should be enabled for this project; otherwise false.
+`true` if Linearize Working Space should be enabled for this project; otherwise `false`.
 
 #### Type
 
@@ -479,7 +479,7 @@ if (item !== null && (item.typeName === "Footage" || item.typeName === "Composit
 
 #### Description
 
-When true, thumbnail views use the transparency checkerboard pattern.
+When `true`, thumbnail views use the transparency checkerboard pattern.
 
 #### Type
 
@@ -642,7 +642,7 @@ Closes the project with the option of saving changes automatically, prompting th
 
 #### Returns
 
-Boolean. True on success. False if the file has not been previously saved, the user is prompted, and the user cancels the save.
+Boolean. `true` on success. `false` if the file has not been previously saved, the user is prompted, and the user cancels the save.
 
 ---
 
@@ -879,9 +879,9 @@ This operation exposes the same mechanism and policy used for automatic font rep
 
 This operation is not undoable.
 
-The optional parameter `noFontLocking` controls what happens when the `toFont` has no glyphs for the text it is applied to. By default a fallback font will be selected which will have the necessary glyphs, but if this parameter is set to true then this fallback will not take place and missing glyphs will result. There is no way at the current time to detect or report this.
+The optional parameter `noFontLocking` controls what happens when the `toFont` has no glyphs for the text it is applied to. By default a fallback font will be selected which will have the necessary glyphs, but if this parameter is set to `true` then this fallback will not take place and missing glyphs will result. There is no way at the current time to detect or report this.
 
-Note that when `fromFont` is a substituted font and the `toFont` has the same font properties no fallback can occur and the parameter is ignored and treated as true.
+Note that when `fromFont` is a substituted font and the `toFont` has the same font properties no fallback can occur and the parameter is ignored and treated as `true`.
 
 ```javascript
 var fromFont = app.project.usedFonts[0].font;
@@ -895,11 +895,11 @@ var layerChanged = app.project.replaceFont(fromFont, toFont);
 | `fromFont`      | A [Font object](../text/fontobject.md#fontobject) to be replaced.     |
 |-----------------|-----------------------------------------------------------------------|
 | `toFont`        | A [Font object](../text/fontobject.md#fontobject) to replace it with. |
-| `noFontLocking` | An optional Boolean, defaults to false                                |
+| `noFontLocking` | An optional Boolean, defaults to `false`                                |
 
 #### Returns
 
-Boolean. True if at least one Layer was changed.
+Boolean. `true` if at least one Layer was changed.
 
 ---
 
@@ -938,7 +938,7 @@ None.
 
 #### Returns
 
-Boolean; true if the project was saved.
+Boolean; `true` if the project was saved.
 
 ---
 
@@ -967,7 +967,7 @@ Any of the following will set the default import folder to C:/My Folder:
 * `app.project.setDefaultImportFolder(new Folder("C:/My Folder"));`
 * `app.project.setDefaultImportFolder(Folder("C:/My Folder"));`
 
-Note: if the path refers to an existing file and not a folder, the Folder function returns a File object instead of a Folder object, which will cause `setDefaultImportFolder()` to return false.
+Note: if the path refers to an existing file and not a folder, the Folder function returns a File object instead of a Folder object, which will cause `setDefaultImportFolder()` to return `false`.
 
 To set the default import folder to the current user's desktop folder: `app.project.setDefaultImportFolder(Folder.desktop);`
 
@@ -985,7 +985,7 @@ Shows or hides the Project panel.
 
 #### Parameters
 
-| `doShow`   | When true, show the Project panel. When false, hide the Project<br/>panel.   |
+| `doShow`   | When `true`, show the Project panel. When `false`, hide the Project<br/>panel.   |
 |------------|------------------------------------------------------------------------------|
 
 #### Returns
@@ -1014,7 +1014,7 @@ Creates a new team project.
 
 #### Returns
 
-Boolean. `True` if the team project is successfully created, `false` otherwise.
+Boolean. `true` if the team project is successfully created, otherwise `false`.
 
 ---
 
@@ -1035,7 +1035,7 @@ Opens a team project.
 
 #### Returns
 
-Boolean. `True` if the team project is successfully opened, `false` otherwise.
+Boolean. `true` if the team project is successfully opened, otherwise `false`.
 
 ---
 
@@ -1056,7 +1056,7 @@ Shares the currently open team project.
 
 #### Returns
 
-Boolean. `True` if the team project is successfully shared, `false` otherwise.
+Boolean. `true` if the team project is successfully shared, otherwise `false`.
 
 ---
 
@@ -1072,7 +1072,7 @@ Syncs the currently open team project.
 
 #### Returns
 
-Boolean. `True` if the team project is successfully synced, `false` otherwise.
+Boolean. `true` if the team project is successfully synced, otherwise `false`.
 
 ---
 
@@ -1088,7 +1088,7 @@ Closes a currently open team project.
 
 #### Returns
 
-Boolean. `True` if the team project is successfully closed, `false` otherwise.
+Boolean. `true` if the team project is successfully closed, otherwise `false`.
 
 ---
 
@@ -1109,7 +1109,7 @@ Converts a team project to an After Effects project on a local disk.
 
 #### Returns
 
-Boolean. `True` if the team project is successfully converted, `false` otherwise.
+Boolean. `true` if the team project is successfully converted, otherwise `false`.
 
 ---
 
@@ -1147,7 +1147,7 @@ Checks whether specified team project is currently open.
 
 #### Returns
 
-Boolean. `True` if the specified team project is currently open, `false` otherwise.
+Boolean. `true` if the specified team project is currently open, otherwise `false`.
 
 ---
 
@@ -1163,7 +1163,7 @@ Checks whether any team project is currently open.
 
 #### Returns
 
-Boolean. `True` if any team project is currently open, `false` otherwise.
+Boolean. `true` if any team project is currently open, otherwise `false`.
 
 ---
 
@@ -1175,11 +1175,11 @@ Boolean. `True` if any team project is currently open, `false` otherwise.
 
 #### Description
 
-Checks whether or not team project is enabled for After Effects. (This will almost always return true.)
+Checks whether or not team project is enabled for After Effects. (This will almost always return `true`.)
 
 #### Returns
 
-Boolean. `True` if team project is currently enabled, `false` otherwise.
+Boolean. `true` if team project is currently enabled, otherwise `false`.
 
 ---
 
@@ -1195,7 +1195,7 @@ Checks whether or not the client (After Effects) is currently logged into the te
 
 #### Returns
 
-Boolean. `True` if the client (After Effects) is currently logged into the team projects server, `false` otherwise.
+Boolean. `true` if the client (After Effects) is currently logged into the team projects server, otherwise `false`.
 
 ---
 
@@ -1211,7 +1211,7 @@ Checks whether or not the Sync command is enabled.
 
 #### Returns
 
-Boolean. `True` if the team projects Sync command is enabled, `false` otherwise.
+Boolean. `true` if the team projects Sync command is enabled, otherwise `false`.
 
 ---
 
@@ -1227,7 +1227,7 @@ Checks whether or not the Share command is enabled.
 
 #### Returns
 
-Boolean. `True` if the team projects Share command is enabled, `false` otherwise.
+Boolean. `true` if the team projects Share command is enabled, otherwise `false`.
 
 ---
 
@@ -1243,7 +1243,7 @@ Checks whether or not the Resolve command is enabled.
 
 #### Returns
 
-Boolean. `True` if the team projects Resolve command is enabled, `false` otherwise.
+Boolean. `true` if the team projects Resolve command is enabled, otherwise `false`.
 
 ---
 
@@ -1264,4 +1264,4 @@ Resolves a conflict between the open team project and the version on the team pr
 
 #### Returns
 
-Boolean. `True` if the resolution of the specified type was successful, `false` otherwise.
+Boolean. `true` if the resolution of the specified type was successful, otherwise `false`.

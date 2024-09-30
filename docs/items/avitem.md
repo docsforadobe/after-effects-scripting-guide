@@ -41,7 +41,7 @@ Floating-point value in the range [0.0..10800.0]; read/write for a `CompItem`; o
 
 #### Description
 
-When true, the AVItem is a placeholder, or represents footage with a source file that cannot be found. In this case, the path of the missing source file is in the `missingFootagePath` attribute of the footage item's source-file object. See [FootageItem.mainSource](footageitem.md#footageitemmainsource) and [FileSource.missingFootagePath](../sources/filesource.md#filesourcemissingfootagepath).
+When `true`, the AVItem is a placeholder, or represents footage with a source file that cannot be found. In this case, the path of the missing source file is in the `missingFootagePath` attribute of the footage item's source-file object. See [FootageItem.mainSource](footageitem.md#footageitemmainsource) and [FileSource.missingFootagePath](../sources/filesource.md#filesourcemissingfootagepath).
 
 #### Type
 
@@ -86,7 +86,7 @@ Floating-point value in the range [1.0..99.0]; read-only for a FootageItem, othe
 
 #### Description
 
-When true, the AVItem has an audio component.
+When `true`, the AVItem has an audio component.
 
 - In a CompItem, the value is linked to the composition.
 - In a FootageItem, the value is linked to the `mainSource` object.
@@ -103,7 +103,7 @@ Boolean; read-only.
 
 #### Description
 
-When true, the AVItem has a video component.
+When `true`, the AVItem has a video component.
 
 - In a CompItem, the value is linked to the composition.
 - In a FootageItem, the value is linked to the `mainSource` object.
@@ -141,7 +141,7 @@ Integer in the range [1…30000]; read/write, except as noted.
 
 Test whether the AVItem can be used as an alternate source when calling [Property.setAlternateSource()](../properties/property.md#propertysetalternatesource).
 
-Returns true if the item can be used, or false otherwise.
+Returns `true` if the item can be used, or otherwise `false`.
 
 A CompItem or a FootageItem can be used as an alternate source for the layer, with some restrictions:
 
@@ -220,7 +220,7 @@ The FootageSource being used as a proxy. The attribute is read-only; to change i
 
 #### Description
 
-The current time of the item when it is being previewed directly from the Project panel. This value is a number of seconds. Use the global method [timeToCurrentFormat()](../general/globals.md#timetocurrentformat) to convert it to a string value that expresses the time in terms of frames. It is an error to set this value for a FootageItem whose `mainSource` is still (`item.mainSource.isStill` is true).
+The current time of the item when it is being previewed directly from the Project panel. This value is a number of seconds. Use the global method [timeToCurrentFormat()](../general/globals.md#timetocurrentformat) to convert it to a string value that expresses the time in terms of frames. It is an error to set this value for a FootageItem whose `mainSource` is still (`item.mainSource.isStill` is `true`).
 
 #### Type
 
@@ -248,7 +248,7 @@ Array of CompItem objects; read-only.
 
 #### Description
 
-When true, a proxy is used for the item. It is set to true by all the `SetProxy` methods, and to false by the `SetProxyToNone()` method.
+When `true`, a proxy is used for the item. It is set to `true` by all the `SetProxy` methods, and to `false` by the `SetProxyToNone()` method.
 
 #### Type
 
@@ -283,7 +283,7 @@ Integer in the range [1…30000]; read/write, except as noted.
 
 Sets a file as the proxy of this AVItem.
 
-Loads the specified file into a new FileSource object, sets this as the value of the `proxySource` attribute, and sets `useProxy` to true.
+Loads the specified file into a new FileSource object, sets this as the value of the `proxySource` attribute, and sets `useProxy` to `true`.
 
 It does not preserve the interpretation parameters, instead using the user preferences. If the file has an unlabeled alpha channel, and the user preference says to ask the user what to do, the method estimates the alpha interpretation, rather than asking the user.
 
@@ -306,7 +306,7 @@ None.
 
 #### Description
 
-Removes the proxy from this AVItem, sets the value of `proxySource` to `null`, and sets the value of `useProxy` to false.
+Removes the proxy from this AVItem, sets the value of `proxySource` to `null`, and sets the value of `useProxy` to `false`.
 
 #### Parameters
 
@@ -324,7 +324,7 @@ Nothing.
 
 #### Description
 
-Creates a PlaceholderSource object with specified values, sets this as the value of the `proxySource` attribute, and sets `useProxy` to true. It does not preserve the interpretation parameters, instead using the user preferences.
+Creates a PlaceholderSource object with specified values, sets this as the value of the `proxySource` attribute, and sets `useProxy` to `true`. It does not preserve the interpretation parameters, instead using the user preferences.
 
 ?> **Note:** There is no direct way to set a placeholder as a proxy in the user interface; this behavior occurs when a proxy has been set and then moved or deleted.
 
@@ -347,7 +347,7 @@ Nothing.
 #### Description
 
 Sets a sequence of files as the proxy of this AVItem, with the option of forcing alphabetical order.
-Loads the specified file sequence into a new FileSource object, sets this as the value of the `proxySource` attribute, and sets `useProxy` to true.
+Loads the specified file sequence into a new FileSource object, sets this as the value of the `proxySource` attribute, and sets `useProxy` to `true`.
 
 It does not preserve the interpretation parameters, instead using the user preferences.
 If any file has an unlabeled alpha channel, and the user preference says to ask the user what to do, the method estimates the alpha interpretation, rather than asking the user.
@@ -356,7 +356,7 @@ If any file has an unlabeled alpha channel, and the user preference says to ask 
 
 | `file`              | An [Extendscript File](https://extendscript.docsforadobe.dev/file-system-access/file-object.html) object for the first file in the sequence.   |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
-| `forceAlphabetical` | When true, use the "Force alphabetical order" option.                                                                                          |
+| `forceAlphabetical` | When `true`, use the "Force alphabetical order" option.                                                                                          |
 
 #### Returns
 
@@ -370,7 +370,7 @@ Nothing.
 
 #### Description
 
-Creates a [SolidSource object](../sources/solidsource.md#solidsource) with specified values, sets this as the value of the `proxySource` attribute, and sets `useProxy` to true. It does not preserve the interpretation parameters, instead using the user preferences.
+Creates a [SolidSource object](../sources/solidsource.md#solidsource) with specified values, sets this as the value of the `proxySource` attribute, and sets `useProxy` to `true`. It does not preserve the interpretation parameters, instead using the user preferences.
 
 ?> **Note:** There is no way, using the user interface, to set a solid as a proxy; this feature is available only through scripting.
 

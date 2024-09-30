@@ -71,7 +71,7 @@ firstLayer.inPoint = 2;
 
 #### Description
 
-True if the layer is an adjustment layer.
+`true` if the layer is an adjustment layer.
 
 #### Type
 
@@ -85,7 +85,7 @@ Boolean; read/write.
 
 #### Description
 
-True if the layer's audio is active at the current time. For this value to be true, `audioEnabled` must be true, no other layer with audio may be soloing unless this layer is soloed too, and the time must be between the `inPoint`
+`true` if the layer's audio is active at the current time. For this value to be true, `audioEnabled` must be true, no other layer with audio may be soloing unless this layer is soloed too, and the time must be between the `inPoint`
 and `outPoint` of this layer.
 
 #### Type
@@ -100,7 +100,7 @@ Boolean; read-only.
 
 #### Description
 
-When true, the layer's audio is enabled. This value corresponds to the audio toggle switch in the Timeline panel.
+When `true`, the layer's audio is enabled. This value corresponds to the audio toggle switch in the Timeline panel.
 
 #### Type
 
@@ -168,7 +168,7 @@ A BlendingMode enumerated value; read/write. One of:
 
 #### Description
 
-True if it is legal to change the value of the `collapseTransformation` attribute on this layer.
+`true` if it is legal to change the value of the `collapseTransformation` attribute on this layer.
 
 #### Type
 
@@ -182,7 +182,7 @@ Boolean; read-only.
 
 #### Description
 
-True if it is legal to change the value of the `timeRemapEnabled` attribute on this layer.
+`true` if it is legal to change the value of the `timeRemapEnabled` attribute on this layer.
 
 #### Type
 
@@ -196,7 +196,7 @@ Boolean; read-only.
 
 #### Description
 
-True if collapse transformation is on for this layer.
+`true` if collapse transformation is on for this layer.
 
 #### Type
 
@@ -210,7 +210,7 @@ Boolean; read/write.
 
 #### Description
 
-True if the layer's effects are active, as indicated by the `<f>` icon next to it in the user interface.
+`true` if the layer's effects are active, as indicated by the `<f>` icon next to it in the user interface.
 
 #### Type
 
@@ -224,7 +224,7 @@ Boolean; read/write.
 
 #### Description
 
-True if this is an environment layer in a Ray-traced 3D composition. Setting this attribute to true automatically makes the layer 3D (`threeDLayer` becomes true).
+`true` if this is an environment layer in a Ray-traced 3D composition. Setting this attribute to `true` automatically makes the layer 3D (`threeDLayer` becomes true).
 
 #### Type
 
@@ -238,7 +238,7 @@ Boolean; read/write.
 
 #### Description
 
-True if frame blending is enabled for the layer.
+`true` if frame blending is enabled for the layer.
 
 #### Type
 
@@ -270,7 +270,7 @@ A FrameBlendingType enumerated value; read/write. One of:
 
 #### Description
 
-True if the layer is a guide layer.
+`true` if the layer is a guide layer.
 
 #### Type
 
@@ -284,7 +284,7 @@ Boolean; read/write.
 
 #### Description
 
-True if the layer contains an audio component, regardless of whether it is audio-enabled or soloed.
+`true` if the layer contains an audio component, regardless of whether it is audio-enabled or soloed.
 
 #### Type
 
@@ -300,7 +300,7 @@ Boolean; read-only.
 
 #### Description
 
-True if this layer has track matte. When true, this layer's `trackMatteType` value controls how the matte is applied.
+`true` if this layer has track matte. When `true`, this layer's `trackMatteType` value controls how the matte is applied.
 See [AVLayer.trackMatteType](#avlayertrackmattetype) for available track matte types.
 
 #### Type
@@ -329,7 +329,7 @@ Floating-point; read-only.
 
 #### Description
 
-True if the layer has no expressly set name, but contains a named source. In this case, `layer.name` has the same value as `layer.source.name`. False if the layer has an expressly set name, or if the layer does not have a source.
+`true` if the layer has no expressly set name, but contains a named source. In this case, `layer.name` has the same value as `layer.source.name`. `false` if the layer has an expressly set name, or if the layer does not have a source.
 
 #### Type
 
@@ -345,7 +345,7 @@ Boolean; read-only.
 
 #### Description
 
-True if this layer is being used as a track matte.
+`true` if this layer is being used as a track matte.
 
 #### Type
 
@@ -359,7 +359,7 @@ Boolean; read-only.
 
 #### Description
 
-True if motion blur is enabled for the layer.
+`true` if motion blur is enabled for the layer.
 
 #### Type
 
@@ -373,7 +373,7 @@ Boolean; read/write.
 
 #### Description
 
-True if preserve transparency is enabled for the layer.
+`true` if preserve transparency is enabled for the layer.
 
 #### Type
 
@@ -438,7 +438,7 @@ AVItem object; read-only.
 
 #### Description
 
-True if this is a 3D layer.
+`true` if this is a 3D layer.
 
 #### Type
 
@@ -452,7 +452,7 @@ Boolean; read/write.
 
 #### Description
 
-`True` if this layer has the Enable Per-character 3D switch set, allowing its characters to be animated off the plane of the text layer. Applies only to text layers.
+`true` if this layer has the Enable Per-character 3D switch set, allowing its characters to be animated off the plane of the text layer. Applies only to text layers.
 
 #### Type
 
@@ -466,7 +466,7 @@ Boolean; read/write.
 
 #### Description
 
-True if time remapping is enabled for this layer.
+`true` if time remapping is enabled for this layer.
 
 #### Type
 
@@ -556,7 +556,7 @@ Floating-point; read-only.
 
 Adds the layer to the Essential Graphics Panel for the specified composition.
 
-Returns true if the layer is successfully added, or false otherwise.
+Returns `true` if the layer is successfully added, or otherwise `false`.
 
 - If the layer cannot be added, it is either because it is not a layer type for which media can be replaced (referred to as Media Replacement Layers), or the layer has already been added to the EGP for that composition. After Effects will present a warning dialog if the layer cannot be added to the EGP.
 - Use the [AVLayer.canAddToMotionGraphicsTemplate()](#avlayercanaddtomotiongraphicstemplate) method to test whether the layer can be added to a Motion Graphics template.
@@ -582,7 +582,7 @@ Boolean.
 
 Adds the layer to the Essential Graphics Panel for the specified composition.
 
-Returns true if the layer is successfully added, or false otherwise.
+Returns `true` if the layer is successfully added, or otherwise `false`.
 
 - If the layer cannot be added, it is either because it is not a layer type for which media can be replaced (referred to as Media Replacement Layers), or the layer has already been added to the EGP for that composition. After Effects will present a warning dialog if the layer cannot be added to the EGP.
 - Use the [AVLayer.canAddToMotionGraphicsTemplate()](#avlayercanaddtomotiongraphicstemplate) method to test whether the layer can be added to a Motion Graphics template.
@@ -605,7 +605,7 @@ Boolean.
 
 #### Description
 
-Returns true if this layer's audio will be active at the specified time. For this method to return true, `audioEnabled` must be true, no other layer with audio may be soloing unless this layer is soloed too, and the time must be between the `inPoint` and `outPoint` of this layer.
+Returns `true` if this layer's audio will be active at the specified time. For this method to return `true`, `audioEnabled` must be `true`, no other layer with audio may be soloing unless this layer is soloed too, and the time must be between the `inPoint` and `outPoint` of this layer.
 
 #### Parameters
 
@@ -661,7 +661,7 @@ for (var sel in transform) {
 
 Test whether or not the layer can be added to the Essential Graphics Panel for the specified composition.
 
-Returns true if the layer can be added, or false otherwise.
+Returns `true` if the layer can be added, or otherwise `false`.
 
 If the layer cannot be added, it is either because it is not a layer type for which media can be replaced (referred to as Media Replacement Layers), or the layer has already been added to the EGP for that composition.
 
@@ -669,9 +669,9 @@ Media Replacement layers are recognized as AVLayers with an [AVLayer.source](#av
 
 The AVLayer needs to comply with the restrictions below in order to be treated as a Media Replacement layer:
 
-- [Layer.hasVideo](layer.md#layerhasvideo) should return true.
-- [AVLayer.adjustmentLayer](#avlayeradjustmentlayer) should return false.
-- [Layer.nullLayer](layer.md#layernulllayer) should return false.
+- [Layer.hasVideo](layer.md#layerhasvideo) should return `true`.
+- [AVLayer.adjustmentLayer](#avlayeradjustmentlayer) should return `false`.
+- [Layer.nullLayer](layer.md#layernulllayer) should return `false`.
 - If the [AVLayer.source](#avlayersource) is a [FootageItem object](../items/footageitem.md#footageitem), then FootageItem.FootageSource should not be a [SolidSource object](../sources/solidsource.md#solidsource).
 - If the [AVLayer.source](#avlayersource) is a [FootageItem object](../items/footageitem.md#footageitem) and the FootageItem.FootageSource is a [FileSource object](../sources/filesource.md#filesource) then that FileSource should not point to a non-media file e.g. a JSX script file.
 
@@ -771,7 +771,7 @@ Replaces the source for this layer.
 
 | `newSource`      | The new source AVItem object.                                                                                                                                                                                                                                                                                      |
 |------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `fixExpressions` | `True` to adjust expressions for the new source,<br/>`false` otherwise. Note that this feature can be<br/>resource-intensive; if replacing a large amount of<br/>footage, do this only at the end of the operation. See<br/>also [Project.autoFixExpressions()](../general/project.md#projectautofixexpressions). |
+| `fixExpressions` | `true` to adjust expressions for the new source,<br/>otherwise `false`. Note that this feature can be<br/>resource-intensive; if replacing a large amount of<br/>footage, do this only at the end of the operation. See<br/>also [Project.autoFixExpressions()](../general/project.md#projectautofixexpressions). |
 
 #### Returns
 
@@ -869,7 +869,7 @@ Retrieves the rectangle bounds of the layer at the specified time index, correct
 
 | `timeT`   | The time index, in seconds. A floating-point value.                                                                                            |
 |-----------|------------------------------------------------------------------------------------------------------------------------------------------------|
-| `extents` | `True` to include the extents, `false` otherwise. Extents<br/>apply to shape layers, increasing the size of the layer bounds<br/>as necessary. |
+| `extents` | `true` to include the extents, otherwise `false`. Extents<br/>apply to shape layers, increasing the size of the layer bounds<br/>as necessary. |
 
 #### Returns
 

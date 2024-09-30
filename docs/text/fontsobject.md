@@ -14,7 +14,7 @@ The properties we report via the proxy [Font object](fontobject.md#fontobject) a
 
 A [Font object](fontobject.md#fontobject) is a soft reference to one of these internal font proxies and as a consequence is not sufficient to keep the internal font proxy alive. As a result if the internal font proxy is removed, the referencing [Font object](fontobject.md#fontobject) will throw an invalid exception for any property reference.
 
-On project open, and a few other situations, it may come to pass that the font which is being referenced in the persisted data cannot be found in the current font ecosystem. In these situations an internal font proxy will be created which will contain the desired properties, such as PostScript name, and will return true for [isSubstitute](fontobject.md#fontobjectissubstitute). There will be an underlying real font which will be selected to support this internal font proxy, but we do not reveal what it is and there is no way to influence this selection.
+On project open, and a few other situations, it may come to pass that the font which is being referenced in the persisted data cannot be found in the current font ecosystem. In these situations an internal font proxy will be created which will contain the desired properties, such as PostScript name, and will return `true` for [isSubstitute](fontobject.md#fontobjectissubstitute). There will be an underlying real font which will be selected to support this internal font proxy, but we do not reveal what it is and there is no way to influence this selection.
 
 Continuing the open process with created substitute fonts, an attempt will be made to sync matching fonts from Creative Cloud Adobe Fonts. This is an asynchronous activity and the project will usually finish opening and be ready for use before any fonts are brought down from Adobe Fonts. Depending on how many fonts are being synced, they may be installed at different times. There is no way to disable this attempt.
 
@@ -40,9 +40,9 @@ The Family Name in one font group is not guaranteed to have unique name compared
 
 In addition, it is perfectly acceptable to have multiple fonts with the same PostScript name, though only one will have the same (PostScript name, Technology, Primary Writing Script) tuple. In the case of true duplicates, it is undefined which will be returned and which will be suppressed.
 
-The family groups and [Font objects](fontobject.md#fontobject) in the group are sorted according to the setting in the Character Panel dropdown "Show Font Names in English". If set to true, the [familyName](fontobject.md#fontobjectfamilyname) and [styleName](fontobject.md#fontobjectstylename) property is used, otherwise the [nativeFamilyName](fontobject.md#fontobjectnativefamilyname) and [nativeStyleName](fontobject.md#fontobjectnativestylename) property is used.
+The family groups and [Font objects](fontobject.md#fontobject) in the group are sorted according to the setting in the Character Panel dropdown "Show Font Names in English". If set to `true`, the [familyName](fontobject.md#fontobjectfamilyname) and [styleName](fontobject.md#fontobjectstylename) property is used, otherwise the [nativeFamilyName](fontobject.md#fontobjectnativefamilyname) and [nativeStyleName](fontobject.md#fontobjectnativestylename) property is used.
 
-[Font object](fontobject.md#fontobject) for which [isSubstitute](fontobject.md#fontobjectissubstitute) returns true are always sorted to the end as individual family groups.
+[Font object](fontobject.md#fontobject) for which [isSubstitute](fontobject.md#fontobjectissubstitute) returns `true` are always sorted to the end as individual family groups.
 
 #### Type
 

@@ -13,7 +13,7 @@ The ParagraphRange object is an accessor to a paragraph range of the [TextDocume
 - The [characterEnd](#paragraphrangecharacterend) attribute will report the (last + 1) character index of the range, such that ([characterEnd](#paragraphrangecharacterend) - [characterStart](#paragraphrangecharacterstart)) represents the number of characters in the range.
 - The only time these two properties will equal will on an empty last paragraph of the [TextDocument object](textdocument.md#textdocument).
 
-When accessed, the ParagraphRange object will check that effective [characterStart](#paragraphrangecharacterstart) and effective [characterEnd](#paragraphrangecharacterend) of the range remains valid for the current span of the related [TextDocument object](textdocument.md#textdocument). This is the same rule as applied when the ParagraphRange was created, but because the length of the related [TextDocument object](textdocument.md#textdocument) can change through the addition or removal of characters, the effective [characterStart](#paragraphrangecharacterstart) and effective [characterEnd](#paragraphrangecharacterend) may no longer be valid. In this situation an exception will be thrown on access, either read or write. The [isRangeValid](#paragraphrangeisrangevalid) attribute will return false if the effective range is no longer valid.
+When accessed, the ParagraphRange object will check that effective [characterStart](#paragraphrangecharacterstart) and effective [characterEnd](#paragraphrangecharacterend) of the range remains valid for the current span of the related [TextDocument object](textdocument.md#textdocument). This is the same rule as applied when the ParagraphRange was created, but because the length of the related [TextDocument object](textdocument.md#textdocument) can change through the addition or removal of characters, the effective [characterStart](#paragraphrangecharacterstart) and effective [characterEnd](#paragraphrangecharacterend) may no longer be valid. In this situation an exception will be thrown on access, either read or write. The [isRangeValid](#paragraphrangeisrangevalid) attribute will return `false` if the effective range is no longer valid.
 
 Note that if the [TextDocument object](textdocument.md#textdocument) length changes, the character range could become valid again.
 
@@ -78,7 +78,7 @@ Unsigned integer; read-only.
 
 #### Description
 
-Returns true if the current range is within the bounds of the related [TextDocument object](textdocument.md#textdocument), false otherwise.
+Returns `true` if the current range is within the bounds of the related [TextDocument object](textdocument.md#textdocument), otherwise `false`.
 
 #### Type
 
@@ -96,7 +96,7 @@ Boolean; read-only.
 
 Returns a [CharacterRange object](characterrange.md#characterrange) initialized from [characterStart](#paragraphrangecharacterstart) and [characterEnd](#paragraphrangecharacterend).
 
-Will throw an exception if [isRangeValid](#paragraphrangeisrangevalid) would return false.
+Will throw an exception if [isRangeValid](#paragraphrangeisrangevalid) would return `false`.
 
 The returned instance, once created, is independent of subsequent changes to the ParagraphRange it came from.
 
@@ -118,7 +118,7 @@ None.
 
 Returns a string with the parameters used to create the ParagraphRange instance, e.g. `"ParagraphRange(0,-1)"`
 
-This may be safely called on an instance where [isRangeValid](#paragraphrangeisrangevalid) returns false.
+This may be safely called on an instance where [isRangeValid](#paragraphrangeisrangevalid) returns `false`.
 
 #### Parameters
 

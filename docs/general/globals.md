@@ -13,7 +13,7 @@ These globally available functions that are specific to After Effects. Any JavaS
 | `timeToCurrentFormat()`  | Converts a numeric time value to a string time<br/>value.          |
 | `write()`                | Writes text to the Info panel, with no line break<br/>added.       |
 | `writeLn()`              | Writes text to the Info panel, adding a line break<br/>at the end. |
-| `isValid()`              | When true, the specified object exists.                            |
+| `isValid()`              | When `true`, the specified object exists.                            |
 
 Additional global functions for standard user I/O (`alert`, `confirm` , and `prompt`) and static functions for file I/O, are defined by ExtendScript; for detailed reference information, see the [JavaScript Tools Guide](https://extendscript.docsforadobe.dev/).
 
@@ -52,7 +52,7 @@ Converts a formatted string for a frame time value to a number of seconds, given
 | `formattedTime`   | The frame time value, a string specifying a number of<br/>frames in the project's current time display format.                                                 |
 |-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `fps`             | The frames-per-second, a floating-point value.                                                                                                                 |
-| `isDuration`      | Optional. When true, the time is a duration (measured from<br/>frame 0). When false (the default), the time is measured<br/>from the project's starting frame. |
+| `isDuration`      | Optional. When `true`, the time is a duration (measured from<br/>frame 0). When `false` (the default), the time is measured<br/>from the project's starting frame. |
 
 #### Returns
 
@@ -168,7 +168,7 @@ Converts a numeric time value (a number of seconds) to a frame time value; that 
 | `time`       | The number of seconds, a floating-point value.                                                                                                                 |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `fps`        | The frames-per-second, a floating-point value.                                                                                                                 |
-| `isDuration` | Optional. When true, the time is a duration (measured from<br/>frame 0). When false (the default), the time is measured from<br/>the project's starting frame. |
+| `isDuration` | Optional. When `true`, the time is a duration (measured from<br/>frame 0). When `false` (the default), the time is measured from<br/>the project's starting frame. |
 
 #### Returns
 

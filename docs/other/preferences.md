@@ -165,7 +165,7 @@ String.
 
 #### Description
 
-Returns true if the specified preference item exists and has a value.
+Returns `true` if the specified preference item exists and has a value.
 
 #### Parameters
 

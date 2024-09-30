@@ -62,7 +62,7 @@ textProp.setValue(textDocument);
 
 #### Description
 
-True if a Text layer has All Caps enabled; otherwise false. To set this value, use [fontCapsOption](#textdocumentfontcapsoption) added in After Effects 24.0.
+`true` if a Text layer has All Caps enabled; otherwise `false`. To set this value, use [fontCapsOption](#textdocumentfontcapsoption) added in After Effects 24.0.
 
 !> **Warning:** This value only reflects the first character in the Text layer.
 
@@ -78,7 +78,7 @@ Boolean; read-only.
 
 #### Description
 
-When true, the Text layer shows a fill. Access the [fillColor](#textdocumentfillcolor) attribute for the actual color. When false, only a stroke is shown.
+When `true`, the Text layer shows a fill. Access the [fillColor](#textdocumentfillcolor) attribute for the actual color. When `false`, only a stroke is shown.
 
 #### Type
 
@@ -92,7 +92,7 @@ Boolean; read/write.
 
 #### Description
 
-When true, the Text layer shows a stroke. Access the [strokeColor](#textdocumentstrokecolor) attribute for the actual color and [strokeWidth](#textdocumentstrokewidth) for its thickness. When false, only a fill is shown.
+When `true`, the Text layer shows a stroke. Access the [strokeColor](#textdocumentstrokecolor) attribute for the actual color and [strokeWidth](#textdocumentstrokewidth) for its thickness. When `false`, only a fill is shown.
 
 #### Type
 
@@ -343,7 +343,7 @@ Floating-point value; read/write.
 
 #### Description
 
-Returns true if some part of the text did not compose into the box.
+Returns `true` if some part of the text did not compose into the box.
 
 #### Type
 
@@ -357,7 +357,7 @@ Boolean; read-only.
 
 #### Description
 
-True if a Text layer is a layer of paragraph (bounded) text; otherwise false.
+`true` if a Text layer is a layer of paragraph (bounded) text; otherwise `false`.
 
 #### Type
 
@@ -376,7 +376,7 @@ As of After Effects 14 (CC2017), it seems this is also writeable.
 
 The layer coordinates from a paragraph (box) Text layer's anchor point as a [width, height] array of pixel dimensions.
 
-!> **Warning:** Throws an exception if [boxText](#textdocumentboxtext) does not return true for the Text layer.
+!> **Warning:** Throws an exception if [boxText](#textdocumentboxtext) does not return `true` for the Text layer.
 
 #### Type
 
@@ -400,7 +400,7 @@ var boxTextLayerPos = myTextLayer.sourceText.value.boxTextPos;
 
 The size of a paragraph (box) Text layer as a [width, height] array of pixel dimensions.
 
-!> **Warning:** Throws an exception if [boxText](#textdocumentboxtext) does not return true for the Text layer.
+!> **Warning:** Throws an exception if [boxText](#textdocumentboxtext) does not return `true` for the Text layer.
 
 #### Type
 
@@ -555,7 +555,7 @@ Floating-point value; read/write.
 
 #### Description
 
-The Text layer's Every-Line Composer paragraph option. If set to false, the TextDocument will use the Single-Line Composer.
+The Text layer's Every-Line Composer paragraph option. If set to `false`, the TextDocument will use the Single-Line Composer.
 
 If this attribute has a mixed value, it will be read as `undefined`.
 
@@ -579,7 +579,7 @@ The write functionality was added in After Effects 24.0
 
 #### Description
 
-True if a Text layer has faux bold enabled; otherwise false.
+`true` if a Text layer has faux bold enabled; otherwise `false`.
 
 !> **Warning:** This value only reflects the first character in the Text layer.
 If you change this value, it will set all characters in the Text layer to the specified setting.
@@ -607,7 +607,7 @@ The write functionality was added in After Effects 24.0
 
 #### Description
 
-True if a Text layer has faux italic enabled; otherwise false.
+`true` if a Text layer has faux italic enabled; otherwise `false`.
 
 !> **Warning:** This value only reflects the first character in the Text layer.
 If you change this value, it will set all characters in the Text layer to the specified setting.
@@ -626,9 +626,9 @@ Boolean; read/write.
 
 The Text layer's fill color, as an array of `[r, g, b]` floating-point values. For example, in an 8-bpc project, a red value of 255 would be 1.0, and in a 32-bpc project, an overbright blue value can be something like 3.2.
 
-Throws an exception on read if [applyFill](#textdocumentapplyfill) is not true.
+Throws an exception on read if [applyFill](#textdocumentapplyfill) is not `true`.
 
-Setting this value will also set [applyFill](#textdocumentapplyfill) to true across the affected characters.
+Setting this value will also set [applyFill](#textdocumentapplyfill) to `true` across the affected characters.
 
 !> **Warning:** This value only reflects the first character in the Text layer.
 If you change this value, it will set all characters in the Text layer to the specified setting.
@@ -908,7 +908,7 @@ The Text layer's kerning option.
 
 Returns zero for `AutoKernType.METRIC_KERN` and `AutoKernType.OPTICAL_KERN`.
 
-Setting this value will also set `AutoKernType.NO_AUTO_KERN` to true across the affected characters.
+Setting this value will also set `AutoKernType.NO_AUTO_KERN` to `true` across the affected characters.
 
 !> **Warning:** This value only reflects the first character in the Text layer.
 If you change this value, it will set all characters in the Text layer to the specified setting.
@@ -929,9 +929,9 @@ Integer value; read/write.
 
 The Text layer's spacing between lines.
 
-Returns zero if [TextDocument.autoLeading](#textdocumentautoleading) is true.
+Returns zero if [TextDocument.autoLeading](#textdocumentautoleading) is `true`.
 
-Setting this value will also set [TextDocument.autoLeading](#textdocumentautoleading) to true across the affected characters.
+Setting this value will also set [TextDocument.autoLeading](#textdocumentautoleading) to `true` across the affected characters.
 
 !> **Warning:** This value only reflects the first character in the Text layer.
 If you change this value, it will set all characters in the Text layer to the specified setting.
@@ -1082,7 +1082,7 @@ Number; read-only.
 
 #### Description
 
-True if a Text layer is a layer of point (unbounded) text; otherwise false.
+`true` if a Text layer is a layer of point (unbounded) text; otherwise `false`.
 
 #### Type
 
@@ -1098,7 +1098,7 @@ Boolean; read-only.
 
 #### Description
 
-True if a Text layer has small caps enabled; otherwise false. To set this value, use [TextDocument.fontCapsOption](#textdocumentfontcapsoption) added in After Effects 24.0.
+`true` if a Text layer has small caps enabled; otherwise `false`. To set this value, use [TextDocument.fontCapsOption](#textdocumentfontcapsoption) added in After Effects 24.0.
 
 !> **Warning:** This value only reflects the first character in the Text layer.
 
@@ -1179,9 +1179,9 @@ Floating-point value; read/write.
 
 The Text layer's stroke color, as an array of [r, g, b] floating-point values. For example, in an 8-bpc project, a red value of 255 would be 1.0, and in a 32-bpc project, an overbright blue value can be something like 3.2.
 
-Throws an exception on read if [applyStroke](#textdocumentapplystroke) is not true.
+Throws an exception on read if [applyStroke](#textdocumentapplystroke) is not `true`.
 
-Setting this value will also set [applyStroke](#textdocumentapplystroke) to true across the affected characters.
+Setting this value will also set [applyStroke](#textdocumentapplystroke) to `true` across the affected characters.
 
 !> **Warning:** This value only reflects the first character in the Text layer.
 If you change this value, it will set all characters in the Text layer to the specified setting.
@@ -1198,7 +1198,7 @@ Array [r, g, b] of floating-point values; read/write.
 
 #### Description
 
-Indicates the rendering order for the fill and stroke of a Text layer. When true, the stroke appears over the fill.
+Indicates the rendering order for the fill and stroke of a Text layer. When `true`, the stroke appears over the fill.
 
 The Text layer can override the per-character attribute setting if the Text layer is set to use All Strokes Over All Fills or All Fills Over All Strokes in the Character Panel. Thus the value returned here might be different than the actual attribute value set on the character. It is possible to set the Fill/Stroke render order via the "Fill & Stroke" property under More Options on the Text layer using TextLayer.text("ADBE Text More Options")("ADBE Text Render Order").
 
@@ -1238,7 +1238,7 @@ Floating-point value (0 to 1000, inclusive); read/write.
 
 #### Description
 
-True if a Text layer has subscript enabled; otherwise false. To set this value, use [TextDocument.fontBaselineOption](#textdocumentfontbaselineoption) added in After Effects 24.0.
+`true` if a Text layer has subscript enabled; otherwise `false`. To set this value, use [TextDocument.fontBaselineOption](#textdocumentfontbaselineoption) added in After Effects 24.0.
 
 !> **Warning:** This value only reflects the first character in the Text layer.
 
@@ -1256,7 +1256,7 @@ Boolean; read-only.
 
 #### Description
 
-True if a Text layer has superscript enabled; otherwise false. To set this value, use [TextDocument.fontBaselineOption](#textdocumentfontbaselineoption) added in After Effects 24.0.
+`true` if a Text layer has superscript enabled; otherwise `false`. To set this value, use [TextDocument.fontBaselineOption](#textdocumentfontbaselineoption) added in After Effects 24.0.
 
 !> **Warning:** This value only reflects the first character in the Text layer.
 

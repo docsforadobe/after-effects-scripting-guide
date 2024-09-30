@@ -17,7 +17,7 @@ So if you delete all the text in the [TextDocument object](textdocument.md#textd
 - The [characterEnd](#composedlinerangecharacterend) attribute will report the (last + 1) character index of the range, such that ([characterEnd](#composedlinerangecharacterend) - [characterStart](#composedlinerangecharacterstart)) represents the number of characters in the range.
 - A composed line always has some length.
 
-When accessed, the ComposedLineRange object will check that effective [characterStart](#composedlinerangecharacterstart) and effective [characterEnd](#composedlinerangecharacterend) of the range remains valid for the current span of the related [TextDocument object](textdocument.md#textdocument). This is the same rule as applied when the ComposedLineRange was created, but because the length of the related [TextDocument object](textdocument.md#textdocument) can change through the addition or removal of characters, the effective [characterStart](#composedlinerangecharacterstart) and effective [characterEnd](#composedlinerangecharacterend) may no longer be valid. In this situation an exception will be thrown on access, either read or write. The property [isRangeValid](#composedlinerangeisrangevalid) will return false if the effective range is no longer valid.
+When accessed, the ComposedLineRange object will check that effective [characterStart](#composedlinerangecharacterstart) and effective [characterEnd](#composedlinerangecharacterend) of the range remains valid for the current span of the related [TextDocument object](textdocument.md#textdocument). This is the same rule as applied when the ComposedLineRange was created, but because the length of the related [TextDocument object](textdocument.md#textdocument) can change through the addition or removal of characters, the effective [characterStart](#composedlinerangecharacterstart) and effective [characterEnd](#composedlinerangecharacterend) may no longer be valid. In this situation an exception will be thrown on access, either read or write. The property [isRangeValid](#composedlinerangeisrangevalid) will return `false` if the effective range is no longer valid.
 
 Note that if the [TextDocument object](textdocument.md#textdocument) length changes, the character range could become valid again.
 
@@ -82,7 +82,7 @@ Unsigned integer; read-only.
 
 #### Description
 
-Returns true if the current range is within the bounds of the related [TextDocument object](textdocument.md#textdocument), false otherwise.
+Returns `true` if the current range is within the bounds of the related [TextDocument object](textdocument.md#textdocument), otherwise `false`.
 
 #### Type
 
@@ -100,7 +100,7 @@ Boolean; read-only.
 
 Returns a [CharacterRange object](characterrange.md#characterrange) initialized from [characterStart](#composedlinerangecharacterstart) and [characterEnd](#composedlinerangecharacterend).
 
-Will throw an exception if isRangeValid would return false.
+Will throw an exception if isRangeValid would return `false`.
 
 The returned instance, once created, is independent of subsequent changes to the ComposedLineRange it came from.
 
@@ -122,7 +122,7 @@ None.
 
 Returns a string with the parameters used to create the ComposedLineRange instance, e.g. `"ComposedLineRange(0,-1)"`
 
-This may be safely called on an instance where isRangeValid returns false.
+This may be safely called on an instance where isRangeValid returns `false`.
 
 #### Parameters
 

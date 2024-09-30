@@ -60,7 +60,7 @@ For closed mask shapes, variable-width mask feather points can exist anywhere al
 
 #### Description
 
-When true, the first and last vertices are connected to form a closed curve. When false, the closing segment is not drawn.
+When `true`, the first and last vertices are connected to form a closed curve. When `false`, the closing segment is not drawn.
 
 #### Type
 

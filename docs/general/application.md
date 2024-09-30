@@ -108,7 +108,7 @@ Integer; read-only.
 
 #### Description
 
-When false (the default), rendering proceeds as normal. Set to true to disable rendering as if Caps Lock were turned on.
+When `false` (the default), rendering proceeds as normal. Set to `true` to disable rendering as if Caps Lock were turned on.
 
 #### Type
 
@@ -128,11 +128,12 @@ The effects available in the application.
 
 Array, with each element containing the following properties; read-only:
 
-| `displayName`   | String representing the localized display name of the<br/>effect as seen in the Effect menu.                                                                          |
-|-----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `category`      | String representing the localized category label as seen<br/>in the Effect menu. This can be "" for synthetic effects<br/>that aren't normally shown to the user.     |
-| `matchName`     | String representing the internal unique name for the effect.<br/>This name does not change between versions of After Effects.<br/>Use this value to apply the effect. |
-| `version`       | Effect's internal version string.<br/>This value might be different than the version number the<br/>plug-in vendor decides to show in the effect's about box.         |
+|   Property    |  Type  |                                                                           Description                                                                           |
+| ------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `displayName` | String | A string representing the localized display name of the effect as seen in the Effect menu.                                                                      |
+| `category`    | String | A string representing the localized category label as seen in the Effect menu. This can be `""` for synthetic effects that aren't normally shown to the user.     |
+| `matchName`   | String | A string representing the internal unique name for the effect. This name does not change between versions of After Effects. Use this value to apply the effect. |
+| `version`     | String | Effect's internal version string. This value might be different than the version number the plug-in vendor decides to show in the effect's about box.           |
 
 #### Example
 
@@ -148,7 +149,9 @@ var effectName = app.effects[12].displayName;
 
 #### Description
 
-This attribute is used only when executing a script from a command line on Windows. When the application is launched from the command line, the `-r` or `-s` command line flag causes the application to run a script (from a file or from a string, respectively). If this attribute is set to true, After Effects will exit after the script is run; if it is false, the application will remain open. This attribute only has an effect when After Effects is run from the Windows command line. It has no effect in Mac OS.
+This attribute is used only when executing a script from a command line on Windows. When the application is launched from the command line, the `-r` or `-s` command line flag causes the application to run a script (from a file or from a string, respectively).
+
+If this attribute is set to `true`, After Effects will exit after the script is run; if it is `false`, the application will remain open. This attribute only has an effect when After Effects is run from the Windows command line. It has no effect in Mac OS.
 
 #### Type
 
@@ -239,7 +242,7 @@ if (lang === "en_US") {
 
 #### Description
 
-True if After Effects is running as a render engine.
+`true` if After Effects is running as a render engine.
 
 #### Type
 
@@ -253,7 +256,7 @@ Boolean; read-only.
 
 #### Description
 
-True if the Watch Folder dialog box is currently displayed and the application is currently watching a folder for rendering.
+`true` if the Watch Folder dialog box is currently displayed and the application is currently watching a folder for rendering.
 
 #### Type
 
@@ -332,7 +335,9 @@ Project object; read-only.
 
 #### Description
 
-When true (the default), After Effects attempts to display a dialog box that allows you to save the current project if an error causes the application to quit unexpectedly. Set to false to suppress this dialog box and quit without saving.
+When `true` (the default), After Effects attempts to display a dialog box that allows you to save the current project if an error causes the application to quit unexpectedly.
+
+Set to `false` to suppress this dialog box and quit without saving.
 
 #### Type
 
@@ -465,7 +470,7 @@ Ends the suppression of script error dialog boxes in the user interface. Error d
 
 #### Parameters
 
-| `alert`   | Boolean;   | when true, errors that have occurred following<br/>the call to `beginSuppressDialogs()` are<br/>displayed in adialog box.   |
+| `alert`   | Boolean;   | When `true`, errors that have occurred following<br/>the call to `beginSuppressDialogs()` are<br/>displayed in adialog box.   |
 |-----------|------------|-----------------------------------------------------------------------------------------------------------------------------|
 
 #### Returns
@@ -723,7 +728,7 @@ Pauses or resumes the search of the target watch folder for items to render.
 
 #### Parameters
 
-| `pause`   | True to pause, false to resume.   |
+| `pause`   | `true` to pause, `false` to resume.   |
 |-----------|-----------------------------------|
 
 #### Returns
@@ -794,7 +799,7 @@ Schedules the specified JavaScript for delayed execution.
 | `stringToExecute`   | A string containing JavaScript to be executed.                                                                                                  |
 |---------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
 | `delay`             | A number of milliseconds to wait before executing<br/>the JavaScript. A floating-point value.                                                   |
-| `repeat`            | When true, execute the script repeatedly, with the<br/>specified delay between each execution. When false the<br/>script is executed only once. |
+| `repeat`            | When `true`, execute the script repeatedly, with the<br/>specified delay between each execution. When `false` the script is executed only once. |
 
 #### Returns
 
@@ -855,7 +860,7 @@ Set or clears the flag that determines whether preferences are saved when the ap
 
 #### Parameters
 
-| `doSave`   | When true, preferences saved on quit, when false they are not.   |
+| `doSave`   | When `true`, preferences saved on quit, when `false` they are not.   |
 |------------|------------------------------------------------------------------|
 
 #### Returns

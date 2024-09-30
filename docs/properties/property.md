@@ -133,7 +133,7 @@ AVItem object; read-only.
 
 Test whether the property is an Essential Property that supports Media Replacement.
 
-Returns true if the property allows Media Replacement, false otherwise.
+Returns `true` if the property allows Media Replacement, otherwise `false`.
 
 #### Type
 
@@ -147,7 +147,7 @@ Boolean; read-only.
 
 #### Description
 
-When true, the named property is of a type whose expression can be set by a script. See also [Property expression](#propertyexpression) attribute.
+When `true`, the named property is of a type whose expression can be set by a script. See also [Property expression](#propertyexpression) attribute.
 
 #### Type
 
@@ -161,7 +161,7 @@ Boolean; read-only.
 
 #### Description
 
-When true, the named property can vary over time—that is, keyframe values or expressions can be written to this property.
+When `true`, the named property can vary over time—that is, keyframe values or expressions can be written to this property.
 
 #### Type
 
@@ -175,9 +175,9 @@ Boolean; read-only.
 
 #### Description
 
-When true, the property's dimensions are represented as separate properties. For example, if the layer's position is represented as X Position and Y Position properties in the Timeline panel, the Position property has this attribute set to true.
+When `true`, the property's dimensions are represented as separate properties. For example, if the layer's position is represented as X Position and Y Position properties in the Timeline panel, the Position property has this attribute set to `true`.
 
-?> **Note:** This attribute applies only when the [isSeparationLeader](#propertyisseparationleader) attribute is true.
+?> **Note:** This attribute applies only when the [isSeparationLeader](#propertyisseparationleader) attribute is `true`.
 
 #### Type
 
@@ -228,15 +228,15 @@ if (essentialOpacity.essentialPropertySource == opacityProp) {
 
 #### Description
 
-The expression for the named property. Writeable only when [canSetExpression](#propertycansetexpression) for the named property is true. When you specify a value for this attribute, the string is evaluated.
+The expression for the named property. Writeable only when [canSetExpression](#propertycansetexpression) for the named property is `true`. When you specify a value for this attribute, the string is evaluated.
 
 - If the string contains a valid expression, [expressionEnabled](#propertyexpressionenabled) becomes true.
-- If the string does not contain a valid expression, an error is generated, and [expressionEnabled](#propertyexpressionenabled) becomes false.
-- If you set the attribute to the empty string, [expressionEnabled](#propertyexpressionenabled) becomes false, but no error is generated.
+- If the string does not contain a valid expression, an error is generated, and [expressionEnabled](#propertyexpressionenabled) becomes `false`.
+- If you set the attribute to the empty string, [expressionEnabled](#propertyexpressionenabled) becomes `false`, but no error is generated.
 
 #### Type
 
-String; read/write if [canSetExpression](#propertycansetexpression) for the named property is true.
+String; read/write if [canSetExpression](#propertycansetexpression) for the named property is `true`.
 
 ---
 
@@ -246,7 +246,7 @@ String; read/write if [canSetExpression](#propertycansetexpression) for the name
 
 #### Description
 
-When true, the named property uses its associated expression to generate a value. When false, the keyframe information or static value of the property is used. This attribute can be set to true only if [canSetExpression](#propertycansetexpression) for the named property is true and [expression](#propertyexpression) contains a valid expression string.
+When `true`, the named property uses its associated expression to generate a value. When `false`, the keyframe information or static value of the property is used. This attribute can be set to `true` only if [canSetExpression](#propertycansetexpression) for the named property is `true` and [expression](#propertyexpression) contains a valid expression string.
 
 #### Type
 
@@ -274,7 +274,7 @@ String; read-only.
 
 #### Description
 
-When true, there is a maximum permitted value for the named property; otherwise false.
+When `true`, there is a maximum permitted value for the named property; otherwise `false`.
 
 #### Type
 
@@ -288,7 +288,7 @@ Boolean; read-only.
 
 #### Description
 
-When true, there is a minimum permitted value for the named property; otherwise false.
+When `true`, there is a minimum permitted value for the named property; otherwise `false`.
 
 #### Type
 
@@ -304,7 +304,7 @@ Boolean; read-only.
 
 #### Description
 
-When true, the property is the Menu property of a Dropdown Menu Control effect and can have its items updated with [setPropertyParameters](#propertysetpropertyparameters).
+When `true`, the property is the Menu property of a Dropdown Menu Control effect and can have its items updated with [setPropertyParameters](#propertysetpropertyparameters).
 
 #### Examples
 
@@ -326,7 +326,7 @@ Boolean; read-only.
 
 #### Description
 
-When true, the property represents one of the separated dimensions for a multidimensional property. For example, the X Position property has this attribute set to true.
+When `true`, the property represents one of the separated dimensions for a multidimensional property. For example, the X Position property has this attribute set to `true`.
 
 ?> **Note:** The original, consolidated, multidimensional property is the "separation leader" and the new, separated, single-dimensional properties are its "separation followers".
 
@@ -342,7 +342,7 @@ Boolean; read-only.
 
 #### Description
 
-When true, the property is multidimensional and can be separated. For example, the Position property has this attribute set to true.
+When `true`, the property is multidimensional and can be separated. For example, the Position property has this attribute set to `true`.
 
 ?> **Note:** The original, consolidated, multidimensional property is the "separation leader" and the new, separated, single-dimensional properties are its "separation followers".
 
@@ -358,7 +358,7 @@ Boolean; read-only.
 
 #### Description
 
-When true, the named property defines a spatial value. Examples are position and effect point controls.
+When `true`, the named property defines a spatial value. Examples are position and effect point controls.
 
 #### Type
 
@@ -372,7 +372,7 @@ Boolean; read-only.
 
 #### Description
 
-When true, the named property is time varying — that is, it has keyframes or an enabled expression. When this attribute is true, the attribute `canVaryOverTime`
+When `true`, the named property is time varying — that is, it has keyframes or an enabled expression. When this attribute is `true`, the attribute `canVaryOverTime`
 must also be true.
 
 #### Type
@@ -387,7 +387,7 @@ Boolean; read-only.
 
 #### Description
 
-The maximum permitted value of the named property. If the `hasMax` attribute is false, an exception occurs, and an error is generated.
+The maximum permitted value of the named property. If the `hasMax` attribute is `false`, an exception occurs, and an error is generated.
 
 #### Type
 
@@ -401,7 +401,7 @@ Floating-point value; read-only.
 
 #### Description
 
-The minimum permitted value of the named property. If the `hasMin` attribute is false, an exception occurs, and an error is generated.
+The minimum permitted value of the named property. If the `hasMin` attribute is `false`, an exception occurs, and an error is generated.
 
 #### Type
 
@@ -540,7 +540,7 @@ String; read-only.
 
 The value of the named property at the current time.
 
-- If `expressionEnabled` is true, returns the evaluated expression value.
+- If `expressionEnabled` is `true`, returns the evaluated expression value.
 - If there are keyframes, returns the keyframed value at the current time.
 - Otherwise, returns the static value.
 
@@ -583,7 +583,7 @@ Integer; the index of the new keyframe or marker.
 
 Adds the property to the Essential Graphics panel for the specified composition.
 
-Returns true if the property is successfully added, false otherwise.
+Returns `true` if the property is successfully added, otherwise `false`.
 
 If the property is not added, it is either because it is not one of the supported property types or the property has already been added to the EGP for that composition. After Effects will present a warning dialog if the property cannot be added to the EGP.
 
@@ -610,7 +610,7 @@ Boolean.
 
 Adds the property to the Essential Graphics panel for the specified composition, but with an additional option to give the EGP property a custom name.
 
-Returns true if the property is successfully added, false otherwise.
+Returns `true` if the property is successfully added, otherwise `false`.
 
 If the property is not added, it is either because it is not one of the supported property types or the property has already been added to the EGP for that composition. After Effects will present a warning dialog if the property cannot be added to the EGP.
 
@@ -638,7 +638,7 @@ Boolean.
 
 Test whether or not the property can be added to the Essential Graphics panel for the specified composition.
 
-Returns true if the property can be added, false otherwise.
+Returns `true` if the property can be added, otherwise `false`.
 
 If the property can not be added, it is either because it is not one of the supported property types or the property has already been added to the EGP for that composition. After Effects will present a warning dialog if the property cannot be added to the EGP.
 
@@ -668,7 +668,7 @@ Boolean.
 
 For a separated, multidimensional property, retrieves a specific follower property. For example, you can use this method on the Position property to access the separated X Position and Y Position properties
 
-?> **Note:** This attribute applies only when the [isSeparationLeader](#propertyisseparationleader) attribute is true.
+?> **Note:** This attribute applies only when the [isSeparationLeader](#propertyisseparationleader) attribute is `true`.
 
 #### Parameters
 
@@ -687,7 +687,7 @@ Property object, or an error if the property is not multidimensional or does not
 
 #### Description
 
-Returns true if the named property can be interpolated using the specified keyframe interpolation type.
+Returns `true` if the named property can be interpolated using the specified keyframe interpolation type.
 
 #### Parameters
 
@@ -872,7 +872,7 @@ Array of KeyframeEase objects:
 
 #### Description
 
-Returns true if the specified keyframe is roving. The first and last keyframe in a property cannot rove; if you try to set roving for one of these, the operation is ignored, and keyRoving() continues to return false. If the property value type is neither `TwoD_SPATIAL` nor `ThreeD_SPATIAL`, an exception is generated.
+Returns `true` if the specified keyframe is roving. The first and last keyframe in a property cannot rove; if you try to set roving for one of these, the operation is ignored, and keyRoving() continues to return `false`. If the property value type is neither `TwoD_SPATIAL` nor `ThreeD_SPATIAL`, an exception is generated.
 
 #### Parameters
 
@@ -891,7 +891,7 @@ Boolean.
 
 #### Description
 
-Returns true if the specified keyframe is selected.
+Returns `true` if the specified keyframe is selected.
 
 #### Parameters
 
@@ -910,7 +910,7 @@ Boolean.
 
 #### Description
 
-Returns true if the specified keyframe has spatial auto-Bezier interpolation. (This type of interpolation affects this keyframe only if `keySpatialContinuous(keyIndex)` is also true.) If the property value type is neither `TwoD_SPATIAL` nor `ThreeD_SPATIAL`, an exception is generated.
+Returns `true` if the specified keyframe has spatial auto-Bezier interpolation. (This type of interpolation affects this keyframe only if `keySpatialContinuous(keyIndex)` is also true.) If the property value type is neither `TwoD_SPATIAL` nor `ThreeD_SPATIAL`, an exception is generated.
 
 #### Parameters
 
@@ -929,7 +929,7 @@ Boolean.
 
 #### Description
 
-Returns true if the specified keyframe has spatial continuity. If the property value type is neither `TwoD_SPATIAL` nor `ThreeD_SPATIAL`, an exception is generated.
+Returns `true` if the specified keyframe has spatial continuity. If the property value type is neither `TwoD_SPATIAL` nor `ThreeD_SPATIAL`, an exception is generated.
 
 #### Parameters
 
@@ -948,7 +948,7 @@ Boolean.
 
 #### Description
 
-Returns true if the specified keyframe has temporal auto-Bezier interpolation. Temporal auto-Bezier interpolation affects this keyframe only if the keyframe interpolation type is `KeyframeInterpolationType.BEZIER` for both `keyInInterpolationType(keyIndex)` and `keyOutInterpolationType(keyIndex)`.
+Returns `true` if the specified keyframe has temporal auto-Bezier interpolation. Temporal auto-Bezier interpolation affects this keyframe only if the keyframe interpolation type is `KeyframeInterpolationType.BEZIER` for both `keyInInterpolationType(keyIndex)` and `keyOutInterpolationType(keyIndex)`.
 
 #### Parameters
 
@@ -967,7 +967,7 @@ Boolean.
 
 #### Description
 
-Returns true if the specified keyframe has temporal continuity. Temporal continuity affects this keyframe only if keyframe interpolation type is `KeyframeInterpolationType.BEZIER` for both `keyInInterpolationType(keyIndex)` and `keyOutInterpolationType(keyIndex)`.
+Returns `true` if the specified keyframe has temporal continuity. Temporal continuity affects this keyframe only if keyframe interpolation type is `KeyframeInterpolationType.BEZIER` for both `keyInInterpolationType(keyIndex)` and `keyOutInterpolationType(keyIndex)`.
 
 #### Parameters
 
@@ -1179,13 +1179,13 @@ Property object, the updated Dropdown Menu Control's Menu property.
 
 #### Description
 
-Turns roving on or off for the specified keyframe. The first and last keyframe in a property cannot rove; if you try to set roving for one of these, the operation is ignored, and `keyRoving()` continues to return false. If the property value type is neither `TwoD_SPATIAL` nor `ThreeD_SPATIAL`, an exception is generated.
+Turns roving on or off for the specified keyframe. The first and last keyframe in a property cannot rove; if you try to set roving for one of these, the operation is ignored, and `keyRoving()` continues to return `false`. If the property value type is neither `TwoD_SPATIAL` nor `ThreeD_SPATIAL`, an exception is generated.
 
 #### Parameters
 
 | `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `newVal`     | True to turn roving on, false to turn roving off.                                                                                                                                |
+| `newVal`     | `true` to turn roving on, `false` to turn roving off.                                                                                                                                |
 
 #### Returns
 
@@ -1205,7 +1205,7 @@ Selects or deselects the specified keyframe.
 
 | `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `onOff`      | True to select the keyframe, false to deselect it.                                                                                                                               |
+| `onOff`      | `true` to select the keyframe, `false` to deselect it.                                                                                                                               |
 
 #### Returns
 
@@ -1225,7 +1225,7 @@ Turns spatial auto-Bezier interpolation on or off for the specified keyframe. If
 
 | `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `newVal`     | True to turn spatial auto-Bezier on, false to turn it off.                                                                                                                       |
+| `newVal`     | `true` to turn spatial auto-Bezier on, `false` to turn it off.                                                                                                                       |
 
 #### Returns
 
@@ -1245,7 +1245,7 @@ Turns spatial continuity on or off for the specified keyframe. If the property v
 
 | `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `newVal`     | True to turn spatial auto-Bezier on, false to turn it off.                                                                                                                       |
+| `newVal`     | `true` to turn spatial auto-Bezier on, `false` to turn it off.                                                                                                                       |
 
 #### Returns
 
@@ -1286,7 +1286,7 @@ Turns temporal auto-Bezier interpolation on or off for the specified keyframe. W
 
 | `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `newVal`     | True to turn temporal auto-Bezier on, false to turn it off.                                                                                                                      |
+| `newVal`     | `true` to turn temporal auto-Bezier on, `false` to turn it off.                                                                                                                      |
 
 #### Returns
 
@@ -1306,7 +1306,7 @@ Turns temporal continuity on or off for the specified keyframe. When temporal co
 
 | `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `newVal`     | True to turn temporal continuity on, false to turn it off.                                                                                                                       |
+| `newVal`     | `true` to turn temporal continuity on, `false` to turn it off.                                                                                                                       |
 
 #### Returns
 
@@ -1428,7 +1428,7 @@ The value of the named property as evaluated at the specified time. Note that th
 
 | `time`          | The time in seconds; a floating-point value. The beginning<br/>of the composition is 0.                                                                                                                                                                                                               |
 |-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `preExpression` | If the property has an expression and this is true, return<br/>the value for the specified time without applying the<br/>expression to it. When false, return the result of<br/>evaluating the expression for the specified time. Ignored if<br/>the property does not have an associated expression. |
+| `preExpression` | If the property has an expression and this is `true`, return<br/>the value for the specified time without applying the<br/>expression to it. When `false`, return the result of<br/>evaluating the expression for the specified time. Ignored if<br/>the property does not have an associated expression. |
 
 #### Returns
 

@@ -79,7 +79,7 @@ Integer; read-only.
 
 #### Description
 
-When true, the rendering process is in progress or paused. When false, it is stopped.
+When `true`, the rendering process is in progress or paused. When `false`, it is stopped.
 
 #### Type
 
@@ -118,7 +118,7 @@ Pauses the current rendering process, or continues a paused rendering process. T
 
 #### Parameters
 
-| `pause`   | True to pause a current render process, false to continue a paused<br/>render.   |
+| `pause`   | `true` to pause a current render process, `false` to continue a paused<br/>render.   |
 |-----------|----------------------------------------------------------------------------------|
 
 #### Returns
@@ -158,7 +158,7 @@ Shows or hides the Render Queue panel.
 
 #### Parameters
 
-| `doShow`   | When true, show the Render Queue panel. When false, hide it.   |
+| `doShow`   | When `true`, show the Render Queue panel. When `false`, hide it.   |
 |------------|----------------------------------------------------------------|
 
 #### Returns
@@ -193,11 +193,11 @@ Nothing.
 
 #### Description
 
-Calls the Queue In AME command. This method requires passing a boolean value, telling AME whether to only queue the render items (false) or if AME should also start processing its queue (true).
+Calls the Queue In AME command. This method requires passing a boolean value, telling AME whether to only queue the render items (`false`) or if AME should also start processing its queue (`true`).
 
 ?> **Note:** This requires Adobe Media Encoder CC 2017 (11.0) or later.
 
-?> **Note:** When AME receives the queued items, it applies the most recently used encoding preset. If `render_immediately_in_AME` is set to true, you will not have an opportunity to change the encoding settings.
+?> **Note:** When AME receives the queued items, it applies the most recently used encoding preset. If `render_immediately_in_AME` is set to `true`, you will not have an opportunity to change the encoding settings.
 
 #### Parameters
 

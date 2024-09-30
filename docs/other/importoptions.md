@@ -41,7 +41,7 @@ The file to be imported. If a file is set in the constructor, you can access it 
 
 #### Description
 
-When true, has the same effect as setting the "Force alphabetical order" option in the File > Import > File dialog box.
+When `true`, has the same effect as setting the "Force alphabetical order" option in the File > Import > File dialog box.
 
 #### Type
 
@@ -79,8 +79,8 @@ An `ImportAsType` enumerated value; read/write. One of:
 Sets the end clipping range of the sequence, that is going to be imported.
 
 - Creates 'missing frames' (video-bards) if the `rangeEnd` exceeds the duration of the sequence to be imported.
-- Has no effect if [sequence](#importoptionssequence) is set to false.
-- Throws an exception if [forceAlphabetical](#importoptionsforcealphabetical) is set to true.
+- Has no effect if [sequence](#importoptionssequence) is set to `false`.
+- Throws an exception if [forceAlphabetical](#importoptionsforcealphabetical) is set to `true`.
 - Throws an exception if `rangeEnd` is less then [rangeStart](#importoptionsrangestart) and resets the range to include all the files.
 
 #### Type
@@ -99,8 +99,8 @@ Integer; read/write.
 
 Sets the start clipping range of the sequence, that is going to be imported.
 
-- Has no effect if [sequence](#importoptionssequence) is set to false.
-- Throws an exception if [forceAlphabetical](#importoptionsforcealphabetical) is set to true.
+- Has no effect if [sequence](#importoptionssequence) is set to `false`.
+- Throws an exception if [forceAlphabetical](#importoptionsforcealphabetical) is set to `true`.
 - Throws an exception if [rangeEnd](#importoptionsrangeend) value is 0.
 - Throws an exception if `rangeStart` is greater then [rangeEnd](#importoptionsrangeend) and resets the range to include all the files.
 
@@ -134,7 +134,7 @@ var item = app.project.importFile(importOptions);
 
 #### Description
 
-When true, a sequence is imported; otherwise, an individual file is imported.
+When `true`, a sequence is imported; otherwise, an individual file is imported.
 
 #### Type
 
@@ -150,7 +150,7 @@ Boolean; read/write.
 
 #### Description
 
-Reports whether the file can be imported as the source of a particular object type. If this method returns true, you can set the given type as the value of the [importAs](#importoptionsimportas) attribute.
+Reports whether the file can be imported as the source of a particular object type. If this method returns `true`, you can set the given type as the value of the [importAs](#importoptionsimportas) attribute.
 
 #### Parameters
 
@@ -192,7 +192,7 @@ Reports whether the file object is numbered, i.e. file name has a digit.
 Object, containing 2 keys:
 
 - `isNumbered`: Boolean; wether the file name contains any digit,
-- `num`: Integer; a number found in file name. Returns 0 when `isNumbered` is false.
+- `num`: Integer; a number found in file name. Returns 0 when `isNumbered` is `false`.
 
 #### Example
 

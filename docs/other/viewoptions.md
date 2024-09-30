@@ -53,7 +53,7 @@ A `ChannelType` enumerated value; read/write. One of:
 
 #### Description
 
-When true, checkerboards (transparency grid) is enabled in the current view.
+When `true`, checkerboards (transparency grid) is enabled in the current view.
 
 #### Type
 
@@ -119,7 +119,7 @@ app.activeViewer.views[0].options.fastPreview === FastPreviewType.FP_WIREFRAME;
 
 #### Description
 
-When true, indicates guides are locked in the view.
+When `true`, indicates guides are locked in the view.
 
 #### Type
 
@@ -141,7 +141,7 @@ app.activeViewer.views[0].options.guidesLocked;
 
 #### Description
 
-When true, indicates layers snap to guides when dragged in the view.
+When `true`, indicates layers snap to guides when dragged in the view.
 
 #### Type
 
@@ -163,7 +163,7 @@ app.activeViewer.views[0].options.guidesSnap;
 
 #### Description
 
-When true, indicates guides are visible in the view.
+When `true`, indicates guides are visible in the view.
 
 #### Type
 
@@ -185,7 +185,7 @@ app.activeViewer.views[0].options.guidesVisibility;
 
 #### Description
 
-When true, indicates rulers are shown in the view.
+When `true`, indicates rulers are shown in the view.
 
 #### Type
 

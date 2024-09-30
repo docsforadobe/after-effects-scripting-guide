@@ -130,7 +130,7 @@ String; read-only.
 
 #### Description
 
-Returns true if the font is a variable font.
+Returns `true` if the font is a variable font.
 
 #### Type
 
@@ -144,7 +144,7 @@ Boolean; read-only.
 
 #### Description
 
-Returns true if the font is from Adobe Fonts.
+Returns `true` if the font is from Adobe Fonts.
 
 #### Type
 
@@ -158,7 +158,7 @@ Boolean; read-only.
 
 #### Description
 
-Returns true when this font instance represents a font reference which was missing on project open.
+returns `true` when this font instance represents a font reference which was missing on project open.
 
 #### Type
 
@@ -449,9 +449,9 @@ Boolean.
 
 #### Description
 
-This function will true if the [Font object](#fontobject) passed as an argument shares the same variable font dictionary as the [Font object](#fontobject) the function is called on.
+This function will `true` if the [Font object](#fontobject) passed as an argument shares the same variable font dictionary as the [Font object](#fontobject) the function is called on.
 
-?> **Note:** Can only return true when called on a variable [Font object](#fontobject) with the argument also being a [Font object](#fontobject) of a variable font.
+?> **Note:** Can only return `true` when called on a variable [Font object](#fontobject) with the argument also being a [Font object](#fontobject) of a variable font.
 
 #### Parameters
 

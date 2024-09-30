@@ -135,7 +135,7 @@ Boolean; read/write.
 
 #### Description
 
-When true, the item will be rendered when the render queue is started. When set to true, the [RenderQueueItem.status](#renderqueueitemstatus) is set to `RQItemStatus.QUEUED`. When set to false, `status` is set to
+When `true`, the item will be rendered when the render queue is started. When set to `true`, the [RenderQueueItem.status](#renderqueueitemstatus) is set to `RQItemStatus.QUEUED`. When set to `false`, `status` is set to
 `RQItemStatus.UNQUEUED`.
 
 #### Type

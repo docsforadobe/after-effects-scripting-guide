@@ -28,7 +28,7 @@ if (activeViewer.type === ViewerType.VIEWER_COMPOSITION) {
 
 #### Description
 
-When true, indicates if the viewer panel is focused, and thereby frontmost.
+When `true`, indicates if the viewer panel is focused, and thereby frontmost.
 
 #### Type
 
@@ -56,7 +56,7 @@ Number; read/write.
 
 #### Description
 
-When true, indicates if the viewer panel is at its maximized size.
+When `true`, indicates if the viewer panel is at its maximized size.
 
 #### Type
 
@@ -105,7 +105,7 @@ A `ViewerType` enumerated value; read-only. One of:
 #### Description
 
 Moves the viewer panel to the front and places focus on it, making it active.
-Calling this method will set the [viewer's active attribute](#vieweractive) to true.
+Calling this method will set the [viewer's active attribute](#vieweractive) to `true`.
 
 #### Parameters
 

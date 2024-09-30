@@ -16,7 +16,7 @@ The View object represents a specific view.
 
 #### Description
 
-When true, indicates if the viewer panel is focused, and thereby frontmost.
+When `true`, indicates if the viewer panel is focused, and thereby frontmost.
 
 #### Type
 
@@ -47,7 +47,7 @@ Options object for this View
 #### Description
 
 Moves this view panel to the front and places focus on it, making it active.
-Calling this method will set the [view's active attribute](#viewactive) to true.
+Calling this method will set the [view's active attribute](#viewactive) to `true`.
 
 #### Parameters
 

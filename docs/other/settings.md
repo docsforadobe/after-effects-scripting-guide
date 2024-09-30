@@ -60,7 +60,7 @@ alert("The setting is: " + trimPrecompsSetting);
 
 #### Description
 
-Returns true if the specified script settings item exists and has a value.
+Returns `true` if the specified script settings item exists and has a value.
 
 #### Parameters
 

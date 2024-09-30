@@ -165,7 +165,7 @@ for (var i = 1; i <= app.project.numItems; i++){
 
 #### Description
 
-When true, this item is selected. Multiple items can be selected at the same time. Set to true to select the item programmatically, or to false to deselect it.
+When `true`, this item is selected. Multiple items can be selected at the same time. Set to `true` to select the item programmatically, or to `false` to deselect it.
 
 #### Type
 

@@ -16,7 +16,7 @@ Unlike the [TextDocument object](textdocument.md#textdocument), which looks at o
 
 It is acceptable for most attributes for the effective range to be zero - otherwise known as an insertion point.
 
-When accessed, the CharacterRange object will check that [characterStart](#characterrangecharacterstart) and effective [characterEnd](#characterrangecharacterend) of the range remains valid for the current span of the related [TextDocument object](textdocument.md#textdocument). This is the same rule as applied when the CharacterRange was created, but because the length of the related [TextDocument object](textdocument.md#textdocument) can change through the addition or removal of characters, the [characterStart](#characterrangecharacterstart) and effective [characterEnd](#characterrangecharacterend) may no longer be valid. In this situation an exception will be thrown on access, either read or write. The [isRangeValid](#characterrangeisrangevalid) attribute will return false if the effective range is no longer valid.
+When accessed, the CharacterRange object will check that [characterStart](#characterrangecharacterstart) and effective [characterEnd](#characterrangecharacterend) of the range remains valid for the current span of the related [TextDocument object](textdocument.md#textdocument). This is the same rule as applied when the CharacterRange was created, but because the length of the related [TextDocument object](textdocument.md#textdocument) can change through the addition or removal of characters, the [characterStart](#characterrangecharacterstart) and effective [characterEnd](#characterrangecharacterend) may no longer be valid. In this situation an exception will be thrown on access, either read or write. The [isRangeValid](#characterrangeisrangevalid) attribute will return `false` if the effective range is no longer valid.
 
 Note that if the [TextDocument object](textdocument.md#textdocument) length changes, the [CharacterRange object](#characterrange) range could become valid again.
 
@@ -94,11 +94,11 @@ The Text layer range CharacterRange attribute Fill Color, as an array of `[r, g,
 
 For example, in an 8-bpc project, a red value of 255 would be 1.0, and in a 32-bpc project, an overbright blue value can be something like 3.2.
 
-Setting this value will also set `applyFill` to true across the affected characters.
+Setting this value will also set `applyFill` to `true` across the affected characters.
 
 If this attribute has a mixed value for the range of characters, it will be read as `undefined`.
 
-!> **Warning:** In contrast to the same attribute on the TextDocument API, we will *not* throw an exception on read if `applyFill` is not true.
+!> **Warning:** In contrast to the same attribute on the TextDocument API, we will *not* throw an exception on read if `applyFill` is not `true`.
 
 #### Type
 
@@ -112,7 +112,7 @@ Array `[r, g, b]` of floating-point values; read/write.
 
 #### Description
 
-Returns true if the current range is within the bounds of the related [TextDocument object](textdocument.md#textdocument), false otherwise.
+Returns `true` if the current range is within the bounds of the related [TextDocument object](textdocument.md#textdocument), otherwise `false`.
 
 #### Type
 
@@ -133,7 +133,7 @@ This effectively reports the manual kerning value, and not the calculated kernin
 - If [autoKernType](textdocument.md#textdocumentautokerntype) in the range is set to `AutoKernType.METRIC_KERN`, `AutoKernType.OPTICAL_KERN`, or is mixed, then this attribute will be returned as `undefined`.
 - If [autoKernType](textdocument.md#textdocumentautokerntype) in the range is set to `AutoKernType.NO_AUTO_KERN`, and this attribute has a mixed value, it will be read as `undefined`.
 
-Setting this value will also set `AutoKernType.NO_AUTO_KERN` to true across the affected characters.
+Setting this value will also set `AutoKernType.NO_AUTO_KERN` to `true` across the affected characters.
 
 #### Type
 
@@ -153,9 +153,9 @@ For example, in an 8-bpc project, a red value of 255 would be 1.0, and in a 32-b
 
 If this attribute has a mixed value, it will be read as `undefined`.
 
-Setting this value will also set [applyStroke](textdocument.md#textdocumentapplystroke) to true across the affected characters.
+Setting this value will also set [applyStroke](textdocument.md#textdocumentapplystroke) to `true` across the affected characters.
 
-!> **Warning:** In contrast to the same attribute on the TextDocument API, we will *not* throw an exception on read if [applyStroke](textdocument.md#textdocumentapplystroke) is not true.
+!> **Warning:** In contrast to the same attribute on the TextDocument API, we will *not* throw an exception on read if [applyStroke](textdocument.md#textdocumentapplystroke) is not `true`.
 
 #### Type
 
@@ -171,7 +171,7 @@ Array [r, g, b] of floating-point values; read/write.
 
 The Text layer CharacterRange Stroke Over Fill character property.
 
-Indicates the rendering order for the fill and stroke for characters in the range. When true, the stroke appears over the fill.
+Indicates the rendering order for the fill and stroke for characters in the range. When `true`, the stroke appears over the fill.
 
 If this attribute has a mixed value, it will be read as `undefined`.
 
@@ -246,7 +246,7 @@ None.
 
 Returns a string with the parameters used to create the CharacterRange instance, e.g. `"CharacterRange(0,-1)"`.
 
-This may be safely called on an instance where isRangeValid returns false.
+This may be safely called on an instance where isRangeValid returns `false`.
 
 #### Parameters
 

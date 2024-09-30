@@ -77,7 +77,7 @@ CompItem object; read-only.
 
 #### Description
 
-When true, the layer has a video switch (the eyeball icon) in the Timeline panel; otherwise false.
+When `true`, the layer has a video switch (the eyeball icon) in the Timeline panel; otherwise `false`.
 
 #### Type
 
@@ -138,9 +138,9 @@ Floating-point value in the range `[-10800.0..10800.0]` (minus or plus three hou
 
 #### Description
 
-True if the value of the name attribute has been set explicitly, rather than automatically from the source.
+`true` if the value of the name attribute has been set explicitly, rather than automatically from the source.
 
-?> **Note:** This always returns true for layers that do not have a [AVLayer.source](avlayer.md#avlayersource)
+?> **Note:** This always returns `true` for layers that do not have a [AVLayer.source](avlayer.md#avlayersource)
 
 #### Type
 
@@ -170,7 +170,7 @@ Integer (0 to 16); read/write.
 
 #### Description
 
-When true, the layer is locked; otherwise false. This corresponds to the lock toggle in the Layer panel.
+When `true`, the layer is locked; otherwise `false`. This corresponds to the lock toggle in the Layer panel.
 
 #### Type
 
@@ -217,7 +217,7 @@ solidLayer.marker.setValueAtTime(3, layerMarker2);
 
 #### Description
 
-When true, the layer was created as a null object; otherwise false.
+When `true`, the layer was created as a null object; otherwise `false`.
 
 #### Type
 
@@ -279,7 +279,7 @@ Array of PropertyBase objects; read-only.
 
 #### Description
 
-When true, the layer is "shy", meaning that it is hidden in the Layer panel if the composition's "Hide all shy layers" option is toggled on.
+When `true`, the layer is "shy", meaning that it is hidden in the Layer panel if the composition's "Hide all shy layers" option is toggled on.
 
 #### Type
 
@@ -293,7 +293,7 @@ Boolean; read/write.
 
 #### Description
 
-When true, the layer is soloed, otherwise false.
+When `true`, the layer is soloed, otherwise `false`.
 
 #### Type
 
@@ -351,7 +351,7 @@ Floating-point value; read-only.
 
 #### Description
 
-Returns true if this layer will be active at the specified time.
+Returns `true` if this layer will be active at the specified time.
 
 To return `true`, the layer must be enabled, no other layer may be soloing unless this layer is soloed too, and the time must be between the `inPoint` and `outPoint` values of this layer.
 

@@ -63,7 +63,7 @@ An array containing three floating-point values, `[R, G, B]`, in the range `[0.0
 
 #### Description
 
-This attribute works app-wide: if changed on one CompItem, it will change it for every CompItem in the project. The value stays until restarting AE. Once restarted, it will revert to false.
+This attribute works app-wide: if changed on one CompItem, it will change it for every CompItem in the project. The value stays until restarting AE. Once restarted, it will revert to `false`.
 
 This parameter doesn't do anything.
 
@@ -113,7 +113,7 @@ Floating-point value in the range `[-10800.0...86339.0]` (-3:00:00:00 to 23:59:0
 
 #### Description
 
-When true, Draft 3D mode is enabled for the Composition panel. This corresponds to the value of the Draft 3D button in the Composition panel.
+When `true`, Draft 3D mode is enabled for the Composition panel. This corresponds to the value of the Draft 3D button in the Composition panel.
 
 #### Type
 
@@ -127,7 +127,7 @@ Boolean; read/write.
 
 #### Description
 
-When true, indicates that the composition uses drop-frame timecode. When false, indicates non-drop-frame timecode. This corresponds to the setting in the Composition Settings dialog box.
+When `true`, indicates that the composition uses drop-frame timecode. When `false`, indicates non-drop-frame timecode. This corresponds to the setting in the Composition Settings dialog box.
 
 #### Type
 
@@ -141,11 +141,11 @@ Boolean; read/write.
 
 #### Description
 
-When true, frame blending is enabled for this Composition. Corresponds to the value of the Frame Blending button in the Composition panel.
+When `true`, frame blending is enabled for this Composition. Corresponds to the value of the Frame Blending button in the Composition panel.
 
 #### Type
 
-Boolean; if true, frame blending is enabled; read/write.
+Boolean; if `true`, frame blending is enabled; read/write.
 
 ---
 
@@ -169,7 +169,7 @@ Floating-point; read/write.
 
 #### Description
 
-When true, only layers with shy set to false are shown in the Timeline panel. When false, all layers are visible, including those whose shy value is true. Corresponds to the value of the Hide All Shy Layers button in the Composition panel.
+When `true`, only layers with shy set to `false` are shown in the Timeline panel. When `false`, all layers are visible, including those whose shy value is `true`. Corresponds to the value of the Hide All Shy Layers button in the Composition panel.
 
 #### Type
 
@@ -236,7 +236,7 @@ comp.markerProperty.setValueAtTime(3, compMarker2);
 
 #### Description
 
-When true, motion blur is enabled for the composition. Corresponds to the value of the Motion Blur button in the Composition panel.
+When `true`, motion blur is enabled for the composition. Corresponds to the value of the Motion Blur button in the Composition panel.
 
 #### Type
 
@@ -333,7 +333,7 @@ Integer; read-only.
 
 #### Description
 
-When true, the frame rate of nested compositions is preserved in the current composition. Corresponds to the value of the "Preserve frame rate when nested or in render queue" option in the Advanced tab of the Composition Settings dialog box.
+When `true`, the frame rate of nested compositions is preserved in the current composition. Corresponds to the value of the "Preserve frame rate when nested or in render queue" option in the Advanced tab of the Composition Settings dialog box.
 
 #### Type
 
@@ -347,7 +347,7 @@ Boolean; read/write.
 
 #### Description
 
-When true, the resolution of nested compositions is preserved in the current composition. Corresponds to the value of the "Preserve Resolution When Nested" option in the Advanced tab of the Composition Settings dialog box.
+When `true`, the resolution of nested compositions is preserved in the current composition. Corresponds to the value of the "Preserve Resolution When Nested" option in the Advanced tab of the Composition Settings dialog box.
 
 #### Type
 
@@ -509,7 +509,7 @@ CompItem object.
 
 #### Description
 
-Exports the composition as a Motion Graphics template. Returns true if the Motion Graphics template is successfully exported, false otherwise.
+Exports the composition as a Motion Graphics template. Returns `true` if the Motion Graphics template is successfully exported, otherwise `false`.
 
 The name in the Essential Graphics panel is used for the file name of the Motion Graphics template (ex., "My Template.mogrt").
 Use the `motionGraphicsTemplateName` attribute to set the name.

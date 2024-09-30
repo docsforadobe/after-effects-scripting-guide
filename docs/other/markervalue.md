@@ -116,7 +116,7 @@ Floating point; read/write.
 
 #### Description
 
-When true, the FlashVideo cue point is for an event; otherwise, it is for navigation.
+When `true`, the FlashVideo cue point is for an event; otherwise, it is for navigation.
 
 #### Type
 
@@ -174,7 +174,7 @@ Integer (0 to 16); read/write.
 
 #### Description
 
-State of the Protected Region option in the Composition Marker dialog box. When true, the composition marker behaves as a protected region. Will also return true for protected region markers on nested composition layers, but is otherwise not applicable to layer markers.
+State of the Protected Region option in the Composition Marker dialog box. When `true`, the composition marker behaves as a protected region. Will also return `true` for protected region markers on nested composition layers, but is otherwise not applicable to layer markers.
 
 Available in After Effects 16.0 or later.
 

@@ -59,7 +59,9 @@ alert(effect2.name); // invalid reference because group index positions have cha
 
 #### Description
 
-For a layer, this corresponds to the setting of the eyeball icon. When true, the layer's video is active at the current time. For this to be true, the layer must be enabled, no other layer may be soloing unless this layer is soloed too, and the time must be between the `inPoint` and `outPoint` values of this layer. This value is never true in an audio layer; there is a separate `audioActive` attribute in the AVLayer object [AVLayer.audioActive](../layers/avlayer.md#avlayeraudioactive).
+For a layer, this corresponds to the setting of the eyeball icon. When `true`, the layer's video is active at the current time. For this to be `true`, the layer must be enabled, no other layer may be soloing unless this layer is soloed too, and the time must be between the `inPoint` and `outPoint` values of this layer.
+
+This value is never `true` in an audio layer; there is a separate `audioActive` attribute in the AVLayer object [AVLayer.audioActive](../layers/avlayer.md#avlayeraudioactive).
 
 For an effect and all properties, it is the same as the enabled attribute, except that it's read-only.
 
@@ -75,7 +77,7 @@ Boolean; read-only.
 
 #### Description
 
-When true, you can set the `enabled` attribute value. Generally, this is true if the user interface displays an eyeball icon for this property; it is true for all layers.
+When `true`, you can set the `enabled` attribute value. Generally, this is `true` if the user interface displays an eyeball icon for this property; it is `true` for all layers.
 
 #### Type
 
@@ -89,7 +91,7 @@ Boolean; read-only.
 
 #### Description
 
-When true, this property is a group used to organize other properties. The property is not displayed in the user interface and its child properties are not indented in the Timeline panel.For example, for a text layer with two animators and no properties twirled down, you might see:
+When `true`, this property is a group used to organize other properties. The property is not displayed in the user interface and its child properties are not indented in the Timeline panel.For example, for a text layer with two animators and no properties twirled down, you might see:
 
 - `Text`
 - `PathOptions`
@@ -116,11 +118,11 @@ Boolean; read-only.
 
 For layer, this corresponds to the video switch state of the layer in the Timeline panel. For an effect and all properties, it corresponds to the setting of the eyeball icon, if there is one.
 
-When true, the layer or property is enabled; otherwise false.
+When `true`, the layer or property is enabled; otherwise `false`.
 
 #### Type
 
-Boolean; read/write if `canSetEnabled` is true, read-only if `canSetEnabled` is false.
+Boolean; read/write if `canSetEnabled` is `true`, read-only if `canSetEnabled` is `false`.
 
 ---
 
@@ -130,7 +132,7 @@ Boolean; read/write if `canSetEnabled` is true, read-only if `canSetEnabled` is 
 
 #### Description
 
-When true, this property is an effect PropertyGroup.
+When `true`, this property is an effect PropertyGroup.
 
 #### Type
 
@@ -144,7 +146,7 @@ Boolean; read-only.
 
 #### Description
 
-When true, this property is a mask PropertyGroup.
+When `true`, this property is a mask PropertyGroup.
 
 #### Type
 
@@ -158,7 +160,7 @@ Boolean; read-only.
 
 #### Description
 
-When true, this property has been changed since its creation.
+When `true`, this property has been changed since its creation.
 
 #### Type
 
@@ -189,7 +191,7 @@ String; read-only.
 
 #### Description
 
-For a layer, the name of the layer. By default, this is the same as the Source name, unless [Layer.isNameSet](../layers/layer.md#layerisnameset) returns false.
+For a layer, the name of the layer. By default, this is the same as the Source name, unless [Layer.isNameSet](../layers/layer.md#layerisnameset) returns `false`.
 
 For an effect and all properties - the display name of the property. (Compare [PropertyBase.matchName](#propertybasematchname).) It is an error to set the name value if the property is not a child of an indexed group (that is, a property group that has the type `PropertyType.INDEXED_GROUP`; see [PropertyBase.propertyType](#propertybasepropertytype)).
 
@@ -265,7 +267,7 @@ A `PropertyType` enumerated value; read/write. One of:
 
 #### Description
 
-When true, this property is selected. Set to true to select the property, or to false to deselect it. Sampling this attribute repeatedly for a large number of properties can slow down system performance. To read the full set of selected properties of a composition or layer, use either [CompItem.selectedProperties](../items/compitem.md#compitemselectedproperties) or [Layer.selectedProperties](../layers/layer.md#layerselectedproperties).
+When `true`, this property is selected. Set to `true` to select the property, or to `false` to deselect it. Sampling this attribute repeatedly for a large number of properties can slow down system performance. To read the full set of selected properties of a composition or layer, use either [CompItem.selectedProperties](../items/compitem.md#compitemselectedproperties) or [Layer.selectedProperties](../layers/layer.md#layerselectedproperties).
 
 #### Type
 
