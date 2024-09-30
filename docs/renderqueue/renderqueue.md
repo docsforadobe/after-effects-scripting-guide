@@ -4,7 +4,7 @@
 
 #### Description
 
-The RenderQueue object represents the render automation process, the data and functionality that is available through the Render Queue panel of a particular After Effects project. Attributes provide access to items in the render queue and their render status. Methods can start, pause, and stop the rendering process. The [RenderQueueItem object](renderqueueitem.md#renderqueueitem) provides access to the specific settings for an item to be rendered.
+The RenderQueue object represents the render automation process, the data and functionality that is available through the Render Queue panel of a particular After Effects project. Attributes provide access to items in the render queue and their render status. Methods can start, pause, and stop the rendering process. The [RenderQueueItem object](renderqueueitem.md) provides access to the specific settings for an item to be rendered.
 
 ---
 
@@ -51,11 +51,11 @@ Boolean; read/write.
 
 #### Description
 
-A collection of all items in the render queue. See [RenderQueueItem object](renderqueueitem.md#renderqueueitem).
+A collection of all items in the render queue. See [RenderQueueItem object](renderqueueitem.md).
 
 #### Type
 
-[RQItemCollection object](rqitemcollection.md#rqitemcollection); read-only.
+[RQItemCollection object](rqitemcollection.md); read-only.
 
 ---
 
@@ -104,7 +104,7 @@ The position index of the item. An integer in the range `[0..numItems]`.
 
 #### Returns
 
-[RenderQueueItem object](renderqueueitem.md#renderqueueitem).
+[RenderQueueItem object](renderqueueitem.md).
 
 ---
 

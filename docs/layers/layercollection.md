@@ -4,9 +4,9 @@
 
 #### Description
 
-The LayerCollection object represents a set of layers. The LayerCollection belonging to a [CompItem object](../items/compitem.md#compitem) contains all the layer objects for layers in the composition. The methods of the collection object allow you to manipulate the layer list.
+The LayerCollection object represents a set of layers. The LayerCollection belonging to a [CompItem object](../items/compitem.md) contains all the layer objects for layers in the composition. The methods of the collection object allow you to manipulate the layer list.
 
-> LayerCollection is a subclass of [Collection object](../other/collection.md#collection). All methods and attributes of Collection, in addition to those listed below, are available when working with LayerCollection.
+> LayerCollection is a subclass of [Collection object](../other/collection.md). All methods and attributes of Collection, in addition to those listed below, are available when working with LayerCollection.
 
 #### Example
 
@@ -31,7 +31,7 @@ alert("number of layers after is " + layerCollection.length);
 
 #### Description
 
-Creates a new [AVLayer object](avlayer.md#avlayer) containing the specified item, and adds it to this collection. The new layer honors the "Create Layers at Composition Start Time" preference. This method generates an exception if the item cannot be added as a layer to this CompItem.
+Creates a new [AVLayer object](avlayer.md) containing the specified item, and adds it to this collection. The new layer honors the "Create Layers at Composition Start Time" preference. This method generates an exception if the item cannot be added as a layer to this CompItem.
 
 #### Parameters
 
@@ -41,7 +41,7 @@ Creates a new [AVLayer object](avlayer.md#avlayer) containing the specified item
 
 #### Returns
 
-[AVLayer object](avlayer.md#avlayer);
+[AVLayer object](avlayer.md);
 
 ---
 
@@ -51,7 +51,7 @@ Creates a new [AVLayer object](avlayer.md#avlayer) containing the specified item
 
 #### Description
 
-Creates a new paragraph (box) text layer with [TextDocument.lineOrientation](../text/textdocument.md#textdocumentlineorientation) set to `LineOrientation.HORIZONTAL` and adds the new [TextLayer object](textlayer.md#textlayer) to this collection. To create a point text layer, use the [LayerCollection.addText()](#layercollectionaddtext) method.
+Creates a new paragraph (box) text layer with [TextDocument.lineOrientation](../text/textdocument.md#textdocumentlineorientation) set to `LineOrientation.HORIZONTAL` and adds the new [TextLayer object](textlayer.md) to this collection. To create a point text layer, use the [LayerCollection.addText()](#layercollectionaddtext) method.
 
 #### Parameters
 
@@ -70,7 +70,7 @@ TextLayer object.
 
 #### Description
 
-Creates a new camera layer and adds the [CameraLayer object](cameralayer.md#cameralayer) to this collection. The new layer honors the "Create Layers at Composition Start Time" preference.
+Creates a new camera layer and adds the [CameraLayer object](cameralayer.md) to this collection. The new layer honors the "Create Layers at Composition Start Time" preference.
 
 #### Parameters
 
@@ -80,7 +80,7 @@ Creates a new camera layer and adds the [CameraLayer object](cameralayer.md#came
 
 #### Returns
 
-[CameraLayer object](cameralayer.md#cameralayer).
+[CameraLayer object](cameralayer.md).
 
 ---
 
@@ -90,7 +90,7 @@ Creates a new camera layer and adds the [CameraLayer object](cameralayer.md#came
 
 #### Description
 
-Creates a new light layer and adds the [LightLayer object](lightlayer.md#lightlayer) to this collection. The new layer honors the "Create Layers at Composition Start Time" preference.
+Creates a new light layer and adds the [LightLayer object](lightlayer.md) to this collection. The new layer honors the "Create Layers at Composition Start Time" preference.
 
 #### Parameters
 
@@ -100,7 +100,7 @@ Creates a new light layer and adds the [LightLayer object](lightlayer.md#lightla
 
 #### Returns
 
-[LightLayer object](lightlayer.md#lightlayer).
+[LightLayer object](lightlayer.md).
 
 ---
 
@@ -110,7 +110,7 @@ Creates a new light layer and adds the [LightLayer object](lightlayer.md#lightla
 
 #### Description
 
-Creates a new null layer and adds the [AVLayer object](avlayer.md#avlayer) to this collection. This is the same as choosing Layer > New > Null Object.
+Creates a new null layer and adds the [AVLayer object](avlayer.md) to this collection. This is the same as choosing Layer > New > Null Object.
 
 #### Parameters
 
@@ -119,7 +119,7 @@ Creates a new null layer and adds the [AVLayer object](avlayer.md#avlayer) to th
 
 #### Returns
 
-[AVLayer object](avlayer.md#avlayer).
+[AVLayer object](avlayer.md).
 
 ---
 
@@ -129,7 +129,7 @@ Creates a new null layer and adds the [AVLayer object](avlayer.md#avlayer) to th
 
 #### Description
 
-Creates a new [ShapeLayer object](shapelayer.md#shapelayer) for a new, empty Shape layer. Use the ShapeLayer object to add properties, such as shape, fill, stroke, and path filters. This is the same as using a shape tool in "Tool Creates Shape" mode. Tools automatically add a vector group that includes Fill and Stroke as specified in the tool options.
+Creates a new [ShapeLayer object](shapelayer.md) for a new, empty Shape layer. Use the ShapeLayer object to add properties, such as shape, fill, stroke, and path filters. This is the same as using a shape tool in "Tool Creates Shape" mode. Tools automatically add a vector group that includes Fill and Stroke as specified in the tool options.
 
 #### Parameters
 
@@ -147,7 +147,7 @@ ShapeLayer object.
 
 #### Description
 
-Creates a new [SolidSource object](../sources/solidsource.md#solidsource), with values set as specified; sets the new SolidSource as the `mainSource` value of a new [FootageItem object](../items/footageitem.md#footageitem), and adds the FootageItem to the project. Creates a new [AVLayer object](avlayer.md#avlayer), sets the new Footage Item as its `source`, and adds the layer to this collection.
+Creates a new [SolidSource object](../sources/solidsource.md), with values set as specified; sets the new SolidSource as the `mainSource` value of a new [FootageItem object](../items/footageitem.md), and adds the FootageItem to the project. Creates a new [AVLayer object](avlayer.md), sets the new Footage Item as its `source`, and adds the layer to this collection.
 
 #### Parameters
 
@@ -161,7 +161,7 @@ Creates a new [SolidSource object](../sources/solidsource.md#solidsource), with 
 
 #### Returns
 
-[AVLayer object](avlayer.md#avlayer).
+[AVLayer object](avlayer.md).
 
 ---
 
@@ -171,16 +171,16 @@ Creates a new [SolidSource object](../sources/solidsource.md#solidsource), with 
 
 #### Description
 
-Creates a new point text layer with [TextDocument.lineOrientation](../text/textdocument.md#textdocumentlineorientation) set to `LineOrientation.HORIZONTAL` and adds the new [TextLayer object](textlayer.md#textlayer) to this collection. To create a paragraph (box) text layer, use [LayerCollection.addBoxText()](#layercollectionaddboxtext).
+Creates a new point text layer with [TextDocument.lineOrientation](../text/textdocument.md#textdocumentlineorientation) set to `LineOrientation.HORIZONTAL` and adds the new [TextLayer object](textlayer.md) to this collection. To create a paragraph (box) text layer, use [LayerCollection.addBoxText()](#layercollectionaddboxtext).
 
 #### Parameters
 
-| `sourceText`   | Optional; a string containing the source text of the new<br/>layer, or a [TextDocument object](../text/textdocument.md#textdocument) containing the source text of<br/>the new layer.   |
+| `sourceText`   | Optional; a string containing the source text of the new<br/>layer, or a [TextDocument object](../text/textdocument.md) containing the source text of<br/>the new layer.   |
 |----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 #### Returns
 
-[TextLayer object](textlayer.md#textlayer).
+[TextLayer object](textlayer.md).
 
 ---
 
@@ -192,7 +192,7 @@ Creates a new point text layer with [TextDocument.lineOrientation](../text/textd
 
 #### Description
 
-Creates a new paragraph (box) text layer with [TextDocument.lineOrientation](../text/textdocument.md#textdocumentlineorientation) set to `LineOrientation.VERTICAL_RIGHT_TO_LEFT` and adds the new [TextLayer object](textlayer.md#textlayer) to this collection. To create a point text layer, use the [LayerCollection.addText()](#layercollectionaddtext) or [LayerCollection.addVerticalText()](#layercollectionaddverticaltext) methods.
+Creates a new paragraph (box) text layer with [TextDocument.lineOrientation](../text/textdocument.md#textdocumentlineorientation) set to `LineOrientation.VERTICAL_RIGHT_TO_LEFT` and adds the new [TextLayer object](textlayer.md) to this collection. To create a point text layer, use the [LayerCollection.addText()](#layercollectionaddtext) or [LayerCollection.addVerticalText()](#layercollectionaddverticaltext) methods.
 
 #### Parameters
 
@@ -213,16 +213,16 @@ TextLayer object.
 
 #### Description
 
-Creates a new point text layer with [TextDocument.lineOrientation](../text/textdocument.md#textdocumentlineorientation) set to `LineOrientation.VERTICAL_RIGHT_TO_LEFT` and adds the new [TextLayer object](textlayer.md#textlayer) to this collection. To create a paragraph (box) text layer, use the [LayerCollection.addBoxText()](#layercollectionaddboxtext) or [LayerCollection.addVerticalBoxText()](#layercollectionaddverticalboxtext) methods.
+Creates a new point text layer with [TextDocument.lineOrientation](../text/textdocument.md#textdocumentlineorientation) set to `LineOrientation.VERTICAL_RIGHT_TO_LEFT` and adds the new [TextLayer object](textlayer.md) to this collection. To create a paragraph (box) text layer, use the [LayerCollection.addBoxText()](#layercollectionaddboxtext) or [LayerCollection.addVerticalBoxText()](#layercollectionaddverticalboxtext) methods.
 
 #### Parameters
 
-| `sourceText`   | Optional; a string containing the source text of the new<br/>layer, or a [TextDocument object](../text/textdocument.md#textdocument) containing the source text of<br/>the new layer.   |
+| `sourceText`   | Optional; a string containing the source text of the new<br/>layer, or a [TextDocument object](../text/textdocument.md) containing the source text of<br/>the new layer.   |
 |----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 #### Returns
 
-[TextLayer object](textlayer.md#textlayer).
+[TextLayer object](textlayer.md).
 
 ---
 
@@ -241,7 +241,7 @@ Returns the first (topmost) layer found in this collection with the specified na
 
 #### Returns
 
-[Layer object](layer.md#layer) or `null`.
+[Layer object](layer.md) or `null`.
 
 ---
 
@@ -251,7 +251,7 @@ Returns the first (topmost) layer found in this collection with the specified na
 
 #### Description
 
-Creates a new [CompItem object](../items/compitem.md#compitem) and moves the specified layers into its layer collection. It removes the individual layers from this collection, and adds the new CompItem to this collection.
+Creates a new [CompItem object](../items/compitem.md) and moves the specified layers into its layer collection. It removes the individual layers from this collection, and adds the new CompItem to this collection.
 
 #### Parameters
 
@@ -262,4 +262,4 @@ Creates a new [CompItem object](../items/compitem.md#compitem) and moves the spe
 
 #### Returns
 
-[CompItem object](../items/compitem.md#compitem).
+[CompItem object](../items/compitem.md).

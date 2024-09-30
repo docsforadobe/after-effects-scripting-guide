@@ -6,13 +6,13 @@
 
 The AVItem object provides access to attributes and methods of audio/visual files imported into After Effects.
 
-> AVItem is a subclass of Item. All methods and attributes of Item, in addition to those listed below, are available when working with AVItem. See [Item object](item.md#item)
+> AVItem is a subclass of Item. All methods and attributes of Item, in addition to those listed below, are available when working with AVItem. See [Item object](item.md)
 
-> AVItem is the base class for both CompItem and FootageItem, so AVItem attributes and methods are also available when working with CompItem and FootageItem objects. See [CompItem object](compitem.md#compitem) and [FootageItem object](footageitem.md#footageitem).
+> AVItem is the base class for both CompItem and FootageItem, so AVItem attributes and methods are also available when working with CompItem and FootageItem objects. See [CompItem object](compitem.md) and [FootageItem object](footageitem.md).
 
 !> **Warning:** CompItems and FootageItems, while logical descendants of AVItem, are not *really* subclasses of AVItem as AVItem doesn't exist in Extendscript, ie. attempting to check if `item instanceof AVItem` will fail because AVItem is undefined. This is also true for `Item` itself.
 
-See [Javascript Classes](../introduction/javascript.md#javascriptclasses) and [After Effects Class Hierarchy](../introduction/classhierarchy.md#classhierarchy) for more info.
+See [Javascript Classes](../introduction/javascript.md#javascriptclasses) and [After Effects Class Hierarchy](../introduction/classhierarchy.md) for more info.
 
 ---
 
@@ -145,8 +145,8 @@ Returns `true` if the item can be used, or otherwise `false`.
 
 A CompItem or a FootageItem can be used as an alternate source for the layer, with some restrictions:
 
-- If the AVItem is a [FootageItem object](footageitem.md#footageitem), then FootageItem.FootageSource should not be a [SolidSource object](../sources/solidsource.md#solidsource).
-- If the AVItem is a [FootageItem object](footageitem.md#footageitem) and the FootageItem.FootageSource is a [FileSource object](../sources/filesource.md#filesource) then that FileSource should not point to a non-media file e.g. a JSX script file.
+- If the AVItem is a [FootageItem object](footageitem.md), then FootageItem.FootageSource should not be a [SolidSource object](../sources/solidsource.md).
+- If the AVItem is a [FootageItem object](footageitem.md) and the FootageItem.FootageSource is a [FileSource object](../sources/filesource.md) then that FileSource should not point to a non-media file e.g. a JSX script file.
 - Setting the AVItem cannot create a cyclical reference within the project.
 
 #### Type
@@ -370,7 +370,7 @@ Nothing.
 
 #### Description
 
-Creates a [SolidSource object](../sources/solidsource.md#solidsource) with specified values, sets this as the value of the `proxySource` attribute, and sets `useProxy` to `true`. It does not preserve the interpretation parameters, instead using the user preferences.
+Creates a [SolidSource object](../sources/solidsource.md) with specified values, sets this as the value of the `proxySource` attribute, and sets `useProxy` to `true`. It does not preserve the interpretation parameters, instead using the user preferences.
 
 ?> **Note:** There is no way, using the user interface, to set a solid as a proxy; this feature is available only through scripting.
 

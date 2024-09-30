@@ -20,7 +20,7 @@ The item that is currently active and is to be acted upon, or `null` if no item 
 
 #### Type
 
-[Item object](../items/item.md#item) or `null`; read-only.
+[Item object](../items/item.md) or `null`; read-only.
 
 ---
 
@@ -256,7 +256,7 @@ All of the items in the project.
 
 #### Type
 
-[ItemCollection object](../items/itemcollection.md#itemcollection); read-only.
+[ItemCollection object](../items/itemcollection.md); read-only.
 
 ---
 
@@ -322,7 +322,7 @@ The [Render Queue](renderqueue/renderqueue) of the project.
 
 #### Type
 
-[RenderQueue object](../renderqueue/renderqueue.md#renderqueue); read-only.
+[RenderQueue object](../renderqueue/renderqueue.md); read-only.
 
 ---
 
@@ -350,7 +350,7 @@ The root folder containing the contents of the project; this is a virtual folder
 
 #### Type
 
-[FolderItem object](../items/folderitem.md#folderitem); read-only.
+[FolderItem object](../items/folderitem.md); read-only.
 
 ---
 
@@ -364,7 +364,7 @@ All items selected in the Project panel, in the sort order shown in the Project 
 
 #### Type
 
-Array of [Item objects](../items/item.md#item); read-only.
+Array of [Item objects](../items/item.md); read-only.
 
 ---
 
@@ -500,7 +500,7 @@ Boolean; read/write.
 
 Returns an Array of Objects containing references to used fonts and the Text Layers and times on which they appear in the current [Project](#project).
 
-Each object is composed of `font` which is a [Font object](../text/fontobject.md#fontobject), and `usedAt` which is an Array of Objects, each composed of `layerID`, a [Layer.id](../layers/layer.md#layerid), and `layerTimeD` for when. See [Project.layerByID()](#projectlayerbyid) to retrieve the layers.
+Each object is composed of `font` which is a [Font object](../text/fontobject.md), and `usedAt` which is an Array of Objects, each composed of `layerID`, a [Layer.id](../layers/layer.md#layerid), and `layerTimeD` for when. See [Project.layerByID()](#projectlayerbyid) to retrieve the layers.
 
 ```javascript
 var usedList = app.project.usedFonts;
@@ -694,7 +694,7 @@ Creates and returns a new FootageItem object from the file, and adds it to the p
 
 #### Returns
 
-[FootageItem object](../items/footageitem.md#footageitem).
+[FootageItem object](../items/footageitem.md).
 
 #### Example
 
@@ -714,7 +714,7 @@ Shows an Import File dialog box. Same as the File > Import > File command.
 
 #### Returns
 
-Array of [Item objects](../items/item.md#item) created during import; or `null` if the user cancels the dialog box.
+Array of [Item objects](../items/item.md) created during import; or `null` if the user cancels the dialog box.
 
 ---
 
@@ -758,7 +758,7 @@ Retrieves an item at a specified index position.
 
 #### Returns
 
-[Item object](../items/item.md#item).
+[Item object](../items/item.md).
 
 ---
 
@@ -780,7 +780,7 @@ Retrieves an item by its [Item ID](../items/item.md#itemid)
 
 #### Returns
 
-[Item object](../items/item.md#item).
+[Item object](../items/item.md).
 
 ---
 
@@ -802,7 +802,7 @@ Instance method on Project which, when given a valid ID value, returns the Layer
 
 #### Returns
 
-[Layer object](../layers/layer.md#layer) with the given ID if it exists on the project; otherwise null. Non-valid IDs will throw an exception stating that the input parameter is not an unsigned integer.
+[Layer object](../layers/layer.md) with the given ID if it exists on the project; otherwise null. Non-valid IDs will throw an exception stating that the input parameter is not an unsigned integer.
 
 #### Example
 
@@ -891,9 +891,9 @@ Integer; the total number of FootageItem objects removed.
 
 #### Description
 
-This function will replace all the usages of [Font object](../text/fontobject.md#fontobject) `fromFont` with [Font object](../text/fontobject.md#fontobject) `toFont`.
+This function will replace all the usages of [Font object](../text/fontobject.md) `fromFont` with [Font object](../text/fontobject.md) `toFont`.
 
-This operation exposes the same mechanism and policy used for automatic font replacement of missing or substituted fonts and is therefore a complete and precise replacement, even on [TextDocuments](../text/textdocument.md#textdocument) which have mixed styling, preserving the character range the `fromFont` was applied to.
+This operation exposes the same mechanism and policy used for automatic font replacement of missing or substituted fonts and is therefore a complete and precise replacement, even on [TextDocuments](../text/textdocument.md) which have mixed styling, preserving the character range the `fromFont` was applied to.
 
 This operation is not undoable.
 

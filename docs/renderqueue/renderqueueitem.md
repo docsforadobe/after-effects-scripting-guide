@@ -4,7 +4,7 @@
 
 #### Description
 
-The RenderQueueItem object represents an individual item in the render queue. It provides access to the specific settings for an item to be rendered. Create the object by adding a composition to the Render Queue with the [RQItemCollection object](rqitemcollection.md#rqitemcollection); see [RQItemCollection.add()](rqitemcollection.md#rqitemcollectionadd).
+The RenderQueueItem object represents an individual item in the render queue. It provides access to the specific settings for an item to be rendered. Create the object by adding a composition to the Render Queue with the [RQItemCollection object](rqitemcollection.md); see [RQItemCollection.add()](rqitemcollection.md#rqitemcollectionadd).
 
 ---
 
@@ -20,7 +20,7 @@ The composition that will be rendered by this render-queue item. To change the c
 
 #### Type
 
-[CompItem object](../items/compitem.md#compitem); read-only.
+[CompItem object](../items/compitem.md); read-only.
 
 ---
 
@@ -107,7 +107,7 @@ The collection of Output Modules for the item.
 
 #### Type
 
-[OMCollection object](omcollection.md#omcollection); read-only.
+[OMCollection object](omcollection.md); read-only.
 
 ---
 

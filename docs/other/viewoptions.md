@@ -4,7 +4,7 @@
 
 #### Description
 
-The ViewOptions object represents the options for a given [View object](view.md#view)
+The ViewOptions object represents the options for a given [View object](view.md)
 
 #### Example
 

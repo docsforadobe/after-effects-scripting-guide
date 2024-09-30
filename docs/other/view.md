@@ -34,7 +34,7 @@ Options object for this View
 
 #### Type
 
-[ViewOptions object](viewoptions.md#viewoptions)
+[ViewOptions object](viewoptions.md)
 
 ---
 

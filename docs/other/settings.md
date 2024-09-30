@@ -12,11 +12,11 @@ In the settings file, section names are enclosed in brackets and quotation marks
 
 You can create new settings with this object, as well as accessing existing settings.
 
-As of Version 12/CC, preferences and settings methods now take a third argument to specify the target preferences file if Section/Key is not in the main preferences file. See [Preferences object](preferences.md#preferences) for more info.
+As of Version 12/CC, preferences and settings methods now take a third argument to specify the target preferences file if Section/Key is not in the main preferences file. See [Preferences object](preferences.md) for more info.
 
 ?> **Note:** - These values aren't shared between versions of AE; each new install brings new settings files, and so these prefs won't carry over.
 - Internally, all saved settings have their section name preprended with `"Settings_"`
-- If you're looking to get or set internal AE preferences, see [Preferences object](preferences.md#preferences)
+- If you're looking to get or set internal AE preferences, see [Preferences object](preferences.md)
 
 ---
 

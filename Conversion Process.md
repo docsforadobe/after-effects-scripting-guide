@@ -117,7 +117,12 @@ Write a general intro sort of thing here; again, see AE scripting docs or refere
     - `[CharacterRange.pasteFrom()](../text/characterrange.md#characterrangepastefrom)`
     - This regex search can help, but fails when the link is also a header (see changelog):
       - `(?:#)(.*?)-(.*?)(?:\))` => `#$1$2)`
-2. Search for empty in-page links and replace them with the proper format, i.e.
+2. Search for anchored links to the top-level page & replace with direct page link, i.e.
+    - `[Settings object](../other/settings.md#settings)` to
+    - `[Settings object](../other/settings.md)`
+    - This regex search / replace can help:
+      - `(.*)\.md#(\1)\)` => `$1.md)`
+3. Search for empty in-page links and replace them with the proper format, i.e.
     - `[app.watchFolder()]()` to
     - `[app.watchFolder()](#appwatchfolder)`
 

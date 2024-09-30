@@ -668,10 +668,10 @@ Floating-point value; read/write.
 
 The Text layer's font specified by its PostScript name.
 
-On write, there are very few resrictions on what can be supplied - if the underlying font management system does not have a matching [Font object](fontobject.md#fontobject) instance matching the supplied PostScript name a substitute instance will be created.
+On write, there are very few resrictions on what can be supplied - if the underlying font management system does not have a matching [Font object](fontobject.md) instance matching the supplied PostScript name a substitute instance will be created.
 The Font instance returned in the case of duplicate PostScript names will be the 0th element of the array returned from [FontsObject.getFontsByPostScriptName()](fontsobject.md#fontsobjectgetfontsbypostscriptname).
 
-You should use the [Font object](fontobject.md#fontobject) attribute for precise control.
+You should use the [Font object](fontobject.md) attribute for precise control.
 
 !> **Warning:** This value only reflects the first character in the Text layer.
 If you change this value, it will set all characters in the Text layer to the specified setting.
@@ -775,13 +775,13 @@ String; read-only.
 
 #### Description
 
-The Text layer's [Font object](fontobject.md#fontobject) specified by its PostScript name.
+The Text layer's [Font object](fontobject.md) specified by its PostScript name.
 
 !> **Warning:** This value only reflects the first character in the Text layer.
 
 #### Type
 
-[Font object](fontobject.md#fontobject); read/write.
+[Font object](fontobject.md); read/write.
 
 ---
 
@@ -1357,15 +1357,15 @@ Use toString() to find out what the constructed parameters were.
 
 | `characterStart`     | Unsigned integer. Starts at zero, must be the less<br/>than or equal to the (text) length of the [TextDocument object](#textdocument).                                                                                                                                                                                                                                                                                                                                                           |
 |----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `signedCharacterEnd` | Optional signed integer. If not specified, will be computed at (characterStart + 1).<br/><br/><br/>If set to -1, then the [CharacterRange object](characterrange.md#characterrange) will dynamically calculate this on access to be equal to the (text) length of the [TextDocument object](#textdocument).<br/><br/><br/>signedCharacterEnd must be greater than or equal to characterStart, and less than or equal to the (text) length of the [TextDocument object](#textdocument).<br/><br/> |
+| `signedCharacterEnd` | Optional signed integer. If not specified, will be computed at (characterStart + 1).<br/><br/><br/>If set to -1, then the [CharacterRange object](characterrange.md) will dynamically calculate this on access to be equal to the (text) length of the [TextDocument object](#textdocument).<br/><br/><br/>signedCharacterEnd must be greater than or equal to characterStart, and less than or equal to the (text) length of the [TextDocument object](#textdocument).<br/><br/> |
 
 Throws an exception if the parameters would result in an invalid range.
 
-It is not possible to create a [CharacterRange object](characterrange.md#characterrange) which spans the final carriage return in the [TextDocument object](#textdocument).
+It is not possible to create a [CharacterRange object](characterrange.md) which spans the final carriage return in the [TextDocument object](#textdocument).
 
 #### Returns
 
-An instance of [CharacterRange object](characterrange.md#characterrange)
+An instance of [CharacterRange object](characterrange.md)
 
 ---
 
@@ -1377,7 +1377,7 @@ An instance of [CharacterRange object](characterrange.md#characterrange)
 
 #### Description
 
-Returns the character index bounds of a [ComposedLineRange object](composedlinerange.md#composedlinerange) in the Text layer.
+Returns the character index bounds of a [ComposedLineRange object](composedlinerange.md) in the Text layer.
 
 #### Parameters
 
@@ -1403,7 +1403,7 @@ Remember that the composed lines are static and subsequent changes to the [TextD
 
 #### Description
 
-Returns an instance of the Text layer range accessor [ComposedLineRange object](composedlinerange.md#composedlinerange).
+Returns an instance of the Text layer range accessor [ComposedLineRange object](composedlinerange.md).
 
 The instance will remember the parameters passed in the constructor - they remain constant and changes to the [TextDocument](#textdocument) contents may cause the instance to throw exceptions on access until the [TextDocument](#textdocument) contents are changed which makes the range valid again.
 
@@ -1413,7 +1413,7 @@ Use [ComposedLineRange.toString()](composedlinerange.md#composedlinerangetostrin
 
 | `composedLineIndexStart`     | Unsigned integer. Starts at zero, must be the less than the number of composed lines in the [TextDocument object](#textdocument).                                                                                                                                                                                                                                                                                                                                                                                         |
 |------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `signedComposedLineIndexEnd` | Optional signed integer. If not specified, will be computed at (composedLineIndexStart + 1).<br/><br/><br/>If set to -1, then the [ComposedLineRange object](composedlinerange.md#composedlinerange) will dynamically calculate this on access to the last composed line of the [TextDocument object](#textdocument).<br/><br/><br/>signedComposedLineIndexEnd must be greater than composedLineIndexStart, and less than or equal to the number of composed lines in the [TextDocument object](#textdocument).<br/><br/> |
+| `signedComposedLineIndexEnd` | Optional signed integer. If not specified, will be computed at (composedLineIndexStart + 1).<br/><br/><br/>If set to -1, then the [ComposedLineRange object](composedlinerange.md) will dynamically calculate this on access to the last composed line of the [TextDocument object](#textdocument).<br/><br/><br/>signedComposedLineIndexEnd must be greater than composedLineIndexStart, and less than or equal to the number of composed lines in the [TextDocument object](#textdocument).<br/><br/> |
 
 Throws an exception if the parameters would result in an invalid range.
 
@@ -1421,7 +1421,7 @@ Remember that the composed lines are static and subsequent changes to the [TextD
 
 #### Returns
 
-An instance of [ComposedLineRange object](composedlinerange.md#composedlinerange)
+An instance of [ComposedLineRange object](composedlinerange.md)
 
 ---
 
@@ -1456,7 +1456,7 @@ Key `end` will be set to text index of the end of the paragraph (greater than st
 
 #### Description
 
-Returns an instance of the Text layer range accessor [ParagraphRange object](paragraphrange.md#paragraphrange).
+Returns an instance of the Text layer range accessor [ParagraphRange object](paragraphrange.md).
 
 The instance will remember the parameters passed in the constructor - they remain constant and changes to the [TextDocument](#textdocument) contents may cause the instance to throw exceptions on access until the [TextDocument](#textdocument) contents are changed which makes the range valid again.
 
@@ -1466,13 +1466,13 @@ Use [ParagraphRange.toString()](paragraphrange.md#paragraphrangetostring) to fin
 
 | `paragraphIndexStart`     | Unsigned integer. Starts at zero, must be the less than the number of paragraphs in the [TextDocument object](#textdocument).                                                                                                                                                                                                                                                                                                                                                                   |
 |---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `signedParagraphIndexEnd` | Optional signed integer. If not specified, will be computed at (paragraphIndexStart + 1).<br/><br/><br/>If set to -1, then the [ParagraphRange object](paragraphrange.md#paragraphrange) will dynamically calculate this on access to the last paragraph of the [TextDocument object](#textdocument).<br/><br/><br/>signedParagraphIndexEnd must be greater than paragraphIndexStart, and less than or equal to the number of paragraphs in the [TextDocument object](#textdocument).<br/><br/> |
+| `signedParagraphIndexEnd` | Optional signed integer. If not specified, will be computed at (paragraphIndexStart + 1).<br/><br/><br/>If set to -1, then the [ParagraphRange object](paragraphrange.md) will dynamically calculate this on access to the last paragraph of the [TextDocument object](#textdocument).<br/><br/><br/>signedParagraphIndexEnd must be greater than paragraphIndexStart, and less than or equal to the number of paragraphs in the [TextDocument object](#textdocument).<br/><br/> |
 
 Throws an exception if the parameters would result in an invalid range.
 
 #### Returns
 
-An instance of [ParagraphRange object](paragraphrange.md#paragraphrange)
+An instance of [ParagraphRange object](paragraphrange.md)
 
 ---
 

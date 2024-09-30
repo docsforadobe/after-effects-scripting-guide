@@ -7,7 +7,7 @@
 
 The FootageItem object represents a footage item imported into a project, which appears in the Project panel. These are accessed by position index number in a project's item collection.
 
-> FootageItem is a subclass of [AVItem object](avitem.md#avitem), which is a subclass of [Item object](item.md#item). All methods and attributes of AVItem and Item, in addition to those listed below, are available when working with FootageItem.
+> FootageItem is a subclass of [AVItem object](avitem.md), which is a subclass of [Item object](item.md). All methods and attributes of AVItem and Item, in addition to those listed below, are available when working with FootageItem.
 
 ---
 
@@ -35,17 +35,17 @@ If the FootageItem's `mainSource` is a FileSource, this is the same as [FootageI
 
 #### Description
 
-The footage source, an object that contains all of the settings related to that footage item, including those that are normally accessed through the Interpret Footage dialog box. The attribute is read-only. To change its value, call one of the FootageItem "replace" methods. See the [FootageSource object](../sources/footagesource.md#footagesource), and its three types:
+The footage source, an object that contains all of the settings related to that footage item, including those that are normally accessed through the Interpret Footage dialog box. The attribute is read-only. To change its value, call one of the FootageItem "replace" methods. See the [FootageSource object](../sources/footagesource.md), and its three types:
 
-- [SolidSource object](../sources/solidsource.md#solidsource)
-- [FileSource object](../sources/filesource.md#filesource)
-- [PlaceholderSource object](../sources/placeholdersource.md#placeholdersource)
+- [SolidSource object](../sources/solidsource.md)
+- [FileSource object](../sources/filesource.md)
+- [PlaceholderSource object](../sources/placeholdersource.md)
 
 If this is a FileSource object, and the [footageMissing](avitem.md#avitemfootagemissing) value is `true`, the path to the missing footage file is in the [FileSource.missingFootagePath](../sources/filesource.md#filesourcemissingfootagepath) attribute.
 
 #### Type
 
-[FootageSource object](../sources/footagesource.md#footagesource); read-only.
+[FootageSource object](../sources/footagesource.md); read-only.
 
 ---
 
@@ -67,7 +67,7 @@ None.
 
 #### Returns
 
-[Viewer object](../other/viewer.md#viewer) for the Footage panel, or `null` if the footage could not be opened.
+[Viewer object](../other/viewer.md) for the Footage panel, or `null` if the footage could not be opened.
 
 ---
 
@@ -79,7 +79,7 @@ None.
 
 Changes the source of this FootageItem to the specified file.
 
-In addition to loading the file, the method creates a new FileSource object for the file and sets mainSource to that object. In the new source object, it sets the `name`, `width`, `height`, `frameDuration`, and `duration` attributes (see [AVItem object](avitem.md#avitem)) based on the contents of the file.
+In addition to loading the file, the method creates a new FileSource object for the file and sets mainSource to that object. In the new source object, it sets the `name`, `width`, `height`, `frameDuration`, and `duration` attributes (see [AVItem object](avitem.md)) based on the contents of the file.
 
 The method preserves interpretation parameters from the previous `mainSource` object.
 
@@ -119,7 +119,7 @@ Changes the source of this FootageItem to the specified placeholder. Creates a n
 
 Changes the source of this FootageItem to the specified image sequence.
 
-In addition to loading the file, the method creates a new FileSource object for the file and sets `mainSource` to that object. In the new source object, it sets the `name`, `width`, `height`, `frameDuration`, and `duration` attributes (see [AVItem object](avitem.md#avitem)) based on the contents of the file.
+In addition to loading the file, the method creates a new FileSource object for the file and sets `mainSource` to that object. In the new source object, it sets the `name`, `width`, `height`, `frameDuration`, and `duration` attributes (see [AVItem object](avitem.md)) based on the contents of the file.
 
 The method preserves interpretation parameters from the previous `mainSource` object. If the specified file has an unlabeled alpha channel, the method estimates the alpha interpretation.
 

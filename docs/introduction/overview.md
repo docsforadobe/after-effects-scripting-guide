@@ -143,7 +143,7 @@ In the Startup folder, you can place scripts that you wish to execute at startup
 
 Scripting shares a global environment, so any script executed at startup can define variables and functions that are available to all scripts. In all cases, variables and functions, once defined by running a script that contains them, persist in subsequent scripts during a given After Effects session. Once the application is quit, all such globally defined variables and functions are cleared. Be sure to give variables in scripts unique names, so that a script does not inadvertently reassign global variables intended to persist throughout a session.
 
-Attributes can also be added to existing objects such as the [Application object](../general/application.md#application) to extend the application for other scripts.
+Attributes can also be added to existing objects such as the [Application object](../general/application.md) to extend the application for other scripts.
 
 The Shutdown folder scripts are executed as the application quits. This occurs after the project is closed but before any other application shutdown occurs
 

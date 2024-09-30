@@ -4,9 +4,9 @@
 
 #### Description
 
-The OMCollection contains all of the output modules in a render queue. The collection provides access to the [OutputModule objects](outputmodule.md#outputmodule), and allows you to create them. The first OutputModule object in the collection is at index position 1.
+The OMCollection contains all of the output modules in a render queue. The collection provides access to the [OutputModule objects](outputmodule.md), and allows you to create them. The first OutputModule object in the collection is at index position 1.
 
-> OMCollection is a subclass of [Collection object](../other/collection.md#collection). All methods and attributes of Collection are available when working with OMCollection.
+> OMCollection is a subclass of [Collection object](../other/collection.md). All methods and attributes of Collection are available when working with OMCollection.
 
 ---
 
@@ -14,7 +14,7 @@ The OMCollection contains all of the output modules in a render queue. The colle
 
 ### OMCollection.add()
 
-`app.project.renderQueue.item(1).ouputModules.add()`
+`app.project.renderQueue.item(1).outputModules.add()`
 
 #### Description
 
@@ -22,4 +22,4 @@ Adds a new Output Module to the Render Queue Item, creating an OutputModule.
 
 #### Returns
 
-[OutputModule object](outputmodule.md#outputmodule).
+[OutputModule object](outputmodule.md).

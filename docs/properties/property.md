@@ -4,9 +4,9 @@
 
 #### Description
 
-The Property object contains value, keyframe, and expression information about a particular AE property of a layer. An AE property is a value, often animatable, of an effect, mask, or transform within an individual layer. For examples of how to access properties, see [PropertyBase object](propertybase.md#propertybase) and [PropertyGroup.property()](propertygroup.md#propertygroupproperty).
+The Property object contains value, keyframe, and expression information about a particular AE property of a layer. An AE property is a value, often animatable, of an effect, mask, or transform within an individual layer. For examples of how to access properties, see [PropertyBase object](propertybase.md) and [PropertyGroup.property()](propertygroup.md#propertygroupproperty).
 
-> Property is a subclass of [PropertyBase](propertybase.md#propertybase). All methods and attributes of PropertyBase, in addition to those listed below, are available when working with Property.
+> Property is a subclass of [PropertyBase](propertybase.md). All methods and attributes of PropertyBase, in addition to those listed below, are available when working with Property.
 
 ?> **Note:** JavaScript objects commonly referred to as "properties" are called "attributes" in this guide, to avoid confusion with the After Effects definition of property.
 
@@ -200,7 +200,7 @@ Instance property on an Essential Property object which returns the original sou
 Can be either:
 
 - A read/write [Property object](#property), in the case that the source object used to create the Essential Property was a Property
-- A read/write [AVLayer object](../layers/avlayer.md#avlayer), in the case that the source object used to create the Essential Property was a Media Replacement Footage item
+- A read/write [AVLayer object](../layers/avlayer.md), in the case that the source object used to create the Essential Property was a Media Replacement Footage item
 - `null` if called on a non-Essential Property
 
 #### Example
@@ -466,11 +466,11 @@ A `PropertyValueType` enumerated value; read/write. One of:
 - `PropertyValueType.OneD`: A floating-point value.
 - `PropertyValueType.COLOR`:Array of 4 floating-point values in the range `[0.0..1.0]`. For example, [0.8, 0.3, 0.1, 1.0]
 - `PropertyValueType.CUSTOM_VALUE` : Custom property value, such as the Histogram property for the Levels effect.
-- `PropertyValueType.MARKER`: [MarkerValue object](../other/markervalue.md#markervalue)
+- `PropertyValueType.MARKER`: [MarkerValue object](../other/markervalue.md)
 - `PropertyValueType.LAYER_INDEX`: Integer; a value of 0 means no layer.
 - `PropertyValueType.MASK_INDEX`: Integer; a value of 0 means no mask.
-- `PropertyValueType.SHAPE`: [Shape object](../other/shape.md#shape)
-- `PropertyValueType.TEXT_DOCUMENT`: [TextDocument object](../text/textdocument.md#textdocument)
+- `PropertyValueType.SHAPE`: [Shape object](../other/shape.md)
+- `PropertyValueType.TEXT_DOCUMENT`: [TextDocument object](../text/textdocument.md)
 
 ---
 
@@ -766,7 +766,7 @@ Returns the incoming temporal ease for the specified keyframe.
 
 #### Returns
 
-Array of [KeyframeEase objects](../other/keyframeease.md#keyframeease):
+Array of [KeyframeEase objects](../other/keyframeease.md):
 
 - If the property value type is `PropertyValueType.TwoD`, the array contains 2 objects.
 - If the property value type is `PropertyValueType.ThreeD`, the array contains 3 objects.
@@ -1320,7 +1320,7 @@ Nothing.
 
 #### Description
 
-Sets the incoming and outgoing temporal ease for the specified keyframe. See [KeyframeEase object](../other/keyframeease.md#keyframeease).
+Sets the incoming and outgoing temporal ease for the specified keyframe. See [KeyframeEase object](../other/keyframeease.md).
 
 #### Parameters
 

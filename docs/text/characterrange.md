@@ -7,22 +7,22 @@
 
 #### Description
 
-The CharacterRange object is an accessor to a character range of the [TextDocument object](textdocument.md#textdocument) instance it was created from.
+The CharacterRange object is an accessor to a character range of the [TextDocument object](textdocument.md) instance it was created from.
 
-Unlike the [TextDocument object](textdocument.md#textdocument), which looks at only the first character when returning character attributes, here the character range can span zero or more characters. As a consequence, two or more characters *may not have the same attribute value* and this mixed state will be signaled by returning `undefined`.
+Unlike the [TextDocument object](textdocument.md), which looks at only the first character when returning character attributes, here the character range can span zero or more characters. As a consequence, two or more characters *may not have the same attribute value* and this mixed state will be signaled by returning `undefined`.
 
 - The [characterStart](#characterrangecharacterstart) attribute is the first character index of the range.
 - The [characterEnd](#characterrangecharacterend) attribue will report the (last + 1) character index of the range, such that ([characterEnd](#characterrangecharacterend) - [characterStart](#characterrangecharacterstart)) represents the number of characters in the range.
 
 It is acceptable for most attributes for the effective range to be zero - otherwise known as an insertion point.
 
-When accessed, the CharacterRange object will check that [characterStart](#characterrangecharacterstart) and effective [characterEnd](#characterrangecharacterend) of the range remains valid for the current span of the related [TextDocument object](textdocument.md#textdocument). This is the same rule as applied when the CharacterRange was created, but because the length of the related [TextDocument object](textdocument.md#textdocument) can change through the addition or removal of characters, the [characterStart](#characterrangecharacterstart) and effective [characterEnd](#characterrangecharacterend) may no longer be valid. In this situation an exception will be thrown on access, either read or write. The [isRangeValid](#characterrangeisrangevalid) attribute will return `false` if the effective range is no longer valid.
+When accessed, the CharacterRange object will check that [characterStart](#characterrangecharacterstart) and effective [characterEnd](#characterrangecharacterend) of the range remains valid for the current span of the related [TextDocument object](textdocument.md). This is the same rule as applied when the CharacterRange was created, but because the length of the related [TextDocument object](textdocument.md) can change through the addition or removal of characters, the [characterStart](#characterrangecharacterstart) and effective [characterEnd](#characterrangecharacterend) may no longer be valid. In this situation an exception will be thrown on access, either read or write. The [isRangeValid](#characterrangeisrangevalid) attribute will return `false` if the effective range is no longer valid.
 
-Note that if the [TextDocument object](textdocument.md#textdocument) length changes, the [CharacterRange object](#characterrange) range could become valid again.
+Note that if the [TextDocument object](textdocument.md) length changes, the [CharacterRange object](#characterrange) range could become valid again.
 
 #### Differences from TextDocument
 
-Because CharacterRange is an accessor of [TextDocument object](textdocument.md#textdocument), most methods and attributes of TextDocument are available when working with CharacterRange. The attributes and methods that are unique to CharacterRange or exhibit unique behaviors are included on this page.
+Because CharacterRange is an accessor of [TextDocument object](textdocument.md), most methods and attributes of TextDocument are available when working with CharacterRange. The attributes and methods that are unique to CharacterRange or exhibit unique behaviors are included on this page.
 
 The following attributes and methods are **not** available on instances of CharacterRange:
 
@@ -60,7 +60,7 @@ textDocument.characterRange(1,-1).fontSize = 40;
 
 The Text layer range calculated character end value.
 
-Throws an exception on access if the effective value would exceed the bounds of the related [TextDocument object](textdocument.md#textdocument).
+Throws an exception on access if the effective value would exceed the bounds of the related [TextDocument object](textdocument.md).
 
 #### Type
 
@@ -76,7 +76,7 @@ Unsigned integer; read-only.
 
 The Text layer range calculated character start value.
 
-Throws an exception on access if the effective value would exceed the bounds of the related [TextDocument object](textdocument.md#textdocument).
+Throws an exception on access if the effective value would exceed the bounds of the related [TextDocument object](textdocument.md).
 
 #### Type
 
@@ -112,7 +112,7 @@ Array `[r, g, b]` of floating-point values; read/write.
 
 #### Description
 
-Returns `true` if the current range is within the bounds of the related [TextDocument object](textdocument.md#textdocument), otherwise `false`.
+Returns `true` if the current range is within the bounds of the related [TextDocument object](textdocument.md), otherwise `false`.
 
 #### Type
 

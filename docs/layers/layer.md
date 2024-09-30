@@ -6,13 +6,13 @@
 
 The Layer object provides access to layers within compositions. It can be accessed from an item's layer collection either by index number or by a name string.
 
-> Layer is a subclass of [PropertyGroup](../properties/propertygroup.md#propertygroup), which is a subclass of [PropertyBase](../properties/propertybase.md#propertybase). All methods and attributes of PropertyGroup, in addition to those listed below, are available when working with Layer, with the exception that `propertyIndex` attribute is set to `undefined`.
+> Layer is a subclass of [PropertyGroup](../properties/propertygroup.md), which is a subclass of [PropertyBase](../properties/propertybase.md). All methods and attributes of PropertyGroup, in addition to those listed below, are available when working with Layer, with the exception that `propertyIndex` attribute is set to `undefined`.
 
-> Layer is the base class for [CameraLayer object](cameralayer.md#cameralayer), [LightLayer object](lightlayer.md#lightlayer), and [AVLayer object](avlayer.md#avlayer), so Layer attributes and methods are available when working with all layer types. Layers contain AE properties, in addition to their JavaScript attributes and methods. For examples of how to access properties in layers, see [PropertyBase object](../properties/propertybase.md#propertybase).
+> Layer is the base class for [CameraLayer object](cameralayer.md), [LightLayer object](lightlayer.md), and [AVLayer object](avlayer.md), so Layer attributes and methods are available when working with all layer types. Layers contain AE properties, in addition to their JavaScript attributes and methods. For examples of how to access properties in layers, see [PropertyBase object](../properties/propertybase.md).
 
 #### Example
 
-If the first item in the project is a [CompItem](../items/compitem.md#compitem), this example disables the first layer in that composition and renames it. This might, for example, turn an icon off in the composition.
+If the first item in the project is a [CompItem](../items/compitem.md), this example disables the first layer in that composition and renames it. This might, for example, turn an icon off in the composition.
 
 ```javascript
 var firstLayer = app.project.item(1).layer(1);
@@ -184,9 +184,9 @@ Boolean; read/write.
 
 #### Description
 
-A [PropertyGroup object](../properties/propertygroup.md#propertygroup) that contains all a layer's markers. Layer marker scripting has the same functionality as [Comp markers](../items/compitem.md#compitemmarkerproperty).
+A [PropertyGroup object](../properties/propertygroup.md) that contains all a layer's markers. Layer marker scripting has the same functionality as [Comp markers](../items/compitem.md#compitemmarkerproperty).
 
-See [MarkerValue object](../other/markervalue.md#markervalue).
+See [MarkerValue object](../other/markervalue.md).
 
 #### Type
 
@@ -397,7 +397,7 @@ Nothing.
 
 Copies the layer into the specified composition. The original layer remains unchanged.
 
-Creates a new Layer object with the same values as this one, and prepends the new object to the [LayerCollection object](layercollection.md#layercollection) in the target CompItem. Retrieve the copy using into `Comp.layer(1)`.
+Creates a new Layer object with the same values as this one, and prepends the new object to the [LayerCollection object](layercollection.md) in the target CompItem. Retrieve the copy using into `Comp.layer(1)`.
 
 Copying in a layer changes the index positions of previously existing layers in the target composition.
 
@@ -409,7 +409,7 @@ This is the same as copying and pasting a layer through the user interface.
 
 #### Parameters
 
-| `intoComp`   | The target composition, and [CompItem object](../items/compitem.md#compitem).   |
+| `intoComp`   | The target composition, and [CompItem object](../items/compitem.md).   |
 |--------------|---------------------------------------------------------------------------------|
 
 #### Returns

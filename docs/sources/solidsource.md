@@ -9,7 +9,7 @@
 
 The SolidSource object represents a solid-color footage source.
 
-> SolidSource is a subclass of [FootageSource](footagesource.md#footagesource). All methods and attributes of FootageSource, in addition to those listed below, are available when working with SolidSource.
+> SolidSource is a subclass of [FootageSource](footagesource.md). All methods and attributes of FootageSource, in addition to those listed below, are available when working with SolidSource.
 
 ---
 

@@ -9,7 +9,7 @@
 
 The CompItem object represents a composition, and allows you to manipulate and get information about it. Access the objects by position index number in a project's item collection.
 
-> CompItem is a subclass of [AVItem object](avitem.md#avitem), which is a subclass of [Item object](item.md#item). All methods and attributes of AVItem and Item, in addition to those listed below, are available when working with CompItem.
+> CompItem is a subclass of [AVItem object](avitem.md), which is a subclass of [Item object](item.md). All methods and attributes of AVItem and Item, in addition to those listed below, are available when working with CompItem.
 
 #### Example
 
@@ -183,7 +183,7 @@ Boolean; read/write.
 
 #### Description
 
-A [LayerCollection object](../layers/layercollection.md#layercollection) that contains all the Layer objects for layers in this composition.
+A [LayerCollection object](../layers/layercollection.md) that contains all the Layer objects for layers in this composition.
 
 #### Type
 
@@ -199,9 +199,9 @@ LayerCollection object; read-only.
 
 #### Description
 
-A [PropertyGroup object](../properties/propertygroup.md#propertygroup) that contains all a composition's markers. Composition marker scripting has the same functionality as [Layer markers](../layers/layer.md#layermarker).
+A [PropertyGroup object](../properties/propertygroup.md) that contains all a composition's markers. Composition marker scripting has the same functionality as [Layer markers](../layers/layer.md#layermarker).
 
-See [MarkerValue object](../other/markervalue.md#markervalue).
+See [MarkerValue object](../other/markervalue.md).
 
 #### Type
 
@@ -407,7 +407,7 @@ All of the selected layers in this composition. This is a 0-based array (the fir
 
 #### Type
 
-Array of [Layer](../layers/layer.md#layer) objects; read-only.
+Array of [Layer](../layers/layer.md) objects; read-only.
 
 ---
 
@@ -421,7 +421,7 @@ All of the selected properties (Property and PropertyGroup objects) in this comp
 
 #### Type
 
-Array of [Property](../properties/property.md#property) and [PropertyGroup](../properties/propertygroup.md#propertygroup) objects; read-only.
+Array of [Property](../properties/property.md) and [PropertyGroup](../properties/propertygroup.md) objects; read-only.
 
 ---
 
@@ -613,7 +613,7 @@ or:
 
 #### Returns
 
-[Layer object](../layers/layer.md#layer).
+[Layer object](../layers/layer.md).
 
 ---
 
@@ -651,4 +651,4 @@ None.
 
 #### Returns
 
-[Viewer object](../other/viewer.md#viewer) object for the Composition panel, or `null` if the composition could not be opened.
+[Viewer object](../other/viewer.md) object for the Composition panel, or `null` if the composition could not be opened.

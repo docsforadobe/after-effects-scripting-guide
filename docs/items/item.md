@@ -9,7 +9,7 @@
 
 The Item object represents an item that can appear in the Project panel. The first item is at index 1.
 
-> Item is the base class for [AVItem object](avitem.md#avitem) and for [FolderItem object](folderitem.md#folderitem), which are in turn the base classes for various other item types, so Item attributes and methods are available when working with all of these item types.
+> Item is the base class for [AVItem object](avitem.md) and for [FolderItem object](folderitem.md), which are in turn the base classes for various other item types, so Item attributes and methods are available when working with all of these item types.
 
 #### Example
 

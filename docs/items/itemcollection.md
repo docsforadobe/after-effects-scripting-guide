@@ -6,7 +6,7 @@
 
 The ItemCollection object represents a collection of items. The ItemCollection belonging to a Project object contains all the Item objects for items in the project. The ItemCollection belonging to a FolderItem object contains all the Item objects for items in that folder.
 
-> ItemCollection is a subclass of [Collection object](../other/collection.md#collection). All methods and attributes of Collection, in addition to those listed below, are available when working with ItemCollection.
+> ItemCollection is a subclass of [Collection object](../other/collection.md). All methods and attributes of Collection, in addition to those listed below, are available when working with ItemCollection.
 
 ---
 

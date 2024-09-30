@@ -4,7 +4,7 @@
 
 #### Description
 
-An OutputModule object of a [RenderQueueItem](renderqueueitem.md#renderqueueitem) generates a single file or sequence via a render operation, and contains attributes and methods relating to the file to be rendered.
+An OutputModule object of a [RenderQueueItem](renderqueueitem.md) generates a single file or sequence via a render operation, and contains attributes and methods relating to the file to be rendered.
 
 ---
 

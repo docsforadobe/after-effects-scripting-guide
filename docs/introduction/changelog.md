@@ -38,14 +38,14 @@ What's new and changed for scripting?
 
 ## [After Effects 24.4 Beta build 25](https://community.adobe.com/t5/after-effects-beta-discussions/scripting-new-api-for-3d-model-layers/td-p/14580044) (March 2024)
 
-> - Added: [ThreeDModelLayer object](../layers/threedmodellayer.md#threedmodellayer)
+> - Added: [ThreeDModelLayer object](../layers/threedmodellayer.md)
 
 ## [After Effects 24.3](https://helpx.adobe.com/after-effects/using/whats-new/2024-3.html) (March 2024)
 
 - Scripting methods and attributes added:
-    - Added: [CharacterRange object](../text/characterrange.md#characterrange)
-    - Added: [ParagraphRange object](../text/paragraphrange.md#paragraphrange)
-    - Added: [ComposedLineRange object](../text/composedlinerange.md#composedlinerange)
+    - Added: [CharacterRange object](../text/characterrange.md)
+    - Added: [ParagraphRange object](../text/paragraphrange.md)
+    - Added: [ComposedLineRange object](../text/composedlinerange.md)
     - Added: [TextDocument.characterRange()](../text/textdocument.md#textdocumentcharacterrange)
     - Added: [TextDocument.composedLineCharacterIndexesAt()](../text/textdocument.md#textdocumentcomposedlinecharacterindexesat)
     - Added: [TextDocument.composedLineCount](../text/textdocument.md#textdocumentcomposedlinecount)
@@ -70,13 +70,13 @@ What's new and changed for scripting?
 - Scripting methods and attributes added:
     - Added: [getEnumAsString()](../general/globals.md#getenumasstring)
     - Added: [app.fonts](../general/application.md#appfonts)
-    - Added: [Fonts object](../text/fontsobject.md#fontsobject)
+    - Added: [Fonts object](../text/fontsobject.md)
     - Added: [FontsObject.allFonts](../text/fontsobject.md#fontsobjectallfonts)
     - Added: [FontsObject.fontsWithDefaultDesignAxes](../text/fontsobject.md#fontsobjectfontswithdefaultdesignaxes)
     - Added: [FontsObject.getFontsByFamilyNameAndStyleName()](../text/fontsobject.md#fontsobjectgetfontsbyfamilynameandstylename)
     - Added: [FontsObject.getFontsByPostScriptName()](../text/fontsobject.md#fontsobjectgetfontsbypostscriptname)
     - Added: [FontsObject.missingOrSubstitutedFonts](../text/fontsobject.md#fontsobjectmissingorsubstitutedfonts)
-    - Added: [Font object](../text/fontobject.md#fontobject)
+    - Added: [Font object](../text/fontobject.md)
     - Added: [FontObject.designAxesData](../text/fontobject.md#fontobjectdesignaxesdata)
     - Added: [FontObject.designVector](../text/fontobject.md#fontobjectdesignvector)
     - Added: [FontObject.familyPrefix](../text/fontobject.md#fontobjectfamilyprefix)
@@ -196,7 +196,7 @@ What's new and changed for scripting?
 
 ## After Effects 16.1
 
-- Scripting access to [ViewOptions object](../other/viewoptions.md#viewoptions) guide and ruler booleans:
+- Scripting access to [ViewOptions object](../other/viewoptions.md) guide and ruler booleans:
     - Added: [ViewOptions.guidesLocked](../other/viewoptions.md#viewoptionsguideslocked)
     - Added: [ViewOptions.guidesSnap](../other/viewoptions.md#viewoptionsguidessnap)
     - Added: [ViewOptions.guidesVisibility](../other/viewoptions.md#viewoptionsguidesvisibility)
@@ -371,14 +371,14 @@ What's new and changed for scripting?
 - Ability to get and set preview mode:
     - Added: [ViewOptions.fastPreview](../other/viewoptions.md#viewoptionsfastpreview)
 - Access to layer sampling method (see [samplingQuality](../layers/avlayer.md#avlayersamplingquality))
-- Changed preference and settings methods (see [Settings object](../other/settings.md#settings))
+- Changed preference and settings methods (see [Settings object](../other/settings.md))
 - ScriptUI is now based on the same controls as the main application.
 
 ---
 
 ## [After Effects 11.0 (CS6)](https://web.archive.org/web/20120623073355/https://blogs.adobe.com/toddkopriva/2012/06/scripting-changes-in-after-effects-cs6-plus-new-scripting-guide.html/) (April 2012)
 
-- Added: Access to [Viewer object](../other/viewer.md#viewer) object and controls:
+- Added: Access to [Viewer object](../other/viewer.md) object and controls:
     - Added: [app.activeViewer](../general/application.md#appactiveviewer)
     - Added: [AVLayer.openInViewer()](../layers/avlayer.md#avlayeropeninviewer) to open a layer in the layer viewer
     - Added: [CompItem.openInViewer()](../items/compitem.md#compitemopeninviewer) to open a composition in the composition viewer
@@ -399,13 +399,13 @@ What's new and changed for scripting?
 
 ## [After Effects 10.5 (CS5.5)](https://web.archive.org/web/20121022055915/http://blogs.adobe.com/toddkopriva/2008/12/after-effects-cs4-scripting-ch.html/) (April 2011)
 
-- Added to the [Project object](../general/project.md#project) object:
+- Added to the [Project object](../general/project.md) object:
     - [Project.framesCountType](../general/project.md#projectframescounttype)
     - [Project.feetFramesFilmType](../general/project.md#projectfeetframesfilmtype)
     - [Project.framesUseFeetFrames](../general/project.md#projectframesusefeetframes)
     - [Project.footageTimecodeDisplayStartType](../general/project.md#projectfootagetimecodedisplaystarttype)
     - [Project.timeDisplayType](../general/project.md#projecttimedisplaytype)
-- Removed from the [Project object](../general/project.md#project) object:
+- Removed from the [Project object](../general/project.md) object:
     - `timecodeDisplayType` attribute
     - `timecodeBaseType` attribute
     - `timecodeNTSCDropFrame` attribute
@@ -436,7 +436,7 @@ What's new and changed for scripting?
     - [Property.isSeparationLeader](../properties/property.md#propertyisseparationleader)
     - [Property.separationDimension](../properties/property.md#propertyseparationdimension)
     - [Property.separationLeader](../properties/property.md#propertyseparationleader)
-- Added [TextDocument object](../text/textdocument.md#textdocument) access, including:
+- Added [TextDocument object](../text/textdocument.md) access, including:
     - Added: [TextDocument.applyFill](../text/textdocument.md#textdocumentapplyfill)
     - Added: [TextDocument.applyStroke](../text/textdocument.md#textdocumentapplystroke)
     - Added: [TextDocument.fillColor](../text/textdocument.md#textdocumentfillcolor)

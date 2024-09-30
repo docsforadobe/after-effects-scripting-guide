@@ -9,7 +9,7 @@
 
 The FileSource object describes footage that comes from a file.
 
-> FileSource is a subclass of [FootageSource object](footagesource.md#footagesource). All methods and attributes of FootageSource, in addition to those listed below, are available when working with FileSource.
+> FileSource is a subclass of [FootageSource object](footagesource.md). All methods and attributes of FootageSource, in addition to those listed below, are available when working with FileSource.
 
 ---
 
@@ -26,8 +26,8 @@ The FileSource object describes footage that comes from a file.
 
 The [Extendscript File](https://extendscript.docsforadobe.dev/file-system-access/file-object.html) object for the file that defines this asset. To change the value:
 
-- If this FileSource is a [proxySource](../items/avitem.md#avitemproxysource) of an [AVItem](../items/avitem.md#avitem), call [setProxy()](../items/avitem.md#avitemsetproxy) or [setProxyWithSequence()](../items/avitem.md#avitemsetproxywithsequence).
-- If this FileSource is a [mainSource](../items/footageitem.md#footageitemmainsource) of a [FootageItem](../items/footageitem.md#footageitem), call [replace()](../items/footageitem.md#footageitemreplace) or [replaceWithSequence()](../items/footageitem.md#footageitemreplacewithsequence).
+- If this FileSource is a [proxySource](../items/avitem.md#avitemproxysource) of an [AVItem](../items/avitem.md), call [setProxy()](../items/avitem.md#avitemsetproxy) or [setProxyWithSequence()](../items/avitem.md#avitemsetproxywithsequence).
+- If this FileSource is a [mainSource](../items/footageitem.md#footageitemmainsource) of a [FootageItem](../items/footageitem.md), call [replace()](../items/footageitem.md#footageitemreplace) or [replaceWithSequence()](../items/footageitem.md#footageitemreplacewithsequence).
 
 #### Type
 

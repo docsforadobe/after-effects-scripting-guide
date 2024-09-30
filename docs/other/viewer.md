@@ -42,7 +42,7 @@ Boolean; read-only.
 
 #### Description
 
-The index of the current active [View object](view.md#view), in the [Viewer.views](#viewerviews) array.
+The index of the current active [View object](view.md), in the [Viewer.views](#viewerviews) array.
 
 #### Type
 
@@ -74,7 +74,7 @@ All of the Views associated with this viewer.
 
 #### Type
 
-Array of [View object](view.md#view) objects; read-only.
+Array of [View object](view.md) objects; read-only.
 
 ---
 

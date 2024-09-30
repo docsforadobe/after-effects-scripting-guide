@@ -22,7 +22,7 @@ The Viewer object for the currently focused or active-focused viewer (Compositio
 
 #### Type
 
-[Viewer object](../other/viewer.md#viewer) object; read-only.
+[Viewer object](../other/viewer.md) object; read-only.
 
 ---
 
@@ -195,7 +195,7 @@ Returns an object to navigate and retreive all the fonts currently available on 
 
 #### Type
 
-[Fonts object](../text/fontsobject.md#fontsobject); read-only.
+[Fonts object](../text/fontsobject.md); read-only.
 
 ---
 
@@ -307,7 +307,7 @@ app.onError = err;
 
 #### Description
 
-The currently loaded AE app preferences. See [Preferences object](../other/preferences.md#preferences).
+The currently loaded AE app preferences. See [Preferences object](../other/preferences.md).
 
 #### Type
 
@@ -321,7 +321,7 @@ Preferences object; read-only.
 
 #### Description
 
-The project that is currently loaded. See [Project object](project.md#project).
+The project that is currently loaded. See [Project object](project.md).
 
 #### Type
 
@@ -351,7 +351,7 @@ Boolean; read/write.
 
 #### Description
 
-The currently loaded settings. See [Settings object](../other/settings.md#settings).
+The currently loaded settings. See [Settings object](../other/settings.md).
 
 #### Type
 
