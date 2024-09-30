@@ -159,7 +159,7 @@ Array, with each element containing the following properties; read-only:
 ``displayName``  String representing the localized display name of the
                  effect as seen in the Effect menu.
 ``category``     String representing the localized category label as seen
-                 in the Effect menu. This can be for synthetic effects
+                 in the Effect menu. This can be "" for synthetic effects
                  that aren't normally shown to the user.
 ``matchName``    String representing the internal unique name for the effect.
                  This name does not change between versions of After Effects.
