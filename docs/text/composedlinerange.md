@@ -5,7 +5,7 @@
 
 ?> **Note:** This functionality was added in After Effects 24.3
 
-**Description**
+#### Description
 
 The ComposedLineRange object is an accessor to a composed line range of the [TextDocument object](textdocument.md#textdocument) instance it was created from.
 
@@ -26,7 +26,7 @@ This instance becomes independent of the ComposedLineRange instance it came from
 
 For performance reasons, when accessing multiple attributes it is adviseable to retrieve the [CharacterRange object](characterrange.md#characterrange) once and re-use it rather than create a new one each time.
 
-**Examples**
+#### Examples
 
 This changes the fill color to red of the first composed line in the TextDocument, and set the rest of the lines to color blue.
 
@@ -48,13 +48,13 @@ textDocument.composedLineRange(1,-1).characterRange().fillColor = [0, 0, 1.0];
 
 `ComposedLineRange.characterEnd`
 
-**Description**
+#### Description
 
 The Text layer range calculated character end value.
 
 Throws an exception on access if the effective value would exceed the bounds of the related [TextDocument object](textdocument.md#textdocument).
 
-**Type**
+#### Type
 
 Unsigned integer; read-only.
 
@@ -64,13 +64,13 @@ Unsigned integer; read-only.
 
 `ComposedLineRange.characterStart`
 
-**Description**
+#### Description
 
 The Text layer range calculated character start value.
 
 Throws an exception on access if the effective value would exceed the bounds of the related [TextDocument object](textdocument.md#textdocument).
 
-**Type**
+#### Type
 
 Unsigned integer; read-only.
 
@@ -80,11 +80,11 @@ Unsigned integer; read-only.
 
 `ComposedLineRange.isRangeValid`
 
-**Description**
+#### Description
 
 Returns true if the current range is within the bounds of the related [TextDocument object](textdocument.md#textdocument), false otherwise.
 
-**Type**
+#### Type
 
 Boolean; read-only.
 
@@ -96,7 +96,7 @@ Boolean; read-only.
 
 `ComposedLineRange.characterRange()`
 
-**Description**
+#### Description
 
 Returns a [CharacterRange object](characterrange.md#characterrange) initialized from [characterStart](#composedlinerangecharacterstart) and [characterEnd](#composedlinerangecharacterend).
 
@@ -104,11 +104,11 @@ Will throw an exception if isRangeValid would return false.
 
 The returned instance, once created, is independent of subsequent changes to the ComposedLineRange it came from.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 [CharacterRange object](characterrange.md#characterrange);
 
@@ -118,16 +118,16 @@ None.
 
 `ComposedLineRange.toString()`
 
-**Description**
+#### Description
 
 Returns a string with the parameters used to create the ComposedLineRange instance, e.g. `"ComposedLineRange(0,-1)"`
 
 This may be safely called on an instance where isRangeValid returns false.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 String;

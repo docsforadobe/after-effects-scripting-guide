@@ -2,7 +2,7 @@
 
 `app.preferences`
 
-**Description**
+#### Description
 
 The Preferences object provides an easy way to manage internal AE preferences, such as you'd find in AE's Preferences menu. These are saved in the After Effects preference files, and are persistent between application sessions.
 
@@ -34,22 +34,22 @@ The third argument is enum `PREFType` value, one of:
 
 `app.preferences.deletePref(sectionName, keyName[, prefType])`
 
-**Description**
+#### Description
 
 Deletes a preference from the preference file.
 
-**Parameters**
+#### Parameters
 
 | `sectionName`   | A string containing the name of a preferences section     |
 |-----------------|-----------------------------------------------------------|
 | `keyName`       | A string containing the key name of the preference        |
 | `prefType`      | Optional, an enum indicating which preference file to use |
 
-**Returns**
+#### Returns
 
 Nothing.
 
-**Example**
+#### Example
 
 If you have saved a setting named with the key name "trimPrecomps" in a section called "Precomp Cropper", you can delete the setting by:
 
@@ -63,22 +63,22 @@ app.preferences.deletePref("Settings_Precomp Cropper", "trimPrecomps");
 
 `app.preferences.getPrefAsBool(sectionName, keyName[, prefType])`
 
-**Description**
+#### Description
 
 Retrieves a preference value from the preferences file, and parses it as a boolean.
 
-**Parameters**
+#### Parameters
 
 | `sectionName`   | A string containing the name of a preferences section     |
 |-----------------|-----------------------------------------------------------|
 | `keyName`       | A string containing the key name of the preference        |
 | `prefType`      | Optional, an enum indicating which preference file to use |
 
-**Returns**
+#### Returns
 
 Boolean.
 
-**Example**
+#### Example
 
 To retrieve the value of the Flow Chart "Expand Flowchart Comps by Default" preference:
 
@@ -100,18 +100,18 @@ alert("The setting is: " + debuggerEnabled);
 
 `app.preferences.getPrefAsFloat(sectionName, keyName[, prefType])`
 
-**Description**
+#### Description
 
 Retrieves a preference value from the preferences file, and parses it as a float.
 
-**Parameters**
+#### Parameters
 
 | `sectionName`   | A string containing the name of a preferences section     |
 |-----------------|-----------------------------------------------------------|
 | `keyName`       | A string containing the key name of the preference        |
 | `prefType`      | Optional, an enum indicating which preference file to use |
 
-**Returns**
+#### Returns
 
 Float.
 
@@ -121,18 +121,18 @@ Float.
 
 `app.preferences.getPrefAsLong(sectionName, keyName[, prefType])`
 
-**Description**
+#### Description
 
 Retrieves a preference value from the preferences file, and parses it as a long (number).
 
-**Parameters**
+#### Parameters
 
 | `sectionName`   | A string containing the name of a preferences section     |
 |-----------------|-----------------------------------------------------------|
 | `keyName`       | A string containing the key name of the preference        |
 | `prefType`      | Optional, an enum indicating which preference file to use |
 
-**Returns**
+#### Returns
 
 Long.
 
@@ -142,18 +142,18 @@ Long.
 
 `app.preferences.getPrefAsString(sectionName, keyName[, prefType])`
 
-**Description**
+#### Description
 
 Retrieves a preference value from the preferences file, and parses it as a string.
 
-**Parameters**
+#### Parameters
 
 | `sectionName`   | A string containing the name of a preferences section     |
 |-----------------|-----------------------------------------------------------|
 | `keyName`       | A string containing the key name of the preference        |
 | `prefType`      | Optional, an enum indicating which preference file to use |
 
-**Returns**
+#### Returns
 
 String.
 
@@ -163,18 +163,18 @@ String.
 
 `app.preferences.havePref(sectionName, keyName[, prefType])`
 
-**Description**
+#### Description
 
 Returns true if the specified preference item exists and has a value.
 
-**Parameters**
+#### Parameters
 
 | `sectionName`   | A string containing the name of a preferences section     |
 |-----------------|-----------------------------------------------------------|
 | `keyName`       | A string containing the key name of the preference        |
 | `prefType`      | Optional, an enum indicating which preference file to use |
 
-**Returns**
+#### Returns
 
 Boolean.
 
@@ -184,15 +184,15 @@ Boolean.
 
 `app.preferences.reload()`
 
-**Description**
+#### Description
 
 Reloads the preferences file manually. Otherwise, changes to preferences will only be accessible by scripting after an application restart.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Nothing.
 
@@ -202,11 +202,11 @@ Nothing.
 
 `app.preferences.savePrefAsBool(sectionName, keyName, value[, prefType])`
 
-**Description**
+#### Description
 
 Saves a preference item as a boolean.
 
-**Parameters**
+#### Parameters
 
 | `sectionName`   | A string containing the name of a preferences section     |
 |-----------------|-----------------------------------------------------------|
@@ -214,7 +214,7 @@ Saves a preference item as a boolean.
 | `value`         | A boolean containing the new value                        |
 | `prefType`      | Optional, an enum indicating which preference file to use |
 
-**Returns**
+#### Returns
 
 Nothing.
 
@@ -224,11 +224,11 @@ Nothing.
 
 `app.preferences.savePrefAsFloat(sectionName, keyName, value[, prefType])`
 
-**Description**
+#### Description
 
 Saves a preference item as a float.
 
-**Parameters**
+#### Parameters
 
 | `sectionName`   | A string containing the name of a preferences section     |
 |-----------------|-----------------------------------------------------------|
@@ -236,7 +236,7 @@ Saves a preference item as a float.
 | `value`         | A float containing the new value                          |
 | `prefType`      | Optional, an enum indicating which preference file to use |
 
-**Returns**
+#### Returns
 
 Nothing.
 
@@ -246,11 +246,11 @@ Nothing.
 
 `app.preferences.savePrefAsLong(sectionName, keyName, value[, prefType])`
 
-**Description**
+#### Description
 
 Saves a preference item as a long.
 
-**Parameters**
+#### Parameters
 
 | `sectionName`   | A string containing the name of a preferences section     |
 |-----------------|-----------------------------------------------------------|
@@ -258,7 +258,7 @@ Saves a preference item as a long.
 | `value`         | A long containing the new value                           |
 | `prefType`      | Optional, an enum indicating which preference file to use |
 
-**Returns**
+#### Returns
 
 Nothing.
 
@@ -268,11 +268,11 @@ Nothing.
 
 `app.preferences.savePrefAsString(sectionName, keyName, value[, prefType])`
 
-**Description**
+#### Description
 
 Saves a preference item as a string.
 
-**Parameters**
+#### Parameters
 
 | `sectionName`   | A string containing the name of a preferences section     |
 |-----------------|-----------------------------------------------------------|
@@ -280,7 +280,7 @@ Saves a preference item as a string.
 | `value`         | A string containing the new value                         |
 | `prefType`      | Optional, an enum indicating which preference file to use |
 
-**Returns**
+#### Returns
 
 Nothing.
 
@@ -290,14 +290,14 @@ Nothing.
 
 `app.preferences.saveToDisk()`
 
-**Description**
+#### Description
 
 Saves the preferences to disk manually. Otherwise, changes to preferences will only be accessible by scripting after an application restart.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Nothing.

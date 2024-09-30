@@ -8,7 +8,7 @@ As it can be useful to see all available class hierarchies in one place, we've c
 
 Note that some classes exist only as base classes, and demonstrate unexpected behaviour when type checking via `instanceof`, as noted in the table below. Classes with no symbol behave as expected.
 
-**Symbol Legend**
+#### Symbol Legend
 
 | ⚠   | `instanceof` is always `false`                       |
 |-----|------------------------------------------------------|

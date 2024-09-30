@@ -5,7 +5,7 @@
 
 ?> **Note:** This functionality was added in After Effects 24.3
 
-**Description**
+#### Description
 
 The ParagraphRange object is an accessor to a paragraph range of the [TextDocument object](textdocument.md#textdocument) instance it was created from.
 
@@ -22,7 +22,7 @@ This instance becomes independent of the ParagraphRange instance it came from so
 
 For performance reasons, when accessing multiple attributes it is adviseable to retrieve the [CharacterRange object](characterrange.md#characterrange) once and re-use it rather than create a new one each time.
 
-**Examples**
+#### Examples
 
 This increases the font size of the first paragraph in the TextDocument, and set the rest of the paragraphs to fontSize 40.
 
@@ -44,13 +44,13 @@ textDocument.paragraphRange(1,-1).characterRange().fontSize = 40;
 
 `ParagraphRange.characterEnd`
 
-**Description**
+#### Description
 
 The Text layer range calculated character end value.
 
 Throws an exception on access if the effective value would exceed the bounds of the related [TextDocument object](textdocument.md#textdocument).
 
-**Type**
+#### Type
 
 Unsigned integer; read-only.
 
@@ -60,13 +60,13 @@ Unsigned integer; read-only.
 
 `ParagraphRange.characterStart`
 
-**Description**
+#### Description
 
 The Text layer range calculated character start value.
 
 Throws an exception on access if the effective value would exceed the bounds of the related [TextDocument object](textdocument.md#textdocument).
 
-**Type**
+#### Type
 
 Unsigned integer; read-only.
 
@@ -76,11 +76,11 @@ Unsigned integer; read-only.
 
 `ParagraphRange.isRangeValid`
 
-**Description**
+#### Description
 
 Returns true if the current range is within the bounds of the related [TextDocument object](textdocument.md#textdocument), false otherwise.
 
-**Type**
+#### Type
 
 Boolean; read-only.
 
@@ -92,7 +92,7 @@ Boolean; read-only.
 
 `ParagraphRange.characterRange()`
 
-**Description**
+#### Description
 
 Returns a [CharacterRange object](characterrange.md#characterrange) initialized from [characterStart](#paragraphrangecharacterstart) and [characterEnd](#paragraphrangecharacterend).
 
@@ -100,11 +100,11 @@ Will throw an exception if [isRangeValid](#paragraphrangeisrangevalid) would ret
 
 The returned instance, once created, is independent of subsequent changes to the ParagraphRange it came from.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 [CharacterRange object](characterrange.md#characterrange);
 
@@ -114,16 +114,16 @@ None.
 
 `ParagraphRange.toString()`
 
-**Description**
+#### Description
 
 Returns a string with the parameters used to create the ParagraphRange instance, e.g. `"ParagraphRange(0,-1)"`
 
 This may be safely called on an instance where [isRangeValid](#paragraphrangeisrangevalid) returns false.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 String;

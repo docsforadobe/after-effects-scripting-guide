@@ -2,14 +2,14 @@
 
 `myKey = new KeyframeEase(speed, influence);`
 
-**Description**
+#### Description
 
 The KeyframeEase object encapsulates the keyframe ease settings of a layer's AE property. Keyframe ease is determined by the speed and influence values that you set using the property's [setTemporalEaseAtKey](../properties/property.md#propertysettemporaleaseatkey) method. The constructor creates a KeyframeEase object. Both parameters are required.
 
 - `speed`: A floating-point value. Sets the `speed` attribute.
 - `influence`: A floating-pointvalue in the range `[0.1..100.0]`. Sets the `influence` attribute.
 
-**Example**
+#### Example
 
 This example assumes that the Position, a spatial property, has more than two keyframes.
 
@@ -37,11 +37,11 @@ myScaleProperty.setTemporalEaseAtKey(2, [easeIn, easeIn, easeIn], [easeOut, ease
 
 `myKey.influence`
 
-**Description**
+#### Description
 
 The influence value of the keyframe, as shown in the Keyframe Velocity dialog box.
 
-**Type**
+#### Type
 
 Floating-point value in the range `[0.1..100.0]`; read/write.
 
@@ -51,10 +51,10 @@ Floating-point value in the range `[0.1..100.0]`; read/write.
 
 `myKey.speed`
 
-**Description**
+#### Description
 
 The speed value of the keyframe. The units depend on the type of keyframe, and are displayed in the Keyframe Velocity dialog box.
 
-**Type**
+#### Type
 
 Floating-point value; read/write.

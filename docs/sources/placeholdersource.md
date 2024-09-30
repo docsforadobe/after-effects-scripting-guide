@@ -5,7 +5,7 @@
 `app.project.item(index).proxySource`
 <br/>
 
-**Description**
+#### Description
 
 The PlaceholderSource object describes the footage source of a placeholder.
 

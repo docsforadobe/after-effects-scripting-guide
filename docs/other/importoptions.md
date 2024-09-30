@@ -5,7 +5,7 @@
 `new ImportOptions(file);`
 <br/>
 
-**Description**
+#### Description
 
 The ImportOptions object encapsulates the options used to import a file with the [Project.importFile()](../general/project.md#projectimportfile) methods.
 
@@ -25,11 +25,11 @@ new ImportOptions().file = new File("myfile.psd");
 
 `importOptions.file`
 
-**Description**
+#### Description
 
 The file to be imported. If a file is set in the constructor, you can access it through this attribute.
 
-**Type**
+#### Type
 
 [Extendscript File](https://extendscript.docsforadobe.dev/file-system-access/file-object.html) object; read/write.
 
@@ -39,11 +39,11 @@ The file to be imported. If a file is set in the constructor, you can access it 
 
 `importOptions.forceAlphabetical`
 
-**Description**
+#### Description
 
 When true, has the same effect as setting the "Force alphabetical order" option in the File > Import > File dialog box.
 
-**Type**
+#### Type
 
 Boolean; read/write.
 
@@ -53,11 +53,11 @@ Boolean; read/write.
 
 `importOptions.importAs`
 
-**Description**
+#### Description
 
 The type of object for which the imported file is to be the source. Before setting, use [canImportAs](#importoptionscanimportas) to check that a given file can be imported as the source of the given object type.
 
-**Type**
+#### Type
 
 An `ImportAsType` enumerated value; read/write. One of:
 
@@ -74,7 +74,7 @@ An `ImportAsType` enumerated value; read/write. One of:
 
 !> **Warning:** This method/property is officially undocumented and was found via research. The information here may be inaccurate, and this whole method/property may disappear or stop working some point. Please contribute if you have more information on it!
 
-**Description**
+#### Description
 
 Sets the end clipping range of the sequence, that is going to be imported.
 
@@ -83,7 +83,7 @@ Sets the end clipping range of the sequence, that is going to be imported.
 - Throws an exception if [forceAlphabetical](#importoptionsforcealphabetical) is set to true.
 - Throws an exception if `rangeEnd` is less then [rangeStart](#importoptionsrangestart) and resets the range to include all the files.
 
-**Type**
+#### Type
 
 Integer; read/write.
 
@@ -95,7 +95,7 @@ Integer; read/write.
 
 !> **Warning:** This method/property is officially undocumented and was found via research. The information here may be inaccurate, and this whole method/property may disappear or stop working some point. Please contribute if you have more information on it!
 
-**Description**
+#### Description
 
 Sets the start clipping range of the sequence, that is going to be imported.
 
@@ -104,11 +104,11 @@ Sets the start clipping range of the sequence, that is going to be imported.
 - Throws an exception if [rangeEnd](#importoptionsrangeend) value is 0.
 - Throws an exception if `rangeStart` is greater then [rangeEnd](#importoptionsrangeend) and resets the range to include all the files.
 
-**Type**
+#### Type
 
 Integer; read/write.
 
-**Example**
+#### Example
 
 ```javascript
 /*
@@ -132,11 +132,11 @@ var item = app.project.importFile(importOptions);
 
 `importOptions.sequence`
 
-**Description**
+#### Description
 
 When true, a sequence is imported; otherwise, an individual file is imported.
 
-**Type**
+#### Type
 
 Boolean; read/write.
 
@@ -148,20 +148,20 @@ Boolean; read/write.
 
 `importOptions.canImportAs(type)`
 
-**Description**
+#### Description
 
 Reports whether the file can be imported as the source of a particular object type. If this method returns true, you can set the given type as the value of the [importAs](#importoptionsimportas) attribute.
 
-**Parameters**
+#### Parameters
 
 | `type`   | The type of file that can be imported. An `ImportAsType` enumerated<br/>value; one of:<br/><br/>- `ImportAsType.COMP`<br/>- `ImportAsType.FOOTAGE`<br/>- `ImportAsType.COMP_CROPPED_LAYERS`<br/>- `ImportAsType.PROJECT`   |
 |----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
-**Returns**
+#### Returns
 
 Boolean.
 
-**Example**
+#### Example
 
 ```javascript
 var io = new ImportOptions(new File("c:\\myFile.psd"));
@@ -178,23 +178,23 @@ if (io.canImportAs(ImportAsType.COMP)) {
 
 !> **Warning:** This method/property is officially undocumented and was found via research. The information here may be inaccurate, and this whole method/property may disappear or stop working some point. Please contribute if you have more information on it!
 
-**Description**
+#### Description
 
 Reports whether the file object is numbered, i.e. file name has a digit.
 
-**Parameters**
+#### Parameters
 
 | `file`   | [Extendscript File](https://extendscript.docsforadobe.dev/file-system-access/file-object.html) object.   |
 |----------|----------------------------------------------------------------------------------------------------------|
 
-**Returns**
+#### Returns
 
 Object, containing 2 keys:
 
 - `isNumbered`: Boolean; wether the file name contains any digit,
 - `num`: Integer; a number found in file name. Returns 0 when `isNumbered` is false.
 
-**Example**
+#### Example
 
 ```javascript
 var importOptions = new ImportOptions();

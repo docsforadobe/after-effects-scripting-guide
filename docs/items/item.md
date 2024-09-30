@@ -5,13 +5,13 @@
 `app.project.items[index]`
 <br/>
 
-**Description**
+#### Description
 
 The Item object represents an item that can appear in the Project panel. The first item is at index 1.
 
 > Item is the base class for [AVItem object](avitem.md#avitem) and for [FolderItem object](folderitem.md#folderitem), which are in turn the base classes for various other item types, so Item attributes and methods are available when working with all of these item types.
 
-**Example**
+#### Example
 
 This example gets the second item from the project and checks that it is a folder. It then removes from the folder any top-level item that is not currently selected. It also checks to make sure that, for each item in the folder, the parent is properly set to the correct folder.
 
@@ -44,11 +44,11 @@ if (!(myFolder instanceof FolderItem)) {
 
 `app.project.item(index).comment`
 
-**Description**
+#### Description
 
 A string that holds a comment, up to 15,999 bytes in length after any encoding conversion. The comment is for the user's purpose only; it has no effect on the item's appearance or behavior.
 
-**Type**
+#### Type
 
 String; read/write.
 
@@ -58,11 +58,11 @@ String; read/write.
 
 `app.project.item(index).dynamicLinkGUID`
 
-**Description**
+#### Description
 
 A unique and persistent identification number used for the dynamic link, in form of `00000000-0000-0000-0000-000000000000`.
 
-**Type**
+#### Type
 
 String; read-only.
 
@@ -74,11 +74,11 @@ String; read-only.
 
 ?> **Note:** This functionality was added in After Effects 16.1 (CC 2019)
 
-**Description**
+#### Description
 
 An array of `guide` objects, containing `orientationType`, `positionType`, and `position` attributes.
 
-**Type**
+#### Type
 
 Array; read-only.
 
@@ -88,11 +88,11 @@ Array; read-only.
 
 `app.project.item(index).id`
 
-**Description**
+#### Description
 
 A unique and persistent identification number used internally to identify an item between sessions. The value of the ID remains the same when the project is saved to a file and later reloaded. However, when you import this project into another project, new IDs are assigned to all items in the imported project. The ID is not displayed anywhere in the user interface.
 
-**Type**
+#### Type
 
 Integer; read-only.
 
@@ -102,13 +102,13 @@ Integer; read-only.
 
 `app.project.item(index).label`
 
-**Description**
+#### Description
 
 The label color for the item. Colors are represented by their number (0 for None, or 1 to 16 for one of the preset colors in the Labels preferences).
 
 ?> **Note:** Custom label colors cannot be set programmatically.
 
-**Type**
+#### Type
 
 Integer (0 to 16); read/write.
 
@@ -118,11 +118,11 @@ Integer (0 to 16); read/write.
 
 `app.project.item(index).name`
 
-**Description**
+#### Description
 
 The name of the item as displayed in the Project panel.
 
-**Type**
+#### Type
 
 String; read/write.
 
@@ -132,15 +132,15 @@ String; read/write.
 
 `app.project.item(index).parentFolder`
 
-**Description**
+#### Description
 
 The FolderItem object for the folder that contains this item. If this item is at the top level of the project, this is the project's root folder (`app.project.rootFolder`). You can use [ItemCollection.addFolder()](itemcollection.md#itemcollectionaddfolder) to add a new folder, and set this value to put items in the new folder.
 
-**Type**
+#### Type
 
 FolderItem object; read/write.
 
-**Example**
+#### Example
 
 This script creates a new FolderItem in the Project panel and moves compositions into it.
 
@@ -163,11 +163,11 @@ for (var i = 1; i <= app.project.numItems; i++){
 
 `app.project.item(index).selected`
 
-**Description**
+#### Description
 
 When true, this item is selected. Multiple items can be selected at the same time. Set to true to select the item programmatically, or to false to deselect it.
 
-**Type**
+#### Type
 
 Boolean; read/write.
 
@@ -177,15 +177,15 @@ Boolean; read/write.
 
 `app.project.item(index).typeName`
 
-**Description**
+#### Description
 
 A user-readable name for the item type; for example, "Folder", "Footage", or "Composition". These names are application locale-dependent, meaning that they are different depending on the application's interface language.
 
-**Type**
+#### Type
 
 String; read-only.
 
-**Localized strings**
+#### Localized strings
 
 | `en_US`   | **Composition**   | **Folder**   | **Footage**         |
 |-----------|-------------------|--------------|---------------------|
@@ -199,7 +199,7 @@ String; read-only.
 | `ru_ru`   | Композиция        | Папка        | Видеоряд            |
 | `zh_CN`   | 合成                | 文件夹          | 素材                  |
 
-**Example**
+#### Example
 
 ```javascript
 if (/Composition|Komposition|Composición|Composizione|コンポジション|컴포지션|Composição|Композиция|合成/.test(app.project.item(index).typeName)) {
@@ -219,21 +219,21 @@ if (/Composition|Komposition|Composición|Composizione|コンポジション|컴
 
 ?> **Note:** This functionality was added in After Effects 16.1 (CC 2019)
 
-**Description**
+#### Description
 
 Creates a new guide and adds it to the `guides` object of the Item.
 
-**Parameters**
+#### Parameters
 
 | `orientationType`   | An integer; 0 for a horizontal guide, 1 for a vertical guide.<br/>Any other value defaults to horizontal.   |
 |---------------------|-------------------------------------------------------------------------------------------------------------|
 | `position`          | An integer; the X or Y coordinate position of the guide in<br/>pixels, depending on its `orientationType`.  |
 
-**Returns**
+#### Returns
 
 Integer; the index of the newly-created guide.
 
-**Example**
+#### Example
 
 Adds a vertical guide at 500 pixels on the X axis to the `activeItem` of a project.
 
@@ -247,15 +247,15 @@ app.project.activeItem.addGuide(1, 500);
 
 `app.project.item(index).remove()`
 
-**Description**
+#### Description
 
 Deletes this item from the project and the Project panel. If the item is a FolderItem, all the items contained in the folder are also removed from the project. No files or folders are removed from the disk.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Nothing.
 
@@ -267,20 +267,20 @@ Nothing.
 
 ?> **Note:** This functionality was added in After Effects 16.1 (CC 2019)
 
-**Description**
+#### Description
 
 Removes an existing guide. Choose the guide based on its index inside the `Item.guides` object.
 
-**Parameters**
+#### Parameters
 
 | `guideIndex`   | An integer; the index of the guide to be removed.   |
 |----------------|-----------------------------------------------------|
 
-**Returns**
+#### Returns
 
 Nothing.
 
-**Example**
+#### Example
 
 Removes the first guide in `activeItem`.
 
@@ -298,23 +298,23 @@ app.project.activeItem.removeGuide(0);
 
 ?> **Note:** This functionality was added in After Effects 16.1 (CC 2019)
 
-**Description**
+#### Description
 
 Modifies the `position` of an existing guide. Choose the guide based on its `guideIndex` inside the `Item.guides` array.
 
 A guide's `orientationType` may not be changed after it is created.
 
-**Parameters**
+#### Parameters
 
 | `position`   | An integer; the new X or Y coordinate position of the guide in<br/>pixels, depending on its existing `orientationType`.   |
 |--------------|---------------------------------------------------------------------------------------------------------------------------|
 | `guideIndex` | An integer; the index of the guide to be modified.                                                                        |
 
-**Returns**
+#### Returns
 
 Nothing.
 
-**Example**
+#### Example
 
 Changes the position of the first guide in `activeItem` to 1200 pixels.
 

@@ -2,7 +2,7 @@
 
 `app.project.item(index).layer(index)`
 
-**Description**
+#### Description
 
 The ShapeLayer object represents a shape layer within a composition. Create it using [LayerCollection.addShape()](layercollection.md#layercollectionaddshape). It can be accessed in an item's layer collection either by index number or by a name string.
 

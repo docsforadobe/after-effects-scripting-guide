@@ -143,6 +143,15 @@ Here are the table header formats to use:
 | -------- | ---- | ----------- |
 ```
 
+#### Titles
+
+```
+# Page
+## Category ("Attributes", "Methods")
+### Attribute/Method Name ("CharacterRange.characterEnd")
+#### Info Header ("Description", "Type", "Parameters", "Returns")
+```
+
 #### Other
 
 - Check that images are properly linked to the root `./docs/_static` folder

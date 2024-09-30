@@ -2,7 +2,7 @@
 
 ?> **Note:** This functionality was added in After Effects 24.0
 
-**Description**
+#### Description
 
 The Font object provides information about a specific font, along with the font technology used, helping disambiguate when multiple fonts sharing the same Postscript name are installed on the system.
 
@@ -16,14 +16,14 @@ Most of these APIs simply return information which is contained in the Font data
 
 `app.fonts.allFonts[0][0].designAxesData`
 
-**Description**
+#### Description
 
 Returns an Array of Objects, containing the design axes data from the font.
 Each object is composed of the axis `name`, `tag`, `min` value and `max` value.
 
 ?> **Note:** Will return undefined for non-variable fonts.
 
-**Example**
+#### Example
 
 This example will select the first returned Font Family Array.
 
@@ -38,7 +38,7 @@ var firstAxis = axesData[0];
 alert(firstAxis.name+"\n"+firstAxis.tag+"\n"+firstAxis.min+"\n"+firstAxis.max);
 ```
 
-**Type**
+#### Type
 
 Array of Objects; read-only.
 
@@ -48,13 +48,13 @@ Array of Objects; read-only.
 
 `app.fonts.fontsWithDefaultDesignAxes[0].designVector`
 
-**Description**
+#### Description
 
 For Variable fonts will return an ordered array with a length matching the number of design axes defined by the font.
 
 ?> **Note:** Will return undefined for non-variable fonts.
 
-**Type**
+#### Type
 
 Array of floating-point values; read-only.
 
@@ -64,11 +64,11 @@ Array of floating-point values; read-only.
 
 `app.fonts.allFonts[0][0].familyName`
 
-**Description**
+#### Description
 
 The family name of the font, in the ASCII character set.
 
-**Type**
+#### Type
 
 String; read-only.
 
@@ -78,13 +78,13 @@ String; read-only.
 
 `app.fonts.fontsWithDefaultDesignAxes[0].familyPrefix`
 
-**Description**
+#### Description
 
 The family prefix of the variable font. For example, the family of the PostScript name "SFPro-Bold" is "SFPro".
 
 ?> **Note:** Will return undefined for non-variable fonts.
 
-**Type**
+#### Type
 
 String; read-only.
 
@@ -96,7 +96,7 @@ String; read-only.
 
 ?> **Note:** This functionality was added in After Effects 24.2
 
-**Description**
+#### Description
 
 A unique number assigned to the FontObject instance when it is created, value is greater than or equal to 1. It never changes during the application session but may be different in subsequent launches of the application.
 
@@ -104,7 +104,7 @@ Can be used to compare two FontObject instances to see if they refer to the same
 
 FontObjects can be looked up by fontID with [getFontByID](fontsobject.md#fontsobjectgetfontbyid) .
 
-**Type**
+#### Type
 
 Number; read-only.
 
@@ -114,11 +114,11 @@ Number; read-only.
 
 `app.fonts.allFonts[0][0].fullName`
 
-**Description**
+#### Description
 
 The full name of the font, in the ASCII character set. Usually composed of the family name and the style name.
 
-**Type**
+#### Type
 
 String; read-only.
 
@@ -128,11 +128,11 @@ String; read-only.
 
 `app.fonts.allFonts[0][0].hasDesignAxes`
 
-**Description**
+#### Description
 
 Returns true if the font is a variable font.
 
-**Type**
+#### Type
 
 Boolean; read-only.
 
@@ -142,11 +142,11 @@ Boolean; read-only.
 
 `app.fonts.allFonts[0][0].isFromAdobeFonts`
 
-**Description**
+#### Description
 
 Returns true if the font is from Adobe Fonts.
 
-**Type**
+#### Type
 
 Boolean; read-only.
 
@@ -156,11 +156,11 @@ Boolean; read-only.
 
 `app.fonts.allFonts[0][0].isSubstitute`
 
-**Description**
+#### Description
 
 Returns true when this font instance represents a font reference which was missing on project open.
 
-**Type**
+#### Type
 
 Boolean; read-only.
 
@@ -170,13 +170,13 @@ Boolean; read-only.
 
 `app.fonts.allFonts[0][0].location`
 
-**Description**
+#### Description
 
 The location of the font file on your system.
 
 !> **Warning:** Not guaranteed to be returned for all font types; return value may be empty string for some kinds of fonts.
 
-**Type**
+#### Type
 
 String; read-only.
 
@@ -186,11 +186,11 @@ String; read-only.
 
 `app.fonts.allFonts[0][0].nativeFamilyName`
 
-**Description**
+#### Description
 
 The native family name of the font in full 16 bit Unicode. Often different than what is returned by [FontObject.familyName](#fontobjectfamilyname) for non-Latin fonts.
 
-**Type**
+#### Type
 
 String; read-only.
 
@@ -200,11 +200,11 @@ String; read-only.
 
 `app.fonts.allFonts[0][0].nativeFullName`
 
-**Description**
+#### Description
 
 The native full name of the font in full 16 bit Unicode. Often different than what is returned by [FontObject.fullName](#fontobjectfullname) for non-Latin fonts.
 
-**Type**
+#### Type
 
 String; read-only.
 
@@ -214,11 +214,11 @@ String; read-only.
 
 `app.fonts.allFonts[0][0].nativeStyleName`
 
-**Description**
+#### Description
 
 The native style name of the font in full 16 bit Unicode. Often different than what is returned by [FontObject.styleName](#fontobjectstylename) for non-Latin fonts.
 
-**Type**
+#### Type
 
 String; read-only.
 
@@ -228,11 +228,11 @@ String; read-only.
 
 `app.fonts.allFonts[0][0].postScriptName`
 
-**Description**
+#### Description
 
 The postscript name of the font.
 
-**Type**
+#### Type
 
 String; read-only.
 
@@ -242,11 +242,11 @@ String; read-only.
 
 `app.fonts.allFonts[0][0].styleName`
 
-**Description**
+#### Description
 
 The style name of the font, in the ASCII character set.
 
-**Type**
+#### Type
 
 String; read-only.
 
@@ -256,11 +256,11 @@ String; read-only.
 
 `app.fonts.allFonts[0][0].technology`
 
-**Description**
+#### Description
 
 The technology used by the font.
 
-**Type**
+#### Type
 
 An `CTFontTechnology` enumerated value; read-only. One of:
 
@@ -279,11 +279,11 @@ An `CTFontTechnology` enumerated value; read-only. One of:
 
 `app.fonts.allFonts[0][0].type`
 
-**Description**
+#### Description
 
 The internal type of the font.
 
-**Type**
+#### Type
 
 An `CTFontType` enumerated value; read-only. One of:
 
@@ -304,11 +304,11 @@ An `CTFontType` enumerated value; read-only. One of:
 
 `app.fonts.allFonts[0][0].version`
 
-**Description**
+#### Description
 
 The version number of the font.
 
-**Type**
+#### Type
 
 String; read-only.
 
@@ -318,11 +318,11 @@ String; read-only.
 
 `app.fonts.allFonts[0][0].writingScripts`
 
-**Description**
+#### Description
 
 The supported character sets of the font.
 
-**Type**
+#### Type
 
 An array of `CTScript` enumerated values; read-only. One or more of:
 
@@ -424,7 +424,7 @@ An array of `CTScript` enumerated values; read-only. One or more of:
 
 ?> **Note:** This functionality was added in After Effects (Beta) 25.0 and is subject to change while it remains in Beta.
 
-**Description**
+#### Description
 
 Fonts do not contain glyphs for all possible ranges of Unicode and this method gives the caller the opportunity to query the Font about support for one or more characters.
 
@@ -432,12 +432,12 @@ Returns `true` if the font has a glyph for every character in the `charString`.
 
 The character order does not matter, and in the case of a parameter string with more than one character, it is not possible though this API to determine which character had no glyph support.
 
-**Parameters**
+#### Parameters
 
 | `charString`   | A string with any number of characters that will be checked for support in the [Font object](#fontobject).   |
 |----------------|---------------------------------------------------------------------------------------------------|
 
-**Returns**
+#### Returns
 
 Boolean.
 
@@ -447,18 +447,18 @@ Boolean.
 
 `app.fonts.fontsWithDefaultDesignAxes[0].hasSameDict(fontObject)`
 
-**Description**
+#### Description
 
 This function will true if the [Font object](#fontobject) passed as an argument shares the same variable font dictionary as the [Font object](#fontobject) the function is called on.
 
 ?> **Note:** Can only return true when called on a variable [Font object](#fontobject) with the argument also being a [Font object](#fontobject) of a variable font.
 
-**Parameters**
+#### Parameters
 
 | `fontObject`   | A [Font object](#fontobject)   |
 |----------------|--------------------------------|
 
-**Returns**
+#### Returns
 
 Boolean.
 
@@ -470,18 +470,18 @@ Boolean.
 
 ?> **Note:** This functionality was added in After Effects (Beta) 25.0 and is subject to change while it remains in Beta.
 
-**Description**
+#### Description
 
 Given an [Font object](#fontobject) passed as an argument, returns an Array of [Font object](#fontobject) instances which share the same font dictionary as the [Font object](#fontobject) the function is called on.
 
 Will return an empty Array if the argument is not a Variable font, or the Variable font only has one instance (the parameter one).
 
-**Parameters**
+#### Parameters
 
 | `fontObject`   | A [Font object](#fontobject)   |
 |----------------|--------------------------------|
 
-**Returns**
+#### Returns
 
 Array of [Font objects](#fontobject), may be empty.
 
@@ -491,15 +491,15 @@ Array of [Font objects](#fontobject), may be empty.
 
 `app.fonts.fontsWithDefaultDesignAxes[0].postScriptNameForDesignVector([...vectorValues])`
 
-**Description**
+#### Description
 
 This function will return the postscript name of the variable font for the specific design vectors passed as the argument.
 
-**Parameters**
+#### Parameters
 
 | vectorValues   | An array of float values that matches the length of [FontObject.designVector](#fontobjectdesignvector) for the given variable font.   |
 |----------------|----------------------------------------------------------------------------------------------------------------------------------------|
 
-**Returns**
+#### Returns
 
 A String.

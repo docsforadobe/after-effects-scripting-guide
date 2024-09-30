@@ -2,7 +2,7 @@
 
 `app.activeViewer.views[0]`
 
-**Description**
+#### Description
 
 The View object represents a specific view.
 
@@ -14,11 +14,11 @@ The View object represents a specific view.
 
 `app.activeViewer.views[0].active`
 
-**Description**
+#### Description
 
 When true, indicates if the viewer panel is focused, and thereby frontmost.
 
-**Type**
+#### Type
 
 Boolean; read-only.
 
@@ -28,11 +28,11 @@ Boolean; read-only.
 
 `app.activeViewer.views[0].options`
 
-**Description**
+#### Description
 
 Options object for this View
 
-**Type**
+#### Type
 
 [ViewOptions object](viewoptions.md#viewoptions)
 
@@ -44,15 +44,15 @@ Options object for this View
 
 `app.activeViewer.views[0].setActive()`
 
-**Description**
+#### Description
 
 Moves this view panel to the front and places focus on it, making it active.
 Calling this method will set the [view's active attribute](#viewactive) to true.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Boolean, indicating if the view panel was made active.

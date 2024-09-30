@@ -2,7 +2,7 @@
 
 `app.project.item(index).layer(index)`
 
-**Description**
+#### Description
 
 The AVLayer object provides an interface to those layers that contain AVItem objects (composition layers, footage layers, solid layers, text layers, and sound layers).
 
@@ -10,7 +10,7 @@ The AVLayer object provides an interface to those layers that contain AVItem obj
 
 > AVLayer is a base class for [TextLayer object](textlayer.md#textlayer), so AVLayer attributes and methods are available when working with TextLayer objects.
 
-**AE Properties**
+#### AE Properties
 
 Different types of layers have different AE properties. AVLayer has the following properties and property groups:
 
@@ -50,7 +50,7 @@ Different types of layers have different AE properties. AVLayer has the followin
 - Audio
   - AudioLevels
 
-**Example**
+#### Example
 
 If the first item in the project is a CompItem, and the first layer of that CompItem is an AVLayer, the following sets the layer `quality`, `startTime`, and `inPoint`.
 
@@ -69,11 +69,11 @@ firstLayer.inPoint = 2;
 
 `app.project.item(index).layer(index).adjustmentLayer`
 
-**Description**
+#### Description
 
 True if the layer is an adjustment layer.
 
-**Type**
+#### Type
 
 Boolean; read/write.
 
@@ -83,12 +83,12 @@ Boolean; read/write.
 
 `app.project.item(index).layer(index).audioActive`
 
-**Description**
+#### Description
 
 True if the layer's audio is active at the current time. For this value to be true, `audioEnabled` must be true, no other layer with audio may be soloing unless this layer is soloed too, and the time must be between the `inPoint`
 and `outPoint` of this layer.
 
-**Type**
+#### Type
 
 Boolean; read-only.
 
@@ -98,11 +98,11 @@ Boolean; read-only.
 
 `app.project.item(index).layer(index).audioEnabled`
 
-**Description**
+#### Description
 
 When true, the layer's audio is enabled. This value corresponds to the audio toggle switch in the Timeline panel.
 
-**Type**
+#### Type
 
 Boolean; read/write.
 
@@ -112,11 +112,11 @@ Boolean; read/write.
 
 `app.project.item(index).layer(index).blendingMode`
 
-**Description**
+#### Description
 
 The blending mode of the layer.
 
-**Type**
+#### Type
 
 A BlendingMode enumerated value; read/write. One of:
 
@@ -166,11 +166,11 @@ A BlendingMode enumerated value; read/write. One of:
 
 `app.project.item(index).layer(index).canSetCollapseTransformation`
 
-**Description**
+#### Description
 
 True if it is legal to change the value of the `collapseTransformation` attribute on this layer.
 
-**Type**
+#### Type
 
 Boolean; read-only.
 
@@ -180,11 +180,11 @@ Boolean; read-only.
 
 `app.project.item(index).layer(index).canSetTimeRemapEnabled`
 
-**Description**
+#### Description
 
 True if it is legal to change the value of the `timeRemapEnabled` attribute on this layer.
 
-**Type**
+#### Type
 
 Boolean; read-only.
 
@@ -194,11 +194,11 @@ Boolean; read-only.
 
 `app.project.item(index).layer(index).collapseTransformation`
 
-**Description**
+#### Description
 
 True if collapse transformation is on for this layer.
 
-**Type**
+#### Type
 
 Boolean; read/write.
 
@@ -208,11 +208,11 @@ Boolean; read/write.
 
 `app.project.item(index).layer(index).effectsActive`
 
-**Description**
+#### Description
 
 True if the layer's effects are active, as indicated by the `<f>` icon next to it in the user interface.
 
-**Type**
+#### Type
 
 Boolean; read/write.
 
@@ -222,11 +222,11 @@ Boolean; read/write.
 
 `app.project.item(index).layer(index).environmentLayer`
 
-**Description**
+#### Description
 
 True if this is an environment layer in a Ray-traced 3D composition. Setting this attribute to true automatically makes the layer 3D (`threeDLayer` becomes true).
 
-**Type**
+#### Type
 
 Boolean; read/write.
 
@@ -236,11 +236,11 @@ Boolean; read/write.
 
 `app.project.item(index).layer(index).frameBlending`
 
-**Description**
+#### Description
 
 True if frame blending is enabled for the layer.
 
-**Type**
+#### Type
 
 Boolean; read-only.
 
@@ -250,11 +250,11 @@ Boolean; read-only.
 
 `app.project.item(index).layer(index).frameBlendingType`
 
-**Description**
+#### Description
 
 The type of frame blending to perform when frame blending is enabled for the layer.
 
-**Type**
+#### Type
 
 A FrameBlendingType enumerated value; read/write. One of:
 
@@ -268,11 +268,11 @@ A FrameBlendingType enumerated value; read/write. One of:
 
 `app.project.item(index).layer(index).guideLayer`
 
-**Description**
+#### Description
 
 True if the layer is a guide layer.
 
-**Type**
+#### Type
 
 Boolean; read/write.
 
@@ -282,11 +282,11 @@ Boolean; read/write.
 
 `app.project.item(index).layer(index).hasAudio`
 
-**Description**
+#### Description
 
 True if the layer contains an audio component, regardless of whether it is audio-enabled or soloed.
 
-**Type**
+#### Type
 
 Boolean; read-only.
 
@@ -298,12 +298,12 @@ Boolean; read-only.
 
 ?> **Note:** This functionality was updated in After Effects 23.0. Track Matte is no longer dependent on layer order.
 
-**Description**
+#### Description
 
 True if this layer has track matte. When true, this layer's `trackMatteType` value controls how the matte is applied.
 See [AVLayer.trackMatteType](#avlayertrackmattetype) for available track matte types.
 
-**Type**
+#### Type
 
 Boolean; read-only.
 
@@ -313,11 +313,11 @@ Boolean; read-only.
 
 `app.project.item(index).layer(index).height`
 
-**Description**
+#### Description
 
 The height of the layer in pixels.
 
-**Type**
+#### Type
 
 Floating-point; read-only.
 
@@ -327,11 +327,11 @@ Floating-point; read-only.
 
 `app.project.item(index).layer(index).isNameFromSource`
 
-**Description**
+#### Description
 
 True if the layer has no expressly set name, but contains a named source. In this case, `layer.name` has the same value as `layer.source.name`. False if the layer has an expressly set name, or if the layer does not have a source.
 
-**Type**
+#### Type
 
 Boolean; read-only.
 
@@ -343,11 +343,11 @@ Boolean; read-only.
 
 ?> **Note:** This functionality was updated in After Effects 23.0. Track Matte is no longer dependent on layer order.
 
-**Description**
+#### Description
 
 True if this layer is being used as a track matte.
 
-**Type**
+#### Type
 
 Boolean; read-only.
 
@@ -357,11 +357,11 @@ Boolean; read-only.
 
 `app.project.item(index).layer(index).motionBlur`
 
-**Description**
+#### Description
 
 True if motion blur is enabled for the layer.
 
-**Type**
+#### Type
 
 Boolean; read/write.
 
@@ -371,11 +371,11 @@ Boolean; read/write.
 
 `app.project.item(index).layer(index).preserveTransparency`
 
-**Description**
+#### Description
 
 True if preserve transparency is enabled for the layer.
 
-**Type**
+#### Type
 
 Boolean; read/write.
 
@@ -385,11 +385,11 @@ Boolean; read/write.
 
 `app.project.item(index).layer(index).quality`
 
-**Description**
+#### Description
 
 The quality with which this layer is displayed.
 
-**Type**
+#### Type
 
 A `LayerQuality` enumerated value; read/write. One of:
 
@@ -405,11 +405,11 @@ A `LayerQuality` enumerated value; read/write. One of:
 
 ?> **Note:** This functionality was added in After Effects 12.0 (CC)
 
-**Description**
+#### Description
 
 Set/get layer sampling method (bicubic or bilinear)
 
-**Type**
+#### Type
 
 A `LayerSamplingQuality` enumerated value; read/write. One of:
 
@@ -422,11 +422,11 @@ A `LayerSamplingQuality` enumerated value; read/write. One of:
 
 `app.project.item(index).layer(index).source`
 
-**Description**
+#### Description
 
-The source AVItem for this layer. The value is null in a Text layer. Use `AVLayer.replaceSource()` to change the value.
+The source AVItem for this layer. The value is `null` in a Text layer. Use `AVLayer.replaceSource()` to change the value.
 
-**Type**
+#### Type
 
 AVItem object; read-only.
 
@@ -436,11 +436,11 @@ AVItem object; read-only.
 
 `app.project.item(index).layer(index).threeDLayer`
 
-**Description**
+#### Description
 
 True if this is a 3D layer.
 
-**Type**
+#### Type
 
 Boolean; read/write.
 
@@ -450,11 +450,11 @@ Boolean; read/write.
 
 `app.project.item(index).layer(index).threeDPerChar`
 
-**Description**
+#### Description
 
 `True` if this layer has the Enable Per-character 3D switch set, allowing its characters to be animated off the plane of the text layer. Applies only to text layers.
 
-**Type**
+#### Type
 
 Boolean; read/write.
 
@@ -464,11 +464,11 @@ Boolean; read/write.
 
 `app.project.item(index).layer(index).timeRemapEnabled`
 
-**Description**
+#### Description
 
 True if time remapping is enabled for this layer.
 
-**Type**
+#### Type
 
 Boolean; read/write.
 
@@ -480,11 +480,11 @@ Boolean; read/write.
 
 ?> **Note:** This functionality was added in After Effects 23.0
 
-**Description**
+#### Description
 
 Returns the track matte layer for this layer. Returns `null` if this layer has no track matte layer.
 
-**Type**
+#### Type
 
 AVLayer object; read only.
 
@@ -498,12 +498,12 @@ AVLayer object; read only.
 
 !> **Warning:** This is a Legacy API we don't recommend using for setting Track Matte Type in new scripts. Please consider using the latest track matte APIs [AVLayer.setTrackMatte()](#avlayersettrackmatte) and [AVLayer.removeTrackMatte()](#avlayerremovetrackmatte) for your tasks.
 
-**Description**
+#### Description
 
 If this layer has a track matte, specifies the way the track matte is applied.
 Specifying the `TrackMatteType.NO_TRACK_MATTE` type will remove the track matte for this layer and reset the track matte type.
 
-**Type**
+#### Type
 
 A `TrackMatteType` enumerated value; read/write. One of:
 
@@ -513,7 +513,7 @@ A `TrackMatteType` enumerated value; read/write. One of:
 - `TrackMatteType.LUMA_INVERTED`
 - `TrackMatteType.NO_TRACK_MATTE`
 
-**Example**
+#### Example
 
 ```javascript
 // Returns the current track matte type for myLayer
@@ -534,11 +534,11 @@ myLayer.trackMatteType = TrackMatteType.NO_TRACK_MATTE;
 
 `app.project.item(index).layer(index).width`
 
-**Description**
+#### Description
 
 The width of the layer in pixels.
 
-**Type**
+#### Type
 
 Floating-point; read-only.
 
@@ -552,7 +552,7 @@ Floating-point; read-only.
 
 ?> **Note:** This functionality was added in After Effects 18.0 (2021)
 
-**Description**
+#### Description
 
 Adds the layer to the Essential Graphics Panel for the specified composition.
 
@@ -561,12 +561,12 @@ Returns true if the layer is successfully added, or false otherwise.
 - If the layer cannot be added, it is either because it is not a layer type for which media can be replaced (referred to as Media Replacement Layers), or the layer has already been added to the EGP for that composition. After Effects will present a warning dialog if the layer cannot be added to the EGP.
 - Use the [AVLayer.canAddToMotionGraphicsTemplate()](#avlayercanaddtomotiongraphicstemplate) method to test whether the layer can be added to a Motion Graphics template.
 
-**Parameters**
+#### Parameters
 
 | `comp`   | A CompItem object; the composition where you wish to add the property to the EGP. Required.   |
 |----------|-----------------------------------------------------------------------------------------------|
 
-**Returns**
+#### Returns
 
 Boolean.
 
@@ -578,7 +578,7 @@ Boolean.
 
 ?> **Note:** This functionality was added in After Effects 18.0 (2021)
 
-**Description**
+#### Description
 
 Adds the layer to the Essential Graphics Panel for the specified composition.
 
@@ -587,13 +587,13 @@ Returns true if the layer is successfully added, or false otherwise.
 - If the layer cannot be added, it is either because it is not a layer type for which media can be replaced (referred to as Media Replacement Layers), or the layer has already been added to the EGP for that composition. After Effects will present a warning dialog if the layer cannot be added to the EGP.
 - Use the [AVLayer.canAddToMotionGraphicsTemplate()](#avlayercanaddtomotiongraphicstemplate) method to test whether the layer can be added to a Motion Graphics template.
 
-**Parameters**
+#### Parameters
 
 | `comp`   | A CompItem object; the composition where you wish to add<br/>the property to the EGP. Required.   |
 |----------|---------------------------------------------------------------------------------------------------|
 | `name`   | A string for the new name. Required.                                                              |
 
-**Returns**
+#### Returns
 
 Boolean.
 
@@ -603,16 +603,16 @@ Boolean.
 
 `app.project.item(index).layer(index).audioActiveAtTime(time)`
 
-**Description**
+#### Description
 
 Returns true if this layer's audio will be active at the specified time. For this method to return true, `audioEnabled` must be true, no other layer with audio may be soloing unless this layer is soloed too, and the time must be between the `inPoint` and `outPoint` of this layer.
 
-**Parameters**
+#### Parameters
 
 | `time`   | The time, in seconds. A floating-point value.   |
 |----------|-------------------------------------------------|
 
-**Returns**
+#### Returns
 
 Boolean.
 
@@ -622,22 +622,22 @@ Boolean.
 
 `app.project.item(index).layer(index).calculateTransformFromPoints(pointTopLeft, pointTopRight, pointBottomRight)`
 
-**Description**
+#### Description
 
 Calculates a transformation from a set of points in this layer.
 
-**Parameters**
+#### Parameters
 
 | `pointTopLeft`     | The top left point coordinates in the form of an array,<br/>[x , y, z] .      |
 |--------------------|-------------------------------------------------------------------------------|
 | `pointTopRight`    | The top right point coordinates in the form of an array,<br/>[ x, y, z ] .    |
 | `pointBottomRight` | The bottom right point coordinates in the form of an<br/>array, [ x, y, z ] . |
 
-**Returns**
+#### Returns
 
 An Object with the transformation properties set.
 
-**Example**
+#### Example
 
 ```javascript
 var newLayer = comp.layers.add(newFootage);
@@ -657,7 +657,7 @@ for (var sel in transform) {
 
 ?> **Note:** This functionality was added in After Effects 18.0 (2021)
 
-**Description**
+#### Description
 
 Test whether or not the layer can be added to the Essential Graphics Panel for the specified composition.
 
@@ -675,12 +675,12 @@ The AVLayer needs to comply with the restrictions below in order to be treated a
 - If the [AVLayer.source](#avlayersource) is a [FootageItem object](../items/footageitem.md#footageitem), then FootageItem.FootageSource should not be a [SolidSource object](../sources/solidsource.md#solidsource).
 - If the [AVLayer.source](#avlayersource) is a [FootageItem object](../items/footageitem.md#footageitem) and the FootageItem.FootageSource is a [FileSource object](../sources/filesource.md#filesource) then that FileSource should not point to a non-media file e.g. a JSX script file.
 
-**Parameters**
+#### Parameters
 
 | `comp`   | A CompItem object; the composition where you wish to add the property to the EGP. Required.   |
 |----------|-----------------------------------------------------------------------------------------------|
 
-**Returns**
+#### Returns
 
 Boolean.
 
@@ -692,18 +692,18 @@ Boolean.
 
 ?> **Note:** This functionality was added in After Effects 13.2 (CC 2014.2)
 
-**Description**
+#### Description
 
 Converts composition coordinates, such as `sourcePointToComp`, to layer coordinates.
 
 !> **Warning:** This value only reflects the first character in the text layer at the current time.
 
-**Parameters**
+#### Parameters
 
 | `sourcePointToComp`   | A position array of composition coordinates in ([X, Y]) format.   |
 |-----------------------|-------------------------------------------------------------------|
 
-**Returns**
+#### Returns
 
 Array of ([X,Y]) position coordinates; read-only.
 
@@ -713,17 +713,17 @@ Array of ([X,Y]) position coordinates; read-only.
 
 `app.project.item(index).layer(index).openInViewer()`
 
-**Description**
+#### Description
 
 Opens the layer in a Layer panel, and moves the Layer panel to front and gives it focus.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
-Viewer object for the Layer panel, or null if the layer could not be opened (e.g., for text or shape layers, which cannot be opened in the Layer panel).
+Viewer object for the Layer panel, or `null` if the layer could not be opened (e.g., for text or shape layers, which cannot be opened in the Layer panel).
 
 ---
 
@@ -733,16 +733,16 @@ Viewer object for the Layer panel, or null if the layer could not be opened (e.g
 
 ?> **Note:** This functionality was added in After Effects 23.0
 
-**Description**
+#### Description
 
 Removes the track matte for this layer while preserving the TrackMatteType.
 See [AVLayer.setTrackMatte()](#avlayersettrackmatte) for another way of removing track matte.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Nothing.
 
@@ -763,17 +763,17 @@ alert(myLayer.trackMatteType);
 
 `app.project.item(index).layer(index).replaceSource(newSource, fixExpressions)`
 
-**Description**
+#### Description
 
 Replaces the source for this layer.
 
-**Parameters**
+#### Parameters
 
 | `newSource`      | The new source AVItem object.                                                                                                                                                                                                                                                                                      |
 |------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `fixExpressions` | `True` to adjust expressions for the new source,<br/>`false` otherwise. Note that this feature can be<br/>resource-intensive; if replacing a large amount of<br/>footage, do this only at the end of the operation. See<br/>also [Project.autoFixExpressions()](../general/project.md#projectautofixexpressions). |
 
-**Returns**
+#### Returns
 
 Nothing.
 
@@ -787,12 +787,12 @@ Nothing.
 
 ?> **Note:** This functionality was added in After Effects 23.0
 
-**Description**
+#### Description
 
 Sets the track matte layer and type for this layer. Passing in `null` to trackMatteLayer parameter removes the track matte.
 See [AVLayer.removeTrackMatte()](#avlayerremovetrackmatte) for another way of removing track matte.
 
-**Parameters**
+#### Parameters
 
 | `trackMatteLayer`   | The AVLayer to be used as the track matte layer.                                                                          |
 |---------------------|---------------------------------------------------------------------------------------------------------------------------|
@@ -800,11 +800,11 @@ See [AVLayer.removeTrackMatte()](#avlayerremovetrackmatte) for another way of re
 
 !> **Warning:** Passing in `TrackMatteType.NO_TRACK_MATTE` as type is invalid and will result in no-op.
 
-**Returns**
+#### Returns
 
 Nothing
 
-**Example**
+#### Example
 
 ```javascript
 // Sets the track matte layer of myLayer with otherLayer as Alpha type
@@ -832,22 +832,22 @@ myLayer.setTrackMatte(otherLayer, TrackMatteType.NO_TRACK_MATTE);
 
 ?> **Note:** This functionality was added in After Effects 13.2 (CC 2014.2)
 
-**Description**
+#### Description
 
 Converts layer coordinates, such as `boxTextPos`, to composition coordinates.
 
 !> **Warning:** This value only reflects the first character in the text layer at the current time.
 
-**Parameters**
+#### Parameters
 
 | `boxTextPos`   | A position array of layer coordinates in ([X, Y]) format.   |
 |----------------|-------------------------------------------------------------|
 
-**Returns**
+#### Returns
 
 Array of ([X,Y]) position coordinates; read-only.
 
-**Example**
+#### Example
 
 ```javascript
 // For a paragraph text layer.
@@ -861,16 +861,16 @@ var boxTextCompPos = myTextLayer.sourcePointToComp(boxTextLayerPos);
 
 `app.project.item(index).layer(index).sourceRectAtTime(timeT, extents)`
 
-**Description**
+#### Description
 
 Retrieves the rectangle bounds of the layer at the specified time index, corrected for text or shape layer content. Use, for example, to write text that is properly aligned to the baseline.
 
-**Parameters**
+#### Parameters
 
 | `timeT`   | The time index, in seconds. A floating-point value.                                                                                            |
 |-----------|------------------------------------------------------------------------------------------------------------------------------------------------|
 | `extents` | `True` to include the extents, `false` otherwise. Extents<br/>apply to shape layers, increasing the size of the layer bounds<br/>as necessary. |
 
-**Returns**
+#### Returns
 
 A JavaScript object with four attributes, [`top`, `left`, `width`, `height`].

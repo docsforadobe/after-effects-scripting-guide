@@ -1,5 +1,7 @@
 # Global functions
 
+#### Description
+
 These globally available functions that are specific to After Effects. Any JavaScript object or function can call these functions, which allow you to display text in a small (3-line) area of the Info panel, to convert numeric time values to and from string values, or to generate a random number.
 
 | Global function          | Description                                                        |
@@ -17,62 +19,64 @@ Additional global functions for standard user I/O (`alert`, `confirm` , and `pro
 
 ---
 
-## clearOutput()
+## Methods
+
+### clearOutput()
 
 `clearOutput()`
 
-**Description**
+#### Description
 
 Clears the output in the Info panel.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Nothing.
 
 ---
 
-## currentFormatToTime()
+### currentFormatToTime()
 
 `currentFormatToTime(formattedTime, fps[, isDuration])`
 
-**Description**
+#### Description
 
 Converts a formatted string for a frame time value to a number of seconds, given a specified frame rate. For example, if the formatted frame time value is 0:00:12 (the exact string format is determined by a project setting), and the frame rate is 24 fps, the time would be 0.5 seconds (12/24). If the frame rate is 30 fps, the time would be 0.4 seconds (12/30). If the time is a duration, the frames are counted from 0. Otherwise, the frames are counted from the project's starting frame (see [Project.displayStartFrame](project.md#projectdisplaystartframe)).
 
-**Parameters**
+#### Parameters
 
 | `formattedTime`   | The frame time value, a string specifying a number of<br/>frames in the project's current time display format.                                                 |
 |-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `fps`             | The frames-per-second, a floating-point value.                                                                                                                 |
 | `isDuration`      | Optional. When true, the time is a duration (measured from<br/>frame 0). When false (the default), the time is measured<br/>from the project's starting frame. |
 
-**Returns**
+#### Returns
 
 Floating-point value, the number of seconds.
 
 ---
 
-## generateRandomNumber()
+### generateRandomNumber()
 
 `generateRandomNumber()`
 
 ?> **Note:** This functionality was added in After Effects 13.6 (CC 2015)
 
-**Description**
+#### Description
 
 Generates random numbers. This function is recommended instead of `Math.random` for generating random numbers that will be applied as values in a project (e.g., when using setValue).
 
 This method avoids a problem where `Math.random` would not return random values in After Effects CC 2015 (13.5.x) due to a concurrency issue with multiple CPU threads.
 
-**Returns**
+#### Returns
 
 Floating-point, pseudo-random number in the range [0, 1].
 
-**Example**
+#### Example
 
 ```javascript
 // change the position X of all layers with random number
@@ -93,25 +97,25 @@ for (var i = 1; i <= myComp.numLayers; i++) {
 
 ---
 
-## getEnumAsString()
+### getEnumAsString()
 
 `getEnumAsString()`
 
 ?> **Note:** This functionality was added in After Effects 24.0
 
-**Description**
+#### Description
 
 Returns the string value of an Enum.
 
-**Parameters**
+#### Parameters
 
 Enum.
 
-**Returns**
+#### Returns
 
 String.
 
-**Example**
+#### Example
 
 ```javascript
 // Returns: "BlendingMode.ADD"
@@ -120,24 +124,24 @@ alert(getEnumAsString(5220));
 
 ---
 
-## isValid()
+### isValid()
 
 `isValid(obj)`
 
-**Description**
+#### Description
 
 Determines if the specified After Effects object (e.g., composition, layer, mask, etc.) still exists. Some operations, such as [PropertyBase.moveTo()](../properties/propertybase.md#propertybasemoveto), might invalidate existing variable assignments to related objects. This function allows you to test whether those assignments are still valid before attempting to access them.
 
-**Parameters**
+#### Parameters
 
 | `obj`   | The After Effects object to check for validity.   |
 |---------|---------------------------------------------------|
 
-**Returns**
+#### Returns
 
 Boolean.
 
-**Example**
+#### Example
 
 ```javascript
 var layer = app.project.activeItem.layer(1); // assume layer has three masks
@@ -151,44 +155,44 @@ alert(isValid(mask1)); // displays "false"; mask2 and mask3 do as well
 
 ---
 
-## timeToCurrentFormat()
+### timeToCurrentFormat()
 
 `timeToCurrentFormat(time, fps[, isDuration])`
 
-**Description**
+#### Description
 
 Converts a numeric time value (a number of seconds) to a frame time value; that is, a formatted string thatshows which frame corresponds to that time, at the specified rate. For example, if the time is 0.5 seconds, andthe frame rate is 24 fps, the frame would be 0:00:12 (when the project is set to display as timecode). If the framerate is 30 fps, the frame would be 0:00:15. The format of the timecode string is determined by a project setting. If the time is a duration, the frames are counted from 0. Otherwise, the frames are counted from the project's starting frame (see [Project displayStartFrame](project.md#projectdisplaystartframe) attribute).
 
-**Parameters**
+#### Parameters
 
 | `time`       | The number of seconds, a floating-point value.                                                                                                                 |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `fps`        | The frames-per-second, a floating-point value.                                                                                                                 |
 | `isDuration` | Optional. When true, the time is a duration (measured from<br/>frame 0). When false (the default), the time is measured from<br/>the project's starting frame. |
 
-**Returns**
+#### Returns
 
 String in the project's current time display format.
 
 ---
 
-## write()
+### write()
 
 `write(text)`
 
-**Description**
+#### Description
 
 Writes output to the Info panel, with no line break added.
 
-**Parameters**
+#### Parameters
 
 `text` The string to display. Truncated if too long for the Info panel.
 
-**Returns**
+#### Returns
 
 Nothing.
 
-**Example**
+#### Example
 
 ```javascript
 write("This text appears in Info panel ");
@@ -197,23 +201,23 @@ write("with more on same line.");
 
 ---
 
-## writeLn()
+### writeLn()
 
 `writeLn(text)`
 
-**Description**
+#### Description
 
 Writes output to the Info panel and adds a line break at the end.
 
-**Parameters**
+#### Parameters
 
 `text` The string to display.
 
-**Returns**
+#### Returns
 
 Nothing.
 
-**Example**
+#### Example
 
 ```javascript
 writeLn("This text appears on first line");

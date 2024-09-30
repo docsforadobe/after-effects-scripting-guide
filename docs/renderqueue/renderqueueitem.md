@@ -2,7 +2,7 @@
 
 `app.project.renderQueue.item(index)`
 
-**Description**
+#### Description
 
 The RenderQueueItem object represents an individual item in the render queue. It provides access to the specific settings for an item to be rendered. Create the object by adding a composition to the Render Queue with the [RQItemCollection object](rqitemcollection.md#rqitemcollection); see [RQItemCollection.add()](rqitemcollection.md#rqitemcollectionadd).
 
@@ -14,11 +14,11 @@ The RenderQueueItem object represents an individual item in the render queue. It
 
 `app.project.renderQueue.item(index).comp`
 
-**Description**
+#### Description
 
 The composition that will be rendered by this render-queue item. To change the composition, you must delete this render-queue item and create a new one.
 
-**Type**
+#### Type
 
 [CompItem object](../items/compitem.md#compitem); read-only.
 
@@ -28,13 +28,13 @@ The composition that will be rendered by this render-queue item. To change the c
 
 `app.project.renderQueue.item(index).elapsedSeconds`
 
-**Description**
+#### Description
 
 The number of seconds spent rendering this item.
 
-**Type**
+#### Type
 
-Integer, or null if item has not been rendered; read-only.
+Integer, or `null` if item has not been rendered; read-only.
 
 ---
 
@@ -42,11 +42,11 @@ Integer, or null if item has not been rendered; read-only.
 
 `app.project.renderQueue.item(index).logType`
 
-**Description**
+#### Description
 
 A log type for this item, indicating which events should be logged while this item is being rendered.
 
-**Type**
+#### Type
 
 A `LogType` enumerated value; (read/write). One of:
 
@@ -60,11 +60,11 @@ A `LogType` enumerated value; (read/write). One of:
 
 `app.project.renderQueue.item(index).numOutputModules`
 
-**Description**
+#### Description
 
 The total number of Output Modules assigned to this item.
 
-**Type**
+#### Type
 
 Integer; read-only.
 
@@ -74,17 +74,17 @@ Integer; read-only.
 
 `app.project.renderQueue.item(index).onstatus`
 
-**Description**
+#### Description
 
 The name of a callback function that is called whenever the value of the [RenderQueueItem.status](#renderqueueitemstatus) attribute changes.
 
 You cannot make changes to render queue items or to the application while rendering is in progress or paused; you can, however, use this callback to pause or stop the rendering process. See [RenderQueue.pauseRendering()](renderqueue.md#renderqueuepauserendering) and [RenderQueue.stopRendering()](renderqueue.md#renderqueuestoprendering). See also [app.onError](../general/application.md#apponerror).
 
-**Type**
+#### Type
 
-A function name string, or null if no function is assigned.
+A function name string, or `null` if no function is assigned.
 
-**Example**
+#### Example
 
 ```javascript
 function myStatusChanged() {
@@ -101,11 +101,11 @@ app.project.renderQueue.item(1).render = false; // changes status and shows dial
 
 `app.project.renderQueue.item(index).outputModules`
 
-**Description**
+#### Description
 
 The collection of Output Modules for the item.
 
-**Type**
+#### Type
 
 [OMCollection object](omcollection.md#omcollection); read-only.
 
@@ -117,13 +117,13 @@ The collection of Output Modules for the item.
 
 ?> **Note:** This functionality was added in After Effects 22.0 (2022)
 
-**Description**
+#### Description
 
 Scripts can read and write the **Notify** checkbox for each individual item in the Render Queue. This is exposed in the UI as a checkbox next to each Render Queue item in the Notify column.
 
 This column is hidden by default and may need to be selected to be visible by right clicking on the Render Queue column headers and choosing Notify.
 
-**Type**
+#### Type
 
 Boolean; read/write.
 
@@ -133,12 +133,12 @@ Boolean; read/write.
 
 `app.project.renderQueue.item(index).render`
 
-**Description**
+#### Description
 
 When true, the item will be rendered when the render queue is started. When set to true, the [RenderQueueItem.status](#renderqueueitemstatus) is set to `RQItemStatus.QUEUED`. When set to false, `status` is set to
 `RQItemStatus.UNQUEUED`.
 
-**Type**
+#### Type
 
 Boolean; read/write.
 
@@ -148,11 +148,11 @@ Boolean; read/write.
 
 `app.project.renderQueue.item(index).skipFrames`
 
-**Description**
+#### Description
 
 The number of frames to skip when rendering this item. Use this to do rendering tests that are faster than a full render. A value of 0 skip no frames, and results in regular rendering of all frames. A value of 1 skips every other frame. This is equivalent to "rendering on twos." Higher values skip a larger number of frames. The total length of time remains unchanged. For example, if skip has a value of 1, a sequence output would have half the number of frames and in movie output, each frame would be double the duration.
 
-**Type**
+#### Type
 
 Integer in the range `[0..99]`; read/write.
 
@@ -162,13 +162,13 @@ Integer in the range `[0..99]`; read/write.
 
 `app.project.renderQueue.item(index).startTime`
 
-**Description**
+#### Description
 
 The day and time that this item started rendering.
 
-**Type**
+#### Type
 
-Date object, or null if the item has not started rendering; read-only.
+Date object, or `null` if the item has not started rendering; read-only.
 
 ---
 
@@ -176,11 +176,11 @@ Date object, or null if the item has not started rendering; read-only.
 
 `app.project.renderQueue.item(index).status`
 
-**Description**
+#### Description
 
 The current render status of the item.
 
-**Type**
+#### Type
 
 An `RQItemStatus` enumerated value; read-only. One of:
 
@@ -199,11 +199,11 @@ An `RQItemStatus` enumerated value; read-only. One of:
 
 `app.project.renderQueue.item(index).templates`
 
-**Description**
+#### Description
 
 The names of all Render Settings templates available for the item. See also [RenderQueueItem.saveAsTemplate()](#renderqueueitemsaveastemplate).
 
-**Type**
+#### Type
 
 Array of strings; read-only.
 
@@ -213,11 +213,11 @@ Array of strings; read-only.
 
 `app.project.renderQueue.item(index).timeSpanDuration`
 
-**Description**
+#### Description
 
 The duration in seconds of the composition to be rendered. The duration is determined by subtracting the start time from the end time. Setting this value is the same as setting a custom end time in the Render Settings dialog box.
 
-**Type**
+#### Type
 
 Floating-point value; read/write.
 
@@ -227,11 +227,11 @@ Floating-point value; read/write.
 
 `app.project.renderQueue.item(index).timeSpanStart`
 
-**Description**
+#### Description
 
 The time in the composition, in seconds, at which rendering will begin. Setting this value is the same as setting a custom start time in the Render Settings dialog box.
 
-**Type**
+#### Type
 
 Floating-point value; read/write.
 
@@ -243,16 +243,16 @@ Floating-point value; read/write.
 
 `app.project.renderQueue.item(index).applyTemplate(templateName)`
 
-**Description**
+#### Description
 
 Applies a Render Settings template to the item. See also [RenderQueueItem.saveAsTemplate()](#renderqueueitemsaveastemplate) and [RenderQueueItem.templates](#renderqueueitemtemplates).
 
-**Parameters**
+#### Parameters
 
 | `templateName`   | A string containing the name of the template to apply.   |
 |------------------|----------------------------------------------------------|
 
-**Returns**
+#### Returns
 
 Nothing.
 
@@ -262,17 +262,17 @@ Nothing.
 
 `app.project.renderQueue.item(index).duplicate()`
 
-**Description**
+#### Description
 
 Creates a duplicate of this item and adds it this render queue.
 
 ?> **Note:** Duplicating an item whose status is "Done" sets the new item's status to "Queued".
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 RenderQueueItem object.
 
@@ -284,14 +284,14 @@ RenderQueueItem object.
 
 ?> **Note:** This functionality was added in After Effects 13.0 (CC 2014)
 
-**Description**
+#### Description
 
 Gets a specific Render Queue Item setting.
 
 - Depreciated Source: [https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva](https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva)
 - Archived version: [https://web.archive.org/web/20200622100656/https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva](https://web.archive.org/web/20200622100656/https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva)
 
-**Example**
+#### Example
 
 ```javascript
 // Get current value of render setting's "Proxy Use"
@@ -310,14 +310,14 @@ var rqItem1_proxyUse_str = app.project.renderQueue.item(1).getSetting("Proxy Use
 
 ?> **Note:** This functionality was added in After Effects 13.0 (CC 2014)
 
-**Description**
+#### Description
 
 Gets all settings for a given Render Queue Item.
 
 - Depreciated Source: [https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva](https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva)
 - Archived version: [https://web.archive.org/web/20200622100656/https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva](https://web.archive.org/web/20200622100656/https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva)
 
-**Example**
+#### Example
 
 ```javascript
 // Get object that contains all possible values of all render settings of
@@ -333,16 +333,16 @@ var rqItem1_spec_str_json = rqItem1_spec_str.toSource();
 
 `app.project.renderQueue.item(index).outputModule(index)`
 
-**Description**
+#### Description
 
 Gets an output module with the specified index position.
 
-**Parameters**
+#### Parameters
 
 | `index`   | The position index of the output module. An integer in the range<br/>`[1..numOutputModules]`.   |
 |-----------|-------------------------------------------------------------------------------------------------|
 
-**Returns**
+#### Returns
 
 OutputModule object.
 
@@ -352,15 +352,15 @@ OutputModule object.
 
 `app.project.renderQueue.item(index).remove()`
 
-**Description**
+#### Description
 
 Removes this item from the render queue.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Nothing.
 
@@ -370,16 +370,16 @@ Nothing.
 
 `app.project.renderQueue.item(index).saveAsTemplate(name)`
 
-**Description**
+#### Description
 
 Saves the item's current render settings as a new template with the specified name.
 
-**Parameters**
+#### Parameters
 
 | `name`   | A string containing the name of the new template.   |
 |----------|-----------------------------------------------------|
 
-**Returns**
+#### Returns
 
 Nothing.
 
@@ -391,7 +391,7 @@ Nothing.
 
 ?> **Note:** This functionality was added in After Effects 13.0 (CC 2014)
 
-**Description**
+#### Description
 
 Sets a specific setting for a given Render Queue Item.
 
@@ -399,7 +399,7 @@ Depreciated Source: [https://blogs.adobe.com/creativecloud/new-changed-after-eff
 
 Archived version: [https://web.archive.org/web/20200622100656/https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva](https://web.archive.org/web/20200622100656/https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva)
 
-**Example**
+#### Example
 
 ```javascript
 // Set value of "Proxy Use" to "Use All Proxies"
@@ -420,14 +420,14 @@ app.project.renderQueue.item(1).setSetting("Proxy Use", 1);
 
 ?> **Note:** This functionality was added in After Effects 13.0 (CC 2014)
 
-**Description**
+#### Description
 
 Sets a multiple settings for a given Render Queue Item.
 
 - Depreciated Source: [https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva](https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva)
 - Archived version: [https://web.archive.org/web/20200622100656/https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva](https://web.archive.org/web/20200622100656/https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva)
 
-**Example**
+#### Example
 
 ```javascript
 // Get an object that contains string version of settable render setting

@@ -2,7 +2,7 @@
 
 `new MarkerValue(comment, chapter, url, frameTarget, cuePointName, params)`
 
-**Description**
+#### Description
 
 The MarkerValue object represents a layer or composition marker, which associates a comment, and optionally a chapter reference point, Web-page link, or Flash Video cue point with a particular point in a layer.
 
@@ -18,7 +18,7 @@ To associate a marker with a composition, set the MarkerValue object in the [Com
 
 For information on the usage of markers see "Using markers" in After Effects Help.
 
-**Examples**
+#### Examples
 
 - To set a **layer** marker that says "Fade Up" at the 2 second mark:
 
@@ -58,11 +58,11 @@ comp.markerProperty.setValueAtTime(2, myMarker);
 
 `app.project.item(index).layer(index).property("Marker").keyValue(index).chapter`
 
-**Description**
+#### Description
 
 A text chapter link for this marker. Chapter links initiate a jump to a chapter in a QuickTime movie or in other formats that support chapter marks.
 
-**Type**
+#### Type
 
 String; read/write.
 
@@ -72,11 +72,11 @@ String; read/write.
 
 `app.project.item(index).layer(index).property("Marker").keyValue(index).comment`
 
-**Description**
+#### Description
 
 A text comment for this marker. This comment appears in the Timeline panel next to the layer marker.
 
-**Type**
+#### Type
 
 String; read/write.
 
@@ -86,11 +86,11 @@ String; read/write.
 
 `app.project.item(index).layer(index).property("Marker").keyValue(index).cuePointName`
 
-**Description**
+#### Description
 
 The Flash Video cue point name, as shown in the Marker dialog box.
 
-**Type**
+#### Type
 
 String; read/write.
 
@@ -100,11 +100,11 @@ String; read/write.
 
 `app.project.item(index).layer(index).property("Marker").keyValue(index).duration`
 
-**Description**
+#### Description
 
 The marker's duration, in seconds. The duration appears in the Timeline panel as a short bar extending from the marker location.
 
-**Type**
+#### Type
 
 Floating point; read/write.
 
@@ -114,11 +114,11 @@ Floating point; read/write.
 
 `app.project.item(index).layer(index).property("Marker").keyValue(index).eventCuePoint`
 
-**Description**
+#### Description
 
 When true, the FlashVideo cue point is for an event; otherwise, it is for navigation.
 
-**Type**
+#### Type
 
 Boolean; read/write.
 
@@ -128,11 +128,11 @@ Boolean; read/write.
 
 `app.project.item(index).layer(index).property("Marker").keyValue(index).frameTarget`
 
-**Description**
+#### Description
 
 A text frame target for this marker. Together with the URL value, this targets a specific frame within a Web page.
 
-**Type**
+#### Type
 
 String; read/write.
 
@@ -142,11 +142,11 @@ String; read/write.
 
 `app.project.item(index).layer(index).property("Marker").keyValue(index).url`
 
-**Description**
+#### Description
 
 A URL for this marker. This URL is an automatic link to a Web page.
 
-**Type**
+#### Type
 
 String; read/write.
 
@@ -156,13 +156,13 @@ String; read/write.
 
 `app.project.item(index).layer(index).property("Marker").keyValue(index).label`
 
-**Description**
+#### Description
 
 The label color for a composition or layer marker. Colors are represented by their number (0 for None, or 1 to 16 for one of the preset colors in the Labels preferences). Custom label colors cannot be set programmatically.
 
 Available in After Effects 16.0 or later.
 
-**Type**
+#### Type
 
 Integer (0 to 16); read/write.
 
@@ -172,13 +172,13 @@ Integer (0 to 16); read/write.
 
 `app.project.item(index).markerProperty.keyValue(index).protectedRegion`
 
-**Description**
+#### Description
 
 State of the Protected Region option in the Composition Marker dialog box. When true, the composition marker behaves as a protected region. Will also return true for protected region markers on nested composition layers, but is otherwise not applicable to layer markers.
 
 Available in After Effects 16.0 or later.
 
-**Type**
+#### Type
 
 Boolean; read/write.
 
@@ -190,15 +190,15 @@ Boolean; read/write.
 
 `app.project.item(index).layer(index).property("Marker").keyValue(index).getParameters()`
 
-**Description**
+#### Description
 
 Returns the key-value pairs for Flash Video cue-point parameters, for a cue point associated with this marker value.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 An object with an attribute matching each parameter name, containing that parameter's value.
 
@@ -208,20 +208,20 @@ An object with an attribute matching each parameter name, containing that parame
 
 `app.project.item(index).layer(index).property("Marker").keyValue(index).setParameters(keyValuePairs)`
 
-**Description**
+#### Description
 
 Associates a set of key-value pairs for Flash Video cue-point parameters, for a cue point associated with this marker value. A cue point can have any number of parameters, but you can add only three through the user interface; use this method to add more than three parameters.
 
-**Parameters**
+#### Parameters
 
 | `keyValuePairs`   | An object containing the key-value pairs as attributes and<br/>values. The object's `toString()` method is called to<br/>assign the string value of each attribute to the named key.   |
 |-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
-**Returns**
+#### Returns
 
 Nothing.
 
-**Example**
+#### Example
 
 ```javascript
 var mv = new MarkerValue("MyMarker");

@@ -2,7 +2,7 @@
 
 `app.project.item(index).layer(index).propertyGroupSpec`
 
-**Description**
+#### Description
 
 The PropertyGroup object represents a group of properties. It can contain Property objects and other PropertyGroup objects. Property groups can be nested to provide a parent-child hierarchy, with a Layer object at the top (root) down to a single Property object, such as the mask feather of the third mask. To traverse the group hierarchy, use PropertyBase methods and attributes; see [PropertyBase.propertyGroup()](propertybase.md#propertybasepropertygroup). For examples of how to access properties and property groups, see [PropertyBase object](propertybase.md#propertybase).
 
@@ -18,7 +18,7 @@ The PropertyGroup object represents a group of properties. It can contain Proper
 
 `app.project.item(index).layer(index).propertyGroupSpec.numProperties`
 
-**Description**
+#### Description
 
 The number of indexed properties in this group.
 
@@ -26,7 +26,7 @@ For layers, this method returns a value of 3, corresponding to the mask, effect,
 
 However, layers also have many other properties available only by name; see [PropertyGroup.property()](#propertygroupproperty).
 
-**Type**
+#### Type
 
 Integer; read-only.
 
@@ -38,7 +38,7 @@ Integer; read-only.
 
 `app.project.item(index).layer(index).propertyGroupSpec.addProperty(name)`
 
-**Description**
+#### Description
 
 Creates and returns a PropertyBase object with the specified name, and adds it to this group.
 
@@ -53,7 +53,7 @@ To check that you can add a particular property to this group, call `canAddPrope
 
 One workaround is to store the index of the added property with property.propertyIndex.
 
-**Examples**
+#### Examples
 
 - This won't work, as the slider object becomes invalid once we add the Color Control property:
   > ```javascript
@@ -73,12 +73,12 @@ One workaround is to store the index of the added property with property.propert
   > var sliderProperty = effectsProperty.property(sliderIndex).property("ADBE Slider Control-0001");
   > ```
 
-**Parameters**
+#### Parameters
 
 | `name`   | The display name or match name of the property to add. (See<br/>[PropertyBase.matchName](propertybase.md#propertybasematchname)). The following names are supported:<br/><br/>- Any match name for a property that can be added through the user<br/>  interface. For example, "ADBE Mask Atom", "ADBE Paint Atom", "ADBE<br/>  Text Position", "ADBE Text Anchor Point".<br/>- When adding to an ADBE Mask Parade: "ADBE Mask Atom", "Mask".<br/>- When adding to an ADBE Effect Parade, any effect by match name,<br/>  such as "ADBE Bulge", "ADBE Glo2", "APC Vegas".<br/>- Any effect by display name, such as "Bulge", "Glow", "Vegas".<br/>- For text animators, "ADBE Text Animator".<br/>- For selectors, Range Selector has the name "ADBE Text Selector",<br/>  Wiggly Selector has the name "ADBE Text Wiggly Selector", and<br/>  Expression Selector has the name "ADBE Text Expressible Selector".   |
 |----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
-**Returns**
+#### Returns
 
 [PropertyBase object](propertybase.md#propertybase).
 
@@ -88,7 +88,7 @@ One workaround is to store the index of the added property with property.propert
 
 `app.project.item(index).layer(index).propertyGroupSpec.canAddProperty(name)`
 
-**Description**
+#### Description
 
 Returns true if a property with the given name can be added to this property group.
 
@@ -100,12 +100,12 @@ maskGroup.canAddProperty("ADBE Mask Atom"); // returns true
 maskGroup.canAddProperty("blend"); // returns false
 ```
 
-**Parameters**
+#### Parameters
 
 | `name`   | The display name or match name of the property to be checked. (See<br/>[PropertyGroup.addProperty()](#propertygroupaddproperty).   |
 |----------|-------------------------------------------------------------------------------------------------------------------------------------|
 
-**Returns**
+#### Returns
 
 Boolean.
 
@@ -118,7 +118,7 @@ Boolean.
 `app.project.item(index).layer(index).propertyGroupSpec.property(name)`
 <br/>
 
-**Description**
+#### Description
 
 Finds and returns a child property of this group, as specified by either its index or name. A name specification can use the same syntax that is available with expressions. The following are all allowed and are equivalent:
 
@@ -134,17 +134,17 @@ Some properties of a layer, such as position and zoom, can be accessed only by n
 
 For example, the following call searches two levels down, and returns the first mask in the mask group: `myLayer.property("ADBE Masks").property(1)`
 
-**Parameters**
+#### Parameters
 
 | `index`   | The index for the child property, in this is an indexed group. An<br/>integer in the range [1..numProperties].                                                                                                                                                                                              |
 |-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `name`    | The name of the child property. This can be:<br/><br/>- Any match name<br/>- Any name in expression "parenthesis style" syntax, meaning the<br/>  display name or the compact English name<br/>- Any name in expression "intercap style" syntax<br/><br/>For supported property names, see the table below. |
 
-**Returns**
+#### Returns
 
-[PropertyBase object](propertybase.md#propertybase) or null if no child property with the specified string name is found.
+[PropertyBase object](propertybase.md#propertybase) or `null` if no child property with the specified string name is found.
 
-**Properties accessible by name**
+#### Properties accessible by name
 
 | From any Layer                          | - "ADBE Mask Parade", or "Masks"<br/>- "ADBE Effect Parade", or "Effects"<br/>- "ADBE MTrackers", or "Motion<br/>  Trackers"                                                                                                                                                                                                                                                                                                                                       |
 |-----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -159,7 +159,7 @@ For example, the following call searches two levels down, and returns the first 
 | From a PropertyGroup "ADBE Mask Parade" | - "ADBE Mask Atom"                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | From a PropertyGroup "ADBE Mask Atom"   | - "ADBE Mask Shape", or "maskShape",<br/>  or "maskPath"<br/>- "ADBE Mask Feather", or<br/>  "maskFeather"<br/>- "ADBE Mask Opacity", or<br/>  "maskOpacity"<br/>- "ADBE Mask Offset", or "maskOffset"                                                                                                                                                                                                                                                             |
 
-**Examples**
+#### Examples
 
 1. If a layer named "myLayer" has a Box Blur effect, you can retrieve the effect in any of the following ways:
    > ```javascript

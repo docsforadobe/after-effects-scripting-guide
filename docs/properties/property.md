@@ -2,7 +2,7 @@
 
 `app.project.item(index).layer(index).propertySpec`
 
-**Description**
+#### Description
 
 The Property object contains value, keyframe, and expression information about a particular AE property of a layer. An AE property is a value, often animatable, of an effect, mask, or transform within an individual layer. For examples of how to access properties, see [PropertyBase object](propertybase.md#propertybase) and [PropertyGroup.property()](propertygroup.md#propertygroupproperty).
 
@@ -10,7 +10,7 @@ The Property object contains value, keyframe, and expression information about a
 
 ?> **Note:** JavaScript objects commonly referred to as "properties" are called "attributes" in this guide, to avoid confusion with the After Effects definition of property.
 
-**Examples**
+#### Examples
 
 - Get and set the value of opacity
   > ```javascript
@@ -99,9 +99,9 @@ The Property object contains value, keyframe, and expression information about a
 
 ?> **Note:** This functionality was added in After Effects 18.0 (2021)
 
-**Description**
+#### Description
 
-The value is null when:
+The value is `null` when:
 
 - The alternate source is not set for the associated layer.
 - The property cannot be used to set an alternate source.
@@ -117,7 +117,7 @@ A layer is "marked" for media replacement when the layer is added to the Essenti
 
 Use [Property.setAlternateSource()](#propertysetalternatesource) to change the value.
 
-**Type**
+#### Type
 
 AVItem object; read-only.
 
@@ -129,13 +129,13 @@ AVItem object; read-only.
 
 ?> **Note:** This functionality was added in After Effects 18.0 (2021)
 
-**Description**
+#### Description
 
 Test whether the property is an Essential Property that supports Media Replacement.
 
 Returns true if the property allows Media Replacement, false otherwise.
 
-**Type**
+#### Type
 
 Boolean; read-only.
 
@@ -145,11 +145,11 @@ Boolean; read-only.
 
 `app.project.item(index).layer(index).propertySpec.canSetExpression`
 
-**Description**
+#### Description
 
 When true, the named property is of a type whose expression can be set by a script. See also [Property expression](#propertyexpression) attribute.
 
-**Type**
+#### Type
 
 Boolean; read-only.
 
@@ -159,11 +159,11 @@ Boolean; read-only.
 
 `app.project.item(index).layer(index).propertySpec.canVaryOverTime`
 
-**Description**
+#### Description
 
 When true, the named property can vary over time—that is, keyframe values or expressions can be written to this property.
 
-**Type**
+#### Type
 
 Boolean; read-only.
 
@@ -173,13 +173,13 @@ Boolean; read-only.
 
 `app.project.item(index).layer(index).propertySpec.dimensionsSeparated`
 
-**Description**
+#### Description
 
 When true, the property's dimensions are represented as separate properties. For example, if the layer's position is represented as X Position and Y Position properties in the Timeline panel, the Position property has this attribute set to true.
 
 ?> **Note:** This attribute applies only when the [isSeparationLeader](#propertyisseparationleader) attribute is true.
 
-**Type**
+#### Type
 
 Boolean; read/write.
 
@@ -191,19 +191,19 @@ Boolean; read/write.
 
 ?> **Note:** This functionality was added in After Effects 22.0 (2022)
 
-**Description**
+#### Description
 
 Instance property on an Essential Property object which returns the original source Property which was used to create the Essential Property.
 
-**Type**
+#### Type
 
 Can be either:
 
 - A read/write [Property object](#property), in the case that the source object used to create the Essential Property was a Property
 - A read/write [AVLayer object](../layers/avlayer.md#avlayer), in the case that the source object used to create the Essential Property was a Media Replacement Footage item
-- Null if called on a non-Essential Property
+- `null` if called on a non-Essential Property
 
-**Example**
+#### Example
 
 ```javascript
 var firstComp = app.project.item(1);
@@ -226,7 +226,7 @@ if (essentialOpacity.essentialPropertySource == opacityProp) {
 
 `app.project.item(index).layer(index).propertySpec.expression`
 
-**Description**
+#### Description
 
 The expression for the named property. Writeable only when [canSetExpression](#propertycansetexpression) for the named property is true. When you specify a value for this attribute, the string is evaluated.
 
@@ -234,7 +234,7 @@ The expression for the named property. Writeable only when [canSetExpression](#p
 - If the string does not contain a valid expression, an error is generated, and [expressionEnabled](#propertyexpressionenabled) becomes false.
 - If you set the attribute to the empty string, [expressionEnabled](#propertyexpressionenabled) becomes false, but no error is generated.
 
-**Type**
+#### Type
 
 String; read/write if [canSetExpression](#propertycansetexpression) for the named property is true.
 
@@ -244,11 +244,11 @@ String; read/write if [canSetExpression](#propertycansetexpression) for the name
 
 `app.project.item(index).layer(index).propertySpec.expressionEnabled`
 
-**Description**
+#### Description
 
 When true, the named property uses its associated expression to generate a value. When false, the keyframe information or static value of the property is used. This attribute can be set to true only if [canSetExpression](#propertycansetexpression) for the named property is true and [expression](#propertyexpression) contains a valid expression string.
 
-**Type**
+#### Type
 
 Boolean; read/write.
 
@@ -258,11 +258,11 @@ Boolean; read/write.
 
 `app.project.item(index).layer(index).propertySpec.expressionError`
 
-**Description**
+#### Description
 
 Contains the error, if any, generated by evaluation of the string most recently set in [expression](#propertyexpression). If no expression string has been specified, or if the last expression string evaluated without error, contains the empty string `("")`.
 
-**Type**
+#### Type
 
 String; read-only.
 
@@ -272,11 +272,11 @@ String; read-only.
 
 `app.project.item(index).layer(index).propertySpec.hasMax`
 
-**Description**
+#### Description
 
 When true, there is a maximum permitted value for the named property; otherwise false.
 
-**Type**
+#### Type
 
 Boolean; read-only.
 
@@ -286,11 +286,11 @@ Boolean; read-only.
 
 `app.project.item(index).layer(index).propertySpec.hasMin`
 
-**Description**
+#### Description
 
 When true, there is a minimum permitted value for the named property; otherwise false.
 
-**Type**
+#### Type
 
 Boolean; read-only.
 
@@ -302,11 +302,11 @@ Boolean; read-only.
 
 ?> **Note:** This functionality was added in After Effects 17.0.1 (2020)
 
-**Description**
+#### Description
 
 When true, the property is the Menu property of a Dropdown Menu Control effect and can have its items updated with [setPropertyParameters](#propertysetpropertyparameters).
 
-**Examples**
+#### Examples
 
 ```javascript
 appliedEffect.property("Menu").isDropdownEffect;    // true
@@ -314,7 +314,7 @@ appliedEffect.property("Color").isDropdownEffect;   // false
 appliedEffect.property("Feather").isDropdownEffect; // false
 ```
 
-**Type**
+#### Type
 
 Boolean; read-only.
 
@@ -324,13 +324,13 @@ Boolean; read-only.
 
 `app.project.item(index).layer(index).propertySpec.isSeparationFollower`
 
-**Description**
+#### Description
 
 When true, the property represents one of the separated dimensions for a multidimensional property. For example, the X Position property has this attribute set to true.
 
 ?> **Note:** The original, consolidated, multidimensional property is the "separation leader" and the new, separated, single-dimensional properties are its "separation followers".
 
-**Type**
+#### Type
 
 Boolean; read-only.
 
@@ -340,13 +340,13 @@ Boolean; read-only.
 
 `app.project.item(index).layer(index).propertySpec.isSeparationLeader`
 
-**Description**
+#### Description
 
 When true, the property is multidimensional and can be separated. For example, the Position property has this attribute set to true.
 
 ?> **Note:** The original, consolidated, multidimensional property is the "separation leader" and the new, separated, single-dimensional properties are its "separation followers".
 
-**Type**
+#### Type
 
 Boolean; read-only.
 
@@ -356,11 +356,11 @@ Boolean; read-only.
 
 `app.project.item(index).layer(index).propertySpec.isSpatial`
 
-**Description**
+#### Description
 
 When true, the named property defines a spatial value. Examples are position and effect point controls.
 
-**Type**
+#### Type
 
 Boolean; read-only.
 
@@ -370,12 +370,12 @@ Boolean; read-only.
 
 `app.project.item(index).layer(index).propertySpec.isTimeVarying`
 
-**Description**
+#### Description
 
 When true, the named property is time varying — that is, it has keyframes or an enabled expression. When this attribute is true, the attribute `canVaryOverTime`
 must also be true.
 
-**Type**
+#### Type
 
 Boolean; read-only.
 
@@ -385,11 +385,11 @@ Boolean; read-only.
 
 `app.project.item(index).layer(index).propertySpec.maxValue`
 
-**Description**
+#### Description
 
 The maximum permitted value of the named property. If the `hasMax` attribute is false, an exception occurs, and an error is generated.
 
-**Type**
+#### Type
 
 Floating-point value; read-only.
 
@@ -399,11 +399,11 @@ Floating-point value; read-only.
 
 `app.project.item(index).layer(index).propertySpec.minValue`
 
-**Description**
+#### Description
 
 The minimum permitted value of the named property. If the `hasMin` attribute is false, an exception occurs, and an error is generated.
 
-**Type**
+#### Type
 
 Floating-point value; read-only.
 
@@ -413,11 +413,11 @@ Floating-point value; read-only.
 
 `app.project.item(index).layer(index).propertySpec.numKeys`
 
-**Description**
+#### Description
 
 The number of keyframes in the named property. If the value is 0, the property is not being keyframed.
 
-**Type**
+#### Type
 
 Integer; read-only.
 
@@ -427,11 +427,11 @@ Integer; read-only.
 
 `app.project.item(index).layer(index).propertySpec.propertyIndex`
 
-**Description**
+#### Description
 
 The position index of the named property. The first property is at index position 1.
 
-**Type**
+#### Type
 
 Integer; read-only.
 
@@ -441,7 +441,7 @@ Integer; read-only.
 
 `app.project.item(index).layer(index).propertySpec.propertyValueType`
 
-**Description**
+#### Description
 
 The type of value stored in the named property. The `PropertyValueType` enumeration has one value for each type of data that can be stored in or retrieved from a property. Each type of data is stored and retrieved in a different kind of structure. All property objects store data according to one of these categories. For example, a 3D spatial property (such as a layer's position) is stored as an array of three floating-point values. When setting a value for position, pass in such an array, as follows: `mylayer.property("position").setValue([10, 20, 0]);`
 
@@ -454,7 +454,7 @@ var myMask = mylayer.property("ADBE Mask Parade").property(1);
 myMask.property("ADBE Mask Shape").setValue(myShape);
 ```
 
-**Type**
+#### Type
 
 A `PropertyValueType` enumerated value; read/write. One of:
 
@@ -478,11 +478,11 @@ A `PropertyValueType` enumerated value; read/write. One of:
 
 `app.project.item(index).layer(index).propertySpec.selectedKeys`
 
-**Description**
+#### Description
 
 The indices of all the selected keyframes in the named property. If no keyframes are selected, or if the property has no keyframes, returns an empty array.
 
-**Type**
+#### Type
 
 Array of integers; read-only.
 
@@ -492,11 +492,11 @@ Array of integers; read-only.
 
 `app.project.item(index).layer(index).propertySpec.separationDimension`
 
-**Description**
+#### Description
 
 For a separated follower, the dimension number it represents in the multidimensional leader. The first dimension starts at 0. For example, the Y Position property has a `separationDimension` value of 1; X Position has a value of 0.
 
-**Type**
+#### Type
 
 Integer; read-only.
 
@@ -506,13 +506,13 @@ Integer; read-only.
 
 `app.project.item(index).layer(index).propertySpec.separationLeader`
 
-**Description**
+#### Description
 
 The original multidimensional property for this separated follower. For example, if the current property is Y Position, this attribute's value points to the Position property.
 
 ?> **Note:** The original, consolidated, multidimensional property is the "separation leader" and the new, separated, single-dimensional properties are its "separation followers".
 
-**Type**
+#### Type
 
 Property object; read-only.
 
@@ -522,11 +522,11 @@ Property object; read-only.
 
 `app.project.item(index).layer(index).propertySpec.unitsText`
 
-**Description**
+#### Description
 
 The text description of the units in which the value is expressed.
 
-**Type**
+#### Type
 
 String; read-only.
 
@@ -536,7 +536,7 @@ String; read-only.
 
 `app.project.item(index).layer(index).propertySpec.value`
 
-**Description**
+#### Description
 
 The value of the named property at the current time.
 
@@ -546,7 +546,7 @@ The value of the named property at the current time.
 
 The type of value returned depends on the property value type. See [examples for Property object](#propertyexamples).
 
-**Type**
+#### Type
 
 A value appropriate for the type of the property (see [Property.propertyValueType](#propertypropertyvaluetype)); read-only.
 
@@ -558,16 +558,16 @@ A value appropriate for the type of the property (see [Property.propertyValueTyp
 
 `app.project.item(index).layer(index).propertySpec.addKey(time)`
 
-**Description**
+#### Description
 
 Adds a new keyframe or marker to the named property at the specified time and returns the index of the new keyframe.
 
-**Parameters**
+#### Parameters
 
 | `time`   | The time, in seconds, at which to add the keyframe. A floating-point<br/>value. The beginning of the composition is 0.   |
 |----------|--------------------------------------------------------------------------------------------------------------------------|
 
-**Returns**
+#### Returns
 
 Integer; the index of the new keyframe or marker.
 
@@ -579,7 +579,7 @@ Integer; the index of the new keyframe or marker.
 
 ?> **Note:** This functionality was added in After Effects 15.0 (CC 2018)
 
-**Description**
+#### Description
 
 Adds the property to the Essential Graphics panel for the specified composition.
 
@@ -589,12 +589,12 @@ If the property is not added, it is either because it is not one of the supporte
 
 Use the [Property.canAddToMotionGraphicsTemplate()](#propertycanaddtomotiongraphicstemplate) method to test whether the property can be added to a Motion Graphics template.
 
-**Parameters**
+#### Parameters
 
 | `comp`   | The composition that you wish to add the property to, a CompItem.<br/>Required.   |
 |----------|-----------------------------------------------------------------------------------|
 
-**Returns**
+#### Returns
 
 Boolean.
 
@@ -606,7 +606,7 @@ Boolean.
 
 ?> **Note:** This functionality was added in After Effects 16.1 (CC 2019)
 
-**Description**
+#### Description
 
 Adds the property to the Essential Graphics panel for the specified composition, but with an additional option to give the EGP property a custom name.
 
@@ -616,13 +616,13 @@ If the property is not added, it is either because it is not one of the supporte
 
 Use the [Property.canAddToMotionGraphicsTemplate()](#propertycanaddtomotiongraphicstemplate) method to test whether the property can be added to a Motion Graphics template.
 
-**Parameters**
+#### Parameters
 
 | `comp`   | The composition that you wish to add the property to, a CompItem.<br/>Required.   |
 |----------|-----------------------------------------------------------------------------------|
 | `name`   | A string for the new name. Required.                                              |
 
-**Returns**
+#### Returns
 
 Boolean.
 
@@ -634,7 +634,7 @@ Boolean.
 
 ?> **Note:** This functionality was added in After Effects 15.0 (CC 2018)
 
-**Description**
+#### Description
 
 Test whether or not the property can be added to the Essential Graphics panel for the specified composition.
 
@@ -649,12 +649,12 @@ Supported property types are:
 - Numerical Slider (i.e., a single-value numerical property, such as Transform > Opacity or the Slider Control expression control effect)
 - Source Text
 
-**Parameters**
+#### Parameters
 
 | `comp`   | The composition that you wish to add the property to, a CompItem.<br/>Required.   |
 |----------|-----------------------------------------------------------------------------------|
 
-**Returns**
+#### Returns
 
 Boolean.
 
@@ -664,18 +664,18 @@ Boolean.
 
 `app.project.item(index).layer(index).propertySpec.getSeparationFollower(dim)`
 
-**Description**
+#### Description
 
 For a separated, multidimensional property, retrieves a specific follower property. For example, you can use this method on the Position property to access the separated X Position and Y Position properties
 
 ?> **Note:** This attribute applies only when the [isSeparationLeader](#propertyisseparationleader) attribute is true.
 
-**Parameters**
+#### Parameters
 
 | `dim`   | The dimension number (starting at 0).   |
 |---------|-----------------------------------------|
 
-**Returns**
+#### Returns
 
 Property object, or an error if the property is not multidimensional or does not have the specified dimension.
 
@@ -685,13 +685,13 @@ Property object, or an error if the property is not multidimensional or does not
 
 `app.project.item(index).layer(index).propertySpec.isInterpolationTypeValid(type)`
 
-**Description**
+#### Description
 
 Returns true if the named property can be interpolated using the specified keyframe interpolation type.
 
-**Parameters**
+#### Parameters
 
-**Type**
+#### Type
 
 A `KeyframeInterpolationType` enumerated value; one of:
 
@@ -699,7 +699,7 @@ A `KeyframeInterpolationType` enumerated value; one of:
 - `KeyframeInterpolationType.BEZIER`
 - `KeyframeInterpolationType.HOLD`
 
-**Returns**
+#### Returns
 
 Boolean.
 
@@ -709,16 +709,16 @@ Boolean.
 
 `app.project.item(index).layer(index).propertySpec.keyInInterpolationType(keyIndex)`
 
-**Description**
+#### Description
 
 Returns the 'in' interpolation type for the specified keyframe.
 
-**Parameters**
+#### Parameters
 
 | `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
-**Returns**
+#### Returns
 
 A `KeyframeInterpolationType` enumerated value; one of:
 
@@ -732,16 +732,16 @@ A `KeyframeInterpolationType` enumerated value; one of:
 
 `app.project.item(index).layer(index).propertySpec.keyInSpatialTangent(keyIndex)`
 
-**Description**
+#### Description
 
 Returns the incoming spatial tangent for the specified keyframe, if the named property is spatial (that is, the value type is `TwoD_SPATIALorThreeD_SPATIAL`).
 
-**Parameters**
+#### Parameters
 
 | `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
-**Returns**
+#### Returns
 
 Array of floating-point values:
 
@@ -755,16 +755,16 @@ Array of floating-point values:
 
 `app.project.item(index).layer(index).propertySpec.keyInTemporalEase(keyIndex)`
 
-**Description**
+#### Description
 
 Returns the incoming temporal ease for the specified keyframe.
 
-**Parameters**
+#### Parameters
 
 | `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
-**Returns**
+#### Returns
 
 Array of [KeyframeEase objects](../other/keyframeease.md#keyframeease):
 
@@ -780,18 +780,18 @@ Array of [KeyframeEase objects](../other/keyframeease.md#keyframeease):
 
 ?> **Note:** This functionality was added in After Effects 22.6.
 
-**Description**
+#### Description
 
 The label color for the keyframe. Colors are represented by their number (0 for None, or 1 to 16 for one of the preset colors in the Labels preferences).
 
 Read only. Keyframe color labels can be set by [setLabelAtKey](#propertysetlabelatkey).
 
-**Parameters**
+#### Parameters
 
 | `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
-**Returns**
+#### Returns
 
 Integer (0 to 16); read only.
 
@@ -801,16 +801,16 @@ Integer (0 to 16); read only.
 
 `app.project.item(index).layer(index).propertySpec.keyOutInterpolationType(keyIndex)`
 
-**Description**
+#### Description
 
 Returns the outgoing interpolation type for the specified keyframe.
 
-**Parameters**
+#### Parameters
 
 | `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
-**Returns**
+#### Returns
 
 A `KeyframeInterpolationType` enumerated value; one of:
 
@@ -824,16 +824,16 @@ A `KeyframeInterpolationType` enumerated value; one of:
 
 `app.project.item(index).layer(index).propertySpec.keyOutSpatialTangent(keyIndex)`
 
-**Description**
+#### Description
 
 Returns the outgoing spatial tangent for the specified keyframe.
 
-**Parameters**
+#### Parameters
 
 | `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
-**Returns**
+#### Returns
 
 Array of floating-point values:
 
@@ -847,16 +847,16 @@ Array of floating-point values:
 
 `app.project.item(index).layer(index).propertySpec.keyOutTemporalEase(keyIndex)`
 
-**Description**
+#### Description
 
 Returns the outgoing temporal ease for the specified keyframe.
 
-**Parameters**
+#### Parameters
 
 | `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
-**Returns**
+#### Returns
 
 Array of KeyframeEase objects:
 
@@ -870,16 +870,16 @@ Array of KeyframeEase objects:
 
 `app.project.item(index).layer(index).propertySpec.keyRoving(keyIndex)`
 
-**Description**
+#### Description
 
 Returns true if the specified keyframe is roving. The first and last keyframe in a property cannot rove; if you try to set roving for one of these, the operation is ignored, and keyRoving() continues to return false. If the property value type is neither `TwoD_SPATIAL` nor `ThreeD_SPATIAL`, an exception is generated.
 
-**Parameters**
+#### Parameters
 
 | `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
-**Returns**
+#### Returns
 
 Boolean.
 
@@ -889,16 +889,16 @@ Boolean.
 
 `app.project.item(index).layer(index).propertySpec.keySelected(keyIndex)`
 
-**Description**
+#### Description
 
 Returns true if the specified keyframe is selected.
 
-**Parameters**
+#### Parameters
 
 | `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
-**Returns**
+#### Returns
 
 Boolean.
 
@@ -908,16 +908,16 @@ Boolean.
 
 `app.project.item(index).layer(index).propertySpec.keySpatialAutoBezier(keyIndex)`
 
-**Description**
+#### Description
 
 Returns true if the specified keyframe has spatial auto-Bezier interpolation. (This type of interpolation affects this keyframe only if `keySpatialContinuous(keyIndex)` is also true.) If the property value type is neither `TwoD_SPATIAL` nor `ThreeD_SPATIAL`, an exception is generated.
 
-**Parameters**
+#### Parameters
 
 | `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
-**Returns**
+#### Returns
 
 Boolean.
 
@@ -927,16 +927,16 @@ Boolean.
 
 `app.project.item(index).layer(index).propertySpec.keySpatialContinuous(keyIndex)`
 
-**Description**
+#### Description
 
 Returns true if the specified keyframe has spatial continuity. If the property value type is neither `TwoD_SPATIAL` nor `ThreeD_SPATIAL`, an exception is generated.
 
-**Parameters**
+#### Parameters
 
 | `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
-**Returns**
+#### Returns
 
 Boolean.
 
@@ -946,16 +946,16 @@ Boolean.
 
 `app.project.item(index).layer(index).propertySpec.keyTemporalAutoBezier(keyIndex)`
 
-**Description**
+#### Description
 
 Returns true if the specified keyframe has temporal auto-Bezier interpolation. Temporal auto-Bezier interpolation affects this keyframe only if the keyframe interpolation type is `KeyframeInterpolationType.BEZIER` for both `keyInInterpolationType(keyIndex)` and `keyOutInterpolationType(keyIndex)`.
 
-**Parameters**
+#### Parameters
 
 | `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
-**Returns**
+#### Returns
 
 Boolean.
 
@@ -965,16 +965,16 @@ Boolean.
 
 `app.project.item(index).layer(index).propertySpec.keyTemporalContinuous(keyIndex)`
 
-**Description**
+#### Description
 
 Returns true if the specified keyframe has temporal continuity. Temporal continuity affects this keyframe only if keyframe interpolation type is `KeyframeInterpolationType.BEZIER` for both `keyInInterpolationType(keyIndex)` and `keyOutInterpolationType(keyIndex)`.
 
-**Parameters**
+#### Parameters
 
 | `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
-**Returns**
+#### Returns
 
 Boolean.
 
@@ -985,17 +985,17 @@ Boolean.
 `app.project.item(index).layer(index).propertySpec.keyTime(keyIndex)`
 `app.project.item(index).layer(index).propertySpec.keyTime(markerComment)`
 
-**Description**
+#### Description
 
 Finds the specified keyframe or marker and returns the time at which it occurs. If no keyframe or marker can be found that matches the argument, this method generates an exception, and an error is displayed.
 
-**Parameters**
+#### Parameters
 
 | `keyIndex`      | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |-----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `markerComment` | The comment string attached to a marker (see<br/>[MarkerValue.comment](../other/markervalue.md#markervaluecomment) attribute).                                                  |
 
-**Returns**
+#### Returns
 
 Floating-point value.
 
@@ -1008,17 +1008,17 @@ Floating-point value.
 `app.project.item(index).layer(index).propertySpec.keyValue(markerComment)`
 <br/>
 
-**Description**
+#### Description
 
 Finds the specified keyframe or marker and returns its current value. If no keyframe or marker can be found that matches the argument, this method generates an exception, and an error is displayed.
 
-**Parameters**
+#### Parameters
 
 | `keyIndex`      | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |-----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `markerComment` | The comment string attached to a marker (see<br/>[MarkerValue.comment](../other/markervalue.md#markervaluecomment) attribute).                                                  |
 
-**Returns**
+#### Returns
 
 Returns the value of the type corresponding to the [PropertyValueType](#propertypropertyvaluetype).
 
@@ -1028,16 +1028,16 @@ Returns the value of the type corresponding to the [PropertyValueType](#property
 
 `app.project.item(index).layer(index).propertySpec.nearestKeyIndex(time)`
 
-**Description**
+#### Description
 
 Returns the index of the keyframe nearest to the specified time.
 
-**Parameters**
+#### Parameters
 
 | `time`   | The time in seconds; a floating-point value. The beginning of the<br/>composition is 0.   |
 |----------|-------------------------------------------------------------------------------------------|
 
-**Returns**
+#### Returns
 
 Integer.
 
@@ -1047,16 +1047,16 @@ Integer.
 
 `app.project.item(index).layer(index).propertySpec.removeKey(keyIndex)`
 
-**Description**
+#### Description
 
 Removes the specified keyframe from the named property. If no keyframe with the specified index exists, generates an exception and displays an error. When a keyframe is removed, the remaining index numbers change. To remove more than one keyframe, you must start with the highest index number and work down to the lowest to ensure that the remaining indices reference the same keyframe after each removal.
 
-**Parameters**
+#### Parameters
 
 | `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
-**Returns**
+#### Returns
 
 Nothing.
 
@@ -1068,7 +1068,7 @@ Nothing.
 
 ?> **Note:** This functionality was added in After Effects 18.0 (2021)
 
-**Description**
+#### Description
 
 Set the alternate source for this property.
 
@@ -1077,12 +1077,12 @@ The Property object and the input parameters for the AVItem that is being called
 - Use the [AVItem.isMediaReplacementCompatible](../items/avitem.md#avitemismediareplacementcompatible) method to test whether the AVItem can be used as an alternate source for Media Replacement.
 - Use [Property.canSetAlternateSource](#propertycansetalternatesource) to test if the property allows Media Replacement.
 
-**Parameters**
+#### Parameters
 
 | `newSource`   | The new source AVItem object. Required.   |
 |---------------|-------------------------------------------|
 
-**Returns**
+#### Returns
 
 Nothing.
 
@@ -1092,18 +1092,18 @@ Nothing.
 
 `app.project.item(index).layer(index).propertySpec.setInterpolationTypeAtKey(keyIndex, inType[, outType])`
 
-**Description**
+#### Description
 
 Sets the `in` and `out` interpolation types for the specified keyframe.
 
-**Parameters**
+#### Parameters
 
 | `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).                                                                                                                          |
 |--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `inType`     | The incoming interpolation type. A `KeyframeInterpolationType`<br/>enumerated value; one of:<br/><br/>- `KeyframeInterpolationType.LINEAR`<br/>- `KeyframeInterpolationType.BEZIER`<br/>- `KeyframeInterpolationType.HOLD`                                                                              |
 | `outType`    | (Optional) The outgoing interpolation type. If not supplied, the<br/>'out' type is set to the `inType` value. A<br/>`KeyframeInterpolationType` enumerated value; one of:<br/><br/>- `KeyframeInterpolationType.LINEAR`<br/>- `KeyframeInterpolationType.BEZIER`<br/>- `KeyframeInterpolationType.HOLD` |
 
-**Returns**
+#### Returns
 
 Nothing.
 
@@ -1115,17 +1115,17 @@ Nothing.
 
 ?> **Note:** This functionality was added in After Effects 22.6 (2022)
 
-**Description**
+#### Description
 
 Set the label color for the keyframe. Colors are represented by their number (0 for None, or 1 to 16 for one of the preset colors in the Labels preferences).
 
-**Parameters**
+#### Parameters
 
 | `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `labelIndex` | The index for the new label value. An integer in<br/>the range 0-16.                                                                                                             |
 
-**Returns**
+#### Returns
 
 Nothing.
 
@@ -1137,7 +1137,7 @@ Nothing.
 
 ?> **Note:** This functionality was added in After Effects 17.0.1 (2020)
 
-**Description**
+#### Description
 
 Sets parameters for a Dropdown Menu Control's Menu Property. This method will overwrite the existing set of Menu items with the provided array of strings.
 
@@ -1145,14 +1145,14 @@ Sets parameters for a Dropdown Menu Control's Menu Property. This method will ov
 - To check if a property allows parameters to be set, check with [isDropdownEffect](#propertyisdropdowneffect) before calling this method.
 - An exception is raised whenever this method fails.
 
-**Parameters**
+#### Parameters
 
 | `items`   | An array of strings which will replace the existing<br/>menu entries in a Dropdown Menu Control.<br/><br/>- Only strings are allowed.<br/>- Empty item strings are not allowed.<br/>- Duplicate item strings are not allowed.<br/>- The character "|" is not allowed in the item strings.<br/>- The string "(-" - can be specified as of the item strings. These appear as separator lines in the dropdown menu. The separator lines will claim an index for each of themselves.   |
 |-----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 ?> **Note:** Item strings should be in ASCII or MultiByte encodable in the current code-page. In other words, the item strings should be provided in the script of the running system. For example: Specifying the item strings in Japanese while running the script on an English system will create a dropdown effect with illegible characters in the item strings.
 
-**Example**
+#### Example
 
 ```javascript
 var dropdownItems = [
@@ -1167,7 +1167,7 @@ var dropdownEffect = layer.property("ADBE Effect Parade").addProperty("ADBE Drop
 dropdownEffect.property(1).setPropertyParameters(dropdownItems);
 ```
 
-**Returns**
+#### Returns
 
 Property object, the updated Dropdown Menu Control's Menu property.
 
@@ -1177,17 +1177,17 @@ Property object, the updated Dropdown Menu Control's Menu property.
 
 `app.project.item(index).layer(index).propertySpec.setRovingAtKey(keyIndex, newVal)`
 
-**Description**
+#### Description
 
 Turns roving on or off for the specified keyframe. The first and last keyframe in a property cannot rove; if you try to set roving for one of these, the operation is ignored, and `keyRoving()` continues to return false. If the property value type is neither `TwoD_SPATIAL` nor `ThreeD_SPATIAL`, an exception is generated.
 
-**Parameters**
+#### Parameters
 
 | `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `newVal`     | True to turn roving on, false to turn roving off.                                                                                                                                |
 
-**Returns**
+#### Returns
 
 Nothing.
 
@@ -1197,17 +1197,17 @@ Nothing.
 
 `app.project.item(index).layer(index).propertySpec.setSelectedAtKey(keyIndex, onOff)`
 
-**Description**
+#### Description
 
 Selects or deselects the specified keyframe.
 
-**Parameters**
+#### Parameters
 
 | `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `onOff`      | True to select the keyframe, false to deselect it.                                                                                                                               |
 
-**Returns**
+#### Returns
 
 Nothing.
 
@@ -1217,17 +1217,17 @@ Nothing.
 
 `app.project.item(index).layer(index).propertySpec.setSpatialAutoBezierAtKey(keyIndex, newVal)`
 
-**Description**
+#### Description
 
 Turns spatial auto-Bezier interpolation on or off for the specified keyframe. If the property value type is neither `TwoD_SPATIAL` nor `ThreeD_SPATIAL`, an exception is generated.
 
-**Parameters**
+#### Parameters
 
 | `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `newVal`     | True to turn spatial auto-Bezier on, false to turn it off.                                                                                                                       |
 
-**Returns**
+#### Returns
 
 Nothing.
 
@@ -1237,17 +1237,17 @@ Nothing.
 
 `app.project.item(index).layer(index).propertySpec.setSpatialContinuousAtKey(keyIndex, newVal)`
 
-**Description**
+#### Description
 
 Turns spatial continuity on or off for the specified keyframe. If the property value type is neither `TwoD_SPATIAL` nor `ThreeD_SPATIAL`, an exception is generated.
 
-**Parameters**
+#### Parameters
 
 | `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `newVal`     | True to turn spatial auto-Bezier on, false to turn it off.                                                                                                                       |
 
-**Returns**
+#### Returns
 
 Nothing.
 
@@ -1257,18 +1257,18 @@ Nothing.
 
 `app.project.item(index).layer(index).propertySpec.setSpatialTangentsAtKey(keyIndex, inTangent[, outTangent])`
 
-**Description**
+#### Description
 
 Sets the incoming and outgoing tangent vectors for the specified keyframe. If the property value type is neither `TwoD_SPATIAL` nor `ThreeD_SPATIAL`, an exception is generated.
 
-**Parameters**
+#### Parameters
 
 | `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the [addKey](#propertyaddkey) or [nearestKeyIndex()](#propertynearestkeyindex) method.                                                                                                                                                                                                                    |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `inTangent`  | The incoming tangent vector. An array of 2 or 3 floating-point<br/>values.<br/><br/>- If the property value type is<br/>  `PropertyValueType.TwoD_SPATIAL`, the array contains 2<br/>  values.<br/>- If the property value type is<br/>  `PropertyValueType.ThreeD_SPATIAL`, the array contains 3<br/>  values.                                                                                    |
 | `outTangent` | (Optional) The outgoing tangent vector. If not supplied, the<br/>`out` tangent is set to the `inTangent` value. An array of<br/>2 or 3 floating-point values.<br/><br/>- If the property value type is<br/>  `PropertyValueType.TwoD_SPATIAL`, the array contains 2<br/>  values.<br/>- If the property value type is<br/>  `PropertyValueType.ThreeD_SPATIAL`, the array contains 3<br/>  values. |
 
-**Returns**
+#### Returns
 
 Nothing.
 
@@ -1278,17 +1278,17 @@ Nothing.
 
 `app.project.item(index).layer(index).propertySpec.setTemporalAutoBezierAtKey(keyIndex, newVal)`
 
-**Description**
+#### Description
 
 Turns temporal auto-Bezier interpolation on or off for the specified keyframe. When this is turned on, it affects this keyframe only if `keySpatialContinuous(keyIndex)` is also true.
 
-**Parameters**
+#### Parameters
 
 | `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `newVal`     | True to turn temporal auto-Bezier on, false to turn it off.                                                                                                                      |
 
-**Returns**
+#### Returns
 
 Nothing.
 
@@ -1298,17 +1298,17 @@ Nothing.
 
 `app.project.item(index).layer(index).propertySpec.setTemporalContinuousAtKey(keyIndex, newVal)`
 
-**Description**
+#### Description
 
 Turns temporal continuity on or off for the specified keyframe. When temporal continuity is turned on, it affects this keyframe only if the keyframe interpolation type is `KeyframeInterpolationType.BEZIER` for both `keyInInterpolationType(keyIndex)` and `keyOutInterpolationType(keyIndex)`.
 
-**Parameters**
+#### Parameters
 
 | `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `newVal`     | True to turn temporal continuity on, false to turn it off.                                                                                                                       |
 
-**Returns**
+#### Returns
 
 Nothing.
 
@@ -1318,18 +1318,18 @@ Nothing.
 
 `app.project.item(index).layer(index).propertySpec.setTemporalEaseAtKey(keyIndex, inTemporalEase[, outTemporalEase])`
 
-**Description**
+#### Description
 
 Sets the incoming and outgoing temporal ease for the specified keyframe. See [KeyframeEase object](../other/keyframeease.md#keyframeease).
 
-**Parameters**
+#### Parameters
 
 | `keyIndex`        | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).                                                                                                                                                                                                                                                                            |
 |-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `inTemporalEase`  | The incoming temporal ease. An array of 1, 2, or 3<br/>KeyframeEase objects.<br/><br/>- If the property value type is<br/>  `PropertyValueType.TwoD`, the array contains 2<br/>  objects.<br/>- If the property value type is<br/>  `PropertyValueType.ThreeD`, the array contains 3<br/>  objects.<br/>- For all other value types, the array contains 1 object.                                                                                         |
 | `outTemporalEase` | (Optional) The outgoing temporal ease. If not supplied,<br/>the outgoing ease is set to the `inTemporalEase` value.<br/>An array of 1, 2, or 3 KeyframeEase objects.<br/><br/>- If the property value type is<br/>  `PropertyValueType.TwoD`, the array contains 2<br/>  objects.<br/>- If the property value type is<br/>  `PropertyValueType.ThreeD`, the array contains 3<br/>  objects.<br/>- For all other value types, the array contains 1 object. |
 
-**Returns**
+#### Returns
 
 Nothing.
 
@@ -1339,16 +1339,16 @@ Nothing.
 
 `app.project.item(index).layer(index).propertySpec.setValue(newValue)`
 
-**Description**
+#### Description
 
 Sets the static value of a property that has no keyframes. If the named property has keyframes, this method generates an exception and displays an error. To set the value of a property with keyframes, use [Property.setValueAtTime()](#propertysetvalueattime) or [Property.setValueAtKey()](#propertysetvalueatkey).
 
-**Parameters**
+#### Parameters
 
 | `newValue`   | A value appropriate for the type of property being set; see<br/>[Property.propertyValueType](#propertypropertyvaluetype).   |
 |--------------|------------------------------------------------------------------------------------------------------------------------------|
 
-**Returns**
+#### Returns
 
 Nothing.
 
@@ -1358,17 +1358,17 @@ Nothing.
 
 `app.project.item(index).layer(index).propertySpec.setValueAtKey(keyIndex, newValue)`
 
-**Description**
+#### Description
 
 Finds the specified keyframe and sets its value. If the named property has no keyframes, or no keyframe with the specified index, this method generates an exception and displays an error.
 
-**Parameters**
+#### Parameters
 
 | `keyIndex`   | The index for the keyframe. An integer in the range<br/>`[1..numKeys]`, as returned by the<br/>[addKey](#propertyaddkey) or<br/>[nearestKeyIndex](#propertynearestkeyindex).   |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `newValue`   | A value appropriate for the type of property being set; see<br/>[Property.propertyValueType](#propertypropertyvaluetype).                                                       |
 
-**Returns**
+#### Returns
 
 Nothing.
 
@@ -1378,17 +1378,17 @@ Nothing.
 
 `app.project.item(index).layer(index).propertySpec.setValueAtTime(time, newValue)`
 
-**Description**
+#### Description
 
 Sets the value of a keyframe at the specified time. Creates a new keyframe for the named property, if one does not currently exist for the specified time, and sets its value.
 
-**Parameters**
+#### Parameters
 
 | `time`     | The time in seconds, a floating-point value. The beginning of<br/>the composition is 0.                                    |
 |------------|----------------------------------------------------------------------------------------------------------------------------|
 | `newValue` | A value appropriate for the type of property being set; see<br/>[Property.propertyValueType](#propertypropertyvaluetype). |
 
-**Returns**
+#### Returns
 
 Nothing.
 
@@ -1398,17 +1398,17 @@ Nothing.
 
 `app.project.item(index).layer(index).propertySpec.setValuesAtTimes(times, newValues)`
 
-**Description**
+#### Description
 
 Sets values for a set of keyframes at specified times. Creates a new keyframe for the named property, if one does not currently exist for a specified time, and sets its value. Times and values are expressed as arrays; the arrays must be of the same length.
 
-**Parameters**
+#### Parameters
 
 | `times`     | An array of times, in seconds. Each time is a floating-point<br/>value. The beginning of the composition is 0.                       |
 |-------------|--------------------------------------------------------------------------------------------------------------------------------------|
 | `newValues` | A array of values appropriate for the type of property being<br/>set; see [Property.propertyValueType](#propertypropertyvaluetype). |
 
-**Returns**
+#### Returns
 
 Nothing.
 
@@ -1418,18 +1418,18 @@ Nothing.
 
 `app.project.item(index).layer(index).propertySpec.valueAtTime(time, preExpression)`
 
-**Description**
+#### Description
 
 The value of the named property as evaluated at the specified time. Note that the type of value returned is not made explicit; it will be of a different type, depending on the property evaluated.
 
 ?> **Note:** As After Effects 13.6, this method now waits for time-intensive expressions, like `sampleImage`, to finish evaluating before it returns the result.
 
-**Parameters**
+#### Parameters
 
 | `time`          | The time in seconds; a floating-point value. The beginning<br/>of the composition is 0.                                                                                                                                                                                                               |
 |-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `preExpression` | If the property has an expression and this is true, return<br/>the value for the specified time without applying the<br/>expression to it. When false, return the result of<br/>evaluating the expression for the specified time. Ignored if<br/>the property does not have an associated expression. |
 
-**Returns**
+#### Returns
 
 A value appropriate for the type of the property (see "Property propertyValueType attribute" on page 138).

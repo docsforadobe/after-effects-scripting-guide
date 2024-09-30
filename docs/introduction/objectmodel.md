@@ -14,7 +14,7 @@ The application contains a Project panel, which displays a project. The project 
 
 ?> **Note:** To avoid ambiguity, this manual uses the term "attribute" to refer to JavaScript object properties, and the term "property" or "AE property" to refer to After Effects layer properties.
 
-**Object summary**
+#### Object summary
 
 The following table lists all objects alphabetically, with links to the documentation page for each.
 

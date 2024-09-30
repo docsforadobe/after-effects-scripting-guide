@@ -2,11 +2,11 @@
 
 `app.activeViewer`
 
-**Description**
+#### Description
 
 The Viewer object represents a Composition, Layer, or Footage panel.
 
-**Example**
+#### Example
 
 This maximizes the active viewer panel, and displays its type if it contains a composition.
 
@@ -26,11 +26,11 @@ if (activeViewer.type === ViewerType.VIEWER_COMPOSITION) {
 
 `viewer.active`
 
-**Description**
+#### Description
 
 When true, indicates if the viewer panel is focused, and thereby frontmost.
 
-**Type**
+#### Type
 
 Boolean; read-only.
 
@@ -40,11 +40,11 @@ Boolean; read-only.
 
 `viewer.activeViewIndex`
 
-**Description**
+#### Description
 
 The index of the current active [View object](view.md#view), in the [Viewer.views](#viewerviews) array.
 
-**Type**
+#### Type
 
 Number; read/write.
 
@@ -54,11 +54,11 @@ Number; read/write.
 
 `viewer.maximized`
 
-**Description**
+#### Description
 
 When true, indicates if the viewer panel is at its maximized size.
 
-**Type**
+#### Type
 
 Boolean; read/write.
 
@@ -68,11 +68,11 @@ Boolean; read/write.
 
 `viewer.views`
 
-**Description**
+#### Description
 
 All of the Views associated with this viewer.
 
-**Type**
+#### Type
 
 Array of [View object](view.md#view) objects; read-only.
 
@@ -82,11 +82,11 @@ Array of [View object](view.md#view) objects; read-only.
 
 `viewer.type`
 
-**Description**
+#### Description
 
 The content in the viewer panel.
 
-**Type**
+#### Type
 
 A `ViewerType` enumerated value; read-only. One of:
 
@@ -102,15 +102,15 @@ A `ViewerType` enumerated value; read-only. One of:
 
 `viewer.setActive()`
 
-**Description**
+#### Description
 
 Moves the viewer panel to the front and places focus on it, making it active.
 Calling this method will set the [viewer's active attribute](#vieweractive) to true.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Boolean indicating if the viewer panel was made active.

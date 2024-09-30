@@ -4,7 +4,7 @@
 
 ?> **Note:** This functionality was added in After Effects 24.0
 
-**Description**
+#### Description
 
 The Fonts objects provides information about the current font ecosystem on your device.
 
@@ -28,7 +28,7 @@ After any change to the font ecosystem from installing new real fonts, the outst
 
 `app.fonts.allFonts`
 
-**Description**
+#### Description
 
 The list of all the fonts currently available on your system.
 
@@ -44,11 +44,11 @@ The family groups and [Font objects](fontobject.md#fontobject) in the group are 
 
 [Font object](fontobject.md#fontobject) for which [isSubstitute](fontobject.md#fontobjectissubstitute) returns true are always sorted to the end as individual family groups.
 
-**Type**
+#### Type
 
 Array of Arrays of [Font objects](fontobject.md#fontobject); read-only.
 
-**Example**
+#### Example
 
 This example will select the first returned Font Family Array.
 
@@ -71,11 +71,11 @@ alert(firstFontFamilyName+" "+firstFamilyStyle);
 
 ?> **Note:** This functionality was added in After Effects 24.6
 
-**Description**
+#### Description
 
 Provides access to the Favorites list presented in the Character panel and Properties panel. To set the Favorites simply provide an (unsorted) array of strings based on the [familyName](fontobject.md#fontobjectfamilyname). To clear the list simply assign an empty Array.
 
-**Type**
+#### Type
 
 Array of Strings; read/write.
 
@@ -87,13 +87,13 @@ Array of Strings; read/write.
 
 ?> **Note:** This functionality was added in After Effects 24.6
 
-**Description**
+#### Description
 
 It is perfectly legal and common for more than one [Font object](fontobject.md#fontobject) to return the same value for [postScriptName](fontobject.md#fontobjectpostscriptname) but as this can sometimes lead to confusion about what [Font object](fontobject.md#fontobject) will actually be used when using [TextDocument.font](textdocument.md#textdocumentfont) or the `.font` attribute of a [CharacterRange object](characterrange.md#characterrange), this property exists to both reveal what duplicates exist and also their relative order.
 
 This returns an Array in which each element is an Array of [Font objects](fontobject.md#fontobject), where the 0th element [Font object](fontobject.md#fontobject) is considered the primary [Font object](fontobject.md#fontobject) for the given PostScript name.
 
-**Type**
+#### Type
 
 Array of Arrays of [Font Objects](fontobject.md#fontobject); read-only.
 
@@ -105,7 +105,7 @@ Array of Arrays of [Font Objects](fontobject.md#fontobject); read-only.
 
 ?> **Note:** This functionality was added in After Effects 24.2
 
-**Description**
+#### Description
 
 Returns an unsigned number representing the current revision of the font environment.
 
@@ -113,11 +113,11 @@ The revision is advanced when anything happens to the font environment which wou
 
 Among these are: installing or removing fonts in the font environment, opening or closing a project with substituted fonts, causing a custom Variable font instance to be created, and changing the setting in the Character Panel dropdown "Show Font Names in English".
 
-**Type**
+#### Type
 
 Number; read-only.
 
-**Example**
+#### Example
 
 ```javascript
 var fsRev = app.fonts.fontServerRevision;
@@ -130,15 +130,15 @@ alert(fsRev);
 
 `app.fonts.fontsWithDefaultDesignAxes`
 
-**Description**
+#### Description
 
 Returns an array of variable [Font objects](fontobject.md#fontobject), each using a unique font dictionary and with default values for their design axes. This API is a convenient way to quickly filter for a unique instance of each installed variable font.
 
-**Type**
+#### Type
 
 Array of [Font objects](fontobject.md#fontobject); read-only.
 
-**Example**
+#### Example
 
 ```javascript
 var variableFontList = app.fonts.fontsWithDefaultDesignAxes;
@@ -153,7 +153,7 @@ alert(variableFontList.length);
 
 ?> **Note:** This functionality was added in After Effects 24.6
 
-**Description**
+#### Description
 
 When a Project is opened and one or more fonts are not found in the local font environment, a *sync* process is initiated with Adobe Fonts to see if one or more Fonts could be activated and installed.
 
@@ -161,7 +161,7 @@ By default this happens automatically—this property will disable it from happe
 
 !> **Warning:** The rules for deciding if Adobe Fonts has a matching font is entirely based on the PostScript name. With some Variable Fonts, due to ambiguity about which font has which named instance, it is possible that more than one face (Regular/Italic) may be installed during an activation. Whether the installed font is a valid replacement is controlled by the [FontsObject.substitutedFontReplacementMatchPolicy](#fontsobjectsubstitutedfontreplacementmatchpolicy).
 
-**Type**
+#### Type
 
 Boolean; read/write. One of:
 
@@ -174,13 +174,13 @@ Boolean; read/write. One of:
 
 `app.fonts.missingOrSubstitutedFonts`
 
-**Description**
+#### Description
 
 The list of all the missing or substituted fonts of the current Project.
 
 ?> **Note:** A substituted font is a font that was already missing when the project is opened. A missing font is a font that went missing (font being uninstalled, for example) *while* the project was open.
 
-**Type**
+#### Type
 
 Array of [Font objects](fontobject.md#fontobject); read-only.
 
@@ -192,11 +192,11 @@ Array of [Font objects](fontobject.md#fontobject); read-only.
 
 ?> **Note:** This functionality was added in After Effects 24.6
 
-**Description**
+#### Description
 
 Provides access to the Most Recently Used (MRU) list presented in the Character panel and Properties panel. To set the MRU simply provide an (unsorted) array of strings based on the [familyName](fontobject.md#fontobjectfamilyname). To clear the list simply assign an empty Array.
 
-**Type**
+#### Type
 
 Array of Strings; read/write.
 
@@ -208,11 +208,11 @@ Array of Strings; read/write.
 
 ?> **Note:** This functionality was added in After Effects 24.6
 
-**Description**
+#### Description
 
 Controls the rules which are used to determine which fonts are considered matching for automatic replacement for a substituted [Font object](fontobject.md#fontobject).
 
-**Type**
+#### Type
 
 A `SubstitutedFontReplacementMatchPolicy` enumerated value; read/write. One of:
 
@@ -234,7 +234,7 @@ A `SubstitutedFontReplacementMatchPolicy` enumerated value; read/write. One of:
 
 ?> **Note:** This functionality was added in After Effects (Beta) 25.0 and is subject to change while it remains in Beta.
 
-**Description**
+#### Description
 
 This function will return an array of generic objects describing the number of characters in the range and the `CTScript` enum assigned to them. See [FontObject.writingScripts](fontobject.md#fontobjectwritingscripts) for a full list of `CTScript` enumerated values.
 
@@ -249,13 +249,13 @@ var str = "[0] chars:" + scriptsV[0].chars +   // 2
 alert(str);
 ```
 
-**Parameters**
+#### Parameters
 
 | `charString`        | String; if empty, will return an empty array.   |
 |---------------------|-------------------------------------------------|
 | `preferredCTScript` | A `CTScript` enumerated value.                  |
 
-**Returns**
+#### Returns
 
 Array of generic objects;
 
@@ -270,7 +270,7 @@ Array of generic objects;
 
 ?> **Note:** This functionality was added in After Effects (Beta) 25.0 and is subject to change while it remains in Beta.
 
-**Description**
+#### Description
 
 This function will return an instance of [Font object](fontobject.md#fontobject) mapped as the default font based on `CTScript`.
 
@@ -290,12 +290,12 @@ Unicode characters mapped to the `CTScript`.
 var font = app.fonts.getDefaultFontForCTScript(CTScript.CT_JAPANESE_SCRIPT);
 ```
 
-**Parameters**
+#### Parameters
 
 | `ctScript`   | A member of the `CTScript` enum (see list [here](fontobject.md#fontobjectwritingscripts)).   |
 |--------------|-----------------------------------------------------------------------------------------------|
 
-**Returns**
+#### Returns
 
 [Font object](fontobject.md#fontobject)
 
@@ -307,7 +307,7 @@ var font = app.fonts.getDefaultFontForCTScript(CTScript.CT_JAPANESE_SCRIPT);
 
 ?> **Note:** This functionality was added in After Effects 24.2
 
-**Description**
+#### Description
 
 This function will return an instance of [Font object](fontobject.md#fontobject) based on the ID of a previously found font.
 
@@ -319,12 +319,12 @@ var font2 = app.fonts.getFontByID(font1.fontID);
 alert(font1.fontID == font2.fontID);
 ```
 
-**Parameters**
+#### Parameters
 
 | fontID   | A number containing the ID of the font.   |
 |----------|-------------------------------------------|
 
-**Returns**
+#### Returns
 
 [Font object](fontobject.md#fontobject), or undefined if no font by that ID.
 
@@ -334,7 +334,7 @@ alert(font1.fontID == font2.fontID);
 
 `app.fonts.getFontsByFamilyNameAndStyleName(familyName, styleName)`
 
-**Description**
+#### Description
 
 This function will return an array of [Font object](fontobject.md#fontobject) based on the Family Name and Style Name of a font. If no suitable font is found, it will return an empty Array.
 
@@ -345,13 +345,13 @@ var fontList = app.fonts.getFontsByFamilyNameAndStyleName("Abolition", "Regular"
 alert(fontList.length);
 ```
 
-**Parameters**
+#### Parameters
 
 | FamilyName   | A string containing the Family Name of the font.   |
 |--------------|----------------------------------------------------|
 | StyleName    | A string containing the Style Name of the font.    |
 
-**Returns**
+#### Returns
 
 Array of [Font objects](fontobject.md#fontobject); read-only.
 
@@ -361,7 +361,7 @@ Array of [Font objects](fontobject.md#fontobject); read-only.
 
 `app.fonts.getFontsByPostScriptName(postscriptName)`
 
-**Description**
+#### Description
 
 This function will return an array of [Font objects](fontobject.md#fontobject) based on the PostScript name of previously found Fonts.
 
@@ -376,12 +376,12 @@ var fontList = app.fonts.getFontsByPostScriptName("Abolition")
 alert(fontList.length);
 ```
 
-**Parameters**
+#### Parameters
 
 | postscriptName   | A string containing the PostScript Name of the font.   |
 |------------------|--------------------------------------------------------|
 
-**Returns**
+#### Returns
 
 Array of [Font objects](fontobject.md#fontobject); read-only.
 
@@ -393,7 +393,7 @@ Array of [Font objects](fontobject.md#fontobject); read-only.
 
 ?> **Note:** This functionality was added in After Effects 24.6
 
-**Description**
+#### Description
 
 The addition and removal of font files in what is considered the *system font folders* is recognized and handled automatically without user intervention to update the font environment. Non-system font folders are not automatically handled and so additions and removal of font files in these folders are not recognized until the After Effects is restarted.
 
@@ -407,7 +407,7 @@ Windows: <systemDrive>:\Program Files\Common Files\Adobe\Fonts
 Mac: /Library/Application Support/Adobe/Fonts
 ```
 
-**Returns**
+#### Returns
 
 Boolean; One of:
 
@@ -422,7 +422,7 @@ Boolean; One of:
 
 ?> **Note:** This functionality was added in After Effects (Beta) 25.0 and is subject to change while it remains in Beta.
 
-**Description**
+#### Description
 
 This function will set an instance of [Font object](fontobject.md#fontobject) mapped based on `CTScript` parameter.
 
@@ -450,13 +450,13 @@ var ret = app.fonts.setDefaultFontForCTScript(CTScript.CT_ROMAN_SCRIPT, font);
 alert("set:" + ret);
 ```
 
-**Parameters**
+#### Parameters
 
 | `ctScript`   | A member of the `CTScript` enum (see list [here](fontobject.md#fontobjectwritingscripts)).     |
 |--------------|-------------------------------------------------------------------------------------------------|
 | `font`       | [Font object](fontobject.md#fontobject) to be mapped. If `null`, then current mapping is reset. |
 
-**Returns**
+#### Returns
 
 Boolean; One of:
 

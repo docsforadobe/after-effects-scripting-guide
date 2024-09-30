@@ -2,7 +2,7 @@
 
 `app.project.item(index).layer(index).mask`
 
-**Description**
+#### Description
 
 The MaskPropertyGroup object encapsulates mask attributes in a layer.
 
@@ -16,11 +16,11 @@ The MaskPropertyGroup object encapsulates mask attributes in a layer.
 
 `app.project.item(index).layer(index).mask(index).color`
 
-**Description**
+#### Description
 
 The color used to draw the mask outline as it appears in the user interface (Composition panel, Layer panel, and Timeline panel).
 
-**Type**
+#### Type
 
 Array of three floating-point values, [R, G, B], in the range `[0.0..1.0]`; read/write.
 
@@ -30,11 +30,11 @@ Array of three floating-point values, [R, G, B], in the range `[0.0..1.0]`; read
 
 `app.project.item(index).layer(index).mask(index).inverted`
 
-**Description**
+#### Description
 
 When true, the mask is inverted; otherwise false.
 
-**Type**
+#### Type
 
 Boolean; read/write.
 
@@ -44,11 +44,11 @@ Boolean; read/write.
 
 `app.project.item(index).layer(index).mask(index).locked`
 
-**Description**
+#### Description
 
 When true, the mask is locked and cannot be edited in the user interface; otherwise, false.
 
-**Type**
+#### Type
 
 Boolean; read/write.
 
@@ -58,11 +58,11 @@ Boolean; read/write.
 
 `app.project.item(index).layer(index).mask(index).maskFeatherFalloff`
 
-**Description**
+#### Description
 
 The feather falloff mode for the mask. Equivalent to the Layer > Mask > Feather Falloff setting.
 
-**Type**
+#### Type
 
 A `MaskFeatherFalloff` enumerated value; read/write. One of:
 
@@ -75,11 +75,11 @@ A `MaskFeatherFalloff` enumerated value; read/write. One of:
 
 `app.project.item(index).layer(index).mask(index).maskMode`
 
-**Description**
+#### Description
 
 The masking mode for this mask.
 
-**Type**
+#### Type
 
 A `MaskMode` enumerated value; read/write. One of:
 
@@ -97,11 +97,11 @@ A `MaskMode` enumerated value; read/write. One of:
 
 `app.project.item(index).layer(index).mask(index).maskMotionBlur`
 
-**Description**
+#### Description
 
 How motion blur is applied to this mask.
 
-**Type**
+#### Type
 
 A `MakMotionBlur` enumerated value; read/write. One of:
 
@@ -115,10 +115,10 @@ A `MakMotionBlur` enumerated value; read/write. One of:
 
 `app.project.item(index).layer(index).mask(index).rotoBezier`
 
-**Description**
+#### Description
 
 When true, the mask is a RotoBezier shape; otherwise, false.
 
-**Type**
+#### Type
 
 Boolean; read/write.

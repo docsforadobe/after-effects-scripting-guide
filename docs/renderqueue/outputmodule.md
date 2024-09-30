@@ -2,7 +2,7 @@
 
 `app.project.renderQueue.item(index).outputModule(index)`
 
-**Description**
+#### Description
 
 An OutputModule object of a [RenderQueueItem](renderqueueitem.md#renderqueueitem) generates a single file or sequence via a render operation, and contains attributes and methods relating to the file to be rendered.
 
@@ -14,11 +14,11 @@ An OutputModule object of a [RenderQueueItem](renderqueueitem.md#renderqueueitem
 
 `app.project.renderQueue.item(index).outputModule(index).file`
 
-**Description**
+#### Description
 
 The [Extendscript File](https://extendscript.docsforadobe.dev/file-system-access/file-object.html) object for the file this output module is set to render.
 
-**Type**
+#### Type
 
 [Extendscript File](https://extendscript.docsforadobe.dev/file-system-access/file-object.html) object; read/write.
 
@@ -28,11 +28,11 @@ The [Extendscript File](https://extendscript.docsforadobe.dev/file-system-access
 
 `app.project.renderQueue.item(index).outputModule(index).includeSourceXMP`
 
-**Description**
+#### Description
 
 When true, writes all source footage XMP metadata to the output file. Corresponds to the Include Source XMP Metadata option in the Output Module Settings dialog box.
 
-**Type**
+#### Type
 
 Boolean; read/write.
 
@@ -42,11 +42,11 @@ Boolean; read/write.
 
 `app.project.renderQueue.item(index).outputModule(index).name`
 
-**Description**
+#### Description
 
 The name of the output module, as shown in the user interface.
 
-**Type**
+#### Type
 
 String; read-only.
 
@@ -56,11 +56,11 @@ String; read-only.
 
 `app.project.renderQueue.item(index).outputModule(index).postRenderAction`
 
-**Description**
+#### Description
 
 An action to be performed when the render operation is completed.
 
-**Type**
+#### Type
 
 A `PostRenderAction` enumerated value (read/write); one of:
 
@@ -75,11 +75,11 @@ A `PostRenderAction` enumerated value (read/write); one of:
 
 `app.project.renderQueue.item(index).outputModule(index).templates`
 
-**Description**
+#### Description
 
 The names of all output-module templates available in the local installation of After Effects.
 
-**Type**
+#### Type
 
 Array of strings; read-only.
 
@@ -91,16 +91,16 @@ Array of strings; read-only.
 
 `app.project.renderQueue.item(index).outputModule(index).applyTemplate(templateName)`
 
-**Description**
+#### Description
 
 Applies the specified existing output-module template.
 
-**Parameters**
+#### Parameters
 
 | `templateName`   | A string containing the name of the template to be applied.   |
 |------------------|---------------------------------------------------------------|
 
-**Returns**
+#### Returns
 
 Nothing.
 
@@ -112,14 +112,14 @@ Nothing.
 
 ?> **Note:** This functionality was added in After Effects 13.0 (CC 2014)
 
-**Description**
+#### Description
 
 Gets a specific setting for a given Output Module.
 
 - Depreciated Source: [https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva](https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva)
 - Archived version: [https://web.archive.org/web/20200622100656/https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva](https://web.archive.org/web/20200622100656/https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva)
 
-**Example**
+#### Example
 
 See the example in [RenderQueueItem.getSetting()](renderqueueitem.md#renderqueueitemgetsetting) for structure reference.
 
@@ -131,14 +131,14 @@ See the example in [RenderQueueItem.getSetting()](renderqueueitem.md#renderqueue
 
 ?> **Note:** This functionality was added in After Effects 13.0 (CC 2014)
 
-**Description**
+#### Description
 
 Gets all settings for a given Output Module.
 
 - Depreciated Source: [https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva](https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva)
 - Archived version: [https://web.archive.org/web/20200622100656/https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva](https://web.archive.org/web/20200622100656/https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva)
 
-**Example**
+#### Example
 
 ```javascript
 // Get object that contains the string version of all current output module setting
@@ -175,15 +175,15 @@ var current_omFileTempalte = app.project.renderQueue.item(1).outputModule(1).get
 
 `app.project.renderQueue.item(index).outputModule(index).remove()`
 
-**Description**
+#### Description
 
 Removes this OutputModule object from the collection.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Nothing.
 
@@ -193,16 +193,16 @@ Nothing.
 
 `app.project.renderQueue.item(index).outputModule(index).saveAsTemplate(name)`
 
-**Description**
+#### Description
 
 Saves this output module as a template and adds it to the te mpl ate s array.
 
-**Parameters**
+#### Parameters
 
 | `name`   | A string containing the name of the new template.   |
 |----------|-----------------------------------------------------|
 
-**Returns**
+#### Returns
 
 Nothing.
 
@@ -214,14 +214,14 @@ Nothing.
 
 ?> **Note:** This functionality was added in After Effects 13.0 (CC 2014)
 
-**Description**
+#### Description
 
 Sets a specific setting for a given Output Module.
 
 - Depreciated Source: [https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva](https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva)
 - Archived version: [https://web.archive.org/web/20200622100656/https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva](https://web.archive.org/web/20200622100656/https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva)
 
-**Example**
+#### Example
 
 See the example in [RenderQueueItem.setSetting()](renderqueueitem.md#renderqueueitemsetsetting) for structure reference.
 
@@ -233,14 +233,14 @@ See the example in [RenderQueueItem.setSetting()](renderqueueitem.md#renderqueue
 
 ?> **Note:** This functionality was added in After Effects 13.0 (CC 2014)
 
-**Description**
+#### Description
 
 - Depreciated Source: [https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva](https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva)
 - Archived version: [https://web.archive.org/web/20200622100656/https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva](https://web.archive.org/web/20200622100656/https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva)
 
 !> **Warning:** There is a bug that causes OutputModule object to be invalidated after the output module setting is modified, so you need to retrieve the Output Module again after you modify it.
 
-**Examples**
+#### Examples
 
 Get the settings from one item's output module and use them on another:
 

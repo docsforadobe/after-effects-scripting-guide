@@ -2,7 +2,7 @@
 
 `app.project.items`
 
-**Description**
+#### Description
 
 The ItemCollection object represents a collection of items. The ItemCollection belonging to a Project object contains all the Item objects for items in the project. The ItemCollection belonging to a FolderItem object contains all the Item objects for items in that folder.
 
@@ -16,11 +16,11 @@ The ItemCollection object represents a collection of items. The ItemCollection b
 
 `app.project.items.addComp(name, width, height, pixelAspect, duration, frameRate)`
 
-**Description**
+#### Description
 
 Creates a new composition. Creates and returns a new CompItem object and adds it to this collection. If the ItemCollection belongs to the project or the root folder, then the new item's `parentFolder` is the root folder. If the ItemCollection belongs to any other folder, the new item's `parentFolder` is that `FolderItem`.
 
-**Parameters**
+#### Parameters
 
 | `name`        | A string containing the name of the composition.                                                      |
 |---------------|-------------------------------------------------------------------------------------------------------|
@@ -30,7 +30,7 @@ Creates a new composition. Creates and returns a new CompItem object and adds it
 | `duration`    | The duration of the composition in seconds, a floating-point<br/>value in the range `[0.0..10800.0]`. |
 | `frameRate`   | The frame rate of the composition, a floating-point value in<br/>the range `[1.0..99.0]`              |
 
-**Returns**
+#### Returns
 
 CompItem object.
 
@@ -40,20 +40,20 @@ CompItem object.
 
 `app.project.items.addFolder(name)`
 
-**Description**
+#### Description
 
 Creates a new folder. Creates and returns a new FolderItem object and adds it to this collection. If the ItemCollection belongs to the project or the root folder, then the new folder's `parentFolder` is the root folder. If the ItemCollection belongs to any other folder, the new folder's `parentFolder` is that `FolderItem`. To put items in the folder, set the [Item.parentFolder](item.md#itemparentfolder) attribute
 
-**Parameters**
+#### Parameters
 
 | `name`   | A string containing the name of the folder.   |
 |----------|-----------------------------------------------|
 
-**Returns**
+#### Returns
 
 FolderItem object.
 
-**Example**
+#### Example
 
 This script creates a new FolderItem in the Project panel and moves compositions into it.
 

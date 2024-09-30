@@ -2,13 +2,13 @@
 
 `app.project.item(index).layer(index)`
 
-**Description**
+#### Description
 
 The LightLayer object represents a light layer within a composition. Create it using the [LayerCollection.addLight()](layercollection.md#layercollectionaddlight) method. It can be accessed in an item's layer collection either by index number or by a name string.
 
 > LightLayer is a subclass of [Layer object](layer.md#layer). All methods and attributes of Layer are available when working with Light-Layer.
 
-**AE Properties**
+#### AE Properties
 
 LightLayer defines no additional attributes, but has different AE properties than other layer types. It has thefollowing properties and property groups:
 
@@ -39,11 +39,11 @@ LightLayer defines no additional attributes, but has different AE properties tha
 
 `app.project.item(index).layer(index).lightType`
 
-**Description**
+#### Description
 
 For a light layer, its light type. Trying to set this attribute for a non-light layer produces an error.
 
-**Type**
+#### Type
 
 A `LightType` enumerated value; read/write. One of:
 

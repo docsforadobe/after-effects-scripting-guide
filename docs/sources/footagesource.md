@@ -5,7 +5,7 @@
 `app.project.item(index).proxySource`
 <br/>
 
-**Description**
+#### Description
 
 The FootageSource object holds information describing the source of some footage. It is used as the `mainSource` of a [FootageItem object](../items/footageitem.md#footageitem), or the `proxySource` of a [CompItem object](../items/compitem.md#compitem) or FootageItem.
 
@@ -22,11 +22,11 @@ The FootageSource object holds information describing the source of some footage
 `app.project.item(index).proxySource.alphaMode`
 <br/>
 
-**Description**
+#### Description
 
 Defines how the alpha information in the footage is interpreted. If `hasAlpha` is false, this attribute has no relevant meaning.
 
-**Type**
+#### Type
 
 An Alpha Mode enumerated value; (read/write). One of:
 
@@ -43,11 +43,11 @@ An Alpha Mode enumerated value; (read/write). One of:
 `app.project.item(index).proxySource.conformFrameRate`
 <br/>
 
-**Description**
+#### Description
 
 A frame rate to use instead of the `nativeFrameRate` value. If set to 0, the `nativeFrameRate` is used instead. It is an error to set this value if [FootageSource.isStill](#footagesourceisstill) is true. It is an error to set this value to 0 if [removePulldown](#footagesourceremovepulldown) is not set to `PulldownPhase.OFF`. If this is 0 when you set `removePulldown` to a value other than `PulldownPhase.OFF`, then this is automatically set to the value of `nativeFrameRate`.
 
-**Type**
+#### Type
 
 Floating-point value in the range `[0.0..99.0]`; read/write.
 
@@ -60,11 +60,11 @@ Floating-point value in the range `[0.0..99.0]`; read/write.
 `app.project.item(index).proxySource.displayFrameRate`
 <br/>
 
-**Description**
+#### Description
 
 The effective frame rate as displayed and rendered in compositions by After Effects. If [removePulldown](#footagesourceremovepulldown) is `PulldownPhase.OFF`, then this is the same as the `conformFrameRate` (if non-zero) or the `nativeFrameRate` (if `conformFrameRate` is 0). If `removePulldown` is not `PulldownPhase.OFF`, this is `conformFrameRate * 0.8`, the effective frame rate after removing 1 of every 5 frames.
 
-**Type**
+#### Type
 
 Floating-point value in the range `[0.0..99.0]`; read-only.
 
@@ -77,11 +77,11 @@ Floating-point value in the range `[0.0..99.0]`; read-only.
 `app.project.item(index).proxySource.fieldSeparationType`
 <br/>
 
-**Description**
+#### Description
 
 How the fields are to be separated in non-still footage. It is an error to set this attribute if `isStill` is true. It is an error to set this value to `FieldSeparationType.OFF` if [removePulldown](#footagesourceremovepulldown) is not `PulldownPhase.OFF`.
 
-**Type**
+#### Type
 
 A `FieldSeparationType` enumerated value; read/write. One of:
 
@@ -98,11 +98,11 @@ A `FieldSeparationType` enumerated value; read/write. One of:
 `app.project.item(index).proxySource.hasAlpha`
 <br/>
 
-**Description**
+#### Description
 
 When true, the footage has an alpha component. In this case, the attributes `alphaMode`, `invertAlpha`, and `premulColor` have valid values. When `false`, those attributes have no relevant meaning for the footage.
 
-**Type**
+#### Type
 
 Boolean; read-only.
 
@@ -115,11 +115,11 @@ Boolean; read-only.
 `app.project.item(index).proxySource.highQualityFieldSeparation`
 <br/>
 
-**Description**
+#### Description
 
 When true, After Effects uses special algorithms to determine how to perform high-quality field separation. It is an error to set this attribute if `isStill` is true, or if `fieldSeparationType` is `FieldSeparationType.OFF`.
 
-**Type**
+#### Type
 
 Boolean; read/write.
 
@@ -132,11 +132,11 @@ Boolean; read/write.
 `app.project.item(index).proxySource.invertAlpha`
 <br/>
 
-**Description**
+#### Description
 
 When true, an alpha channel in a footage clip or proxy should be inverted. This attribute is valid only if an alpha is present. If `hasAlpha` is false, or if `alphaMode` is `AlphaMode.IGNORE`, this attribute is ignored.
 
-**Type**
+#### Type
 
 Boolean; read/write.
 
@@ -149,11 +149,11 @@ Boolean; read/write.
 `app.project.item(index).proxySource.isStill`
 <br/>
 
-**Description**
+#### Description
 
 When true the footage is still; when false, it has a time-based component. Examples of still footage are JPEG files, solids, and placeholders with a duration of 0. Examples of non-still footage are movie files, sound files, sequences, and placeholders of non-zero duration.
 
-**Type**
+#### Type
 
 Boolean; read-only.
 
@@ -166,11 +166,11 @@ Boolean; read-only.
 `app.project.item(index).proxySource.loop`
 <br/>
 
-**Description**
+#### Description
 
 The number of times that the footage is to be played consecutively when used in a composition. It is an error to set this attribute if `isStill` is true.
 
-**Type**
+#### Type
 
 Integer in the range `[1..9999]`; default is 1; read/write.
 
@@ -183,11 +183,11 @@ Integer in the range `[1..9999]`; default is 1; read/write.
 `app.project.item(index).proxySource.nativeFrameRate`
 <br/>
 
-**Description**
+#### Description
 
 The native frame rate of the footage.
 
-**Type**
+#### Type
 
 Floating-point; read-only.
 
@@ -200,11 +200,11 @@ Floating-point; read-only.
 `app.project.item(index).proxySource.premulColor`
 <br/>
 
-**Description**
+#### Description
 
 The color to be premultiplied. This attribute is valid only if the `alphaMode` is `alphaMode.PREMULTIPLIED`.
 
-**Type**
+#### Type
 
 Array of three floating-point values `[R, G, B]`, in the range `[0.0..1.0]`; read/write.
 
@@ -217,11 +217,11 @@ Array of three floating-point values `[R, G, B]`, in the range `[0.0..1.0]`; rea
 `app.project.item(index).proxySource.removePulldown`
 <br/>
 
-**Description**
+#### Description
 
 How the pulldowns are to be removed when field separation is used. It is an error to set this attribute if `isStill` is true. It is an error to attempt to set this to a value other than `PulldownPhase.OFF` in the case where `fieldSeparationType` is `FieldSeparationType.OFF`.
 
-**Type**
+#### Type
 
 A `PulldownPhase` enumerated value; read/write. One of:
 
@@ -248,15 +248,15 @@ A `PulldownPhase` enumerated value; read/write. One of:
 `app.project.item(index).proxySource.guessAlphaMode()`
 <br/>
 
-**Description**
+#### Description
 
 Sets `alphaMode`, `premulColor`, and `invertAlpha` to the best estimates for this footage source. If `hasAlpha` is false, no change is made.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Nothing.
 
@@ -269,15 +269,15 @@ Nothing.
 `app.project.item(index).proxySource.guessPulldown(method)`
 <br/>
 
-**Description**
+#### Description
 
 Sets `fieldSeparationType` and [removePulldown](#footagesourceremovepulldown) to the best estimates for this footage source. If `isStill` is true, no change is made.
 
-**Parameters**
+#### Parameters
 
 | `method`   | The method to use for estimation. A `PulldownMethod` enumerated<br/>value, one of:<br/><br/>- `PulldownMethod.PULLDOWN_3_2`<br/>- `PulldownMethod.ADVANCE_24P`   |
 |------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
-**Returns**
+#### Returns
 
 Nothing.

@@ -2,11 +2,11 @@
 
 `app.activeViewer.views[0].options`
 
-**Description**
+#### Description
 
 The ViewOptions object represents the options for a given [View object](view.md#view)
 
-**Example**
+#### Example
 
 This enables checkerboards and locks guides for a given view
 
@@ -25,11 +25,11 @@ viewOptions.guidesLocked = true;
 
 `app.activeViewer.views[0].options.channels`
 
-**Description**
+#### Description
 
 The state of the Channels menu.
 
-**Type**
+#### Type
 
 A `ChannelType` enumerated value; read/write. One of:
 
@@ -51,11 +51,11 @@ A `ChannelType` enumerated value; read/write. One of:
 
 `app.activeViewer.views[0].options.checkerboards`
 
-**Description**
+#### Description
 
 When true, checkerboards (transparency grid) is enabled in the current view.
 
-**Type**
+#### Type
 
 Boolean; read/write.
 
@@ -65,11 +65,11 @@ Boolean; read/write.
 
 `app.activeViewer.views[0].options.exposure`
 
-**Description**
+#### Description
 
 The exposure value for the current view.
 
-**Type**
+#### Type
 
 Floating-point value in the range `[-40..40]`
 
@@ -81,7 +81,7 @@ Floating-point value in the range `[-40..40]`
 
 ?> **Note:** This functionality was added in After Effects 12.0 (CC)
 
-**Description**
+#### Description
 
 The state of the Fast Previews menuThis is a read/write attribute using an enumerated value:
 
@@ -89,7 +89,7 @@ The state of the Fast Previews menuThis is a read/write attribute using an enume
 
 ?> **Note:** The Draft preview mode is only available in ray-traced 3D compositions. If you try to use it in a Classic 3D composition, you'll get an error: "Cannot set Draft fast preview mode in a Classic 3D composition."
 
-**Type**
+#### Type
 
 A `FastPreviewType` enumerated value; read/write. One of:
 
@@ -99,7 +99,7 @@ A `FastPreviewType` enumerated value; read/write. One of:
 - `FastPreviewType.FP_FAST_DRAFT`: Fast Draft
 - `FastPreviewType.FP_WIREFRAME`: Wireframe
 
-**Example**
+#### Example
 
 ```javascript
 app.activeViewer.views[0].options.fastPreview === FastPreviewType.FP_ADAPTIVE_RESOLUTION;
@@ -117,15 +117,15 @@ app.activeViewer.views[0].options.fastPreview === FastPreviewType.FP_WIREFRAME;
 
 ?> **Note:** This functionality was added in After Effects 16.1 (CC 2019)
 
-**Description**
+#### Description
 
 When true, indicates guides are locked in the view.
 
-**Type**
+#### Type
 
 Boolean; read/write.
 
-**Example**
+#### Example
 
 ```javascript
 app.activeViewer.views[0].options.guidesLocked;
@@ -139,15 +139,15 @@ app.activeViewer.views[0].options.guidesLocked;
 
 ?> **Note:** This functionality was added in After Effects 16.1 (CC 2019)
 
-**Description**
+#### Description
 
 When true, indicates layers snap to guides when dragged in the view.
 
-**Type**
+#### Type
 
 Boolean; read/write.
 
-**Example**
+#### Example
 
 ```javascript
 app.activeViewer.views[0].options.guidesSnap;
@@ -161,15 +161,15 @@ app.activeViewer.views[0].options.guidesSnap;
 
 ?> **Note:** This functionality was added in After Effects 16.1 (CC 2019)
 
-**Description**
+#### Description
 
 When true, indicates guides are visible in the view.
 
-**Type**
+#### Type
 
 Boolean; read/write.
 
-**Example**
+#### Example
 
 ```javascript
 app.activeViewer.views[0].options.guidesVisibility;
@@ -183,15 +183,15 @@ app.activeViewer.views[0].options.guidesVisibility;
 
 ?> **Note:** This functionality was added in After Effects 16.1 (CC 2019)
 
-**Description**
+#### Description
 
 When true, indicates rulers are shown in the view.
 
-**Type**
+#### Type
 
 Boolean; read/write.
 
-**Example**
+#### Example
 
 ```javascript
 app.activeViewer.views[0].options.rulers;
@@ -203,10 +203,10 @@ app.activeViewer.views[0].options.rulers;
 
 `app.activeViewer.views[0].options.zoom`
 
-**Description**
+#### Description
 
 Sets the current zoom value for the view, as a normalized percentage between 1% (0.01) and 1600% (16).
 
-**Type**
+#### Type
 
 Floating-point value in the range `[0.01..16]`

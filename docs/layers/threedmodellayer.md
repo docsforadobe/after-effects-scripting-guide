@@ -4,13 +4,13 @@
 
 ?> **Note:** This functionality was added in After Effects (Beta) 24.4 and is subject to change while it remains in Beta.
 
-**Description**
+#### Description
 
 The ThreeDModelLayer object represents a 3D Model layer within a composition.
 
 ThreeDModelLayer is a subclass of [AVLayer object](avlayer.md#avlayer). All methods and attributes of AVLayer are available when working with ThreeDModelLayer.
 
-**AE Properties**
+#### AE Properties
 
 ThreeDModelLayer inherits the following properties and property groups from [AVLayer object](avlayer.md#avlayer):
 
@@ -29,7 +29,7 @@ ThreeDModelLayer inherits the following properties and property groups from [AVL
 - Audio
   - AudioLevels
 
-**Example**
+#### Example
 
 If the first item in the project is a CompItem, and the first layer of that CompItem is an ThreeDModelLayer, the following checks its type.
 

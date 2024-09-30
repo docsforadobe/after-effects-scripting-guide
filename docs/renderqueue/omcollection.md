@@ -2,7 +2,7 @@
 
 `app.project.renderQueue.items.outputModules`
 
-**Description**
+#### Description
 
 The OMCollection contains all of the output modules in a render queue. The collection provides access to the [OutputModule objects](outputmodule.md#outputmodule), and allows you to create them. The first OutputModule object in the collection is at index position 1.
 
@@ -16,10 +16,10 @@ The OMCollection contains all of the output modules in a render queue. The colle
 
 `app.project.renderQueue.item(1).ouputModules.add()`
 
-**Description**
+#### Description
 
 Adds a new Output Module to the Render Queue Item, creating an OutputModule.
 
-**Returns**
+#### Returns
 
 [OutputModule object](outputmodule.md#outputmodule).

@@ -2,7 +2,7 @@
 
 `app.project.item(index).layer(index)`
 
-**Description**
+#### Description
 
 The Layer object provides access to layers within compositions. It can be accessed from an item's layer collection either by index number or by a name string.
 
@@ -10,7 +10,7 @@ The Layer object provides access to layers within compositions. It can be access
 
 > Layer is the base class for [CameraLayer object](cameralayer.md#cameralayer), [LightLayer object](lightlayer.md#lightlayer), and [AVLayer object](avlayer.md#avlayer), so Layer attributes and methods are available when working with all layer types. Layers contain AE properties, in addition to their JavaScript attributes and methods. For examples of how to access properties in layers, see [PropertyBase object](../properties/propertybase.md#propertybase).
 
-**Example**
+#### Example
 
 If the first item in the project is a [CompItem](../items/compitem.md#compitem), this example disables the first layer in that composition and renames it. This might, for example, turn an icon off in the composition.
 
@@ -28,11 +28,11 @@ firstLayer.name = "DisabledLayer";
 
 `app.project.item(index).layer(index).autoOrient`
 
-**Description**
+#### Description
 
 The type of automatic orientation to perform for the layer.
 
-**Type**
+#### Type
 
 An `AutoOrientType` enumerated value; read/write. One of:
 
@@ -47,11 +47,11 @@ An `AutoOrientType` enumerated value; read/write. One of:
 
 `app.project.item(index).layer(index).comment`
 
-**Description**
+#### Description
 
 A descriptive comment for the layer.
 
-**Type**
+#### Type
 
 String; read/write.
 
@@ -61,11 +61,11 @@ String; read/write.
 
 `app.project.item(index).layer(index).containingComp`
 
-**Description**
+#### Description
 
 The composition that contains this layer.
 
-**Type**
+#### Type
 
 CompItem object; read-only.
 
@@ -75,11 +75,11 @@ CompItem object; read-only.
 
 `app.project.item(index).layer(index).hasVideo`
 
-**Description**
+#### Description
 
 When true, the layer has a video switch (the eyeball icon) in the Timeline panel; otherwise false.
 
-**Type**
+#### Type
 
 Boolean; read-only.
 
@@ -91,14 +91,14 @@ Boolean; read-only.
 
 ?> **Note:** This functionality was added in After Effects 22.0 (2022)
 
-**Description**
+#### Description
 
 Instance property on Layer which returns a unique and persistent identification number used internally to identify a Layer between sessions.
 The value of the ID remains the same when the project is saved to a file and later reloaded.
 However, when you import this project into another project, new IDs are assigned to all Layers in the imported project.
 The ID is not displayed anywhere in the user interface..
 
-**Type**
+#### Type
 
 Integer; read-only.
 
@@ -108,11 +108,11 @@ Integer; read-only.
 
 `app.project.item(index).layer(index).index`
 
-**Description**
+#### Description
 
 The index position of the layer.
 
-**Type**
+#### Type
 
 Integer in the range `[1..numLayers]`; read-only.
 
@@ -122,11 +122,11 @@ Integer in the range `[1..numLayers]`; read-only.
 
 `app.project.item(index).layer(index).inPoint`
 
-**Description**
+#### Description
 
 The "in" point of the layer, expressed in composition time (seconds).
 
-**Type**
+#### Type
 
 Floating-point value in the range `[-10800.0..10800.0]` (minus or plus three hours); read/write.
 
@@ -136,13 +136,13 @@ Floating-point value in the range `[-10800.0..10800.0]` (minus or plus three hou
 
 `app.project.item(index).layer(index).isNameSet`
 
-**Description**
+#### Description
 
 True if the value of the name attribute has been set explicitly, rather than automatically from the source.
 
 ?> **Note:** This always returns true for layers that do not have a [AVLayer.source](avlayer.md#avlayersource)
 
-**Type**
+#### Type
 
 Boolean; read-only.
 
@@ -152,13 +152,13 @@ Boolean; read-only.
 
 `app.project.item(index).layer(index).label`
 
-**Description**
+#### Description
 
 The label color for the item. Colors are represented by their number (0 for None, or 1 to 16 for one of the preset colors in the Labels preferences).
 
 ?> **Note:** Custom label colors cannot be set programmatically.
 
-**Type**
+#### Type
 
 Integer (0 to 16); read/write.
 
@@ -168,11 +168,11 @@ Integer (0 to 16); read/write.
 
 `app.project.item(index).layer(index).locked`
 
-**Description**
+#### Description
 
 When true, the layer is locked; otherwise false. This corresponds to the lock toggle in the Layer panel.
 
-**Type**
+#### Type
 
 Boolean; read/write.
 
@@ -182,17 +182,17 @@ Boolean; read/write.
 
 `app.project.item(index).layer(index).marker`
 
-**Description**
+#### Description
 
 A [PropertyGroup object](../properties/propertygroup.md#propertygroup) that contains all a layer's markers. Layer marker scripting has the same functionality as [Comp markers](../items/compitem.md#compitemmarkerproperty).
 
 See [MarkerValue object](../other/markervalue.md#markervalue).
 
-**Type**
+#### Type
 
-PropertyGroup object or null; read-only.
+PropertyGroup object or `null`; read-only.
 
-**Example**
+#### Example
 
 The following sample code creates two layer markers with different properties
 
@@ -215,11 +215,11 @@ solidLayer.marker.setValueAtTime(3, layerMarker2);
 
 `app.project.item(index).layer(index).nullLayer`
 
-**Description**
+#### Description
 
 When true, the layer was created as a null object; otherwise false.
 
-**Type**
+#### Type
 
 Boolean; read-only.
 
@@ -229,11 +229,11 @@ Boolean; read-only.
 
 `app.project.item(index).layer(index).outPoint`
 
-**Description**
+#### Description
 
 The "out" point of the layer, expressed in composition time (seconds).
 
-**Type**
+#### Type
 
 Floating-point value in the range `[-10800.0..10800.0]` (minus or plus three hours); read/write.
 
@@ -243,9 +243,9 @@ Floating-point value in the range `[-10800.0..10800.0]` (minus or plus three hou
 
 `app.project.item(index).layer(index).parent`
 
-**Description**
+#### Description
 
-The parent of this layer; can be null.
+The parent of this layer; can be `null`.
 
 Offset values are calculated to counterbalance any transforms above this layer in the hierarchy, so that when you set the parent there is no apparent jump in the layer's transform.
 
@@ -253,9 +253,9 @@ For example, if the new parent has a rotation of 30 degrees, the child layer is 
 
 To set the parent without changing the child layer's transform values, use the [setParentWithJump](#layersetparentwithjump) method.
 
-**Type**
+#### Type
 
-Layer object or null; read/write.
+Layer object or `null`; read/write.
 
 ---
 
@@ -263,11 +263,11 @@ Layer object or null; read/write.
 
 `app.project.item(index).layer(index).selectedProperties`
 
-**Description**
+#### Description
 
 An array containing all of the currently selected Property and PropertyGroup objects in the layer.
 
-**Type**
+#### Type
 
 Array of PropertyBase objects; read-only.
 
@@ -277,11 +277,11 @@ Array of PropertyBase objects; read-only.
 
 `app.project.item(index).layer(index).shy`
 
-**Description**
+#### Description
 
 When true, the layer is "shy", meaning that it is hidden in the Layer panel if the composition's "Hide all shy layers" option is toggled on.
 
-**Type**
+#### Type
 
 Boolean; read/write.
 
@@ -291,11 +291,11 @@ Boolean; read/write.
 
 `app.project.item(index).layer(index).solo`
 
-**Description**
+#### Description
 
 When true, the layer is soloed, otherwise false.
 
-**Type**
+#### Type
 
 Boolean; read/write.
 
@@ -305,11 +305,11 @@ Boolean; read/write.
 
 `app.project.item(index).layer(index).startTime`
 
-**Description**
+#### Description
 
 The start time of the layer, expressed in composition time (seconds).
 
-**Type**
+#### Type
 
 Floating-point value in the range `[-10800.0..10800.0]` (minus or plus three hours); read/write.
 
@@ -319,11 +319,11 @@ Floating-point value in the range `[-10800.0..10800.0]` (minus or plus three hou
 
 `app.project.item(index).layer(index).stretch`
 
-**Description**
+#### Description
 
 The layer's time stretch, expressed as a percentage. A value of 100 means no stretch. Values between 0 and 1 are set to 1, and values between -1 and 0 (not including 0) are set to -1.
 
-**Type**
+#### Type
 
 Floating-point value in the range `[-9900.0..9900.0]`; read/write.
 
@@ -333,11 +333,11 @@ Floating-point value in the range `[-9900.0..9900.0]`; read/write.
 
 `app.project.item(index).layer(index).time`
 
-**Description**
+#### Description
 
 The current time of the layer, expressed in composition time (seconds).
 
-**Type**
+#### Type
 
 Floating-point value; read-only.
 
@@ -349,18 +349,18 @@ Floating-point value; read-only.
 
 `app.project.item(index).layer(index).activeAtTime(time)`
 
-**Description**
+#### Description
 
 Returns true if this layer will be active at the specified time.
 
 To return `true`, the layer must be enabled, no other layer may be soloing unless this layer is soloed too, and the time must be between the `inPoint` and `outPoint` values of this layer.
 
-**Parameters**
+#### Parameters
 
 | `time`   | The time in seconds, a floating-point value.   |
 |----------|------------------------------------------------|
 
-**Returns**
+#### Returns
 
 Boolean.
 
@@ -370,7 +370,7 @@ Boolean.
 
 `app.project.item(index).layer(index).applyPreset(presetName);`
 
-**Description**
+#### Description
 
 Applies the specified collection of animation settings (an animation preset) to all the currently selected layers of the comp to which the layer belongs. If no layer is selected, it applies the animation preset to a new solid layer.
 
@@ -378,12 +378,12 @@ Predefined animation preset files are installed in the Presets folder, and users
 
 !> **Warning:** The animation preset is applied to the the selected layer(s) of the comp, not to the layer whose applyPreset function is called. Hence, the layer whose applyPreset function is called effectively just determines the comp whose layers are processed.
 
-**Parameters**
+#### Parameters
 
 | `presetName`   | An [Extendscript File](https://extendscript.docsforadobe.dev/file-system-access/file-object.html) object for the file containing the animation preset.   |
 |----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 
-**Returns**
+#### Returns
 
 Nothing.
 
@@ -393,7 +393,7 @@ Nothing.
 
 `app.project.item(index).layer(index).copyToComp(intoComp)`
 
-**Description**
+#### Description
 
 Copies the layer into the specified composition. The original layer remains unchanged.
 
@@ -407,12 +407,12 @@ This is the same as copying and pasting a layer through the user interface.
 
 !> **Warning:** As of After Effects 13.7 (13.6, has not been tested), if the copied layer has an effect on it and the user undoes the action, After Effects will Crash.
 
-**Parameters**
+#### Parameters
 
 | `intoComp`   | The target composition, and [CompItem object](../items/compitem.md#compitem).   |
 |--------------|---------------------------------------------------------------------------------|
 
-**Returns**
+#### Returns
 
 Nothing.
 
@@ -424,18 +424,18 @@ Nothing.
 
 ?> **Note:** This functionality was added in After Effects 22.3 (2022)
 
-**Description**
+#### Description
 
 Runs Scene Edit Detection on the layer that the method is called on and returns an array containing the times of any detected scenes. This is the same as selecting a layer in the Timeline and choosing "Layer > Scene Edit Detection" with the single argument determining whether the edits are applied as markers, layer splits, pre-comps, or are not applied to the layer.
 
 Just as in the UI, `doSceneEditDetection` will fail and error if called on a non-video layer or a video layer with Time Remapping enabled.
 
-**Parameters**
+#### Parameters
 
 | `applyOptions`   | How the detected edits will be applied. A `SceneEditDetectionMode`<br/>enumerated value, one of:<br/><br/>- `SceneEditDetectionMode.MARKERS`: Create markers at edit points.<br/>- `SceneEditDetectionMode.SPLIT`: Split layer .<br/>- `SceneEditDetectionMode.SPLIT_PRECOMP`: Split layer at edit<br/>  points and pre-compose each one.<br/>- `SceneEditDetectionMode.NONE`: Detected edits are not applied<br/>  to the layer.   |
 |------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
-**Returns**
+#### Returns
 
 Array of floating-point values; the times of the detected edit points expressed in composition time.
 
@@ -445,15 +445,15 @@ Array of floating-point values; the times of the detected edit points expressed 
 
 `app.project.item(index).layer(index).duplicate()`
 
-**Description**
+#### Description
 
 Duplicates the layer. Creates a new Layer object in which all values are the same as in this one. This has the same effect as selecting a layer in the user interface and choosing Edit > Duplicate, except the selection in the user interface does not change when you call this method.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Layer object.
 
@@ -463,16 +463,16 @@ Layer object.
 
 `app.project.item(index).layer(index).moveAfter(layer)`
 
-**Description**
+#### Description
 
 Moves this layer to a position immediately after (below) the specified layer.
 
-**Parameters**
+#### Parameters
 
 | `layer`   | The target layer, a layer object in the same composition.   |
 |-----------|-------------------------------------------------------------|
 
-**Returns**
+#### Returns
 
 Nothing.
 
@@ -482,16 +482,16 @@ Nothing.
 
 `app.project.item(index).layer(index).moveBefore(layer)`
 
-**Description**
+#### Description
 
 Moves this layer to a position immediately before (above) the specified layer.
 
-**Parameters**
+#### Parameters
 
 | `layer`   | The target layer, a layer object in the same composition.   |
 |-----------|-------------------------------------------------------------|
 
-**Returns**
+#### Returns
 
 Nothing.
 
@@ -501,15 +501,15 @@ Nothing.
 
 `app.project.item(index).layer(index).moveToBeginning()`
 
-**Description**
+#### Description
 
 Moves this layer to the topmost position of the layer stack (the first layer).
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Nothing.
 
@@ -519,15 +519,15 @@ Nothing.
 
 `app.project.item(index).layer(index).moveToEnd()`
 
-**Description**
+#### Description
 
 Moves this layer to the bottom position of the layer stack (the last layer).
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Nothing.
 
@@ -537,15 +537,15 @@ Nothing.
 
 `app.project.item(index).layer(index).remove()`
 
-**Description**
+#### Description
 
 Deletes the specified layer from the composition.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Nothing.
 
@@ -555,7 +555,7 @@ Nothing.
 
 `app.project.item(index).layer(index).setParentWithJump([newParent])`
 
-**Description**
+#### Description
 
 Sets the parent of this layer to the specified layer, without changing the transform values of the child layer.
 
@@ -563,11 +563,11 @@ There may be an apparent jump in the rotation, translation, or scale of the chil
 
 If you do not want the child layer to jump, set the [parent](#layerparent) attribute directly. In this case, an offset is calculated and set in the child layer's transform fields, to prevent the jump from occurring.
 
-**Parameters**
+#### Parameters
 
 | `newParent`   | Optional, a layer object in the same composition. If not<br/>specified, it sets the parent to None.   |
 |---------------|-------------------------------------------------------------------------------------------------------|
 
-**Returns**
+#### Returns
 
 Nothing.

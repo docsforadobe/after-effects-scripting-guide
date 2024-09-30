@@ -2,7 +2,7 @@
 
 `app.project.item(index)`
 
-**Description**
+#### Description
 
 The AVItem object provides access to attributes and methods of audio/visual files imported into After Effects.
 
@@ -22,14 +22,14 @@ See [Javascript Classes](../introduction/javascript.md#javascriptclasses) and [A
 
 `app.project.item(index).duration`
 
-**Description**
+#### Description
 
 Returns the duration, in seconds, of the item. Still footage items have a duration of 0.
 
 - In a CompItem, the value is linked to the duration of the composition, and is read/write.
 - In a FootageItem, the value is linked to the `duration` of the `mainSource` object, and is read-only.
 
-**Type**
+#### Type
 
 Floating-point value in the range [0.0..10800.0]; read/write for a `CompItem`; otherwise, read-only.
 
@@ -39,11 +39,11 @@ Floating-point value in the range [0.0..10800.0]; read/write for a `CompItem`; o
 
 `app.project.item(index).footageMissing`
 
-**Description**
+#### Description
 
 When true, the AVItem is a placeholder, or represents footage with a source file that cannot be found. In this case, the path of the missing source file is in the `missingFootagePath` attribute of the footage item's source-file object. See [FootageItem.mainSource](footageitem.md#footageitemmainsource) and [FileSource.missingFootagePath](../sources/filesource.md#filesourcemissingfootagepath).
 
-**Type**
+#### Type
 
 Boolean; read-only.
 
@@ -53,11 +53,11 @@ Boolean; read-only.
 
 `app.project.item(index).frameDuration`
 
-**Description**
+#### Description
 
 Returns the length of a frame for this AVItem, in seconds. This is the reciprocal of `frameRate`. When set, the reciprocal is automatically set as a new `frameRate` value. This attribute returns the reciprocal of the `frameRate`, which may not be identical to a value you set, if that value is not evenly divisible into 1.0 (for example, 0.3). Due to numerical limitations, (1 / (1 / 0.3)) is close to, but not exactly, 0.3. If the AVItem is a FootageItem, this value is linked to the `mainSource`, and is read-only. To change it, set the `conformFrameRate` of the `mainSource` object. This sets both the `frameRate` and `frameDuration` of the FootageItem.
 
-**Type**
+#### Type
 
 Floating-point value in the range [1/99 .. 1.0]; read-only for a FootageItem, otherwise read/write.
 
@@ -67,14 +67,14 @@ Floating-point value in the range [1/99 .. 1.0]; read-only for a FootageItem, ot
 
 `app.project.item(index).frameRate`
 
-**Description**
+#### Description
 
 The frame rate of the AVItem, in frames-per-second. This is the reciprocal of the `frameDuration` . When set, the reciprocal is automatically set as a new `frameDuration` value.
 
 - In a CompItem, the value is linked to the `frameRate` of the composition, and is read/write.
 - In a FootageItem, the value is linked to the `frameRate` of the `mainSource` object, and is read-only. To change it, set the `conformFrameRate` of the `mainSource` object. This sets both the `frameRate` and `frameDuration` of the FootageItem.
 
-**Type**
+#### Type
 
 Floating-point value in the range [1.0..99.0]; read-only for a FootageItem, otherwise read/write.
 
@@ -84,14 +84,14 @@ Floating-point value in the range [1.0..99.0]; read-only for a FootageItem, othe
 
 `app.project.item(index).hasAudio`
 
-**Description**
+#### Description
 
 When true, the AVItem has an audio component.
 
 - In a CompItem, the value is linked to the composition.
 - In a FootageItem, the value is linked to the `mainSource` object.
 
-**Type**
+#### Type
 
 Boolean; read-only.
 
@@ -101,14 +101,14 @@ Boolean; read-only.
 
 `app.project.item(index).hasVideo`
 
-**Description**
+#### Description
 
 When true, the AVItem has a video component.
 
 - In a CompItem, the value is linked to the composition.
 - In a FootageItem, the value is linked to the `mainSource` object.
 
-**Type**
+#### Type
 
 Boolean; read-only.
 
@@ -118,14 +118,14 @@ Boolean; read-only.
 
 `app.project.item(index).height`
 
-**Description**
+#### Description
 
 The height of the item in pixels.
 
 - In a CompItem, the value is linked to the composition, and is read/write.
 - In a FootageItem, the value is linked to the `mainSource` object, and is read/write only if the `mainSource` object is a SolidSource. Otherwise, it is read-only.
 
-**Type**
+#### Type
 
 Integer in the range [1…30000]; read/write, except as noted.
 
@@ -137,7 +137,7 @@ Integer in the range [1…30000]; read/write, except as noted.
 
 ?> **Note:** This functionality was added in After Effects 18.0 (2021)
 
-**Description**
+#### Description
 
 Test whether the AVItem can be used as an alternate source when calling [Property.setAlternateSource()](../properties/property.md#propertysetalternatesource).
 
@@ -149,7 +149,7 @@ A CompItem or a FootageItem can be used as an alternate source for the layer, wi
 - If the AVItem is a [FootageItem object](footageitem.md#footageitem) and the FootageItem.FootageSource is a [FileSource object](../sources/filesource.md#filesource) then that FileSource should not point to a non-media file e.g. a JSX script file.
 - Setting the AVItem cannot create a cyclical reference within the project.
 
-**Type**
+#### Type
 
 Boolean; read only.
 
@@ -159,13 +159,13 @@ Boolean; read only.
 
 `app.project.item(index).name`
 
-**Description**
+#### Description
 
 The name of the item, as shown in the Project panel.
 
 - In a FootageItem, the value is linked to the `mainSource` object. If the `mainSource` object is a `FileSource`, this value controls the display name in the Project panel, but does not affect the file name.
 
-**Type**
+#### Type
 
 String; read/write.
 
@@ -175,7 +175,7 @@ String; read/write.
 
 `app.project.item(index).pixelAspect`
 
-**Description**
+#### Description
 
 The pixel aspect ratio (PAR) of the item.
 
@@ -195,7 +195,7 @@ The value you retrieve after setting may be slightly different from the value yo
 |                          1.46 |                                    1.45869  |
 |                          2    |                                    2        |
 
-**Type**
+#### Type
 
 Floating-point value, in the range [0.01..100.0]; read/write.
 
@@ -205,11 +205,11 @@ Floating-point value, in the range [0.01..100.0]; read/write.
 
 `app.project.item(index).proxySource`
 
-**Description**
+#### Description
 
 The FootageSource being used as a proxy. The attribute is read-only; to change it, call any of the AVItem methods that change the proxy source: `setProxy()`, `setProxyWithSequence()`, `setProxyWithSolid()`, or `setProxyWithPlaceholder()`.
 
-**Type**
+#### Type
 `FootageSource` object; read-only.
 
 ---
@@ -218,11 +218,11 @@ The FootageSource being used as a proxy. The attribute is read-only; to change i
 
 `app.project.item(index).time`
 
-**Description**
+#### Description
 
 The current time of the item when it is being previewed directly from the Project panel. This value is a number of seconds. Use the global method [timeToCurrentFormat()](../general/globals.md#timetocurrentformat) to convert it to a string value that expresses the time in terms of frames. It is an error to set this value for a FootageItem whose `mainSource` is still (`item.mainSource.isStill` is true).
 
-**Type**
+#### Type
 
 Floating-point value; read/write.
 
@@ -232,11 +232,11 @@ Floating-point value; read/write.
 
 `app.project.item(index).usedIn`
 
-**Description**
+#### Description
 
 All the compositions that use this AVItem. Note that upon retrieval, the array value is copied, so it is not automatically updated. If you get this value, then add this item into another composition, you must retrieve the value again to get an array that includes the new item.
 
-**Type**
+#### Type
 
 Array of CompItem objects; read-only.
 
@@ -246,11 +246,11 @@ Array of CompItem objects; read-only.
 
 `app.project.item(index).useProxy`
 
-**Description**
+#### Description
 
 When true, a proxy is used for the item. It is set to true by all the `SetProxy` methods, and to false by the `SetProxyToNone()` method.
 
-**Type**
+#### Type
 
 Boolean; read/write.
 
@@ -260,14 +260,14 @@ Boolean; read/write.
 
 `app.project.item(index).width`
 
-**Description**
+#### Description
 
 The width of the item, in pixels.
 
 - In a CompItem, the value is linked to the composition, and is read/write.
 - In a FootageItem, the value is linked to the `mainSource` object, and is read/write only if the `mainSource` object is a SolidSource. Otherwise, it is read-only.
 
-**Type**
+#### Type
 
 Integer in the range [1…30000]; read/write, except as noted.
 
@@ -279,7 +279,7 @@ Integer in the range [1…30000]; read/write, except as noted.
 
 `app.project.item(index).setProxy(file)`
 
-**Description**
+#### Description
 
 Sets a file as the proxy of this AVItem.
 
@@ -289,12 +289,12 @@ It does not preserve the interpretation parameters, instead using the user prefe
 
 This differs from setting a FootageItem's `mainSource`, but both actions are performed as in the user interface.
 
-**Parameters**
+#### Parameters
 
 | `file`   | An [Extendscript File](https://extendscript.docsforadobe.dev/file-system-access/file-object.html) object for the file to be used as a proxy.   |
 |----------|------------------------------------------------------------------------------------------------------------------------------------------------|
 
-**Returns**
+#### Returns
 
 None.
 
@@ -304,15 +304,15 @@ None.
 
 `app.project.item(index).setProxyToNone()`
 
-**Description**
+#### Description
 
 Removes the proxy from this AVItem, sets the value of `proxySource` to `null`, and sets the value of `useProxy` to false.
 
-**parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Nothing.
 
@@ -322,19 +322,19 @@ Nothing.
 
 `app.project.item(index).setProxyWithPlaceholder(name, width, height ,frameRate, duration)`
 
-**Description**
+#### Description
 
 Creates a PlaceholderSource object with specified values, sets this as the value of the `proxySource` attribute, and sets `useProxy` to true. It does not preserve the interpretation parameters, instead using the user preferences.
 
 ?> **Note:** There is no direct way to set a placeholder as a proxy in the user interface; this behavior occurs when a proxy has been set and then moved or deleted.
 
-**parameters**
+#### Parameters
 
 | `name`            | A string containing the name of the new object.                                                                                                                                                                                                                 |
 |-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `width`, `height` | The pixel dimensions of the placeholder, an integer<br/>in the range [4..30000]. `frameRate` The<br/>frames-per-second, an integer in the range [1..99].<br/>`duration` The total length in seconds, up to 3<br/>hours. An integer in the range [0.0..10800.0]. |
 
-**Returns**
+#### Returns
 
 Nothing.
 
@@ -344,7 +344,7 @@ Nothing.
 
 `app.project.item(index).setProxyWithSequence(file,forceAlphabetical)`
 
-**Description**
+#### Description
 
 Sets a sequence of files as the proxy of this AVItem, with the option of forcing alphabetical order.
 Loads the specified file sequence into a new FileSource object, sets this as the value of the `proxySource` attribute, and sets `useProxy` to true.
@@ -352,13 +352,13 @@ Loads the specified file sequence into a new FileSource object, sets this as the
 It does not preserve the interpretation parameters, instead using the user preferences.
 If any file has an unlabeled alpha channel, and the user preference says to ask the user what to do, the method estimates the alpha interpretation, rather than asking the user.
 
-**parameters**
+#### Parameters
 
 | `file`              | An [Extendscript File](https://extendscript.docsforadobe.dev/file-system-access/file-object.html) object for the first file in the sequence.   |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
 | `forceAlphabetical` | When true, use the "Force alphabetical order" option.                                                                                          |
 
-**Returns**
+#### Returns
 
 Nothing.
 
@@ -368,18 +368,18 @@ Nothing.
 
 `app.project.item(index).setProxyWithSolid(color, name, width, height, pixelAspect)`
 
-**Description**
+#### Description
 
 Creates a [SolidSource object](../sources/solidsource.md#solidsource) with specified values, sets this as the value of the `proxySource` attribute, and sets `useProxy` to true. It does not preserve the interpretation parameters, instead using the user preferences.
 
 ?> **Note:** There is no way, using the user interface, to set a solid as a proxy; this feature is available only through scripting.
 
-**parameters**
+#### Parameters
 
 | `color`           | The color of the solid, an array of 3 floating-point<br/>values, [R, G, B], in the range [0.0..1.0]. `name`<br/>A string containing the name of the new object.                         |
 |-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `width`, `height` | The pixel dimensions of the placeholder, an integer<br/>in the range [1…30000]. `pixelAspect` The pixel<br/>aspect of the solid, a floating-point value in the<br/>range [0.01… 100.0]. |
 
-**Returns**
+#### Returns
 
 Nothing.

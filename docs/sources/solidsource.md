@@ -5,7 +5,7 @@
 `app.project.item(index).proxySource`
 <br/>
 
-**Description**
+#### Description
 
 The SolidSource object represents a solid-color footage source.
 
@@ -19,10 +19,10 @@ The SolidSource object represents a solid-color footage source.
 
 `solidSource.color`
 
-**Description**
+#### Description
 
 The color of the solid, expressed as red, green, and blue values.
 
-**Type**
+#### Type
 
 Array of three floating-point values, `[R, G, B]`, in the range `[0.0..1.0]`; read/write.

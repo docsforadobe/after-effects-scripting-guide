@@ -2,7 +2,7 @@
 
 `app.settings`
 
-**Description**
+#### Description
 
 The Settings object provides an easy way to manage settings for third-party scripts. The settings are saved in the main After Effects preferences file, and are persistent between application sessions.
 
@@ -26,24 +26,24 @@ As of Version 12/CC, preferences and settings methods now take a third argument 
 
 `app.settings.getSetting(sectionName, keyName[, prefType])`
 
-**Description**
+#### Description
 
 Retrieves a script settings item value from the preferences file.
 
 !> **Warning:** If the value is greater than 1999 bytes, `getSetting` that item will throw an error (seen in AE 15.0.1)
 
-**Parameters**
+#### Parameters
 
 | `sectionName`   | A string containing the name of a settings section.        |
 |-----------------|------------------------------------------------------------|
 | `keyName`       | A string containing the key name of the setting item.      |
 | `prefType`      | Optional, an enum indicating which preference file to use. |
 
-**Returns**
+#### Returns
 
 String.
 
-**Example**
+#### Example
 
 If you have saved a setting named with the key name "trimPrecomps" in a section called "Precomp Cropper", you can retrieve the value by:
 
@@ -58,18 +58,18 @@ alert("The setting is: " + trimPrecompsSetting);
 
 `app.settings.haveSetting(sectionName, keyName[, prefType])`
 
-**Description**
+#### Description
 
 Returns true if the specified script settings item exists and has a value.
 
-**Parameters**
+#### Parameters
 
 | `sectionName`   | A string containing the name of a settings section.        |
 |-----------------|------------------------------------------------------------|
 | `keyName`       | A string containing the key name of the setting item.      |
 | `prefType`      | Optional, an enum indicating which preference file to use. |
 
-**Returns**
+#### Returns
 
 Boolean.
 
@@ -79,13 +79,13 @@ Boolean.
 
 `app.settings.saveSetting(sectionName, keyName, value[, prefType])`
 
-**Description**
+#### Description
 
 Saves a value for a script settings item.
 
 !> **Warning:** If the value is greater than 1999 bytes, `saveSetting` that item will throw an error (seen in AE 15.0.1)
 
-**Parameters**
+#### Parameters
 
 | `sectionName`   | A string containing the name of a settings section.        |
 |-----------------|------------------------------------------------------------|
@@ -93,11 +93,11 @@ Saves a value for a script settings item.
 | `value`         | A string containing the new value.                         |
 | `prefType`      | Optional, an enum indicating which preference file to use. |
 
-**Returns**
+#### Returns
 
 Nothing.
 
-**Example**
+#### Example
 
 If you want to save a setting called "trimPrecomps" for a script named "Precomp Cropper", you could save that setting via
 

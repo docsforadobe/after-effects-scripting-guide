@@ -15,6 +15,7 @@
     - [ ] Update tables
       - [ ] Add new "Type" field, because it's a Good Thing
     - [x] Fix images
+    - [x] Fix headers
 - [ ] Project Cleanup
   - [x] Delete legacy items
   - [x] Update legacy items
