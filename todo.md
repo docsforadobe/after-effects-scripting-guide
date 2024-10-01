@@ -5,7 +5,7 @@
   - [x] Set global docsify settings in index.html
   - [x] Create the sidebar
   - [x] Set up search
-- [ ] Docs Cleanup
+- [x] Docs Cleanup
   - [x] Bulk cleanup
     - [x] Search & replace
     - [x] Handle lingering bulk-conversion issues
@@ -26,10 +26,10 @@
       - [x] ./text
     - [x] Fix images
     - [x] Fix headers
-  - [ ] Update index.md
+  - [x] Update index.md
 - [ ] Project Cleanup
   - [x] Delete legacy items
   - [x] Update legacy items
     - [x] Update readme
-  - [ ] Apply / develop css style
+  - [x] Apply / develop css style
   - [ ] Set up GH Pages deploy
