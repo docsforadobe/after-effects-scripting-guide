@@ -62,7 +62,7 @@ This specifies how Docisfy works & feels across the site.
 
 The simplest route here is to replace `./docs/index.html` with the same file from the [After Effects Scripting Guide](https://github.com/docsforadobe/after-effects-scripting-guide/), as that document will have the most up-to-date docsify settings.
 
-?> **Note:** This index file also includes a custom script file, loading support for Applescript syntax highlighting! Don't only copy the settings object!
+?> **Note:** This index file also includes additional script files, loading support for various plugins! Don't only copy the settings object!
 
 Then, update any Docsify settings in the "THIS GUIDE ONLY" settings, leaving the rest alone.
 
