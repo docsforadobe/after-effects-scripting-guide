@@ -21,7 +21,7 @@
       - [x] ./other
       - [x] ./properties
       - [x] ./renderqueue
-      - [ ] ./sources
+      - [x] ./sources
       - [ ] ./text
     - [x] Fix images
     - [x] Fix headers

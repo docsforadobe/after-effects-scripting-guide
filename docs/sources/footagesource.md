@@ -275,8 +275,9 @@ Sets `fieldSeparationType` and [removePulldown](#footagesourceremovepulldown) to
 
 #### Parameters
 
-| `method`   | The method to use for estimation. A `PulldownMethod` enumerated value. One of:<br/>- `PulldownMethod.PULLDOWN_3_2`<br/>- `PulldownMethod.ADVANCE_24P`   |
-|------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Parameter |          Type          |                                                   Description                                                    |
+| --------- | ---------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `method`  | `PulldownMethod` enum. | The method to use for estimation. One of:<br/>- `PulldownMethod.PULLDOWN_3_2`<br/>- `PulldownMethod.ADVANCE_24P` |
 
 #### Returns
 
