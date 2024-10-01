@@ -79,11 +79,11 @@
 
 - Match Names
 
-	- [AV Layer Match Names](../matchnames/layer/avlayer)
-	- [3D Layer Match Names](../matchnames/layer/3dlayer)
-	- [Camera Layer Match Names](../matchnames/layer/cameralayer)
-	- [Light Layer Match Names](../matchnames/layer/lightlayer)
-	- [Text Layer Match Names](../matchnames/layer/textlayer)
-	- [Shape Layer Match Names](../matchnames/layer/shapelayer)
-	- [Layer Styles Match Names](../matchnames/layer/layerstyles)
-	- [First Party Match Names](../matchnames/effects/firstparty)
+	- [AV Layer Match Names](../matchnames/layer-avlayer)
+	- [3D Layer Match Names](../matchnames/layer-3dlayer)
+	- [Camera Layer Match Names](../matchnames/layer-cameralayer)
+	- [Light Layer Match Names](../matchnames/layer-lightlayer)
+	- [Text Layer Match Names](../matchnames/layer-textlayer)
+	- [Shape Layer Match Names](../matchnames/layer-shapelayer)
+	- [Layer Styles Match Names](../matchnames/layer-layerstyles)
+	- [First-Party Effect Match Names](../matchnames/effects-firstparty)

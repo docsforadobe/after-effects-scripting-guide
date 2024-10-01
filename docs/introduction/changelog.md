@@ -186,8 +186,8 @@ What's new and changed for scripting?
   - Added: [Property.alternateSource](../properties/property.md#propertyalternatesource)
   - Added: [Property.canSetAlternateSource](../properties/property.md#propertycansetalternatesource)
   - Added: [Property.setAlternateSource()](../properties/property.md#propertysetalternatesource)
-  - Added relevant [match names](../matchnames/layer/avlayer.md#matchnameslayeravlayer)
-- Added [match name for Essential Properties](../matchnames/layer/avlayer.md#matchnameslayeravlayer) property group.
+  - Added relevant [match names](../matchnames/layer-avlayer.md#matchnameslayeravlayer)
+- Added [match name for Essential Properties](../matchnames/layer-avlayer.md#matchnameslayeravlayer) property group.
 
 ---
 
@@ -196,7 +196,7 @@ What's new and changed for scripting?
 ### [After Effects 17.1.1](https://helpx.adobe.com/after-effects/using/whats-new/2020-1.html) (May 2020)
 
 - Scripting access to Shape Layer Stroke Taper, Stroke Waves, Offset Paths Copies, Offset Path Copy Offset:
-  - Added relevant [match names](../matchnames/layer/shapelayer.md#matchnameslayershapelayer)
+  - Added relevant [match names](../matchnames/layer-shapelayer.md#matchnameslayershapelayer)
 - Fixed an issue to allow negative values for [CompItem.displayStartTime](../items/compitem.md#compitemdisplaystarttime):
   - Added [CompItem.displayStartFrame](../items/compitem.md#compitemdisplaystartframe)
   - Now matches the valid range allowed when setting the Start Timecode in the Composition Settings Dialog (-3:00:00:00 to 23:59:00:00).
