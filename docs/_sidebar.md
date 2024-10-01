@@ -68,7 +68,7 @@
 
 	- [Collection](../other/collection)
 	- [ImportOptions](../other/importoptions)
-	- [KeyframEease](../other/keyframeease)
+	- [KeyframeEase](../other/keyframeease)
 	- [MarkerValue](../other/markervalue)
 	- [Preferences](../other/preferences)
 	- [Settings](../other/settings)
