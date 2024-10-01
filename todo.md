@@ -1,9 +1,10 @@
 # Todo
 
 - [x] Bulk convert .rst -> md
-- [ ] Initialize docsify
+- [x] Initialize docsify
   - [x] Set global docsify settings in index.html
   - [x] Create the sidebar
+  - [ ] Set up search
 - [ ] Docs Cleanup
   - [x] Bulk cleanup
     - [x] Search & replace

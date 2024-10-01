@@ -16,74 +16,74 @@
 - Items
 
 	- [Item](../items/item)
-	- [Itemcollection](../items/itemcollection)
-	- [Avitem](../items/avitem)
-	- [Compitem](../items/compitem)
-	- [Folderitem](../items/folderitem)
-	- [Footageitem](../items/footageitem)
+	- [ItemCollection](../items/itemcollection)
+	- [AVItem](../items/avitem)
+	- [CompItem](../items/compitem)
+	- [FolderItem](../items/folderitem)
+	- [FootageItem](../items/footageitem)
 
 - Layers
 
 	- [Layer](../layers/layer)
-	- [Layercollection](../layers/layercollection)
-	- [Avlayer](../layers/avlayer)
-	- [Cameralayer](../layers/cameralayer)
-	- [Lightlayer](../layers/lightlayer)
-	- [Shapelayer](../layers/shapelayer)
-	- [Textlayer](../layers/textlayer)
-	- [Threedmodellayer](../layers/threedmodellayer)
+	- [LayerCollection](../layers/layercollection)
+	- [AVLayer](../layers/avlayer)
+	- [CameraLayer](../layers/cameralayer)
+	- [LightLayer](../layers/lightlayer)
+	- [ShapeLayer](../layers/shapelayer)
+	- [TextLayer](../layers/textlayer)
+	- [ThreeDModelLayer](../layers/threedmodellayer)
 
 - Properties
 
-	- [Propertybase](../properties/propertybase)
+	- [PropertyBase](../properties/propertybase)
 	- [Property](../properties/property)
-	- [Propertygroup](../properties/propertygroup)
-	- [Maskpropertygroup](../properties/maskpropertygroup)
+	- [PropertyGroup](../properties/propertygroup)
+	- [MaskPropertyGroup](../properties/maskpropertygroup)
 
 - Render Queue
 
-	- [Renderqueue](../renderqueue/renderqueue)
-	- [Rqitemcollection](../renderqueue/rqitemcollection)
-	- [Renderqueueitem](../renderqueue/renderqueueitem)
-	- [OM Collection](../renderqueue/omcollection)
-	- [Outputmodule](../renderqueue/outputmodule)
+	- [RenderQueue](../renderqueue/renderqueue)
+	- [RQItemCollection](../renderqueue/rqitemcollection)
+	- [RenderQueueItem](../renderqueue/renderqueueitem)
+	- [OMCollection](../renderqueue/omcollection)
+	- [OutputModule](../renderqueue/outputmodule)
 
 - Sources
 
-	- [Filesource](../sources/filesource)
-	- [Footagesource](../sources/footagesource)
-	- [Placeholdersource](../sources/placeholdersource)
-	- [Solidsource](../sources/solidsource)
+	- [FileSource](../sources/filesource)
+	- [FootageSource](../sources/footagesource)
+	- [PlaceholderSource](../sources/placeholdersource)
+	- [SolidSource](../sources/solidsource)
 
 - Text
 
-	- [Characterrange](../text/characterrange)
-	- [Composedlinerange](../text/composedlinerange)
-	- [Fontobject](../text/fontobject)
-	- [Fontsobject](../text/fontsobject)
-	- [Paragraphrange](../text/paragraphrange)
-	- [Textdocument](../text/textdocument)
+	- [CharacterRange](../text/characterrange)
+	- [ComposedLineRange](../text/composedlinerange)
+	- [FontObject](../text/fontobject)
+	- [FontsObject](../text/fontsobject)
+	- [ParagraphRange](../text/paragraphrange)
+	- [TextDocument](../text/textdocument)
 
 - Other
 
 	- [Collection](../other/collection)
-	- [Importoptions](../other/importoptions)
-	- [Keyframeease](../other/keyframeease)
-	- [Markervalue](../other/markervalue)
+	- [ImportOptions](../other/importoptions)
+	- [KeyframEease](../other/keyframeease)
+	- [MarkerValue](../other/markervalue)
 	- [Preferences](../other/preferences)
 	- [Settings](../other/settings)
 	- [Shape](../other/shape)
 	- [View](../other/view)
 	- [Viewer](../other/viewer)
-	- [Viewoptions](../other/viewoptions)
+	- [ViewOptions](../other/viewoptions)
 
 - Match Names
 
-	- [Avlayer](../matchnames/layer/avlayer)
-	- [3dlayer](../matchnames/layer/3dlayer)
-	- [Cameralayer](../matchnames/layer/cameralayer)
-	- [Lightlayer](../matchnames/layer/lightlayer)
-	- [Textlayer](../matchnames/layer/textlayer)
-	- [Shapelayer](../matchnames/layer/shapelayer)
-	- [Layerstyles](../matchnames/layer/layerstyles)
-	- [Firstparty](../matchnames/effects/firstparty)
+	- [AV Layer Match Names](../matchnames/layer/avlayer)
+	- [3D Layer Match Names](../matchnames/layer/3dlayer)
+	- [Camera Layer Match Names](../matchnames/layer/cameralayer)
+	- [Light Layer Match Names](../matchnames/layer/lightlayer)
+	- [Text Layer Match Names](../matchnames/layer/textlayer)
+	- [Shape Layer Match Names](../matchnames/layer/shapelayer)
+	- [Layer Styles Match Names](../matchnames/layer/layerstyles)
+	- [First Party Match Names](../matchnames/effects/firstparty)
