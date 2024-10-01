@@ -504,7 +504,6 @@ This function will return the postscript name of the variable font for the speci
 |   Parameter    |              Type              |                                           Description                                           |
 | -------------- | ------------------------------ | ----------------------------------------------------------------------------------------------- |
 | `vectorValues` | Array of floating-point values | Values to check [FontObject.designVector](#fontobjectdesignvector) for the given variable font. |
-| -------------- | ------------------------------ | ----------------------------------------------------------------------------------------------- |
 
 #### Returns
 
