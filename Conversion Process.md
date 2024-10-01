@@ -41,40 +41,28 @@ This works in several main phases:
 2. For simplicity, we're going to merge these files from `./build/markdown`/ straight into `./docs/`, so that all of each subfolder's .rst files sit alongside their .md files
     - If you're iffy on this / want more caution, feel free to do this later (but the rest of this doc will assume you've made this change)
 3. Delete the `./build/` folder, as it won't be needed
+4. Rename `./docs/index.md` to `./docs/_sidebar.md`
 
 ---
 
 ## 3. Initialize Docsify
 
-1. In your terminal, initialize docsify by running `docsify init ./docs`
-    - When prompted to use the existing folder, say yes
-    - This will create three files: `./docs/index.html`, `./docs/.nojekyll`, `./docs/README.md`
-2. In the same terminal, serve the docs by running `docsify serve ./docs`
-3. Delete `./docs/README.md`, as we won't need it.
+Instead of initializing Docsify from scratch, we're going to just copy files over from the [After Effects Scripting Guide](https://github.com/docsforadobe/after-effects-scripting-guide/) and tweak those to fit.
 
-?> **Note:** We strongly recommend committing this work to a new branch before proceeding, if you haven't already.
-
-Navigate to the provided url above to check your progress as you work through the cleanup stages below.
-
-#### Set Global Docsify Settings
-
-This specifies how Docisfy works & feels across the site.
-
-The simplest route here is to replace `./docs/index.html` with the same file from the [After Effects Scripting Guide](https://github.com/docsforadobe/after-effects-scripting-guide/), as that document will have the most up-to-date docsify settings.
-
-?> **Note:** This index file also includes additional script files, loading support for various plugins! Don't only copy the settings object!
-
-Then, update any Docsify settings in the "THIS GUIDE ONLY" settings, leaving the rest alone.
-
-#### Create the sidebar
-
-This will hold the full table of contents, which are currently in `index.md` – however we need to modify the document structure & styling to work better for the sidebar.
-
-Rename `./docs/index.md` to `./docs/_sidebar.md`, then see `./docs/_sidebar.md` in the [After Effects Scripting Guide](https://github.com/docsforadobe/after-effects-scripting-guide/) for how to adjust this structure.
-
-#### Update index.md
-
-Write a general intro sort of thing here; again, see AE scripting docs or reference.
+1. Copy the following files from the above guide into this repo, overwriting if existing:
+    - `./docs/.nojekyll`
+    - `./docs/index.html`
+    - `./docs/index.md`
+    - `./.editorconfig`
+    - `./.gitignore`
+    - `./Conversion Process.md`
+2. Update anything related to "After Effects Scripting Guide" and make it relevant for this repo
+    - `./docs/index.html`
+      - `<title>` tag at the top
+      - `<meta>` tag at the top
+      - The project name & repo url under `// THIS GUIDE ONLY`
+    - `./docs/index.md`
+      - Page title & text content; this can be pulled from the main project readme, to start
 
 ---
 
@@ -109,6 +97,10 @@ Write a general intro sort of thing here; again, see AE scripting docs or refere
     - `.. WARNING::`
 
 ### Manual Cleanup
+
+#### Sidebar
+
+Reformat the `./docs/_sidebar.md` file to match the exact same list layout as the same file in the [After Effects Scripting Guide](https://github.com/docsforadobe/after-effects-scripting-guide/)
 
 #### Links
 
@@ -170,16 +162,12 @@ Here are the table header formats to use:
 
 ## 5. Project Cleanup
 
-Now that we've got a full suite of .md files, we can remove the old source .rst files, update gitignore, and all of those fun things.
+Now that we've got a full suite of .md files, we can remove some old cruft:
 
-1. Delete Stuff:
-    - `./.readthedocs.yaml`
-    - `./build/`
-    - `./docs/**/*.rst`
-    - `./docs/conf.py`
-    - `./make.bat`
-    - `./Makefile`
-    - `./requirements.txt`
-2. Change Stuff:
-    - `./.gitignore` – remove any `build`-related items (as there's no more build system)
-    - `./readme.md` – update this to reflect the new language, the fact that things have changed, etc.
+- `./.readthedocs.yaml`
+- `./build/`
+- `./docs/**/*.rst`
+- `./docs/conf.py`
+- `./make.bat`
+- `./Makefile`
+- `./requirements.txt`
