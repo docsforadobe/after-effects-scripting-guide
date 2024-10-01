@@ -8,7 +8,7 @@ ThreeDModelLayer object
 ``app.project.item(index).layer(index)``
 
 .. note::
-   This functionality was added in After Effects 24.4.0.
+   This functionality was added in After Effects 24.4.
 
 **Description**
 

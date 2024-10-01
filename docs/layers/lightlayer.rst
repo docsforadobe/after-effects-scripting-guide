@@ -48,7 +48,7 @@ LightLayer.lightType
 ``app.project.item(index).layer(index).lightType``
 
 .. note::
-   ``LightType.ENVIRONMENT`` was added in After Effects 24.3.0
+   ``LightType.ENVIRONMENT`` was added in After Effects 24.3
 
 **Description**
 
@@ -72,7 +72,7 @@ LightLayer.lightSource
 ``app.project.item(index).layer(index).lightSource``
 
 .. note::
-   ``LightLayer.lightSource`` was added in After Effects 24.3.0
+   ``LightLayer.lightSource`` was added in After Effects 24.3
 
 **Description**
 
