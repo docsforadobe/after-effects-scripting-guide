@@ -17,17 +17,22 @@
       repo: 'https://github.com/docsforadobe/after-effects-scripting-guide/',
 
       // Common to all guides
-      homepage: 'index.md',
       auto2top: true,
+      homepage: 'index.md',
       loadSidebar: true,
       relativePath: true,
       search: 'auto',
-      subMaxLevel: 2,
+      subMaxLevel: 3,
+      timeUpdater: {
+        text: "<div align='right' style='color:gray; font-size:10px; font-style:italic'>last modified: {docsify-updated}</div>",
+        formatUpdated: "{YYYY}-{MM}-{DD}",
+      },
     }
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-applescript.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-updated/src/time-updater.min.js"></script>
 </body>
 </html>
