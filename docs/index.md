@@ -11,3 +11,9 @@ If you're not sure where to start, take a look at the [Overview](./introduction/
 ## Contribution
 
 This endeavour is primarily community-supported & run; contributors are welcome and encouraged to suggest fixes, adjustments, notes/warnings, and anything else that may help the project.
+
+## Licensing & Ownership
+
+This project exists for educational purposes only.
+
+All content is copyright Adobe Systems Incorporated.
