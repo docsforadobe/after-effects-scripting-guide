@@ -97,8 +97,9 @@ Applies the specified existing output-module template.
 
 #### Parameters
 
-| `templateName`   | A string containing the name of the template to be applied.   |
-|------------------|---------------------------------------------------------------|
+|   Parameter    |  Type  |               Description               |
+| -------------- | ------ | --------------------------------------- |
+| `templateName` | String | The name of the template to be applied. |
 
 #### Returns
 
@@ -199,8 +200,9 @@ Saves this output module as a template and adds it to the te mpl ate s array.
 
 #### Parameters
 
-| `name`   | A string containing the name of the new template.   |
-|----------|-----------------------------------------------------|
+| Parameter |  Type  |          Description          |
+| --------- | ------ | ----------------------------- |
+| `name`    | String | The name of the new template. |
 
 #### Returns
 

@@ -19,8 +19,8 @@
       - [x] ./layers
       - [x] ./matchnames
       - [x] ./other
-      - [ ] ./properties
-      - [ ] ./renderqueue
+      - [x] ./properties
+      - [x] ./renderqueue
       - [ ] ./sources
       - [ ] ./text
     - [x] Fix images

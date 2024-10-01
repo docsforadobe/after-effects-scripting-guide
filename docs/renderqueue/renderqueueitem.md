@@ -249,8 +249,9 @@ Applies a Render Settings template to the item. See also [RenderQueueItem.saveAs
 
 #### Parameters
 
-| `templateName`   | A string containing the name of the template to apply.   |
-|------------------|----------------------------------------------------------|
+|   Parameter    |  Type  |            Description             |
+| -------------- | ------ | ---------------------------------- |
+| `templateName` | String | The name of the template to apply. |
 
 #### Returns
 
@@ -339,8 +340,9 @@ Gets an output module with the specified index position.
 
 #### Parameters
 
-| `index`   | The position index of the output module. An integer, in the range `[1..numOutputModules]`.   |
-|-----------|-------------------------------------------------------------------------------------------------|
+| Parameter |                     Type                      |               Description                |
+| --------- | --------------------------------------------- | ---------------------------------------- |
+| `index`   | Integer, in the range `[1..numOutputModules]` | The position index of the output module. |
 
 #### Returns
 
@@ -376,8 +378,10 @@ Saves the item's current render settings as a new template with the specified na
 
 #### Parameters
 
-| `name`   | A string containing the name of the new template.   |
-|----------|-----------------------------------------------------|
+| Parameter |  Type  |          Description          |
+| --------- | ------ | ----------------------------- |
+| `name`    | String | The name of the new template. |
+
 
 #### Returns
 

@@ -99,7 +99,9 @@ Gets a specified item from the ite ms collection.
 
 #### Parameters
 
-`index` | The position index of the item. Integer, in the range `[0..numItems]`.
+| Parameter |                 Type                  |           Description           |
+| --------- | ------------------------------------- | ------------------------------- |
+| `index`   | Integer, in the range `[0..numItems]` | The position index of the item. |
 
 #### Returns
 
@@ -117,8 +119,9 @@ Pauses the current rendering process, or continues a paused rendering process. T
 
 #### Parameters
 
-| `pause`   | `true` to pause a current render process, `false` to continue a paused render.   |
-|-----------|----------------------------------------------------------------------------------|
+| Parameter |  Type   |                                  Description                                   |
+| --------- | ------- | ------------------------------------------------------------------------------ |
+| `pause`   | Boolean | `true` to pause a current render process, `false` to continue a paused render. |
 
 #### Returns
 
@@ -157,8 +160,9 @@ Shows or hides the Render Queue panel.
 
 #### Parameters
 
-| `doShow`   | When `true`, show the Render Queue panel. When `false`, hide it.   |
-|------------|----------------------------------------------------------------|
+| Parameter |  Type   |                           Description                            |
+| --------- | ------- | ---------------------------------------------------------------- |
+| `doShow`  | Boolean | When `true`, show the Render Queue panel. When `false`, hide it. |
 
 #### Returns
 
@@ -200,8 +204,9 @@ Calls the Queue In AME command. This method requires passing a boolean value, te
 
 #### Parameters
 
-| `render_immediately_in_AME`   | Telling AME whether to only queue the render items (`false`) or if AME should also start processing its queue (`true`).   |
-|-------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
+|          Parameter          |  Type   |                                                       Description                                                       |
+| --------------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `render_immediately_in_AME` | Boolean | Telling AME whether to only queue the render items (`false`) or if AME should also start processing its queue (`true`). |
 
 #### Returns
 

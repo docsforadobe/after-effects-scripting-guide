@@ -22,8 +22,9 @@ Adds a composition to the Render Queue, creating a RenderQueueItem.
 
 #### Parameters
 
-| `comp`   | The CompItem object for the composition to be added.   |
-|----------|--------------------------------------------------------|
+| Parameter |                  Type                   |         Description          |
+| --------- | --------------------------------------- | ---------------------------- |
+| `comp`    | [CompItem object](../items/compitem.md) | The composition to be added. |
 
 #### Returns
 
