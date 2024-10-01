@@ -12,82 +12,96 @@ The Property object contains value, keyframe, and expression information about a
 
 #### Examples
 
-- Get and set the value of opacity
-  > ```javascript
-  > var myProperty = myLayer.opacity;
-  > // opacity has propertyValueType of OneD, and is stored as a float
-  > myProperty.setValue(50); //set opacity to 50%
-  > // Variable my Opacity is a float value
-  > var myOpacity = myProperty.value;
-  > ```
-- Get and set the value of a position
-  > ```javascript
-  > var myProperty = myLayer.position;
-  > // position has propertyValueType of ThreeD_SPATIAL, and is stored as an array of 3 floats
-  > myProperty.setValue([10.0, 30.0, 0.0]);
-  > // Variable my Position is an array of 3 floats
-  > var myPosition = myProperty.value;
-  > ```
-- Change the value of a mask shape to be open instead of closed
-  > ```javascript
-  > var myMask = mylayer.mask(1);
-  > var myProperty = myMask.maskPath;
-  > myShape = myProperty.value;
-  > myShape.closed = false;
-  > myProperty.setValue(myShape);
-  > ```
-- Get the value of a color at a particular time. A color is stored as an array of four floats, `[r, g, b, opacity]`. This sets the value of the red component of a light's color at time 4 to be half of that at time 2
-  > ```javascript
-  > var myProperty = myLight.color;
-  > var colorValue = myProperty.valueAtTime(2, true);
-  > colorValue[0] = 0.5 * colorValue[0];
-  > myProperty.setValueAtTime(4, colorValue);
-  > ```
-- Check that a scale calculated by an expression at time 3.5 is the expected value of [10,50]
-  > ```javascript
-  > var myProperty = myLayer.scale;
-  > // false value of preExpression means evaluate the expression
-  > var scaleValue = myProperty.valueAtTime(3.5, false);
+Get and set the value of opacity:
+```javascript
+var myProperty = myLayer.opacity;
+// opacity has propertyValueType of OneD, and is stored as a float
+myProperty.setValue(50); //set opacity to 50%
+// Variable my Opacity is a float value
+var myOpacity = myProperty.value;
+```
 
-  > if (scaleValue[0] === 10 && scaleValue[1] === 50) {
-  >     alert("hurray");
-  > } else {
-  >     alert("oops");
-  > }
-  > ```
-- Keyframe a rotation from 0 to 90 and back again. The animation is 10 seconds, and the middle keyframe is at the 5 second mark. Rotation properties are stored as a OneD value
-  > ```javascript
-  > var myProperty = myLayer.rotation;
-  > myProperty.setValueAtTime(0, 0);
-  > myProperty.setValueAtTime(5, 90);
-  > myProperty.setValueAtTime(10, 0);
-  > ```
-- Change the key frame values for the first three keyframes of some sourcetext
-  > ```javascript
-  > var myProperty = myTextLayer.sourceText;
-  > if (myProperty.numKeys < 3) {
-  >     alert("error, I thought there were 3 keyframes");
-  > } else {
-  >     myProperty.setValueAtKey(1, newTextDocument("keynumber1"));
-  >     myProperty.setValueAtKey(2, newTextDocument("keynumber2"));
-  >     myProperty.setValueAtKey(3, newTextDocument("keynumber3"));
-  > }
-  > ```
-- Set values using the convenience syntax for position, scale, color, or source text
-  > ```javascript
-  > // These two are equivalent. The second fills in a default of 0.
-  > myLayer.position.setValue([20, 30, 0]);
-  > myLayer.position.setValue([20, 30]);
-  > // These two are equivalent. The second fills in a defaultof 100.
-  > myLayer.scale.setValue([50, 50, 100]);
-  > myLayer.scale.setValue([50, 50]);
-  > // These two are equivalent. The second fills in a defaultof 1.0
-  > myLight.color.setValue([0.8, 0.3, 0.1, 1.0]);
-  > myLight.color.setValue([0.8, 0.3, 0.1]);
-  > // These two are equivalent. The second creates a TextDocument
-  > myTextLayer.sourceText.setValue(newTextDocument("foo"));
-  > myTextLayer.sourceText.setValue("foo");
-  > ```
+Get and set the value of a position:
+
+```javascript
+var myProperty = myLayer.position;
+// position has propertyValueType of ThreeD_SPATIAL, and is stored as an array of 3 floats
+myProperty.setValue([10.0, 30.0, 0.0]);
+// Variable my Position is an array of 3 floats
+var myPosition = myProperty.value;
+```
+
+Change the value of a mask shape to be open instead of closed:
+
+```javascript
+var myMask = mylayer.mask(1);
+var myProperty = myMask.maskPath;
+myShape = myProperty.value;
+myShape.closed = false;
+myProperty.setValue(myShape);
+```
+
+Get the value of a color at a particular time. A color is stored as an array of four floats, `[r, g, b, opacity]`. This sets the value of the red component of a light's color at time 4 to be half of that at time 2:
+
+```javascript
+var myProperty = myLight.color;
+var colorValue = myProperty.valueAtTime(2, true);
+colorValue[0] = 0.5 * colorValue[0];
+myProperty.setValueAtTime(4, colorValue);
+```
+
+Check that a scale calculated by an expression at time 3.5 is the expected value of [10,50]:
+
+```javascript
+var myProperty = myLayer.scale;
+// false value of preExpression means evaluate the expression
+var scaleValue = myProperty.valueAtTime(3.5, false);
+
+if (scaleValue[0] === 10 && scaleValue[1] === 50) {
+  alert("hurray");
+} else {
+  alert("oops");
+}
+```
+
+Keyframe a rotation from 0 to 90 and back again. The animation is 10 seconds, and the middle keyframe is at the 5 second mark. Rotation properties are stored as a OneD value:
+
+```javascript
+var myProperty = myLayer.rotation;
+myProperty.setValueAtTime(0, 0);
+myProperty.setValueAtTime(5, 90);
+myProperty.setValueAtTime(10, 0);
+```
+
+Change the key frame values for the first three keyframes of some sourcetext:
+
+```javascript
+var myProperty = myTextLayer.sourceText;
+if (myProperty.numKeys < 3) {
+  alert("error, I thought there were 3 keyframes");
+} else {
+  myProperty.setValueAtKey(1, newTextDocument("keynumber1"));
+  myProperty.setValueAtKey(2, newTextDocument("keynumber2"));
+  myProperty.setValueAtKey(3, newTextDocument("keynumber3"));
+}
+```
+
+Set values using the convenience syntax for position, scale, color, or source text:
+
+```javascript
+// These two are equivalent. The second fills in a default of 0.
+myLayer.position.setValue([20, 30, 0]);
+myLayer.position.setValue([20, 30]);
+// These two are equivalent. The second fills in a defaultof 100.
+myLayer.scale.setValue([50, 50, 100]);
+myLayer.scale.setValue([50, 50]);
+// These two are equivalent. The second fills in a defaultof 1.0
+myLight.color.setValue([0.8, 0.3, 0.1, 1.0]);
+myLight.color.setValue([0.8, 0.3, 0.1]);
+// These two are equivalent. The second creates a TextDocument
+myTextLayer.sourceText.setValue(newTextDocument("foo"));
+myTextLayer.sourceText.setValue("foo");
+```
 
 ---
 
