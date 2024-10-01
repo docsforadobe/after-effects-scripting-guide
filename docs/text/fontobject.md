@@ -434,8 +434,10 @@ The character order does not matter, and in the case of a parameter string with 
 
 #### Parameters
 
-| `charString`   | A string with any number of characters that will be checked for support in the [Font object](#fontobject).   |
-|----------------|---------------------------------------------------------------------------------------------------|
+|  Parameter   |  Type  |                               Description                                |
+| ------------ | ------ | ------------------------------------------------------------------------ |
+| `charString` | String | Text that will be checked for support in the [Font object](#fontobject). |
+
 
 #### Returns
 
@@ -455,8 +457,9 @@ This function will `true` if the [Font object](#fontobject) passed as an argumen
 
 #### Parameters
 
-| `fontObject`   | A [Font object](#fontobject)   |
-|----------------|--------------------------------|
+|  Parameter   |            Type            |   Description   |
+| ------------ | -------------------------- | --------------- |
+| `fontObject` | [Font object](#fontobject) | Object to check |
 
 #### Returns
 
@@ -478,8 +481,9 @@ Will return an empty Array if the argument is not a Variable font, or the Variab
 
 #### Parameters
 
-| `fontObject`   | A [Font object](#fontobject)   |
-|----------------|--------------------------------|
+|  Parameter   |            Type            |   Description   |
+| ------------ | -------------------------- | --------------- |
+| `fontObject` | [Font object](#fontobject) | Object to check |
 
 #### Returns
 
@@ -497,8 +501,10 @@ This function will return the postscript name of the variable font for the speci
 
 #### Parameters
 
-| vectorValues   | An array of float values that matches the length of [FontObject.designVector](#fontobjectdesignvector) for the given variable font.   |
-|----------------|----------------------------------------------------------------------------------------------------------------------------------------|
+|   Parameter    |              Type              |                                           Description                                           |
+| -------------- | ------------------------------ | ----------------------------------------------------------------------------------------------- |
+| `vectorValues` | Array of floating-point values | Values to check [FontObject.designVector](#fontobjectdesignvector) for the given variable font. |
+| -------------- | ------------------------------ | ----------------------------------------------------------------------------------------------- |
 
 #### Returns
 

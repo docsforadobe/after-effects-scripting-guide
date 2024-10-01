@@ -251,9 +251,10 @@ alert(str);
 
 #### Parameters
 
-| `charString`        | String; if empty, will return an empty array.   |
-|---------------------|-------------------------------------------------|
-| `preferredCTScript` | A `CTScript` enumerated value.                  |
+|      Parameter      |      Type       |                        Description                         |
+| ------------------- | --------------- | ---------------------------------------------------------- |
+| `charString`        | String          | Characters to check. If empty, will return an empty array. |
+| `preferredCTScript` | `CTScript` enum | CT Script to prefer                                        |
 
 #### Returns
 
@@ -292,8 +293,9 @@ var font = app.fonts.getDefaultFontForCTScript(CTScript.CT_JAPANESE_SCRIPT);
 
 #### Parameters
 
-| `ctScript`   | A member of the `CTScript` enum (see list [here](fontobject.md#fontobjectwritingscripts)).   |
-|--------------|-----------------------------------------------------------------------------------------------|
+| Parameter  |      Type       |                   Description                    |
+| ---------- | --------------- | ------------------------------------------------ |
+| `ctScript` | `CTScript` enum | Corresponding CTScript to get default font from. |
 
 #### Returns
 
@@ -321,8 +323,9 @@ alert(font1.fontID == font2.fontID);
 
 #### Parameters
 
-| fontID   | A number containing the ID of the font.   |
-|----------|-------------------------------------------|
+| Parameter |  Type   |     Description     |
+| --------- | ------- | ------------------- |
+| fontID    | Integer | The ID of the font. |
 
 #### Returns
 
@@ -347,9 +350,10 @@ alert(fontList.length);
 
 #### Parameters
 
-| FamilyName   | A string containing the Family Name of the font.   |
-|--------------|----------------------------------------------------|
-| StyleName    | A string containing the Style Name of the font.    |
+| Parameter  |  Type  |         Description          |
+| ---------- | ------ | ---------------------------- |
+| FamilyName | String | The Family Name of the font. |
+| StyleName  | String | The Style Name of the font.  |
 
 #### Returns
 
@@ -378,8 +382,9 @@ alert(fontList.length);
 
 #### Parameters
 
-| postscriptName   | A string containing the PostScript Name of the font.   |
-|------------------|--------------------------------------------------------|
+|   Parameter    |  Type  |           Description            |
+| -------------- | ------ | -------------------------------- |
+| postscriptName | String | The PostScript Name of the font. |
 
 #### Returns
 
@@ -452,9 +457,10 @@ alert("set:" + ret);
 
 #### Parameters
 
-| `ctScript`   | A member of the `CTScript` enum (see list [here](fontobject.md#fontobjectwritingscripts)).     |
-|--------------|-------------------------------------------------------------------------------------------------|
-| `font`       | [Font object](fontobject.md) to be mapped. If `null`, then current mapping is reset. |
+| Parameter  |             Type             |                           Description                            |
+| ---------- | ---------------------------- | ---------------------------------------------------------------- |
+| `ctScript` | `CTScript` enum              | CTScript for font to be mapped                                   |
+| `font`     | [Font object](fontobject.md) | The font to be mapped. If `null`, then current mapping is reset. |
 
 #### Returns
 

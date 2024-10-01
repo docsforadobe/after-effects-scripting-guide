@@ -8,11 +8,11 @@
   - [x] Bulk cleanup
     - [x] Search & replace
     - [x] Handle lingering bulk-conversion issues
-  - [ ] Manual cleanup
+  - [x] Manual cleanup
     - [x] Fix internal links
     - [x] Fix empty links
-    - [ ] Update tables
-      - [ ] Add new "Type" field, because it's a Good Thing
+    - [x] Update tables
+      - [x] Add new "Type" field, because it's a Good Thing
       - [x] ./general
       - [x] ./introduction
       - [x] ./items
@@ -22,7 +22,7 @@
       - [x] ./properties
       - [x] ./renderqueue
       - [x] ./sources
-      - [ ] ./text
+      - [x] ./text
     - [x] Fix images
     - [x] Fix headers
   - [ ] Update index.md

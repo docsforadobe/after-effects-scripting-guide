@@ -26,15 +26,15 @@ Because CharacterRange is an accessor of [TextDocument object](textdocument.md),
 
 The following attributes and methods are **not** available on instances of CharacterRange:
 
-> | Attributes      | Methods                     |
-> |-----------------|-----------------------------|
-> | baselineLocs    | characterRange              |
-> | boxText         | paragraphCharacterIndexesAt |
-> | boxTextPos      | paragraphRange              |
-> | boxTextSize     |                             |
-> | lineOrientation |                             |
-> | paragraphCount  |                             |
-> | pointText       |                             |
+|    Attributes     |            Methods            |
+| ----------------- | ----------------------------- |
+| `baselineLocs`    | `characterRange`              |
+| `boxText`         | `paragraphCharacterIndexesAt` |
+| `boxTextPos`      | `paragraphRange`              |
+| `boxTextSize`     |                               |
+| `lineOrientation` |                               |
+| `paragraphCount`  |                               |
+| `pointText`       |                               |
 
 #### Examples
 
@@ -229,8 +229,9 @@ As the span of the [CharacterRange object](#characterrange) is not adjusted by t
 
 #### Parameters
 
-| `characterRange`   | A [CharacterRange object](#characterrange) whose text and styling will be pasted in place of the callee [CharacterRange object](#characterrange).   |
-|--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
+|    Parameter     |                   Type                   |                                                  Description                                                  |
+| ---------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `characterRange` | [CharacterRange object](#characterrange) | Object whose text and styling will be pasted in place of the callee [CharacterRange object](#characterrange). |
 
 #### Returns
 
