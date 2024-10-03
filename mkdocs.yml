@@ -88,6 +88,8 @@ theme:
     features:
         - navigation.indexes
         - toc.follow
+        - search.suggest
+        - search.highlight
     palette:
         # Palette toggle for dark mode
         - media: "(prefers-color-scheme: dark)"
@@ -117,4 +119,5 @@ markdown_extensions:
 
 plugins:
     - git-revision-date-localized
-    - search
+    - search:
+        separator: '[\s\-,\.:!=\[\]()"/]+'
