@@ -1,12 +1,20 @@
 site_name: After Effects Scripting Guide
+site_url: https://ae-scripting.docsforadobe.dev/
 repo_url: https://github.com/docsforadobe/after-effects-scripting-guide/
+
+extra:
+    homepage: https://docsforadobe.dev
 
 # nav:
 #   - Home: index.md
 #   - Source: https://github.com/docsforadobe/after-effects-scripting-guide/
 theme:
     name: material
+    features:
+        - navigation.indexes
 
 markdown_extensions:
     - admonition
     - pymdownx.superfences
+
+plugins:
