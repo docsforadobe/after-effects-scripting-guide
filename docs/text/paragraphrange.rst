@@ -14,7 +14,7 @@ The ParagraphRange object is an accessor to a paragraph range of the :ref:`TextD
 
 - The :ref:`characterStart<ParagraphRange.characterStart>` attribute will report the first character index of the range.
 - The :ref:`characterEnd<ParagraphRange.characterEnd>` attribute will report the (last + 1) character index of the range, such that (:ref:`characterEnd<ParagraphRange.characterEnd>` - :ref:`characterStart<ParagraphRange.characterStart>`) represents the number of characters in the range.
-- The only time these two properties will equal will on an empty last paragraph of the :ref:`TextDocument`.
+- The only time these two properties will equal is on an empty last paragraph of the :ref:`TextDocument`.
 
 When accessed, the ParagraphRange object will check that effective :ref:`characterStart<ParagraphRange.characterStart>` and effective :ref:`characterEnd<ParagraphRange.characterEnd>` of the range remains valid for the current span of the related :ref:`TextDocument`. This is the same rule as applied when the ParagraphRange was created, but because the length of the related :ref:`TextDocument` can change through the addition or removal of characters, the effective :ref:`characterStart<ParagraphRange.characterStart>` and effective :ref:`characterEnd<ParagraphRange.characterEnd>` may no longer be valid. In this situation an exception will be thrown on access, either read or write. The :ref:`isRangeValid<ParagraphRange.isRangeValid>` attribute will return false if the effective range is no longer valid.
 
