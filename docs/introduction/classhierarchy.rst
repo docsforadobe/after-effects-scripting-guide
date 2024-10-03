@@ -3,7 +3,7 @@
 After Effects Class Hierarchy
 #############################
 
-This section lists the class hierarchies for relevant AE API elements. For a primer on what this means, see :ref:`Javascript.Classes`
+This section lists the class hierarchies for relevant AE API elements. For a primer on what this means, see :ref:`Javascript.Classes`.
 
 When using this guide, any objects that exist as part of a class hierarchy will note whether they exist as a subclass or base class (or both) of another object.
 

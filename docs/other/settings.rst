@@ -12,9 +12,9 @@ The Settings object provides an easy way to manage settings for third-party scri
 
 Settings are identified by section and key within the file, and each key name is associated with a value.
 
-In the settings file, section names are enclosed in brackets and quotation marks, and key names are listing in quotation marks below the sectionname. All values are strings.
+In the settings file, section names are enclosed in brackets and quotation marks, and key names are listed in quotation marks below the section name. All values are strings.
 
-You can create new settings with this object, as well as accessing existing settings.
+You can create new settings with this object, as well as access existing settings.
 
 As of Version 12/CC, preferences and settings methods now take a third argument to specify the target preferences file if Section/Key is not in the main preferences file. See :ref:`Preferences` for more info.
 

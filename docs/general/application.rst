@@ -60,6 +60,7 @@ Array of ``GpuAccelType`` enums, or null if no viewers are open; read-only. One 
 - ``SOFTWARE``
 
 **Example**
+
 The following sample code checks the current computer's available GPU acceleration types, and sets it to Metal if available.
 
 .. code:: javascript

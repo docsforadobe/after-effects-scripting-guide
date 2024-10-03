@@ -12,9 +12,9 @@ The Preferences object provides an easy way to manage internal AE preferences, s
 
 Preferences are identified by section and key within the file, and each key name is associated with a value.
 
-In the preferences file, section names are enclosed in brackets and quotation marks, and key names are listing in quotation marks below the sectionname. All values are strings.
+In the preferences file, section names are enclosed in brackets and quotation marks, and key names are listed in quotation marks below the section name. All values are strings.
 
-You can create new preferences with this object, as well as accessing existing preferences.
+You can create new preferences with this object, as well as access existing preferences.
 
 As of Version 12/CC, preferences and settings methods now take a third argument to specify the target preferences file if Section/Key is not in "Adobe After Effects $versionNumber.x Prefs.txt".
 
