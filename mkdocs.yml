@@ -2,6 +2,7 @@
 site_name: After Effects Scripting Guide
 site_url: https://ae-scripting.docsforadobe.dev/
 repo_url: https://github.com/docsforadobe/after-effects-scripting-guide/
+repo_name: "after-effects-scripting-guide"
 extra:
     homepage: https://docsforadobe.dev
 
@@ -86,10 +87,12 @@ theme:
     name: material
     custom_dir: overrides
     features:
+        - content.action.edit
+        - content.action.view
         - navigation.indexes
-        - toc.follow
-        - search.suggest
         - search.highlight
+        - search.suggest
+        - toc.follow
     palette:
         # Palette toggle for dark mode
         - media: "(prefers-color-scheme: dark)"
