@@ -97,3 +97,5 @@ markdown_extensions:
         toc_depth: 3
 
 plugins:
+    - git-revision-date-localized
+    - search
