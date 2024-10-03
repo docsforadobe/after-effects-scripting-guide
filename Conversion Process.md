@@ -10,25 +10,38 @@ This works in several main phases:
 
 1. Setup – installing required systems for the automated conversion
 2. Convert – running these systems to convert the .rst docs to .md
-3. Initialize Docsify – set up the new system that will serve the files
+3. Initialize Mkdocs – set up the new system that will serve the files
 4. Text Cleanup – all of the work to turn the converted docs to a final product
 5. Project Cleanup – removing the legacy build system files
+6. Deploy
 
 ---
 
 ## 1. Setup
 
+### Setting up RST -> MD Conversion
+
 1. Install `sphinx` & `sphinx_markdown_builder` (for converting from .rst to .md):
     ```sh
-    pip3 install sphinx sphinx_markdown_builder
+    pip install sphinx sphinx_markdown_builder
     ```
 2. Update Sphinx config to convert to Markdown
     - Navigate to `./docs/conf.py`
     - Replace all of the contents with only this: `extensions = ["sphinx_markdown_builder"]`
-3. Install `docsify` (which will be used to serve the resulting .md files):
+
+### Setting up the new system
+
+1. Install `mkdocs` (which will be used to serve the resulting .md files) and `mkdocs-material` (the theme):
     ```sh
-    npm i docsify-cli -g
+    pip install mkdocs mkdocs-material
     ```
+
+### Setting up the repo for deployment
+
+- From the repo:
+  - `Settings` > `Pages` > Enable Pages
+  - `Deploy from a Branch` > Choose "gh-pages"
+  - For folder, choose "/ (root)"
 
 ---
 
@@ -45,24 +58,19 @@ This works in several main phases:
 
 ---
 
-## 3. Initialize Docsify
+## 3. Initialize Mkdocs
 
-Instead of initializing Docsify from scratch, we're going to just copy files over from the [After Effects Scripting Guide](https://github.com/docsforadobe/after-effects-scripting-guide/) and tweak those to fit.
+Instead of initializing Mkdocs from scratch, we're going to just copy files over from the [After Effects Scripting Guide](https://github.com/docsforadobe/after-effects-scripting-guide/) and tweak those to fit.
 
 1. Copy the following files from the above guide into this repo, overwriting if existing:
-    - `./docs/.nojekyll`
-    - `./docs/index.html`
     - `./docs/index.md`
     - `./.editorconfig`
     - `./.gitignore`
+    - `./.mkdocs.yml`
     - `./Conversion Process.md`
 2. Update anything related to "After Effects Scripting Guide" and make it relevant for this repo
-    - `./docs/index.html`
-      - `<title>` tag at the top
-      - `<meta>` tag at the top
-      - The project name & repo url under `// THIS GUIDE ONLY`
+    - `./.mkdocs.yml`
     - `./docs/index.md`
-      - Page title & text content; this can be pulled from the main project readme, to start
 
 ---
 
@@ -72,12 +80,14 @@ Instead of initializing Docsify from scratch, we're going to just copy files ove
 
 #### Search & Replace Steps
 
+
 1. Remove generated `<a>` links
     - Using regex, search for `<a id=".+"></a>(\n|\r)(\n|\r)` and replace with blank
 2. Update notes admonitions
-    - Using regex, search for `#### NOTE\n(.+)` and replace with `?> **Note:** $1`
+    - Using regex, search for `#### NOTE\n(.+)` and replace with `!!! note\n    $1`
 3. Update warning admonitions
-    - Using regex, search for `#### WARNING\n(.+)` and replace with `!> **Warning:** $1`
+    - Valid admonitions [can be found here](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types)
+    - Using regex, search for `#### WARNING\n(.+)` and replace with `!!! warning\n    $1`
 4. Update case-sensitive syntax highlighting languages
     - Using regex, search for `` ```AppleScript `` and replace with `` ```applescript ``
 5. Replace nonstandard
@@ -171,3 +181,9 @@ Now that we've got a full suite of .md files, we can remove some old cruft:
 - `./make.bat`
 - `./Makefile`
 - `./requirements.txt`
+
+---
+
+## Deploy
+
+- Any commits to the main branch will rebuild the repo
