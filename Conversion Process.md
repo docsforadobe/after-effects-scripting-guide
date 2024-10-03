@@ -4,7 +4,8 @@
 - It is tedious, but the bulk of the work is cleaning vs actual conversion– and we can leverage the existing Sphinx setup.
 - This relies on the [sphinx_markdown_builder](https://github.com/liran-funaro/sphinx-markdown-builder/) Sphinx plugin.
 
-?> **Note:** It is *highly* recommended to do this work in a child branch of the repo, vs working directly in main. This will be extremely destructive.
+!!! tip
+    It is *highly* recommended to do this work in a child branch of the repo, vs working directly in main. This will be extremely destructive.
 
 This works in several main phases:
 
@@ -83,18 +84,18 @@ Instead of initializing Mkdocs from scratch, we're going to just copy files over
 
 1. Remove generated `<a>` links
     - Using regex, search for `<a id=".+"></a>(\n|\r)(\n|\r)` and replace with blank
-2. Update notes admonitions
-    - Using regex, search for `#### NOTE\n(.+)` and replace with `!!! note\n    $1`
-3. Update warning admonitions
+2. Update notes, warnings, tips admonitions
     - Valid admonitions [can be found here](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types)
+    - Using regex, search for `#### NOTE\n(.+)` and replace with `!!! note\n    $1`
     - Using regex, search for `#### WARNING\n(.+)` and replace with `!!! warning\n    $1`
-4. Update case-sensitive syntax highlighting languages
+    - Using regex, search for `#### TIP\n(.+)` and replace with `!!! tip\n    $1`
+3. Update case-sensitive syntax highlighting languages
     - Using regex, search for `` ```AppleScript `` and replace with `` ```applescript ``
-5. Replace nonstandard
+4. Replace nonstandard
     - Using regex, search for `“|”` and replace with `"`
     - Using regex, search for `‘|’` and replace with `'`
     - Using regex, search for `–` and replace with `-`
-6. Update offset sublist settings
+5. Update offset sublist settings
     - Using regex, search for`(\n|\r)  : - ` and replace with `:\n    - ` – only seems to be an issue with changelog
 
 #### Look for lingering bulk-conversion issues
@@ -132,7 +133,8 @@ Reformat the `./docs/_sidebar.md` file to match the exact same list layout as th
 
 In RST, tables didn't need to have header rows. In markdown, they do (should). This, unfortunately, means a lot of work is needed as the conversion method isn't capable of generating table headers.
 
-?> **Note:** We're also going to use this opportunity to add in property types for arguments & parameters, making the docs friendlier to use.
+!!! note
+    We're also going to use this opportunity to add in property types for arguments & parameters, making the docs friendlier to use.
 
 - Set up table headers (see below)
 - Remove any html linebreaks (`<br>`) unless explicitly required – *this is very rare, but sometimes does occur*

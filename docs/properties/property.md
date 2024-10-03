@@ -8,7 +8,8 @@ The Property object contains value, keyframe, and expression information about a
 
 > Property is a subclass of [PropertyBase](propertybase.md). All methods and attributes of PropertyBase, in addition to those listed below, are available when working with Property.
 
-?> **Note:** JavaScript objects commonly referred to as "properties" are called "attributes" in this guide, to avoid confusion with the After Effects definition of property.
+!!! note
+    JavaScript objects commonly referred to as "properties" are called "attributes" in this guide, to avoid confusion with the After Effects definition of property.
 
 #### Examples
 
@@ -111,7 +112,8 @@ myTextLayer.sourceText.setValue("foo");
 
 `app.project.item(index).layer(index).propertySpec.alternateSource`
 
-?> **Note:** This functionality was added in After Effects 18.0 (2021)
+!!! note
+    This functionality was added in After Effects 18.0 (2021)
 
 #### Description
 
@@ -141,7 +143,8 @@ AVItem object; read-only.
 
 `app.project.item(index).layer(index).propertySpec.canSetAlternateSource`
 
-?> **Note:** This functionality was added in After Effects 18.0 (2021)
+!!! note
+    This functionality was added in After Effects 18.0 (2021)
 
 #### Description
 
@@ -191,7 +194,8 @@ Boolean; read-only.
 
 When `true`, the property's dimensions are represented as separate properties. For example, if the layer's position is represented as X Position and Y Position properties in the Timeline panel, the Position property has this attribute set to `true`.
 
-?> **Note:** This attribute applies only when the [isSeparationLeader](#propertyisseparationleader) attribute is `true`.
+!!! tip
+    This attribute applies only when the [isSeparationLeader](#propertyisseparationleader) attribute is `true`.
 
 #### Type
 
@@ -203,7 +207,8 @@ Boolean; read/write.
 
 `app.project.item(index).layer(index).essentialProperty.property(index).essentialPropertySource`
 
-?> **Note:** This functionality was added in After Effects 22.0 (2022)
+!!! note
+    This functionality was added in After Effects 22.0 (2022)
 
 #### Description
 
@@ -314,7 +319,8 @@ Boolean; read-only.
 
 `app.project.item(index).layer(index).propertySpec.isDropdownEffect`
 
-?> **Note:** This functionality was added in After Effects 17.0.1 (2020)
+!!! note
+    This functionality was added in After Effects 17.0.1 (2020)
 
 #### Description
 
@@ -342,7 +348,8 @@ Boolean; read-only.
 
 When `true`, the property represents one of the separated dimensions for a multidimensional property. For example, the X Position property has this attribute set to `true`.
 
-?> **Note:** The original, consolidated, multidimensional property is the "separation leader" and the new, separated, single-dimensional properties are its "separation followers".
+!!! tip
+    The original, consolidated, multidimensional property is the "separation leader" and the new, separated, single-dimensional properties are its "separation followers".
 
 #### Type
 
@@ -358,7 +365,8 @@ Boolean; read-only.
 
 When `true`, the property is multidimensional and can be separated. For example, the Position property has this attribute set to `true`.
 
-?> **Note:** The original, consolidated, multidimensional property is the "separation leader" and the new, separated, single-dimensional properties are its "separation followers".
+!!! tip
+    The original, consolidated, multidimensional property is the "separation leader" and the new, separated, single-dimensional properties are its "separation followers".
 
 #### Type
 
@@ -524,7 +532,8 @@ Integer; read-only.
 
 The original multidimensional property for this separated follower. For example, if the current property is Y Position, this attribute's value points to the Position property.
 
-?> **Note:** The original, consolidated, multidimensional property is the "separation leader" and the new, separated, single-dimensional properties are its "separation followers".
+!!! tip
+    The original, consolidated, multidimensional property is the "separation leader" and the new, separated, single-dimensional properties are its "separation followers".
 
 #### Type
 
@@ -592,7 +601,8 @@ Integer; the index of the new keyframe or marker.
 
 `app.project.item(index).layer(index).propertySpec.addToMotionGraphicsTemplate(comp)`
 
-?> **Note:** This functionality was added in After Effects 15.0 (CC 2018)
+!!! note
+    This functionality was added in After Effects 15.0 (CC 2018)
 
 #### Description
 
@@ -620,7 +630,8 @@ Boolean.
 
 `app.project.item(index).layer(index).propertySpec.addToMotionGraphicsTemplateAs(comp, name)`
 
-?> **Note:** This functionality was added in After Effects 16.1 (CC 2019)
+!!! note
+    This functionality was added in After Effects 16.1 (CC 2019)
 
 #### Description
 
@@ -649,7 +660,8 @@ Boolean.
 
 `app.project.item(index).layer(index).propertySpec.canAddToMotionGraphicsTemplate(comp)`
 
-?> **Note:** This functionality was added in After Effects 15.0 (CC 2018)
+!!! note
+    This functionality was added in After Effects 15.0 (CC 2018)
 
 #### Description
 
@@ -686,7 +698,8 @@ Boolean.
 
 For a separated, multidimensional property, retrieves a specific follower property. For example, you can use this method on the Position property to access the separated X Position and Y Position properties
 
-?> **Note:** This attribute applies only when the [isSeparationLeader](#propertyisseparationleader) attribute is `true`.
+!!! tip
+    This attribute applies only when the [isSeparationLeader](#propertyisseparationleader) attribute is `true`.
 
 #### Parameters
 
@@ -800,7 +813,8 @@ Array of [KeyframeEase objects](../other/keyframeease.md):
 
 `app.project.item(index).layer(index).propertySpec.keyLabel(keyIndex)`
 
-?> **Note:** This functionality was added in After Effects 22.6.
+!!! note
+    This functionality was added in After Effects 22.6.
 
 #### Description
 
@@ -1103,7 +1117,8 @@ Nothing.
 
 `app.project.item(index).layer(index).propertySpec.setAlternateSource(newSource)`
 
-?> **Note:** This functionality was added in After Effects 18.0 (2021)
+!!! note
+    This functionality was added in After Effects 18.0 (2021)
 
 #### Description
 
@@ -1152,7 +1167,8 @@ Nothing.
 
 `app.project.item(index).layer(index).propertySpec.setLabelAtKey(keyIndex, labelIndex)`
 
-?> **Note:** This functionality was added in After Effects 22.6 (2022)
+!!! note
+    This functionality was added in After Effects 22.6 (2022)
 
 #### Description
 
@@ -1175,7 +1191,8 @@ Nothing.
 
 `app.project.item(index).layer(index).propertySpec.setPropertyParameters(items)`
 
-?> **Note:** This functionality was added in After Effects 17.0.1 (2020)
+!!! note
+    This functionality was added in After Effects 17.0.1 (2020)
 
 #### Description
 
@@ -1191,7 +1208,8 @@ Sets parameters for a Dropdown Menu Control's Menu Property. This method will ov
 | --------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `items`   | Array of strings | Values which will replace the existing menu entries in a Dropdown Menu Control.<br/><br/>- Only strings are allowed.<br/>- Empty item strings are not allowed.<br/>- Duplicate item strings are not allowed.<br/>- The character `"\"` is not allowed in the item strings.<br/>- The string `"(-"` can be specified as of the item strings, to create a separator line in the dropdown menu. The separator lines will claim an index for each of themselves. |
 
-?> **Note:** Item strings should be in ASCII or MultiByte encodable in the current code-page. In other words, the item strings should be provided in the script of the running system. For example: Specifying the item strings in Japanese while running the script on an English system will create a dropdown effect with illegible characters in the item strings.
+!!! tip
+    Item strings should be in ASCII or MultiByte encodable in the current code-page. In other words, the item strings should be provided in the script of the running system. For example: Specifying the item strings in Japanese while running the script on an English system will create a dropdown effect with illegible characters in the item strings.
 
 #### Example
 
@@ -1475,7 +1493,8 @@ Nothing.
 
 The value of the named property as evaluated at the specified time. Note that the type of value returned is not made explicit; it will be of a different type, depending on the property evaluated.
 
-?> **Note:** As After Effects 13.6, this method now waits for time-intensive expressions, like `sampleImage`, to finish evaluating before it returns the result.
+!!! tip
+    As After Effects 13.6, this method now waits for time-intensive expressions, like `sampleImage`, to finish evaluating before it returns the result.
 
 #### Parameters
 

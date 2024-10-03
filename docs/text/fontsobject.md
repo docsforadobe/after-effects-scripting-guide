@@ -2,7 +2,8 @@
 
 `app.fonts`
 
-?> **Note:** This functionality was added in After Effects 24.0
+!!! note
+    This functionality was added in After Effects 24.0
 
 #### Description
 
@@ -69,7 +70,8 @@ alert(firstFontFamilyName+" "+firstFamilyStyle);
 
 `app.fonts.favoriteFontFamilyList`
 
-?> **Note:** This functionality was added in After Effects 24.6
+!!! note
+    This functionality was added in After Effects 24.6
 
 #### Description
 
@@ -85,7 +87,8 @@ Array of Strings; read/write.
 
 `app.fonts.fontsDuplicateByPostScriptName`
 
-?> **Note:** This functionality was added in After Effects 24.6
+!!! note
+    This functionality was added in After Effects 24.6
 
 #### Description
 
@@ -103,7 +106,8 @@ Array of Arrays of [Font Objects](fontobject.md); read-only.
 
 `app.fonts.fontServerRevision`
 
-?> **Note:** This functionality was added in After Effects 24.2
+!!! note
+    This functionality was added in After Effects 24.2
 
 #### Description
 
@@ -151,7 +155,8 @@ alert(variableFontList.length);
 
 `app.fonts.freezeSyncSubstitutedFonts`
 
-?> **Note:** This functionality was added in After Effects 24.6
+!!! note
+    This functionality was added in After Effects 24.6
 
 #### Description
 
@@ -159,7 +164,8 @@ When a Project is opened and one or more fonts are not found in the local font e
 
 By default this happens automatically—this property will disable it from happening.
 
-!> **Warning:** The rules for deciding if Adobe Fonts has a matching font is entirely based on the PostScript name. With some Variable Fonts, due to ambiguity about which font has which named instance, it is possible that more than one face (Regular/Italic) may be installed during an activation. Whether the installed font is a valid replacement is controlled by the [FontsObject.substitutedFontReplacementMatchPolicy](#fontsobjectsubstitutedfontreplacementmatchpolicy).
+!!! warning
+    The rules for deciding if Adobe Fonts has a matching font is entirely based on the PostScript name. With some Variable Fonts, due to ambiguity about which font has which named instance, it is possible that more than one face (Regular/Italic) may be installed during an activation. Whether the installed font is a valid replacement is controlled by the [FontsObject.substitutedFontReplacementMatchPolicy](#fontsobjectsubstitutedfontreplacementmatchpolicy).
 
 #### Type
 
@@ -178,7 +184,8 @@ Boolean; read/write. One of:
 
 The list of all the missing or substituted fonts of the current Project.
 
-?> **Note:** A substituted font is a font that was already missing when the project is opened. A missing font is a font that went missing (font being uninstalled, for example) *while* the project was open.
+!!! tip
+    A substituted font is a font that was already missing when the project is opened. A missing font is a font that went missing (font being uninstalled, for example) *while* the project was open.
 
 #### Type
 
@@ -190,7 +197,8 @@ Array of [Font objects](fontobject.md); read-only.
 
 `app.fonts.mruFontFamilyList`
 
-?> **Note:** This functionality was added in After Effects 24.6
+!!! note
+    This functionality was added in After Effects 24.6
 
 #### Description
 
@@ -206,7 +214,8 @@ Array of Strings; read/write.
 
 `app.fonts.substitutedFontReplacementMatchPolicy`
 
-?> **Note:** This functionality was added in After Effects 24.6
+!!! note
+    This functionality was added in After Effects 24.6
 
 #### Description
 
@@ -232,7 +241,8 @@ A `SubstitutedFontReplacementMatchPolicy` enumerated value; read/write. One of:
 
 `app.fonts.getCTScriptForString(charString, preferredCTScript)`
 
-?> **Note:** This functionality was added in After Effects (Beta) 25.0 and is subject to change while it remains in Beta.
+!!! note
+    This functionality was added in After Effects (Beta) 25.0 and is subject to change while it remains in Beta.
 
 #### Description
 
@@ -269,7 +279,8 @@ Array of generic objects;
 
 `app.fonts.getDefaultFontForCTScript(ctScript)`
 
-?> **Note:** This functionality was added in After Effects (Beta) 25.0 and is subject to change while it remains in Beta.
+!!! note
+    This functionality was added in After Effects (Beta) 25.0 and is subject to change while it remains in Beta.
 
 #### Description
 
@@ -307,7 +318,8 @@ var font = app.fonts.getDefaultFontForCTScript(CTScript.CT_JAPANESE_SCRIPT);
 
 `app.fonts.getFontByID(fontID)`
 
-?> **Note:** This functionality was added in After Effects 24.2
+!!! note
+    This functionality was added in After Effects 24.2
 
 #### Description
 
@@ -341,7 +353,8 @@ alert(font1.fontID == font2.fontID);
 
 This function will return an array of [Font object](fontobject.md) based on the Family Name and Style Name of a font. If no suitable font is found, it will return an empty Array.
 
-?> **Note:** The returned array length can be more than 1 if you have multiple copies of a same font.
+!!! tip
+    The returned array length can be more than 1 if you have multiple copies of a same font.
 
 ```javascript
 var fontList = app.fonts.getFontsByFamilyNameAndStyleName("Abolition", "Regular")
@@ -396,7 +409,8 @@ Array of [Font objects](fontobject.md); read-only.
 
 `app.fonts.pollForAndPushNonSystemFontFoldersChanges()`
 
-?> **Note:** This functionality was added in After Effects 24.6
+!!! note
+    This functionality was added in After Effects 24.6
 
 #### Description
 
@@ -425,7 +439,8 @@ Boolean; One of:
 
 `app.fonts.setDefaultFontForCTScript(ctScript, font)`
 
-?> **Note:** This functionality was added in After Effects (Beta) 25.0 and is subject to change while it remains in Beta.
+!!! note
+    This functionality was added in After Effects (Beta) 25.0 and is subject to change while it remains in Beta.
 
 #### Description
 

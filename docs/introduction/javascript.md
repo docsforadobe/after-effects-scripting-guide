@@ -128,7 +128,8 @@ For the same example above, [Layer object](../layers/layer.md) (itself a subclas
 
 This is why you won't see the `name` property on the Layer page, but you can still use `layer.name` in your script; `name` is inherited from [PropertyBase.name](../properties/propertybase.md#propertybasename).
 
-!> **Warning:** In a few specific cases, properties & methods are **removed** with inheritance, not just added. Those cases are noted on the relevant object page.
+!!! warning
+    In a few specific cases, properties & methods are **removed** with inheritance, not just added. Those cases are noted on the relevant object page.
 
 ### Checking Classes
 

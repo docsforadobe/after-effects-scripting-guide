@@ -195,7 +195,8 @@ Creates a new point text layer with [TextDocument.lineOrientation](../text/textd
 
 `app.project.item(index).layers.addVerticalBoxText([width, height])`
 
-?> **Note:** This functionality was added in After Effects 24.2
+!!! note
+    This functionality was added in After Effects 24.2
 
 #### Description
 
@@ -218,7 +219,8 @@ TextLayer object.
 
 `app.project.item(index).layers.addVerticalText([sourceText])`
 
-?> **Note:** This functionality was added in After Effects 24.2
+!!! note
+    This functionality was added in After Effects 24.2
 
 #### Description
 

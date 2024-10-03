@@ -39,7 +39,8 @@ String; read-only.
 
 The name of the operating system on which After Effects is running.
 
-!> **Warning:** As of Windows 7, this attribute returns a blank value. Use $.os instead.
+!!! warning
+    As of Windows 7, this attribute returns a blank value. Use $.os instead.
 
 #### Type
 

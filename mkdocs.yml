@@ -6,3 +6,6 @@ repo_url: https://github.com/docsforadobe/after-effects-scripting-guide/
 #   - Source: https://github.com/docsforadobe/after-effects-scripting-guide/
 theme:
     name: material
+
+markdown_extensions:
+    - admonition

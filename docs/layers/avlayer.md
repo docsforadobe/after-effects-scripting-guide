@@ -296,7 +296,8 @@ Boolean; read-only.
 
 `app.project.item(index).layer(index).hasTrackMatte`
 
-?> **Note:** This functionality was updated in After Effects 23.0. Track Matte is no longer dependent on layer order.
+!!! note
+    This functionality was updated in After Effects 23.0. Track Matte is no longer dependent on layer order.
 
 #### Description
 
@@ -342,7 +343,8 @@ Boolean; read-only.
 
 `app.project.item(index)layer(index).isTrackMatte`
 
-?> **Note:** This functionality was updated in After Effects 23.0. Track Matte is no longer dependent on layer order.
+!!! note
+    This functionality was updated in After Effects 23.0. Track Matte is no longer dependent on layer order.
 
 #### Description
 
@@ -404,7 +406,8 @@ A `LayerQuality` enumerated value; read/write. One of:
 
 `app.project.item(index).layer(index).samplingQuality`
 
-?> **Note:** This functionality was added in After Effects 12.0 (CC)
+!!! note
+    This functionality was added in After Effects 12.0 (CC)
 
 #### Description
 
@@ -479,7 +482,8 @@ Boolean; read/write.
 
 `app.project.item(index).layer(index).trackMatteLayer`
 
-?> **Note:** This functionality was added in After Effects 23.0
+!!! note
+    This functionality was added in After Effects 23.0
 
 #### Description
 
@@ -495,9 +499,11 @@ AVLayer object; read only.
 
 `app.project.item(index).layer(index).trackMatteType`
 
-?> **Note:** This functionality was updated in After Effects 23.0
+!!! note
+    This functionality was updated in After Effects 23.0
 
-!> **Warning:** This is a Legacy API we don't recommend using for setting Track Matte Type in new scripts. Please consider using the latest track matte APIs [AVLayer.setTrackMatte()](#avlayersettrackmatte) and [AVLayer.removeTrackMatte()](#avlayerremovetrackmatte) for your tasks.
+!!! warning
+    This is a Legacy API we don't recommend using for setting Track Matte Type in new scripts. Please consider using the latest track matte APIs [AVLayer.setTrackMatte()](#avlayersettrackmatte) and [AVLayer.removeTrackMatte()](#avlayerremovetrackmatte) for your tasks.
 
 #### Description
 
@@ -551,7 +557,8 @@ Floating-point value; read-only.
 
 `app.project.item(index).layer(index).addToMotionGraphicsTemplate(comp)`
 
-?> **Note:** This functionality was added in After Effects 18.0 (2021)
+!!! note
+    This functionality was added in After Effects 18.0 (2021)
 
 #### Description
 
@@ -579,7 +586,8 @@ Boolean.
 
 `app.project.item(index).layer(index).addToMotionGraphicsTemplateAs(comp, name)`
 
-?> **Note:** This functionality was added in After Effects 18.0 (2021)
+!!! note
+    This functionality was added in After Effects 18.0 (2021)
 
 #### Description
 
@@ -664,7 +672,8 @@ for (var sel in transform) {
 
 `app.project.item(index).layer(index).canAddToMotionGraphicsTemplate(comp)`
 
-?> **Note:** This functionality was added in After Effects 18.0 (2021)
+!!! note
+    This functionality was added in After Effects 18.0 (2021)
 
 #### Description
 
@@ -700,13 +709,15 @@ Boolean.
 
 `app.project.item(index).layer(index).compPointToSource()`
 
-?> **Note:** This functionality was added in After Effects 13.2 (CC 2014.2)
+!!! note
+    This functionality was added in After Effects 13.2 (CC 2014.2)
 
 #### Description
 
 Converts composition coordinates, such as `sourcePointToComp`, to layer coordinates.
 
-!> **Warning:** This value only reflects the first character in the text layer at the current time.
+!!! warning
+    This value only reflects the first character in the text layer at the current time.
 
 #### Parameters
 
@@ -742,7 +753,8 @@ Viewer object for the Layer panel, or `null` if the layer could not be opened (e
 
 `app.project.item(index).layer(index).removeTrackMatte()`
 
-?> **Note:** This functionality was added in After Effects 23.0
+!!! note
+    This functionality was added in After Effects 23.0
 
 #### Description
 
@@ -789,7 +801,8 @@ Replaces the source for this layer.
 
 Nothing.
 
-!> **Warning:** If this method is performed on a null layer, the layers `isNull` attribute is not changed from `true`. This causes the layer not to be visible in comp viewer and renders.
+!!! warning
+    If this method is performed on a null layer, the layers `isNull` attribute is not changed from `true`. This causes the layer not to be visible in comp viewer and renders.
 
 ---
 
@@ -797,7 +810,8 @@ Nothing.
 
 `app.project.item(index).layer(index).setTrackMatte(trackMatteLayer, trackMatteType)`
 
-?> **Note:** This functionality was added in After Effects 23.0
+!!! note
+    This functionality was added in After Effects 23.0
 
 #### Description
 
@@ -811,7 +825,8 @@ See [AVLayer.removeTrackMatte()](#avlayerremovetrackmatte) for another way of re
 | `trackMatteLayer` | [AVLayer](../layers/avlayer.md)               | The layer to be used as the track matte layer. |
 | `trackMatteType`  | [TrackMatteType](#avlayertrackmattetype) enum | The type of the track matte to be used.        |
 
-!> **Warning:** Passing in `TrackMatteType.NO_TRACK_MATTE` as type is invalid and will result in no-op.
+!!! warning
+    Passing in `TrackMatteType.NO_TRACK_MATTE` as type is invalid and will result in no-op.
 
 #### Returns
 
@@ -843,13 +858,15 @@ myLayer.setTrackMatte(otherLayer, TrackMatteType.NO_TRACK_MATTE);
 
 `app.project.item(index).layer(index).sourcePointToComp()`
 
-?> **Note:** This functionality was added in After Effects 13.2 (CC 2014.2)
+!!! note
+    This functionality was added in After Effects 13.2 (CC 2014.2)
 
 #### Description
 
 Converts layer coordinates, such as `boxTextPos`, to composition coordinates.
 
-!> **Warning:** This value only reflects the first character in the text layer at the current time.
+!!! warning
+    This value only reflects the first character in the text layer at the current time.
 
 #### Parameters
 

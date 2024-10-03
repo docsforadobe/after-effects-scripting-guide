@@ -30,7 +30,8 @@ The Viewer object for the currently focused or active-focused viewer (Compositio
 
 `app.availableGPUAccelTypes`
 
-?> **Note:** This functionality was added in After Effects 14.0 (CC 2017)
+!!! note
+    This functionality was added in After Effects 14.0 (CC 2017)
 
 #### Description
 
@@ -104,7 +105,8 @@ Integer; read-only.
 
 `app.disableRendering`
 
-?> **Note:** This functionality was added in After Effects 16.0 (CC 2019)
+!!! note
+    This functionality was added in After Effects 16.0 (CC 2019)
 
 #### Description
 
@@ -187,7 +189,8 @@ app.exitCode = 2; // on quit, if value is 2, an error has occurred
 
 `app.fonts`
 
-?> **Note:** This functionality was added in After Effects 24.0
+!!! note
+    This functionality was added in After Effects 24.0
 
 #### Description
 
@@ -207,7 +210,8 @@ Returns an object to navigate and retreive all the fonts currently available on 
 
 A string indicating the locale (language and regional designations) After Effects is running.
 
-?> **Note:** `$.locale` returns the operating system language, not the language of the After Effects application.
+!!! tip
+    `$.locale` returns the operating system language, not the language of the After Effects application.
 
 #### Type
 
@@ -363,7 +367,8 @@ Settings object; read-only.
 
 `app.version`
 
-?> **Note:** This functionality was added in After Effects 12.0 (CC)
+!!! note
+    This functionality was added in After Effects 12.0 (CC)
 
 #### Description
 
@@ -658,7 +663,8 @@ if (my_file.exists) {
 `app.openFast(file)`
 <br/>
 
-!> **Warning:** This method/property is officially undocumented and was found via research. The information here may be inaccurate, and this whole method/property may disappear or stop working some point. Please contribute if you have more information on it!
+!!! warning
+    This method/property is officially undocumented and was found via research. The information here may be inaccurate, and this whole method/property may disappear or stop working some point. Please contribute if you have more information on it!
 
 #### Description
 
@@ -757,7 +763,8 @@ Nothing.
 
 `app.purge(target)`
 
-?> **Note:** This functionality was updated in After Effects 24.3 to allow the `ALL_CACHES` enumerated value to clear both the RAM and disk cache, with the ALL_MEMORY_CACHES enumerated value added to purge only the RAM. In versions prior to 24.3, `ALL_CACHES` will only clear the RAM cache.
+!!! tip
+    This functionality was updated in After Effects 24.3 to allow the `ALL_CACHES` enumerated value to clear both the RAM and disk cache, with the ALL_MEMORY_CACHES enumerated value added to purge only the RAM. In versions prior to 24.3, `ALL_CACHES` will only clear the RAM cache.
 
 #### Description
 
@@ -840,7 +847,8 @@ Nothing.
 
 `app.setMultiFrameRenderingConfig(mfr_on, max_cpu_perc)`
 
-?> **Note:** This functionality was added in After Effects 22.0 (2022)
+!!! note
+    This functionality was added in After Effects 22.0 (2022)
 
 #### Description
 

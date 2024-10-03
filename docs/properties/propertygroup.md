@@ -49,7 +49,8 @@ If this method cannot create a property with the specified name, it generates an
 
 To check that you can add a particular property to this group, call `canAddProperty` before calling this method. (See [PropertyGroup.canAddProperty()](#propertygroupcanaddproperty).)
 
-!> **Warning:** When you add a new property to an indexed group, the indexed group gets recreated from scratch, invalidating all existing references to properties.
+!!! warning
+    When you add a new property to an indexed group, the indexed group gets recreated from scratch, invalidating all existing references to properties.
 
 One workaround is to store the index of the added property with property.propertyIndex.
 

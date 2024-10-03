@@ -72,7 +72,8 @@ String; read-only.
 
 `app.project.item(index).guides`
 
-?> **Note:** This functionality was added in After Effects 16.1 (CC 2019)
+!!! note
+    This functionality was added in After Effects 16.1 (CC 2019)
 
 #### Description
 
@@ -106,7 +107,8 @@ Integer; read-only.
 
 The label color for the item. Colors are represented by their number (0 for None, or 1 to 16 for one of the preset colors in the Labels preferences).
 
-?> **Note:** Custom label colors cannot be set programmatically.
+!!! tip
+    Custom label colors cannot be set programmatically.
 
 #### Type
 
@@ -218,7 +220,8 @@ if (/Composition|Komposition|Composición|Composizione|コンポジション|컴
 
 `app.project.item(index).addGuide(orientationType, position)`
 
-?> **Note:** This functionality was added in After Effects 16.1 (CC 2019)
+!!! note
+    This functionality was added in After Effects 16.1 (CC 2019)
 
 #### Description
 
@@ -267,7 +270,8 @@ Nothing.
 
 `app.project.item(index).removeGuide(guideIndex)`
 
-?> **Note:** This functionality was added in After Effects 16.1 (CC 2019)
+!!! note
+    This functionality was added in After Effects 16.1 (CC 2019)
 
 #### Description
 
@@ -291,7 +295,8 @@ Removes the first guide in `activeItem`.
 app.project.activeItem.removeGuide(0);
 ```
 
-!> **Warning:** Removing a guide will cause all higher guide indexes to shift downward.
+!!! warning
+    Removing a guide will cause all higher guide indexes to shift downward.
 
 ---
 
@@ -299,7 +304,8 @@ app.project.activeItem.removeGuide(0);
 
 `app.project.item(index).setGuide(position,guideIndex)`
 
-?> **Note:** This functionality was added in After Effects 16.1 (CC 2019)
+!!! note
+    This functionality was added in After Effects 16.1 (CC 2019)
 
 #### Description
 

@@ -32,11 +32,14 @@ To build locally, follow [Docsify's "Quick Start" guide](https://docsify.js.org/
 Currently, the following [callouts](https://docsify.js.org/#/helpers?id=important-content) are in use in this project. Try to keep one piece of data per note, for easier parsing.
 
 ```
-?> **Note:** Notes detail version added, and/or relevant pieces of information.
+!!! note
+    Notes detail version added, and/or relevant pieces of information.
 
-?> **Tip:** Tips detail version added, and/or relevant pieces of information.
+!!! tip
+    Tips detail version added, and/or relevant pieces of information.
 
-!> **Warning:** Warnings convey negative behaviours, or when something won't work the way you'd expect.
+!!!! warning
+    Warnings convey negative behaviours, or when something won't work the way you'd expect.
 ```
 
 ---
@@ -46,7 +49,8 @@ Currently, the following [callouts](https://docsify.js.org/#/helpers?id=importan
 If you find attributes or methods that are not mentioned in this documentation, and they are not publically announced by Adobe, please add this warning to attribute/method so the user knows to use it at their own risk.
 
 ```
-!> **Warning:** This method/property is officially undocumented and was found via research. The information here may be inaccurate, and this whole method/property may disappear or stop working some point. Please contribute if you have more information on it!
+!!!! warning
+    This method/property is officially undocumented and was found via research. The information here may be inaccurate, and this whole method/property may disappear or stop working some point. Please contribute if you have more information on it!
 ```
 
 ---

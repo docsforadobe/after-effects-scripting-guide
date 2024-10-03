@@ -59,7 +59,8 @@ If this is a FileSource object, and the [footageMissing](avitem.md#avitemfootage
 
 Opens the footage in a Footage panel, and moves the Footage panel to front and gives it focus.
 
-?> **Note:** Missing and placeholder footage can be opened using this method, but cannot manually (via double-clicking it).
+!!! tip
+    Missing and placeholder footage can be opened using this method, but cannot manually (via double-clicking it).
 
 #### Parameters
 

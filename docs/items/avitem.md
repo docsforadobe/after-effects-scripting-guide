@@ -10,7 +10,8 @@ The AVItem object provides access to attributes and methods of audio/visual file
 
 > AVItem is the base class for both CompItem and FootageItem, so AVItem attributes and methods are also available when working with CompItem and FootageItem objects. See [CompItem object](compitem.md) and [FootageItem object](footageitem.md).
 
-!> **Warning:** CompItems and FootageItems, while logical descendants of AVItem, are not *really* subclasses of AVItem as AVItem doesn't exist in Extendscript, ie. attempting to check if `item instanceof AVItem` will fail because AVItem is undefined. This is also true for `Item` itself.
+!!! warning
+    CompItems and FootageItems, while logical descendants of AVItem, are not *really* subclasses of AVItem as AVItem doesn't exist in Extendscript, ie. attempting to check if `item instanceof AVItem` will fail because AVItem is undefined. This is also true for `Item` itself.
 
 See [Javascript Classes](../introduction/javascript.md#javascriptclasses) and [After Effects Class Hierarchy](../introduction/classhierarchy.md) for more info.
 
@@ -135,7 +136,8 @@ Integer, in the range `[1..30000]`; read/write, except as noted.
 
 `app.project.item(index).isMediaReplacementCompatible`
 
-?> **Note:** This functionality was added in After Effects 18.0 (2021)
+!!! note
+    This functionality was added in After Effects 18.0 (2021)
 
 #### Description
 
@@ -327,7 +329,8 @@ Nothing.
 
 Creates a PlaceholderSource object with specified values, sets this as the value of the `proxySource` attribute, and sets `useProxy` to `true`. It does not preserve the interpretation parameters, instead using the user preferences.
 
-?> **Note:** There is no direct way to set a placeholder as a proxy in the user interface; this behavior occurs when a proxy has been set and then moved or deleted.
+!!! note
+    There is no direct way to set a placeholder as a proxy in the user interface; this behavior occurs when a proxy has been set and then moved or deleted.
 
 #### Parameters
 
@@ -378,7 +381,8 @@ Nothing.
 
 Creates a [SolidSource object](../sources/solidsource.md) with specified values, sets this as the value of the `proxySource` attribute, and sets `useProxy` to `true`. It does not preserve the interpretation parameters, instead using the user preferences.
 
-?> **Note:** There is no way, using the user interface, to set a solid as a proxy; this feature is available only through scripting.
+!!! note
+    There is no way, using the user interface, to set a solid as a proxy; this feature is available only through scripting.
 
 #### Parameters
 

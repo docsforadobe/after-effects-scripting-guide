@@ -3,7 +3,8 @@
 `app.project.item(index).layer(index).text.sourceText.value.paragraphRange(paragraphIndexStart, [signedParagraphIndexEnd])`
 <br/>
 
-?> **Note:** This functionality was added in After Effects 24.3
+!!! note
+    This functionality was added in After Effects 24.3
 
 #### Description
 

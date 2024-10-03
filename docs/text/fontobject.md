@@ -1,6 +1,7 @@
 # Font object
 
-?> **Note:** This functionality was added in After Effects 24.0
+!!! note
+    This functionality was added in After Effects 24.0
 
 #### Description
 
@@ -21,7 +22,8 @@ Most of these APIs simply return information which is contained in the Font data
 Returns an Array of Objects, containing the design axes data from the font.
 Each object is composed of the axis `name`, `tag`, `min` value and `max` value.
 
-?> **Note:** Will return undefined for non-variable fonts.
+!!! tip
+    Will return undefined for non-variable fonts.
 
 #### Example
 
@@ -52,7 +54,8 @@ Array of Objects; read-only.
 
 For Variable fonts will return an ordered array with a length matching the number of design axes defined by the font.
 
-?> **Note:** Will return undefined for non-variable fonts.
+!!! tip
+    Will return undefined for non-variable fonts.
 
 #### Type
 
@@ -82,7 +85,8 @@ String; read-only.
 
 The family prefix of the variable font. For example, the family of the PostScript name "SFPro-Bold" is "SFPro".
 
-?> **Note:** Will return undefined for non-variable fonts.
+!!! tip
+    Will return undefined for non-variable fonts.
 
 #### Type
 
@@ -94,7 +98,8 @@ String; read-only.
 
 `app.fonts.allFonts[0][0].fontID`
 
-?> **Note:** This functionality was added in After Effects 24.2
+!!! note
+    This functionality was added in After Effects 24.2
 
 #### Description
 
@@ -174,7 +179,8 @@ Boolean; read-only.
 
 The location of the font file on your system.
 
-!> **Warning:** Not guaranteed to be returned for all font types; return value may be empty string for some kinds of fonts.
+!!! warning
+    Not guaranteed to be returned for all font types; return value may be empty string for some kinds of fonts.
 
 #### Type
 
@@ -422,7 +428,8 @@ An array of `CTScript` enumerated values; read-only. One or more of:
 
 `app.fonts.allFonts[0][0].hasGlyphsFor(charString)`
 
-?> **Note:** This functionality was added in After Effects (Beta) 25.0 and is subject to change while it remains in Beta.
+!!! note
+    This functionality was added in After Effects (Beta) 25.0 and is subject to change while it remains in Beta.
 
 #### Description
 
@@ -453,7 +460,8 @@ Boolean.
 
 This function will `true` if the [Font object](#fontobject) passed as an argument shares the same variable font dictionary as the [Font object](#fontobject) the function is called on.
 
-?> **Note:** Can only return `true` when called on a variable [Font object](#fontobject) with the argument also being a [Font object](#fontobject) of a variable font.
+!!! tip
+    Can only return `true` when called on a variable [Font object](#fontobject) with the argument also being a [Font object](#fontobject) of a variable font.
 
 #### Parameters
 
@@ -471,7 +479,8 @@ Boolean.
 
 `app.fonts.fontsWithDefaultDesignAxes[0].otherFontsWithSameDict(fontObject)`
 
-?> **Note:** This functionality was added in After Effects (Beta) 25.0 and is subject to change while it remains in Beta.
+!!! note
+    This functionality was added in After Effects (Beta) 25.0 and is subject to change while it remains in Beta.
 
 #### Description
 

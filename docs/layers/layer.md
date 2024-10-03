@@ -89,7 +89,8 @@ Boolean; read-only.
 
 `app.project.item(index).layer(index).id`
 
-?> **Note:** This functionality was added in After Effects 22.0 (2022)
+!!! note
+    This functionality was added in After Effects 22.0 (2022)
 
 #### Description
 
@@ -142,7 +143,8 @@ Floating-point value, in the range `[-10800.0..10800.0]` (minus or plus three ho
 
 `true` if the value of the name attribute has been set explicitly, rather than automatically from the source.
 
-?> **Note:** This always returns `true` for layers that do not have a [AVLayer.source](avlayer.md#avlayersource)
+!!! tip
+    This always returns `true` for layers that do not have a [AVLayer.source](avlayer.md#avlayersource)
 
 #### Type
 
@@ -158,7 +160,8 @@ Boolean; read-only.
 
 The label color for the item. Colors are represented by their number (0 for None, or 1 to 16 for one of the preset colors in the Labels preferences).
 
-?> **Note:** Custom label colors cannot be set programmatically.
+!!! tip
+    Custom label colors cannot be set programmatically.
 
 #### Type
 
@@ -379,7 +382,8 @@ Applies the specified collection of animation settings (an animation preset) to 
 
 Predefined animation preset files are installed in the Presets folder, and users can create new animation presets through the user interface.
 
-!> **Warning:** The animation preset is applied to the the selected layer(s) of the comp, not to the layer whose applyPreset function is called. Hence, the layer whose applyPreset function is called effectively just determines the comp whose layers are processed.
+!!! warning
+    The animation preset is applied to the the selected layer(s) of the comp, not to the layer whose applyPreset function is called. Hence, the layer whose applyPreset function is called effectively just determines the comp whose layers are processed.
 
 #### Parameters
 
@@ -407,9 +411,11 @@ Copying in a layer changes the index positions of previously existing layers in 
 
 This is the same as copying and pasting a layer through the user interface.
 
-?> **Note:** As of After Effects 13.6, this method no longer causes After Effects to crash when the layer has a parent.
+!!! note
+    As of After Effects 13.6, this method no longer causes After Effects to crash when the layer has a parent.
 
-!> **Warning:** As of After Effects 13.7 (13.6, has not been tested), if the copied layer has an effect on it and the user undoes the action, After Effects will Crash.
+!!! warning
+    As of After Effects 13.7 (13.6, has not been tested), if the copied layer has an effect on it and the user undoes the action, After Effects will Crash.
 
 #### Parameters
 
@@ -427,7 +433,8 @@ Nothing.
 
 `app.project.item(index).layer(index).doSceneEditDetection(applyOptions)`
 
-?> **Note:** This functionality was added in After Effects 22.3 (2022)
+!!! note
+    This functionality was added in After Effects 22.3 (2022)
 
 #### Description
 

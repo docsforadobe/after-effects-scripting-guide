@@ -115,7 +115,8 @@ The collection of Output Modules for the item.
 
 `app.project.renderQueue.item(index).queueItemNotify`
 
-?> **Note:** This functionality was added in After Effects 22.0 (2022)
+!!! note
+    This functionality was added in After Effects 22.0 (2022)
 
 #### Description
 
@@ -267,7 +268,8 @@ Nothing.
 
 Creates a duplicate of this item and adds it this render queue.
 
-?> **Note:** Duplicating an item whose status is "Done" sets the new item's status to "Queued".
+!!! tip
+    Duplicating an item whose status is "Done" sets the new item's status to "Queued".
 
 #### Parameters
 
@@ -283,7 +285,8 @@ RenderQueueItem object.
 
 `app.project.renderQueue.item(index).getSetting()`
 
-?> **Note:** This functionality was added in After Effects 13.0 (CC 2014)
+!!! note
+    This functionality was added in After Effects 13.0 (CC 2014)
 
 #### Description
 
@@ -309,7 +312,8 @@ var rqItem1_proxyUse_str = app.project.renderQueue.item(1).getSetting("Proxy Use
 
 `app.project.renderQueue.item(index).getSettings()`
 
-?> **Note:** This functionality was added in After Effects 13.0 (CC 2014)
+!!! note
+    This functionality was added in After Effects 13.0 (CC 2014)
 
 #### Description
 
@@ -393,7 +397,8 @@ Nothing.
 
 `app.project.renderQueue.item(index).setSetting()`
 
-?> **Note:** This functionality was added in After Effects 13.0 (CC 2014)
+!!! note
+    This functionality was added in After Effects 13.0 (CC 2014)
 
 #### Description
 
@@ -422,7 +427,8 @@ app.project.renderQueue.item(1).setSetting("Proxy Use", 1);
 
 `app.project.renderQueue.item(index).setSettings()`
 
-?> **Note:** This functionality was added in After Effects 13.0 (CC 2014)
+!!! note
+    This functionality was added in After Effects 13.0 (CC 2014)
 
 #### Description
 
