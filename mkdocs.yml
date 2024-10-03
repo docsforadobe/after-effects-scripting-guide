@@ -10,6 +10,7 @@ extra:
 #   - Source: https://github.com/docsforadobe/after-effects-scripting-guide/
 theme:
     name: material
+    custom_dir: overrides
     features:
         - navigation.indexes
         - toc.follow

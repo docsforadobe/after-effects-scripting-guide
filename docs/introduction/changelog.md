@@ -1,3 +1,7 @@
+---
+toc_depth: 2
+---
+
 # Changelog
 
 What's new and changed for scripting?
