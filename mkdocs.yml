@@ -5,7 +5,6 @@ repo_url: https://github.com/docsforadobe/after-effects-scripting-guide/
 extra:
     homepage: https://docsforadobe.dev
 
-
 # Customize navigation
 nav:
     - Home: index.md
@@ -92,6 +91,7 @@ theme:
     palette:
         # Palette toggle for dark mode
         - media: "(prefers-color-scheme: dark)"
+          primary: black
           scheme: slate
           toggle:
               icon: material/brightness-4
@@ -99,10 +99,14 @@ theme:
 
         # Palette toggle for light mode
         - media: "(prefers-color-scheme: light)"
+          primary: white
           scheme: default
           toggle:
               icon: material/brightness-7
               name: Switch to dark mode
+
+extra_css:
+    - _static/extra.css
 
 markdown_extensions:
     - admonition
