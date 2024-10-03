@@ -15,7 +15,7 @@ var effect1againtoo2 = app.project.item(1).layer(1)("Effects")("Add Grain")("Vie
 
 See also [PropertyGroup.property()](propertygroup.md#propertygroupproperty).
 
-> PropertyBase is the base class for both [Property](property.md) and [PropertyGroup](propertygroup.md), so PropertyBase attributes and methods are available when working with properties and property groups.
+> PropertyBase is the base class for both [Property](index.md) and [PropertyGroup](propertygroup.md), so PropertyBase attributes and methods are available when working with properties and property groups.
 
 #### Reference invalidation
 
@@ -61,7 +61,7 @@ alert(effect2.name); // invalid reference because group index positions have cha
 
 For a layer, this corresponds to the setting of the eyeball icon. When `true`, the layer's video is active at the current time. For this to be `true`, the layer must be enabled, no other layer may be soloing unless this layer is soloed too, and the time must be between the `inPoint` and `outPoint` values of this layer.
 
-This value is never `true` in an audio layer; there is a separate `audioActive` attribute in the AVLayer object [AVLayer.audioActive](../layers/avlayer.md#avlayeraudioactive).
+This value is never `true` in an audio layer; there is a separate `audioActive` attribute in the AVLayer object [AVLayer.audioActive](../layer/avlayer.md#avlayeraudioactive).
 
 For an effect and all properties, it is the same as the enabled attribute, except that it's read-only.
 
@@ -191,7 +191,7 @@ String; read-only.
 
 #### Description
 
-For a layer, the name of the layer. By default, this is the same as the Source name, unless [Layer.isNameSet](../layers/layer.md#layerisnameset) returns `false`.
+For a layer, the name of the layer. By default, this is the same as the Source name, unless [Layer.isNameSet](../layer/index.md#layerisnameset) returns `false`.
 
 For an effect and all properties - the display name of the property. (Compare [PropertyBase.matchName](#propertybasematchname).) It is an error to set the name value if the property is not a child of an indexed group (that is, a property group that has the type `PropertyType.INDEXED_GROUP`; see [PropertyBase.propertyType](#propertybasepropertytype)).
 
@@ -267,7 +267,7 @@ A `PropertyType` enumerated value; read/write. One of:
 
 #### Description
 
-When `true`, this property is selected. Set to `true` to select the property, or to `false` to deselect it. Sampling this attribute repeatedly for a large number of properties can slow down system performance. To read the full set of selected properties of a composition or layer, use either [CompItem.selectedProperties](../items/compitem.md#compitemselectedproperties) or [Layer.selectedProperties](../layers/layer.md#layerselectedproperties).
+When `true`, this property is selected. Set to `true` to select the property, or to `false` to deselect it. Sampling this attribute repeatedly for a large number of properties can slow down system performance. To read the full set of selected properties of a composition or layer, use either [CompItem.selectedProperties](../item/compitem.md#compitemselectedproperties) or [Layer.selectedProperties](../layer/index.md#layerselectedproperties).
 
 #### Type
 
@@ -332,7 +332,7 @@ Gets the PropertyGroup object for an ancestor group of this property at a specif
 
 #### Returns
 
-PropertyGroup object, or [Layer object](../layers/layer.md) if the count reaches the containing layer.
+PropertyGroup object, or [Layer object](../layer/index.md) if the count reaches the containing layer.
 
 #### Example
 

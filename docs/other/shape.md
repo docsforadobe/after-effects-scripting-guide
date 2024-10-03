@@ -12,7 +12,7 @@ A tangent value is a pair of x,y coordinates specified relative to the associate
 
 If a shape is not closed, the `inTangent` for the first vertex and the `outTangent` for the final vertex are ignored. If the shape is closed, these two vectors specify the direction handles of the final connecting segment out of the final vertex and back into the first vertex.
 
-RotoBezier masks calculate their tangents automatically. (See [MaskPropertyGroup.rotoBezier](../properties/maskpropertygroup.md#maskpropertygrouprotobezier)) If a shape is used in a RotoBezier mask, the tangent values are ignored. This means that, for RotoBezier masks, you can construct a shape by setting only the `vertices` attribute and setting both `inTangents` and `outTangents` to `null`. When you access the new shape, its tangent values are filled with the automatically calculated tangent values.
+RotoBezier masks calculate their tangents automatically. (See [MaskPropertyGroup.rotoBezier](../property/maskpropertygroup.md#maskpropertygrouprotobezier)) If a shape is used in a RotoBezier mask, the tangent values are ignored. This means that, for RotoBezier masks, you can construct a shape by setting only the `vertices` attribute and setting both `inTangents` and `outTangents` to `null`. When you access the new shape, its tangent values are filled with the automatically calculated tangent values.
 
 For closed mask shapes, variable-width mask feather points can exist anywhere along the mask path. Feather points are part of the Mask Path property. Reference a specific feather point by the number of the mask path segment (portion of the path between adjacent vertices) where it appears.
 

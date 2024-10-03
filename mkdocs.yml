@@ -11,74 +11,74 @@ nav:
     - Home: index.md
     - Introduction:
         - introduction/index.md
-        - Javascript for After Effects: introduction/javascript
-        - After Effects Scripting Changlog: introduction/changelog
-        - After Effects Object Model: introduction/objectmodel
-        - After Effects Class Hierarchy: introduction/classhierarchy
+        - Javascript for After Effects: introduction/javascript.md
+        - After Effects Scripting Changlog: introduction/changelog.md
+        - After Effects Object Model: introduction/objectmodel.md
+        - After Effects Class Hierarchy: introduction/classhierarchy.md
     - General:
-        - Globals: general/globals
-        - Application: general/application
-        - Project: general/project
-        - System: general/system
+        - Globals: general/globals.md
+        - Application: general/application.md
+        - Project: general/project.md
+        - System: general/system.md
     - Item Object:
         - item/index.md
-        - ItemCollection: item/itemcollection
-        - AVItem: item/avitem
-        - CompItem: item/compitem
-        - FolderItem: item/folderitem
-        - FootageItem: item/footageitem
+        - ItemCollection: item/itemcollection.md
+        - AVItem: item/avitem.md
+        - CompItem: item/compitem.md
+        - FolderItem: item/folderitem.md
+        - FootageItem: item/footageitem.md
     - Layer Object:
         - layer/index.md
-        - LayerCollection: layer/layercollection
-        - AVLayer: layer/avlayer
-        - CameraLayer: layer/cameralayer
-        - LightLayer: layer/lightlayer
-        - ShapeLayer: layer/shapelayer
-        - TextLayer: layer/textlayer
-        - ThreeDModelLayer: layer/threedmodellayer
+        - LayerCollection: layer/layercollection.md
+        - AVLayer: layer/avlayer.md
+        - CameraLayer: layer/cameralayer.md
+        - LightLayer: layer/lightlayer.md
+        - ShapeLayer: layer/shapelayer.md
+        - TextLayer: layer/textlayer.md
+        - ThreeDModelLayer: layer/threedmodellayer.md
     - Property Object:
         - property/index.md
-        - PropertyBase: property/propertybase
-        - PropertyGroup: property/propertygroup
-        - MaskPropertyGroup: property/maskpropertygroup
+        - PropertyBase: property/propertybase.md
+        - PropertyGroup: property/propertygroup.md
+        - MaskPropertyGroup: property/maskpropertygroup.md
     - Render Queue:
         - renderqueue/index.md
-        - RQItemCollection: renderqueue/rqitemcollection
-        - RenderQueueItem: renderqueue/renderqueueitem
-        - OMCollection: renderqueue/omcollection
-        - OutputModule: renderqueue/outputmodule
+        - RQItemCollection: renderqueue/rqitemcollection.md
+        - RenderQueueItem: renderqueue/renderqueueitem.md
+        - OMCollection: renderqueue/omcollection.md
+        - OutputModule: renderqueue/outputmodule.md
     - Sources:
-        - FileSource: sources/filesource
-        - FootageSource: sources/footagesource
-        - PlaceholderSource: sources/placeholdersource
-        - SolidSource: sources/solidsource
+        - FileSource: sources/filesource.md
+        - FootageSource: sources/footagesource.md
+        - PlaceholderSource: sources/placeholdersource.md
+        - SolidSource: sources/solidsource.md
     - Text:
-        - CharacterRange: text/characterrange
-        - ComposedLineRange: text/composedlinerange
-        - FontObject: text/fontobject
-        - FontsObject: text/fontsobject
-        - ParagraphRange: text/paragraphrange
-        - TextDocument: text/textdocument
+        - CharacterRange: text/characterrange.md
+        - ComposedLineRange: text/composedlinerange.md
+        - FontObject: text/fontobject.md
+        - FontsObject: text/fontsobject.md
+        - ParagraphRange: text/paragraphrange.md
+        - TextDocument: text/textdocument.md
     - Other:
-        - Collection: other/collection
-        - ImportOptions: other/importoptions
-        - KeyframeEase: other/keyframeease
-        - MarkerValue: other/markervalue
-        - Preferences: other/preferences
-        - Settings: other/settings
-        - Shape: other/shape
-        - View: other/view
-        - Viewer: other/viewer
-        - ViewOptions: other/viewoptions
+        - Collection: other/collection.md
+        - ImportOptions: other/importoptions.md
+        - KeyframeEase: other/keyframeease.md
+        - MarkerValue: other/markervalue.md
+        - Preferences: other/preferences.md
+        - Settings: other/settings.md
+        - Shape: other/shape.md
+        - View: other/view.md
+        - Viewer: other/viewer.md
+        - ViewOptions: other/viewoptions.md
     - Match Names:
-        - AV Layer Match Names: matchnames/layer/avlayer
-        - 3D Layer Match Names: matchnames/layer/3dlayer
-        - Camera Layer Match Names: matchnames/layer/cameralayer
-        - Light Layer Match Names: matchnames/layer/lightlayer
-        - Text Layer Match Names: matchnames/layer/textlayer
-        - Shape Layer Match Names: matchnames/layer/shapelayer
-        - Layer Styles Match Names: matchnames/layer/layerstyles
-        - First-Party Effect Match Names: matchnames/effects/firstparty
+        - AV Layer Match Names: matchnames/layer/avlayer.md
+        - 3D Layer Match Names: matchnames/layer/3dlayer.md
+        - Camera Layer Match Names: matchnames/layer/cameralayer.md
+        - Light Layer Match Names: matchnames/layer/lightlayer.md
+        - Text Layer Match Names: matchnames/layer/textlayer.md
+        - Shape Layer Match Names: matchnames/layer/shapelayer.md
+        - Layer Styles Match Names: matchnames/layer/layerstyles.md
+        - First-Party Effect Match Names: matchnames/effects/firstparty.md
 
 
 # Do not touch below-- shared for all docs

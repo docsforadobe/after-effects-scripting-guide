@@ -4,7 +4,7 @@
 
 #### Description
 
-The LayerCollection object represents a set of layers. The LayerCollection belonging to a [CompItem object](../items/compitem.md) contains all the layer objects for layers in the composition. The methods of the collection object allow you to manipulate the layer list.
+The LayerCollection object represents a set of layers. The LayerCollection belonging to a [CompItem object](../item/compitem.md) contains all the layer objects for layers in the composition. The methods of the collection object allow you to manipulate the layer list.
 
 > LayerCollection is a subclass of [Collection object](../other/collection.md). All methods and attributes of Collection, in addition to those listed below, are available when working with LayerCollection.
 
@@ -37,8 +37,8 @@ Creates a new [AVLayer object](avlayer.md) containing the specified item, and ad
 
 | Parameter  |                Type                 |                                                                                                                                                                                                                                                                                Description                                                                                                                                                                                                                                                                                 |
 | ---------- | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `item`     | [AVItem object](../items/avitem.md) | The item to be added.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| `duration` | Floating-point value                | Optional. The length of a still layer in seconds. Used only if the item contains a piece of still footage. Has no effect on movies, sequences or audio.<br/>If supplied, sets the duration value of the new layer. Otherwise, the duration value is set according to user preferences.<br/><br/>By default, this is the same as the duration of the containing [CompItem](../items/compitem.md). To set another preferred value, open `Edit > Preferences > Import` (Windows) or `After Effects > Preferences > Import` (Mac OS), and specify options under Still Footage. |
+| `item`     | [AVItem object](../item/avitem.md) | The item to be added.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| `duration` | Floating-point value                | Optional. The length of a still layer in seconds. Used only if the item contains a piece of still footage. Has no effect on movies, sequences or audio.<br/>If supplied, sets the duration value of the new layer. Otherwise, the duration value is set according to user preferences.<br/><br/>By default, this is the same as the duration of the containing [CompItem](../item/compitem.md). To set another preferred value, open `Edit > Preferences > Import` (Windows) or `After Effects > Preferences > Import` (Mac OS), and specify options under Still Footage. |
 
 #### Returns
 
@@ -120,7 +120,7 @@ Creates a new null layer and adds the [AVLayer object](avlayer.md) to this colle
 
 | Parameter  |         Type         |                                                                                                                                                                                                                             Description                                                                                                                                                                                                                              |
 | ---------- | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `duration` | Floating-point value | Optional. The length of a still layer in seconds. If supplied, sets the `duration` value of the new layer. Otherwise, the `duration` value is set according to user preferences.<br/><br/>By default, this is the same as the duration of the containing [CompItem](../items/compitem.md). To set another preferred value, open `Edit > Preferences > Import (Windows)` or `After Effects > Preferences > Import (Mac OS)`, and specify options under Still Footage. |
+| `duration` | Floating-point value | Optional. The length of a still layer in seconds. If supplied, sets the `duration` value of the new layer. Otherwise, the `duration` value is set according to user preferences.<br/><br/>By default, this is the same as the duration of the containing [CompItem](../item/compitem.md). To set another preferred value, open `Edit > Preferences > Import (Windows)` or `After Effects > Preferences > Import (Mac OS)`, and specify options under Still Footage. |
 
 #### Returns
 
@@ -152,7 +152,7 @@ ShapeLayer object.
 
 #### Description
 
-Creates a new [SolidSource object](../sources/solidsource.md), with values set as specified; sets the new SolidSource as the `mainSource` value of a new [FootageItem object](../items/footageitem.md), and adds the FootageItem to the project. Creates a new [AVLayer object](avlayer.md), sets the new Footage Item as its `source`, and adds the layer to this collection.
+Creates a new [SolidSource object](../sources/solidsource.md), with values set as specified; sets the new SolidSource as the `mainSource` value of a new [FootageItem object](../item/footageitem.md), and adds the FootageItem to the project. Creates a new [AVLayer object](avlayer.md), sets the new Footage Item as its `source`, and adds the layer to this collection.
 
 #### Parameters
 
@@ -163,7 +163,7 @@ Creates a new [SolidSource object](../sources/solidsource.md), with values set a
 | `width`       | Integer, in the range `[4..30000]`                                           | The width of the solid in pixels.                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | `height`      | Integer, in the range `[4..30000]`                                           | The height of the solid in pixels.                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | `pixelAspect` | Floating-point value in the range `[0.01..100.0]`                            | The pixel aspect ratio of the solid.                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| `duration`    | Floating-point value                                                         | Optional. The length of a still layer in seconds. If supplied, sets the `duration` value of the new layer. Otherwise, the `duration` value is set according to user preferences.<br/><br/>By default, this is the same as the duration of the containing [CompItem](../items/compitem.md). To set another preferred value, open `Edit > Preferences > Import` (Windows) or `After Effects > Preferences > Import` (MacOS), and specify options under Still Footage. |
+| `duration`    | Floating-point value                                                         | Optional. The length of a still layer in seconds. If supplied, sets the `duration` value of the new layer. Otherwise, the `duration` value is set according to user preferences.<br/><br/>By default, this is the same as the duration of the containing [CompItem](../item/compitem.md). To set another preferred value, open `Edit > Preferences > Import` (Windows) or `After Effects > Preferences > Import` (MacOS), and specify options under Still Footage. |
 
 #### Returns
 
@@ -253,7 +253,7 @@ Returns the first (topmost) layer found in this collection with the specified na
 
 #### Returns
 
-[Layer object](layer.md) or `null`.
+[Layer object](index.md) or `null`.
 
 ---
 
@@ -263,16 +263,16 @@ Returns the first (topmost) layer found in this collection with the specified na
 
 #### Description
 
-Creates a new [CompItem object](../items/compitem.md) and moves the specified layers into its layer collection. It removes the individual layers from this collection, and adds the new CompItem to this collection.
+Creates a new [CompItem object](../item/compitem.md) and moves the specified layers into its layer collection. It removes the individual layers from this collection, and adds the new CompItem to this collection.
 
 #### Parameters
 
 |      Parameter      |       Type        |                                                                                                                                                                                              Description                                                                                                                                                                                              |
 | ------------------- | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `layerIndices`      | Array of integers | The position indexes of the layers to be collected.                                                                                                                                                                                                                                                                                                                                                   |
-| `name`              | String            | The name of the new [CompItem](../items/compitem.md) object.                                                                                                                                                                                                                                                                                                                                          |
+| `name`              | String            | The name of the new [CompItem](../item/compitem.md) object.                                                                                                                                                                                                                                                                                                                                          |
 | `moveAllAttributes` | Boolean           | Optional. When `true` (the default), retains all attributes in the new composition. This is the same as selecting the "Move all attributes into the new composition" option in the Pre-compose dialog box. You can only set this to `false` if there is just one index in the `layerIndices` array. This is the same as selecting the "Leave all attributes in" option in the Pre-compose dialog box. |
 
 #### Returns
 
-[CompItem object](../items/compitem.md).
+[CompItem object](../item/compitem.md).

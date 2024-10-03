@@ -48,7 +48,7 @@ What's new and changed for scripting?
 
 ### [After Effects 24.4 Beta build 25](https://community.adobe.com/t5/after-effects-beta-discussions/scripting-new-api-for-3d-model-layers/td-p/14580044) (March 2024)
 
-- Added: [ThreeDModelLayer object](../layers/threedmodellayer.md)
+- Added: [ThreeDModelLayer object](../layer/threedmodellayer.md)
 
 ### [After Effects 24.3](https://helpx.adobe.com/after-effects/using/whats-new/2024-3.html) (March 2024)
 
@@ -68,8 +68,8 @@ What's new and changed for scripting?
 ### [After Effects 24.2](https://helpx.adobe.com/after-effects/using/whats-new/2024-2.html) (February 2024)
 
 - Scripting methods and attributes added or changed:
-  - Added: [LayerCollection.addVerticalText()](../layers/layercollection.md#layercollectionaddverticaltext)
-  - Added: [LayerCollection.addVerticalBoxText()](../layers/layercollection.md#layercollectionaddverticalboxtext)
+  - Added: [LayerCollection.addVerticalText()](../layer/layercollection.md#layercollectionaddverticaltext)
+  - Added: [LayerCollection.addVerticalBoxText()](../layer/layercollection.md#layercollectionaddverticalboxtext)
   - Added: [TextDocument.lineOrientation](../text/textdocument.md#textdocumentlineorientation)
   - Added: [FontsObject.fontServerRevision](../text/fontsobject.md#fontsobjectfontserverrevision)
   - Added: [FontsObject.getFontByID()](../text/fontsobject.md#fontsobjectgetfontbyid)
@@ -140,13 +140,13 @@ What's new and changed for scripting?
 ### [After Effects 23.0](https://helpx.adobe.com/after-effects/using/whats-new/2023.html) (October 2022)
 
 - Scripting methods and attributes added:
-  - Added: [AVLayer.setTrackMatte()](../layers/avlayer.md#avlayersettrackmatte)
-  - Added: [AVLayer.removeTrackMatte()](../layers/avlayer.md#avlayerremovetrackmatte)
-  - Added: [AVLayer.trackMatteLayer](../layers/avlayer.md#avlayertrackmattelayer)
+  - Added: [AVLayer.setTrackMatte()](../layer/avlayer.md#avlayersettrackmatte)
+  - Added: [AVLayer.removeTrackMatte()](../layer/avlayer.md#avlayerremovetrackmatte)
+  - Added: [AVLayer.trackMatteLayer](../layer/avlayer.md#avlayertrackmattelayer)
 - Scripting attributes updated:
-  - Updated: [AVLayer.trackMatteType](../layers/avlayer.md#avlayertrackmattetype)
-  - Updated: [AVLayer.isTrackMatte](../layers/avlayer.md#avlayeristrackmatte)
-  - Updated: [AVLayer.hasTrackMatte](../layers/avlayer.md#avlayerhastrackmatte)
+  - Updated: [AVLayer.trackMatteType](../layer/avlayer.md#avlayertrackmattetype)
+  - Updated: [AVLayer.isTrackMatte](../layer/avlayer.md#avlayeristrackmatte)
+  - Updated: [AVLayer.hasTrackMatte](../layer/avlayer.md#avlayerhastrackmatte)
 
 ---
 
@@ -155,23 +155,23 @@ What's new and changed for scripting?
 ### [After Effects 22.6](https://helpx.adobe.com/after-effects/using/whats-new/2022-2.html) (August 2022)
 
 - Scripting methods added:
-  - Added: [Property.keyLabel()](../properties/property.md#propertykeylabel)
-  - Added: [Property.setLabelAtKey()](../properties/property.md#propertysetlabelatkey)
+  - Added: [Property.keyLabel()](../property/index.md#propertykeylabel)
+  - Added: [Property.setLabelAtKey()](../property/index.md#propertysetlabelatkey)
 
 ### [After Effects 22.3](https://helpx.adobe.com/after-effects/using/whats-new/2022-2.html) (April 2022)
 
 - Scripting methods added:
-  - Added: [Layer.doSceneEditDetection()](../layers/layer.md#layerdosceneeditdetection)
+  - Added: [Layer.doSceneEditDetection()](../layer/index.md#layerdosceneeditdetection)
 
 
 ### [After Effects 22.0](https://helpx.adobe.com/after-effects/using/whats-new/2022.html) (October 2021)
 
 - Scripting methods added:
-  - Added: [Layer.id](../layers/layer.md#layerid)
+  - Added: [Layer.id](../layer/index.md#layerid)
   - Added: [Project.layerByID()](../general/project.md#projectlayerbyid)
-  - Added: [Property.essentialPropertySource](../properties/property.md#propertyessentialpropertysource)
+  - Added: [Property.essentialPropertySource](../property/index.md#propertyessentialpropertysource)
 - Scripting Access to Render Queue Notifications:
-  - Added: [RenderQueue.queueNotify](../renderqueue/renderqueue.md#renderqueuequeuenotify)
+  - Added: [RenderQueue.queueNotify](../renderqueue/index.md#renderqueuequeuenotify)
   - Added: [RenderQueueItem.queueItemNotify](../renderqueue/renderqueueitem.md#renderqueueitemqueueitemnotify)
 - Scripting Access to Multi-Frame Rendering, Maximum CPU Percentage Overrides:
   - Added: [app.setMultiFrameRenderingConfig()](../general/application.md#appsetmultiframerenderingconfig)
@@ -183,15 +183,15 @@ What's new and changed for scripting?
 ### [After Effects 18.0](https://helpx.adobe.com/after-effects/using/whats-new/2021-2.html) (March 2021)
 
 - Scripting methods and attributes to support Media Replacement:
-  - Added: [AVItem.isMediaReplacementCompatible](../items/avitem.md#avitemismediareplacementcompatible)
-  - Added: [AVLayer.addToMotionGraphicsTemplate()](../layers/avlayer.md#avlayeraddtomotiongraphicstemplate)
-  - Added: [AVLayer.addToMotionGraphicsTemplateAs()](../layers/avlayer.md#avlayeraddtomotiongraphicstemplateas)
-  - Added: [AVLayer.canAddToMotionGraphicsTemplate()](../layers/avlayer.md#avlayercanaddtomotiongraphicstemplate)
-  - Added: [Property.alternateSource](../properties/property.md#propertyalternatesource)
-  - Added: [Property.canSetAlternateSource](../properties/property.md#propertycansetalternatesource)
-  - Added: [Property.setAlternateSource()](../properties/property.md#propertysetalternatesource)
-  - Added relevant [match names](../matchnames/layer-avlayer.md#matchnameslayeravlayer)
-- Added [match name for Essential Properties](../matchnames/layer-avlayer.md#matchnameslayeravlayer) property group.
+  - Added: [AVItem.isMediaReplacementCompatible](../item/avitem.md#avitemismediareplacementcompatible)
+  - Added: [AVLayer.addToMotionGraphicsTemplate()](../layer/avlayer.md#avlayeraddtomotiongraphicstemplate)
+  - Added: [AVLayer.addToMotionGraphicsTemplateAs()](../layer/avlayer.md#avlayeraddtomotiongraphicstemplateas)
+  - Added: [AVLayer.canAddToMotionGraphicsTemplate()](../layer/avlayer.md#avlayercanaddtomotiongraphicstemplate)
+  - Added: [Property.alternateSource](../property/index.md#propertyalternatesource)
+  - Added: [Property.canSetAlternateSource](../property/index.md#propertycansetalternatesource)
+  - Added: [Property.setAlternateSource()](../property/index.md#propertysetalternatesource)
+  - Added relevant [match names](../matchnames/layer/avlayer.md)
+- Added [match name for Essential Properties](../matchnames/layer/avlayer.md) property group.
 
 ---
 
@@ -200,16 +200,16 @@ What's new and changed for scripting?
 ### [After Effects 17.1.1](https://helpx.adobe.com/after-effects/using/whats-new/2020-1.html) (May 2020)
 
 - Scripting access to Shape Layer Stroke Taper, Stroke Waves, Offset Paths Copies, Offset Path Copy Offset:
-  - Added relevant [match names](../matchnames/layer-shapelayer.md#matchnameslayershapelayer)
-- Fixed an issue to allow negative values for [CompItem.displayStartTime](../items/compitem.md#compitemdisplaystarttime):
-  - Added [CompItem.displayStartFrame](../items/compitem.md#compitemdisplaystartframe)
+  - Added relevant [match names](../matchnames/layer/shapelayer.md)
+- Fixed an issue to allow negative values for [CompItem.displayStartTime](../item/compitem.md#compitemdisplaystarttime):
+  - Added [CompItem.displayStartFrame](../item/compitem.md#compitemdisplaystartframe)
   - Now matches the valid range allowed when setting the Start Timecode in the Composition Settings Dialog (-3:00:00:00 to 23:59:00:00).
 
 ### [After Effects 17.0.1](https://helpx.adobe.com/after-effects/using/whats-new/2020.html) (November 2019)
 
 - Scripted creation and modification of Dropdown Menu Control items:
-  - Added: [Property.isDropdownEffect](../properties/property.md#propertyisdropdowneffect)
-  - Added: [Property.setPropertyParameters()](../properties/property.md#propertysetpropertyparameters)
+  - Added: [Property.isDropdownEffect](../property/index.md#propertyisdropdowneffect)
+  - Added: [Property.setPropertyParameters()](../property/index.md#propertysetpropertyparameters)
 
 ---
 
@@ -223,14 +223,14 @@ What's new and changed for scripting?
   - Added: [ViewOptions.guidesVisibility](../other/viewoptions.md#viewoptionsguidesvisibility)
   - Added: [ViewOptions.rulers](../other/viewoptions.md#viewoptionsrulers)
 - Scripting access to add, remove, and set existing guides:
-  - Added: [Item.addGuide()](../items/item.md#itemaddguide)
-  - Added: [Item.removeGuide()](../items/item.md#itemremoveguide)
-  - Added: [Item.setGuide()](../items/item.md#itemsetguide)
+  - Added: [Item.addGuide()](../item/index.md#itemaddguide)
+  - Added: [Item.removeGuide()](../item/index.md#itemremoveguide)
+  - Added: [Item.setGuide()](../item/index.md#itemsetguide)
 - Scripting access to additional EGP property attributes:
-  - Added: [CompItem.motionGraphicsTemplateControllerCount](../items/compitem.md#compitemmotiongraphicstemplatecontrollercount)
-  - Added: [CompItem.getMotionGraphicsTemplateControllerName()](../items/compitem.md#compitemgetmotiongraphicstemplatecontrollername)
-  - Added: [CompItem.setMotionGraphicsControllerName()](../items/compitem.md#compitemsetmotiongraphicscontrollername)
-  - Added: [Property.addToMotionGraphicsTemplateAs()](../properties/property.md#propertyaddtomotiongraphicstemplateas)
+  - Added: [CompItem.motionGraphicsTemplateControllerCount](../item/compitem.md#compitemmotiongraphicstemplatecontrollercount)
+  - Added: [CompItem.getMotionGraphicsTemplateControllerName()](../item/compitem.md#compitemgetmotiongraphicstemplatecontrollername)
+  - Added: [CompItem.setMotionGraphicsControllerName()](../item/compitem.md#compitemsetmotiongraphicscontrollername)
+  - Added: [Property.addToMotionGraphicsTemplateAs()](../property/index.md#propertyaddtomotiongraphicstemplateas)
 
 ### [After Effects 16.0](https://helpx.adobe.com/after-effects/using/whats-new/2019.html) (October 2018)
 
@@ -255,16 +255,16 @@ What's new and changed for scripting?
 ### [After Effects 15.1](https://helpx.adobe.com/after-effects/using/whats-new/2018.html) (April 2018)
 
 - [Project.autoFixExpressions()](../general/project.md#projectautofixexpressions) will now fix expression name references in single quotes (ex., ('Effect Name')), as well as double quotes.
-- Fixes [CompItem.exportAsMotionGraphicsTemplate()](../items/compitem.md#compitemexportasmotiongraphicstemplate) not returning a boolean as expected
+- Fixes [CompItem.exportAsMotionGraphicsTemplate()](../item/compitem.md#compitemexportasmotiongraphicstemplate) not returning a boolean as expected
 
 ### [After Effects 15.0](https://forums.adobe.com/docs/DOC-8872) (October 2017)
 
 - Scripting Access to motion graphics templates:
-  - Added: [CompItem.motionGraphicsTemplateName](../items/compitem.md#compitemmotiongraphicstemplatename)
-  - Added: [CompItem.exportAsMotionGraphicsTemplate()](../items/compitem.md#compitemexportasmotiongraphicstemplate)
-  - Added: [CompItem.openInEssentialGraphics()](../items/compitem.md#compitemopeninessentialgraphics)
-  - Added: [Property.addToMotionGraphicsTemplate()](../properties/property.md#propertyaddtomotiongraphicstemplate)
-  - Added: [Property.canAddToMotionGraphicsTemplate()](../properties/property.md#propertycanaddtomotiongraphicstemplate)
+  - Added: [CompItem.motionGraphicsTemplateName](../item/compitem.md#compitemmotiongraphicstemplatename)
+  - Added: [CompItem.exportAsMotionGraphicsTemplate()](../item/compitem.md#compitemexportasmotiongraphicstemplate)
+  - Added: [CompItem.openInEssentialGraphics()](../item/compitem.md#compitemopeninessentialgraphics)
+  - Added: [Property.addToMotionGraphicsTemplate()](../property/index.md#propertyaddtomotiongraphicstemplate)
+  - Added: [Property.canAddToMotionGraphicsTemplate()](../property/index.md#propertycanaddtomotiongraphicstemplate)
 
 ---
 
@@ -273,7 +273,7 @@ What's new and changed for scripting?
 ### [After Effects 14.2.1 (CC 2017.2)](https://blogs.adobe.com/creativecloud/a-june-2017-update-to-after-effects-cc-is-now-available/) (June 2017)
 
 - Buttons in ScriptUI panels have been reverted to the rectangular appearance seen in After Effects 14.1 and previous releases.
-- The [AVItem.setProxyToNone()](../items/avitem.md#avitemsetproxytonone) scripting method no longer fails with an error message, "After Effects error: AEGP trying to add invalid footage".
+- The [AVItem.setProxyToNone()](../item/avitem.md#avitemsetproxytonone) scripting method no longer fails with an error message, "After Effects error: AEGP trying to add invalid footage".
 - The [System.callSystem()](../general/system.md#systemcallsystem) scripting method now waits for all tasks called by the command to complete, instead of failing when the command takes a long time to complete.
 
 ### [After Effects 14.2 (CC 2017.1)](https://blogs.adobe.com/creativecloud/after-effects-cc-april-2017-in-depth-scripting-improvements/) (April 2017)
@@ -298,7 +298,7 @@ What's new and changed for scripting?
   - Added: [Project.resolveConflict()](../general/project.md#projectresolveconflict)
 - Drop-down menus in ScriptUI panels are no longer clipped on HiDPI displays on Windows.
 - The appearance of buttons, sliders, disclosure triangles ("twirly arrow"), scroll bar, progress bar, radio buttons, and checkboxes in ScriptUI embedded panels have been updated to match the appearance of After Effects native controls.
-- After Effects no longer crashes when the [AVLayer.compPointToSource()](../layers/avlayer.md#avlayercomppointtosource) scripting method is used with a 3D text layer.
+- After Effects no longer crashes when the [AVLayer.compPointToSource()](../layer/avlayer.md#avlayercomppointtosource) scripting method is used with a 3D text layer.
 - The match name of the Fast Box Blur effect is "ADBE Box Blur2". The older match name "ADBE Box Blur" will continue to work: when used to add the effect, "ADBE Box Blur" will apply the Fast Box Blur effect, but with the older name "Box Blur"; the Iterations parameter will be set to the new default of 3.
 
 ### [After Effects 14.0 (CC 2017)](https://forums.adobe.com/message/9108589) (November 2016)
@@ -306,9 +306,9 @@ What's new and changed for scripting?
 - Scripting Access to Tools:
   - Added: [Project.toolType](../general/project.md#projecttooltype)
 - Scripting Access to Composition Markers:
-  - Added: [CompItem.markerProperty](../items/compitem.md#compitemmarkerproperty)
+  - Added: [CompItem.markerProperty](../item/compitem.md#compitemmarkerproperty)
 - Scripting Access to Queue in AME:
-  - Added: [RenderQueue.queueInAME()](../renderqueue/renderqueue.md#renderqueuequeueiname)
+  - Added: [RenderQueue.queueInAME()](../renderqueue/index.md#renderqueuequeueiname)
 - Scripting Access to Available GPU Acceleration Options:
   - Added: [app.availableGPUAccelTypes](../general/application.md#appavailablegpuacceltypes)
 
@@ -328,8 +328,8 @@ What's new and changed for scripting?
   - Added: [baselineLocs](../text/textdocument.md#textdocumentbaselinelocs)
 - New scripting method to generate random numbers:
   - Added: [generateRandomNumber()](../general/globals.md#generaterandomnumber)
-- Using the [copyToComp()](../layers/layer.md#layercopytocomp) scripting method no longer causes After Effects to crash when the layer has a parent.
-- The [valueAtTime()](../properties/property.md#propertyvalueattime) scripting method now waits for time-intensive expressions, like `sampleImage`, to finish evaluating before it returns the result.
+- Using the [copyToComp()](../layer/index.md#layercopytocomp) scripting method no longer causes After Effects to crash when the layer has a parent.
+- The [valueAtTime()](../property/index.md#propertyvalueattime) scripting method now waits for time-intensive expressions, like `sampleImage`, to finish evaluating before it returns the result.
 - ScriptUI panels now display and resize correctly on high-DPI displays on Windows.
 - After Effects no longer crashes when you click OK or Cancel buttons in a scriptUI dialog with tabbed panels.
 
@@ -351,8 +351,8 @@ What's new and changed for scripting?
   - Returns array of ([X,Y]) position coordinates (paragraph text layers only):
     - Added: [boxTextPos](../text/textdocument.md#textdocumentboxtextpos)
 - Layer space / comp space conversion:
-  - Added: [sourcePointToComp()](../layers/avlayer.md#avlayersourcepointtocomp)
-  - Added: [compPointToSource()](../layers/avlayer.md#avlayercomppointtosource)
+  - Added: [sourcePointToComp()](../layer/avlayer.md#avlayersourcepointtocomp)
+  - Added: [compPointToSource()](../layer/avlayer.md#avlayercomppointtosource)
 
 ### [After Effects 13.1 (CC 2014.1)](https://blogs.adobe.com/creativecloud/after-effects-cc-2014-1-13-1/) (September 2014)
 
@@ -385,7 +385,7 @@ What's new and changed for scripting?
   - Added: Application effects object's version attribute, see [app.effects](../general/application.md#appeffects)
 - Ability to get and set preview mode:
   - Added: [ViewOptions.fastPreview](../other/viewoptions.md#viewoptionsfastpreview)
-- Access to layer sampling method (see [samplingQuality](../layers/avlayer.md#avlayersamplingquality))
+- Access to layer sampling method (see [samplingQuality](../layer/avlayer.md#avlayersamplingquality))
 - Changed preference and settings methods (see [Settings object](../other/settings.md))
 - ScriptUI is now based on the same controls as the main application.
 
@@ -397,12 +397,12 @@ What's new and changed for scripting?
 
 - Added: Access to [Viewer object](../other/viewer.md) object and controls:
   - Added: [app.activeViewer](../general/application.md#appactiveviewer)
-  - Added: [AVLayer.openInViewer()](../layers/avlayer.md#avlayeropeninviewer) to open a layer in the layer viewer
-  - Added: [CompItem.openInViewer()](../items/compitem.md#compitemopeninviewer) to open a composition in the composition viewer
-  - Added: [FootageItem.openInViewer()](../items/footageitem.md#footageitemopeninviewer) to open a footage item in the footage viewer
-- Added: [Property.canSetExpression](../properties/property.md#propertycansetexpression)
-- Added: [AVLayer.environmentLayer](../layers/avlayer.md#avlayerenvironmentlayer)
-- Added: [MaskPropertyGroup.maskFeatherFalloff](../properties/maskpropertygroup.md#maskpropertygroupmaskfeatherfalloff)
+  - Added: [AVLayer.openInViewer()](../layer/avlayer.md#avlayeropeninviewer) to open a layer in the layer viewer
+  - Added: [CompItem.openInViewer()](../item/compitem.md#compitemopeninviewer) to open a composition in the composition viewer
+  - Added: [FootageItem.openInViewer()](../item/footageitem.md#footageitemopeninviewer) to open a footage item in the footage viewer
+- Added: [Property.canSetExpression](../property/index.md#propertycansetexpression)
+- Added: [AVLayer.environmentLayer](../layer/avlayer.md#avlayerenvironmentlayer)
+- Added: [MaskPropertyGroup.maskFeatherFalloff](../property/maskpropertygroup.md#maskpropertygroupmaskfeatherfalloff)
 - Access to Shape Feather properties via scripting:
   - Added: [Shape.featherSegLocs](../other/shape.md#shapefeatherseglocs)
   - Added: [Shape.featherRelSegLocs](../other/shape.md#shapefeatherrelseglocs)
@@ -432,13 +432,13 @@ What's new and changed for scripting?
   - `TimecodeDisplayType` enum
   - `TimecodeFilmType` enum
   - `TimecodeBaseType` enum
-- Added: [CompItem.dropFrame](../items/compitem.md#compitemdropframe)
+- Added: [CompItem.dropFrame](../item/compitem.md#compitemdropframe)
 - Added support for Paragraph Box Text:
-  - Added [LayerCollection.addBoxText()](../layers/layercollection.md#layercollectionaddboxtext)
+  - Added [LayerCollection.addBoxText()](../layer/layercollection.md#layercollectionaddboxtext)
   - Added [TextDocument.boxText](../text/textdocument.md#textdocumentboxtext)
   - Added [TextDocument.pointText](../text/textdocument.md#textdocumentpointtext)
   - Added [TextDocument.boxTextSize](../text/textdocument.md#textdocumentboxtextsize)
-- Added [LightLayer.lightType](../layers/lightlayer.md#lightlayerlighttype)
+- Added [LightLayer.lightType](../layer/lightlayer.md#lightlayerlighttype)
 
 ---
 
@@ -451,12 +451,12 @@ What's new and changed for scripting?
 - Added: [OutputModule.includeSourceXMP](../renderqueue/outputmodule.md#outputmoduleincludesourcexmp)
 - Added: [Project.xmpPacket](../general/project.md#projectxmppacket)
 - Added the following Property methods and attributes related to the Separate Dimensions feature:
-  - [Property.dimensionsSeparated](../properties/property.md#propertydimensionsseparated)
-  - [Property.getSeparationFollower()](../properties/property.md#propertygetseparationfollower)
-  - [Property.isSeparationFollower](../properties/property.md#propertyisseparationfollower)
-  - [Property.isSeparationLeader](../properties/property.md#propertyisseparationleader)
-  - [Property.separationDimension](../properties/property.md#propertyseparationdimension)
-  - [Property.separationLeader](../properties/property.md#propertyseparationleader)
+  - [Property.dimensionsSeparated](../property/index.md#propertydimensionsseparated)
+  - [Property.getSeparationFollower()](../property/index.md#propertygetseparationfollower)
+  - [Property.isSeparationFollower](../property/index.md#propertyisseparationfollower)
+  - [Property.isSeparationLeader](../property/index.md#propertyisseparationleader)
+  - [Property.separationDimension](../property/index.md#propertyseparationdimension)
+  - [Property.separationLeader](../property/index.md#propertyseparationleader)
 - Added [TextDocument object](../text/textdocument.md) access, including:
   - Added: [TextDocument.applyFill](../text/textdocument.md#textdocumentapplyfill)
   - Added: [TextDocument.applyStroke](../text/textdocument.md#textdocumentapplystroke)

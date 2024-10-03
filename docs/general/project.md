@@ -20,7 +20,7 @@ The item that is currently active and is to be acted upon, or `null` if no item 
 
 #### Type
 
-[Item object](../items/item.md) or `null`; read-only.
+[Item object](../item/index.md) or `null`; read-only.
 
 ---
 
@@ -262,7 +262,7 @@ All of the items in the project.
 
 #### Type
 
-[ItemCollection object](../items/itemcollection.md); read-only.
+[ItemCollection object](../item/itemcollection.md); read-only.
 
 ---
 
@@ -324,12 +324,12 @@ alert("There are " + numItems + " items in this project.")
 
 #### Description
 
-The [Render Queue](renderqueue/renderqueue) of the project.
+The [Render Queue](../renderqueue/index.md) of the project.
 
 
 #### Type
 
-[RenderQueue object](../renderqueue/renderqueue.md); read-only.
+[RenderQueue object](../renderqueue/index.md); read-only.
 
 ---
 
@@ -357,7 +357,7 @@ The root folder containing the contents of the project; this is a virtual folder
 
 #### Type
 
-[FolderItem object](../items/folderitem.md); read-only.
+[FolderItem object](../item/folderitem.md); read-only.
 
 ---
 
@@ -371,7 +371,7 @@ All items selected in the Project panel, in the sort order shown in the Project 
 
 #### Type
 
-Array of [Item objects](../items/item.md); read-only.
+Array of [Item objects](../item/index.md); read-only.
 
 ---
 
@@ -507,9 +507,9 @@ Boolean; read/write.
 
 #### Description
 
-Returns an Array of Objects containing references to used fonts and the Text Layers and times on which they appear in the current [Project](#project).
+Returns an Array of Objects containing references to used fonts and the Text Layers and times on which they appear in the current [Project](#project-object).
 
-Each object is composed of `font` which is a [Font object](../text/fontobject.md), and `usedAt` which is an Array of Objects, each composed of `layerID`, a [Layer.id](../layers/layer.md#layerid), and `layerTimeD` for when. See [Project.layerByID()](#projectlayerbyid) to retrieve the layers.
+Each object is composed of `font` which is a [Font object](../text/fontobject.md), and `usedAt` which is an Array of Objects, each composed of `layerID`, a [Layer.id](../layer/index.md#layerid), and `layerTimeD` for when. See [Project.layerByID()](#projectlayerbyid) to retrieve the layers.
 
 ```javascript
 var usedList = app.project.usedFonts;
@@ -704,7 +704,7 @@ Creates and returns a new FootageItem object from the file, and adds it to the p
 
 #### Returns
 
-[FootageItem object](../items/footageitem.md).
+[FootageItem object](../item/footageitem.md).
 
 #### Example
 
@@ -724,7 +724,7 @@ Shows an Import File dialog box. Same as the File > Import > File command.
 
 #### Returns
 
-Array of [Item objects](../items/item.md) created during import; or `null` if the user cancels the dialog box.
+Array of [Item objects](../item/index.md) created during import; or `null` if the user cancels the dialog box.
 
 ---
 
@@ -768,7 +768,7 @@ Retrieves an item at a specified index position.
 
 #### Returns
 
-[Item object](../items/item.md).
+[Item object](../item/index.md).
 
 ---
 
@@ -781,7 +781,7 @@ Retrieves an item at a specified index position.
 
 #### Description
 
-Retrieves an item by its [Item ID](../items/item.md#itemid)
+Retrieves an item by its [Item ID](../item/index.md#itemid)
 
 #### Parameters
 
@@ -791,7 +791,7 @@ Retrieves an item by its [Item ID](../items/item.md#itemid)
 
 #### Returns
 
-[Item object](../items/item.md).
+[Item object](../item/index.md).
 
 ---
 
@@ -814,7 +814,7 @@ Instance method on Project which, when given a valid ID value, returns the Layer
 
 #### Returns
 
-[Layer object](../layers/layer.md) with the given ID if it exists on the project; otherwise null. Non-valid IDs will throw an exception stating that the input parameter is not an unsigned integer.
+[Layer object](../layer/index.md) with the given ID if it exists on the project; otherwise null. Non-valid IDs will throw an exception stating that the input parameter is not an unsigned integer.
 
 #### Example
 
@@ -860,7 +860,7 @@ Removes all items from the project except those specified. Same as the File > Re
 
 |    Parameter     |                   Type                    |      Description      |
 | ---------------- | ----------------------------------------- | --------------------- |
-| `array_of_items` | Array of [Item objects](../items/item.md) | The items to be kept. |
+| `array_of_items` | Array of [Item objects](../item/index.md) | The items to be kept. |
 
 #### Returns
 

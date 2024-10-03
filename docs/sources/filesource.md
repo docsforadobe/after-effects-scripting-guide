@@ -26,8 +26,8 @@ The FileSource object describes footage that comes from a file.
 
 The [Extendscript File](https://extendscript.docsforadobe.dev/file-system-access/file-object.html) object for the file that defines this asset. To change the value:
 
-- If this FileSource is a [proxySource](../items/avitem.md#avitemproxysource) of an [AVItem](../items/avitem.md), call [setProxy()](../items/avitem.md#avitemsetproxy) or [setProxyWithSequence()](../items/avitem.md#avitemsetproxywithsequence).
-- If this FileSource is a [mainSource](../items/footageitem.md#footageitemmainsource) of a [FootageItem](../items/footageitem.md), call [replace()](../items/footageitem.md#footageitemreplace) or [replaceWithSequence()](../items/footageitem.md#footageitemreplacewithsequence).
+- If this FileSource is a [proxySource](../item/avitem.md#avitemproxysource) of an [AVItem](../item/avitem.md), call [setProxy()](../item/avitem.md#avitemsetproxy) or [setProxyWithSequence()](../item/avitem.md#avitemsetproxywithsequence).
+- If this FileSource is a [mainSource](../item/footageitem.md#footageitemmainsource) of a [FootageItem](../item/footageitem.md), call [replace()](../item/footageitem.md#footageitemreplace) or [replaceWithSequence()](../item/footageitem.md#footageitemreplacewithsequence).
 
 #### Type
 
@@ -44,7 +44,7 @@ The [Extendscript File](https://extendscript.docsforadobe.dev/file-system-access
 
 #### Description
 
-The path and filename of footage that is missing from this asset. See also [AVItem.footageMissing](../items/avitem.md#avitemfootagemissing).
+The path and filename of footage that is missing from this asset. See also [AVItem.footageMissing](../item/avitem.md#avitemfootagemissing).
 
 #### Type
 

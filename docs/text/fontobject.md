@@ -441,9 +441,9 @@ The character order does not matter, and in the case of a parameter string with 
 
 #### Parameters
 
-|  Parameter   |  Type  |                               Description                                |
-| ------------ | ------ | ------------------------------------------------------------------------ |
-| `charString` | String | Text that will be checked for support in the [Font object](#fontobject). |
+|  Parameter   |  Type  |                                Description                                |
+| ------------ | ------ | ------------------------------------------------------------------------- |
+| `charString` | String | Text that will be checked for support in the [Font object](#font-object). |
 
 
 #### Returns
@@ -458,16 +458,16 @@ Boolean.
 
 #### Description
 
-This function will `true` if the [Font object](#fontobject) passed as an argument shares the same variable font dictionary as the [Font object](#fontobject) the function is called on.
+This function will `true` if the [Font object](#font-object) passed as an argument shares the same variable font dictionary as the [Font object](#font-object) the function is called on.
 
 !!! tip
-    Can only return `true` when called on a variable [Font object](#fontobject) with the argument also being a [Font object](#fontobject) of a variable font.
+    Can only return `true` when called on a variable [Font object](#font-object) with the argument also being a [Font object](#font-object) of a variable font.
 
 #### Parameters
 
-|  Parameter   |            Type            |   Description   |
-| ------------ | -------------------------- | --------------- |
-| `fontObject` | [Font object](#fontobject) | Object to check |
+|  Parameter   |            Type             |   Description   |
+| ------------ | --------------------------- | --------------- |
+| `fontObject` | [Font object](#font-object) | Object to check |
 
 #### Returns
 
@@ -484,19 +484,19 @@ Boolean.
 
 #### Description
 
-Given an [Font object](#fontobject) passed as an argument, returns an Array of [Font object](#fontobject) instances which share the same font dictionary as the [Font object](#fontobject) the function is called on.
+Given an [Font object](#font-object) passed as an argument, returns an Array of [Font object](#font-object) instances which share the same font dictionary as the [Font object](#font-object) the function is called on.
 
 Will return an empty Array if the argument is not a Variable font, or the Variable font only has one instance (the parameter one).
 
 #### Parameters
 
-|  Parameter   |            Type            |   Description   |
-| ------------ | -------------------------- | --------------- |
-| `fontObject` | [Font object](#fontobject) | Object to check |
+|  Parameter   |            Type             |   Description   |
+| ------------ | --------------------------- | --------------- |
+| `fontObject` | [Font object](#font-object) | Object to check |
 
 #### Returns
 
-Array of [Font objects](#fontobject), may be empty.
+Array of [Font objects](#font-object), may be empty.
 
 ---
 

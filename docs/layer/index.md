@@ -6,13 +6,13 @@
 
 The Layer object provides access to layers within compositions. It can be accessed from an item's layer collection either by index number or by a name string.
 
-> Layer is a subclass of [PropertyGroup](../properties/propertygroup.md), which is a subclass of [PropertyBase](../properties/propertybase.md). All methods and attributes of PropertyGroup, in addition to those listed below, are available when working with Layer, with the exception that `propertyIndex` attribute is set to `undefined`.
+> Layer is a subclass of [PropertyGroup](../property/propertygroup.md), which is a subclass of [PropertyBase](../property/propertybase.md). All methods and attributes of PropertyGroup, in addition to those listed below, are available when working with Layer, with the exception that `propertyIndex` attribute is set to `undefined`.
 
-> Layer is the base class for [CameraLayer object](cameralayer.md), [LightLayer object](lightlayer.md), and [AVLayer object](avlayer.md), so Layer attributes and methods are available when working with all layer types. Layers contain AE properties, in addition to their JavaScript attributes and methods. For examples of how to access properties in layers, see [PropertyBase object](../properties/propertybase.md).
+> Layer is the base class for [CameraLayer object](cameralayer.md), [LightLayer object](lightlayer.md), and [AVLayer object](avlayer.md), so Layer attributes and methods are available when working with all layer types. Layers contain AE properties, in addition to their JavaScript attributes and methods. For examples of how to access properties in layers, see [PropertyBase object](../property/propertybase.md).
 
 #### Example
 
-If the first item in the project is a [CompItem](../items/compitem.md), this example disables the first layer in that composition and renames it. This might, for example, turn an icon off in the composition.
+If the first item in the project is a [CompItem](../item/compitem.md), this example disables the first layer in that composition and renames it. This might, for example, turn an icon off in the composition.
 
 ```javascript
 var firstLayer = app.project.item(1).layer(1);
@@ -189,7 +189,7 @@ Boolean; read/write.
 
 #### Description
 
-A [PropertyGroup object](../properties/propertygroup.md) that contains all a layer's markers. Layer marker scripting has the same functionality as [Comp markers](../items/compitem.md#compitemmarkerproperty).
+A [PropertyGroup object](../property/propertygroup.md) that contains all a layer's markers. Layer marker scripting has the same functionality as [Comp markers](../item/compitem.md#compitemmarkerproperty).
 
 See [MarkerValue object](../other/markervalue.md).
 
@@ -270,11 +270,11 @@ Layer object or `null`; read/write.
 
 #### Description
 
-An array containing all of the currently selected [Property](../properties/property.md) and [PropertyGroup](../properties/propertygroup.md) objects in the layer.
+An array containing all of the currently selected [Property](../property/index.md) and [PropertyGroup](../property/propertygroup.md) objects in the layer.
 
 #### Type
 
-Array of [PropertyBase](../properties/propertybase.md) objects; read-only.
+Array of [PropertyBase](../property/propertybase.md) objects; read-only.
 
 ---
 
@@ -419,9 +419,9 @@ This is the same as copying and pasting a layer through the user interface.
 
 #### Parameters
 
-| Parameter  |                  Type                   |       Description       |
-| ---------- | --------------------------------------- | ----------------------- |
-| `intoComp` | [CompItem object](../items/compitem.md) | The target composition. |
+| Parameter  |                  Type                  |       Description       |
+| ---------- | -------------------------------------- | ----------------------- |
+| `intoComp` | [CompItem object](../item/compitem.md) | The target composition. |
 
 #### Returns
 
@@ -482,9 +482,9 @@ Moves this layer to a position immediately after (below) the specified layer.
 
 #### Parameters
 
-| Parameter |                Type                |                Description                |
-| --------- | ---------------------------------- | ----------------------------------------- |
-| `layer`   | [Layer object](../layers/layer.md) | The target layer in the same composition. |
+| Parameter |           Type           |                Description                |
+| --------- | ------------------------ | ----------------------------------------- |
+| `layer`   | [Layer object](index.md) | The target layer in the same composition. |
 
 
 #### Returns
@@ -503,9 +503,9 @@ Moves this layer to a position immediately before (above) the specified layer.
 
 #### Parameters
 
-| Parameter |                Type                |                Description                |
-| --------- | ---------------------------------- | ----------------------------------------- |
-| `layer`   | [Layer object](../layers/layer.md) | The target layer in the same composition. |
+| Parameter |           Type           |                Description                |
+| --------- | ------------------------ | ----------------------------------------- |
+| `layer`   | [Layer object](index.md) | The target layer in the same composition. |
 
 #### Returns
 
@@ -581,9 +581,9 @@ If you do not want the child layer to jump, set the [parent](#layerparent) attri
 
 #### Parameters
 
-|  Parameter  |                Type                |                                       Description                                        |
-| ----------- | ---------------------------------- | ---------------------------------------------------------------------------------------- |
-| `newParent` | [Layer object](../layers/layer.md) | Optional. A layer in the same composition. If not specified, it sets the parent to None. |
+|  Parameter  |           Type           |                                       Description                                        |
+| ----------- | ------------------------ | ---------------------------------------------------------------------------------------- |
+| `newParent` | [Layer object](index.md) | Optional. A layer in the same composition. If not specified, it sets the parent to None. |
 
 #### Returns
 

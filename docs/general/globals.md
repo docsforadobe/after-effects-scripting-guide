@@ -133,7 +133,7 @@ alert(getEnumAsString(5220));
 
 #### Description
 
-Determines if the specified After Effects object (e.g., composition, layer, mask, etc.) still exists. Some operations, such as [PropertyBase.moveTo()](../properties/propertybase.md#propertybasemoveto), might invalidate existing variable assignments to related objects. This function allows you to test whether those assignments are still valid before attempting to access them.
+Determines if the specified After Effects object (e.g., composition, layer, mask, etc.) still exists. Some operations, such as [PropertyBase.moveTo()](../property/propertybase.md#propertybasemoveto), might invalidate existing variable assignments to related objects. This function allows you to test whether those assignments are still valid before attempting to access them.
 
 #### Parameters
 

@@ -19,7 +19,7 @@ It is acceptable for most attributes for the effective range to be zero - otherw
 
 When accessed, the CharacterRange object will check that [characterStart](#characterrangecharacterstart) and effective [characterEnd](#characterrangecharacterend) of the range remains valid for the current span of the related [TextDocument object](textdocument.md). This is the same rule as applied when the CharacterRange was created, but because the length of the related [TextDocument object](textdocument.md) can change through the addition or removal of characters, the [characterStart](#characterrangecharacterstart) and effective [characterEnd](#characterrangecharacterend) may no longer be valid. In this situation an exception will be thrown on access, either read or write. The [isRangeValid](#characterrangeisrangevalid) attribute will return `false` if the effective range is no longer valid.
 
-Note that if the [TextDocument object](textdocument.md) length changes, the [CharacterRange object](#characterrange) range could become valid again.
+Note that if the [TextDocument object](textdocument.md) length changes, the [CharacterRange object](#characterrange-object) range could become valid again.
 
 #### Differences from TextDocument
 
@@ -221,22 +221,22 @@ String; read/write.
 
 #### Description
 
-Copies, using paste semantics, from the `characterRange` parameter to the callee [CharacterRange object](#characterrange). The two instances may be the same, and the spans may be different.
+Copies, using paste semantics, from the `characterRange` parameter to the callee [CharacterRange object](#characterrange-object). The two instances may be the same, and the spans may be different.
 
-Checks will be made that both [CharacterRange object](#characterrange) instances are valid.
+Checks will be made that both [CharacterRange object](#characterrange-object) instances are valid.
 
 The internal steps of the operation are:
 
 > - Delete the text from the target instance.
 > - Paste the text from the source instance.
 
-As the span of the [CharacterRange object](#characterrange) is not adjusted by this call, when the source [CharacterRange object](#characterrange) instance has a shorter span than the target [CharacterRange object](#characterrange) instance, the target instance may become invalid.
+As the span of the [CharacterRange object](#characterrange-object) is not adjusted by this call, when the source [CharacterRange object](#characterrange-object) instance has a shorter span than the target [CharacterRange object](#characterrange-object) instance, the target instance may become invalid.
 
 #### Parameters
 
-|    Parameter     |                   Type                   |                                                  Description                                                  |
-| ---------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| `characterRange` | [CharacterRange object](#characterrange) | Object whose text and styling will be pasted in place of the callee [CharacterRange object](#characterrange). |
+|    Parameter     |                      Type                       |                                                     Description                                                      |
+| ---------------- | ----------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `characterRange` | [CharacterRange object](#characterrange-object) | Object whose text and styling will be pasted in place of the callee [CharacterRange object](#characterrange-object). |
 
 #### Returns
 

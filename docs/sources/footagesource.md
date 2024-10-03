@@ -7,7 +7,7 @@
 
 #### Description
 
-The FootageSource object holds information describing the source of some footage. It is used as the `mainSource` of a [FootageItem object](../items/footageitem.md), or the `proxySource` of a [CompItem object](../items/compitem.md) or FootageItem.
+The FootageSource object holds information describing the source of some footage. It is used as the `mainSource` of a [FootageItem object](../item/footageitem.md), or the `proxySource` of a [CompItem object](../item/compitem.md) or FootageItem.
 
 > FootageSource is the base class for [SolidSource object](solidsource.md), so FootageSource attributes and methods are available when working with SolidSource objects.
 

@@ -126,7 +126,7 @@ Use [Property.canSetAlternateSource](#propertycansetalternatesource) to determin
 
 All Media Replacement Layers have an alternate source item that can be set.
 
-A layer is "marked" for media replacement when the layer is added to the Essential Graphics Panel (see [AVLayer.addToMotionGraphicsTemplate()](../layers/avlayer.md#avlayeraddtomotiongraphicstemplate) or [AVLayer.addToMotionGraphicsTemplateAs()](../layers/avlayer.md#avlayeraddtomotiongraphicstemplateas)).
+A layer is "marked" for media replacement when the layer is added to the Essential Graphics Panel (see [AVLayer.addToMotionGraphicsTemplate()](../layer/avlayer.md#avlayeraddtomotiongraphicstemplate) or [AVLayer.addToMotionGraphicsTemplateAs()](../layer/avlayer.md#avlayeraddtomotiongraphicstemplateas)).
 
 - If present, the render workflow will pick up the alternate source while rendering the layer.
 - If the alternate source for the layer is not set, then the source layer of the Media Replacement control is used for rendering (this is the normal workflow).
@@ -218,8 +218,8 @@ Instance property on an Essential Property object which returns the original sou
 
 Can be either:
 
-- A read/write [Property object](#property), in the case that the source object used to create the Essential Property was a Property
-- A read/write [AVLayer object](../layers/avlayer.md), in the case that the source object used to create the Essential Property was a Media Replacement Footage item
+- A read/write [Property object](#property-object), in the case that the source object used to create the Essential Property was a Property
+- A read/write [AVLayer object](../layer/avlayer.md), in the case that the source object used to create the Essential Property was a Media Replacement Footage item
 - `null` if called on a non-Essential Property
 
 #### Example
@@ -567,7 +567,7 @@ The value of the named property at the current time.
 - If there are keyframes, returns the keyframed value at the current time.
 - Otherwise, returns the static value.
 
-The type of value returned depends on the property value type. See [examples for Property object](#propertyexamples).
+The type of value returned depends on the property value type. See [examples for Property object](#examples).
 
 #### Type
 
@@ -618,7 +618,7 @@ Use the [Property.canAddToMotionGraphicsTemplate()](#propertycanaddtomotiongraph
 
 | Parameter |               Type               |                      Description                      |
 | --------- | -------------------------------- | ----------------------------------------------------- |
-| `comp`    | [CompItem](../items/compitem.md) | The composition that you wish to add the property to. |
+| `comp`    | [CompItem](../item/compitem.md) | The composition that you wish to add the property to. |
 
 #### Returns
 
@@ -647,7 +647,7 @@ Use the [Property.canAddToMotionGraphicsTemplate()](#propertycanaddtomotiongraph
 
 | Parameter |               Type               |                      Description                      |
 | --------- | -------------------------------- | ----------------------------------------------------- |
-| `comp`    | [CompItem](../items/compitem.md) | The composition that you wish to add the property to. |
+| `comp`    | [CompItem](../item/compitem.md) | The composition that you wish to add the property to. |
 | `name`    | String                           | The new name.                                         |
 
 #### Returns
@@ -682,7 +682,7 @@ Supported property types are:
 
 | Parameter |               Type               |                      Description                      |
 | --------- | -------------------------------- | ----------------------------------------------------- |
-| `comp`    | [CompItem](../items/compitem.md) | The composition that you wish to add the property to. |
+| `comp`    | [CompItem](../item/compitem.md) | The composition that you wish to add the property to. |
 
 #### Returns
 
@@ -1126,14 +1126,14 @@ Set the alternate source for this property.
 
 The Property object and the input parameters for the AVItem that is being called needs to be Media Replacement compatible for the action to go through.
 
-- Use the [AVItem.isMediaReplacementCompatible](../items/avitem.md#avitemismediareplacementcompatible) method to test whether the AVItem can be used as an alternate source for Media Replacement.
+- Use the [AVItem.isMediaReplacementCompatible](../item/avitem.md#avitemismediareplacementcompatible) method to test whether the AVItem can be used as an alternate source for Media Replacement.
 - Use [Property.canSetAlternateSource](#propertycansetalternatesource) to test if the property allows Media Replacement.
 
 #### Parameters
 
 |  Parameter  |                Type                 |      Description       |
 | ----------- | ----------------------------------- | ---------------------- |
-| `newSource` | [AVItem object](../items/avitem.md) | The new source AVItem. |
+| `newSource` | [AVItem object](../item/avitem.md) | The new source AVItem. |
 
 #### Returns
 

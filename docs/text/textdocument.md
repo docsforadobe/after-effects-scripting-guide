@@ -461,9 +461,9 @@ A `BoxVerticalAlignment` enumerated value; read-write. One of:
 
 Returns the number of composed lines in the Text layer, may be zero if all text is overset.
 
-The [TextDocument object](#textdocument) instance is initialized from the composed state and subsequent changes to the [TextDocument object](#textdocument) instance does not cause recomposition.
+The [TextDocument object](#textdocument-object) instance is initialized from the composed state and subsequent changes to the [TextDocument object](#textdocument-object) instance does not cause recomposition.
 
-Even if you remove all the text from the [TextDocument object](#textdocument) instance, the value returned here remains unchanged.
+Even if you remove all the text from the [TextDocument object](#textdocument-object) instance, the value returned here remains unchanged.
 
 #### Type
 
@@ -1442,20 +1442,20 @@ Floating-point value; read-write.
 
 Returns an instance of the Text layer range accessor CharacterRange.
 
-The instance will remember the parameters passed in the constructor - they remain constant and changes to the [TextDocument](#textdocument) length may cause the instance to throw exceptions on access until the [TextDocument](#textdocument) length is changed to a length which makes the range valid again.
+The instance will remember the parameters passed in the constructor - they remain constant and changes to the [TextDocument](#textdocument-object) length may cause the instance to throw exceptions on access until the [TextDocument](#textdocument-object) length is changed to a length which makes the range valid again.
 
 Use toString() to find out what the constructed parameters were.
 
 #### Parameters
 
-|      Parameter       |       Type       |                                                                                                                                                                                                                 Description                                                                                                                                                                                                                  |
-| -------------------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `characterStart`     | Unsigned integer | Starts at zero, must be the less than or equal to the (text) length of the [TextDocument object](#textdocument).                                                                                                                                                                                                                                                                                                                             |
-| `signedCharacterEnd` | Signed integer.  | Optional. If not specified, will be computed at `(characterStart + 1)`.<br/>If set to `-1`, then the [CharacterRange object](characterrange.md) will dynamically calculate this on access to be equal to the (text) length of the [TextDocument object](#textdocument).<br/>`signedCharacterEnd` must be greater than or equal to `characterStart`, and less than or equal to the (text) length of the [TextDocument object](#textdocument). |
+|      Parameter       |       Type       |                                                                                                                                                                                                                        Description                                                                                                                                                                                                                         |
+| -------------------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `characterStart`     | Unsigned integer | Starts at zero, must be the less than or equal to the (text) length of the [TextDocument object](#textdocument-object).                                                                                                                                                                                                                                                                                                                                    |
+| `signedCharacterEnd` | Signed integer.  | Optional. If not specified, will be computed at `(characterStart + 1)`.<br/>If set to `-1`, then the [CharacterRange object](characterrange.md) will dynamically calculate this on access to be equal to the (text) length of the [TextDocument object](#textdocument-object).<br/>`signedCharacterEnd` must be greater than or equal to `characterStart`, and less than or equal to the (text) length of the [TextDocument object](#textdocument-object). |
 
 Throws an exception if the parameters would result in an invalid range.
 
-It is not possible to create a [CharacterRange object](characterrange.md) which spans the final carriage return in the [TextDocument object](#textdocument).
+It is not possible to create a [CharacterRange object](characterrange.md) which spans the final carriage return in the [TextDocument object](#textdocument-object).
 
 #### Returns
 
@@ -1486,8 +1486,8 @@ Generic object;
 Key `start` will be set to text index of the start of the composed line (greater than or equal to zero).
 Key `end` will be set to text index of the end of the composed line (greater than start, or equal to start if it is the last composed line).
 
-Will throw an exception if the computed start and end are outside of the current [TextDocument object](#textdocument)
-Remember that the composed lines are static and subsequent changes to the [TextDocument object](#textdocument) instance which changes its length may render the composed line data invalid.
+Will throw an exception if the computed start and end are outside of the current [TextDocument object](#textdocument-object)
+Remember that the composed lines are static and subsequent changes to the [TextDocument object](#textdocument-object) instance which changes its length may render the composed line data invalid.
 
 ---
 
@@ -1502,20 +1502,20 @@ Remember that the composed lines are static and subsequent changes to the [TextD
 
 Returns an instance of the Text layer range accessor [ComposedLineRange object](composedlinerange.md).
 
-The instance will remember the parameters passed in the constructor - they remain constant and changes to the [TextDocument](#textdocument) contents may cause the instance to throw exceptions on access until the [TextDocument](#textdocument) contents are changed which makes the range valid again.
+The instance will remember the parameters passed in the constructor - they remain constant and changes to the [TextDocument](#textdocument-object) contents may cause the instance to throw exceptions on access until the [TextDocument](#textdocument-object) contents are changed which makes the range valid again.
 
 Use [ComposedLineRange.toString()](composedlinerange.md#composedlinerangetostring) to find out what the constructed parameters were.
 
 #### Parameters
 
-|          Parameter           |       Type       |                                                                                                                                                                                                                           Description                                                                                                                                                                                                                            |
-| ---------------------------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `composedLineIndexStart`     | Unsigned integer | Starts at zero, must be the less than the number of composed lines in the [TextDocument object](#textdocument).                                                                                                                                                                                                                                                                                                                                                  |
-| `signedComposedLineIndexEnd` | Signed integer.  | Optional. If not specified, will be computed at `(composedLineIndexStart + 1)`.<br/>If set to -1, then the [ComposedLineRange object](composedlinerange.md) will dynamically calculate this on access to the last composed line of the [TextDocument object](#textdocument).<br/>`signedComposedLineIndexEnd` must be greater than `composedLineIndexStart`, and less than or equal to the number of composed lines in the [TextDocument object](#textdocument). |
+|          Parameter           |       Type       |                                                                                                                                                                                                                                  Description                                                                                                                                                                                                                                   |
+| ---------------------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `composedLineIndexStart`     | Unsigned integer | Starts at zero, must be the less than the number of composed lines in the [TextDocument object](#textdocument-object).                                                                                                                                                                                                                                                                                                                                                         |
+| `signedComposedLineIndexEnd` | Signed integer.  | Optional. If not specified, will be computed at `(composedLineIndexStart + 1)`.<br/>If set to -1, then the [ComposedLineRange object](composedlinerange.md) will dynamically calculate this on access to the last composed line of the [TextDocument object](#textdocument-object).<br/>`signedComposedLineIndexEnd` must be greater than `composedLineIndexStart`, and less than or equal to the number of composed lines in the [TextDocument object](#textdocument-object). |
 
 Throws an exception if the parameters would result in an invalid range.
 
-Remember that the composed lines are static and subsequent changes to the [TextDocument object](#textdocument) instance which changes its length may render the composed line data invalid.
+Remember that the composed lines are static and subsequent changes to the [TextDocument object](#textdocument-object) instance which changes its length may render the composed line data invalid.
 
 #### Returns
 
@@ -1559,16 +1559,16 @@ Key `end` will be set to text index of the end of the paragraph (greater than st
 
 Returns an instance of the Text layer range accessor [ParagraphRange object](paragraphrange.md).
 
-The instance will remember the parameters passed in the constructor - they remain constant and changes to the [TextDocument](#textdocument) contents may cause the instance to throw exceptions on access until the [TextDocument](#textdocument) contents are changed which makes the range valid again.
+The instance will remember the parameters passed in the constructor - they remain constant and changes to the [TextDocument](#textdocument-object) contents may cause the instance to throw exceptions on access until the [TextDocument](#textdocument-object) contents are changed which makes the range valid again.
 
 Use [ParagraphRange.toString()](paragraphrange.md#paragraphrangetostring) to find out what the constructed parameters were.
 
 #### Parameters
 
-|         Parameter         |       Type       |                                                                                                                                                                                                                Description                                                                                                                                                                                                                |
-| ------------------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `paragraphIndexStart`     | Unsigned integer | Starts at zero, must be the less than the number of paragraphs in the [TextDocument object](#textdocument).                                                                                                                                                                                                                                                                                                                               |
-| `signedParagraphIndexEnd` | Signed integer   | Optional. If not specified, will be computed at `(paragraphIndexStart + 1)`.<br/>If set to -1, then the [ParagraphRange object](paragraphrange.md) will dynamically calculate this on access to the last paragraph of the [TextDocument object](#textdocument).<br/>`signedParagraphIndexEnd` must be greater than `paragraphIndexStart`, and less than or equal to the number of paragraphs in the [TextDocument object](#textdocument). |
+|         Parameter         |       Type       |                                                                                                                                                                                                                       Description                                                                                                                                                                                                                       |
+| ------------------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `paragraphIndexStart`     | Unsigned integer | Starts at zero, must be the less than the number of paragraphs in the [TextDocument object](#textdocument-object).                                                                                                                                                                                                                                                                                                                                      |
+| `signedParagraphIndexEnd` | Signed integer   | Optional. If not specified, will be computed at `(paragraphIndexStart + 1)`.<br/>If set to -1, then the [ParagraphRange object](paragraphrange.md) will dynamically calculate this on access to the last paragraph of the [TextDocument object](#textdocument-object).<br/>`signedParagraphIndexEnd` must be greater than `paragraphIndexStart`, and less than or equal to the number of paragraphs in the [TextDocument object](#textdocument-object). |
 
 Throws an exception if the parameters would result in an invalid range.
 

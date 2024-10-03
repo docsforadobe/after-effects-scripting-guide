@@ -12,9 +12,9 @@ All arguments are strings that set in the corresponding attributes of the return
 
 A script can set any number of parameter pairs; the order does not reflect the order displayed in the application.
 
-To associate a marker with a layer, set the MarkerValue object in the [Layer.marker](../layers/layer.md#layermarker) property of the layer: `layerObject.property("Marker").setValueAtTime(time, markerValueObject);`
+To associate a marker with a layer, set the MarkerValue object in the [Layer.marker](../layer/index.md#layermarker) property of the layer: `layerObject.property("Marker").setValueAtTime(time, markerValueObject);`
 
-To associate a marker with a composition, set the MarkerValue object in the [CompItem.markerProperty](../items/compitem.md#compitemmarkerproperty) property of the comp: `compObject.markerProperty.setValueAtTime(time, markerValueObject);`
+To associate a marker with a composition, set the MarkerValue object in the [CompItem.markerProperty](../item/compitem.md#compitemmarkerproperty) property of the comp: `compObject.markerProperty.setValueAtTime(time, markerValueObject);`
 
 For information on the usage of markers see "Using markers" in After Effects Help.
 

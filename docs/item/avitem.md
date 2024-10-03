@@ -6,14 +6,14 @@
 
 The AVItem object provides access to attributes and methods of audio/visual files imported into After Effects.
 
-> AVItem is a subclass of Item. All methods and attributes of Item, in addition to those listed below, are available when working with AVItem. See [Item object](item.md)
+> AVItem is a subclass of Item. All methods and attributes of Item, in addition to those listed below, are available when working with AVItem. See [Item object](index.md)
 
 > AVItem is the base class for both CompItem and FootageItem, so AVItem attributes and methods are also available when working with CompItem and FootageItem objects. See [CompItem object](compitem.md) and [FootageItem object](footageitem.md).
 
 !!! warning
     CompItems and FootageItems, while logical descendants of AVItem, are not *really* subclasses of AVItem as AVItem doesn't exist in Extendscript, ie. attempting to check if `item instanceof AVItem` will fail because AVItem is undefined. This is also true for `Item` itself.
 
-See [Javascript Classes](../introduction/javascript.md#javascriptclasses) and [After Effects Class Hierarchy](../introduction/classhierarchy.md) for more info.
+See [Javascript Classes](../introduction/javascript.md#javascript-classes) and [After Effects Class Hierarchy](../introduction/classhierarchy.md) for more info.
 
 ---
 
@@ -32,7 +32,7 @@ Returns the duration, in seconds, of the item. Still footage items have a durati
 
 #### Type
 
-Floating-point value, in the range `[0.0..10800.0]`; read/write for a [CompItem](../items/compitem.md); otherwise, read-only.
+Floating-point value, in the range `[0.0..10800.0]`; read/write for a [CompItem](../item/compitem.md); otherwise, read-only.
 
 ---
 
@@ -60,7 +60,7 @@ Returns the length of a frame for this AVItem, in seconds. This is the reciproca
 
 #### Type
 
-Floating-point value, in the range `[1/99..1.0]`; read-only for a [FootageItem](../items/footageitem.md), otherwise read/write.
+Floating-point value, in the range `[1/99..1.0]`; read-only for a [FootageItem](../item/footageitem.md), otherwise read/write.
 
 ---
 
@@ -77,7 +77,7 @@ The frame rate of the AVItem, in frames-per-second. This is the reciprocal of th
 
 #### Type
 
-Floating-point value, in the range `[1.0..99.0]`; read-only for a [FootageItem](../items/footageitem.md), otherwise read/write.
+Floating-point value, in the range `[1.0..99.0]`; read-only for a [FootageItem](../item/footageitem.md), otherwise read/write.
 
 ---
 
@@ -141,7 +141,7 @@ Integer, in the range `[1..30000]`; read/write, except as noted.
 
 #### Description
 
-Test whether the AVItem can be used as an alternate source when calling [Property.setAlternateSource()](../properties/property.md#propertysetalternatesource).
+Test whether the AVItem can be used as an alternate source when calling [Property.setAlternateSource()](../property/index.md#propertysetalternatesource).
 
 Returns `true` if the item can be used, or otherwise `false`.
 

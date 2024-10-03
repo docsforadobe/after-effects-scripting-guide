@@ -24,7 +24,7 @@ Adds a composition to the Render Queue, creating a RenderQueueItem.
 
 | Parameter |                  Type                   |         Description          |
 | --------- | --------------------------------------- | ---------------------------- |
-| `comp`    | [CompItem object](../items/compitem.md) | The composition to be added. |
+| `comp`    | [CompItem object](../item/compitem.md) | The composition to be added. |
 
 #### Returns
 

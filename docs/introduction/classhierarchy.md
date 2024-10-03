@@ -1,6 +1,6 @@
 # After Effects Class Hierarchy
 
-This section lists the class hierarchies for relevant AE API elements. For a primer on what this means, see [Javascript Classes](javascript.md#javascriptclasses)
+This section lists the class hierarchies for relevant AE API elements. For a primer on what this means, see [Javascript Classes](javascript.md#javascript-classes)
 
 When using this guide, any objects that exist as part of a class hierarchy will note whether they exist as a subclass or base class (or both) of another object.
 
@@ -19,26 +19,26 @@ Note that some classes exist only as base classes, and demonstrate unexpected be
 
 ## Properties, Property Groups, and Layers
 
-- [PropertyBase object](../properties/propertybase.md) ⚠
-  - [Property object](../properties/property.md)
-  - [PropertyGroup object](../properties/propertygroup.md)
-    - [MaskPropertyGroup object](../properties/maskpropertygroup.md)
-    - [Layer object](../layers/layer.md) ⚠
-      - [AVLayer object](../layers/avlayer.md)
-        - [ShapeLayer object](../layers/shapelayer.md)
-        - [TextLayer object](../layers/textlayer.md)
-      - [CameraLayer object](../layers/cameralayer.md)
-      - [LightLayer object](../layers/lightlayer.md)
+- [PropertyBase object](../property/propertybase.md) ⚠
+  - [Property object](../property/index.md)
+  - [PropertyGroup object](../property/propertygroup.md)
+    - [MaskPropertyGroup object](../property/maskpropertygroup.md)
+    - [Layer object](../layer/index.md) ⚠
+      - [AVLayer object](../layer/avlayer.md)
+        - [ShapeLayer object](../layer/shapelayer.md)
+        - [TextLayer object](../layer/textlayer.md)
+      - [CameraLayer object](../layer/cameralayer.md)
+      - [LightLayer object](../layer/lightlayer.md)
 
 ---
 
 ## Project Items
 
-- [Item object](../items/item.md) ❌
-  - [AVItem object](../items/avitem.md) ❌
-    - [CompItem object](../items/compitem.md)
-    - [FootageItem object](../items/footageitem.md)
-  - [FolderItem object](../items/folderitem.md)
+- [Item object](../item/index.md) ❌
+  - [AVItem object](../item/avitem.md) ❌
+    - [CompItem object](../item/compitem.md)
+    - [FootageItem object](../item/footageitem.md)
+  - [FolderItem object](../item/folderitem.md)
 
 ---
 
@@ -54,7 +54,7 @@ Note that some classes exist only as base classes, and demonstrate unexpected be
 ## Collections
 
 - [Collection object](../other/collection.md) ❌
-  - [ItemCollection object](../items/itemcollection.md)
-  - [LayerCollection object](../layers/layercollection.md)
+  - [ItemCollection object](../item/itemcollection.md)
+  - [LayerCollection object](../layer/layercollection.md)
   - [OMCollection object](../renderqueue/omcollection.md)
   - [RQItemCollection object](../renderqueue/rqitemcollection.md)

@@ -9,7 +9,7 @@
 
 The CompItem object represents a composition, and allows you to manipulate and get information about it. Access the objects by position index number in a project's item collection.
 
-> CompItem is a subclass of [AVItem object](avitem.md), which is a subclass of [Item object](item.md). All methods and attributes of AVItem and Item, in addition to those listed below, are available when working with CompItem.
+> CompItem is a subclass of [AVItem object](avitem.md), which is a subclass of [Item object](index.md). All methods and attributes of AVItem and Item, in addition to those listed below, are available when working with CompItem.
 
 #### Example
 
@@ -187,7 +187,7 @@ Boolean; read/write.
 
 #### Description
 
-A [LayerCollection object](../layers/layercollection.md) that contains all the Layer objects for layers in this composition.
+A [LayerCollection object](../layer/layercollection.md) that contains all the Layer objects for layers in this composition.
 
 #### Type
 
@@ -204,7 +204,7 @@ LayerCollection object; read-only.
 
 #### Description
 
-A [PropertyGroup object](../properties/propertygroup.md) that contains all a composition's markers. Composition marker scripting has the same functionality as [Layer markers](../layers/layer.md#layermarker).
+A [PropertyGroup object](../property/propertygroup.md) that contains all a composition's markers. Composition marker scripting has the same functionality as [Layer markers](../layer/index.md#layermarker).
 
 See [MarkerValue object](../other/markervalue.md).
 
@@ -414,7 +414,7 @@ All of the selected layers in this composition. This is a 0-based array (the fir
 
 #### Type
 
-Array of [Layer](../layers/layer.md) objects; read-only.
+Array of [Layer](../layer/index.md) objects; read-only.
 
 ---
 
@@ -428,7 +428,7 @@ All of the selected properties (Property and PropertyGroup objects) in this comp
 
 #### Type
 
-Array of [Property](../properties/property.md) and [PropertyGroup](../properties/propertygroup.md) objects; read-only.
+Array of [Property](../property/index.md) and [PropertyGroup](../property/propertygroup.md) objects; read-only.
 
 ---
 
@@ -582,7 +582,7 @@ String; read-only.
 Sets the name of a single property in the Essential Graphics panel.
 
 !!! tip
-    To rename a property as it is added to the EGP, see [Property.addToMotionGraphicsTemplateAs()](../properties/property.md#propertyaddtomotiongraphicstemplateas).
+    To rename a property as it is added to the EGP, see [Property.addToMotionGraphicsTemplateAs()](../property/index.md#propertyaddtomotiongraphicstemplateas).
 
 #### Parameters
 
@@ -620,7 +620,7 @@ or:
 
 |  Parameter   |                                                                     Type                                                                      |                                                                           Description                                                                           |
 | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `otherLayer` | [Layer object](../layers/layer.md) in this composition.                                                                                       | The `relIndex` value is added to the index value of this layer to find the position of the desired layer.                                                       |
+| `otherLayer` | [Layer object](../layer/index.md) in this composition.                                                                                       | The `relIndex` value is added to the index value of this layer to find the position of the desired layer.                                                       |
 | `relIndex`   | Integer, in the range `[1 - otherLayer.index .. numLayers - otherLayer.index]`, where `numLayers` is the number of layers in the composition. | The position of the desired layer, relative to `otherLayer`. This value is added to the `otherLayer` value to derive the absolute index of the layer to return. |
 
 or:
@@ -631,7 +631,7 @@ or:
 
 #### Returns
 
-[Layer object](../layers/layer.md).
+[Layer object](../layer/index.md).
 
 ---
 

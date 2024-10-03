@@ -9,8 +9,8 @@ Like an array, a collection associates a set of objects or values as a logical g
 
 ## Objects
 
-- [ItemCollection object](../items/itemcollection.md) All of the items (imported files, folders, solids, and so on) found in the Project panel.
-- [LayerCollection object](../layers/layercollection.md) All of the layers in a composition.
+- [ItemCollection object](../item/itemcollection.md) All of the items (imported files, folders, solids, and so on) found in the Project panel.
+- [LayerCollection object](../layer/layercollection.md) All of the layers in a composition.
 - [OMCollection object](../renderqueue/omcollection.md) All of the Output Module items in the project.
 - [RQItemCollection object](../renderqueue/rqitemcollection.md) All of the render-queue items in the project.
 

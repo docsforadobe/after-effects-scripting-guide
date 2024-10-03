@@ -6,7 +6,7 @@
 
 The AVLayer object provides an interface to those layers that contain AVItem objects (composition layers, footage layers, solid layers, text layers, and sound layers).
 
-> AVLayer is a subclass of [Layer object](layer.md). All methods and attributes of Layer, in addition to those listed below, are available when working with AVLayer.
+> AVLayer is a subclass of [Layer object](index.md). All methods and attributes of Layer, in addition to those listed below, are available when working with AVLayer.
 
 > AVLayer is a base class for [TextLayer object](textlayer.md), so AVLayer attributes and methods are available when working with TextLayer objects.
 
@@ -574,7 +574,7 @@ Use the [AVLayer.canAddToMotionGraphicsTemplate()](#avlayercanaddtomotiongraphic
 
 | Parameter |                  Type                   |                          Description                           |
 | --------- | --------------------------------------- | -------------------------------------------------------------- |
-| `comp`    | [CompItem object](../items/compitem.md) | The composition where you wish to add the property to the EGP. |
+| `comp`    | [CompItem object](../item/compitem.md) | The composition where you wish to add the property to the EGP. |
 
 #### Returns
 
@@ -603,7 +603,7 @@ Use the [AVLayer.canAddToMotionGraphicsTemplate()](#avlayercanaddtomotiongraphic
 
 | Parameter |                  Type                   |                          Description                           |
 | --------- | --------------------------------------- | -------------------------------------------------------------- |
-| `comp`    | [CompItem object](../items/compitem.md) | The composition where you wish to add the property to the EGP. |
+| `comp`    | [CompItem object](../item/compitem.md) | The composition where you wish to add the property to the EGP. |
 | `name`    | String                                  | The new name.                                                  |
 
 #### Returns
@@ -683,21 +683,21 @@ Returns `true` if the layer can be added, or otherwise `false`.
 
 If the layer cannot be added, it is either because it is not a layer type for which media can be replaced (referred to as Media Replacement Layers), or the layer has already been added to the EGP for that composition.
 
-Media Replacement layers are recognized as AVLayers with an [AVLayer.source](#avlayersource) set to a [FootageItem object](../items/footageitem.md) (with specific source types) or a [CompItem object](../items/compitem.md).
+Media Replacement layers are recognized as AVLayers with an [AVLayer.source](#avlayersource) set to a [FootageItem object](../item/footageitem.md) (with specific source types) or a [CompItem object](../item/compitem.md).
 
 The AVLayer needs to comply with the restrictions below in order to be treated as a Media Replacement layer:
 
-- [Layer.hasVideo](layer.md#layerhasvideo) should return `true`.
+- [Layer.hasVideo](../layer/index.md#layerhasvideo) should return `true`.
 - [AVLayer.adjustmentLayer](#avlayeradjustmentlayer) should return `false`.
-- [Layer.nullLayer](layer.md#layernulllayer) should return `false`.
-- If the [AVLayer.source](#avlayersource) is a [FootageItem object](../items/footageitem.md), then FootageItem.FootageSource should not be a [SolidSource object](../sources/solidsource.md).
-- If the [AVLayer.source](#avlayersource) is a [FootageItem object](../items/footageitem.md) and the FootageItem.FootageSource is a [FileSource object](../sources/filesource.md) then that FileSource should not point to a non-media file e.g. a JSX script file.
+- [Layer.nullLayer](../layer/index.md#layernulllayer) should return `false`.
+- If the [AVLayer.source](#avlayersource) is a [FootageItem object](../item/footageitem.md), then FootageItem.FootageSource should not be a [SolidSource object](../sources/solidsource.md).
+- If the [AVLayer.source](#avlayersource) is a [FootageItem object](../item/footageitem.md) and the FootageItem.FootageSource is a [FileSource object](../sources/filesource.md) then that FileSource should not point to a non-media file e.g. a JSX script file.
 
 #### Parameters
 
 | Parameter |                  Type                   |                          Description                           |
 | --------- | --------------------------------------- | -------------------------------------------------------------- |
-| `comp`    | [CompItem object](../items/compitem.md) | The composition where you wish to add the property to the EGP. |
+| `comp`    | [CompItem object](../item/compitem.md) | The composition where you wish to add the property to the EGP. |
 
 #### Returns
 
@@ -794,7 +794,7 @@ Replaces the source for this layer.
 
 |    Parameter     |                Type                 |                                                                                                                                              Description                                                                                                                                              |
 | ---------------- | ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `newSource`      | [AVItem object](../items/avitem.md) | The new source AVItem object.                                                                                                                                                                                                                                                                         |
+| `newSource`      | [AVItem object](../item/avitem.md) | The new source AVItem object.                                                                                                                                                                                                                                                                         |
 | `fixExpressions` | Boolean                             | `true` to adjust expressions for the new source, otherwise `false`.<br/>Note that this feature can be resource-intensive; if replacing a large amount of footage, do this only at the end of the operation. See also [Project.autoFixExpressions()](../general/project.md#projectautofixexpressions). |
 
 #### Returns
@@ -822,7 +822,7 @@ See [AVLayer.removeTrackMatte()](#avlayerremovetrackmatte) for another way of re
 
 |     Parameter     |                     Type                      |                  Description                   |
 | ----------------- | --------------------------------------------- | ---------------------------------------------- |
-| `trackMatteLayer` | [AVLayer](../layers/avlayer.md)               | The layer to be used as the track matte layer. |
+| `trackMatteLayer` | [AVLayer](../layer/avlayer.md)               | The layer to be used as the track matte layer. |
 | `trackMatteType`  | [TrackMatteType](#avlayertrackmattetype) enum | The type of the track matte to be used.        |
 
 !!! warning

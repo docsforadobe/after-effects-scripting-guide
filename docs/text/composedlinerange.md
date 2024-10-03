@@ -11,7 +11,7 @@
 The ComposedLineRange object is an accessor to a composed line range of the [TextDocument object](textdocument.md) instance it was created from.
 
 Composed lines are initialized in the [TextDocument object](textdocument.md) when it is created and remain unchanged while the [TextDocument object](textdocument.md) is changed.
-It is important to note that the [TextDocument object](textdocument.md) instance is not recomposed when changes are made to it - that only occurs when the instance is applied back to a [TextLayer object](../layers/textlayer.md).
+It is important to note that the [TextDocument object](textdocument.md) instance is not recomposed when changes are made to it - that only occurs when the instance is applied back to a [TextLayer object](../layer/textlayer.md).
 So if you delete all the text in the [TextDocument object](textdocument.md) instance the number of composed lines will remain constant.
 
 - The [characterStart](#composedlinerangecharacterstart) attribute will report the first character index of the range.
