@@ -5,6 +5,82 @@ repo_url: https://github.com/docsforadobe/after-effects-scripting-guide/
 extra:
     homepage: https://docsforadobe.dev
 
+
+# Customize navigation
+nav:
+    - Home: index.md
+    - Introduction:
+        - introduction/index.md
+        - Javascript for After Effects: introduction/javascript
+        - After Effects Scripting Changlog: introduction/changelog
+        - After Effects Object Model: introduction/objectmodel
+        - After Effects Class Hierarchy: introduction/classhierarchy
+    - General:
+        - Globals: general/globals
+        - Application: general/application
+        - Project: general/project
+        - System: general/system
+    - Item Object:
+        - item/index.md
+        - ItemCollection: item/itemcollection
+        - AVItem: item/avitem
+        - CompItem: item/compitem
+        - FolderItem: item/folderitem
+        - FootageItem: item/footageitem
+    - Layer Object:
+        - layer/index.md
+        - LayerCollection: layer/layercollection
+        - AVLayer: layer/avlayer
+        - CameraLayer: layer/cameralayer
+        - LightLayer: layer/lightlayer
+        - ShapeLayer: layer/shapelayer
+        - TextLayer: layer/textlayer
+        - ThreeDModelLayer: layer/threedmodellayer
+    - Property Object:
+        - property/index.md
+        - PropertyBase: property/propertybase
+        - PropertyGroup: property/propertygroup
+        - MaskPropertyGroup: property/maskpropertygroup
+    - Render Queue:
+        - renderqueue/index.md
+        - RQItemCollection: renderqueue/rqitemcollection
+        - RenderQueueItem: renderqueue/renderqueueitem
+        - OMCollection: renderqueue/omcollection
+        - OutputModule: renderqueue/outputmodule
+    - Sources:
+        - FileSource: sources/filesource
+        - FootageSource: sources/footagesource
+        - PlaceholderSource: sources/placeholdersource
+        - SolidSource: sources/solidsource
+    - Text:
+        - CharacterRange: text/characterrange
+        - ComposedLineRange: text/composedlinerange
+        - FontObject: text/fontobject
+        - FontsObject: text/fontsobject
+        - ParagraphRange: text/paragraphrange
+        - TextDocument: text/textdocument
+    - Other:
+        - Collection: other/collection
+        - ImportOptions: other/importoptions
+        - KeyframeEase: other/keyframeease
+        - MarkerValue: other/markervalue
+        - Preferences: other/preferences
+        - Settings: other/settings
+        - Shape: other/shape
+        - View: other/view
+        - Viewer: other/viewer
+        - ViewOptions: other/viewoptions
+    - Match Names:
+        - AV Layer Match Names: matchnames/layer-avlayer
+        - 3D Layer Match Names: matchnames/layer-3dlayer
+        - Camera Layer Match Names: matchnameslayer-cameralayer
+        - Light Layer Match Names: matchnames/layer-lightlayer
+        - Text Layer Match Names: matchnames/layer-textlayer
+        - Shape Layer Match Names: matchnames/layer-shapelayer
+        - Layer Styles Match Names: matchnameslayer-layerstyles
+        - First-Party Effect Match Names: matchnameseffects-firstparty
+
+
 # Do not touch below-- shared for all docs
 theme:
     name: material
