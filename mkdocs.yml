@@ -12,9 +12,12 @@ theme:
     name: material
     features:
         - navigation.indexes
+        - toc.follow
 
 markdown_extensions:
     - admonition
     - pymdownx.superfences
+    - toc:
+        toc_depth: 3
 
 plugins:
