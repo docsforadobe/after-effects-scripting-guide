@@ -4,7 +4,9 @@ repo_url: https://github.com/docsforadobe/after-effects-scripting-guide/
 # nav:
 #   - Home: index.md
 #   - Source: https://github.com/docsforadobe/after-effects-scripting-guide/
-theme: readthedocs
+theme:
+    name: material
+
 
 markdown_extensions:
   - toc:

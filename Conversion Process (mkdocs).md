@@ -1,13 +1,16 @@
 # Conversion Process (mkdocs)
 
-- `pip install mkdocs`
+- `pip install mkdocs mkdocs-material`
 - Copy `./mkdocs.yml` from AE repo into root
 - In terminal, `mkdocs serve`
 
-
-## Deploy
+## Set Up Repo
 
 - From the repo:
   - `Settings` > `Pages` > Enable Pages
   - `Deploy from a Branch` > Choose "gh-pages"
-- Use `mkdocs gh-deploy` in your terminal to deploy to that ^ branch
+  - For folder, choose "/ (root)"
+
+## Deploy
+
+- Any commits will rebuild the repo
