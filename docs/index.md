@@ -1,3 +1,8 @@
+---
+hide:
+    - toc
+---
+
 # After Effects Scripting Guide
 
 This repo hosts the After Effects Scripting Guide community docs.

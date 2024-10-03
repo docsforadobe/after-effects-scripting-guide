@@ -1,13 +1,11 @@
+# Site metadata
 site_name: After Effects Scripting Guide
 site_url: https://ae-scripting.docsforadobe.dev/
 repo_url: https://github.com/docsforadobe/after-effects-scripting-guide/
-
 extra:
     homepage: https://docsforadobe.dev
 
-# nav:
-#   - Home: index.md
-#   - Source: https://github.com/docsforadobe/after-effects-scripting-guide/
+# Do not touch below-- shared for all docs
 theme:
     name: material
     custom_dir: overrides
@@ -19,6 +17,7 @@ markdown_extensions:
     - admonition
     - pymdownx.superfences
     - toc:
+        title: Page Contents
         toc_depth: 3
 
 plugins:

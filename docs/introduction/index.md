@@ -1,3 +1,7 @@
+---
+toc_depth: 2
+---
+
 # Overview
 
 ## Introduction to scripting in After Effects
