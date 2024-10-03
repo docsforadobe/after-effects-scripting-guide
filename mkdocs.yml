@@ -71,14 +71,14 @@ nav:
         - Viewer: other/viewer
         - ViewOptions: other/viewoptions
     - Match Names:
-        - AV Layer Match Names: matchnames/layer-avlayer
-        - 3D Layer Match Names: matchnames/layer-3dlayer
-        - Camera Layer Match Names: matchnameslayer-cameralayer
-        - Light Layer Match Names: matchnames/layer-lightlayer
-        - Text Layer Match Names: matchnames/layer-textlayer
-        - Shape Layer Match Names: matchnames/layer-shapelayer
-        - Layer Styles Match Names: matchnameslayer-layerstyles
-        - First-Party Effect Match Names: matchnameseffects-firstparty
+        - AV Layer Match Names: matchnames/layer/avlayer
+        - 3D Layer Match Names: matchnames/layer/3dlayer
+        - Camera Layer Match Names: matchnames/layer/cameralayer
+        - Light Layer Match Names: matchnames/layer/lightlayer
+        - Text Layer Match Names: matchnames/layer/textlayer
+        - Shape Layer Match Names: matchnames/layer/shapelayer
+        - Layer Styles Match Names: matchnames/layer/layerstyles
+        - First-Party Effect Match Names: matchnames/effects/firstparty
 
 
 # Do not touch below-- shared for all docs
