@@ -112,6 +112,7 @@ theme:
 
 extra_css:
     - _static/extra.css
+    - _static/syntax-highlight.css
 
 markdown_extensions:
     - admonition
