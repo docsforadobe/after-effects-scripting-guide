@@ -1,0 +1,3285 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ae-scripting.docsforadobe.dev/text/fontobject/">
+      
+      
+        <link rel="prev" href="../composedlinerange/">
+      
+      
+        <link rel="next" href="../fontsobject/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
+    
+    
+      
+        <title>FontObject - After Effects Scripting Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../_static/extra.css">
+    
+      <link rel="stylesheet" href="../../_static/syntax-highlight.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#font-object" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://docsforadobe.dev" title="After Effects Scripting Guide" class="md-header__button md-logo" aria-label="After Effects Scripting Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            After Effects Scripting Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              FontObject
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/docsforadobe/after-effects-scripting-guide/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    after-effects-scripting-guide
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://docsforadobe.dev" title="After Effects Scripting Guide" class="md-nav__button md-logo" aria-label="After Effects Scripting Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    After Effects Scripting Guide
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/docsforadobe/after-effects-scripting-guide/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    after-effects-scripting-guide
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/javascript/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Javascript for After Effects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/changelog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    After Effects Scripting Changlog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/objectmodel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    After Effects Object Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/classhierarchy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    After Effects Class Hierarchy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    General
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            General
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/globals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Globals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/application/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Application
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/project/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/system/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Item
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Item
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../item/item/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Item object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../item/itemcollection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ItemCollection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../item/avitem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AVItem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../item/compitem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CompItem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../item/folderitem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FolderItem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../item/footageitem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FootageItem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Layer
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Layer
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/layer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Layer object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/layercollection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LayerCollection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/avlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AVLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/cameralayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CameraLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/lightlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LightLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/shapelayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ShapeLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/textlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TextLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/threedmodellayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ThreeDModelLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Property
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Property
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../property/property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Property object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../property/propertybase/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PropertyBase
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../property/propertygroup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PropertyGroup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../property/maskpropertygroup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MaskPropertyGroup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Render Queue
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Render Queue
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../renderqueue/renderqueue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RenderQueue object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../renderqueue/rqitemcollection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RQItemCollection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../renderqueue/renderqueueitem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RenderQueueItem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../renderqueue/omcollection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OMCollection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../renderqueue/outputmodule/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OutputModule
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sources
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Sources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/filesource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FileSource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/footagesource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FootageSource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/placeholdersource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PlaceholderSource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/solidsource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SolidSource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Text
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Text
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../characterrange/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CharacterRange
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../composedlinerange/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ComposedLineRange
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    FontObject
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    FontObject
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Page Contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Page Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+	<a href="#attributes" class="md-nav__link">
+		<span class="md-ellipsis">
+			Attributes
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+		<nav class="md-nav" aria-label="Attributes">
+			<ul class="md-nav__list">
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjectdesignaxesdata" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.designAxesData
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjectdesignvector" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.designVector
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjectfamilyname" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.familyName
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjectfamilyprefix" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.familyPrefix
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjectfontid" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.fontID
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjectfullname" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.fullName
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjecthasdesignaxes" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.hasDesignAxes
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjectisfromadobefonts" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.isFromAdobeFonts
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjectissubstitute" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.isSubstitute
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjectlocation" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.location
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjectnativefamilyname" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.nativeFamilyName
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjectnativefullname" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.nativeFullName
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjectnativestylename" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.nativeStyleName
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjectpostscriptname" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.postScriptName
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjectstylename" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.styleName
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjecttechnology" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.technology
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjecttype" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.type
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjectversion" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.version
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjectwritingscripts" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.writingScripts
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+			</ul>
+		</nav>
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#methods" class="md-nav__link">
+		<span class="md-ellipsis">
+			Methods
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+		<nav class="md-nav" aria-label="Methods">
+			<ul class="md-nav__list">
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjecthasglyphsfor" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.hasGlyphsFor()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjecthassamedict" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.hasSameDict()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjectotherfontswithsamedict" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.otherFontsWithSameDict()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjectpostscriptnamefordesignvector" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.postScriptNameForDesignVector()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+			</ul>
+		</nav>
+	
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fontsobject/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FontsObject
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../paragraphrange/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ParagraphRange
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../textdocument/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TextDocument
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Other
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Other
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/collection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Collection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/importoptions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ImportOptions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/keyframeease/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    KeyframeEase
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/markervalue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MarkerValue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/preferences/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Preferences
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/settings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Settings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/shape/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Shape
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/view/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    View
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/viewer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Viewer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/viewoptions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ViewOptions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Match Names
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Match Names
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_1" id="__nav_11_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Layers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_1">
+            <span class="md-nav__icon md-icon"></span>
+            Layers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/layer/avlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AV Layer Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/layer/3dlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3D Layer Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/layer/cameralayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Camera Layer Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/layer/lightlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Light Layer Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/layer/textlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Text Layer Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/layer/shapelayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Shape Layer Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/layer/layerstyles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Layer Styles Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_2" id="__nav_11_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Effects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_2">
+            <span class="md-nav__icon md-icon"></span>
+            Effects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/effects/firstparty/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    First-Party Effect Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Page Contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Page Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+	<a href="#attributes" class="md-nav__link">
+		<span class="md-ellipsis">
+			Attributes
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+		<nav class="md-nav" aria-label="Attributes">
+			<ul class="md-nav__list">
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjectdesignaxesdata" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.designAxesData
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjectdesignvector" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.designVector
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjectfamilyname" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.familyName
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjectfamilyprefix" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.familyPrefix
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjectfontid" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.fontID
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjectfullname" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.fullName
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjecthasdesignaxes" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.hasDesignAxes
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjectisfromadobefonts" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.isFromAdobeFonts
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjectissubstitute" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.isSubstitute
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjectlocation" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.location
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjectnativefamilyname" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.nativeFamilyName
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjectnativefullname" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.nativeFullName
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjectnativestylename" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.nativeStyleName
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjectpostscriptname" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.postScriptName
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjectstylename" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.styleName
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjecttechnology" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.technology
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjecttype" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.type
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjectversion" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.version
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjectwritingscripts" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.writingScripts
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+			</ul>
+		</nav>
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#methods" class="md-nav__link">
+		<span class="md-ellipsis">
+			Methods
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+		<nav class="md-nav" aria-label="Methods">
+			<ul class="md-nav__list">
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjecthasglyphsfor" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.hasGlyphsFor()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjecthassamedict" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.hasSameDict()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjectotherfontswithsamedict" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.otherFontsWithSameDict()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#fontobjectpostscriptnamefordesignvector" class="md-nav__link">
+		<span class="md-ellipsis">
+			FontObject.postScriptNameForDesignVector()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+			</ul>
+		</nav>
+	
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/docsforadobe/after-effects-scripting-guide/edit/master/docs/text/fontobject.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/docsforadobe/after-effects-scripting-guide/raw/master/docs/text/fontobject.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<p><a href="/">Home</a><span class="breadcrumb md-nav__icon md-icon"></span>Text<span class="breadcrumb md-nav__icon md-icon"></span>FontObject</p>
+<h1 id="font-object">Font object<a class="headerlink" href="#font-object" title="Permanent link">&para;</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 24.0</p>
+</div>
+<h4 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h4>
+<p>The Font object provides information about a specific font, along with the font technology used, helping disambiguate when multiple fonts sharing the same Postscript name are installed on the system.</p>
+<p>Most of these APIs simply return information which is contained in the Font data file itself, seek more information there.</p>
+<hr />
+<h2 id="attributes">Attributes<a class="headerlink" href="#attributes" title="Permanent link">&para;</a></h2>
+<h3 id="fontobjectdesignaxesdata">FontObject.designAxesData<a class="headerlink" href="#fontobjectdesignaxesdata" title="Permanent link">&para;</a></h3>
+<p><code>app.fonts.allFonts[0][0].designAxesData</code></p>
+<h4 id="description_1">Description<a class="headerlink" href="#description_1" title="Permanent link">&para;</a></h4>
+<p>Returns an Array of Objects, containing the design axes data from the font.
+Each object is composed of the axis <code>name</code>, <code>tag</code>, <code>min</code> value and <code>max</code> value.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Will return undefined for non-variable fonts.</p>
+</div>
+<h4 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h4>
+<p>This example will select the first returned Font Family Array.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Getting the first available Variable Font on the system</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">firstVariableFont</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">fontsWithDefaultDesignAxes</span><span class="p">[</span><span class="mf">0</span><span class="p">];</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">axesData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">firstVariableFont</span><span class="p">.</span><span class="nx">designAxesData</span><span class="p">;</span>
+
+<span class="c1">// Getting the first design axis for that Font</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">firstAxis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">axesData</span><span class="p">[</span><span class="mf">0</span><span class="p">];</span>
+
+<span class="nx">alert</span><span class="p">(</span><span class="nx">firstAxis</span><span class="p">.</span><span class="nx">name</span><span class="o">+</span><span class="s2">&quot;\n&quot;</span><span class="o">+</span><span class="nx">firstAxis</span><span class="p">.</span><span class="nx">tag</span><span class="o">+</span><span class="s2">&quot;\n&quot;</span><span class="o">+</span><span class="nx">firstAxis</span><span class="p">.</span><span class="nx">min</span><span class="o">+</span><span class="s2">&quot;\n&quot;</span><span class="o">+</span><span class="nx">firstAxis</span><span class="p">.</span><span class="nx">max</span><span class="p">);</span>
+</code></pre></div>
+<h4 id="type">Type<a class="headerlink" href="#type" title="Permanent link">&para;</a></h4>
+<p>Array of Objects; read-only.</p>
+<hr />
+<h3 id="fontobjectdesignvector">FontObject.designVector<a class="headerlink" href="#fontobjectdesignvector" title="Permanent link">&para;</a></h3>
+<p><code>app.fonts.fontsWithDefaultDesignAxes[0].designVector</code></p>
+<h4 id="description_2">Description<a class="headerlink" href="#description_2" title="Permanent link">&para;</a></h4>
+<p>For Variable fonts will return an ordered array with a length matching the number of design axes defined by the font.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Will return undefined for non-variable fonts.</p>
+</div>
+<h4 id="type_1">Type<a class="headerlink" href="#type_1" title="Permanent link">&para;</a></h4>
+<p>Array of floating-point values; read-only.</p>
+<hr />
+<h3 id="fontobjectfamilyname">FontObject.familyName<a class="headerlink" href="#fontobjectfamilyname" title="Permanent link">&para;</a></h3>
+<p><code>app.fonts.allFonts[0][0].familyName</code></p>
+<h4 id="description_3">Description<a class="headerlink" href="#description_3" title="Permanent link">&para;</a></h4>
+<p>The family name of the font, in the ASCII character set.</p>
+<h4 id="type_2">Type<a class="headerlink" href="#type_2" title="Permanent link">&para;</a></h4>
+<p>String; read-only.</p>
+<hr />
+<h3 id="fontobjectfamilyprefix">FontObject.familyPrefix<a class="headerlink" href="#fontobjectfamilyprefix" title="Permanent link">&para;</a></h3>
+<p><code>app.fonts.fontsWithDefaultDesignAxes[0].familyPrefix</code></p>
+<h4 id="description_4">Description<a class="headerlink" href="#description_4" title="Permanent link">&para;</a></h4>
+<p>The family prefix of the variable font. For example, the family of the PostScript name "SFPro-Bold" is "SFPro".</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Will return undefined for non-variable fonts.</p>
+</div>
+<h4 id="type_3">Type<a class="headerlink" href="#type_3" title="Permanent link">&para;</a></h4>
+<p>String; read-only.</p>
+<hr />
+<h3 id="fontobjectfontid">FontObject.fontID<a class="headerlink" href="#fontobjectfontid" title="Permanent link">&para;</a></h3>
+<p><code>app.fonts.allFonts[0][0].fontID</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 24.2</p>
+</div>
+<h4 id="description_5">Description<a class="headerlink" href="#description_5" title="Permanent link">&para;</a></h4>
+<p>A unique number assigned to the FontObject instance when it is created, value is greater than or equal to 1. It never changes during the application session but may be different in subsequent launches of the application.</p>
+<p>Can be used to compare two FontObject instances to see if they refer to the same underlying native font instance.</p>
+<p>FontObjects can be looked up by fontID with <a href="../fontsobject/#fontsobjectgetfontbyid">getFontByID</a> .</p>
+<h4 id="type_4">Type<a class="headerlink" href="#type_4" title="Permanent link">&para;</a></h4>
+<p>Integer; read-only.</p>
+<hr />
+<h3 id="fontobjectfullname">FontObject.fullName<a class="headerlink" href="#fontobjectfullname" title="Permanent link">&para;</a></h3>
+<p><code>app.fonts.allFonts[0][0].fullName</code></p>
+<h4 id="description_6">Description<a class="headerlink" href="#description_6" title="Permanent link">&para;</a></h4>
+<p>The full name of the font, in the ASCII character set. Usually composed of the family name and the style name.</p>
+<h4 id="type_5">Type<a class="headerlink" href="#type_5" title="Permanent link">&para;</a></h4>
+<p>String; read-only.</p>
+<hr />
+<h3 id="fontobjecthasdesignaxes">FontObject.hasDesignAxes<a class="headerlink" href="#fontobjecthasdesignaxes" title="Permanent link">&para;</a></h3>
+<p><code>app.fonts.allFonts[0][0].hasDesignAxes</code></p>
+<h4 id="description_7">Description<a class="headerlink" href="#description_7" title="Permanent link">&para;</a></h4>
+<p>Returns <code>true</code> if the font is a variable font.</p>
+<h4 id="type_6">Type<a class="headerlink" href="#type_6" title="Permanent link">&para;</a></h4>
+<p>Boolean; read-only.</p>
+<hr />
+<h3 id="fontobjectisfromadobefonts">FontObject.isFromAdobeFonts<a class="headerlink" href="#fontobjectisfromadobefonts" title="Permanent link">&para;</a></h3>
+<p><code>app.fonts.allFonts[0][0].isFromAdobeFonts</code></p>
+<h4 id="description_8">Description<a class="headerlink" href="#description_8" title="Permanent link">&para;</a></h4>
+<p>Returns <code>true</code> if the font is from Adobe Fonts.</p>
+<h4 id="type_7">Type<a class="headerlink" href="#type_7" title="Permanent link">&para;</a></h4>
+<p>Boolean; read-only.</p>
+<hr />
+<h3 id="fontobjectissubstitute">FontObject.isSubstitute<a class="headerlink" href="#fontobjectissubstitute" title="Permanent link">&para;</a></h3>
+<p><code>app.fonts.allFonts[0][0].isSubstitute</code></p>
+<h4 id="description_9">Description<a class="headerlink" href="#description_9" title="Permanent link">&para;</a></h4>
+<p>returns <code>true</code> when this font instance represents a font reference which was missing on project open.</p>
+<h4 id="type_8">Type<a class="headerlink" href="#type_8" title="Permanent link">&para;</a></h4>
+<p>Boolean; read-only.</p>
+<hr />
+<h3 id="fontobjectlocation">FontObject.location<a class="headerlink" href="#fontobjectlocation" title="Permanent link">&para;</a></h3>
+<p><code>app.fonts.allFonts[0][0].location</code></p>
+<h4 id="description_10">Description<a class="headerlink" href="#description_10" title="Permanent link">&para;</a></h4>
+<p>The location of the font file on your system.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Not guaranteed to be returned for all font types; return value may be empty string for some kinds of fonts.</p>
+</div>
+<h4 id="type_9">Type<a class="headerlink" href="#type_9" title="Permanent link">&para;</a></h4>
+<p>String; read-only.</p>
+<hr />
+<h3 id="fontobjectnativefamilyname">FontObject.nativeFamilyName<a class="headerlink" href="#fontobjectnativefamilyname" title="Permanent link">&para;</a></h3>
+<p><code>app.fonts.allFonts[0][0].nativeFamilyName</code></p>
+<h4 id="description_11">Description<a class="headerlink" href="#description_11" title="Permanent link">&para;</a></h4>
+<p>The native family name of the font in full 16 bit Unicode. Often different than what is returned by <a href="#fontobjectfamilyname">FontObject.familyName</a> for non-Latin fonts.</p>
+<h4 id="type_10">Type<a class="headerlink" href="#type_10" title="Permanent link">&para;</a></h4>
+<p>String; read-only.</p>
+<hr />
+<h3 id="fontobjectnativefullname">FontObject.nativeFullName<a class="headerlink" href="#fontobjectnativefullname" title="Permanent link">&para;</a></h3>
+<p><code>app.fonts.allFonts[0][0].nativeFullName</code></p>
+<h4 id="description_12">Description<a class="headerlink" href="#description_12" title="Permanent link">&para;</a></h4>
+<p>The native full name of the font in full 16 bit Unicode. Often different than what is returned by <a href="#fontobjectfullname">FontObject.fullName</a> for non-Latin fonts.</p>
+<h4 id="type_11">Type<a class="headerlink" href="#type_11" title="Permanent link">&para;</a></h4>
+<p>String; read-only.</p>
+<hr />
+<h3 id="fontobjectnativestylename">FontObject.nativeStyleName<a class="headerlink" href="#fontobjectnativestylename" title="Permanent link">&para;</a></h3>
+<p><code>app.fonts.allFonts[0][0].nativeStyleName</code></p>
+<h4 id="description_13">Description<a class="headerlink" href="#description_13" title="Permanent link">&para;</a></h4>
+<p>The native style name of the font in full 16 bit Unicode. Often different than what is returned by <a href="#fontobjectstylename">FontObject.styleName</a> for non-Latin fonts.</p>
+<h4 id="type_12">Type<a class="headerlink" href="#type_12" title="Permanent link">&para;</a></h4>
+<p>String; read-only.</p>
+<hr />
+<h3 id="fontobjectpostscriptname">FontObject.postScriptName<a class="headerlink" href="#fontobjectpostscriptname" title="Permanent link">&para;</a></h3>
+<p><code>app.fonts.allFonts[0][0].postScriptName</code></p>
+<h4 id="description_14">Description<a class="headerlink" href="#description_14" title="Permanent link">&para;</a></h4>
+<p>The postscript name of the font.</p>
+<h4 id="type_13">Type<a class="headerlink" href="#type_13" title="Permanent link">&para;</a></h4>
+<p>String; read-only.</p>
+<hr />
+<h3 id="fontobjectstylename">FontObject.styleName<a class="headerlink" href="#fontobjectstylename" title="Permanent link">&para;</a></h3>
+<p><code>app.fonts.allFonts[0][0].styleName</code></p>
+<h4 id="description_15">Description<a class="headerlink" href="#description_15" title="Permanent link">&para;</a></h4>
+<p>The style name of the font, in the ASCII character set.</p>
+<h4 id="type_14">Type<a class="headerlink" href="#type_14" title="Permanent link">&para;</a></h4>
+<p>String; read-only.</p>
+<hr />
+<h3 id="fontobjecttechnology">FontObject.technology<a class="headerlink" href="#fontobjecttechnology" title="Permanent link">&para;</a></h3>
+<p><code>app.fonts.allFonts[0][0].technology</code></p>
+<h4 id="description_16">Description<a class="headerlink" href="#description_16" title="Permanent link">&para;</a></h4>
+<p>The technology used by the font.</p>
+<h4 id="type_15">Type<a class="headerlink" href="#type_15" title="Permanent link">&para;</a></h4>
+<p>An <code>CTFontTechnology</code> enumerated value; read-only. One of:</p>
+<ul>
+<li><code>CTFontTechnology.CT_TYPE1_FONT</code></li>
+<li><code>CTFontTechnology.CT_TRUETYPE_FONT</code></li>
+<li><code>CTFontTechnology.CT_CID_FONT</code></li>
+<li><code>CTFontTechnology.CT_BITMAP_FONT</code></li>
+<li><code>CTFontTechnology.CT_ATC_FONT</code></li>
+<li><code>CTFontTechnology.CT_TYPE3_FONT</code></li>
+<li><code>CTFontTechnology.CT_SVG_FONT</code></li>
+<li><code>CTFontTechnology.CT_ANYTECHNOLOGY</code></li>
+</ul>
+<hr />
+<h3 id="fontobjecttype">FontObject.type<a class="headerlink" href="#fontobjecttype" title="Permanent link">&para;</a></h3>
+<p><code>app.fonts.allFonts[0][0].type</code></p>
+<h4 id="description_17">Description<a class="headerlink" href="#description_17" title="Permanent link">&para;</a></h4>
+<p>The internal type of the font.</p>
+<h4 id="type_16">Type<a class="headerlink" href="#type_16" title="Permanent link">&para;</a></h4>
+<p>An <code>CTFontType</code> enumerated value; read-only. One of:</p>
+<ul>
+<li><code>CTFontType.CT_TYPE1_FONTTYPE</code></li>
+<li><code>CTFontType.CT_TRUETYPE_FONTTYPE</code></li>
+<li><code>CTFontType.CT_CID_FONTTYPE</code></li>
+<li><code>CTFontType.CT_ATC_FONTTYPE</code></li>
+<li><code>CTFontType.CT_BITMAP_FONTTYPE</code></li>
+<li><code>CTFontType.CT_OPENTYPE_CFF_FONTTYPE</code></li>
+<li><code>CTFontType.CT_OPENTYPE_CID_FONTTYPE</code></li>
+<li><code>CTFontType.CT_OPENTYPE_TT_FONTTYPE</code></li>
+<li><code>CTFontType.CT_TYPE3_FONTTYPE</code></li>
+<li><code>CTFontType.CT_SVG_FONTTYPE</code></li>
+</ul>
+<hr />
+<h3 id="fontobjectversion">FontObject.version<a class="headerlink" href="#fontobjectversion" title="Permanent link">&para;</a></h3>
+<p><code>app.fonts.allFonts[0][0].version</code></p>
+<h4 id="description_18">Description<a class="headerlink" href="#description_18" title="Permanent link">&para;</a></h4>
+<p>The version number of the font.</p>
+<h4 id="type_17">Type<a class="headerlink" href="#type_17" title="Permanent link">&para;</a></h4>
+<p>String; read-only.</p>
+<hr />
+<h3 id="fontobjectwritingscripts">FontObject.writingScripts<a class="headerlink" href="#fontobjectwritingscripts" title="Permanent link">&para;</a></h3>
+<p><code>app.fonts.allFonts[0][0].writingScripts</code></p>
+<h4 id="description_19">Description<a class="headerlink" href="#description_19" title="Permanent link">&para;</a></h4>
+<p>The supported character sets of the font.</p>
+<h4 id="type_18">Type<a class="headerlink" href="#type_18" title="Permanent link">&para;</a></h4>
+<p>An array of <code>CTScript</code> enumerated values; read-only. One or more of:</p>
+<ul>
+<li><code>CTScript.CT_ROMAN_SCRIPT</code></li>
+<li><code>CTScript.CT_JAPANESE_SCRIPT</code></li>
+<li><code>CTScript.CT_TRADITIONALCHINESE_SCRIPT</code></li>
+<li><code>CTScript.CT_KOREAN_SCRIPT</code></li>
+<li><code>CTScript.CT_ARABIC_SCRIPT</code></li>
+<li><code>CTScript.CT_HEBREW_SCRIPT</code></li>
+<li><code>CTScript.CT_GREEK_SCRIPT</code></li>
+<li><code>CTScript.CT_CYRILLIC_SCRIPT</code></li>
+<li><code>CTScript.CT_RIGHTLEFT_SCRIPT</code></li>
+<li><code>CTScript.CT_DEVANAGARI_SCRIPT</code></li>
+<li><code>CTScript.CT_GURMUKHI_SCRIPT</code></li>
+<li><code>CTScript.CT_GUJARATI_SCRIPT</code></li>
+<li><code>CTScript.CT_ORIYA_SCRIPT</code></li>
+<li><code>CTScript.CT_BENGALI_SCRIPT</code></li>
+<li><code>CTScript.CT_TAMIL_SCRIPT</code></li>
+<li><code>CTScript.CT_TELUGU_SCRIPT</code></li>
+<li><code>CTScript.CT_KANNADA_SCRIPT</code></li>
+<li><code>CTScript.CT_MALAYALAM_SCRIPT</code></li>
+<li><code>CTScript.CT_SINHALESE_SCRIPT</code></li>
+<li><code>CTScript.CT_BURMESE_SCRIPT</code></li>
+<li><code>CTScript.CT_KHMER_SCRIPT</code></li>
+<li><code>CTScript.CT_THAI_SCRIPT</code></li>
+<li><code>CTScript.CT_LAOTIAN_SCRIPT</code></li>
+<li><code>CTScript.CT_GEORGIAN_SCRIPT</code></li>
+<li><code>CTScript.CT_ARMENIAN_SCRIPT</code></li>
+<li><code>CTScript.CT_SIMPLIFIEDCHINESE_SCRIPT</code></li>
+<li><code>CTScript.CT_TIBETAN_SCRIPT</code></li>
+<li><code>CTScript.CT_MONGOLIAN_SCRIPT</code></li>
+<li><code>CTScript.CT_GEEZ_SCRIPT</code></li>
+<li><code>CTScript.CT_EASTEUROPEANROMAN_SCRIPT</code></li>
+<li><code>CTScript.CT_VIETNAMESE_SCRIPT</code></li>
+<li><code>CTScript.CT_EXTENDEDARABIC_SCRIPT</code></li>
+<li><code>CTScript.CT_KLINGON_SCRIPT</code></li>
+<li><code>CTScript.CT_EMOJI_SCRIPT</code></li>
+<li><code>CTScript.CT_ROHINGYA_SCRIPT</code></li>
+<li><code>CTScript.CT_JAVANESE_SCRIPT</code></li>
+<li><code>CTScript.CT_SUNDANESE_SCRIPT</code></li>
+<li><code>CTScript.CT_LONTARA_SCRIPT</code></li>
+<li><code>CTScript.CT_SYRIAC_SCRIPT</code></li>
+<li><code>CTScript.CT_TAITHAM_SCRIPT</code></li>
+<li><code>CTScript.CT_BUGINESE_SCRIPT</code></li>
+<li><code>CTScript.CT_BALINESE_SCRIPT</code></li>
+<li><code>CTScript.CT_CHEROKEE_SCRIPT</code></li>
+<li><code>CTScript.CT_MANDAIC_SCRIPT</code></li>
+<li><code>CTScript.CT_VAI_SCRIPT</code></li>
+<li><code>CTScript.CT_THAANA_SCRIPT</code></li>
+<li><code>CTScript.CT_BRAVANESE_SCRIPT</code></li>
+<li><code>CTScript.CT_BRAHMI_SCRIPT</code></li>
+<li><code>CTScript.CT_CARIAN_SCRIPT</code></li>
+<li><code>CTScript.CT_CYPRIOT_SCRIPT</code></li>
+<li><code>CTScript.CT_EGYPTIAN_SCRIPT</code></li>
+<li><code>CTScript.CT_IMPERIALARAMAIC_SCRIPT</code></li>
+<li><code>CTScript.CT_PAHLAVI_SCRIPT</code></li>
+<li><code>CTScript.CT_PARTHIAN_SCRIPT</code></li>
+<li><code>CTScript.CT_KHAROSHTHI_SCRIPT</code></li>
+<li><code>CTScript.CT_LYCIAN_SCRIPT</code></li>
+<li><code>CTScript.CT_LYDIAN_SCRIPT</code></li>
+<li><code>CTScript.CT_PHOENICIAN_SCRIPT</code></li>
+<li><code>CTScript.CT_PERSIAN_SCRIPT</code></li>
+<li><code>CTScript.CT_SHAVIAN_SCRIPT</code></li>
+<li><code>CTScript.CT_SUMAKKCUNEIFORM_SCRIPT</code></li>
+<li><code>CTScript.CT_UGARITIC_SCRIPT</code></li>
+<li><code>CTScript.CT_GLAGOLITIC_SCRIPT</code></li>
+<li><code>CTScript.CT_GOTHIC_SCRIPT</code></li>
+<li><code>CTScript.CT_OGHAM_SCRIPT</code></li>
+<li><code>CTScript.CT_OLDITALIC_SCRIPT</code></li>
+<li><code>CTScript.CT_ORKHON_SCRIPT</code></li>
+<li><code>CTScript.CT_RUNIC_SCRIPT</code></li>
+<li><code>CTScript.CT_MEROITICCURSIVE_SCRIPT</code></li>
+<li><code>CTScript.CT_COPTIC_SCRIPT</code></li>
+<li><code>CTScript.CT_OLCHIKI_SCRIPT</code></li>
+<li><code>CTScript.CT_SORASOMPENG_SCRIPT</code></li>
+<li><code>CTScript.CT_OLDHANGUL_SCRIPT</code></li>
+<li><code>CTScript.CT_LISU_SCRIPT</code></li>
+<li><code>CTScript.CT_NKO_SCRIPT</code></li>
+<li><code>CTScript.CT_ADLAM_SCRIPT</code></li>
+<li><code>CTScript.CT_BAMUM_SCRIPT</code></li>
+<li><code>CTScript.CT_BASSAVAH_SCRIPT</code></li>
+<li><code>CTScript.CT_NEWA_SCRIPT</code></li>
+<li><code>CTScript.CT_NEWTAILU_SCRIPT</code></li>
+<li><code>CTScript.CT_SCRIPT</code></li>
+<li><code>CTScript.CT_OSAGE_SCRIPT</code></li>
+<li><code>CTScript.CT_UCAS_SCRIPT</code></li>
+<li><code>CTScript.CT_TIFINAGH_SCRIPT</code></li>
+<li><code>CTScript.CT_KAYAHLI_SCRIPT</code></li>
+<li><code>CTScript.CT_LAO_SCRIPT</code></li>
+<li><code>CTScript.CT_TAILE_SCRIPT</code></li>
+<li><code>CTScript.CT_TAIVIET_SCRIPT</code></li>
+<li><code>CTScript.CT_DONTKNOW_SCRIPT</code></li>
+</ul>
+<h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h2>
+<h3 id="fontobjecthasglyphsfor">FontObject.hasGlyphsFor()<a class="headerlink" href="#fontobjecthasglyphsfor" title="Permanent link">&para;</a></h3>
+<p><code>app.fonts.allFonts[0][0].hasGlyphsFor(charString)</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects (Beta) 25.0 and is subject to change while it remains in Beta.</p>
+</div>
+<h4 id="description_20">Description<a class="headerlink" href="#description_20" title="Permanent link">&para;</a></h4>
+<p>Fonts do not contain glyphs for all possible ranges of Unicode and this method gives the caller the opportunity to query the Font about support for one or more characters.</p>
+<p>Returns <code>true</code> if the font has a glyph for every character in the <code>charString</code>.</p>
+<p>The character order does not matter, and in the case of a parameter string with more than one character, it is not possible though this API to determine which character had no glyph support.</p>
+<h4 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>charString</code></td>
+<td>String</td>
+<td>Text that will be checked for support in the <a href="#font-object">Font object</a>.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns">Returns<a class="headerlink" href="#returns" title="Permanent link">&para;</a></h4>
+<p>Boolean.</p>
+<hr />
+<h3 id="fontobjecthassamedict">FontObject.hasSameDict()<a class="headerlink" href="#fontobjecthassamedict" title="Permanent link">&para;</a></h3>
+<p><code>app.fonts.fontsWithDefaultDesignAxes[0].hasSameDict(fontObject)</code></p>
+<h4 id="description_21">Description<a class="headerlink" href="#description_21" title="Permanent link">&para;</a></h4>
+<p>This function will <code>true</code> if the <a href="#font-object">Font object</a> passed as an argument shares the same variable font dictionary as the <a href="#font-object">Font object</a> the function is called on.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Can only return <code>true</code> when called on a variable <a href="#font-object">Font object</a> with the argument also being a <a href="#font-object">Font object</a> of a variable font.</p>
+</div>
+<h4 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fontObject</code></td>
+<td><a href="#font-object">Font object</a></td>
+<td>Object to check</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_1">Returns<a class="headerlink" href="#returns_1" title="Permanent link">&para;</a></h4>
+<p>Boolean.</p>
+<hr />
+<h3 id="fontobjectotherfontswithsamedict">FontObject.otherFontsWithSameDict()<a class="headerlink" href="#fontobjectotherfontswithsamedict" title="Permanent link">&para;</a></h3>
+<p><code>app.fonts.fontsWithDefaultDesignAxes[0].otherFontsWithSameDict(fontObject)</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects (Beta) 25.0 and is subject to change while it remains in Beta.</p>
+</div>
+<h4 id="description_22">Description<a class="headerlink" href="#description_22" title="Permanent link">&para;</a></h4>
+<p>Given an <a href="#font-object">Font object</a> passed as an argument, returns an Array of <a href="#font-object">Font object</a> instances which share the same font dictionary as the <a href="#font-object">Font object</a> the function is called on.</p>
+<p>Will return an empty Array if the argument is not a Variable font, or the Variable font only has one instance (the parameter one).</p>
+<h4 id="parameters_2">Parameters<a class="headerlink" href="#parameters_2" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fontObject</code></td>
+<td><a href="#font-object">Font object</a></td>
+<td>Object to check</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_2">Returns<a class="headerlink" href="#returns_2" title="Permanent link">&para;</a></h4>
+<p>Array of <a href="#font-object">Font objects</a>, may be empty.</p>
+<hr />
+<h3 id="fontobjectpostscriptnamefordesignvector">FontObject.postScriptNameForDesignVector()<a class="headerlink" href="#fontobjectpostscriptnamefordesignvector" title="Permanent link">&para;</a></h3>
+<p><code>app.fonts.fontsWithDefaultDesignAxes[0].postScriptNameForDesignVector([...vectorValues])</code></p>
+<h4 id="description_23">Description<a class="headerlink" href="#description_23" title="Permanent link">&para;</a></h4>
+<p>This function will return the postscript name of the variable font for the specific design vectors passed as the argument.</p>
+<h4 id="parameters_3">Parameters<a class="headerlink" href="#parameters_3" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>vectorValues</code></td>
+<td>Array of floating-point values</td>
+<td>Values to check <a href="#fontobjectdesignvector">FontObject.designVector</a> for the given variable font.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_3">Returns<a class="headerlink" href="#returns_3" title="Permanent link">&para;</a></h4>
+<p>A String.</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 6, 2024</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.action.edit", "content.action.view", "search.highlight", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.525ec568.min.js"></script>
+      
+    
+  </body>
+</html>

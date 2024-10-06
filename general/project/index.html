@@ -1,0 +1,4969 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ae-scripting.docsforadobe.dev/general/project/">
+      
+      
+        <link rel="prev" href="../application/">
+      
+      
+        <link rel="next" href="../system/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
+    
+    
+      
+        <title>Project - After Effects Scripting Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../_static/extra.css">
+    
+      <link rel="stylesheet" href="../../_static/syntax-highlight.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#project-object" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://docsforadobe.dev" title="After Effects Scripting Guide" class="md-header__button md-logo" aria-label="After Effects Scripting Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            After Effects Scripting Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Project
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/docsforadobe/after-effects-scripting-guide/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    after-effects-scripting-guide
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://docsforadobe.dev" title="After Effects Scripting Guide" class="md-nav__button md-logo" aria-label="After Effects Scripting Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    After Effects Scripting Guide
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/docsforadobe/after-effects-scripting-guide/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    after-effects-scripting-guide
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/javascript/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Javascript for After Effects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/changelog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    After Effects Scripting Changlog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/objectmodel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    After Effects Object Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/classhierarchy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    After Effects Class Hierarchy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    General
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            General
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../globals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Globals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../application/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Application
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Project
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Project
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Page Contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Page Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+	<a href="#attributes" class="md-nav__link">
+		<span class="md-ellipsis">
+			Attributes
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+		<nav class="md-nav" aria-label="Attributes">
+			<ul class="md-nav__list">
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectactiveitem" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.activeItem
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectbitsperchannel" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.bitsPerChannel
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectcompensateforscenereferredprofiles" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.compensateForSceneReferredProfiles
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectdirty" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.dirty
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectdisplaystartframe" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.displayStartFrame
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectexpressionengine" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.expressionEngine
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectfeetframesfilmtype" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.feetFramesFilmType
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectfile" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.file
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectfootagetimecodedisplaystarttype" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.footageTimecodeDisplayStartType
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectframescounttype" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.framesCountType
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectframesusefeetframes" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.framesUseFeetFrames
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectgpuacceltype" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.gpuAccelType
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectitems" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.items
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectlinearblending" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.linearBlending
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectlinearizeworkingspace" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.linearizeWorkingSpace
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectnumitems" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.numItems
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectrenderqueue" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.renderQueue
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectrevision" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.revision
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectrootfolder" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.rootFolder
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectselection" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.selection
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projecttimedisplaytype" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.timeDisplayType
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projecttooltype" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.toolType
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projecttransparencygridthumbnails" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.transparencyGridThumbnails
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectusedfonts" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.usedFonts
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectworkinggamma" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.workingGamma
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectworkingspace" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.workingSpace
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectxmppacket" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.xmpPacket
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+			</ul>
+		</nav>
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#methods" class="md-nav__link">
+		<span class="md-ellipsis">
+			Methods
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+		<nav class="md-nav" aria-label="Methods">
+			<ul class="md-nav__list">
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectautofixexpressions" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.autoFixExpressions()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectclose" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.close()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectconsolidatefootage" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.consolidateFootage()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectimportfile" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.importFile()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectimportfilewithdialog" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.importFileWithDialog()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectimportplaceholder" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.importPlaceholder()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectitem" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.item()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectitembyid" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.itemByID()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectlayerbyid" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.layerByID()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectlistcolorprofiles" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.listColorProfiles()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectreduceproject" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.reduceProject()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectremoveunusedfootage" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.removeUnusedFootage()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectreplacefont" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.replaceFont()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectsave" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.save()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectsavewithdialog" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.saveWithDialog()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectsetdefaultimportfolder" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.setDefaultImportFolder()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectshowwindow" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.showWindow()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+			</ul>
+		</nav>
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#team-projects" class="md-nav__link">
+		<span class="md-ellipsis">
+			Team Projects
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+		<nav class="md-nav" aria-label="Team Projects">
+			<ul class="md-nav__list">
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectnewteamproject" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.newTeamProject()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectopenteamproject" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.openTeamProject()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectshareteamproject" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.shareTeamProject()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectsyncteamproject" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.syncTeamProject()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectcloseteamproject" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.closeTeamProject()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectconvertteamprojecttoproject" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.convertTeamProjectToProject()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectlistteamprojects" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.listTeamProjects()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectisteamprojectopen" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.isTeamProjectOpen()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectisanyteamprojectopen" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.isAnyTeamProjectOpen()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectisteamprojectenabled" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.isTeamProjectEnabled()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectisloggedintoteamproject" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.isLoggedInToTeamProject()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectissynccommandenabled" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.isSyncCommandEnabled()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectissharecommandenabled" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.isShareCommandEnabled()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectisresolvecommandenabled" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.isResolveCommandEnabled()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectresolveconflict" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.resolveConflict()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+			</ul>
+		</nav>
+	
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Item
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Item
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../item/item/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Item object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../item/itemcollection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ItemCollection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../item/avitem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AVItem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../item/compitem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CompItem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../item/folderitem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FolderItem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../item/footageitem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FootageItem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Layer
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Layer
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/layer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Layer object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/layercollection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LayerCollection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/avlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AVLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/cameralayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CameraLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/lightlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LightLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/shapelayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ShapeLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/textlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TextLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/threedmodellayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ThreeDModelLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Property
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Property
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../property/property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Property object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../property/propertybase/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PropertyBase
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../property/propertygroup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PropertyGroup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../property/maskpropertygroup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MaskPropertyGroup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Render Queue
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Render Queue
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../renderqueue/renderqueue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RenderQueue object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../renderqueue/rqitemcollection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RQItemCollection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../renderqueue/renderqueueitem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RenderQueueItem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../renderqueue/omcollection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OMCollection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../renderqueue/outputmodule/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OutputModule
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sources
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Sources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/filesource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FileSource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/footagesource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FootageSource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/placeholdersource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PlaceholderSource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/solidsource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SolidSource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Text
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Text
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../text/characterrange/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CharacterRange
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../text/composedlinerange/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ComposedLineRange
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../text/fontobject/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FontObject
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../text/fontsobject/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FontsObject
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../text/paragraphrange/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ParagraphRange
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../text/textdocument/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TextDocument
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Other
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Other
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/collection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Collection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/importoptions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ImportOptions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/keyframeease/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    KeyframeEase
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/markervalue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MarkerValue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/preferences/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Preferences
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/settings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Settings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/shape/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Shape
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/view/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    View
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/viewer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Viewer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/viewoptions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ViewOptions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Match Names
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Match Names
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_1" id="__nav_11_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Layers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_1">
+            <span class="md-nav__icon md-icon"></span>
+            Layers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/layer/avlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AV Layer Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/layer/3dlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3D Layer Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/layer/cameralayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Camera Layer Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/layer/lightlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Light Layer Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/layer/textlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Text Layer Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/layer/shapelayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Shape Layer Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/layer/layerstyles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Layer Styles Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_2" id="__nav_11_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Effects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_2">
+            <span class="md-nav__icon md-icon"></span>
+            Effects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/effects/firstparty/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    First-Party Effect Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Page Contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Page Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+	<a href="#attributes" class="md-nav__link">
+		<span class="md-ellipsis">
+			Attributes
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+		<nav class="md-nav" aria-label="Attributes">
+			<ul class="md-nav__list">
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectactiveitem" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.activeItem
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectbitsperchannel" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.bitsPerChannel
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectcompensateforscenereferredprofiles" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.compensateForSceneReferredProfiles
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectdirty" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.dirty
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectdisplaystartframe" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.displayStartFrame
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectexpressionengine" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.expressionEngine
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectfeetframesfilmtype" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.feetFramesFilmType
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectfile" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.file
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectfootagetimecodedisplaystarttype" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.footageTimecodeDisplayStartType
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectframescounttype" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.framesCountType
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectframesusefeetframes" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.framesUseFeetFrames
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectgpuacceltype" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.gpuAccelType
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectitems" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.items
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectlinearblending" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.linearBlending
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectlinearizeworkingspace" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.linearizeWorkingSpace
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectnumitems" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.numItems
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectrenderqueue" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.renderQueue
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectrevision" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.revision
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectrootfolder" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.rootFolder
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectselection" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.selection
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projecttimedisplaytype" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.timeDisplayType
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projecttooltype" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.toolType
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projecttransparencygridthumbnails" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.transparencyGridThumbnails
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectusedfonts" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.usedFonts
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectworkinggamma" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.workingGamma
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectworkingspace" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.workingSpace
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectxmppacket" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.xmpPacket
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+			</ul>
+		</nav>
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#methods" class="md-nav__link">
+		<span class="md-ellipsis">
+			Methods
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+		<nav class="md-nav" aria-label="Methods">
+			<ul class="md-nav__list">
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectautofixexpressions" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.autoFixExpressions()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectclose" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.close()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectconsolidatefootage" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.consolidateFootage()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectimportfile" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.importFile()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectimportfilewithdialog" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.importFileWithDialog()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectimportplaceholder" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.importPlaceholder()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectitem" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.item()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectitembyid" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.itemByID()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectlayerbyid" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.layerByID()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectlistcolorprofiles" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.listColorProfiles()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectreduceproject" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.reduceProject()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectremoveunusedfootage" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.removeUnusedFootage()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectreplacefont" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.replaceFont()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectsave" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.save()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectsavewithdialog" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.saveWithDialog()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectsetdefaultimportfolder" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.setDefaultImportFolder()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectshowwindow" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.showWindow()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+			</ul>
+		</nav>
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#team-projects" class="md-nav__link">
+		<span class="md-ellipsis">
+			Team Projects
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+		<nav class="md-nav" aria-label="Team Projects">
+			<ul class="md-nav__list">
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectnewteamproject" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.newTeamProject()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectopenteamproject" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.openTeamProject()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectshareteamproject" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.shareTeamProject()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectsyncteamproject" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.syncTeamProject()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectcloseteamproject" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.closeTeamProject()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectconvertteamprojecttoproject" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.convertTeamProjectToProject()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectlistteamprojects" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.listTeamProjects()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectisteamprojectopen" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.isTeamProjectOpen()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectisanyteamprojectopen" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.isAnyTeamProjectOpen()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectisteamprojectenabled" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.isTeamProjectEnabled()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectisloggedintoteamproject" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.isLoggedInToTeamProject()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectissynccommandenabled" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.isSyncCommandEnabled()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectissharecommandenabled" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.isShareCommandEnabled()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectisresolvecommandenabled" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.isResolveCommandEnabled()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#projectresolveconflict" class="md-nav__link">
+		<span class="md-ellipsis">
+			Project.resolveConflict()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+			</ul>
+		</nav>
+	
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/docsforadobe/after-effects-scripting-guide/edit/master/docs/general/project.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/docsforadobe/after-effects-scripting-guide/raw/master/docs/general/project.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<p><a href="/">Home</a><span class="breadcrumb md-nav__icon md-icon"></span>General<span class="breadcrumb md-nav__icon md-icon"></span>Project</p>
+<h1 id="project-object">Project object<a class="headerlink" href="#project-object" title="Permanent link">&para;</a></h1>
+<p><code>app.project</code></p>
+<h4 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h4>
+<p>The project object represents an After Effects project. Attributes provide access to specific objects within the project, such as imported files or footage and compositions, and also to project settings such as the timecode base. Methods can import footage, create solids, compositions and folders, and save changes.</p>
+<hr />
+<h2 id="attributes">Attributes<a class="headerlink" href="#attributes" title="Permanent link">&para;</a></h2>
+<h3 id="projectactiveitem">Project.activeItem<a class="headerlink" href="#projectactiveitem" title="Permanent link">&para;</a></h3>
+<p><code>app.project.activeItem</code></p>
+<h4 id="description_1">Description<a class="headerlink" href="#description_1" title="Permanent link">&para;</a></h4>
+<p>The item that is currently active and is to be acted upon, or <code>null</code> if no item is currently selected or if multiple items are selected.</p>
+<h4 id="type">Type<a class="headerlink" href="#type" title="Permanent link">&para;</a></h4>
+<p><a href="../../item/item/">Item object</a> or <code>null</code>; read-only.</p>
+<hr />
+<h3 id="projectbitsperchannel">Project.bitsPerChannel<a class="headerlink" href="#projectbitsperchannel" title="Permanent link">&para;</a></h3>
+<p><code>app.project.bitsPerChannel</code></p>
+<h4 id="description_2">Description<a class="headerlink" href="#description_2" title="Permanent link">&para;</a></h4>
+<p>The color depth of the current project, either 8, 16, or 32 bits.</p>
+<h4 id="type_1">Type<a class="headerlink" href="#type_1" title="Permanent link">&para;</a></h4>
+<p>Integer (8, 16, or 32 only); read/write.</p>
+<hr />
+<h3 id="projectcompensateforscenereferredprofiles">Project.compensateForSceneReferredProfiles<a class="headerlink" href="#projectcompensateforscenereferredprofiles" title="Permanent link">&para;</a></h3>
+<p><code>app.project.compensateForSceneReferredProfiles</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 16.0 (CC 2019)</p>
+</div>
+<h4 id="description_3">Description<a class="headerlink" href="#description_3" title="Permanent link">&para;</a></h4>
+<p><code>true</code> if Compensate for Scene-referred Profiles should be enabled for this project; otherwise <code>false</code>.</p>
+<h4 id="type_2">Type<a class="headerlink" href="#type_2" title="Permanent link">&para;</a></h4>
+<p>Boolean; read/write.</p>
+<hr />
+<h3 id="projectdirty">Project.dirty<a class="headerlink" href="#projectdirty" title="Permanent link">&para;</a></h3>
+<p><code>app.project.dirty</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 17.5 (CC2020).</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This method/property is officially undocumented and was found via research. The information here may be inaccurate, and this whole method/property may disappear or stop working some point. Please contribute if you have more information on it!</p>
+</div>
+<h4 id="description_4">Description<a class="headerlink" href="#description_4" title="Permanent link">&para;</a></h4>
+<p><code>true</code> if the project has been modified from the last save; otherwise <code>false</code>.</p>
+<p>"Dirty" projects will have an <code>*</code> in the project window title.</p>
+<h4 id="type_3">Type<a class="headerlink" href="#type_3" title="Permanent link">&para;</a></h4>
+<p>Boolean; read-only.</p>
+<hr />
+<h3 id="projectdisplaystartframe">Project.displayStartFrame<a class="headerlink" href="#projectdisplaystartframe" title="Permanent link">&para;</a></h3>
+<p><code>app.project.displayStartFrame</code></p>
+<h4 id="description_5">Description<a class="headerlink" href="#description_5" title="Permanent link">&para;</a></h4>
+<p>An alternate way of setting the Frame Count menu setting in the Project Settings dialog box to 0 or 1, and is equivalent to using the <code>FramesCountType.FC_START_0</code> or <code>FramesCountType.FC_START_1</code> enumerated values for the <a href="#projectframescounttype">framesCountType</a>.</p>
+<h4 id="type_4">Type<a class="headerlink" href="#type_4" title="Permanent link">&para;</a></h4>
+<p>Integer (0 or 1); read/write.</p>
+<hr />
+<h3 id="projectexpressionengine">Project.expressionEngine<a class="headerlink" href="#projectexpressionengine" title="Permanent link">&para;</a></h3>
+<p><code>app.project.expressionEngine</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 16.0 (CC 2019)</p>
+</div>
+<h4 id="description_6">Description<a class="headerlink" href="#description_6" title="Permanent link">&para;</a></h4>
+<p>The Expressions Engine setting in the Project Settings dialog box, as a string. One of:</p>
+<ul>
+<li><code>extendscript</code></li>
+<li><code>javascript-1.0</code></li>
+</ul>
+<h4 id="type_5">Type<a class="headerlink" href="#type_5" title="Permanent link">&para;</a></h4>
+<p>String; read/write.</p>
+<hr />
+<h3 id="projectfeetframesfilmtype">Project.feetFramesFilmType<a class="headerlink" href="#projectfeetframesfilmtype" title="Permanent link">&para;</a></h3>
+<p><code>app.project.feetFramesFilmType</code></p>
+<h4 id="description_7">Description<a class="headerlink" href="#description_7" title="Permanent link">&para;</a></h4>
+<p>The Use Feet + Frames menu setting in the Project Settings dialog box. Use this attribute instead of the old <code>timecodeFilmType</code> attribute.</p>
+<h4 id="type_6">Type<a class="headerlink" href="#type_6" title="Permanent link">&para;</a></h4>
+<p>A <code>FeetFramesFilmType</code> enumerated value; read/write. One of:</p>
+<ul>
+<li><code>FeetFramesFilmType.MM16</code></li>
+<li><code>FeetFramesFilmType.MM35</code></li>
+</ul>
+<hr />
+<h3 id="projectfile">Project.file<a class="headerlink" href="#projectfile" title="Permanent link">&para;</a></h3>
+<p><code>app.project.file</code></p>
+<h4 id="description_8">Description<a class="headerlink" href="#description_8" title="Permanent link">&para;</a></h4>
+<p>The <a href="https://extendscript.docsforadobe.dev/file-system-access/file-object.html">Extendscript File</a> object for the file containing the project that is currently open.</p>
+<h4 id="type_7">Type<a class="headerlink" href="#type_7" title="Permanent link">&para;</a></h4>
+<p><a href="https://extendscript.docsforadobe.dev/file-system-access/file-object.html">File</a> object or <code>null</code> if project has not been saved; read-only.</p>
+<hr />
+<h3 id="projectfootagetimecodedisplaystarttype">Project.footageTimecodeDisplayStartType<a class="headerlink" href="#projectfootagetimecodedisplaystarttype" title="Permanent link">&para;</a></h3>
+<p><code>app.project.footageTimecodeDisplayStartType</code></p>
+<h4 id="description_9">Description<a class="headerlink" href="#description_9" title="Permanent link">&para;</a></h4>
+<p>The Footage Start Time setting in the Project Settings dialog box, which is enabled when Timecode is selected as the time display style.</p>
+<h4 id="type_8">Type<a class="headerlink" href="#type_8" title="Permanent link">&para;</a></h4>
+<p>A <code>FootageTimecodeDisplayStartType</code> enumerated value; read/write. One of:</p>
+<ul>
+<li><code>FootageTimecodeDisplayStartType.FTCS_START_0</code></li>
+<li><code>FootageTimecodeDisplayStartType.FTCS_USE_SOURCE_MEDIA</code></li>
+</ul>
+<hr />
+<h3 id="projectframescounttype">Project.framesCountType<a class="headerlink" href="#projectframescounttype" title="Permanent link">&para;</a></h3>
+<p><code>app.project.framesCountType</code></p>
+<h4 id="description_10">Description<a class="headerlink" href="#description_10" title="Permanent link">&para;</a></h4>
+<p>The Frame Count menu setting in the Project Settings dialog box.</p>
+<h4 id="type_9">Type<a class="headerlink" href="#type_9" title="Permanent link">&para;</a></h4>
+<p>A <code>FramesCountType</code> enumerated value; read/write. One of:</p>
+<ul>
+<li><code>FramesCountType.FC_START_1</code></li>
+<li><code>FramesCountType.FC_START_0</code></li>
+<li><code>FramesCountType.FC_TIMECODE_CONVERSION</code></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Setting this attribute to <code>FramesCountType.FC_TIMECODE_CONVERSION</code> resets the <code>displayStartFrame</code> attribute to 0.</p>
+</div>
+<hr />
+<h3 id="projectframesusefeetframes">Project.framesUseFeetFrames<a class="headerlink" href="#projectframesusefeetframes" title="Permanent link">&para;</a></h3>
+<p><code>app.project.framesUseFeetFrames</code></p>
+<h4 id="description_11">Description<a class="headerlink" href="#description_11" title="Permanent link">&para;</a></h4>
+<p>The "Use Feet + Frames" setting in the Project Settings dialog box.</p>
+<p><code>true</code> if using Feet + Frames; <code>false</code> if using Frames.</p>
+<h4 id="type_10">Type<a class="headerlink" href="#type_10" title="Permanent link">&para;</a></h4>
+<p>Boolean; read/write.</p>
+<hr />
+<h3 id="projectgpuacceltype">Project.gpuAccelType<a class="headerlink" href="#projectgpuacceltype" title="Permanent link">&para;</a></h3>
+<p><code>app.project.gpuAccelType</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 13.8 (CC 2015.3)</p>
+</div>
+<h4 id="description_12">Description<a class="headerlink" href="#description_12" title="Permanent link">&para;</a></h4>
+<p>Get or set the current projects GPU Acceleration option.
+see <a href="../application/#appavailablegpuacceltypes">app.availableGPUAccelTypes</a></p>
+<h4 id="type_11">Type<a class="headerlink" href="#type_11" title="Permanent link">&para;</a></h4>
+<p>A <code>GpuAccelType</code> enumerated value; read/write. One of:</p>
+<ul>
+<li><code>GpuAccelType.CUDA</code></li>
+<li><code>GpuAccelType.Metal</code></li>
+<li><code>GpuAccelType.OPENCL</code></li>
+<li><code>GpuAccelType.SOFTWARE</code></li>
+</ul>
+<h4 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1">// access via scripting to Project Settings -&gt; Video Rendering and Effects -&gt; Use</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">currentGPUSettings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">gpuAccelType</span><span class="p">;</span><span class="w"> </span><span class="c1">// returns the current value</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">type_str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">;</span>
+
+<span class="c1">// check the current value and alert the user</span>
+
+<span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="nx">currentGPUSettings</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="k">case</span><span class="w"> </span><span class="nx">GpuAccelType</span><span class="p">.</span><span class="nx">CUDA</span><span class="o">:</span>
+<span class="w">      </span><span class="nx">type_str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;CUDA&quot;</span><span class="p">;</span>
+<span class="w">      </span><span class="k">break</span><span class="p">;</span>
+<span class="w">   </span><span class="k">case</span><span class="w"> </span><span class="nx">GpuAccelType</span><span class="p">.</span><span class="nx">METAL</span><span class="o">:</span>
+<span class="w">      </span><span class="nx">type_str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Metal&quot;</span><span class="p">;</span>
+<span class="w">      </span><span class="k">break</span><span class="p">;</span>
+<span class="w">   </span><span class="k">case</span><span class="w"> </span><span class="nx">GpuAccelType</span><span class="p">.</span><span class="nx">OPENCL</span><span class="o">:</span>
+<span class="w">      </span><span class="nx">type_str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;OpenCL&quot;</span><span class="p">;</span>
+<span class="w">      </span><span class="k">break</span><span class="p">;</span>
+<span class="w">   </span><span class="k">case</span><span class="w"> </span><span class="nx">GpuAccelType</span><span class="p">.</span><span class="nx">SOFTWARE</span><span class="o">:</span>
+<span class="w">      </span><span class="nx">type_str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Software&quot;</span><span class="p">;</span>
+<span class="w">      </span><span class="k">break</span><span class="p">;</span>
+<span class="w">   </span><span class="k">default</span><span class="o">:</span>
+<span class="w">      </span><span class="nx">type_str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;UNKNOWN&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Your current setting is &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">type_str</span><span class="p">);</span>
+
+<span class="c1">// set the value to Metal</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">gpuAccelType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">GpuAccelType</span><span class="p">.</span><span class="nx">METAL</span><span class="p">;</span>
+</code></pre></div>
+<hr />
+<h3 id="projectitems">Project.items<a class="headerlink" href="#projectitems" title="Permanent link">&para;</a></h3>
+<p><code>app.project.items</code></p>
+<h4 id="description_13">Description<a class="headerlink" href="#description_13" title="Permanent link">&para;</a></h4>
+<p>All of the items in the project.</p>
+<h4 id="type_12">Type<a class="headerlink" href="#type_12" title="Permanent link">&para;</a></h4>
+<p><a href="../../item/itemcollection/">ItemCollection object</a>; read-only.</p>
+<hr />
+<h3 id="projectlinearblending">Project.linearBlending<a class="headerlink" href="#projectlinearblending" title="Permanent link">&para;</a></h3>
+<p><code>app.project.linearBlending</code></p>
+<h4 id="description_14">Description<a class="headerlink" href="#description_14" title="Permanent link">&para;</a></h4>
+<p><code>true</code> if linear blending should be used for this project; otherwise <code>false</code>.</p>
+<h4 id="type_13">Type<a class="headerlink" href="#type_13" title="Permanent link">&para;</a></h4>
+<p>Boolean; read/write.</p>
+<hr />
+<h3 id="projectlinearizeworkingspace">Project.linearizeWorkingSpace<a class="headerlink" href="#projectlinearizeworkingspace" title="Permanent link">&para;</a></h3>
+<p><code>app.project.linearizeWorkingSpace</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 16.0 (CC 2019)</p>
+</div>
+<h4 id="description_15">Description<a class="headerlink" href="#description_15" title="Permanent link">&para;</a></h4>
+<p><code>true</code> if Linearize Working Space should be enabled for this project; otherwise <code>false</code>.</p>
+<h4 id="type_14">Type<a class="headerlink" href="#type_14" title="Permanent link">&para;</a></h4>
+<p>Boolean; read/write.</p>
+<hr />
+<h3 id="projectnumitems">Project.numItems<a class="headerlink" href="#projectnumitems" title="Permanent link">&para;</a></h3>
+<p><code>app.project.numItems</code></p>
+<h4 id="description_16">Description<a class="headerlink" href="#description_16" title="Permanent link">&para;</a></h4>
+<p>The total number of items contained in the project, including folders and all types of footage.</p>
+<h4 id="type_15">Type<a class="headerlink" href="#type_15" title="Permanent link">&para;</a></h4>
+<p>Integer; read-only.</p>
+<h4 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">numItems</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">numItems</span><span class="p">;</span>
+<span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;There are &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">numItems</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot; items in this project.&quot;</span><span class="p">)</span>
+</code></pre></div>
+<hr />
+<h3 id="projectrenderqueue">Project.renderQueue<a class="headerlink" href="#projectrenderqueue" title="Permanent link">&para;</a></h3>
+<p><code>app.project.renderQueue</code></p>
+<h4 id="description_17">Description<a class="headerlink" href="#description_17" title="Permanent link">&para;</a></h4>
+<p>The <a href="../../renderqueue/renderqueue/">Render Queue</a> of the project.</p>
+<h4 id="type_16">Type<a class="headerlink" href="#type_16" title="Permanent link">&para;</a></h4>
+<p><a href="../../renderqueue/renderqueue/">RenderQueue object</a>; read-only.</p>
+<hr />
+<h3 id="projectrevision">Project.revision<a class="headerlink" href="#projectrevision" title="Permanent link">&para;</a></h3>
+<p><code>app.project.revision</code></p>
+<h4 id="description_18">Description<a class="headerlink" href="#description_18" title="Permanent link">&para;</a></h4>
+<p>The current revision of the project. Every user action increases the revision number. New project starts at revision 1.</p>
+<h4 id="type_17">Type<a class="headerlink" href="#type_17" title="Permanent link">&para;</a></h4>
+<p>Integer; the current revision version of the project; read-only.</p>
+<hr />
+<h3 id="projectrootfolder">Project.rootFolder<a class="headerlink" href="#projectrootfolder" title="Permanent link">&para;</a></h3>
+<p><code>app.project.rootFolder</code></p>
+<h4 id="description_19">Description<a class="headerlink" href="#description_19" title="Permanent link">&para;</a></h4>
+<p>The root folder containing the contents of the project; this is a virtual folder that contains all items in the Project panel, but not items contained inside other folders in the Project panel.</p>
+<h4 id="type_18">Type<a class="headerlink" href="#type_18" title="Permanent link">&para;</a></h4>
+<p><a href="../../item/folderitem/">FolderItem object</a>; read-only.</p>
+<hr />
+<h3 id="projectselection">Project.selection<a class="headerlink" href="#projectselection" title="Permanent link">&para;</a></h3>
+<p><code>app.project.selection</code></p>
+<h4 id="description_20">Description<a class="headerlink" href="#description_20" title="Permanent link">&para;</a></h4>
+<p>All items selected in the Project panel, in the sort order shown in the Project panel.</p>
+<h4 id="type_19">Type<a class="headerlink" href="#type_19" title="Permanent link">&para;</a></h4>
+<p>Array of <a href="../../item/item/">Item objects</a>; read-only.</p>
+<hr />
+<h3 id="projecttimedisplaytype">Project.timeDisplayType<a class="headerlink" href="#projecttimedisplaytype" title="Permanent link">&para;</a></h3>
+<p><code>app.project.timeDisplayType</code></p>
+<h4 id="description_21">Description<a class="headerlink" href="#description_21" title="Permanent link">&para;</a></h4>
+<p>The time display style, corresponding to the Time Display Style section in the Project Settings dialog box.</p>
+<h4 id="type_20">Type<a class="headerlink" href="#type_20" title="Permanent link">&para;</a></h4>
+<p>A <code>TimeDisplayType</code> enumerated value; read/write. One of:</p>
+<ul>
+<li><code>TimeDisplayType.FRAMES</code></li>
+<li><code>TimeDisplayType.TIMECODE</code></li>
+</ul>
+<hr />
+<h3 id="projecttooltype">Project.toolType<a class="headerlink" href="#projecttooltype" title="Permanent link">&para;</a></h3>
+<p><code>app.project.toolType</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 14.0 (CC 2017)</p>
+</div>
+<h4 id="description_22">Description<a class="headerlink" href="#description_22" title="Permanent link">&para;</a></h4>
+<p>Get and sets the active tool in the Tools panel.</p>
+<h4 id="type_21">Type<a class="headerlink" href="#type_21" title="Permanent link">&para;</a></h4>
+<p>A <code>ToolType</code> enumerated value; read/write. One of:</p>
+<ul>
+<li><code>ToolType.Tool_Arrow</code>: Selection Tool</li>
+<li><code>ToolType.Tool_Rotate</code>: Rotation Tool</li>
+<li><code>ToolType.Tool_CameraMaya</code>: Unified Camera Tool</li>
+<li><code>ToolType.Tool_CameraOrbit</code>: Orbit Camera Tool</li>
+<li><code>ToolType.Tool_CameraTrackXY</code>: Track XY Camera Tool</li>
+<li><code>ToolType.Tool_CameraTrackZ</code>: Track Z Camera Tool</li>
+<li><code>ToolType.Tool_Paintbrush</code>: Brush Tool</li>
+<li><code>ToolType.Tool_CloneStamp</code>: Clone Stamp Tool</li>
+<li><code>ToolType.Tool_Eraser</code>: Eraser Tool</li>
+<li><code>ToolType.Tool_Hand</code>: Hand Tool</li>
+<li><code>ToolType.Tool_Magnify</code>: Zoom Tool</li>
+<li><code>ToolType.Tool_PanBehind</code>: Pan Behind (Anchor Point) Tool</li>
+<li><code>ToolType.Tool_Rect</code>: Rectangle Tool</li>
+<li><code>ToolType.Tool_RoundedRect</code>: Rounded Rectangle Tool</li>
+<li><code>ToolType.Tool_Oval</code>: Ellipse Tool</li>
+<li><code>ToolType.Tool_Polygon</code>: Polygon Tool</li>
+<li><code>ToolType.Tool_Star</code>: Star Tool</li>
+<li><code>ToolType.Tool_TextH</code>: Horizontal Type Tool</li>
+<li><code>ToolType.Tool_TextV</code>: Vertical Type Tool</li>
+<li><code>ToolType.Tool_Pen</code>: Pen Tool</li>
+<li><code>ToolType.Tool_Feather</code>: Mask Feather Tool</li>
+<li><code>ToolType.Tool_PenPlus</code>: Add Vertex Tool</li>
+<li><code>ToolType.Tool_PenMinus</code>: Delete Vertex Tool</li>
+<li><code>ToolType.Tool_PenConvert</code>: Convert Vertex Tool</li>
+<li><code>ToolType.Tool_Pin</code>: Puppet Pin Tool</li>
+<li><code>ToolType.Tool_PinStarch</code>: Puppet Starch Tool</li>
+<li><code>ToolType.Tool_PinDepth</code>: Puppet Overlap Tool</li>
+<li><code>ToolType.Tool_Quickselect</code>: Roto Brush Tool</li>
+<li><code>ToolType.Tool_Hairbrush</code>: Refine Edge Tool</li>
+</ul>
+<h4 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h4>
+<p>The following sample code checks the current tool, and if it is not the Unified Camera Tool, sets the current tool to that:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Check the current tool, then set it to Unified Camera Tool (UCT).</span>
+<span class="c1">// Assume a composition is selected in the project.</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">comp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">activeItem</span><span class="p">;</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">comp</span><span class="w"> </span><span class="ow">instanceof</span><span class="w"> </span><span class="nx">CompItem</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Add a camera to the current comp. (Requirement for UCT)</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">cameraLayer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">comp</span><span class="p">.</span><span class="nx">layers</span><span class="p">.</span><span class="nx">addCamera</span><span class="p">(</span><span class="s2">&quot;Test Camera&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="nx">comp</span><span class="p">.</span><span class="nx">width</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">comp</span><span class="p">.</span><span class="nx">height</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2</span><span class="p">]);</span>
+<span class="w">    </span><span class="nx">comp</span><span class="p">.</span><span class="nx">openInViewer</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// If the currently selected tool is not one of the camera tools, set it to UCT.</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">toolType</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="nx">ToolType</span><span class="p">.</span><span class="nx">Tool_CameraMaya</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">        </span><span class="p">(</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">toolType</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="nx">ToolType</span><span class="p">.</span><span class="nx">Tool_CameraOrbit</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">        </span><span class="p">(</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">toolType</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="nx">ToolType</span><span class="p">.</span><span class="nx">Tool_CameraTrackXY</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">        </span><span class="p">(</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">toolType</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="nx">ToolType</span><span class="p">.</span><span class="nx">Tool_CameraTrackZ</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">toolType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ToolType</span><span class="p">.</span><span class="nx">Tool_CameraMaya</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>The following sample code uses the new app.project.toolType attribute to create a 360-degrees composition (environment layer and camera) from a selected footage item or composition selected in the Project panel. This script a good starting point for building VR compositions from equirectangular footage:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Create a 360 VR comp from a footage item or comp selected in the Project panel.</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">activeItem</span><span class="p">;</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">item</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">typeName</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;Footage&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">typeName</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;Composition&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Create a comp with the footage.</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">comp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">items</span><span class="p">.</span><span class="nx">addComp</span><span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">width</span><span class="p">,</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">height</span><span class="p">,</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">pixelAspect</span><span class="p">,</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">duration</span><span class="p">,</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">frameRate</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">layers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">comp</span><span class="p">.</span><span class="nx">layers</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">footageLayer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">layers</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">item</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Apply the CC Environment effect and create a camera.</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">effect</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">footageLayer</span><span class="p">.</span><span class="nx">Effects</span><span class="p">.</span><span class="nx">addProperty</span><span class="p">(</span><span class="s2">&quot;CC Environment&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">camera</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">layers</span><span class="p">.</span><span class="nx">addCamera</span><span class="p">(</span><span class="s2">&quot;360 Camera&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="nx">item</span><span class="p">.</span><span class="nx">width</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">height</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2</span><span class="p">]);</span>
+<span class="w">    </span><span class="nx">comp</span><span class="p">.</span><span class="nx">openInViewer</span><span class="p">();</span>
+<span class="w">    </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">toolType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ToolType</span><span class="p">.</span><span class="nx">Tool_CameraMaya</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Select a single footage item or composition in the Project panel.&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h3 id="projecttransparencygridthumbnails">Project.transparencyGridThumbnails<a class="headerlink" href="#projecttransparencygridthumbnails" title="Permanent link">&para;</a></h3>
+<p><code>app.project.transparencyGridThumbnails</code></p>
+<h4 id="description_23">Description<a class="headerlink" href="#description_23" title="Permanent link">&para;</a></h4>
+<p>When <code>true</code>, thumbnail views use the transparency checkerboard pattern.</p>
+<h4 id="type_22">Type<a class="headerlink" href="#type_22" title="Permanent link">&para;</a></h4>
+<p>Boolean; read/write.</p>
+<hr />
+<h3 id="projectusedfonts">Project.usedFonts<a class="headerlink" href="#projectusedfonts" title="Permanent link">&para;</a></h3>
+<p><code>app.project.usedFonts</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 24.5</p>
+</div>
+<h4 id="description_24">Description<a class="headerlink" href="#description_24" title="Permanent link">&para;</a></h4>
+<p>Returns an Array of Objects containing references to used fonts and the Text Layers and times on which they appear in the current <a href="#project-object">Project</a>.</p>
+<p>Each object is composed of <code>font</code> which is a <a href="../../text/fontobject/">Font object</a>, and <code>usedAt</code> which is an Array of Objects, each composed of <code>layerID</code>, a <a href="../../layer/layer/#layerid">Layer.id</a>, and <code>layerTimeD</code> for when. See <a href="#projectlayerbyid">Project.layerByID()</a> to retrieve the layers.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">usedList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">usedFonts</span><span class="p">;</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">usedList</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">font</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">usedList</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">font</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">usedAt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">usedList</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">usedAt</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;[0]:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">font</span><span class="p">.</span><span class="nx">postScriptName</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;\n&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">usedAt</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="kd">var</span><span class="w"> </span><span class="nx">layerID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">usedAt</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">layerID</span><span class="p">;</span>
+<span class="w">         </span><span class="c1">// valueAtTime() for Source Text property is expecting timed</span>
+<span class="w">         </span><span class="c1">// to be in Layer Time instead of Comp Time, unlike any of</span>
+<span class="w">         </span><span class="c1">// the other properties. So we have adjusted the name returned</span>
+<span class="w">         </span><span class="c1">// by usedFonts to make this clear as we expect that is where</span>
+<span class="w">         </span><span class="c1">// it will be used next.</span>
+<span class="w">         </span><span class="kd">var</span><span class="w"> </span><span class="nx">layerTimeD</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="nx">usedAt</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">layerTimeD</span><span class="p">;</span>
+
+<span class="w">         </span><span class="kd">var</span><span class="w"> </span><span class="nx">layer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">layerByID</span><span class="p">(</span><span class="nx">layerID</span><span class="p">);</span>
+<span class="w">         </span><span class="nx">str</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s2">&quot;   Layer:&#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">String</span><span class="p">(</span><span class="nx">layer</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="s2">&quot;Source Text&quot;</span><span class="p">).</span><span class="nx">valueAtTime</span><span class="p">(</span><span class="nx">layerTimeD</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;&#39;\n&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="type_23">Type<a class="headerlink" href="#type_23" title="Permanent link">&para;</a></h4>
+<p>Array of Objects; read-only.</p>
+<hr />
+<h3 id="projectworkinggamma">Project.workingGamma<a class="headerlink" href="#projectworkinggamma" title="Permanent link">&para;</a></h3>
+<p><code>app.project.workingGamma</code></p>
+<h4 id="description_25">Description<a class="headerlink" href="#description_25" title="Permanent link">&para;</a></h4>
+<p>The current project's working gamma value, either 2.2 or 2.4.</p>
+<p>Setting values other than 2.2 or 2.4 will cause a scripting error.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>When the project's color working space is set, the working gamma value is ignored by After Effects.</p>
+</div>
+<h4 id="type_24">Type<a class="headerlink" href="#type_24" title="Permanent link">&para;</a></h4>
+<p><code>2.2</code> or <code>2.4</code>; read/write.</p>
+<h4 id="examples_1">Examples<a class="headerlink" href="#examples_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>To set the working gamma to 2.4 (Rec. 709): <code>app.project.workingGamma = 2.4;</code></li>
+<li>To get the current working gamma: <code>var currentGamma = app.project.workingGamma;</code></li>
+</ul>
+<hr />
+<h3 id="projectworkingspace">Project.workingSpace<a class="headerlink" href="#projectworkingspace" title="Permanent link">&para;</a></h3>
+<p><code>app.project.workingSpace</code></p>
+<h4 id="description_26">Description<a class="headerlink" href="#description_26" title="Permanent link">&para;</a></h4>
+<p>A string which is the color profile description for the project's color working space. To set the working space to None, set <code>workingSpace</code> to an empty string.</p>
+<p>Use <code>app.project.listColorProfiles()</code> to return an array of available color profile descriptions that can be used to set the color working space.</p>
+<h4 id="type_25">Type<a class="headerlink" href="#type_25" title="Permanent link">&para;</a></h4>
+<p>String; read/write.</p>
+<h4 id="examples_2">Examples<a class="headerlink" href="#examples_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li>To set the working space to Rec.709 Gamma 2.4: <code>app.project.workingSpace = "Rec.709 Gamma 2.4";</code></li>
+<li>To set the working space to None: <code>app.project.workingSpace = "";</code></li>
+<li>To get the current working space: <code>var currentSpace = app.project.workingSpace;</code></li>
+</ul>
+<hr />
+<h3 id="projectxmppacket">Project.xmpPacket<a class="headerlink" href="#projectxmppacket" title="Permanent link">&para;</a></h3>
+<p><code>app.project.xmpPacket</code></p>
+<h4 id="description_27">Description<a class="headerlink" href="#description_27" title="Permanent link">&para;</a></h4>
+<p>The project's XMP metadata, stored as RDF (XML-based). For more information on XMP, see the <a href="https://extendscript.docsforadobe.dev/">JavaScript Tools Guide</a>.</p>
+<h4 id="type_26">Type<a class="headerlink" href="#type_26" title="Permanent link">&para;</a></h4>
+<p>String; read/write.</p>
+<h4 id="example_2">Example<a class="headerlink" href="#example_2" title="Permanent link">&para;</a></h4>
+<p>The following example code accesses the XMP metadata of the current project, and modifies the Label project metadata field.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">proj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">;</span>
+
+<span class="c1">// load the XMPlibrary as an ExtendScript ExternalObject</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">ExternalObject</span><span class="p">.</span><span class="nx">AdobeXMPScript</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="kc">undefined</span><span class="p">){</span>
+<span class="w">    </span><span class="nx">ExternalObject</span><span class="p">.</span><span class="nx">AdobeXMPScript</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ExternalObject</span><span class="p">(</span><span class="s1">&#39;lib:AdobeXMPScript&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">mdata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">XMPMeta</span><span class="p">(</span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">xmpPacket</span><span class="p">);</span><span class="w"> </span><span class="c1">//get the project&#39;s XMPmetadata</span>
+<span class="c1">// update the Label project metadata&#39;s value</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">schemaNS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">XMPMeta</span><span class="p">.</span><span class="nx">getNamespaceURI</span><span class="p">(</span><span class="s2">&quot;xmp&quot;</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">propName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;xmp:Label&quot;</span><span class="p">;</span>
+<span class="k">try</span><span class="p">{</span>
+<span class="w">    </span><span class="nx">mdata</span><span class="p">.</span><span class="nx">setProperty</span><span class="p">(</span><span class="nx">schemaNS</span><span class="p">,</span><span class="w"> </span><span class="nx">propName</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;finalversion...no, really!&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">xmpPacket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">mdata</span><span class="p">.</span><span class="nx">serialize</span><span class="p">();</span>
+</code></pre></div>
+<hr />
+<h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h2>
+<h3 id="projectautofixexpressions">Project.autoFixExpressions()<a class="headerlink" href="#projectautofixexpressions" title="Permanent link">&para;</a></h3>
+<p><code>app.project.autoFixExpressions(oldText, newText)</code></p>
+<h4 id="description_28">Description<a class="headerlink" href="#description_28" title="Permanent link">&para;</a></h4>
+<p>Automatically replaces text found in broken expressions in the project, if the new text causes the expression to evaluate without errors.</p>
+<h4 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>oldText</code></td>
+<td>String</td>
+<td>The text to replace.</td>
+</tr>
+<tr>
+<td><code>newText</code></td>
+<td>String</td>
+<td>The new text.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns">Returns<a class="headerlink" href="#returns" title="Permanent link">&para;</a></h4>
+<p>Nothing.</p>
+<hr />
+<h3 id="projectclose">Project.close()<a class="headerlink" href="#projectclose" title="Permanent link">&para;</a></h3>
+<p><code>app.project.close(closeOptions)</code></p>
+<h4 id="description_29">Description<a class="headerlink" href="#description_29" title="Permanent link">&para;</a></h4>
+<p>Closes the project with the option of saving changes automatically, prompting the user to save changes or closing without saving changes.</p>
+<h4 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>closeOptions</code></td>
+<td><code>CloseOptions</code> enum</td>
+<td>Action to be performed on close. One of:<br/>- <code>CloseOptions.DO_NOT_SAVE_CHANGES</code>: Close without saving.<br/>- <code>CloseOptions.PROMPT_TO_SAVE_CHANGES</code>: Prompt for whether to save changes before close.<br/>- <code>CloseOptions.SAVE_CHANGES</code>: Save automatically on close.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_1">Returns<a class="headerlink" href="#returns_1" title="Permanent link">&para;</a></h4>
+<p>Boolean. <code>true</code> on success. <code>false</code> if the file has not been previously saved, the user is prompted, and the user cancels the save.</p>
+<hr />
+<h3 id="projectconsolidatefootage">Project.consolidateFootage()<a class="headerlink" href="#projectconsolidatefootage" title="Permanent link">&para;</a></h3>
+<p><code>app.project.consolidateFootage()</code></p>
+<h4 id="description_30">Description<a class="headerlink" href="#description_30" title="Permanent link">&para;</a></h4>
+<p>Consolidates all footage in the project. Same as the File &gt; Consolidate All Footage command.</p>
+<h4 id="parameters_2">Parameters<a class="headerlink" href="#parameters_2" title="Permanent link">&para;</a></h4>
+<p>None.</p>
+<h4 id="returns_2">Returns<a class="headerlink" href="#returns_2" title="Permanent link">&para;</a></h4>
+<p>Integer; the total number of footage items removed.</p>
+<hr />
+<h3 id="projectimportfile">Project.importFile()<a class="headerlink" href="#projectimportfile" title="Permanent link">&para;</a></h3>
+<p><code>app.project.importFile(importOptions)</code></p>
+<h4 id="description_31">Description<a class="headerlink" href="#description_31" title="Permanent link">&para;</a></h4>
+<p>Imports the file specified in the specified ImportOptions object, using the specified options. Same as the File &gt; Import File command.</p>
+<p>Creates and returns a new FootageItem object from the file, and adds it to the project's items array.</p>
+<h4 id="parameters_3">Parameters<a class="headerlink" href="#parameters_3" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>importOptions</code></td>
+<td><a href="../../other/importoptions/">ImportOptions</a></td>
+<td>Options specifying the file to import and the options for the operation.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_3">Returns<a class="headerlink" href="#returns_3" title="Permanent link">&para;</a></h4>
+<p><a href="../../item/footageitem/">FootageItem object</a>.</p>
+<h4 id="example_3">Example<a class="headerlink" href="#example_3" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">importFile</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">ImportOptions</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">File</span><span class="p">(</span><span class="s2">&quot;sample.psd&quot;</span><span class="p">));</span>
+</code></pre></div>
+<hr />
+<h3 id="projectimportfilewithdialog">Project.importFileWithDialog()<a class="headerlink" href="#projectimportfilewithdialog" title="Permanent link">&para;</a></h3>
+<p><code>app.project.importFileWithDialog()</code></p>
+<h4 id="description_32">Description<a class="headerlink" href="#description_32" title="Permanent link">&para;</a></h4>
+<p>Shows an Import File dialog box. Same as the File &gt; Import &gt; File command.</p>
+<h4 id="returns_4">Returns<a class="headerlink" href="#returns_4" title="Permanent link">&para;</a></h4>
+<p>Array of <a href="../../item/item/">Item objects</a> created during import; or <code>null</code> if the user cancels the dialog box.</p>
+<hr />
+<h3 id="projectimportplaceholder">Project.importPlaceholder()<a class="headerlink" href="#projectimportplaceholder" title="Permanent link">&para;</a></h3>
+<p><code>app.project.importPlaceholder(name, width, height, frameRate, duration)</code></p>
+<h4 id="description_33">Description<a class="headerlink" href="#description_33" title="Permanent link">&para;</a></h4>
+<p>Creates and returns a new PlaceholderItem and adds it to the project's items array. Same as the File &gt; Import &gt; Placeholder command.</p>
+<h4 id="parameters_4">Parameters<a class="headerlink" href="#parameters_4" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>String</td>
+<td>The name of the placeholder.</td>
+</tr>
+<tr>
+<td><code>width</code></td>
+<td>Integer, in the range <code>[4..30000]</code></td>
+<td>The width of the placeholder in pixels.</td>
+</tr>
+<tr>
+<td><code>height</code></td>
+<td>Integer, in the range <code>[4..30000]</code></td>
+<td>The height of the placeholder in pixels.</td>
+</tr>
+<tr>
+<td><code>frameRate</code></td>
+<td>Floating-point value, in the range <code>[1.0..99.0]</code></td>
+<td>The frame rate of the placeholder.</td>
+</tr>
+<tr>
+<td><code>duration</code></td>
+<td>Floating-point value, in the range <code>[0.0..10800.0]</code></td>
+<td>The duration of the placeholder in seconds.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_5">Returns<a class="headerlink" href="#returns_5" title="Permanent link">&para;</a></h4>
+<p>PlaceholderItem object.</p>
+<hr />
+<h3 id="projectitem">Project.item()<a class="headerlink" href="#projectitem" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index)</code></p>
+<h4 id="description_34">Description<a class="headerlink" href="#description_34" title="Permanent link">&para;</a></h4>
+<p>Retrieves an item at a specified index position.</p>
+<h4 id="parameters_5">Parameters<a class="headerlink" href="#parameters_5" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>index</code></td>
+<td>Integer</td>
+<td>The index position of the item. The first item is at index 1.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_6">Returns<a class="headerlink" href="#returns_6" title="Permanent link">&para;</a></h4>
+<p><a href="../../item/item/">Item object</a>.</p>
+<hr />
+<h3 id="projectitembyid">Project.itemByID()<a class="headerlink" href="#projectitembyid" title="Permanent link">&para;</a></h3>
+<p><code>app.project.itemByID(id)</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 13.0 (CC 2014)</p>
+</div>
+<h4 id="description_35">Description<a class="headerlink" href="#description_35" title="Permanent link">&para;</a></h4>
+<p>Retrieves an item by its <a href="../../item/item/#itemid">Item ID</a></p>
+<h4 id="parameters_6">Parameters<a class="headerlink" href="#parameters_6" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Integer</td>
+<td>The ID of an item</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_7">Returns<a class="headerlink" href="#returns_7" title="Permanent link">&para;</a></h4>
+<p><a href="../../item/item/">Item object</a>.</p>
+<hr />
+<h3 id="projectlayerbyid">Project.layerByID()<a class="headerlink" href="#projectlayerbyid" title="Permanent link">&para;</a></h3>
+<p><code>app.project.layerByID(id)</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 22.0 (2022)</p>
+</div>
+<h4 id="description_36">Description<a class="headerlink" href="#description_36" title="Permanent link">&para;</a></h4>
+<p>Instance method on Project which, when given a valid ID value, returns the Layer object in the Project with that given ID.</p>
+<h4 id="parameters_7">Parameters<a class="headerlink" href="#parameters_7" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Integer (non-negative)</td>
+<td>The ID of the Layer to be retrieved from the Project.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_8">Returns<a class="headerlink" href="#returns_8" title="Permanent link">&para;</a></h4>
+<p><a href="../../layer/layer/">Layer object</a> with the given ID if it exists on the project; otherwise null. Non-valid IDs will throw an exception stating that the input parameter is not an unsigned integer.</p>
+<h4 id="example_4">Example<a class="headerlink" href="#example_4" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">firstComp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">firstLayer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">firstComp</span><span class="p">.</span><span class="nx">layer</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">layerID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">firstLayer</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">layerByID</span><span class="p">(</span><span class="nx">layerID</span><span class="p">)</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">firstLayer</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;You can get the Layer from the ID!&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h3 id="projectlistcolorprofiles">Project.listColorProfiles()<a class="headerlink" href="#projectlistcolorprofiles" title="Permanent link">&para;</a></h3>
+<p><code>app.project.listColorProfiles()</code></p>
+<h4 id="description_37">Description<a class="headerlink" href="#description_37" title="Permanent link">&para;</a></h4>
+<p>Returns an array of color profile descriptions that can be set as the project's color working space.</p>
+<h4 id="parameters_8">Parameters<a class="headerlink" href="#parameters_8" title="Permanent link">&para;</a></h4>
+<p>None.</p>
+<h4 id="returns_9">Returns<a class="headerlink" href="#returns_9" title="Permanent link">&para;</a></h4>
+<p>Array of strings.</p>
+<hr />
+<h3 id="projectreduceproject">Project.reduceProject()<a class="headerlink" href="#projectreduceproject" title="Permanent link">&para;</a></h3>
+<p><code>app.project.reduceProject(array_of_items)</code></p>
+<h4 id="description_38">Description<a class="headerlink" href="#description_38" title="Permanent link">&para;</a></h4>
+<p>Removes all items from the project except those specified. Same as the File &gt; Reduce Project command.</p>
+<h4 id="parameters_9">Parameters<a class="headerlink" href="#parameters_9" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>array_of_items</code></td>
+<td>Array of <a href="../../item/item/">Item objects</a></td>
+<td>The items to be kept.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_10">Returns<a class="headerlink" href="#returns_10" title="Permanent link">&para;</a></h4>
+<p>Integer; the total number of items removed.</p>
+<h4 id="example_5">Example<a class="headerlink" href="#example_5" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">items</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
+<span class="nx">items</span><span class="p">[</span><span class="nx">items</span><span class="p">.</span><span class="nx">length</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+<span class="nx">items</span><span class="p">[</span><span class="nx">items</span><span class="p">.</span><span class="nx">length</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">3</span><span class="p">);</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">reduceProject</span><span class="p">(</span><span class="nx">items</span><span class="p">);</span>
+</code></pre></div>
+<hr />
+<h3 id="projectremoveunusedfootage">Project.removeUnusedFootage()<a class="headerlink" href="#projectremoveunusedfootage" title="Permanent link">&para;</a></h3>
+<p><code>app.project.removeUnusedFootage()</code></p>
+<h4 id="description_39">Description<a class="headerlink" href="#description_39" title="Permanent link">&para;</a></h4>
+<p>Removes unused footage from the project. Same as the File &gt; Remove Unused Footage command.</p>
+<h4 id="parameters_10">Parameters<a class="headerlink" href="#parameters_10" title="Permanent link">&para;</a></h4>
+<p>None.</p>
+<h4 id="returns_11">Returns<a class="headerlink" href="#returns_11" title="Permanent link">&para;</a></h4>
+<p>Integer; the total number of FootageItem objects removed.</p>
+<hr />
+<h3 id="projectreplacefont">Project.replaceFont()<a class="headerlink" href="#projectreplacefont" title="Permanent link">&para;</a></h3>
+<p><code>app.project.replaceFont(fromFont, toFont, [noFontLocking = false])</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 24.5</p>
+</div>
+<h4 id="description_40">Description<a class="headerlink" href="#description_40" title="Permanent link">&para;</a></h4>
+<p>This function will replace all the usages of <a href="../../text/fontobject/">Font object</a> <code>fromFont</code> with <a href="../../text/fontobject/">Font object</a> <code>toFont</code>.</p>
+<p>This operation exposes the same mechanism and policy used for automatic font replacement of missing or substituted fonts and is therefore a complete and precise replacement, even on <a href="../../text/textdocument/">TextDocuments</a> which have mixed styling, preserving the character range the <code>fromFont</code> was applied to.</p>
+<p>This operation is not undoable.</p>
+<p>The optional parameter <code>noFontLocking</code> controls what happens when the <code>toFont</code> has no glyphs for the text it is applied to. By default a fallback font will be selected which will have the necessary glyphs, but if this parameter is set to <code>true</code> then this fallback will not take place and missing glyphs will result. There is no way at the current time to detect or report this.</p>
+<p>Note that when <code>fromFont</code> is a substituted font and the <code>toFont</code> has the same font properties no fallback can occur and the parameter is ignored and treated as <code>true</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">fromFont</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">usedFonts</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">font</span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">fontList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">fonts</span><span class="p">.</span><span class="nx">getFontsByPostScriptName</span><span class="p">(</span><span class="s2">&quot;TimesNewRomanPSMT&quot;</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">toFont</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">fontList</span><span class="p">[</span><span class="mf">0</span><span class="p">];</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">layerChanged</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">replaceFont</span><span class="p">(</span><span class="nx">fromFont</span><span class="p">,</span><span class="w"> </span><span class="nx">toFont</span><span class="p">);</span>
+</code></pre></div>
+<h4 id="parameters_11">Parameters<a class="headerlink" href="#parameters_11" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fromFont</code></td>
+<td><a href="../../text/fontobject/">Font object</a></td>
+<td>Font to be replaced.</td>
+</tr>
+<tr>
+<td><code>toFont</code></td>
+<td><a href="../../text/fontobject/">Font object</a></td>
+<td>Font to replace it with.</td>
+</tr>
+<tr>
+<td><code>noFontLocking</code></td>
+<td>Boolean</td>
+<td>Optional. Defaults to <code>false</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_12">Returns<a class="headerlink" href="#returns_12" title="Permanent link">&para;</a></h4>
+<p>Boolean. <code>true</code> if at least one Layer was changed.</p>
+<hr />
+<h3 id="projectsave">Project.save()<a class="headerlink" href="#projectsave" title="Permanent link">&para;</a></h3>
+<p><code>app.project.save([file])</code></p>
+<h4 id="description_41">Description<a class="headerlink" href="#description_41" title="Permanent link">&para;</a></h4>
+<p>Saves the project. The same as the File &gt; Save or File &gt; Save As command. If the project has never previously been saved and no file is specified, prompts the user for a location and file name.</p>
+<p>Pass a <a href="https://extendscript.docsforadobe.dev/file-system-access/file-object.html">File</a> object to save a project to a new file without prompting.</p>
+<h4 id="parameters_12">Parameters<a class="headerlink" href="#parameters_12" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>file</code></td>
+<td><a href="https://extendscript.docsforadobe.dev/file-system-access/file-object.html">Extendscript File</a></td>
+<td>Optional. The file to save.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_13">Returns<a class="headerlink" href="#returns_13" title="Permanent link">&para;</a></h4>
+<p>None.</p>
+<hr />
+<h3 id="projectsavewithdialog">Project.saveWithDialog()<a class="headerlink" href="#projectsavewithdialog" title="Permanent link">&para;</a></h3>
+<p><code>app.project.saveWithDialog()</code></p>
+<h4 id="description_42">Description<a class="headerlink" href="#description_42" title="Permanent link">&para;</a></h4>
+<p>Shows the Save dialog box. The user can name a file with a location and save the project, or click Cancel to exit the dialog box.</p>
+<h4 id="parameters_13">Parameters<a class="headerlink" href="#parameters_13" title="Permanent link">&para;</a></h4>
+<p>None.</p>
+<h4 id="returns_14">Returns<a class="headerlink" href="#returns_14" title="Permanent link">&para;</a></h4>
+<p>Boolean; <code>true</code> if the project was saved.</p>
+<hr />
+<h3 id="projectsetdefaultimportfolder">Project.setDefaultImportFolder()<a class="headerlink" href="#projectsetdefaultimportfolder" title="Permanent link">&para;</a></h3>
+<p><code>app.project.setDefaultImportFolder(folder)</code></p>
+<h4 id="description_43">Description<a class="headerlink" href="#description_43" title="Permanent link">&para;</a></h4>
+<p>Sets the folder that will be shown in the file import dialog. This location will be used as an override until setDefaultImportFolder() is called with no parameters, or until After Effects is quit.</p>
+<h4 id="parameters_14">Parameters<a class="headerlink" href="#parameters_14" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>folder</code></td>
+<td><a href="https://extendscript.docsforadobe.dev/file-system-access/folder-object.html">Extendscript Folder</a></td>
+<td>Folder to set as default</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_15">Returns<a class="headerlink" href="#returns_15" title="Permanent link">&para;</a></h4>
+<p>Boolean; indicates if the operation was successful.</p>
+<h4 id="examples_3">Examples<a class="headerlink" href="#examples_3" title="Permanent link">&para;</a></h4>
+<p>Any of the following will set the default import folder to C:/My Folder:</p>
+<ul>
+<li><code>var myFolder = new Folder("C:/My Folder"); app.project.setDefaultImportFolder(myFolder);</code></li>
+<li><code>app.project.setDefaultImportFolder(new Folder("C:/My Folder"));</code></li>
+<li><code>app.project.setDefaultImportFolder(Folder("C:/My Folder"));</code></li>
+</ul>
+<p>Note: if the path refers to an existing file and not a folder, the Folder function returns a File object instead of a Folder object, which will cause <code>setDefaultImportFolder()</code> to return <code>false</code>.</p>
+<p>To set the default import folder to the current user's desktop folder: <code>app.project.setDefaultImportFolder(Folder.desktop);</code></p>
+<p>To disable the default folder, call <code>setDefaultImportFolder()</code> with no parameters: <code>app.project.setDefaultImportFolder();</code></p>
+<hr />
+<h3 id="projectshowwindow">Project.showWindow()<a class="headerlink" href="#projectshowwindow" title="Permanent link">&para;</a></h3>
+<p><code>app.project.showWindow(doShow)</code></p>
+<h4 id="description_44">Description<a class="headerlink" href="#description_44" title="Permanent link">&para;</a></h4>
+<p>Shows or hides the Project panel.</p>
+<h4 id="parameters_15">Parameters<a class="headerlink" href="#parameters_15" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>doShow</code></td>
+<td>Boolean</td>
+<td>When <code>true</code>, show the Project panel. When <code>false</code>, hide the Project panel.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_16">Returns<a class="headerlink" href="#returns_16" title="Permanent link">&para;</a></h4>
+<p>Nothing.</p>
+<hr />
+<h2 id="team-projects">Team Projects<a class="headerlink" href="#team-projects" title="Permanent link">&para;</a></h2>
+<h3 id="projectnewteamproject">Project.newTeamProject()<a class="headerlink" href="#projectnewteamproject" title="Permanent link">&para;</a></h3>
+<p><code>app.project.newTeamProject(teamProjectName, description)</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 14.2 (CC 2017.1)</p>
+</div>
+<h4 id="description_45">Description<a class="headerlink" href="#description_45" title="Permanent link">&para;</a></h4>
+<p>Creates a new team project.</p>
+<h4 id="parameters_16">Parameters<a class="headerlink" href="#parameters_16" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>teamProjectName</code></td>
+<td>String</td>
+<td>Team project name</td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td>String</td>
+<td>Optional. Project description</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_17">Returns<a class="headerlink" href="#returns_17" title="Permanent link">&para;</a></h4>
+<p>Boolean. <code>true</code> if the team project is successfully created, otherwise <code>false</code>.</p>
+<hr />
+<h3 id="projectopenteamproject">Project.openTeamProject()<a class="headerlink" href="#projectopenteamproject" title="Permanent link">&para;</a></h3>
+<p><code>app.project.openTeamProject(teamProjectName)</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 14.2 (CC 2017.1)</p>
+</div>
+<h4 id="description_46">Description<a class="headerlink" href="#description_46" title="Permanent link">&para;</a></h4>
+<p>Opens a team project.</p>
+<h4 id="parameters_17">Parameters<a class="headerlink" href="#parameters_17" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>teamProjectName</code></td>
+<td>String</td>
+<td>Team project name</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_18">Returns<a class="headerlink" href="#returns_18" title="Permanent link">&para;</a></h4>
+<p>Boolean. <code>true</code> if the team project is successfully opened, otherwise <code>false</code>.</p>
+<hr />
+<h3 id="projectshareteamproject">Project.shareTeamProject()<a class="headerlink" href="#projectshareteamproject" title="Permanent link">&para;</a></h3>
+<p><code>app.project.shareTeamProject(comment)</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 14.2 (CC 2017.1)</p>
+</div>
+<h4 id="description_47">Description<a class="headerlink" href="#description_47" title="Permanent link">&para;</a></h4>
+<p>Shares the currently open team project.</p>
+<h4 id="parameters_18">Parameters<a class="headerlink" href="#parameters_18" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>comment</code></td>
+<td>String</td>
+<td>Optional. Comment.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_19">Returns<a class="headerlink" href="#returns_19" title="Permanent link">&para;</a></h4>
+<p>Boolean. <code>true</code> if the team project is successfully shared, otherwise <code>false</code>.</p>
+<hr />
+<h3 id="projectsyncteamproject">Project.syncTeamProject()<a class="headerlink" href="#projectsyncteamproject" title="Permanent link">&para;</a></h3>
+<p><code>app.project.syncTeamProject()</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 14.2 (CC 2017.1)</p>
+</div>
+<h4 id="description_48">Description<a class="headerlink" href="#description_48" title="Permanent link">&para;</a></h4>
+<p>Syncs the currently open team project.</p>
+<h4 id="returns_20">Returns<a class="headerlink" href="#returns_20" title="Permanent link">&para;</a></h4>
+<p>Boolean. <code>true</code> if the team project is successfully synced, otherwise <code>false</code>.</p>
+<hr />
+<h3 id="projectcloseteamproject">Project.closeTeamProject()<a class="headerlink" href="#projectcloseteamproject" title="Permanent link">&para;</a></h3>
+<p><code>app.project.closeTeamProject()</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 14.2 (CC 2017.1)</p>
+</div>
+<h4 id="description_49">Description<a class="headerlink" href="#description_49" title="Permanent link">&para;</a></h4>
+<p>Closes a currently open team project.</p>
+<h4 id="returns_21">Returns<a class="headerlink" href="#returns_21" title="Permanent link">&para;</a></h4>
+<p>Boolean. <code>true</code> if the team project is successfully closed, otherwise <code>false</code>.</p>
+<hr />
+<h3 id="projectconvertteamprojecttoproject">Project.convertTeamProjectToProject()<a class="headerlink" href="#projectconvertteamprojecttoproject" title="Permanent link">&para;</a></h3>
+<p><code>app.project.convertTeamProjectToProject(project_file)</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 14.2 (CC 2017.1)</p>
+</div>
+<h4 id="description_50">Description<a class="headerlink" href="#description_50" title="Permanent link">&para;</a></h4>
+<p>Converts a team project to an After Effects project on a local disk.</p>
+<h4 id="parameters_19">Parameters<a class="headerlink" href="#parameters_19" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>project_file</code></td>
+<td><a href="https://extendscript.docsforadobe.dev/file-system-access/file-object.html">Extendscript File</a></td>
+<td>The local After Effects project. File extension should be either .aep or .aet (.aepx is not supported).</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_22">Returns<a class="headerlink" href="#returns_22" title="Permanent link">&para;</a></h4>
+<p>Boolean. <code>true</code> if the team project is successfully converted, otherwise <code>false</code>.</p>
+<hr />
+<h3 id="projectlistteamprojects">Project.listTeamProjects()<a class="headerlink" href="#projectlistteamprojects" title="Permanent link">&para;</a></h3>
+<p><code>app.project.listTeamProjects()</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 14.2 (CC 2017.1)</p>
+</div>
+<h4 id="description_51">Description<a class="headerlink" href="#description_51" title="Permanent link">&para;</a></h4>
+<p>Returns an array containing the name strings for all team projects available for the current user.
+Archived Team Projects are not included.</p>
+<h4 id="returns_23">Returns<a class="headerlink" href="#returns_23" title="Permanent link">&para;</a></h4>
+<p>Array of strings.</p>
+<hr />
+<h3 id="projectisteamprojectopen">Project.isTeamProjectOpen()<a class="headerlink" href="#projectisteamprojectopen" title="Permanent link">&para;</a></h3>
+<p><code>app.project.isTeamProjectOpen(teamProjectName)</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 14.2 (CC 2017.1)</p>
+</div>
+<h4 id="description_52">Description<a class="headerlink" href="#description_52" title="Permanent link">&para;</a></h4>
+<p>Checks whether specified team project is currently open.</p>
+<h4 id="parameters_20">Parameters<a class="headerlink" href="#parameters_20" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>teamProjectName</code></td>
+<td>String</td>
+<td>Team project name</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_24">Returns<a class="headerlink" href="#returns_24" title="Permanent link">&para;</a></h4>
+<p>Boolean. <code>true</code> if the specified team project is currently open, otherwise <code>false</code>.</p>
+<hr />
+<h3 id="projectisanyteamprojectopen">Project.isAnyTeamProjectOpen()<a class="headerlink" href="#projectisanyteamprojectopen" title="Permanent link">&para;</a></h3>
+<p><code>app.project.isAnyTeamProjectOpen()</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 14.2 (CC 2017.1)</p>
+</div>
+<h4 id="description_53">Description<a class="headerlink" href="#description_53" title="Permanent link">&para;</a></h4>
+<p>Checks whether any team project is currently open.</p>
+<h4 id="returns_25">Returns<a class="headerlink" href="#returns_25" title="Permanent link">&para;</a></h4>
+<p>Boolean. <code>true</code> if any team project is currently open, otherwise <code>false</code>.</p>
+<hr />
+<h3 id="projectisteamprojectenabled">Project.isTeamProjectEnabled()<a class="headerlink" href="#projectisteamprojectenabled" title="Permanent link">&para;</a></h3>
+<p><code>app.project.isTeamProjectEnabled()</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 14.2 (CC 2017.1)</p>
+</div>
+<h4 id="description_54">Description<a class="headerlink" href="#description_54" title="Permanent link">&para;</a></h4>
+<p>Checks whether or not team project is enabled for After Effects. (This will almost always return <code>true</code>.)</p>
+<h4 id="returns_26">Returns<a class="headerlink" href="#returns_26" title="Permanent link">&para;</a></h4>
+<p>Boolean. <code>true</code> if team project is currently enabled, otherwise <code>false</code>.</p>
+<hr />
+<h3 id="projectisloggedintoteamproject">Project.isLoggedInToTeamProject()<a class="headerlink" href="#projectisloggedintoteamproject" title="Permanent link">&para;</a></h3>
+<p><code>app.project.isLoggedInToTeamProject()</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 14.2 (CC 2017.1)</p>
+</div>
+<h4 id="description_55">Description<a class="headerlink" href="#description_55" title="Permanent link">&para;</a></h4>
+<p>Checks whether or not the client (After Effects) is currently logged into the team project server.</p>
+<h4 id="returns_27">Returns<a class="headerlink" href="#returns_27" title="Permanent link">&para;</a></h4>
+<p>Boolean. <code>true</code> if the client (After Effects) is currently logged into the team projects server, otherwise <code>false</code>.</p>
+<hr />
+<h3 id="projectissynccommandenabled">Project.isSyncCommandEnabled()<a class="headerlink" href="#projectissynccommandenabled" title="Permanent link">&para;</a></h3>
+<p><code>app.project.isSyncCommandEnabled()</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 14.2 (CC 2017.1)</p>
+</div>
+<h4 id="description_56">Description<a class="headerlink" href="#description_56" title="Permanent link">&para;</a></h4>
+<p>Checks whether or not the Sync command is enabled.</p>
+<h4 id="returns_28">Returns<a class="headerlink" href="#returns_28" title="Permanent link">&para;</a></h4>
+<p>Boolean. <code>true</code> if the team projects Sync command is enabled, otherwise <code>false</code>.</p>
+<hr />
+<h3 id="projectissharecommandenabled">Project.isShareCommandEnabled()<a class="headerlink" href="#projectissharecommandenabled" title="Permanent link">&para;</a></h3>
+<p><code>app.project.isShareCommandEnabled()</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 14.2 (CC 2017.1)</p>
+</div>
+<h4 id="description_57">Description<a class="headerlink" href="#description_57" title="Permanent link">&para;</a></h4>
+<p>Checks whether or not the Share command is enabled.</p>
+<h4 id="returns_29">Returns<a class="headerlink" href="#returns_29" title="Permanent link">&para;</a></h4>
+<p>Boolean. <code>true</code> if the team projects Share command is enabled, otherwise <code>false</code>.</p>
+<hr />
+<h3 id="projectisresolvecommandenabled">Project.isResolveCommandEnabled()<a class="headerlink" href="#projectisresolvecommandenabled" title="Permanent link">&para;</a></h3>
+<p><code>app.project.isResolveCommandEnabled()</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 14.2 (CC 2017.1)</p>
+</div>
+<h4 id="description_58">Description<a class="headerlink" href="#description_58" title="Permanent link">&para;</a></h4>
+<p>Checks whether or not the Resolve command is enabled.</p>
+<h4 id="returns_30">Returns<a class="headerlink" href="#returns_30" title="Permanent link">&para;</a></h4>
+<p>Boolean. <code>true</code> if the team projects Resolve command is enabled, otherwise <code>false</code>.</p>
+<hr />
+<h3 id="projectresolveconflict">Project.resolveConflict()<a class="headerlink" href="#projectresolveconflict" title="Permanent link">&para;</a></h3>
+<p><code>app.project.resolveConflict(ResolveType)</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 14.2 (CC 2017.1)</p>
+</div>
+<h4 id="description_59">Description<a class="headerlink" href="#description_59" title="Permanent link">&para;</a></h4>
+<p>Resolves a conflict between the open team project and the version on the team projects server, using the specified resolution method.</p>
+<h4 id="parameters_21">Parameters<a class="headerlink" href="#parameters_21" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ResolveType</code></td>
+<td><code>ResolveType</code> enum</td>
+<td>The type of conflict resolution to use. One of:<br/>- <code>ResolveType.ACCEPT_THEIRS</code>: Take the shared version. The shared version replaces your version.<br/>- <code>ResolveType.ACCEPT_YOURS</code>: Keep your version of the project. The shared version is not taken.<br/>- <code>ResolveType.ACCEPT_THEIRS_AND_COPY</code>: Copy and rename your version, then take the shared version. The shared version replaces your original version.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_31">Returns<a class="headerlink" href="#returns_31" title="Permanent link">&para;</a></h4>
+<p>Boolean. <code>true</code> if the resolution of the specified type was successful, otherwise <code>false</code>.</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 6, 2024</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.action.edit", "content.action.view", "search.highlight", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.525ec568.min.js"></script>
+      
+    
+  </body>
+</html>

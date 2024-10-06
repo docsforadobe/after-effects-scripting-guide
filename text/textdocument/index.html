@@ -1,0 +1,5285 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ae-scripting.docsforadobe.dev/text/textdocument/">
+      
+      
+        <link rel="prev" href="../paragraphrange/">
+      
+      
+        <link rel="next" href="../../other/collection/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
+    
+    
+      
+        <title>TextDocument - After Effects Scripting Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../_static/extra.css">
+    
+      <link rel="stylesheet" href="../../_static/syntax-highlight.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#textdocument-object" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://docsforadobe.dev" title="After Effects Scripting Guide" class="md-header__button md-logo" aria-label="After Effects Scripting Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            After Effects Scripting Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              TextDocument
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/docsforadobe/after-effects-scripting-guide/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    after-effects-scripting-guide
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://docsforadobe.dev" title="After Effects Scripting Guide" class="md-nav__button md-logo" aria-label="After Effects Scripting Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    After Effects Scripting Guide
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/docsforadobe/after-effects-scripting-guide/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    after-effects-scripting-guide
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/javascript/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Javascript for After Effects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/changelog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    After Effects Scripting Changlog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/objectmodel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    After Effects Object Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/classhierarchy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    After Effects Class Hierarchy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    General
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            General
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/globals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Globals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/application/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Application
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/project/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/system/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Item
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Item
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../item/item/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Item object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../item/itemcollection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ItemCollection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../item/avitem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AVItem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../item/compitem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CompItem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../item/folderitem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FolderItem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../item/footageitem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FootageItem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Layer
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Layer
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/layer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Layer object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/layercollection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LayerCollection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/avlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AVLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/cameralayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CameraLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/lightlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LightLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/shapelayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ShapeLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/textlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TextLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/threedmodellayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ThreeDModelLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Property
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Property
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../property/property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Property object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../property/propertybase/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PropertyBase
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../property/propertygroup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PropertyGroup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../property/maskpropertygroup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MaskPropertyGroup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Render Queue
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Render Queue
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../renderqueue/renderqueue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RenderQueue object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../renderqueue/rqitemcollection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RQItemCollection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../renderqueue/renderqueueitem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RenderQueueItem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../renderqueue/omcollection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OMCollection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../renderqueue/outputmodule/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OutputModule
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sources
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Sources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/filesource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FileSource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/footagesource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FootageSource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/placeholdersource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PlaceholderSource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/solidsource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SolidSource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Text
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Text
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../characterrange/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CharacterRange
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../composedlinerange/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ComposedLineRange
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fontobject/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FontObject
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fontsobject/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FontsObject
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../paragraphrange/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ParagraphRange
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    TextDocument
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    TextDocument
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Page Contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Page Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+	<a href="#attributes" class="md-nav__link">
+		<span class="md-ellipsis">
+			Attributes
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+		<nav class="md-nav" aria-label="Attributes">
+			<ul class="md-nav__list">
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentallcaps" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.allCaps
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentapplyfill" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.applyFill
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentapplystroke" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.applyStroke
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentautohyphenate" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.autoHyphenate
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentautoleading" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.autoLeading
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentautokerntype" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.autoKernType
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentbaselinedirection" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.baselineDirection
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentbaselinelocs" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.baselineLocs
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentbaselineshift" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.baselineShift
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentboxautofitpolicy" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.boxAutoFitPolicy
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentboxfirstbaselinealignment" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.boxFirstBaselineAlignment
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentboxfirstbaselinealignmentminimum" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.boxFirstBaselineAlignmentMinimum
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentboxinsetspacing" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.boxInsetSpacing
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentboxoverflow" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.boxOverflow
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentboxtext" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.boxText
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentboxtextpos" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.boxTextPos
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentboxtextsize" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.boxTextSize
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentboxverticalalignment" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.boxVerticalAlignment
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentcomposedlinecount" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.composedLineCount
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentcomposerengine" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.composerEngine
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentdigitset" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.digitSet
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentdirection" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.direction
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentendindent" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.endIndent
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumenteverylinecomposer" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.everyLineComposer
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentfauxbold" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.fauxBold
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentfauxitalic" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.fauxItalic
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentfillcolor" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.fillColor
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentfirstlineindent" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.firstLineIndent
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentfont" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.font
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentfontbaselineoption" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.fontBaselineOption
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentfontcapsoption" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.fontCapsOption
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentfontfamily" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.fontFamily
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentfontlocation" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.fontLocation
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentfontobject" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.fontObject
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentfontsize" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.fontSize
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentfontstyle" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.fontStyle
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumenthangingroman" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.hangingRoman
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumenthorizontalscale" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.horizontalScale
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentjustification" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.justification
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentkerning" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.kerning
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentleading" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.leading
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentleadingtype" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.leadingType
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentligature" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.ligature
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentlinejointype" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.lineJoinType
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentlineorientation" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.lineOrientation
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentnobreak" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.noBreak
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentparagraphcount" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.paragraphCount
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentpointtext" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.pointText
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentsmallcaps" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.smallCaps
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentspaceafter" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.spaceAfter
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentspacebefore" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.spaceBefore
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentstartindent" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.startIndent
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentstrokecolor" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.strokeColor
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentstrokeoverfill" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.strokeOverFill
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentstrokewidth" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.strokeWidth
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentsubscript" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.subscript
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentsuperscript" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.superscript
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumenttext" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.text
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumenttracking" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.tracking
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumenttsume" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.tsume
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentverticalscale" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.verticalScale
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+			</ul>
+		</nav>
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#methods" class="md-nav__link">
+		<span class="md-ellipsis">
+			Methods
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+		<nav class="md-nav" aria-label="Methods">
+			<ul class="md-nav__list">
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentcharacterrange" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.characterRange()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentcomposedlinecharacterindexesat" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.composedLineCharacterIndexesAt()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentcomposedlinerange" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.composedLineRange()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentparagraphcharacterindexesat" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.paragraphCharacterIndexesAt()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentparagraphrange" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.paragraphRange()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentresetcharstyle" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.resetCharStyle()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentresetparagraphstyle" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.resetParagraphStyle()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+			</ul>
+		</nav>
+	
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Other
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Other
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/collection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Collection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/importoptions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ImportOptions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/keyframeease/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    KeyframeEase
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/markervalue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MarkerValue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/preferences/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Preferences
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/settings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Settings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/shape/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Shape
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/view/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    View
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/viewer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Viewer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/viewoptions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ViewOptions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Match Names
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Match Names
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_1" id="__nav_11_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Layers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_1">
+            <span class="md-nav__icon md-icon"></span>
+            Layers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/layer/avlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AV Layer Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/layer/3dlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3D Layer Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/layer/cameralayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Camera Layer Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/layer/lightlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Light Layer Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/layer/textlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Text Layer Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/layer/shapelayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Shape Layer Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/layer/layerstyles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Layer Styles Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_2" id="__nav_11_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Effects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_2">
+            <span class="md-nav__icon md-icon"></span>
+            Effects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/effects/firstparty/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    First-Party Effect Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Page Contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Page Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+	<a href="#attributes" class="md-nav__link">
+		<span class="md-ellipsis">
+			Attributes
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+		<nav class="md-nav" aria-label="Attributes">
+			<ul class="md-nav__list">
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentallcaps" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.allCaps
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentapplyfill" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.applyFill
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentapplystroke" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.applyStroke
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentautohyphenate" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.autoHyphenate
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentautoleading" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.autoLeading
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentautokerntype" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.autoKernType
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentbaselinedirection" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.baselineDirection
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentbaselinelocs" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.baselineLocs
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentbaselineshift" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.baselineShift
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentboxautofitpolicy" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.boxAutoFitPolicy
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentboxfirstbaselinealignment" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.boxFirstBaselineAlignment
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentboxfirstbaselinealignmentminimum" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.boxFirstBaselineAlignmentMinimum
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentboxinsetspacing" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.boxInsetSpacing
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentboxoverflow" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.boxOverflow
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentboxtext" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.boxText
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentboxtextpos" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.boxTextPos
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentboxtextsize" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.boxTextSize
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentboxverticalalignment" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.boxVerticalAlignment
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentcomposedlinecount" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.composedLineCount
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentcomposerengine" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.composerEngine
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentdigitset" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.digitSet
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentdirection" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.direction
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentendindent" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.endIndent
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumenteverylinecomposer" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.everyLineComposer
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentfauxbold" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.fauxBold
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentfauxitalic" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.fauxItalic
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentfillcolor" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.fillColor
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentfirstlineindent" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.firstLineIndent
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentfont" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.font
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentfontbaselineoption" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.fontBaselineOption
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentfontcapsoption" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.fontCapsOption
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentfontfamily" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.fontFamily
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentfontlocation" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.fontLocation
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentfontobject" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.fontObject
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentfontsize" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.fontSize
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentfontstyle" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.fontStyle
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumenthangingroman" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.hangingRoman
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumenthorizontalscale" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.horizontalScale
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentjustification" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.justification
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentkerning" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.kerning
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentleading" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.leading
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentleadingtype" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.leadingType
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentligature" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.ligature
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentlinejointype" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.lineJoinType
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentlineorientation" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.lineOrientation
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentnobreak" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.noBreak
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentparagraphcount" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.paragraphCount
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentpointtext" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.pointText
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentsmallcaps" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.smallCaps
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentspaceafter" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.spaceAfter
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentspacebefore" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.spaceBefore
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentstartindent" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.startIndent
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentstrokecolor" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.strokeColor
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentstrokeoverfill" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.strokeOverFill
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentstrokewidth" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.strokeWidth
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentsubscript" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.subscript
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentsuperscript" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.superscript
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumenttext" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.text
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumenttracking" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.tracking
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumenttsume" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.tsume
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentverticalscale" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.verticalScale
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+			</ul>
+		</nav>
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#methods" class="md-nav__link">
+		<span class="md-ellipsis">
+			Methods
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+		<nav class="md-nav" aria-label="Methods">
+			<ul class="md-nav__list">
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentcharacterrange" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.characterRange()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentcomposedlinecharacterindexesat" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.composedLineCharacterIndexesAt()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentcomposedlinerange" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.composedLineRange()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentparagraphcharacterindexesat" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.paragraphCharacterIndexesAt()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentparagraphrange" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.paragraphRange()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentresetcharstyle" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.resetCharStyle()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#textdocumentresetparagraphstyle" class="md-nav__link">
+		<span class="md-ellipsis">
+			TextDocument.resetParagraphStyle()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+			</ul>
+		</nav>
+	
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/docsforadobe/after-effects-scripting-guide/edit/master/docs/text/textdocument.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/docsforadobe/after-effects-scripting-guide/raw/master/docs/text/textdocument.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<p><a href="/">Home</a><span class="breadcrumb md-nav__icon md-icon"></span>Text<span class="breadcrumb md-nav__icon md-icon"></span>TextDocument</p>
+<h1 id="textdocument-object">TextDocument object<a class="headerlink" href="#textdocument-object" title="Permanent link">&para;</a></h1>
+<p><code>new TextDocument(docText)</code>
+<br/>
+<code>app.project.item(index).layer(index).property("Source Text").value</code>
+<br/></p>
+<h4 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h4>
+<p>The TextDocument object stores a value for a TextLayer's Source Text property. Create it with the constructor, passing the string to be encapsulated.</p>
+<h4 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h4>
+<p>This sets a value of some source text and displays an alert showing the new value.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">myTextDocument</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">TextDocument</span><span class="p">(</span><span class="s2">&quot;HappyCake&quot;</span><span class="p">);</span>
+<span class="nx">myTextLayer</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="s2">&quot;Source Text&quot;</span><span class="p">).</span><span class="nx">setValue</span><span class="p">(</span><span class="nx">myTextDocument</span><span class="p">);</span>
+<span class="nx">alert</span><span class="p">(</span><span class="nx">myTextLayer</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="s2">&quot;Source Text&quot;</span><span class="p">).</span><span class="nx">value</span><span class="p">);</span>
+</code></pre></div>
+<p>This sets keyframe values for text that show different words over time</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">textProp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myTextLayer</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="s2">&quot;Source Text&quot;</span><span class="p">);</span>
+<span class="nx">textProp</span><span class="p">.</span><span class="nx">setValueAtTime</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">newTextDocument</span><span class="p">(</span><span class="s2">&quot;Happy&quot;</span><span class="p">));</span>
+<span class="nx">textProp</span><span class="p">.</span><span class="nx">setValueAtTime</span><span class="p">(</span><span class="mf">.33</span><span class="p">,</span><span class="w"> </span><span class="nx">newTextDocument</span><span class="p">(</span><span class="s2">&quot;cake&quot;</span><span class="p">));</span>
+<span class="nx">textProp</span><span class="p">.</span><span class="nx">setValueAtTime</span><span class="p">(</span><span class="mf">.66</span><span class="p">,</span><span class="w"> </span><span class="nx">newTextDocument</span><span class="p">(</span><span class="s2">&quot;is&quot;</span><span class="p">));</span>
+<span class="nx">textProp</span><span class="p">.</span><span class="nx">setValueAtTime</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">newTextDocument</span><span class="p">(</span><span class="s2">&quot;yummy!&quot;</span><span class="p">));</span>
+</code></pre></div>
+<p>This sets various character and paragraph settings for some text</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">textProp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myTextLayer</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="s2">&quot;Source Text&quot;</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">textDocument</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">textProp</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
+<span class="nx">myString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Happy holidays!&quot;</span><span class="p">;</span>
+<span class="nx">textDocument</span><span class="p">.</span><span class="nx">resetCharStyle</span><span class="p">();</span>
+<span class="nx">textDocument</span><span class="p">.</span><span class="nx">fontSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">60</span><span class="p">;</span>
+<span class="nx">textDocument</span><span class="p">.</span><span class="nx">fillColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">];</span>
+<span class="nx">textDocument</span><span class="p">.</span><span class="nx">strokeColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">];</span>
+<span class="nx">textDocument</span><span class="p">.</span><span class="nx">strokeWidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
+<span class="nx">textDocument</span><span class="p">.</span><span class="nx">font</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Times New Roman PSMT&quot;</span><span class="p">;</span>
+<span class="nx">textDocument</span><span class="p">.</span><span class="nx">strokeOverFill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="nx">textDocument</span><span class="p">.</span><span class="nx">applyStroke</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="nx">textDocument</span><span class="p">.</span><span class="nx">applyFill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="nx">textDocument</span><span class="p">.</span><span class="nx">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myString</span><span class="p">;</span>
+<span class="nx">textDocument</span><span class="p">.</span><span class="nx">justification</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ParagraphJustification</span><span class="p">.</span><span class="nx">CENTER_JUSTIFY</span><span class="p">;</span>
+<span class="nx">textDocument</span><span class="p">.</span><span class="nx">tracking</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">50</span><span class="p">;</span>
+<span class="nx">textProp</span><span class="p">.</span><span class="nx">setValue</span><span class="p">(</span><span class="nx">textDocument</span><span class="p">);</span>
+</code></pre></div>
+<hr />
+<h2 id="attributes">Attributes<a class="headerlink" href="#attributes" title="Permanent link">&para;</a></h2>
+<h3 id="textdocumentallcaps">TextDocument.allCaps<a class="headerlink" href="#textdocumentallcaps" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.allCaps</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 13.2 (CC 2014.2)</p>
+</div>
+<h4 id="description_1">Description<a class="headerlink" href="#description_1" title="Permanent link">&para;</a></h4>
+<p><code>true</code> if a Text layer has All Caps enabled; otherwise <code>false</code>. To set this value, use <a href="#textdocumentfontcapsoption">fontCapsOption</a> added in After Effects 24.0.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value only reflects the first character in the Text layer.</p>
+</div>
+<h4 id="type">Type<a class="headerlink" href="#type" title="Permanent link">&para;</a></h4>
+<p>Boolean; read-only.</p>
+<hr />
+<h3 id="textdocumentapplyfill">TextDocument.applyFill<a class="headerlink" href="#textdocumentapplyfill" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.applyFill</code></p>
+<h4 id="description_2">Description<a class="headerlink" href="#description_2" title="Permanent link">&para;</a></h4>
+<p>When <code>true</code>, the Text layer shows a fill. Access the <a href="#textdocumentfillcolor">fillColor</a> attribute for the actual color. When <code>false</code>, only a stroke is shown.</p>
+<h4 id="type_1">Type<a class="headerlink" href="#type_1" title="Permanent link">&para;</a></h4>
+<p>Boolean; read/write.</p>
+<hr />
+<h3 id="textdocumentapplystroke">TextDocument.applyStroke<a class="headerlink" href="#textdocumentapplystroke" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.applyStroke</code></p>
+<h4 id="description_3">Description<a class="headerlink" href="#description_3" title="Permanent link">&para;</a></h4>
+<p>When <code>true</code>, the Text layer shows a stroke. Access the <a href="#textdocumentstrokecolor">strokeColor</a> attribute for the actual color and <a href="#textdocumentstrokewidth">strokeWidth</a> for its thickness. When <code>false</code>, only a fill is shown.</p>
+<h4 id="type_2">Type<a class="headerlink" href="#type_2" title="Permanent link">&para;</a></h4>
+<p>Boolean; read/write.</p>
+<hr />
+<h3 id="textdocumentautohyphenate">TextDocument.autoHyphenate<a class="headerlink" href="#textdocumentautohyphenate" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.autoHyphenate</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 24.0</p>
+</div>
+<h4 id="description_4">Description<a class="headerlink" href="#description_4" title="Permanent link">&para;</a></h4>
+<p>The Text layer's auto hyphenate paragraph option.</p>
+<p>If this attribute has a mixed value, it will be read as <code>undefined</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value reflects all paragraphs in the Text layer.</p>
+</div>
+<p>If you change this value, it will set all paragraphs in the Text layer to the specified setting.</p>
+<h4 id="type_3">Type<a class="headerlink" href="#type_3" title="Permanent link">&para;</a></h4>
+<p>Boolean; read/write.</p>
+<hr />
+<h3 id="textdocumentautoleading">TextDocument.autoLeading<a class="headerlink" href="#textdocumentautoleading" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.autoLeading</code></p>
+<h4 id="description_5">Description<a class="headerlink" href="#description_5" title="Permanent link">&para;</a></h4>
+<p>The Text layer's auto leading character option.</p>
+<p>If this attribute has a mixed value, it will be read as <code>undefined</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value reflects all paragraphs in the Text layer.</p>
+</div>
+<p>If you change this value, it will set all paragraphs in the Text layer to the specified setting.</p>
+<h4 id="type_4">Type<a class="headerlink" href="#type_4" title="Permanent link">&para;</a></h4>
+<p>Boolean; read/write.</p>
+<hr />
+<h3 id="textdocumentautokerntype">TextDocument.autoKernType<a class="headerlink" href="#textdocumentautokerntype" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.autoKernType</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 24.0</p>
+</div>
+<h4 id="description_6">Description<a class="headerlink" href="#description_6" title="Permanent link">&para;</a></h4>
+<p>The Text layer's auto kern type option.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value only reflects the first character in the Text layer.</p>
+</div>
+<p>If you change this value, it will set all characters in the Text layer to the specified setting.</p>
+<h4 id="type_5">Type<a class="headerlink" href="#type_5" title="Permanent link">&para;</a></h4>
+<p>An <code>AutoKernType</code> enumerated value; read/write. One of:</p>
+<ul>
+<li><code>AutoKernType.NO_AUTO_KERN</code></li>
+<li><code>AutoKernType.METRIC_KERN</code></li>
+<li><code>AutoKernType.OPTICAL_KERN</code></li>
+</ul>
+<hr />
+<h3 id="textdocumentbaselinedirection">TextDocument.baselineDirection<a class="headerlink" href="#textdocumentbaselinedirection" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.baselineDirection</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 24.0</p>
+</div>
+<h4 id="description_7">Description<a class="headerlink" href="#description_7" title="Permanent link">&para;</a></h4>
+<p>The Text layer's baseline direction option. This is significant for Japanese language in vertical texts. "BASELINE_VERTICAL_CROSS_STREAM" is also know as Tate-Chu-Yoko.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value only reflects the first character in the Text layer.</p>
+</div>
+<p>If you change this value, it will set all characters in the Text layer to the specified setting.</p>
+<h4 id="type_6">Type<a class="headerlink" href="#type_6" title="Permanent link">&para;</a></h4>
+<p>A <code>BaselineDirection</code> enumerated value; read/write. One of:</p>
+<ul>
+<li><code>BaselineDirection.BASELINE_WITH_STREAM</code></li>
+<li><code>BaselineDirection.BASELINE_VERTICAL_ROTATED</code></li>
+<li><code>BaselineDirection.BASELINE_VERTICAL_CROSS_STREAM</code></li>
+</ul>
+<hr />
+<h3 id="textdocumentbaselinelocs">TextDocument.baselineLocs<a class="headerlink" href="#textdocumentbaselinelocs" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.baselineLocs</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 13.6 (CC 2015)</p>
+</div>
+<h4 id="description_8">Description<a class="headerlink" href="#description_8" title="Permanent link">&para;</a></h4>
+<p>The baseline (x,y) locations for a Text layer. Line wraps in a paragraph text box are treated as multiple lines.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If a line has no characters, the x and y values for start and end will be the maximum float value (<code>3.402823466e+38F</code>).</p>
+</div>
+<h4 id="type_7">Type<a class="headerlink" href="#type_7" title="Permanent link">&para;</a></h4>
+<p>Array of floating-point values in the form of</p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span>
+<span class="w">  </span><span class="nx">line0</span><span class="p">.</span><span class="nx">start_x</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">line0</span><span class="p">.</span><span class="nx">start_y</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">line0</span><span class="p">.</span><span class="nx">end_x</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">line0</span><span class="p">.</span><span class="nx">end_y</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">line1</span><span class="p">.</span><span class="nx">start_x</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">line1</span><span class="p">.</span><span class="nx">start_y</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">line1</span><span class="p">.</span><span class="nx">end_x</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">line1</span><span class="p">.</span><span class="nx">end_y</span><span class="p">,</span>
+<span class="w">  </span><span class="p">...</span>
+<span class="w">  </span><span class="nx">lineN</span><span class="o">-</span><span class="mf">1.</span><span class="nx">start_x</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">lineN</span><span class="o">-</span><span class="mf">1.</span><span class="nx">start_y</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">lineN</span><span class="o">-</span><span class="mf">1.</span><span class="nx">end_x</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">lineN</span><span class="o">-</span><span class="mf">1.</span><span class="nx">end_y</span>
+<span class="p">]</span>
+</code></pre></div>
+<hr />
+<h3 id="textdocumentbaselineshift">TextDocument.baselineShift<a class="headerlink" href="#textdocumentbaselineshift" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.baselineShift</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 13.2 (CC 2014.2)</p>
+</div>
+<h4 id="description_9">Description<a class="headerlink" href="#description_9" title="Permanent link">&para;</a></h4>
+<p>This Text layer's baseline shift in pixels.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value only reflects the first character in the Text layer.</p>
+</div>
+<p>If you change this value, it will set all characters in the Text layer to the specified setting.</p>
+<h4 id="type_8">Type<a class="headerlink" href="#type_8" title="Permanent link">&para;</a></h4>
+<p>Floating-point value; read-write.</p>
+<hr />
+<h3 id="textdocumentboxautofitpolicy">TextDocument.boxAutoFitPolicy<a class="headerlink" href="#textdocumentboxautofitpolicy" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.boxAutoFitPolicy</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 24.6</p>
+</div>
+<h4 id="description_10">Description<a class="headerlink" href="#description_10" title="Permanent link">&para;</a></h4>
+<p>Enables the automated change of the box height to fit the text content in the box.
+The box only grows down.</p>
+<p>Defaults to <code>BoxAutoFitPolicy.NONE</code>.</p>
+<p>Will be disabled if <a href="#textdocumentboxverticalalignment">TextDocument.boxVerticalAlignment</a> is anything other than <code>BoxVerticalAlignment.TOP</code>.</p>
+<h4 id="type_9">Type<a class="headerlink" href="#type_9" title="Permanent link">&para;</a></h4>
+<p>A <code>BoxAutoFitPolicy</code> enumerated value; read-write. One of:</p>
+<ul>
+<li><code>BoxAutoFitPolicy.NONE</code></li>
+<li><code>BoxAutoFitPolicy.HEIGHT_CURSOR</code></li>
+<li><code>BoxAutoFitPolicy.HEIGHT_PRECISE_BOUNDS</code></li>
+<li><code>BoxAutoFitPolicy.HEIGHT_BASELINE</code></li>
+</ul>
+<hr />
+<h3 id="textdocumentboxfirstbaselinealignment">TextDocument.boxFirstBaselineAlignment<a class="headerlink" href="#textdocumentboxfirstbaselinealignment" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.boxFirstBaselineAlignment</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 24.6</p>
+</div>
+<h4 id="description_11">Description<a class="headerlink" href="#description_11" title="Permanent link">&para;</a></h4>
+<p>Controls the position of the first line of composed text relative to the top of the box.</p>
+<p>Disabled if <a href="#textdocumentboxfirstbaselinealignmentminimum">TextDocument.boxFirstBaselineAlignmentMinimum</a> is anything other than zero.</p>
+<p>Defaults to <code>BoxFirstBaselineAlignment.ASCENT</code>.</p>
+<h4 id="type_10">Type<a class="headerlink" href="#type_10" title="Permanent link">&para;</a></h4>
+<p>A <code>BoxFirstBaselineAlignment</code> enumerated value; read-write. One of:</p>
+<ul>
+<li><code>BoxFirstBaselineAlignment.ASCENT</code></li>
+<li><code>BoxFirstBaselineAlignment.CAP_HEIGHT</code></li>
+<li><code>BoxFirstBaselineAlignment.EM_BOX</code></li>
+<li><code>BoxFirstBaselineAlignment.LEADING</code></li>
+<li><code>BoxFirstBaselineAlignment.LEGACY_METRIC</code></li>
+<li><code>BoxFirstBaselineAlignment.MINIMUM_VALUE_ASIAN</code></li>
+<li><code>BoxFirstBaselineAlignment.MINIMUM_VALUE_ROMAN</code></li>
+<li><code>BoxFirstBaselineAlignment.TYPO_ASCENT</code></li>
+<li><code>BoxFirstBaselineAlignment.X_HEIGHT</code></li>
+</ul>
+<hr />
+<h3 id="textdocumentboxfirstbaselinealignmentminimum">TextDocument.boxFirstBaselineAlignmentMinimum<a class="headerlink" href="#textdocumentboxfirstbaselinealignmentminimum" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.boxFirstBaselineAlignmentMinimum</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 24.6</p>
+</div>
+<h4 id="description_12">Description<a class="headerlink" href="#description_12" title="Permanent link">&para;</a></h4>
+<p>Manually controls the position of the first line of composed text relative to the top of the box.</p>
+<p>A value set here other than zero will override the effect of the <a href="#textdocumentboxfirstbaselinealignment">TextDocument.boxFirstBaselineAlignment</a> value.</p>
+<p>Defaults to zero.</p>
+<h4 id="type_11">Type<a class="headerlink" href="#type_11" title="Permanent link">&para;</a></h4>
+<p>Floating-point value; read/write.</p>
+<hr />
+<h3 id="textdocumentboxinsetspacing">TextDocument.boxInsetSpacing<a class="headerlink" href="#textdocumentboxinsetspacing" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.boxInsetSpacing</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 24.6</p>
+</div>
+<h4 id="description_13">Description<a class="headerlink" href="#description_13" title="Permanent link">&para;</a></h4>
+<p>Controls the inner space between the box bounds and where the composable text box begins. The same value is applied to all four sides of the box.</p>
+<p>Defaults to zero.</p>
+<h4 id="type_12">Type<a class="headerlink" href="#type_12" title="Permanent link">&para;</a></h4>
+<p>Floating-point value; read/write.</p>
+<hr />
+<h3 id="textdocumentboxoverflow">TextDocument.boxOverflow<a class="headerlink" href="#textdocumentboxoverflow" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.boxOverflow</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 24.6</p>
+</div>
+<h4 id="description_14">Description<a class="headerlink" href="#description_14" title="Permanent link">&para;</a></h4>
+<p>Returns <code>true</code> if some part of the text did not compose into the box.</p>
+<h4 id="type_13">Type<a class="headerlink" href="#type_13" title="Permanent link">&para;</a></h4>
+<p>Boolean; read-only.</p>
+<hr />
+<h3 id="textdocumentboxtext">TextDocument.boxText<a class="headerlink" href="#textdocumentboxtext" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.boxText</code></p>
+<h4 id="description_15">Description<a class="headerlink" href="#description_15" title="Permanent link">&para;</a></h4>
+<p><code>true</code> if a Text layer is a layer of paragraph (bounded) text; otherwise <code>false</code>.</p>
+<h4 id="type_14">Type<a class="headerlink" href="#type_14" title="Permanent link">&para;</a></h4>
+<p>Boolean; read-only.</p>
+<hr />
+<h3 id="textdocumentboxtextpos">TextDocument.boxTextPos<a class="headerlink" href="#textdocumentboxtextpos" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.boxTextPos</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 13.2 (CC 2014.2)</p>
+</div>
+<p>As of After Effects 14 (CC2017), it seems this is also writeable.</p>
+<h4 id="description_16">Description<a class="headerlink" href="#description_16" title="Permanent link">&para;</a></h4>
+<p>The layer coordinates from a paragraph (box) Text layer's anchor point as a [width, height] array of pixel dimensions.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Throws an exception if <a href="#textdocumentboxtext">boxText</a> does not return <code>true</code> for the Text layer.</p>
+</div>
+<h4 id="type_15">Type<a class="headerlink" href="#type_15" title="Permanent link">&para;</a></h4>
+<p>Array of ([X,Y]) position coordinates; read/write.</p>
+<h4 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1">// For a paragraph Text layer returns [x, y] position from layer anchor point in layer coordinates.</span>
+<span class="c1">// e.g. approximately [0, -25] with default character panel settings.</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">boxTextLayerPos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myTextLayer</span><span class="p">.</span><span class="nx">sourceText</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">boxTextPos</span><span class="p">;</span>
+</code></pre></div>
+<hr />
+<h3 id="textdocumentboxtextsize">TextDocument.boxTextSize<a class="headerlink" href="#textdocumentboxtextsize" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.boxTextSize</code></p>
+<h4 id="description_17">Description<a class="headerlink" href="#description_17" title="Permanent link">&para;</a></h4>
+<p>The size of a paragraph (box) Text layer as a [width, height] array of pixel dimensions.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Throws an exception if <a href="#textdocumentboxtext">boxText</a> does not return <code>true</code> for the Text layer.</p>
+</div>
+<h4 id="type_16">Type<a class="headerlink" href="#type_16" title="Permanent link">&para;</a></h4>
+<p>Array of two integers (minimum value of 1); read/write.</p>
+<hr />
+<h3 id="textdocumentboxverticalalignment">TextDocument.boxVerticalAlignment<a class="headerlink" href="#textdocumentboxverticalalignment" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.boxVerticalAlignment</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 24.6</p>
+</div>
+<h4 id="description_18">Description<a class="headerlink" href="#description_18" title="Permanent link">&para;</a></h4>
+<p>Enables the automated vertical alignment of the composed text in the box.</p>
+<p>Defaults to <code>BoxVerticalAlignment.TOP</code></p>
+<h4 id="type_17">Type<a class="headerlink" href="#type_17" title="Permanent link">&para;</a></h4>
+<p>A <code>BoxVerticalAlignment</code> enumerated value; read-write. One of:</p>
+<ul>
+<li><code>BoxVerticalAlignment.TOP</code></li>
+<li><code>BoxVerticalAlignment.CENTER</code></li>
+<li><code>BoxVerticalAlignment.BOTTOM</code></li>
+<li><code>BoxVerticalAlignment.JUSTIFY</code></li>
+</ul>
+<hr />
+<h3 id="textdocumentcomposedlinecount">TextDocument.composedLineCount<a class="headerlink" href="#textdocumentcomposedlinecount" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.composedLineCount</code></p>
+<h4 id="description_19">Description<a class="headerlink" href="#description_19" title="Permanent link">&para;</a></h4>
+<p>Returns the number of composed lines in the Text layer, may be zero if all text is overset.</p>
+<p>The <a href="#textdocument-object">TextDocument object</a> instance is initialized from the composed state and subsequent changes to the <a href="#textdocument-object">TextDocument object</a> instance does not cause recomposition.</p>
+<p>Even if you remove all the text from the <a href="#textdocument-object">TextDocument object</a> instance, the value returned here remains unchanged.</p>
+<h4 id="type_18">Type<a class="headerlink" href="#type_18" title="Permanent link">&para;</a></h4>
+<p>Integer; read-only.</p>
+<hr />
+<h3 id="textdocumentcomposerengine">TextDocument.composerEngine<a class="headerlink" href="#textdocumentcomposerengine" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.composerEngine</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 24.0</p>
+</div>
+<h4 id="description_20">Description<a class="headerlink" href="#description_20" title="Permanent link">&para;</a></h4>
+<p>The Text layer's paragraph composer engine option. By default new Text layers will use the <code>ComposerEngine.UNIVERSAL_TYPE_ENGINE</code>; the other enum value will only be encountered in projects created before the Universal Type Engine engine (formerly known as the South Asian and Middle Eastern engine) became the default in <a href="https://helpx.adobe.com/after-effects/using/whats-new/2022-1.html">After Effects 22.1.1</a>.</p>
+<p>If this attribute has a mixed value, it will be read as <code>undefined</code>.</p>
+<p>This attrribute is read-write, but an exception will be thrown if any enum value other than <code>ComposerEngine.UNIVERSAL_TYPE_ENGINE</code> is written.</p>
+<p>In effect, you can change an older document from <code>ComposerEngine.LATIN_CJK_ENGINE</code> to <code>ComposerEngine.UNIVERSAL_TYPE_ENGINE</code>, but not the reverse.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value reflects all paragraphs in the Text layer.</p>
+</div>
+<p>If you change this value, it will set all paragraphs in the Text layer to the specified setting.</p>
+<h4 id="type_19">Type<a class="headerlink" href="#type_19" title="Permanent link">&para;</a></h4>
+<p>A <code>ComposerEngine</code> enumerated value; read-write. One of:</p>
+<ul>
+<li><code>ComposerEngine.LATIN_CJK_ENGINE</code></li>
+<li><code>ComposerEngine.UNIVERSAL_TYPE_ENGINE</code></li>
+</ul>
+<hr />
+<h3 id="textdocumentdigitset">TextDocument.digitSet<a class="headerlink" href="#textdocumentdigitset" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.digitSet</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 24.0</p>
+</div>
+<h4 id="description_21">Description<a class="headerlink" href="#description_21" title="Permanent link">&para;</a></h4>
+<p>The Text layer's digit set option.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value only reflects the first character in the Text layer.</p>
+</div>
+<p>If you change this value, it will set all characters in the Text layer to the specified setting.</p>
+<h4 id="type_20">Type<a class="headerlink" href="#type_20" title="Permanent link">&para;</a></h4>
+<p>A <code>DigitSet</code> enumerated value; read/write. One of:</p>
+<ul>
+<li><code>DigitSet.DEFAULT_DIGITS</code></li>
+<li><code>DigitSet.ARABIC_DIGITS</code></li>
+<li><code>DigitSet.HINDI_DIGITS</code></li>
+<li><code>DigitSet.FARSI_DIGITS</code></li>
+<li><code>DigitSet.ARABIC_DIGITS_RTL</code></li>
+</ul>
+<hr />
+<h3 id="textdocumentdirection">TextDocument.direction<a class="headerlink" href="#textdocumentdirection" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.direction</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 24.0</p>
+</div>
+<h4 id="description_22">Description<a class="headerlink" href="#description_22" title="Permanent link">&para;</a></h4>
+<p>The Text layer's paragraph direction option.</p>
+<p>If this attribute has a mixed value, it will be read as <code>undefined</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value reflects all paragraphs in the Text layer.</p>
+</div>
+<p>If you change this value, it will set all paragraphs in the Text layer to the specified setting.</p>
+<h4 id="type_21">Type<a class="headerlink" href="#type_21" title="Permanent link">&para;</a></h4>
+<p>A <code>ParagraphDirection</code> enumerated value; read/write. One of:</p>
+<ul>
+<li><code>ParagraphDirection.DIRECTION_LEFT_TO_RIGHT</code></li>
+<li><code>ParagraphDirection.DIRECTION_RIGHT_TO_LEFT</code></li>
+</ul>
+<hr />
+<h3 id="textdocumentendindent">TextDocument.endIndent<a class="headerlink" href="#textdocumentendindent" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.endIndent</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 24.0</p>
+</div>
+<h4 id="description_23">Description<a class="headerlink" href="#description_23" title="Permanent link">&para;</a></h4>
+<p>The Text layer's paragraph end indent option.</p>
+<p>If this attribute has a mixed value, it will be read as <code>undefined</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value reflects all paragraphs in the Text layer.</p>
+</div>
+<p>If you change this value, it will set all paragraphs in the Text layer to the specified setting.</p>
+<h4 id="type_22">Type<a class="headerlink" href="#type_22" title="Permanent link">&para;</a></h4>
+<p>Floating-point value; read/write.</p>
+<hr />
+<h3 id="textdocumenteverylinecomposer">TextDocument.everyLineComposer<a class="headerlink" href="#textdocumenteverylinecomposer" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.everyLineComposer</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 24.0</p>
+</div>
+<h4 id="description_24">Description<a class="headerlink" href="#description_24" title="Permanent link">&para;</a></h4>
+<p>The Text layer's Every-Line Composer paragraph option. If set to <code>false</code>, the TextDocument will use the Single-Line Composer.</p>
+<p>If this attribute has a mixed value, it will be read as <code>undefined</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value reflects all paragraphs in the Text layer.</p>
+</div>
+<p>If you change this value, it will set all paragraphs in the Text layer to the specified setting.</p>
+<h4 id="type_23">Type<a class="headerlink" href="#type_23" title="Permanent link">&para;</a></h4>
+<p>Boolean; read/write.</p>
+<hr />
+<h3 id="textdocumentfauxbold">TextDocument.fauxBold<a class="headerlink" href="#textdocumentfauxbold" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.fauxBold</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The read functionality was added in After Effects 13.2 (CC 2014.2).</p>
+</div>
+<p><br/>
+The write functionality was added in After Effects 24.0
+<br/></p>
+<h4 id="description_25">Description<a class="headerlink" href="#description_25" title="Permanent link">&para;</a></h4>
+<p><code>true</code> if a Text layer has faux bold enabled; otherwise <code>false</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value only reflects the first character in the Text layer.</p>
+</div>
+<p>If you change this value, it will set all characters in the Text layer to the specified setting.</p>
+<h4 id="type_24">Type<a class="headerlink" href="#type_24" title="Permanent link">&para;</a></h4>
+<p>Boolean; read/write.</p>
+<h4 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">isFauxBold</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myTextLayer</span><span class="p">.</span><span class="nx">sourceText</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">fauxBold</span><span class="p">;</span>
+</code></pre></div>
+<hr />
+<h3 id="textdocumentfauxitalic">TextDocument.fauxItalic<a class="headerlink" href="#textdocumentfauxitalic" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.fauxItalic</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The read functionality was added in After Effects 13.2 (CC 2014.2).</p>
+</div>
+<p><br/>
+The write functionality was added in After Effects 24.0
+<br/></p>
+<h4 id="description_26">Description<a class="headerlink" href="#description_26" title="Permanent link">&para;</a></h4>
+<p><code>true</code> if a Text layer has faux italic enabled; otherwise <code>false</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value only reflects the first character in the Text layer.</p>
+</div>
+<p>If you change this value, it will set all characters in the Text layer to the specified setting.</p>
+<h4 id="type_25">Type<a class="headerlink" href="#type_25" title="Permanent link">&para;</a></h4>
+<p>Boolean; read/write.</p>
+<hr />
+<h3 id="textdocumentfillcolor">TextDocument.fillColor<a class="headerlink" href="#textdocumentfillcolor" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.fillColor</code></p>
+<h4 id="description_27">Description<a class="headerlink" href="#description_27" title="Permanent link">&para;</a></h4>
+<p>The Text layer's fill color, as an array of <code>[r, g, b]</code> floating-point values. For example, in an 8-bpc project, a red value of 255 would be 1.0, and in a 32-bpc project, an overbright blue value can be something like 3.2.</p>
+<p>Throws an exception on read if <a href="#textdocumentapplyfill">applyFill</a> is not <code>true</code>.</p>
+<p>Setting this value will also set <a href="#textdocumentapplyfill">applyFill</a> to <code>true</code> across the affected characters.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value only reflects the first character in the Text layer.</p>
+</div>
+<p>If you change this value, it will set all characters in the Text layer to the specified setting.</p>
+<h4 id="type_26">Type<a class="headerlink" href="#type_26" title="Permanent link">&para;</a></h4>
+<p>Array <code>[r, g, b]</code> of floating-point values; read/write.</p>
+<hr />
+<h3 id="textdocumentfirstlineindent">TextDocument.firstLineIndent<a class="headerlink" href="#textdocumentfirstlineindent" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.firstLineIndent</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 24.0</p>
+</div>
+<h4 id="description_28">Description<a class="headerlink" href="#description_28" title="Permanent link">&para;</a></h4>
+<p>The Text layer's paragraph first line indent option.</p>
+<p>If this attribute has a mixed value, it will be read as <code>undefined</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value reflects all paragraphs in the Text layer.</p>
+</div>
+<p>If you change this value, it will set all paragraphs in the Text layer to the specified setting.</p>
+<h4 id="type_27">Type<a class="headerlink" href="#type_27" title="Permanent link">&para;</a></h4>
+<p>Floating-point value; read/write.</p>
+<hr />
+<h3 id="textdocumentfont">TextDocument.font<a class="headerlink" href="#textdocumentfont" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.font</code></p>
+<h4 id="description_29">Description<a class="headerlink" href="#description_29" title="Permanent link">&para;</a></h4>
+<p>The Text layer's font specified by its PostScript name.</p>
+<p>On write, there are very few resrictions on what can be supplied - if the underlying font management system does not have a matching <a href="../fontobject/">Font object</a> instance matching the supplied PostScript name a substitute instance will be created.
+The Font instance returned in the case of duplicate PostScript names will be the 0th element of the array returned from <a href="../fontsobject/#fontsobjectgetfontsbypostscriptname">FontsObject.getFontsByPostScriptName()</a>.</p>
+<p>You should use the <a href="../fontobject/">Font object</a> attribute for precise control.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value only reflects the first character in the Text layer.</p>
+</div>
+<p>If you change this value, it will set all characters in the Text layer to the specified setting.</p>
+<h4 id="type_28">Type<a class="headerlink" href="#type_28" title="Permanent link">&para;</a></h4>
+<p>String; read/write.</p>
+<hr />
+<h3 id="textdocumentfontbaselineoption">TextDocument.fontBaselineOption<a class="headerlink" href="#textdocumentfontbaselineoption" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.fontBaselineOption</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 24.0</p>
+</div>
+<h4 id="description_30">Description<a class="headerlink" href="#description_30" title="Permanent link">&para;</a></h4>
+<p>The Text layer's font baseline option. This is for setting a textDocument to superscript or subscript.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value only reflects the first character in the Text layer.</p>
+</div>
+<p>If you change this value, it will set all characters in the Text layer to the specified setting.</p>
+<h4 id="type_29">Type<a class="headerlink" href="#type_29" title="Permanent link">&para;</a></h4>
+<p>A <code>FontBaselineOption</code> enumerated value; read/write. One of:</p>
+<ul>
+<li><code>FontBaselineOption.FONT_NORMAL_BASELINE</code></li>
+<li><code>FontBaselineOption.FONT_FAUXED_SUPERSCRIPT</code></li>
+<li><code>FontBaselineOption.FONT_FAUXED_SUBSCRIPT</code></li>
+</ul>
+<hr />
+<h3 id="textdocumentfontcapsoption">TextDocument.fontCapsOption<a class="headerlink" href="#textdocumentfontcapsoption" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.fontCapsOption</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 24.0</p>
+</div>
+<h4 id="description_31">Description<a class="headerlink" href="#description_31" title="Permanent link">&para;</a></h4>
+<p>The Text layer's font caps option.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value only reflects the first character in the Text layer.</p>
+</div>
+<p>If you change this value, it will set all characters in the Text layer to the specified setting.</p>
+<h4 id="type_30">Type<a class="headerlink" href="#type_30" title="Permanent link">&para;</a></h4>
+<p>A <code>FontCapsOption</code> enumerated value; read/write. One of:</p>
+<ul>
+<li><code>FontCapsOption.FONT_NORMAL_CAPS</code></li>
+<li><code>FontCapsOption.FONT_SMALL_CAPS</code></li>
+<li><code>FontCapsOption.FONT_ALL_CAPS</code></li>
+<li><code>FontCapsOption.FONT_ALL_SMALL_CAPS</code></li>
+</ul>
+<hr />
+<h3 id="textdocumentfontfamily">TextDocument.fontFamily<a class="headerlink" href="#textdocumentfontfamily" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.fontFamily</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 13.1 (CC 2014.1)</p>
+</div>
+<h4 id="description_32">Description<a class="headerlink" href="#description_32" title="Permanent link">&para;</a></h4>
+<p>String with with the name of the font family.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value only reflects the first character in the Text layer.</p>
+</div>
+<h4 id="type_31">Type<a class="headerlink" href="#type_31" title="Permanent link">&para;</a></h4>
+<p>String; read-only.</p>
+<hr />
+<h3 id="textdocumentfontlocation">TextDocument.fontLocation<a class="headerlink" href="#textdocumentfontlocation" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.fontLocation</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 13.1 (CC 2014.1)</p>
+</div>
+<h4 id="description_33">Description<a class="headerlink" href="#description_33" title="Permanent link">&para;</a></h4>
+<p>Path of font file, providing its location on disk.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Not guaranteed to be returned for all font types; return value may be empty string for some kinds of fonts.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value only reflects the first character in the Text layer.</p>
+</div>
+<h4 id="type_32">Type<a class="headerlink" href="#type_32" title="Permanent link">&para;</a></h4>
+<p>String; read-only.</p>
+<hr />
+<h3 id="textdocumentfontobject">TextDocument.fontObject<a class="headerlink" href="#textdocumentfontobject" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.fontObject</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 24.0</p>
+</div>
+<h4 id="description_34">Description<a class="headerlink" href="#description_34" title="Permanent link">&para;</a></h4>
+<p>The Text layer's <a href="../fontobject/">Font object</a> specified by its PostScript name.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value only reflects the first character in the Text layer.</p>
+</div>
+<h4 id="type_33">Type<a class="headerlink" href="#type_33" title="Permanent link">&para;</a></h4>
+<p><a href="../fontobject/">Font object</a>; read/write.</p>
+<hr />
+<h3 id="textdocumentfontsize">TextDocument.fontSize<a class="headerlink" href="#textdocumentfontsize" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.fontSize</code></p>
+<h4 id="description_35">Description<a class="headerlink" href="#description_35" title="Permanent link">&para;</a></h4>
+<p>The Text layer's font size in pixels.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value only reflects the first character in the Text layer.</p>
+</div>
+<p>If you change this value, it will set all characters in the Text layer to the specified setting.</p>
+<h4 id="type_34">Type<a class="headerlink" href="#type_34" title="Permanent link">&para;</a></h4>
+<p>Floating-point value (0.1 to 1296, inclusive); read/write.</p>
+<hr />
+<h3 id="textdocumentfontstyle">TextDocument.fontStyle<a class="headerlink" href="#textdocumentfontstyle" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.fontStyle</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 13.1 (CC 2014.1)</p>
+</div>
+<h4 id="description_36">Description<a class="headerlink" href="#description_36" title="Permanent link">&para;</a></h4>
+<p>String with style information, e.g., "bold", "italic"</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value only reflects the first character in the Text layer.</p>
+</div>
+<h4 id="type_35">Type<a class="headerlink" href="#type_35" title="Permanent link">&para;</a></h4>
+<p>String; read-only.</p>
+<hr />
+<h3 id="textdocumenthangingroman">TextDocument.hangingRoman<a class="headerlink" href="#textdocumenthangingroman" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.hangingRoman</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 24.0</p>
+</div>
+<h4 id="description_37">Description<a class="headerlink" href="#description_37" title="Permanent link">&para;</a></h4>
+<p>The Text layer's Roman Hanging Punctuation paragraph option. This is only meaningful to box Text layers—it allows punctuation to fit outside the box rather than flow to the next line.</p>
+<p>If this attribute has a mixed value, it will be read as <code>undefined</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value reflects all paragraphs in the Text layer.</p>
+</div>
+<p>If you change this value, it will set all paragraphs in the Text layer to the specified setting.</p>
+<h4 id="type_36">Type<a class="headerlink" href="#type_36" title="Permanent link">&para;</a></h4>
+<p>Boolean; read/write.</p>
+<hr />
+<h3 id="textdocumenthorizontalscale">TextDocument.horizontalScale<a class="headerlink" href="#textdocumenthorizontalscale" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.horizontalScale</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 13.2 (CC 2014.2)</p>
+</div>
+<h4 id="description_38">Description<a class="headerlink" href="#description_38" title="Permanent link">&para;</a></h4>
+<p>This Text layer's horizontal scale in pixels.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value only reflects the first character in the Text layer.</p>
+</div>
+<p>If you change this value, it will set all characters in the Text layer to the specified setting.</p>
+<h4 id="type_37">Type<a class="headerlink" href="#type_37" title="Permanent link">&para;</a></h4>
+<p>Floating-point value; read-write.</p>
+<h4 id="example_2">Example<a class="headerlink" href="#example_2" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">valOfHScale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myTextLayer</span><span class="p">.</span><span class="nx">sourceText</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">horizontalScale</span><span class="p">;</span>
+</code></pre></div>
+<hr />
+<h3 id="textdocumentjustification">TextDocument.justification<a class="headerlink" href="#textdocumentjustification" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.justification</code></p>
+<h4 id="description_39">Description<a class="headerlink" href="#description_39" title="Permanent link">&para;</a></h4>
+<p>The paragraph justification for the Text layer.</p>
+<h4 id="type_38">Type<a class="headerlink" href="#type_38" title="Permanent link">&para;</a></h4>
+<p>A <code>ParagraphJustification</code> enumerated value; read/write. One of:</p>
+<ul>
+<li><code>ParagraphJustification.LEFT_JUSTIFY</code></li>
+<li><code>ParagraphJustification.RIGHT_JUSTIFY</code></li>
+<li><code>ParagraphJustification.CENTER_JUSTIFY</code></li>
+<li><code>ParagraphJustification.FULL_JUSTIFY_LASTLINE_LEFT</code></li>
+<li><code>ParagraphJustification.FULL_JUSTIFY_LASTLINE_RIGHT</code></li>
+<li><code>ParagraphJustification.FULL_JUSTIFY_LASTLINE_CENTER</code></li>
+<li><code>ParagraphJustification.FULL_JUSTIFY_LASTLINE_FULL</code></li>
+<li><code>ParagraphJustification.MULTIPLE_JUSTIFICATIONS</code></li>
+</ul>
+<p>Text layers with mixed justification values will be read as <code>ParagraphJustification.MULTIPLE_JUSTIFICATIONS</code>.</p>
+<p>Setting a TextDocument to use <code>ParagraphJustification.MULTIPLE_JUSTIFICATIONS</code> will result in <code>ParagraphJustification.CENTER_JUSTIFY</code> instead.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value reflects all paragraphs in the Text layer.</p>
+</div>
+<p>If you change this value, it will set all paragraphs in the Text layer to the specified setting.</p>
+<hr />
+<h3 id="textdocumentkerning">TextDocument.kerning<a class="headerlink" href="#textdocumentkerning" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.kerning</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 24.0</p>
+</div>
+<h4 id="description_40">Description<a class="headerlink" href="#description_40" title="Permanent link">&para;</a></h4>
+<p>The Text layer's kerning option.</p>
+<p>Returns zero for <code>AutoKernType.METRIC_KERN</code> and <code>AutoKernType.OPTICAL_KERN</code>.</p>
+<p>Setting this value will also set <code>AutoKernType.NO_AUTO_KERN</code> to <code>true</code> across the affected characters.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value only reflects the first character in the Text layer.</p>
+</div>
+<p>If you change this value, it will set all characters in the Text layer to the specified setting.</p>
+<h4 id="type_39">Type<a class="headerlink" href="#type_39" title="Permanent link">&para;</a></h4>
+<p>Integer value; read/write.</p>
+<hr />
+<h3 id="textdocumentleading">TextDocument.leading<a class="headerlink" href="#textdocumentleading" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.leading</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 14.2 (CC 2017.1)</p>
+</div>
+<h4 id="description_41">Description<a class="headerlink" href="#description_41" title="Permanent link">&para;</a></h4>
+<p>The Text layer's spacing between lines.</p>
+<p>Returns zero if <a href="#textdocumentautoleading">TextDocument.autoLeading</a> is <code>true</code>.</p>
+<p>Setting this value will also set <a href="#textdocumentautoleading">TextDocument.autoLeading</a> to <code>true</code> across the affected characters.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value only reflects the first character in the Text layer.</p>
+</div>
+<p>If you change this value, it will set all characters in the Text layer to the specified setting.</p>
+<p>The minimum accepted value to set is 0, but this will be silently clipped to 0.01.</p>
+<h4 id="type_40">Type<a class="headerlink" href="#type_40" title="Permanent link">&para;</a></h4>
+<p>Floating-point value; read/write.</p>
+<h4 id="example_3">Example<a class="headerlink" href="#example_3" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1">// This creates a Text layer and sets the leading to 100</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">composition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">activeItem</span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">myTextLayer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">comp</span><span class="p">.</span><span class="nx">layers</span><span class="p">.</span><span class="nx">addText</span><span class="p">(</span><span class="s2">&quot;Spring\nSummer\nAutumn\nWinter&quot;</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">myTextSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myTextLayer</span><span class="p">.</span><span class="nx">sourceText</span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">myTextDocument</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myTextSource</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
+<span class="nx">myTextDocument</span><span class="p">.</span><span class="nx">leading</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">100</span><span class="p">;</span>
+<span class="nx">myTextSource</span><span class="p">.</span><span class="nx">setValue</span><span class="p">(</span><span class="nx">myTextDocument</span><span class="p">);</span>
+</code></pre></div>
+<hr />
+<h3 id="textdocumentleadingtype">TextDocument.leadingType<a class="headerlink" href="#textdocumentleadingtype" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.leadingType</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 24.0</p>
+</div>
+<h4 id="description_42">Description<a class="headerlink" href="#description_42" title="Permanent link">&para;</a></h4>
+<p>The Text layer's paragraph leading type option.</p>
+<p>If this attribute has a mixed value, it will be read as <code>undefined</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value reflects all paragraphs in the Text layer.</p>
+</div>
+<p>If you change this value, it will set all paragraphs in the Text layer to the specified setting.</p>
+<h4 id="type_41">Type<a class="headerlink" href="#type_41" title="Permanent link">&para;</a></h4>
+<p>A <code>LeadingType</code> enumerated value; read/write. One of:</p>
+<ul>
+<li><code>LeadingType.ROMAN_LEADING_TYPE</code></li>
+<li><code>LeadingType.JAPANESE_LEADING_TYPE</code></li>
+</ul>
+<hr />
+<h3 id="textdocumentligature">TextDocument.ligature<a class="headerlink" href="#textdocumentligature" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.ligature</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 24.0</p>
+</div>
+<h4 id="description_43">Description<a class="headerlink" href="#description_43" title="Permanent link">&para;</a></h4>
+<p>The Text layer's ligature option.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value only reflects the first character in the Text layer.</p>
+</div>
+<p>If you change this value, it will set all characters in the Text layer to the specified setting.</p>
+<h4 id="type_42">Type<a class="headerlink" href="#type_42" title="Permanent link">&para;</a></h4>
+<p>Boolean; read/write.</p>
+<hr />
+<h3 id="textdocumentlinejointype">TextDocument.lineJoinType<a class="headerlink" href="#textdocumentlinejointype" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.lineJoinType</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 24.0</p>
+</div>
+<h4 id="description_44">Description<a class="headerlink" href="#description_44" title="Permanent link">&para;</a></h4>
+<p>The Text layer's line join type option for Stroke.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value only reflects the first character in the Text layer.</p>
+</div>
+<p>If you change this value, it will set all characters in the Text layer to the specified setting.</p>
+<h4 id="type_43">Type<a class="headerlink" href="#type_43" title="Permanent link">&para;</a></h4>
+<p>A <code>LineJoinType</code> enumerated value; read/write. One of:</p>
+<ul>
+<li><code>LineJoinType.LINE_JOIN_MITER</code></li>
+<li><code>LineJoinType.LINE_JOIN_ROUND</code></li>
+<li><code>LineJoinType.LINE_JOIN_BEVEL</code></li>
+</ul>
+<hr />
+<h3 id="textdocumentlineorientation">TextDocument.lineOrientation<a class="headerlink" href="#textdocumentlineorientation" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.lineOrientation</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 24.2</p>
+</div>
+<h4 id="description_45">Description<a class="headerlink" href="#description_45" title="Permanent link">&para;</a></h4>
+<p>The Text layer's line orientation, in general horizontal vs vertical, which affects how all text in the layer is composed.</p>
+<h4 id="type_44">Type<a class="headerlink" href="#type_44" title="Permanent link">&para;</a></h4>
+<p>A <code>LineOrientation</code> enumerated value; read/write. One of:</p>
+<ul>
+<li><code>LineOrientation.HORIZONTAL</code></li>
+<li><code>LineOrientation.VERTICAL_RIGHT_TO_LEFT</code></li>
+<li><code>LineOrientation.VERTICAL_LEFT_TO_RIGHT</code></li>
+</ul>
+<hr />
+<h3 id="textdocumentnobreak">TextDocument.noBreak<a class="headerlink" href="#textdocumentnobreak" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.noBreak</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 24.0</p>
+</div>
+<h4 id="description_46">Description<a class="headerlink" href="#description_46" title="Permanent link">&para;</a></h4>
+<p>The Text layer's no break attribute.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value only reflects the first character in the Text layer.</p>
+</div>
+<p>If you change this value, it will set all characters in the Text layer to the specified setting.</p>
+<h4 id="type_45">Type<a class="headerlink" href="#type_45" title="Permanent link">&para;</a></h4>
+<p>Boolean; read/write.</p>
+<hr />
+<h3 id="textdocumentparagraphcount">TextDocument.paragraphCount<a class="headerlink" href="#textdocumentparagraphcount" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.paragraphCount</code></p>
+<h4 id="description_47">Description<a class="headerlink" href="#description_47" title="Permanent link">&para;</a></h4>
+<p>Returns the number of paragraphs in the text layer, always greater than or equal to 1.</p>
+<h4 id="type_46">Type<a class="headerlink" href="#type_46" title="Permanent link">&para;</a></h4>
+<p>Integer; read-only.</p>
+<hr />
+<h3 id="textdocumentpointtext">TextDocument.pointText<a class="headerlink" href="#textdocumentpointtext" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.pointText</code></p>
+<h4 id="description_48">Description<a class="headerlink" href="#description_48" title="Permanent link">&para;</a></h4>
+<p><code>true</code> if a Text layer is a layer of point (unbounded) text; otherwise <code>false</code>.</p>
+<h4 id="type_47">Type<a class="headerlink" href="#type_47" title="Permanent link">&para;</a></h4>
+<p>Boolean; read-only.</p>
+<hr />
+<h3 id="textdocumentsmallcaps">TextDocument.smallCaps<a class="headerlink" href="#textdocumentsmallcaps" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.smallCaps</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 13.2 (CC 2014.2)</p>
+</div>
+<h4 id="description_49">Description<a class="headerlink" href="#description_49" title="Permanent link">&para;</a></h4>
+<p><code>true</code> if a Text layer has small caps enabled; otherwise <code>false</code>. To set this value, use <a href="#textdocumentfontcapsoption">TextDocument.fontCapsOption</a> added in After Effects 24.0.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value only reflects the first character in the Text layer.</p>
+</div>
+<h4 id="type_48">Type<a class="headerlink" href="#type_48" title="Permanent link">&para;</a></h4>
+<p>Boolean; read-only.</p>
+<hr />
+<h3 id="textdocumentspaceafter">TextDocument.spaceAfter<a class="headerlink" href="#textdocumentspaceafter" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.spaceAfter</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 24.0</p>
+</div>
+<h4 id="description_50">Description<a class="headerlink" href="#description_50" title="Permanent link">&para;</a></h4>
+<p>The Text layer's paragraph space after option.</p>
+<p>If this attribute has a mixed value, it will be read as <code>undefined</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value reflects all paragraphs in the Text layer.</p>
+</div>
+<p>If you change this value, it will set all paragraphs in the Text layer to the specified setting.</p>
+<h4 id="type_49">Type<a class="headerlink" href="#type_49" title="Permanent link">&para;</a></h4>
+<p>Floating-point value; read/write.</p>
+<hr />
+<h3 id="textdocumentspacebefore">TextDocument.spaceBefore<a class="headerlink" href="#textdocumentspacebefore" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.spaceBefore</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 24.0</p>
+</div>
+<h4 id="description_51">Description<a class="headerlink" href="#description_51" title="Permanent link">&para;</a></h4>
+<p>The Text layer's paragraph space before option.</p>
+<p>If this attribute has a mixed value, it will be read as <code>undefined</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value reflects all paragraphs in the Text layer.</p>
+</div>
+<p>If you change this value, it will set all paragraphs in the Text layer to the specified setting.</p>
+<h4 id="type_50">Type<a class="headerlink" href="#type_50" title="Permanent link">&para;</a></h4>
+<p>Floating-point value; read/write.</p>
+<hr />
+<h3 id="textdocumentstartindent">TextDocument.startIndent<a class="headerlink" href="#textdocumentstartindent" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.startIndent</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 24.0</p>
+</div>
+<h4 id="description_52">Description<a class="headerlink" href="#description_52" title="Permanent link">&para;</a></h4>
+<p>The Text layer's paragraph start indent option.</p>
+<p>If this attribute has a mixed value, it will be read as <code>undefined</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value reflects all paragraphs in the Text layer.</p>
+</div>
+<p>If you change this value, it will set all paragraphs in the Text layer to the specified setting.</p>
+<h4 id="type_51">Type<a class="headerlink" href="#type_51" title="Permanent link">&para;</a></h4>
+<p>Floating-point value; read/write.</p>
+<hr />
+<h3 id="textdocumentstrokecolor">TextDocument.strokeColor<a class="headerlink" href="#textdocumentstrokecolor" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.strokeColor</code></p>
+<h4 id="description_53">Description<a class="headerlink" href="#description_53" title="Permanent link">&para;</a></h4>
+<p>The Text layer's stroke color, as an array of [r, g, b] floating-point values. For example, in an 8-bpc project, a red value of 255 would be 1.0, and in a 32-bpc project, an overbright blue value can be something like 3.2.</p>
+<p>Throws an exception on read if <a href="#textdocumentapplystroke">applyStroke</a> is not <code>true</code>.</p>
+<p>Setting this value will also set <a href="#textdocumentapplystroke">applyStroke</a> to <code>true</code> across the affected characters.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value only reflects the first character in the Text layer.</p>
+</div>
+<p>If you change this value, it will set all characters in the Text layer to the specified setting.</p>
+<h4 id="type_52">Type<a class="headerlink" href="#type_52" title="Permanent link">&para;</a></h4>
+<p>Array [r, g, b] of floating-point values; read/write.</p>
+<hr />
+<h3 id="textdocumentstrokeoverfill">TextDocument.strokeOverFill<a class="headerlink" href="#textdocumentstrokeoverfill" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.strokeOverFill</code></p>
+<h4 id="description_54">Description<a class="headerlink" href="#description_54" title="Permanent link">&para;</a></h4>
+<p>Indicates the rendering order for the fill and stroke of a Text layer. When <code>true</code>, the stroke appears over the fill.</p>
+<p>The Text layer can override the per-character attribute setting if the Text layer is set to use All Strokes Over All Fills or All Fills Over All Strokes in the Character Panel. Thus the value returned here might be different than the actual attribute value set on the character. It is possible to set the Fill/Stroke render order via the "Fill &amp; Stroke" property under More Options on the Text layer using TextLayer.text("ADBE Text More Options")("ADBE Text Render Order").</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value only reflects the first character in the Text layer.</p>
+</div>
+<p>If you change this value, it will set all characters in the Text layer to the specified setting.</p>
+<h4 id="type_53">Type<a class="headerlink" href="#type_53" title="Permanent link">&para;</a></h4>
+<p>Boolean; read/write.</p>
+<hr />
+<h3 id="textdocumentstrokewidth">TextDocument.strokeWidth<a class="headerlink" href="#textdocumentstrokewidth" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.strokeWidth</code></p>
+<h4 id="description_55">Description<a class="headerlink" href="#description_55" title="Permanent link">&para;</a></h4>
+<p>The Text layer's stroke thickness in pixels.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value only reflects the first character in the Text layer.</p>
+</div>
+<p>If you change this value, it will set all characters in the Text layer to the specified setting.</p>
+<p>The minimum accepted value to set is 0, but this will be silently clipped to 0.01.</p>
+<h4 id="type_54">Type<a class="headerlink" href="#type_54" title="Permanent link">&para;</a></h4>
+<p>Floating-point value (0 to 1000, inclusive); read/write.</p>
+<hr />
+<h3 id="textdocumentsubscript">TextDocument.subscript<a class="headerlink" href="#textdocumentsubscript" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.subscript</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 13.2 (CC 2014.2)</p>
+</div>
+<h4 id="description_56">Description<a class="headerlink" href="#description_56" title="Permanent link">&para;</a></h4>
+<p><code>true</code> if a Text layer has subscript enabled; otherwise <code>false</code>. To set this value, use <a href="#textdocumentfontbaselineoption">TextDocument.fontBaselineOption</a> added in After Effects 24.0.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value only reflects the first character in the Text layer.</p>
+</div>
+<h4 id="type_55">Type<a class="headerlink" href="#type_55" title="Permanent link">&para;</a></h4>
+<p>Boolean; read-only.</p>
+<hr />
+<h3 id="textdocumentsuperscript">TextDocument.superscript<a class="headerlink" href="#textdocumentsuperscript" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.superscript</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 13.2 (CC 2014.2)</p>
+</div>
+<h4 id="description_57">Description<a class="headerlink" href="#description_57" title="Permanent link">&para;</a></h4>
+<p><code>true</code> if a Text layer has superscript enabled; otherwise <code>false</code>. To set this value, use <a href="#textdocumentfontbaselineoption">TextDocument.fontBaselineOption</a> added in After Effects 24.0.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value only reflects the first character in the Text layer.</p>
+</div>
+<h4 id="type_56">Type<a class="headerlink" href="#type_56" title="Permanent link">&para;</a></h4>
+<p>Boolean; read-only.</p>
+<hr />
+<h3 id="textdocumenttext">TextDocument.text<a class="headerlink" href="#textdocumenttext" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.text</code></p>
+<h4 id="description_58">Description<a class="headerlink" href="#description_58" title="Permanent link">&para;</a></h4>
+<p>The text value for the Text layer's Source Text property.</p>
+<h4 id="type_57">Type<a class="headerlink" href="#type_57" title="Permanent link">&para;</a></h4>
+<p>String; read/write.</p>
+<hr />
+<h3 id="textdocumenttracking">TextDocument.tracking<a class="headerlink" href="#textdocumenttracking" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.tracking</code></p>
+<h4 id="description_59">Description<a class="headerlink" href="#description_59" title="Permanent link">&para;</a></h4>
+<p>The Text layer's spacing between characters.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value only reflects the first character in the Text layer.</p>
+</div>
+<p>If you change this value, it will set all characters in the Text layer to the specified setting.</p>
+<h4 id="type_58">Type<a class="headerlink" href="#type_58" title="Permanent link">&para;</a></h4>
+<p>Floating-point value; read/write.</p>
+<hr />
+<h3 id="textdocumenttsume">TextDocument.tsume<a class="headerlink" href="#textdocumenttsume" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.tsume</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 13.2 (CC 2014.2)</p>
+</div>
+<h4 id="description_60">Description<a class="headerlink" href="#description_60" title="Permanent link">&para;</a></h4>
+<p>This Text layer's tsume value as a normalized percentage, from 0.0 -&gt; 1.0.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value only reflects the first character in the Text layer.</p>
+</div>
+<p>If you change this value, it will set all characters in the Text layer to the specified setting.</p>
+<p>This attribute accepts values from 0.0 -&gt; 100.0, however the value IS expecting a normalized value from 0.0 -&gt; 1.0. Using a value higher than 1.0 will produce unexpected results; AE's Character Panel will clamp the value at 100%, despite the higher value set by scripting (ie <code>TextDocument.tsume = 100</code> _really_ sets a value of 10,000%)</p>
+<h4 id="type_59">Type<a class="headerlink" href="#type_59" title="Permanent link">&para;</a></h4>
+<p>Floating-point value; read-write.</p>
+<hr />
+<h3 id="textdocumentverticalscale">TextDocument.verticalScale<a class="headerlink" href="#textdocumentverticalscale" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.verticalScale</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 13.2 (CC 2014.2)</p>
+</div>
+<h4 id="description_61">Description<a class="headerlink" href="#description_61" title="Permanent link">&para;</a></h4>
+<p>This Text layer's vertical scale in pixels.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This value only reflects the first character in the Text layer.</p>
+</div>
+<p>If you change this value, it will set all characters in the Text layer to the specified setting.</p>
+<h4 id="type_60">Type<a class="headerlink" href="#type_60" title="Permanent link">&para;</a></h4>
+<p>Floating-point value; read-write.</p>
+<hr />
+<h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h2>
+<h3 id="textdocumentcharacterrange">TextDocument.characterRange()<a class="headerlink" href="#textdocumentcharacterrange" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.characterRange(characterStart, [signedCharacterEnd])</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 24.3</p>
+</div>
+<h4 id="description_62">Description<a class="headerlink" href="#description_62" title="Permanent link">&para;</a></h4>
+<p>Returns an instance of the Text layer range accessor CharacterRange.</p>
+<p>The instance will remember the parameters passed in the constructor - they remain constant and changes to the <a href="#textdocument-object">TextDocument</a> length may cause the instance to throw exceptions on access until the <a href="#textdocument-object">TextDocument</a> length is changed to a length which makes the range valid again.</p>
+<p>Use toString() to find out what the constructed parameters were.</p>
+<h4 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>characterStart</code></td>
+<td>Unsigned integer</td>
+<td>Starts at zero, must be the less than or equal to the (text) length of the <a href="#textdocument-object">TextDocument object</a>.</td>
+</tr>
+<tr>
+<td><code>signedCharacterEnd</code></td>
+<td>Signed integer.</td>
+<td>Optional. If not specified, will be computed at <code>(characterStart + 1)</code>.<br/>If set to <code>-1</code>, then the <a href="../characterrange/">CharacterRange object</a> will dynamically calculate this on access to be equal to the (text) length of the <a href="#textdocument-object">TextDocument object</a>.<br/><code>signedCharacterEnd</code> must be greater than or equal to <code>characterStart</code>, and less than or equal to the (text) length of the <a href="#textdocument-object">TextDocument object</a>.</td>
+</tr>
+</tbody>
+</table>
+<p>Throws an exception if the parameters would result in an invalid range.</p>
+<p>It is not possible to create a <a href="../characterrange/">CharacterRange object</a> which spans the final carriage return in the <a href="#textdocument-object">TextDocument object</a>.</p>
+<h4 id="returns">Returns<a class="headerlink" href="#returns" title="Permanent link">&para;</a></h4>
+<p>An instance of <a href="../characterrange/">CharacterRange object</a></p>
+<hr />
+<h3 id="textdocumentcomposedlinecharacterindexesat">TextDocument.composedLineCharacterIndexesAt()<a class="headerlink" href="#textdocumentcomposedlinecharacterindexesat" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.composedLineCharacterIndexesAt(characterIndex)</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 24.3</p>
+</div>
+<h4 id="description_63">Description<a class="headerlink" href="#description_63" title="Permanent link">&para;</a></h4>
+<p>Returns the character index bounds of a <a href="../composedlinerange/">ComposedLineRange object</a> in the Text layer.</p>
+<h4 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>characterIndex</code></td>
+<td>Unsigned integer</td>
+<td>A text index in the Text layer, which will be mapped to the composed line it intersects.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_1">Returns<a class="headerlink" href="#returns_1" title="Permanent link">&para;</a></h4>
+<p>Generic object;
+Key <code>start</code> will be set to text index of the start of the composed line (greater than or equal to zero).
+Key <code>end</code> will be set to text index of the end of the composed line (greater than start, or equal to start if it is the last composed line).</p>
+<p>Will throw an exception if the computed start and end are outside of the current <a href="#textdocument-object">TextDocument object</a>
+Remember that the composed lines are static and subsequent changes to the <a href="#textdocument-object">TextDocument object</a> instance which changes its length may render the composed line data invalid.</p>
+<hr />
+<h3 id="textdocumentcomposedlinerange">TextDocument.composedLineRange()<a class="headerlink" href="#textdocumentcomposedlinerange" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.composedLineRange(composedLineIndexStart, [signedComposedLineIndexEnd])</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 24.3</p>
+</div>
+<h4 id="description_64">Description<a class="headerlink" href="#description_64" title="Permanent link">&para;</a></h4>
+<p>Returns an instance of the Text layer range accessor <a href="../composedlinerange/">ComposedLineRange object</a>.</p>
+<p>The instance will remember the parameters passed in the constructor - they remain constant and changes to the <a href="#textdocument-object">TextDocument</a> contents may cause the instance to throw exceptions on access until the <a href="#textdocument-object">TextDocument</a> contents are changed which makes the range valid again.</p>
+<p>Use <a href="../composedlinerange/#composedlinerangetostring">ComposedLineRange.toString()</a> to find out what the constructed parameters were.</p>
+<h4 id="parameters_2">Parameters<a class="headerlink" href="#parameters_2" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>composedLineIndexStart</code></td>
+<td>Unsigned integer</td>
+<td>Starts at zero, must be the less than the number of composed lines in the <a href="#textdocument-object">TextDocument object</a>.</td>
+</tr>
+<tr>
+<td><code>signedComposedLineIndexEnd</code></td>
+<td>Signed integer.</td>
+<td>Optional. If not specified, will be computed at <code>(composedLineIndexStart + 1)</code>.<br/>If set to -1, then the <a href="../composedlinerange/">ComposedLineRange object</a> will dynamically calculate this on access to the last composed line of the <a href="#textdocument-object">TextDocument object</a>.<br/><code>signedComposedLineIndexEnd</code> must be greater than <code>composedLineIndexStart</code>, and less than or equal to the number of composed lines in the <a href="#textdocument-object">TextDocument object</a>.</td>
+</tr>
+</tbody>
+</table>
+<p>Throws an exception if the parameters would result in an invalid range.</p>
+<p>Remember that the composed lines are static and subsequent changes to the <a href="#textdocument-object">TextDocument object</a> instance which changes its length may render the composed line data invalid.</p>
+<h4 id="returns_2">Returns<a class="headerlink" href="#returns_2" title="Permanent link">&para;</a></h4>
+<p>An instance of <a href="../composedlinerange/">ComposedLineRange object</a></p>
+<hr />
+<h3 id="textdocumentparagraphcharacterindexesat">TextDocument.paragraphCharacterIndexesAt()<a class="headerlink" href="#textdocumentparagraphcharacterindexesat" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.paragraphCharacterIndexesAt(characterIndex)</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 24.3</p>
+</div>
+<h4 id="description_65">Description<a class="headerlink" href="#description_65" title="Permanent link">&para;</a></h4>
+<p>Returns the character index bounds of a paragraph in the Text layer.</p>
+<h4 id="parameters_3">Parameters<a class="headerlink" href="#parameters_3" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>characterIndex</code></td>
+<td>Unsigned integer</td>
+<td>A text index in the Text layer, which will be mapped to the paragraph it intersects.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_3">Returns<a class="headerlink" href="#returns_3" title="Permanent link">&para;</a></h4>
+<p>Generic object;
+Key <code>start</code> will be set to text index of the start of the paragraph (greater than or equal to zero).
+Key <code>end</code> will be set to text index of the end of the paragraph (greater than start, or equal to start if it is the last paragraph).</p>
+<hr />
+<h3 id="textdocumentparagraphrange">TextDocument.paragraphRange()<a class="headerlink" href="#textdocumentparagraphrange" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.paragraphRange(paragraphIndexStart, [signedParagraphIndexEnd])</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 24.3</p>
+</div>
+<h4 id="description_66">Description<a class="headerlink" href="#description_66" title="Permanent link">&para;</a></h4>
+<p>Returns an instance of the Text layer range accessor <a href="../paragraphrange/">ParagraphRange object</a>.</p>
+<p>The instance will remember the parameters passed in the constructor - they remain constant and changes to the <a href="#textdocument-object">TextDocument</a> contents may cause the instance to throw exceptions on access until the <a href="#textdocument-object">TextDocument</a> contents are changed which makes the range valid again.</p>
+<p>Use <a href="../paragraphrange/#paragraphrangetostring">ParagraphRange.toString()</a> to find out what the constructed parameters were.</p>
+<h4 id="parameters_4">Parameters<a class="headerlink" href="#parameters_4" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>paragraphIndexStart</code></td>
+<td>Unsigned integer</td>
+<td>Starts at zero, must be the less than the number of paragraphs in the <a href="#textdocument-object">TextDocument object</a>.</td>
+</tr>
+<tr>
+<td><code>signedParagraphIndexEnd</code></td>
+<td>Signed integer</td>
+<td>Optional. If not specified, will be computed at <code>(paragraphIndexStart + 1)</code>.<br/>If set to -1, then the <a href="../paragraphrange/">ParagraphRange object</a> will dynamically calculate this on access to the last paragraph of the <a href="#textdocument-object">TextDocument object</a>.<br/><code>signedParagraphIndexEnd</code> must be greater than <code>paragraphIndexStart</code>, and less than or equal to the number of paragraphs in the <a href="#textdocument-object">TextDocument object</a>.</td>
+</tr>
+</tbody>
+</table>
+<p>Throws an exception if the parameters would result in an invalid range.</p>
+<h4 id="returns_4">Returns<a class="headerlink" href="#returns_4" title="Permanent link">&para;</a></h4>
+<p>An instance of <a href="../paragraphrange/">ParagraphRange object</a></p>
+<hr />
+<h3 id="textdocumentresetcharstyle">TextDocument.resetCharStyle()<a class="headerlink" href="#textdocumentresetcharstyle" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.resetCharStyle()</code></p>
+<h4 id="description_67">Description<a class="headerlink" href="#description_67" title="Permanent link">&para;</a></h4>
+<p>Restores all characters in the Text layer to the default text character characteristics in the Character panel.</p>
+<h4 id="parameters_5">Parameters<a class="headerlink" href="#parameters_5" title="Permanent link">&para;</a></h4>
+<p>None.</p>
+<h4 id="returns_5">Returns<a class="headerlink" href="#returns_5" title="Permanent link">&para;</a></h4>
+<p>Nothing.</p>
+<hr />
+<h3 id="textdocumentresetparagraphstyle">TextDocument.resetParagraphStyle()<a class="headerlink" href="#textdocumentresetparagraphstyle" title="Permanent link">&para;</a></h3>
+<p><code>textDocument.resetParagraphStyle()</code></p>
+<h4 id="description_68">Description<a class="headerlink" href="#description_68" title="Permanent link">&para;</a></h4>
+<p>Restores all paragraphs in the Text layer to the default text paragraph characteristics in the Paragraph panel.</p>
+<h4 id="parameters_6">Parameters<a class="headerlink" href="#parameters_6" title="Permanent link">&para;</a></h4>
+<p>None.</p>
+<h4 id="returns_6">Returns<a class="headerlink" href="#returns_6" title="Permanent link">&para;</a></h4>
+<p>Nothing.</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 6, 2024</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.action.edit", "content.action.view", "search.highlight", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.525ec568.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,5532 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ae-scripting.docsforadobe.dev/property/property/">
+      
+      
+        <link rel="prev" href="../../layer/threedmodellayer/">
+      
+      
+        <link rel="next" href="../propertybase/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
+    
+    
+      
+        <title>Property object - After Effects Scripting Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../_static/extra.css">
+    
+      <link rel="stylesheet" href="../../_static/syntax-highlight.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#property-object" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://docsforadobe.dev" title="After Effects Scripting Guide" class="md-header__button md-logo" aria-label="After Effects Scripting Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            After Effects Scripting Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Property object
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/docsforadobe/after-effects-scripting-guide/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    after-effects-scripting-guide
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://docsforadobe.dev" title="After Effects Scripting Guide" class="md-nav__button md-logo" aria-label="After Effects Scripting Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    After Effects Scripting Guide
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/docsforadobe/after-effects-scripting-guide/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    after-effects-scripting-guide
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/javascript/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Javascript for After Effects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/changelog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    After Effects Scripting Changlog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/objectmodel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    After Effects Object Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/classhierarchy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    After Effects Class Hierarchy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    General
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            General
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/globals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Globals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/application/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Application
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/project/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/system/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Item
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Item
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../item/item/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Item object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../item/itemcollection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ItemCollection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../item/avitem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AVItem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../item/compitem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CompItem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../item/folderitem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FolderItem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../item/footageitem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FootageItem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Layer
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Layer
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/layer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Layer object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/layercollection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LayerCollection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/avlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AVLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/cameralayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CameraLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/lightlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LightLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/shapelayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ShapeLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/textlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TextLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/threedmodellayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ThreeDModelLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Property
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Property
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Property object
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Property object
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Page Contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Page Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+	<a href="#attributes" class="md-nav__link">
+		<span class="md-ellipsis">
+			Attributes
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+		<nav class="md-nav" aria-label="Attributes">
+			<ul class="md-nav__list">
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyalternatesource" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.alternateSource
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertycansetalternatesource" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.canSetAlternateSource
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertycansetexpression" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.canSetExpression
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertycanvaryovertime" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.canVaryOverTime
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertydimensionsseparated" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.dimensionsSeparated
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyessentialpropertysource" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.essentialPropertySource
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyexpression" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.expression
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyexpressionenabled" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.expressionEnabled
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyexpressionerror" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.expressionError
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyhasmax" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.hasMax
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyhasmin" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.hasMin
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyisdropdowneffect" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.isDropdownEffect
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyisseparationfollower" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.isSeparationFollower
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyisseparationleader" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.isSeparationLeader
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyisspatial" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.isSpatial
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyistimevarying" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.isTimeVarying
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertymaxvalue" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.maxValue
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyminvalue" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.minValue
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertynumkeys" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.numKeys
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertypropertyindex" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.propertyIndex
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertypropertyvaluetype" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.propertyValueType
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyselectedkeys" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.selectedKeys
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyseparationdimension" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.separationDimension
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyseparationleader" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.separationLeader
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyunitstext" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.unitsText
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyvalue" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.value
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+			</ul>
+		</nav>
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#methods" class="md-nav__link">
+		<span class="md-ellipsis">
+			Methods
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+		<nav class="md-nav" aria-label="Methods">
+			<ul class="md-nav__list">
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyaddkey" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.addKey()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyaddtomotiongraphicstemplate" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.addToMotionGraphicsTemplate()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyaddtomotiongraphicstemplateas" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.addToMotionGraphicsTemplateAs()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertycanaddtomotiongraphicstemplate" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.canAddToMotionGraphicsTemplate()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertygetseparationfollower" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.getSeparationFollower()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyisinterpolationtypevalid" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.isInterpolationTypeValid()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertykeyininterpolationtype" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.keyInInterpolationType()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertykeyinspatialtangent" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.keyInSpatialTangent()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertykeyintemporalease" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.keyInTemporalEase()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertykeylabel" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.keyLabel()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertykeyoutinterpolationtype" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.keyOutInterpolationType()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertykeyoutspatialtangent" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.keyOutSpatialTangent()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertykeyouttemporalease" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.keyOutTemporalEase()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertykeyroving" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.keyRoving()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertykeyselected" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.keySelected()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertykeyspatialautobezier" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.keySpatialAutoBezier()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertykeyspatialcontinuous" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.keySpatialContinuous()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertykeytemporalautobezier" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.keyTemporalAutoBezier()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertykeytemporalcontinuous" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.keyTemporalContinuous()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertykeytime" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.keyTime()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertykeyvalue" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.keyValue()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertynearestkeyindex" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.nearestKeyIndex()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyremovekey" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.removeKey()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertysetalternatesource" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.setAlternateSource()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertysetinterpolationtypeatkey" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.setInterpolationTypeAtKey()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertysetlabelatkey" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.setLabelAtKey()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertysetpropertyparameters" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.setPropertyParameters()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertysetrovingatkey" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.setRovingAtKey()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertysetselectedatkey" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.setSelectedAtKey()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertysetspatialautobezieratkey" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.setSpatialAutoBezierAtKey()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertysetspatialcontinuousatkey" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.setSpatialContinuousAtKey()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertysetspatialtangentsatkey" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.setSpatialTangentsAtKey()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertysettemporalautobezieratkey" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.setTemporalAutoBezierAtKey()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertysettemporalcontinuousatkey" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.setTemporalContinuousAtKey()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertysettemporaleaseatkey" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.setTemporalEaseAtKey()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertysetvalue" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.setValue()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertysetvalueatkey" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.setValueAtKey()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertysetvalueattime" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.setValueAtTime()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertysetvaluesattimes" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.setValuesAtTimes()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyvalueattime" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.valueAtTime()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+			</ul>
+		</nav>
+	
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../propertybase/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PropertyBase
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../propertygroup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PropertyGroup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../maskpropertygroup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MaskPropertyGroup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Render Queue
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Render Queue
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../renderqueue/renderqueue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RenderQueue object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../renderqueue/rqitemcollection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RQItemCollection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../renderqueue/renderqueueitem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RenderQueueItem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../renderqueue/omcollection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OMCollection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../renderqueue/outputmodule/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OutputModule
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sources
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Sources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/filesource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FileSource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/footagesource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FootageSource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/placeholdersource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PlaceholderSource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/solidsource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SolidSource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Text
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Text
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../text/characterrange/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CharacterRange
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../text/composedlinerange/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ComposedLineRange
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../text/fontobject/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FontObject
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../text/fontsobject/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FontsObject
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../text/paragraphrange/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ParagraphRange
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../text/textdocument/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TextDocument
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Other
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Other
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/collection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Collection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/importoptions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ImportOptions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/keyframeease/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    KeyframeEase
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/markervalue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MarkerValue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/preferences/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Preferences
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/settings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Settings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/shape/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Shape
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/view/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    View
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/viewer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Viewer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/viewoptions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ViewOptions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Match Names
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Match Names
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_1" id="__nav_11_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Layers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_1">
+            <span class="md-nav__icon md-icon"></span>
+            Layers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/layer/avlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AV Layer Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/layer/3dlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3D Layer Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/layer/cameralayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Camera Layer Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/layer/lightlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Light Layer Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/layer/textlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Text Layer Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/layer/shapelayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Shape Layer Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/layer/layerstyles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Layer Styles Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_2" id="__nav_11_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Effects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_2">
+            <span class="md-nav__icon md-icon"></span>
+            Effects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/effects/firstparty/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    First-Party Effect Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Page Contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Page Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+	<a href="#attributes" class="md-nav__link">
+		<span class="md-ellipsis">
+			Attributes
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+		<nav class="md-nav" aria-label="Attributes">
+			<ul class="md-nav__list">
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyalternatesource" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.alternateSource
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertycansetalternatesource" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.canSetAlternateSource
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertycansetexpression" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.canSetExpression
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertycanvaryovertime" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.canVaryOverTime
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertydimensionsseparated" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.dimensionsSeparated
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyessentialpropertysource" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.essentialPropertySource
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyexpression" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.expression
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyexpressionenabled" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.expressionEnabled
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyexpressionerror" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.expressionError
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyhasmax" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.hasMax
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyhasmin" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.hasMin
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyisdropdowneffect" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.isDropdownEffect
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyisseparationfollower" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.isSeparationFollower
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyisseparationleader" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.isSeparationLeader
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyisspatial" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.isSpatial
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyistimevarying" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.isTimeVarying
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertymaxvalue" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.maxValue
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyminvalue" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.minValue
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertynumkeys" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.numKeys
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertypropertyindex" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.propertyIndex
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertypropertyvaluetype" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.propertyValueType
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyselectedkeys" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.selectedKeys
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyseparationdimension" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.separationDimension
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyseparationleader" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.separationLeader
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyunitstext" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.unitsText
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyvalue" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.value
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+			</ul>
+		</nav>
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#methods" class="md-nav__link">
+		<span class="md-ellipsis">
+			Methods
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+		<nav class="md-nav" aria-label="Methods">
+			<ul class="md-nav__list">
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyaddkey" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.addKey()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyaddtomotiongraphicstemplate" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.addToMotionGraphicsTemplate()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyaddtomotiongraphicstemplateas" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.addToMotionGraphicsTemplateAs()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertycanaddtomotiongraphicstemplate" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.canAddToMotionGraphicsTemplate()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertygetseparationfollower" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.getSeparationFollower()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyisinterpolationtypevalid" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.isInterpolationTypeValid()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertykeyininterpolationtype" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.keyInInterpolationType()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertykeyinspatialtangent" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.keyInSpatialTangent()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertykeyintemporalease" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.keyInTemporalEase()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertykeylabel" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.keyLabel()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertykeyoutinterpolationtype" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.keyOutInterpolationType()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertykeyoutspatialtangent" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.keyOutSpatialTangent()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertykeyouttemporalease" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.keyOutTemporalEase()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertykeyroving" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.keyRoving()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertykeyselected" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.keySelected()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertykeyspatialautobezier" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.keySpatialAutoBezier()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertykeyspatialcontinuous" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.keySpatialContinuous()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertykeytemporalautobezier" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.keyTemporalAutoBezier()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertykeytemporalcontinuous" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.keyTemporalContinuous()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertykeytime" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.keyTime()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertykeyvalue" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.keyValue()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertynearestkeyindex" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.nearestKeyIndex()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyremovekey" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.removeKey()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertysetalternatesource" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.setAlternateSource()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertysetinterpolationtypeatkey" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.setInterpolationTypeAtKey()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertysetlabelatkey" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.setLabelAtKey()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertysetpropertyparameters" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.setPropertyParameters()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertysetrovingatkey" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.setRovingAtKey()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertysetselectedatkey" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.setSelectedAtKey()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertysetspatialautobezieratkey" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.setSpatialAutoBezierAtKey()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertysetspatialcontinuousatkey" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.setSpatialContinuousAtKey()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertysetspatialtangentsatkey" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.setSpatialTangentsAtKey()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertysettemporalautobezieratkey" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.setTemporalAutoBezierAtKey()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertysettemporalcontinuousatkey" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.setTemporalContinuousAtKey()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertysettemporaleaseatkey" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.setTemporalEaseAtKey()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertysetvalue" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.setValue()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertysetvalueatkey" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.setValueAtKey()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertysetvalueattime" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.setValueAtTime()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertysetvaluesattimes" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.setValuesAtTimes()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertyvalueattime" class="md-nav__link">
+		<span class="md-ellipsis">
+			Property.valueAtTime()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+			</ul>
+		</nav>
+	
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/docsforadobe/after-effects-scripting-guide/edit/master/docs/property/property.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/docsforadobe/after-effects-scripting-guide/raw/master/docs/property/property.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<p><a href="/">Home</a><span class="breadcrumb md-nav__icon md-icon"></span>Property<span class="breadcrumb md-nav__icon md-icon"></span>Property object</p>
+<h1 id="property-object">Property object<a class="headerlink" href="#property-object" title="Permanent link">&para;</a></h1>
+<p><code>app.project.item(index).layer(index).propertySpec</code></p>
+<h4 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h4>
+<p>The Property object contains value, keyframe, and expression information about a particular AE property of a layer. An AE property is a value, often animatable, of an effect, mask, or transform within an individual layer. For examples of how to access properties, see <a href="../propertybase/">PropertyBase object</a> and <a href="../propertygroup/#propertygroupproperty">PropertyGroup.property()</a>.</p>
+<blockquote>
+<p>Property is a subclass of <a href="../propertybase/">PropertyBase</a>. All methods and attributes of PropertyBase, in addition to those listed below, are available when working with Property.</p>
+</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>JavaScript objects commonly referred to as "properties" are called "attributes" in this guide, to avoid confusion with the After Effects definition of property.</p>
+</div>
+<h4 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h4>
+<p>Get and set the value of opacity:
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">myProperty</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myLayer</span><span class="p">.</span><span class="nx">opacity</span><span class="p">;</span>
+<span class="c1">// opacity has propertyValueType of OneD, and is stored as a float</span>
+<span class="nx">myProperty</span><span class="p">.</span><span class="nx">setValue</span><span class="p">(</span><span class="mf">50</span><span class="p">);</span><span class="w"> </span><span class="c1">//set opacity to 50%</span>
+<span class="c1">// Variable my Opacity is a float value</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">myOpacity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myProperty</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
+</code></pre></div></p>
+<p>Get and set the value of a position:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">myProperty</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myLayer</span><span class="p">.</span><span class="nx">position</span><span class="p">;</span>
+<span class="c1">// position has propertyValueType of ThreeD_SPATIAL, and is stored as an array of 3 floats</span>
+<span class="nx">myProperty</span><span class="p">.</span><span class="nx">setValue</span><span class="p">([</span><span class="mf">10.0</span><span class="p">,</span><span class="w"> </span><span class="mf">30.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">]);</span>
+<span class="c1">// Variable my Position is an array of 3 floats</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">myPosition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myProperty</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
+</code></pre></div>
+<p>Change the value of a mask shape to be open instead of closed:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">myMask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">mylayer</span><span class="p">.</span><span class="nx">mask</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">myProperty</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myMask</span><span class="p">.</span><span class="nx">maskPath</span><span class="p">;</span>
+<span class="nx">myShape</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myProperty</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
+<span class="nx">myShape</span><span class="p">.</span><span class="nx">closed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="nx">myProperty</span><span class="p">.</span><span class="nx">setValue</span><span class="p">(</span><span class="nx">myShape</span><span class="p">);</span>
+</code></pre></div>
+<p>Get the value of a color at a particular time. A color is stored as an array of four floats, <code>[r, g, b, opacity]</code>. This sets the value of the red component of a light's color at time 4 to be half of that at time 2:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">myProperty</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myLight</span><span class="p">.</span><span class="nx">color</span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">colorValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myProperty</span><span class="p">.</span><span class="nx">valueAtTime</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
+<span class="nx">colorValue</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">colorValue</span><span class="p">[</span><span class="mf">0</span><span class="p">];</span>
+<span class="nx">myProperty</span><span class="p">.</span><span class="nx">setValueAtTime</span><span class="p">(</span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="nx">colorValue</span><span class="p">);</span>
+</code></pre></div>
+<p>Check that a scale calculated by an expression at time 3.5 is the expected value of [10,50]:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">myProperty</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myLayer</span><span class="p">.</span><span class="nx">scale</span><span class="p">;</span>
+<span class="c1">// false value of preExpression means evaluate the expression</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">scaleValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myProperty</span><span class="p">.</span><span class="nx">valueAtTime</span><span class="p">(</span><span class="mf">3.5</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">scaleValue</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">scaleValue</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">50</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;hurray&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;oops&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Keyframe a rotation from 0 to 90 and back again. The animation is 10 seconds, and the middle keyframe is at the 5 second mark. Rotation properties are stored as a OneD value:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">myProperty</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myLayer</span><span class="p">.</span><span class="nx">rotation</span><span class="p">;</span>
+<span class="nx">myProperty</span><span class="p">.</span><span class="nx">setValueAtTime</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span>
+<span class="nx">myProperty</span><span class="p">.</span><span class="nx">setValueAtTime</span><span class="p">(</span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">90</span><span class="p">);</span>
+<span class="nx">myProperty</span><span class="p">.</span><span class="nx">setValueAtTime</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span>
+</code></pre></div>
+<p>Change the key frame values for the first three keyframes of some sourcetext:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">myProperty</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myTextLayer</span><span class="p">.</span><span class="nx">sourceText</span><span class="p">;</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">myProperty</span><span class="p">.</span><span class="nx">numKeys</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;error, I thought there were 3 keyframes&quot;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">myProperty</span><span class="p">.</span><span class="nx">setValueAtKey</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">newTextDocument</span><span class="p">(</span><span class="s2">&quot;keynumber1&quot;</span><span class="p">));</span>
+<span class="w">  </span><span class="nx">myProperty</span><span class="p">.</span><span class="nx">setValueAtKey</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">newTextDocument</span><span class="p">(</span><span class="s2">&quot;keynumber2&quot;</span><span class="p">));</span>
+<span class="w">  </span><span class="nx">myProperty</span><span class="p">.</span><span class="nx">setValueAtKey</span><span class="p">(</span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="nx">newTextDocument</span><span class="p">(</span><span class="s2">&quot;keynumber3&quot;</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Set values using the convenience syntax for position, scale, color, or source text:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// These two are equivalent. The second fills in a default of 0.</span>
+<span class="nx">myLayer</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">setValue</span><span class="p">([</span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="mf">30</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">]);</span>
+<span class="nx">myLayer</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">setValue</span><span class="p">([</span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="mf">30</span><span class="p">]);</span>
+<span class="c1">// These two are equivalent. The second fills in a defaultof 100.</span>
+<span class="nx">myLayer</span><span class="p">.</span><span class="nx">scale</span><span class="p">.</span><span class="nx">setValue</span><span class="p">([</span><span class="mf">50</span><span class="p">,</span><span class="w"> </span><span class="mf">50</span><span class="p">,</span><span class="w"> </span><span class="mf">100</span><span class="p">]);</span>
+<span class="nx">myLayer</span><span class="p">.</span><span class="nx">scale</span><span class="p">.</span><span class="nx">setValue</span><span class="p">([</span><span class="mf">50</span><span class="p">,</span><span class="w"> </span><span class="mf">50</span><span class="p">]);</span>
+<span class="c1">// These two are equivalent. The second fills in a defaultof 1.0</span>
+<span class="nx">myLight</span><span class="p">.</span><span class="nx">color</span><span class="p">.</span><span class="nx">setValue</span><span class="p">([</span><span class="mf">0.8</span><span class="p">,</span><span class="w"> </span><span class="mf">0.3</span><span class="p">,</span><span class="w"> </span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">]);</span>
+<span class="nx">myLight</span><span class="p">.</span><span class="nx">color</span><span class="p">.</span><span class="nx">setValue</span><span class="p">([</span><span class="mf">0.8</span><span class="p">,</span><span class="w"> </span><span class="mf">0.3</span><span class="p">,</span><span class="w"> </span><span class="mf">0.1</span><span class="p">]);</span>
+<span class="c1">// These two are equivalent. The second creates a TextDocument</span>
+<span class="nx">myTextLayer</span><span class="p">.</span><span class="nx">sourceText</span><span class="p">.</span><span class="nx">setValue</span><span class="p">(</span><span class="nx">newTextDocument</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">));</span>
+<span class="nx">myTextLayer</span><span class="p">.</span><span class="nx">sourceText</span><span class="p">.</span><span class="nx">setValue</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">);</span>
+</code></pre></div>
+<hr />
+<h2 id="attributes">Attributes<a class="headerlink" href="#attributes" title="Permanent link">&para;</a></h2>
+<h3 id="propertyalternatesource">Property.alternateSource<a class="headerlink" href="#propertyalternatesource" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.alternateSource</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 18.0 (2021)</p>
+</div>
+<h4 id="description_1">Description<a class="headerlink" href="#description_1" title="Permanent link">&para;</a></h4>
+<p>The value is <code>null</code> when:</p>
+<ul>
+<li>The alternate source is not set for the associated layer.</li>
+<li>The property cannot be used to set an alternate source.</li>
+</ul>
+<p>Use <a href="#propertycansetalternatesource">Property.canSetAlternateSource</a> to determine if the property is a Media Replacement Essential Property.</p>
+<p>All Media Replacement Layers have an alternate source item that can be set.</p>
+<p>A layer is "marked" for media replacement when the layer is added to the Essential Graphics Panel (see <a href="../../layer/avlayer/#avlayeraddtomotiongraphicstemplate">AVLayer.addToMotionGraphicsTemplate()</a> or <a href="../../layer/avlayer/#avlayeraddtomotiongraphicstemplateas">AVLayer.addToMotionGraphicsTemplateAs()</a>).</p>
+<ul>
+<li>If present, the render workflow will pick up the alternate source while rendering the layer.</li>
+<li>If the alternate source for the layer is not set, then the source layer of the Media Replacement control is used for rendering (this is the normal workflow).</li>
+</ul>
+<p>Use <a href="#propertysetalternatesource">Property.setAlternateSource()</a> to change the value.</p>
+<h4 id="type">Type<a class="headerlink" href="#type" title="Permanent link">&para;</a></h4>
+<p>AVItem object; read-only.</p>
+<hr />
+<h3 id="propertycansetalternatesource">Property.canSetAlternateSource<a class="headerlink" href="#propertycansetalternatesource" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.canSetAlternateSource</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 18.0 (2021)</p>
+</div>
+<h4 id="description_2">Description<a class="headerlink" href="#description_2" title="Permanent link">&para;</a></h4>
+<p>Test whether the property is an Essential Property that supports Media Replacement.</p>
+<p>Returns <code>true</code> if the property allows Media Replacement, otherwise <code>false</code>.</p>
+<h4 id="type_1">Type<a class="headerlink" href="#type_1" title="Permanent link">&para;</a></h4>
+<p>Boolean; read-only.</p>
+<hr />
+<h3 id="propertycansetexpression">Property.canSetExpression<a class="headerlink" href="#propertycansetexpression" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.canSetExpression</code></p>
+<h4 id="description_3">Description<a class="headerlink" href="#description_3" title="Permanent link">&para;</a></h4>
+<p>When <code>true</code>, the named property is of a type whose expression can be set by a script. See also <a href="#propertyexpression">Property expression</a> attribute.</p>
+<h4 id="type_2">Type<a class="headerlink" href="#type_2" title="Permanent link">&para;</a></h4>
+<p>Boolean; read-only.</p>
+<hr />
+<h3 id="propertycanvaryovertime">Property.canVaryOverTime<a class="headerlink" href="#propertycanvaryovertime" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.canVaryOverTime</code></p>
+<h4 id="description_4">Description<a class="headerlink" href="#description_4" title="Permanent link">&para;</a></h4>
+<p>When <code>true</code>, the named property can vary over time—that is, keyframe values or expressions can be written to this property.</p>
+<h4 id="type_3">Type<a class="headerlink" href="#type_3" title="Permanent link">&para;</a></h4>
+<p>Boolean; read-only.</p>
+<hr />
+<h3 id="propertydimensionsseparated">Property.dimensionsSeparated<a class="headerlink" href="#propertydimensionsseparated" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.dimensionsSeparated</code></p>
+<h4 id="description_5">Description<a class="headerlink" href="#description_5" title="Permanent link">&para;</a></h4>
+<p>When <code>true</code>, the property's dimensions are represented as separate properties. For example, if the layer's position is represented as X Position and Y Position properties in the Timeline panel, the Position property has this attribute set to <code>true</code>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>This attribute applies only when the <a href="#propertyisseparationleader">isSeparationLeader</a> attribute is <code>true</code>.</p>
+</div>
+<h4 id="type_4">Type<a class="headerlink" href="#type_4" title="Permanent link">&para;</a></h4>
+<p>Boolean; read/write.</p>
+<hr />
+<h3 id="propertyessentialpropertysource">Property.essentialPropertySource<a class="headerlink" href="#propertyessentialpropertysource" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).essentialProperty.property(index).essentialPropertySource</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 22.0 (2022)</p>
+</div>
+<h4 id="description_6">Description<a class="headerlink" href="#description_6" title="Permanent link">&para;</a></h4>
+<p>Instance property on an Essential Property object which returns the original source Property which was used to create the Essential Property.</p>
+<h4 id="type_5">Type<a class="headerlink" href="#type_5" title="Permanent link">&para;</a></h4>
+<p>Can be either:</p>
+<ul>
+<li>A read/write <a href="#property-object">Property object</a>, in the case that the source object used to create the Essential Property was a Property</li>
+<li>A read/write <a href="../../layer/avlayer/">AVLayer object</a>, in the case that the source object used to create the Essential Property was a Media Replacement Footage item</li>
+<li><code>null</code> if called on a non-Essential Property</li>
+</ul>
+<h4 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">firstComp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">opacityProp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">firstComp</span><span class="p">.</span><span class="nx">layer</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">property</span><span class="p">(</span><span class="s2">&quot;Transform&quot;</span><span class="p">).</span><span class="nx">property</span><span class="p">(</span><span class="s2">&quot;Opacity&quot;</span><span class="p">);</span>
+
+<span class="nx">opacityProp</span><span class="p">.</span><span class="nx">addToMotionGraphicsTemplate</span><span class="p">(</span><span class="nx">firstComp</span><span class="p">);</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">secondComp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">2</span><span class="p">);</span>
+<span class="nx">secondComp</span><span class="p">.</span><span class="nx">layers</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">firstComp</span><span class="p">);</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">essentialOpacity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">secondComp</span><span class="p">.</span><span class="nx">layer</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">essentialProperty</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">essentialOpacity</span><span class="p">.</span><span class="nx">essentialPropertySource</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nx">opacityProp</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;You can get the source Property from an Essential Property!&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h3 id="propertyexpression">Property.expression<a class="headerlink" href="#propertyexpression" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.expression</code></p>
+<h4 id="description_7">Description<a class="headerlink" href="#description_7" title="Permanent link">&para;</a></h4>
+<p>The expression for the named property. Writeable only when <a href="#propertycansetexpression">canSetExpression</a> for the named property is <code>true</code>. When you specify a value for this attribute, the string is evaluated.</p>
+<ul>
+<li>If the string contains a valid expression, <a href="#propertyexpressionenabled">expressionEnabled</a> becomes true.</li>
+<li>If the string does not contain a valid expression, an error is generated, and <a href="#propertyexpressionenabled">expressionEnabled</a> becomes <code>false</code>.</li>
+<li>If you set the attribute to the empty string, <a href="#propertyexpressionenabled">expressionEnabled</a> becomes <code>false</code>, but no error is generated.</li>
+</ul>
+<h4 id="type_6">Type<a class="headerlink" href="#type_6" title="Permanent link">&para;</a></h4>
+<p>String; read/write if <a href="#propertycansetexpression">canSetExpression</a> for the named property is <code>true</code>.</p>
+<hr />
+<h3 id="propertyexpressionenabled">Property.expressionEnabled<a class="headerlink" href="#propertyexpressionenabled" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.expressionEnabled</code></p>
+<h4 id="description_8">Description<a class="headerlink" href="#description_8" title="Permanent link">&para;</a></h4>
+<p>When <code>true</code>, the named property uses its associated expression to generate a value. When <code>false</code>, the keyframe information or static value of the property is used. This attribute can be set to <code>true</code> only if <a href="#propertycansetexpression">canSetExpression</a> for the named property is <code>true</code> and <a href="#propertyexpression">expression</a> contains a valid expression string.</p>
+<h4 id="type_7">Type<a class="headerlink" href="#type_7" title="Permanent link">&para;</a></h4>
+<p>Boolean; read/write.</p>
+<hr />
+<h3 id="propertyexpressionerror">Property.expressionError<a class="headerlink" href="#propertyexpressionerror" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.expressionError</code></p>
+<h4 id="description_9">Description<a class="headerlink" href="#description_9" title="Permanent link">&para;</a></h4>
+<p>Contains the error, if any, generated by evaluation of the string most recently set in <a href="#propertyexpression">expression</a>. If no expression string has been specified, or if the last expression string evaluated without error, contains the empty string <code>("")</code>.</p>
+<h4 id="type_8">Type<a class="headerlink" href="#type_8" title="Permanent link">&para;</a></h4>
+<p>String; read-only.</p>
+<hr />
+<h3 id="propertyhasmax">Property.hasMax<a class="headerlink" href="#propertyhasmax" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.hasMax</code></p>
+<h4 id="description_10">Description<a class="headerlink" href="#description_10" title="Permanent link">&para;</a></h4>
+<p>When <code>true</code>, there is a maximum permitted value for the named property; otherwise <code>false</code>.</p>
+<h4 id="type_9">Type<a class="headerlink" href="#type_9" title="Permanent link">&para;</a></h4>
+<p>Boolean; read-only.</p>
+<hr />
+<h3 id="propertyhasmin">Property.hasMin<a class="headerlink" href="#propertyhasmin" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.hasMin</code></p>
+<h4 id="description_11">Description<a class="headerlink" href="#description_11" title="Permanent link">&para;</a></h4>
+<p>When <code>true</code>, there is a minimum permitted value for the named property; otherwise <code>false</code>.</p>
+<h4 id="type_10">Type<a class="headerlink" href="#type_10" title="Permanent link">&para;</a></h4>
+<p>Boolean; read-only.</p>
+<hr />
+<h3 id="propertyisdropdowneffect">Property.isDropdownEffect<a class="headerlink" href="#propertyisdropdowneffect" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.isDropdownEffect</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 17.0.1 (2020)</p>
+</div>
+<h4 id="description_12">Description<a class="headerlink" href="#description_12" title="Permanent link">&para;</a></h4>
+<p>When <code>true</code>, the property is the Menu property of a Dropdown Menu Control effect and can have its items updated with <a href="#propertysetpropertyparameters">setPropertyParameters</a>.</p>
+<h4 id="examples_1">Examples<a class="headerlink" href="#examples_1" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="nx">appliedEffect</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="s2">&quot;Menu&quot;</span><span class="p">).</span><span class="nx">isDropdownEffect</span><span class="p">;</span><span class="w">    </span><span class="c1">// true</span>
+<span class="nx">appliedEffect</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="s2">&quot;Color&quot;</span><span class="p">).</span><span class="nx">isDropdownEffect</span><span class="p">;</span><span class="w">   </span><span class="c1">// false</span>
+<span class="nx">appliedEffect</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="s2">&quot;Feather&quot;</span><span class="p">).</span><span class="nx">isDropdownEffect</span><span class="p">;</span><span class="w"> </span><span class="c1">// false</span>
+</code></pre></div>
+<h4 id="type_11">Type<a class="headerlink" href="#type_11" title="Permanent link">&para;</a></h4>
+<p>Boolean; read-only.</p>
+<hr />
+<h3 id="propertyisseparationfollower">Property.isSeparationFollower<a class="headerlink" href="#propertyisseparationfollower" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.isSeparationFollower</code></p>
+<h4 id="description_13">Description<a class="headerlink" href="#description_13" title="Permanent link">&para;</a></h4>
+<p>When <code>true</code>, the property represents one of the separated dimensions for a multidimensional property. For example, the X Position property has this attribute set to <code>true</code>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The original, consolidated, multidimensional property is the "separation leader" and the new, separated, single-dimensional properties are its "separation followers".</p>
+</div>
+<h4 id="type_12">Type<a class="headerlink" href="#type_12" title="Permanent link">&para;</a></h4>
+<p>Boolean; read-only.</p>
+<hr />
+<h3 id="propertyisseparationleader">Property.isSeparationLeader<a class="headerlink" href="#propertyisseparationleader" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.isSeparationLeader</code></p>
+<h4 id="description_14">Description<a class="headerlink" href="#description_14" title="Permanent link">&para;</a></h4>
+<p>When <code>true</code>, the property is multidimensional and can be separated. For example, the Position property has this attribute set to <code>true</code>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The original, consolidated, multidimensional property is the "separation leader" and the new, separated, single-dimensional properties are its "separation followers".</p>
+</div>
+<h4 id="type_13">Type<a class="headerlink" href="#type_13" title="Permanent link">&para;</a></h4>
+<p>Boolean; read-only.</p>
+<hr />
+<h3 id="propertyisspatial">Property.isSpatial<a class="headerlink" href="#propertyisspatial" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.isSpatial</code></p>
+<h4 id="description_15">Description<a class="headerlink" href="#description_15" title="Permanent link">&para;</a></h4>
+<p>When <code>true</code>, the named property defines a spatial value. Examples are position and effect point controls.</p>
+<h4 id="type_14">Type<a class="headerlink" href="#type_14" title="Permanent link">&para;</a></h4>
+<p>Boolean; read-only.</p>
+<hr />
+<h3 id="propertyistimevarying">Property.isTimeVarying<a class="headerlink" href="#propertyistimevarying" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.isTimeVarying</code></p>
+<h4 id="description_16">Description<a class="headerlink" href="#description_16" title="Permanent link">&para;</a></h4>
+<p>When <code>true</code>, the named property is time varying — that is, it has keyframes or an enabled expression. When this attribute is <code>true</code>, the attribute <code>canVaryOverTime</code>
+must also be true.</p>
+<h4 id="type_15">Type<a class="headerlink" href="#type_15" title="Permanent link">&para;</a></h4>
+<p>Boolean; read-only.</p>
+<hr />
+<h3 id="propertymaxvalue">Property.maxValue<a class="headerlink" href="#propertymaxvalue" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.maxValue</code></p>
+<h4 id="description_17">Description<a class="headerlink" href="#description_17" title="Permanent link">&para;</a></h4>
+<p>The maximum permitted value of the named property. If the <code>hasMax</code> attribute is <code>false</code>, an exception occurs, and an error is generated.</p>
+<h4 id="type_16">Type<a class="headerlink" href="#type_16" title="Permanent link">&para;</a></h4>
+<p>Floating-point value; read-only.</p>
+<hr />
+<h3 id="propertyminvalue">Property.minValue<a class="headerlink" href="#propertyminvalue" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.minValue</code></p>
+<h4 id="description_18">Description<a class="headerlink" href="#description_18" title="Permanent link">&para;</a></h4>
+<p>The minimum permitted value of the named property. If the <code>hasMin</code> attribute is <code>false</code>, an exception occurs, and an error is generated.</p>
+<h4 id="type_17">Type<a class="headerlink" href="#type_17" title="Permanent link">&para;</a></h4>
+<p>Floating-point value; read-only.</p>
+<hr />
+<h3 id="propertynumkeys">Property.numKeys<a class="headerlink" href="#propertynumkeys" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.numKeys</code></p>
+<h4 id="description_19">Description<a class="headerlink" href="#description_19" title="Permanent link">&para;</a></h4>
+<p>The number of keyframes in the named property. If the value is 0, the property is not being keyframed.</p>
+<h4 id="type_18">Type<a class="headerlink" href="#type_18" title="Permanent link">&para;</a></h4>
+<p>Integer; read-only.</p>
+<hr />
+<h3 id="propertypropertyindex">Property.propertyIndex<a class="headerlink" href="#propertypropertyindex" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.propertyIndex</code></p>
+<h4 id="description_20">Description<a class="headerlink" href="#description_20" title="Permanent link">&para;</a></h4>
+<p>The position index of the named property. The first property is at index position 1.</p>
+<h4 id="type_19">Type<a class="headerlink" href="#type_19" title="Permanent link">&para;</a></h4>
+<p>Integer; read-only.</p>
+<hr />
+<h3 id="propertypropertyvaluetype">Property.propertyValueType<a class="headerlink" href="#propertypropertyvaluetype" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.propertyValueType</code></p>
+<h4 id="description_21">Description<a class="headerlink" href="#description_21" title="Permanent link">&para;</a></h4>
+<p>The type of value stored in the named property. The <code>PropertyValueType</code> enumeration has one value for each type of data that can be stored in or retrieved from a property. Each type of data is stored and retrieved in a different kind of structure. All property objects store data according to one of these categories. For example, a 3D spatial property (such as a layer's position) is stored as an array of three floating-point values. When setting a value for position, pass in such an array, as follows: <code>mylayer.property("position").setValue([10, 20, 0]);</code></p>
+<p>In contrast, a shape property (such as a layer's mask shape) is stored as a Shape object. When setting a value for a shape, pass a Shape object, as follows:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">myShape</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Shape</span><span class="p">();</span>
+<span class="nx">myShape</span><span class="p">.</span><span class="nx">vertices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[[</span><span class="mf">0</span><span class="p">,</span><span class="mf">0</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mf">0</span><span class="p">,</span><span class="mf">100</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mf">100</span><span class="p">,</span><span class="mf">100</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mf">100</span><span class="p">,</span><span class="mf">0</span><span class="p">]];</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">myMask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">mylayer</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="s2">&quot;ADBE Mask Parade&quot;</span><span class="p">).</span><span class="nx">property</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+<span class="nx">myMask</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="s2">&quot;ADBE Mask Shape&quot;</span><span class="p">).</span><span class="nx">setValue</span><span class="p">(</span><span class="nx">myShape</span><span class="p">);</span>
+</code></pre></div>
+<h4 id="type_20">Type<a class="headerlink" href="#type_20" title="Permanent link">&para;</a></h4>
+<p>A <code>PropertyValueType</code> enumerated value; read/write. One of:</p>
+<ul>
+<li><code>PropertyValueType.NO_VALUE</code>: Stores no data.</li>
+<li><code>PropertyValueType.ThreeD_SPATIAL</code>: Array of three floating-point positional values. For example, an Anchor Point value might be [10.0, 20.2, 0.0]</li>
+<li><code>PropertyValueType.ThreeD</code>: Array of three floating-point quantitative values. For example, a Scale value might be [100.0, 20.2, 0.0]</li>
+<li><code>PropertyValueType.TwoD_SPATIAL</code>: Array of 2 floating-point positional values. For example, an Anchor Point value might be [5.1, 10.0]</li>
+<li><code>PropertyValueType.TwoD</code>: Array of 2 floating-point quantitative values. For example, a Scale value might be [5.1, 100.0]</li>
+<li><code>PropertyValueType.OneD</code>: A floating-point value.</li>
+<li><code>PropertyValueType.COLOR</code>:Array of 4 floating-point values in the range <code>[0.0..1.0]</code>. For example, [0.8, 0.3, 0.1, 1.0]</li>
+<li><code>PropertyValueType.CUSTOM_VALUE</code> : Custom property value, such as the Histogram property for the Levels effect.</li>
+<li><code>PropertyValueType.MARKER</code>: <a href="../../other/markervalue/">MarkerValue object</a></li>
+<li><code>PropertyValueType.LAYER_INDEX</code>: Integer; a value of 0 means no layer.</li>
+<li><code>PropertyValueType.MASK_INDEX</code>: Integer; a value of 0 means no mask.</li>
+<li><code>PropertyValueType.SHAPE</code>: <a href="../../other/shape/">Shape object</a></li>
+<li><code>PropertyValueType.TEXT_DOCUMENT</code>: <a href="../../text/textdocument/">TextDocument object</a></li>
+</ul>
+<hr />
+<h3 id="propertyselectedkeys">Property.selectedKeys<a class="headerlink" href="#propertyselectedkeys" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.selectedKeys</code></p>
+<h4 id="description_22">Description<a class="headerlink" href="#description_22" title="Permanent link">&para;</a></h4>
+<p>The indices of all the selected keyframes in the named property. If no keyframes are selected, or if the property has no keyframes, returns an empty array.</p>
+<h4 id="type_21">Type<a class="headerlink" href="#type_21" title="Permanent link">&para;</a></h4>
+<p>Array of integers; read-only.</p>
+<hr />
+<h3 id="propertyseparationdimension">Property.separationDimension<a class="headerlink" href="#propertyseparationdimension" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.separationDimension</code></p>
+<h4 id="description_23">Description<a class="headerlink" href="#description_23" title="Permanent link">&para;</a></h4>
+<p>For a separated follower, the dimension number it represents in the multidimensional leader. The first dimension starts at 0. For example, the Y Position property has a <code>separationDimension</code> value of 1; X Position has a value of 0.</p>
+<h4 id="type_22">Type<a class="headerlink" href="#type_22" title="Permanent link">&para;</a></h4>
+<p>Integer; read-only.</p>
+<hr />
+<h3 id="propertyseparationleader">Property.separationLeader<a class="headerlink" href="#propertyseparationleader" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.separationLeader</code></p>
+<h4 id="description_24">Description<a class="headerlink" href="#description_24" title="Permanent link">&para;</a></h4>
+<p>The original multidimensional property for this separated follower. For example, if the current property is Y Position, this attribute's value points to the Position property.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The original, consolidated, multidimensional property is the "separation leader" and the new, separated, single-dimensional properties are its "separation followers".</p>
+</div>
+<h4 id="type_23">Type<a class="headerlink" href="#type_23" title="Permanent link">&para;</a></h4>
+<p>Property object; read-only.</p>
+<hr />
+<h3 id="propertyunitstext">Property.unitsText<a class="headerlink" href="#propertyunitstext" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.unitsText</code></p>
+<h4 id="description_25">Description<a class="headerlink" href="#description_25" title="Permanent link">&para;</a></h4>
+<p>The text description of the units in which the value is expressed.</p>
+<h4 id="type_24">Type<a class="headerlink" href="#type_24" title="Permanent link">&para;</a></h4>
+<p>String; read-only.</p>
+<hr />
+<h3 id="propertyvalue">Property.value<a class="headerlink" href="#propertyvalue" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.value</code></p>
+<h4 id="description_26">Description<a class="headerlink" href="#description_26" title="Permanent link">&para;</a></h4>
+<p>The value of the named property at the current time.</p>
+<ul>
+<li>If <code>expressionEnabled</code> is <code>true</code>, returns the evaluated expression value.</li>
+<li>If there are keyframes, returns the keyframed value at the current time.</li>
+<li>Otherwise, returns the static value.</li>
+</ul>
+<p>The type of value returned depends on the property value type. See <a href="#examples">examples for Property object</a>.</p>
+<h4 id="type_25">Type<a class="headerlink" href="#type_25" title="Permanent link">&para;</a></h4>
+<p>A value appropriate for the type of the property (see <a href="#propertypropertyvaluetype">Property.propertyValueType</a>); read-only.</p>
+<hr />
+<h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h2>
+<h3 id="propertyaddkey">Property.addKey()<a class="headerlink" href="#propertyaddkey" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.addKey(time)</code></p>
+<h4 id="description_27">Description<a class="headerlink" href="#description_27" title="Permanent link">&para;</a></h4>
+<p>Adds a new keyframe or marker to the named property at the specified time and returns the index of the new keyframe.</p>
+<h4 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>time</code></td>
+<td>Floating-point value</td>
+<td>The time, in seconds, at which to add the keyframe. The beginning of the composition is 0.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns">Returns<a class="headerlink" href="#returns" title="Permanent link">&para;</a></h4>
+<p>Integer; the index of the new keyframe or marker.</p>
+<hr />
+<h3 id="propertyaddtomotiongraphicstemplate">Property.addToMotionGraphicsTemplate()<a class="headerlink" href="#propertyaddtomotiongraphicstemplate" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.addToMotionGraphicsTemplate(comp)</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 15.0 (CC 2018)</p>
+</div>
+<h4 id="description_28">Description<a class="headerlink" href="#description_28" title="Permanent link">&para;</a></h4>
+<p>Adds the property to the Essential Graphics panel for the specified composition.</p>
+<p>Returns <code>true</code> if the property is successfully added, otherwise <code>false</code>.</p>
+<p>If the property is not added, it is either because it is not one of the supported property types or the property has already been added to the EGP for that composition. After Effects will present a warning dialog if the property cannot be added to the EGP.</p>
+<p>Use the <a href="#propertycanaddtomotiongraphicstemplate">Property.canAddToMotionGraphicsTemplate()</a> method to test whether the property can be added to a Motion Graphics template.</p>
+<h4 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>comp</code></td>
+<td><a href="../../item/compitem/">CompItem</a></td>
+<td>The composition that you wish to add the property to.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_1">Returns<a class="headerlink" href="#returns_1" title="Permanent link">&para;</a></h4>
+<p>Boolean.</p>
+<hr />
+<h3 id="propertyaddtomotiongraphicstemplateas">Property.addToMotionGraphicsTemplateAs()<a class="headerlink" href="#propertyaddtomotiongraphicstemplateas" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.addToMotionGraphicsTemplateAs(comp, name)</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 16.1 (CC 2019)</p>
+</div>
+<h4 id="description_29">Description<a class="headerlink" href="#description_29" title="Permanent link">&para;</a></h4>
+<p>Adds the property to the Essential Graphics panel for the specified composition, but with an additional option to give the EGP property a custom name.</p>
+<p>Returns <code>true</code> if the property is successfully added, otherwise <code>false</code>.</p>
+<p>If the property is not added, it is either because it is not one of the supported property types or the property has already been added to the EGP for that composition. After Effects will present a warning dialog if the property cannot be added to the EGP.</p>
+<p>Use the <a href="#propertycanaddtomotiongraphicstemplate">Property.canAddToMotionGraphicsTemplate()</a> method to test whether the property can be added to a Motion Graphics template.</p>
+<h4 id="parameters_2">Parameters<a class="headerlink" href="#parameters_2" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>comp</code></td>
+<td><a href="../../item/compitem/">CompItem</a></td>
+<td>The composition that you wish to add the property to.</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>String</td>
+<td>The new name.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_2">Returns<a class="headerlink" href="#returns_2" title="Permanent link">&para;</a></h4>
+<p>Boolean.</p>
+<hr />
+<h3 id="propertycanaddtomotiongraphicstemplate">Property.canAddToMotionGraphicsTemplate()<a class="headerlink" href="#propertycanaddtomotiongraphicstemplate" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.canAddToMotionGraphicsTemplate(comp)</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 15.0 (CC 2018)</p>
+</div>
+<h4 id="description_30">Description<a class="headerlink" href="#description_30" title="Permanent link">&para;</a></h4>
+<p>Test whether or not the property can be added to the Essential Graphics panel for the specified composition.</p>
+<p>Returns <code>true</code> if the property can be added, otherwise <code>false</code>.</p>
+<p>If the property can not be added, it is either because it is not one of the supported property types or the property has already been added to the EGP for that composition. After Effects will present a warning dialog if the property cannot be added to the EGP.</p>
+<p>Supported property types are:</p>
+<ul>
+<li>Checkbox</li>
+<li>Color</li>
+<li>Numerical Slider (i.e., a single-value numerical property, such as Transform &gt; Opacity or the Slider Control expression control effect)</li>
+<li>Source Text</li>
+</ul>
+<h4 id="parameters_3">Parameters<a class="headerlink" href="#parameters_3" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>comp</code></td>
+<td><a href="../../item/compitem/">CompItem</a></td>
+<td>The composition that you wish to add the property to.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_3">Returns<a class="headerlink" href="#returns_3" title="Permanent link">&para;</a></h4>
+<p>Boolean.</p>
+<hr />
+<h3 id="propertygetseparationfollower">Property.getSeparationFollower()<a class="headerlink" href="#propertygetseparationfollower" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.getSeparationFollower(dim)</code></p>
+<h4 id="description_31">Description<a class="headerlink" href="#description_31" title="Permanent link">&para;</a></h4>
+<p>For a separated, multidimensional property, retrieves a specific follower property. For example, you can use this method on the Position property to access the separated X Position and Y Position properties</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>This attribute applies only when the <a href="#propertyisseparationleader">isSeparationLeader</a> attribute is <code>true</code>.</p>
+</div>
+<h4 id="parameters_4">Parameters<a class="headerlink" href="#parameters_4" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dim</code></td>
+<td>Integer</td>
+<td>The dimension number (starting at 0).</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_4">Returns<a class="headerlink" href="#returns_4" title="Permanent link">&para;</a></h4>
+<p>Property object, or an error if the property is not multidimensional or does not have the specified dimension.</p>
+<hr />
+<h3 id="propertyisinterpolationtypevalid">Property.isInterpolationTypeValid()<a class="headerlink" href="#propertyisinterpolationtypevalid" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.isInterpolationTypeValid(type)</code></p>
+<h4 id="description_32">Description<a class="headerlink" href="#description_32" title="Permanent link">&para;</a></h4>
+<p>Returns <code>true</code> if the named property can be interpolated using the specified keyframe interpolation type.</p>
+<h4 id="parameters_5">Parameters<a class="headerlink" href="#parameters_5" title="Permanent link">&para;</a></h4>
+<h4 id="type_26">Type<a class="headerlink" href="#type_26" title="Permanent link">&para;</a></h4>
+<p>A <code>KeyframeInterpolationType</code> enumerated value; one of:</p>
+<ul>
+<li><code>KeyframeInterpolationType.LINEAR</code></li>
+<li><code>KeyframeInterpolationType.BEZIER</code></li>
+<li><code>KeyframeInterpolationType.HOLD</code></li>
+</ul>
+<h4 id="returns_5">Returns<a class="headerlink" href="#returns_5" title="Permanent link">&para;</a></h4>
+<p>Boolean.</p>
+<hr />
+<h3 id="propertykeyininterpolationtype">Property.keyInInterpolationType()<a class="headerlink" href="#propertykeyininterpolationtype" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.keyInInterpolationType(keyIndex)</code></p>
+<h4 id="description_33">Description<a class="headerlink" href="#description_33" title="Permanent link">&para;</a></h4>
+<p>Returns the 'in' interpolation type for the specified keyframe.</p>
+<h4 id="parameters_6">Parameters<a class="headerlink" href="#parameters_6" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>keyIndex</code></td>
+<td>Integer, in the range <code>[1..numKeys]</code></td>
+<td>The index for the keyframe, as returned by the <a href="#propertyaddkey">addKey</a> or <a href="#propertynearestkeyindex">nearestKeyIndex</a>.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_6">Returns<a class="headerlink" href="#returns_6" title="Permanent link">&para;</a></h4>
+<p>A <code>KeyframeInterpolationType</code> enumerated value; one of:</p>
+<ul>
+<li><code>KeyframeInterpolationType.LINEAR</code></li>
+<li><code>KeyframeInterpolationType.BEZIER</code></li>
+<li><code>KeyframeInterpolationType.HOLD</code></li>
+</ul>
+<hr />
+<h3 id="propertykeyinspatialtangent">Property.keyInSpatialTangent()<a class="headerlink" href="#propertykeyinspatialtangent" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.keyInSpatialTangent(keyIndex)</code></p>
+<h4 id="description_34">Description<a class="headerlink" href="#description_34" title="Permanent link">&para;</a></h4>
+<p>Returns the incoming spatial tangent for the specified keyframe, if the named property is spatial (that is, the value type is <code>TwoD_SPATIALorThreeD_SPATIAL</code>).</p>
+<h4 id="parameters_7">Parameters<a class="headerlink" href="#parameters_7" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>keyIndex</code></td>
+<td>Integer, in the range <code>[1..numKeys]</code></td>
+<td>The index for the keyframe, as returned by the <a href="#propertyaddkey">addKey</a> or <a href="#propertynearestkeyindex">nearestKeyIndex</a>.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_7">Returns<a class="headerlink" href="#returns_7" title="Permanent link">&para;</a></h4>
+<p>Array of floating-point values:</p>
+<ul>
+<li>If the property value type is <code>PropertyValueType.TwoD_SPATIAL</code>, the array contains 2 floating-point values.</li>
+<li>If the property value type is <code>PropertyValueType.ThreeD_SPATIAL</code>, the array contains 3 floating-point values.</li>
+<li>If the property value type is neither of these types, an exception is generated.</li>
+</ul>
+<hr />
+<h3 id="propertykeyintemporalease">Property.keyInTemporalEase()<a class="headerlink" href="#propertykeyintemporalease" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.keyInTemporalEase(keyIndex)</code></p>
+<h4 id="description_35">Description<a class="headerlink" href="#description_35" title="Permanent link">&para;</a></h4>
+<p>Returns the incoming temporal ease for the specified keyframe.</p>
+<h4 id="parameters_8">Parameters<a class="headerlink" href="#parameters_8" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>keyIndex</code></td>
+<td>Integer, in the range <code>[1..numKeys]</code></td>
+<td>The index for the keyframe, as returned by the <a href="#propertyaddkey">addKey</a> or <a href="#propertynearestkeyindex">nearestKeyIndex</a>.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_8">Returns<a class="headerlink" href="#returns_8" title="Permanent link">&para;</a></h4>
+<p>Array of <a href="../../other/keyframeease/">KeyframeEase objects</a>:</p>
+<ul>
+<li>If the property value type is <code>PropertyValueType.TwoD</code>, the array contains 2 objects.</li>
+<li>If the property value type is <code>PropertyValueType.ThreeD</code>, the array contains 3 objects.</li>
+<li>For any other value type, the array contains 1 object.</li>
+</ul>
+<hr />
+<h3 id="propertykeylabel">Property.keyLabel()<a class="headerlink" href="#propertykeylabel" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.keyLabel(keyIndex)</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 22.6.</p>
+</div>
+<h4 id="description_36">Description<a class="headerlink" href="#description_36" title="Permanent link">&para;</a></h4>
+<p>The label color for the keyframe. Colors are represented by their number (0 for None, or 1 to 16 for one of the preset colors in the Labels preferences).</p>
+<p>Read only. Keyframe color labels can be set by <a href="#propertysetlabelatkey">setLabelAtKey</a>.</p>
+<h4 id="parameters_9">Parameters<a class="headerlink" href="#parameters_9" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>keyIndex</code></td>
+<td>Integer, in the range <code>[1..numKeys]</code></td>
+<td>The index for the keyframe, as returned by the <a href="#propertyaddkey">addKey</a> or <a href="#propertynearestkeyindex">nearestKeyIndex</a>.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_9">Returns<a class="headerlink" href="#returns_9" title="Permanent link">&para;</a></h4>
+<p>Integer (0 to 16); read only.</p>
+<hr />
+<h3 id="propertykeyoutinterpolationtype">Property.keyOutInterpolationType()<a class="headerlink" href="#propertykeyoutinterpolationtype" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.keyOutInterpolationType(keyIndex)</code></p>
+<h4 id="description_37">Description<a class="headerlink" href="#description_37" title="Permanent link">&para;</a></h4>
+<p>Returns the outgoing interpolation type for the specified keyframe.</p>
+<h4 id="parameters_10">Parameters<a class="headerlink" href="#parameters_10" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>keyIndex</code></td>
+<td>Integer, in the range <code>[1..numKeys]</code></td>
+<td>The index for the keyframe, as returned by the <a href="#propertyaddkey">addKey</a> or <a href="#propertynearestkeyindex">nearestKeyIndex</a>.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_10">Returns<a class="headerlink" href="#returns_10" title="Permanent link">&para;</a></h4>
+<p>A <code>KeyframeInterpolationType</code> enumerated value; one of:</p>
+<ul>
+<li><code>KeyframeInterpolationType.LINEAR</code></li>
+<li><code>KeyframeInterpolationType.BEZIER</code></li>
+<li><code>KeyframeInterpolationType.HOLD</code></li>
+</ul>
+<hr />
+<h3 id="propertykeyoutspatialtangent">Property.keyOutSpatialTangent()<a class="headerlink" href="#propertykeyoutspatialtangent" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.keyOutSpatialTangent(keyIndex)</code></p>
+<h4 id="description_38">Description<a class="headerlink" href="#description_38" title="Permanent link">&para;</a></h4>
+<p>Returns the outgoing spatial tangent for the specified keyframe.</p>
+<h4 id="parameters_11">Parameters<a class="headerlink" href="#parameters_11" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>keyIndex</code></td>
+<td>Integer, in the range <code>[1..numKeys]</code></td>
+<td>The index for the keyframe, as returned by the <a href="#propertyaddkey">addKey</a> or <a href="#propertynearestkeyindex">nearestKeyIndex</a>.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_11">Returns<a class="headerlink" href="#returns_11" title="Permanent link">&para;</a></h4>
+<p>Array of floating-point values:</p>
+<ul>
+<li>If the property value type is <code>PropertyValueType.TwoD_SPATIAL</code>, the array contains 2 floating-point values.</li>
+<li>If the property value type is <code>PropertyValueType.ThreeD_SPATIAL</code>, the array contains 3 floating-point values.</li>
+<li>If the property value type is neither of these types, an exception is generated.</li>
+</ul>
+<hr />
+<h3 id="propertykeyouttemporalease">Property.keyOutTemporalEase()<a class="headerlink" href="#propertykeyouttemporalease" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.keyOutTemporalEase(keyIndex)</code></p>
+<h4 id="description_39">Description<a class="headerlink" href="#description_39" title="Permanent link">&para;</a></h4>
+<p>Returns the outgoing temporal ease for the specified keyframe.</p>
+<h4 id="parameters_12">Parameters<a class="headerlink" href="#parameters_12" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>keyIndex</code></td>
+<td>Integer, in the range <code>[1..numKeys]</code></td>
+<td>The index for the keyframe, as returned by the <a href="#propertyaddkey">addKey</a> or <a href="#propertynearestkeyindex">nearestKeyIndex</a>.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_12">Returns<a class="headerlink" href="#returns_12" title="Permanent link">&para;</a></h4>
+<p>Array of KeyframeEase objects:</p>
+<ul>
+<li>If the property value type is <code>PropertyValueType.TwoD</code>, the array contains 2 objects.</li>
+<li>If the property value type is <code>PropertyValueType.ThreeD</code>, the array contains 3 objects.</li>
+<li>For any other value type, the array contains 1 object.</li>
+</ul>
+<hr />
+<h3 id="propertykeyroving">Property.keyRoving()<a class="headerlink" href="#propertykeyroving" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.keyRoving(keyIndex)</code></p>
+<h4 id="description_40">Description<a class="headerlink" href="#description_40" title="Permanent link">&para;</a></h4>
+<p>Returns <code>true</code> if the specified keyframe is roving. The first and last keyframe in a property cannot rove; if you try to set roving for one of these, the operation is ignored, and keyRoving() continues to return <code>false</code>. If the property value type is neither <code>TwoD_SPATIAL</code> nor <code>ThreeD_SPATIAL</code>, an exception is generated.</p>
+<h4 id="parameters_13">Parameters<a class="headerlink" href="#parameters_13" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>keyIndex</code></td>
+<td>Integer, in the range <code>[1..numKeys]</code></td>
+<td>The index for the keyframe, as returned by the <a href="#propertyaddkey">addKey</a> or <a href="#propertynearestkeyindex">nearestKeyIndex</a>.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_13">Returns<a class="headerlink" href="#returns_13" title="Permanent link">&para;</a></h4>
+<p>Boolean.</p>
+<hr />
+<h3 id="propertykeyselected">Property.keySelected()<a class="headerlink" href="#propertykeyselected" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.keySelected(keyIndex)</code></p>
+<h4 id="description_41">Description<a class="headerlink" href="#description_41" title="Permanent link">&para;</a></h4>
+<p>Returns <code>true</code> if the specified keyframe is selected.</p>
+<h4 id="parameters_14">Parameters<a class="headerlink" href="#parameters_14" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>keyIndex</code></td>
+<td>Integer, in the range <code>[1..numKeys]</code></td>
+<td>The index for the keyframe, as returned by the <a href="#propertyaddkey">addKey</a> or <a href="#propertynearestkeyindex">nearestKeyIndex</a>.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_14">Returns<a class="headerlink" href="#returns_14" title="Permanent link">&para;</a></h4>
+<p>Boolean.</p>
+<hr />
+<h3 id="propertykeyspatialautobezier">Property.keySpatialAutoBezier()<a class="headerlink" href="#propertykeyspatialautobezier" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.keySpatialAutoBezier(keyIndex)</code></p>
+<h4 id="description_42">Description<a class="headerlink" href="#description_42" title="Permanent link">&para;</a></h4>
+<p>Returns <code>true</code> if the specified keyframe has spatial auto-Bezier interpolation. (This type of interpolation affects this keyframe only if <code>keySpatialContinuous(keyIndex)</code> is also true.) If the property value type is neither <code>TwoD_SPATIAL</code> nor <code>ThreeD_SPATIAL</code>, an exception is generated.</p>
+<h4 id="parameters_15">Parameters<a class="headerlink" href="#parameters_15" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>keyIndex</code></td>
+<td>Integer, in the range <code>[1..numKeys]</code></td>
+<td>The index for the keyframe, as returned by the <a href="#propertyaddkey">addKey</a> or <a href="#propertynearestkeyindex">nearestKeyIndex</a>.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_15">Returns<a class="headerlink" href="#returns_15" title="Permanent link">&para;</a></h4>
+<p>Boolean.</p>
+<hr />
+<h3 id="propertykeyspatialcontinuous">Property.keySpatialContinuous()<a class="headerlink" href="#propertykeyspatialcontinuous" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.keySpatialContinuous(keyIndex)</code></p>
+<h4 id="description_43">Description<a class="headerlink" href="#description_43" title="Permanent link">&para;</a></h4>
+<p>Returns <code>true</code> if the specified keyframe has spatial continuity. If the property value type is neither <code>TwoD_SPATIAL</code> nor <code>ThreeD_SPATIAL</code>, an exception is generated.</p>
+<h4 id="parameters_16">Parameters<a class="headerlink" href="#parameters_16" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>keyIndex</code></td>
+<td>Integer, in the range <code>[1..numKeys]</code></td>
+<td>The index for the keyframe, as returned by the <a href="#propertyaddkey">addKey</a> or <a href="#propertynearestkeyindex">nearestKeyIndex</a>.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_16">Returns<a class="headerlink" href="#returns_16" title="Permanent link">&para;</a></h4>
+<p>Boolean.</p>
+<hr />
+<h3 id="propertykeytemporalautobezier">Property.keyTemporalAutoBezier()<a class="headerlink" href="#propertykeytemporalautobezier" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.keyTemporalAutoBezier(keyIndex)</code></p>
+<h4 id="description_44">Description<a class="headerlink" href="#description_44" title="Permanent link">&para;</a></h4>
+<p>Returns <code>true</code> if the specified keyframe has temporal auto-Bezier interpolation. Temporal auto-Bezier interpolation affects this keyframe only if the keyframe interpolation type is <code>KeyframeInterpolationType.BEZIER</code> for both <code>keyInInterpolationType(keyIndex)</code> and <code>keyOutInterpolationType(keyIndex)</code>.</p>
+<h4 id="parameters_17">Parameters<a class="headerlink" href="#parameters_17" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>keyIndex</code></td>
+<td>Integer, in the range <code>[1..numKeys]</code></td>
+<td>The index for the keyframe, as returned by the <a href="#propertyaddkey">addKey</a> or <a href="#propertynearestkeyindex">nearestKeyIndex</a>.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_17">Returns<a class="headerlink" href="#returns_17" title="Permanent link">&para;</a></h4>
+<p>Boolean.</p>
+<hr />
+<h3 id="propertykeytemporalcontinuous">Property.keyTemporalContinuous()<a class="headerlink" href="#propertykeytemporalcontinuous" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.keyTemporalContinuous(keyIndex)</code></p>
+<h4 id="description_45">Description<a class="headerlink" href="#description_45" title="Permanent link">&para;</a></h4>
+<p>Returns <code>true</code> if the specified keyframe has temporal continuity. Temporal continuity affects this keyframe only if keyframe interpolation type is <code>KeyframeInterpolationType.BEZIER</code> for both <code>keyInInterpolationType(keyIndex)</code> and <code>keyOutInterpolationType(keyIndex)</code>.</p>
+<h4 id="parameters_18">Parameters<a class="headerlink" href="#parameters_18" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>keyIndex</code></td>
+<td>Integer, in the range <code>[1..numKeys]</code></td>
+<td>The index for the keyframe, as returned by the <a href="#propertyaddkey">addKey</a> or <a href="#propertynearestkeyindex">nearestKeyIndex</a>.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_18">Returns<a class="headerlink" href="#returns_18" title="Permanent link">&para;</a></h4>
+<p>Boolean.</p>
+<hr />
+<h3 id="propertykeytime">Property.keyTime()<a class="headerlink" href="#propertykeytime" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.keyTime(keyIndex)</code>
+<code>app.project.item(index).layer(index).propertySpec.keyTime(markerComment)</code></p>
+<h4 id="description_46">Description<a class="headerlink" href="#description_46" title="Permanent link">&para;</a></h4>
+<p>Finds the specified keyframe or marker and returns the time at which it occurs. If no keyframe or marker can be found that matches the argument, this method generates an exception, and an error is displayed.</p>
+<h4 id="parameters_19">Parameters<a class="headerlink" href="#parameters_19" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>keyIndex</code></td>
+<td>Integer, in the range <code>[1..numKeys]</code></td>
+<td>The index for the keyframe, as returned by the <a href="#propertyaddkey">addKey</a> or <a href="#propertynearestkeyindex">nearestKeyIndex</a>.</td>
+</tr>
+<tr>
+<td><code>markerComment</code></td>
+<td>String</td>
+<td>The comment attached to a marker (see <a href="../../other/markervalue/#markervaluecomment">MarkerValue.comment</a> attribute).</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_19">Returns<a class="headerlink" href="#returns_19" title="Permanent link">&para;</a></h4>
+<p>Floating-point value.</p>
+<hr />
+<h3 id="propertykeyvalue">Property.keyValue()<a class="headerlink" href="#propertykeyvalue" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.keyValue(keyIndex)</code>
+<br/>
+<code>app.project.item(index).layer(index).propertySpec.keyValue(markerComment)</code>
+<br/></p>
+<h4 id="description_47">Description<a class="headerlink" href="#description_47" title="Permanent link">&para;</a></h4>
+<p>Finds the specified keyframe or marker and returns its current value. If no keyframe or marker can be found that matches the argument, this method generates an exception, and an error is displayed.</p>
+<h4 id="parameters_20">Parameters<a class="headerlink" href="#parameters_20" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>keyIndex</code></td>
+<td>Integer, in the range <code>[1..numKeys]</code></td>
+<td>The index for the keyframe, as returned by the <a href="#propertyaddkey">addKey</a> or <a href="#propertynearestkeyindex">nearestKeyIndex</a>.</td>
+</tr>
+<tr>
+<td><code>markerComment</code></td>
+<td>String</td>
+<td>The comment attached to a marker (see <a href="../../other/markervalue/#markervaluecomment">MarkerValue.comment</a> attribute).</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_20">Returns<a class="headerlink" href="#returns_20" title="Permanent link">&para;</a></h4>
+<p>Returns the value of the type corresponding to the <a href="#propertypropertyvaluetype">PropertyValueType</a>.</p>
+<hr />
+<h3 id="propertynearestkeyindex">Property.nearestKeyIndex()<a class="headerlink" href="#propertynearestkeyindex" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.nearestKeyIndex(time)</code></p>
+<h4 id="description_48">Description<a class="headerlink" href="#description_48" title="Permanent link">&para;</a></h4>
+<p>Returns the index of the keyframe nearest to the specified time.</p>
+<h4 id="parameters_21">Parameters<a class="headerlink" href="#parameters_21" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>time</code></td>
+<td>Floating-point value</td>
+<td>The time, in seconds. The beginning of the composition is 0.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_21">Returns<a class="headerlink" href="#returns_21" title="Permanent link">&para;</a></h4>
+<p>Integer.</p>
+<hr />
+<h3 id="propertyremovekey">Property.removeKey()<a class="headerlink" href="#propertyremovekey" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.removeKey(keyIndex)</code></p>
+<h4 id="description_49">Description<a class="headerlink" href="#description_49" title="Permanent link">&para;</a></h4>
+<p>Removes the specified keyframe from the named property. If no keyframe with the specified index exists, generates an exception and displays an error. When a keyframe is removed, the remaining index numbers change. To remove more than one keyframe, you must start with the highest index number and work down to the lowest to ensure that the remaining indices reference the same keyframe after each removal.</p>
+<h4 id="parameters_22">Parameters<a class="headerlink" href="#parameters_22" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>keyIndex</code></td>
+<td>Integer, in the range <code>[1..numKeys]</code></td>
+<td>The index for the keyframe, as returned by the <a href="#propertyaddkey">addKey</a> or <a href="#propertynearestkeyindex">nearestKeyIndex</a>.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_22">Returns<a class="headerlink" href="#returns_22" title="Permanent link">&para;</a></h4>
+<p>Nothing.</p>
+<hr />
+<h3 id="propertysetalternatesource">Property.setAlternateSource()<a class="headerlink" href="#propertysetalternatesource" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.setAlternateSource(newSource)</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 18.0 (2021)</p>
+</div>
+<h4 id="description_50">Description<a class="headerlink" href="#description_50" title="Permanent link">&para;</a></h4>
+<p>Set the alternate source for this property.</p>
+<p>The Property object and the input parameters for the AVItem that is being called needs to be Media Replacement compatible for the action to go through.</p>
+<ul>
+<li>Use the <a href="../../item/avitem/#avitemismediareplacementcompatible">AVItem.isMediaReplacementCompatible</a> method to test whether the AVItem can be used as an alternate source for Media Replacement.</li>
+<li>Use <a href="#propertycansetalternatesource">Property.canSetAlternateSource</a> to test if the property allows Media Replacement.</li>
+</ul>
+<h4 id="parameters_23">Parameters<a class="headerlink" href="#parameters_23" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>newSource</code></td>
+<td><a href="../../item/avitem/">AVItem object</a></td>
+<td>The new source AVItem.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_23">Returns<a class="headerlink" href="#returns_23" title="Permanent link">&para;</a></h4>
+<p>Nothing.</p>
+<hr />
+<h3 id="propertysetinterpolationtypeatkey">Property.setInterpolationTypeAtKey()<a class="headerlink" href="#propertysetinterpolationtypeatkey" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.setInterpolationTypeAtKey(keyIndex, inType[, outType])</code></p>
+<h4 id="description_51">Description<a class="headerlink" href="#description_51" title="Permanent link">&para;</a></h4>
+<p>Sets the <code>in</code> and <code>out</code> interpolation types for the specified keyframe.</p>
+<h4 id="parameters_24">Parameters<a class="headerlink" href="#parameters_24" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>keyIndex</code></td>
+<td>Integer, in the range <code>[1..numKeys]</code></td>
+<td>The index for the keyframe, as returned by the <a href="#propertyaddkey">addKey</a> or <a href="#propertynearestkeyindex">nearestKeyIndex</a>.</td>
+</tr>
+<tr>
+<td><code>inType</code></td>
+<td><code>KeyframeInterpolationType</code> enum.</td>
+<td>The incoming interpolation type. One of:<br/>- <code>KeyframeInterpolationType.LINEAR</code><br/>- <code>KeyframeInterpolationType.BEZIER</code><br/>- <code>KeyframeInterpolationType.HOLD</code></td>
+</tr>
+<tr>
+<td><code>outType</code></td>
+<td><code>KeyframeInterpolationType</code> enum.</td>
+<td>Optional. The outgoing interpolation type. If not supplied, the 'out' type is set to the <code>inType</code> value. One of:<br/>- <code>KeyframeInterpolationType.LINEAR</code><br/>- <code>KeyframeInterpolationType.BEZIER</code><br/>- <code>KeyframeInterpolationType.HOLD</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_24">Returns<a class="headerlink" href="#returns_24" title="Permanent link">&para;</a></h4>
+<p>Nothing.</p>
+<hr />
+<h3 id="propertysetlabelatkey">Property.setLabelAtKey()<a class="headerlink" href="#propertysetlabelatkey" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.setLabelAtKey(keyIndex, labelIndex)</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 22.6 (2022)</p>
+</div>
+<h4 id="description_52">Description<a class="headerlink" href="#description_52" title="Permanent link">&para;</a></h4>
+<p>Set the label color for the keyframe. Colors are represented by their number (0 for None, or 1 to 16 for one of the preset colors in the Labels preferences).</p>
+<h4 id="parameters_25">Parameters<a class="headerlink" href="#parameters_25" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>keyIndex</code></td>
+<td>Integer, in the range <code>[1..numKeys]</code></td>
+<td>The index for the keyframe, as returned by the <a href="#propertyaddkey">addKey</a> or <a href="#propertynearestkeyindex">nearestKeyIndex</a>.</td>
+</tr>
+<tr>
+<td><code>labelIndex</code></td>
+<td>Integer, in the range <code>[0..16]</code></td>
+<td>The index for the new label value.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_25">Returns<a class="headerlink" href="#returns_25" title="Permanent link">&para;</a></h4>
+<p>Nothing.</p>
+<hr />
+<h3 id="propertysetpropertyparameters">Property.setPropertyParameters()<a class="headerlink" href="#propertysetpropertyparameters" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.setPropertyParameters(items)</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 17.0.1 (2020)</p>
+</div>
+<h4 id="description_53">Description<a class="headerlink" href="#description_53" title="Permanent link">&para;</a></h4>
+<p>Sets parameters for a Dropdown Menu Control's Menu Property. This method will overwrite the existing set of Menu items with the provided array of strings.</p>
+<ul>
+<li>The Dropdown Menu Control effect's Menu property is the only property that allows parameters to be set.</li>
+<li>To check if a property allows parameters to be set, check with <a href="#propertyisdropdowneffect">isDropdownEffect</a> before calling this method.</li>
+<li>An exception is raised whenever this method fails.</li>
+</ul>
+<h4 id="parameters_26">Parameters<a class="headerlink" href="#parameters_26" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>items</code></td>
+<td>Array of strings</td>
+<td>Values which will replace the existing menu entries in a Dropdown Menu Control.<br/><br/>- Only strings are allowed.<br/>- Empty item strings are not allowed.<br/>- Duplicate item strings are not allowed.<br/>- The character <code>"\"</code> is not allowed in the item strings.<br/>- The string <code>"(-"</code> can be specified as of the item strings, to create a separator line in the dropdown menu. The separator lines will claim an index for each of themselves.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Item strings should be in ASCII or MultiByte encodable in the current code-page. In other words, the item strings should be provided in the script of the running system. For example: Specifying the item strings in Japanese while running the script on an English system will create a dropdown effect with illegible characters in the item strings.</p>
+</div>
+<h4 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">dropdownItems</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;First Item&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;Second Item&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;(-&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;Another Item&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;Last Item&quot;</span>
+<span class="p">];</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">dropdownEffect</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">layer</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="s2">&quot;ADBE Effect Parade&quot;</span><span class="p">).</span><span class="nx">addProperty</span><span class="p">(</span><span class="s2">&quot;ADBE Dropdown Control&quot;</span><span class="p">);</span>
+<span class="nx">dropdownEffect</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">setPropertyParameters</span><span class="p">(</span><span class="nx">dropdownItems</span><span class="p">);</span>
+</code></pre></div>
+<h4 id="returns_26">Returns<a class="headerlink" href="#returns_26" title="Permanent link">&para;</a></h4>
+<p>Property object, the updated Dropdown Menu Control's Menu property.</p>
+<hr />
+<h3 id="propertysetrovingatkey">Property.setRovingAtKey()<a class="headerlink" href="#propertysetrovingatkey" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.setRovingAtKey(keyIndex, newVal)</code></p>
+<h4 id="description_54">Description<a class="headerlink" href="#description_54" title="Permanent link">&para;</a></h4>
+<p>Turns roving on or off for the specified keyframe. The first and last keyframe in a property cannot rove; if you try to set roving for one of these, the operation is ignored, and <code>keyRoving()</code> continues to return <code>false</code>. If the property value type is neither <code>TwoD_SPATIAL</code> nor <code>ThreeD_SPATIAL</code>, an exception is generated.</p>
+<h4 id="parameters_27">Parameters<a class="headerlink" href="#parameters_27" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>keyIndex</code></td>
+<td>Integer, in the range <code>[1..numKeys]</code></td>
+<td>The index for the keyframe, as returned by the <a href="#propertyaddkey">addKey</a> or <a href="#propertynearestkeyindex">nearestKeyIndex</a>.</td>
+</tr>
+<tr>
+<td><code>newVal</code></td>
+<td>Boolean</td>
+<td><code>true</code> to turn roving on, <code>false</code> to turn roving off.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_27">Returns<a class="headerlink" href="#returns_27" title="Permanent link">&para;</a></h4>
+<p>Nothing.</p>
+<hr />
+<h3 id="propertysetselectedatkey">Property.setSelectedAtKey()<a class="headerlink" href="#propertysetselectedatkey" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.setSelectedAtKey(keyIndex, onOff)</code></p>
+<h4 id="description_55">Description<a class="headerlink" href="#description_55" title="Permanent link">&para;</a></h4>
+<p>Selects or deselects the specified keyframe.</p>
+<h4 id="parameters_28">Parameters<a class="headerlink" href="#parameters_28" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>keyIndex</code></td>
+<td>Integer, in the range <code>[1..numKeys]</code></td>
+<td>The index for the keyframe, as returned by the <a href="#propertyaddkey">addKey</a> or <a href="#propertynearestkeyindex">nearestKeyIndex</a>.</td>
+</tr>
+<tr>
+<td><code>onOff</code></td>
+<td>Boolean</td>
+<td><code>true</code> to select the keyframe, <code>false</code> to deselect it.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_28">Returns<a class="headerlink" href="#returns_28" title="Permanent link">&para;</a></h4>
+<p>Nothing.</p>
+<hr />
+<h3 id="propertysetspatialautobezieratkey">Property.setSpatialAutoBezierAtKey()<a class="headerlink" href="#propertysetspatialautobezieratkey" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.setSpatialAutoBezierAtKey(keyIndex, newVal)</code></p>
+<h4 id="description_56">Description<a class="headerlink" href="#description_56" title="Permanent link">&para;</a></h4>
+<p>Turns spatial auto-Bezier interpolation on or off for the specified keyframe. If the property value type is neither <code>TwoD_SPATIAL</code> nor <code>ThreeD_SPATIAL</code>, an exception is generated.</p>
+<h4 id="parameters_29">Parameters<a class="headerlink" href="#parameters_29" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>keyIndex</code></td>
+<td>Integer, in the range <code>[1..numKeys]</code></td>
+<td>The index for the keyframe, as returned by the <a href="#propertyaddkey">addKey</a> or <a href="#propertynearestkeyindex">nearestKeyIndex</a>.</td>
+</tr>
+<tr>
+<td><code>newVal</code></td>
+<td>Boolean</td>
+<td><code>true</code> to turn spatial auto-Bezier on, <code>false</code> to turn it off.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_29">Returns<a class="headerlink" href="#returns_29" title="Permanent link">&para;</a></h4>
+<p>Nothing.</p>
+<hr />
+<h3 id="propertysetspatialcontinuousatkey">Property.setSpatialContinuousAtKey()<a class="headerlink" href="#propertysetspatialcontinuousatkey" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.setSpatialContinuousAtKey(keyIndex, newVal)</code></p>
+<h4 id="description_57">Description<a class="headerlink" href="#description_57" title="Permanent link">&para;</a></h4>
+<p>Turns spatial continuity on or off for the specified keyframe. If the property value type is neither <code>TwoD_SPATIAL</code> nor <code>ThreeD_SPATIAL</code>, an exception is generated.</p>
+<h4 id="parameters_30">Parameters<a class="headerlink" href="#parameters_30" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>keyIndex</code></td>
+<td>Integer, in the range <code>[1..numKeys]</code></td>
+<td>The index for the keyframe, as returned by the <a href="#propertyaddkey">addKey</a> or <a href="#propertynearestkeyindex">nearestKeyIndex</a>.</td>
+</tr>
+<tr>
+<td><code>newVal</code></td>
+<td>Boolean</td>
+<td><code>true</code> to turn spatial auto-Bezier on, <code>false</code> to turn it off.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_30">Returns<a class="headerlink" href="#returns_30" title="Permanent link">&para;</a></h4>
+<p>Nothing.</p>
+<hr />
+<h3 id="propertysetspatialtangentsatkey">Property.setSpatialTangentsAtKey()<a class="headerlink" href="#propertysetspatialtangentsatkey" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.setSpatialTangentsAtKey(keyIndex, inTangent[, outTangent])</code></p>
+<h4 id="description_58">Description<a class="headerlink" href="#description_58" title="Permanent link">&para;</a></h4>
+<p>Sets the incoming and outgoing tangent vectors for the specified keyframe. If the property value type is neither <code>TwoD_SPATIAL</code> nor <code>ThreeD_SPATIAL</code>, an exception is generated.</p>
+<h4 id="parameters_31">Parameters<a class="headerlink" href="#parameters_31" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>keyIndex</code></td>
+<td>Integer, in the range <code>[1..numKeys]</code></td>
+<td>The index for the keyframe, as returned by the <a href="#propertyaddkey">addKey</a> or <a href="#propertynearestkeyindex">nearestKeyIndex</a>.</td>
+</tr>
+<tr>
+<td><code>inTangent</code></td>
+<td>An array of 2 or 3 floating-point values.</td>
+<td>The incoming tangent vector.<br/><br/>- If the property value type is <code>PropertyValueType.TwoD_SPATIAL</code>, the array contains 2 values.<br/>- If the property value type is <code>PropertyValueType.ThreeD_SPATIAL</code>, the array contains 3 values.</td>
+</tr>
+<tr>
+<td><code>outTangent</code></td>
+<td>An array of 2 or 3 floating-point values.</td>
+<td>Optional. The outgoing tangent vector. If not supplied, the <code>out</code> tangent is set to the <code>inTangent</code> value.<br/><br/>- If the property value type is <code>PropertyValueType.TwoD_SPATIAL</code>, the array contains 2 values.<br/>- If the property value type is <code>PropertyValueType.ThreeD_SPATIAL</code>, the array contains 3 values.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_31">Returns<a class="headerlink" href="#returns_31" title="Permanent link">&para;</a></h4>
+<p>Nothing.</p>
+<hr />
+<h3 id="propertysettemporalautobezieratkey">Property.setTemporalAutoBezierAtKey()<a class="headerlink" href="#propertysettemporalautobezieratkey" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.setTemporalAutoBezierAtKey(keyIndex, newVal)</code></p>
+<h4 id="description_59">Description<a class="headerlink" href="#description_59" title="Permanent link">&para;</a></h4>
+<p>Turns temporal auto-Bezier interpolation on or off for the specified keyframe. When this is turned on, it affects this keyframe only if <code>keySpatialContinuous(keyIndex)</code> is also true.</p>
+<h4 id="parameters_32">Parameters<a class="headerlink" href="#parameters_32" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>keyIndex</code></td>
+<td>Integer, in the range <code>[1..numKeys]</code></td>
+<td>The index for the keyframe, as returned by the <a href="#propertyaddkey">addKey</a> or <a href="#propertynearestkeyindex">nearestKeyIndex</a>.</td>
+</tr>
+<tr>
+<td><code>newVal</code></td>
+<td>Boolean</td>
+<td><code>true</code> to turn temporal auto-Bezier on, <code>false</code> to turn it off.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_32">Returns<a class="headerlink" href="#returns_32" title="Permanent link">&para;</a></h4>
+<p>Nothing.</p>
+<hr />
+<h3 id="propertysettemporalcontinuousatkey">Property.setTemporalContinuousAtKey()<a class="headerlink" href="#propertysettemporalcontinuousatkey" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.setTemporalContinuousAtKey(keyIndex, newVal)</code></p>
+<h4 id="description_60">Description<a class="headerlink" href="#description_60" title="Permanent link">&para;</a></h4>
+<p>Turns temporal continuity on or off for the specified keyframe. When temporal continuity is turned on, it affects this keyframe only if the keyframe interpolation type is <code>KeyframeInterpolationType.BEZIER</code> for both <code>keyInInterpolationType(keyIndex)</code> and <code>keyOutInterpolationType(keyIndex)</code>.</p>
+<h4 id="parameters_33">Parameters<a class="headerlink" href="#parameters_33" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>keyIndex</code></td>
+<td>Integer, in the range <code>[1..numKeys]</code></td>
+<td>The index for the keyframe, as returned by the <a href="#propertyaddkey">addKey</a> or <a href="#propertynearestkeyindex">nearestKeyIndex</a>.</td>
+</tr>
+<tr>
+<td><code>newVal</code></td>
+<td>Boolean</td>
+<td><code>true</code> to turn temporal auto-Bezier on, <code>false</code> to turn it off.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_33">Returns<a class="headerlink" href="#returns_33" title="Permanent link">&para;</a></h4>
+<p>Nothing.</p>
+<hr />
+<h3 id="propertysettemporaleaseatkey">Property.setTemporalEaseAtKey()<a class="headerlink" href="#propertysettemporaleaseatkey" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.setTemporalEaseAtKey(keyIndex, inTemporalEase[, outTemporalEase])</code></p>
+<h4 id="description_61">Description<a class="headerlink" href="#description_61" title="Permanent link">&para;</a></h4>
+<p>Sets the incoming and outgoing temporal ease for the specified keyframe. See <a href="../../other/keyframeease/">KeyframeEase object</a>.</p>
+<h4 id="parameters_34">Parameters<a class="headerlink" href="#parameters_34" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>keyIndex</code></td>
+<td>Integer, in the range <code>[1..numKeys]</code></td>
+<td>The index for the keyframe, as returned by the <a href="#propertyaddkey">addKey</a> or <a href="#propertynearestkeyindex">nearestKeyIndex</a>.</td>
+</tr>
+<tr>
+<td><code>inTemporalEase</code></td>
+<td>An array of 1, 2, or 3 <a href="../../other/keyframeease/">KeyframeEase objects</a></td>
+<td>The incoming temporal ease. <br/><br/>- If the property value type is <code>PropertyValueType.TwoD</code>, the array contains 2 objects.<br/>- If the property value type is <code>PropertyValueType.ThreeD</code>, the array contains 3 objects.<br/>- For all other value types, the array contains 1 object.</td>
+</tr>
+<tr>
+<td><code>outTemporalEase</code></td>
+<td>An array of 1, 2, or 3 <a href="../../other/keyframeease/">KeyframeEase objects</a></td>
+<td>Optional. The outgoing temporal ease. If not supplied, the outgoing ease is set to the <code>inTemporalEase</code> value.<br/><br/>- If the property value type is <code>PropertyValueType.TwoD</code>, the array contains 2 objects.<br/>- If the property value type is <code>PropertyValueType.ThreeD</code>, the array contains 3 objects.<br/>- For all other value types, the array contains 1 object.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_34">Returns<a class="headerlink" href="#returns_34" title="Permanent link">&para;</a></h4>
+<p>Nothing.</p>
+<hr />
+<h3 id="propertysetvalue">Property.setValue()<a class="headerlink" href="#propertysetvalue" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.setValue(newValue)</code></p>
+<h4 id="description_62">Description<a class="headerlink" href="#description_62" title="Permanent link">&para;</a></h4>
+<p>Sets the static value of a property that has no keyframes. If the named property has keyframes, this method generates an exception and displays an error. To set the value of a property with keyframes, use <a href="#propertysetvalueattime">Property.setValueAtTime()</a> or <a href="#propertysetvalueatkey">Property.setValueAtKey()</a>.</p>
+<h4 id="parameters_35">Parameters<a class="headerlink" href="#parameters_35" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>newValue</code></td>
+<td>Value</td>
+<td>A value appropriate for the type of property being set; see <a href="#propertypropertyvaluetype">Property.propertyValueType</a>.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_35">Returns<a class="headerlink" href="#returns_35" title="Permanent link">&para;</a></h4>
+<p>Nothing.</p>
+<hr />
+<h3 id="propertysetvalueatkey">Property.setValueAtKey()<a class="headerlink" href="#propertysetvalueatkey" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.setValueAtKey(keyIndex, newValue)</code></p>
+<h4 id="description_63">Description<a class="headerlink" href="#description_63" title="Permanent link">&para;</a></h4>
+<p>Finds the specified keyframe and sets its value. If the named property has no keyframes, or no keyframe with the specified index, this method generates an exception and displays an error.</p>
+<h4 id="parameters_36">Parameters<a class="headerlink" href="#parameters_36" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>keyIndex</code></td>
+<td>Integer, in the range <code>[1..numKeys]</code></td>
+<td>The index for the keyframe, as returned by the <a href="#propertyaddkey">addKey</a> or <a href="#propertynearestkeyindex">nearestKeyIndex</a>.</td>
+</tr>
+<tr>
+<td><code>newValue</code></td>
+<td>Value</td>
+<td>A value appropriate for the type of property being set; see <a href="#propertypropertyvaluetype">Property.propertyValueType</a>.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_36">Returns<a class="headerlink" href="#returns_36" title="Permanent link">&para;</a></h4>
+<p>Nothing.</p>
+<hr />
+<h3 id="propertysetvalueattime">Property.setValueAtTime()<a class="headerlink" href="#propertysetvalueattime" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.setValueAtTime(time, newValue)</code></p>
+<h4 id="description_64">Description<a class="headerlink" href="#description_64" title="Permanent link">&para;</a></h4>
+<p>Sets the value of a keyframe at the specified time. Creates a new keyframe for the named property, if one does not currently exist for the specified time, and sets its value.</p>
+<h4 id="parameters_37">Parameters<a class="headerlink" href="#parameters_37" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>time</code></td>
+<td>Floating-point value</td>
+<td>The time, in seconds, at which to set the value. The beginning of the composition is 0.</td>
+</tr>
+<tr>
+<td><code>newValue</code></td>
+<td>Value</td>
+<td>A value appropriate for the type of property being set; see <a href="#propertypropertyvaluetype">Property.propertyValueType</a>.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_37">Returns<a class="headerlink" href="#returns_37" title="Permanent link">&para;</a></h4>
+<p>Nothing.</p>
+<hr />
+<h3 id="propertysetvaluesattimes">Property.setValuesAtTimes()<a class="headerlink" href="#propertysetvaluesattimes" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.setValuesAtTimes(times, newValues)</code></p>
+<h4 id="description_65">Description<a class="headerlink" href="#description_65" title="Permanent link">&para;</a></h4>
+<p>Sets values for a set of keyframes at specified times. Creates a new keyframe for the named property, if one does not currently exist for a specified time, and sets its value. Times and values are expressed as arrays; the arrays must be of the same length.</p>
+<h4 id="parameters_38">Parameters<a class="headerlink" href="#parameters_38" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>times</code></td>
+<td>Array of floating-point values</td>
+<td>An array of times, in seconds. The beginning of the composition is 0.</td>
+</tr>
+<tr>
+<td><code>newValues</code></td>
+<td>Array of values</td>
+<td>A array of values appropriate for the type of property being set; see <a href="#propertypropertyvaluetype">Property.propertyValueType</a>.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_38">Returns<a class="headerlink" href="#returns_38" title="Permanent link">&para;</a></h4>
+<p>Nothing.</p>
+<hr />
+<h3 id="propertyvalueattime">Property.valueAtTime()<a class="headerlink" href="#propertyvalueattime" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.valueAtTime(time, preExpression)</code></p>
+<h4 id="description_66">Description<a class="headerlink" href="#description_66" title="Permanent link">&para;</a></h4>
+<p>The value of the named property as evaluated at the specified time. Note that the type of value returned is not made explicit; it will be of a different type, depending on the property evaluated.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>As After Effects 13.6, this method now waits for time-intensive expressions, like <code>sampleImage</code>, to finish evaluating before it returns the result.</p>
+</div>
+<h4 id="parameters_39">Parameters<a class="headerlink" href="#parameters_39" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>time</code></td>
+<td>Floating-point value</td>
+<td>The time, in seconds, at which to set the value. The beginning of the composition is 0.</td>
+</tr>
+<tr>
+<td><code>preExpression</code></td>
+<td>Boolean</td>
+<td>If the property has an expression and this is <code>true</code>, return the value for the specified time without applying the expression to it. When <code>false</code>, return the result of evaluating the expression for the specified time. Ignored if the property does not have an associated expression.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_39">Returns<a class="headerlink" href="#returns_39" title="Permanent link">&para;</a></h4>
+<p>A value appropriate for the type of the property (see "Property propertyValueType attribute" on page 138).</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 6, 2024</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.action.edit", "content.action.view", "search.highlight", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.525ec568.min.js"></script>
+      
+    
+  </body>
+</html>

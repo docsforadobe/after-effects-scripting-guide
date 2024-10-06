@@ -1,0 +1,7 @@
+:root {}
+
+.breadcrumb.md-nav__icon::after {
+  height: 0.9rem;
+  width: 0.9rem;
+  vertical-align: -0.2rem;
+}

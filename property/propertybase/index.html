@@ -1,0 +1,2985 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ae-scripting.docsforadobe.dev/property/propertybase/">
+      
+      
+        <link rel="prev" href="../property/">
+      
+      
+        <link rel="next" href="../propertygroup/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
+    
+    
+      
+        <title>PropertyBase - After Effects Scripting Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../_static/extra.css">
+    
+      <link rel="stylesheet" href="../../_static/syntax-highlight.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#propertybase-object" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://docsforadobe.dev" title="After Effects Scripting Guide" class="md-header__button md-logo" aria-label="After Effects Scripting Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            After Effects Scripting Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              PropertyBase
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/docsforadobe/after-effects-scripting-guide/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    after-effects-scripting-guide
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://docsforadobe.dev" title="After Effects Scripting Guide" class="md-nav__button md-logo" aria-label="After Effects Scripting Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    After Effects Scripting Guide
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/docsforadobe/after-effects-scripting-guide/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    after-effects-scripting-guide
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/javascript/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Javascript for After Effects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/changelog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    After Effects Scripting Changlog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/objectmodel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    After Effects Object Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/classhierarchy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    After Effects Class Hierarchy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    General
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            General
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/globals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Globals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/application/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Application
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/project/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/system/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Item
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Item
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../item/item/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Item object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../item/itemcollection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ItemCollection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../item/avitem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AVItem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../item/compitem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CompItem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../item/folderitem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FolderItem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../item/footageitem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FootageItem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Layer
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Layer
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/layer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Layer object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/layercollection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LayerCollection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/avlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AVLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/cameralayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CameraLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/lightlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LightLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/shapelayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ShapeLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/textlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TextLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/threedmodellayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ThreeDModelLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Property
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Property
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Property object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    PropertyBase
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    PropertyBase
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Page Contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Page Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+	<a href="#attributes" class="md-nav__link">
+		<span class="md-ellipsis">
+			Attributes
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+		<nav class="md-nav" aria-label="Attributes">
+			<ul class="md-nav__list">
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertybaseactive" class="md-nav__link">
+		<span class="md-ellipsis">
+			PropertyBase.active
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertybasecansetenabled" class="md-nav__link">
+		<span class="md-ellipsis">
+			PropertyBase.canSetEnabled
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertybaseelided" class="md-nav__link">
+		<span class="md-ellipsis">
+			PropertyBase.elided
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertybaseenabled" class="md-nav__link">
+		<span class="md-ellipsis">
+			PropertyBase.enabled
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertybaseiseffect" class="md-nav__link">
+		<span class="md-ellipsis">
+			PropertyBase.isEffect
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertybaseismask" class="md-nav__link">
+		<span class="md-ellipsis">
+			PropertyBase.isMask
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertybaseismodified" class="md-nav__link">
+		<span class="md-ellipsis">
+			PropertyBase.isModified
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertybasematchname" class="md-nav__link">
+		<span class="md-ellipsis">
+			PropertyBase.matchName
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertybasename" class="md-nav__link">
+		<span class="md-ellipsis">
+			PropertyBase.name
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertybaseparentproperty" class="md-nav__link">
+		<span class="md-ellipsis">
+			PropertyBase.parentProperty
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertybasepropertydepth" class="md-nav__link">
+		<span class="md-ellipsis">
+			PropertyBase.propertyDepth
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertybasepropertyindex" class="md-nav__link">
+		<span class="md-ellipsis">
+			PropertyBase.propertyIndex
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertybasepropertytype" class="md-nav__link">
+		<span class="md-ellipsis">
+			PropertyBase.propertyType
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertybaseselected" class="md-nav__link">
+		<span class="md-ellipsis">
+			PropertyBase.selected
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+			</ul>
+		</nav>
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#methods" class="md-nav__link">
+		<span class="md-ellipsis">
+			Methods
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+		<nav class="md-nav" aria-label="Methods">
+			<ul class="md-nav__list">
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertybaseduplicate" class="md-nav__link">
+		<span class="md-ellipsis">
+			PropertyBase.duplicate()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertybasemoveto" class="md-nav__link">
+		<span class="md-ellipsis">
+			PropertyBase.moveTo()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertybasepropertygroup" class="md-nav__link">
+		<span class="md-ellipsis">
+			PropertyBase.propertyGroup()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertybaseremove" class="md-nav__link">
+		<span class="md-ellipsis">
+			PropertyBase.remove()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+			</ul>
+		</nav>
+	
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../propertygroup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PropertyGroup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../maskpropertygroup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MaskPropertyGroup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Render Queue
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Render Queue
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../renderqueue/renderqueue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RenderQueue object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../renderqueue/rqitemcollection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RQItemCollection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../renderqueue/renderqueueitem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RenderQueueItem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../renderqueue/omcollection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OMCollection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../renderqueue/outputmodule/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OutputModule
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sources
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Sources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/filesource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FileSource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/footagesource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FootageSource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/placeholdersource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PlaceholderSource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/solidsource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SolidSource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Text
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Text
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../text/characterrange/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CharacterRange
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../text/composedlinerange/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ComposedLineRange
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../text/fontobject/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FontObject
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../text/fontsobject/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FontsObject
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../text/paragraphrange/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ParagraphRange
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../text/textdocument/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TextDocument
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Other
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Other
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/collection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Collection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/importoptions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ImportOptions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/keyframeease/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    KeyframeEase
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/markervalue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MarkerValue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/preferences/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Preferences
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/settings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Settings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/shape/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Shape
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/view/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    View
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/viewer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Viewer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/viewoptions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ViewOptions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Match Names
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Match Names
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_1" id="__nav_11_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Layers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_1">
+            <span class="md-nav__icon md-icon"></span>
+            Layers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/layer/avlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AV Layer Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/layer/3dlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3D Layer Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/layer/cameralayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Camera Layer Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/layer/lightlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Light Layer Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/layer/textlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Text Layer Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/layer/shapelayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Shape Layer Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/layer/layerstyles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Layer Styles Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_2" id="__nav_11_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Effects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_2">
+            <span class="md-nav__icon md-icon"></span>
+            Effects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/effects/firstparty/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    First-Party Effect Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Page Contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Page Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+	<a href="#attributes" class="md-nav__link">
+		<span class="md-ellipsis">
+			Attributes
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+		<nav class="md-nav" aria-label="Attributes">
+			<ul class="md-nav__list">
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertybaseactive" class="md-nav__link">
+		<span class="md-ellipsis">
+			PropertyBase.active
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertybasecansetenabled" class="md-nav__link">
+		<span class="md-ellipsis">
+			PropertyBase.canSetEnabled
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertybaseelided" class="md-nav__link">
+		<span class="md-ellipsis">
+			PropertyBase.elided
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertybaseenabled" class="md-nav__link">
+		<span class="md-ellipsis">
+			PropertyBase.enabled
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertybaseiseffect" class="md-nav__link">
+		<span class="md-ellipsis">
+			PropertyBase.isEffect
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertybaseismask" class="md-nav__link">
+		<span class="md-ellipsis">
+			PropertyBase.isMask
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertybaseismodified" class="md-nav__link">
+		<span class="md-ellipsis">
+			PropertyBase.isModified
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertybasematchname" class="md-nav__link">
+		<span class="md-ellipsis">
+			PropertyBase.matchName
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertybasename" class="md-nav__link">
+		<span class="md-ellipsis">
+			PropertyBase.name
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertybaseparentproperty" class="md-nav__link">
+		<span class="md-ellipsis">
+			PropertyBase.parentProperty
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertybasepropertydepth" class="md-nav__link">
+		<span class="md-ellipsis">
+			PropertyBase.propertyDepth
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertybasepropertyindex" class="md-nav__link">
+		<span class="md-ellipsis">
+			PropertyBase.propertyIndex
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertybasepropertytype" class="md-nav__link">
+		<span class="md-ellipsis">
+			PropertyBase.propertyType
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertybaseselected" class="md-nav__link">
+		<span class="md-ellipsis">
+			PropertyBase.selected
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+			</ul>
+		</nav>
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#methods" class="md-nav__link">
+		<span class="md-ellipsis">
+			Methods
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+		<nav class="md-nav" aria-label="Methods">
+			<ul class="md-nav__list">
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertybaseduplicate" class="md-nav__link">
+		<span class="md-ellipsis">
+			PropertyBase.duplicate()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertybasemoveto" class="md-nav__link">
+		<span class="md-ellipsis">
+			PropertyBase.moveTo()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertybasepropertygroup" class="md-nav__link">
+		<span class="md-ellipsis">
+			PropertyBase.propertyGroup()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#propertybaseremove" class="md-nav__link">
+		<span class="md-ellipsis">
+			PropertyBase.remove()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+			</ul>
+		</nav>
+	
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/docsforadobe/after-effects-scripting-guide/edit/master/docs/property/propertybase.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/docsforadobe/after-effects-scripting-guide/raw/master/docs/property/propertybase.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<p><a href="/">Home</a><span class="breadcrumb md-nav__icon md-icon"></span>Property<span class="breadcrumb md-nav__icon md-icon"></span>PropertyBase</p>
+<h1 id="propertybase-object">PropertyBase object<a class="headerlink" href="#propertybase-object" title="Permanent link">&para;</a></h1>
+<p><code>app.project.item(index).layer(index).propertySpec</code></p>
+<h4 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h4>
+<p>Properties are accessed by name through layers, using various kinds of expression syntax, as controlled by application preferences. For example, the following are all ways of access properties in the Effects group</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">effect1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">layer</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">effect</span><span class="p">(</span><span class="s2">&quot;AddGrain&quot;</span><span class="p">)(</span><span class="s2">&quot;Viewing Mode&quot;</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">effect1again</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">layer</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">effect</span><span class="p">.</span><span class="nx">addGrain</span><span class="p">.</span><span class="nx">viewingMode</span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">effect1againtoo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">layer</span><span class="p">(</span><span class="mf">1</span><span class="p">)(</span><span class="s2">&quot;Effects&quot;</span><span class="p">).</span><span class="nx">addGrain</span><span class="p">.</span><span class="nx">viewingMode</span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">effect1againtoo2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">layer</span><span class="p">(</span><span class="mf">1</span><span class="p">)(</span><span class="s2">&quot;Effects&quot;</span><span class="p">)(</span><span class="s2">&quot;Add Grain&quot;</span><span class="p">)(</span><span class="s2">&quot;Viewing Mode&quot;</span><span class="p">);</span>
+</code></pre></div>
+<p>See also <a href="../propertygroup/#propertygroupproperty">PropertyGroup.property()</a>.</p>
+<blockquote>
+<p>PropertyBase is the base class for both <a href="../property/">Property</a> and <a href="../propertygroup/">PropertyGroup</a>, so PropertyBase attributes and methods are available when working with properties and property groups.</p>
+</blockquote>
+<h4 id="reference-invalidation">Reference invalidation<a class="headerlink" href="#reference-invalidation" title="Permanent link">&para;</a></h4>
+<p>When something occurs that changes an object sufficiently for the reference to become invalid, script references to that object can generate errors. In simple cases this is straightforward. For example, if you delete anobject, a reference to the deleted object generates the warning "Object is Invalid":</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">layer1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">layer</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+<span class="nx">layer1</span><span class="p">.</span><span class="nx">remove</span><span class="p">();</span>
+<span class="nx">alert</span><span class="p">(</span><span class="nx">layer1</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span><span class="w"> </span><span class="c1">// invalid reference to deleted object</span>
+</code></pre></div>
+<p>Similarly, if you reference an AE property in a deleted object, the warning occurs</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">layer1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">layer</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">layer1position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">layer1</span><span class="p">.</span><span class="nx">transform</span><span class="p">.</span><span class="nx">position</span><span class="p">;</span>
+<span class="nx">layer1</span><span class="p">.</span><span class="nx">remove</span><span class="p">();</span>
+<span class="nx">alert</span><span class="p">(</span><span class="nx">layer1position</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span><span class="w"> </span><span class="c1">// invalid reference to property inselected object</span>
+</code></pre></div>
+<p>A less straightforward case is when a property is removed from a property group. In this case, After Effectsgenerates the "Object is Invalid" error when you subsequently reference that item or other items in the group,because their index positions have changed. For example:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">effect1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">layer</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">effect</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">effect2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">layer</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">effect</span><span class="p">(</span><span class="mf">2</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">effect2param</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">layer</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">effect</span><span class="p">(</span><span class="mf">2</span><span class="p">).</span><span class="nx">blendWithOriginal</span><span class="p">;</span>
+<span class="nx">effect1</span><span class="p">.</span><span class="nx">remove</span><span class="p">();</span>
+<span class="nx">alert</span><span class="p">(</span><span class="nx">effect2</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span><span class="w"> </span><span class="c1">// invalid reference because group index positions have changed</span>
+</code></pre></div>
+<hr />
+<h2 id="attributes">Attributes<a class="headerlink" href="#attributes" title="Permanent link">&para;</a></h2>
+<h3 id="propertybaseactive">PropertyBase.active<a class="headerlink" href="#propertybaseactive" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).active</code>
+<br/>
+<code>app.project.item(index).layer(index).propertySpec.active</code>
+<br/></p>
+<h4 id="description_1">Description<a class="headerlink" href="#description_1" title="Permanent link">&para;</a></h4>
+<p>For a layer, this corresponds to the setting of the eyeball icon. When <code>true</code>, the layer's video is active at the current time. For this to be <code>true</code>, the layer must be enabled, no other layer may be soloing unless this layer is soloed too, and the time must be between the <code>inPoint</code> and <code>outPoint</code> values of this layer.</p>
+<p>This value is never <code>true</code> in an audio layer; there is a separate <code>audioActive</code> attribute in the AVLayer object <a href="../../layer/avlayer/#avlayeraudioactive">AVLayer.audioActive</a>.</p>
+<p>For an effect and all properties, it is the same as the enabled attribute, except that it's read-only.</p>
+<h4 id="type">Type<a class="headerlink" href="#type" title="Permanent link">&para;</a></h4>
+<p>Boolean; read-only.</p>
+<hr />
+<h3 id="propertybasecansetenabled">PropertyBase.canSetEnabled<a class="headerlink" href="#propertybasecansetenabled" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.canSetEnabled</code></p>
+<h4 id="description_2">Description<a class="headerlink" href="#description_2" title="Permanent link">&para;</a></h4>
+<p>When <code>true</code>, you can set the <code>enabled</code> attribute value. Generally, this is <code>true</code> if the user interface displays an eyeball icon for this property; it is <code>true</code> for all layers.</p>
+<h4 id="type_1">Type<a class="headerlink" href="#type_1" title="Permanent link">&para;</a></h4>
+<p>Boolean; read-only.</p>
+<hr />
+<h3 id="propertybaseelided">PropertyBase.elided<a class="headerlink" href="#propertybaseelided" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.elided</code></p>
+<h4 id="description_3">Description<a class="headerlink" href="#description_3" title="Permanent link">&para;</a></h4>
+<p>When <code>true</code>, this property is a group used to organize other properties. The property is not displayed in the user interface and its child properties are not indented in the Timeline panel.For example, for a text layer with two animators and no properties twirled down, you might see:</p>
+<ul>
+<li><code>Text</code></li>
+<li><code>PathOptions</code></li>
+<li><code>MoreOptions</code></li>
+<li><code>Animator1</code></li>
+<li><code>Animator2</code></li>
+</ul>
+<p>In this example, "Animator 1" and "Animator 2" are contained in a PropertyBase called "Text Animators." This parent group is not displayed in the user interface, and so the two child properties are not indented in the Timeline panel.</p>
+<h4 id="type_2">Type<a class="headerlink" href="#type_2" title="Permanent link">&para;</a></h4>
+<p>Boolean; read-only.</p>
+<hr />
+<h3 id="propertybaseenabled">PropertyBase.enabled<a class="headerlink" href="#propertybaseenabled" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).enabled</code>
+<br/>
+<code>app.project.item(index).layer(index).propertySpec.enabled</code>
+<br/></p>
+<h4 id="description_4">Description<a class="headerlink" href="#description_4" title="Permanent link">&para;</a></h4>
+<p>For layer, this corresponds to the video switch state of the layer in the Timeline panel. For an effect and all properties, it corresponds to the setting of the eyeball icon, if there is one.</p>
+<p>When <code>true</code>, the layer or property is enabled; otherwise <code>false</code>.</p>
+<h4 id="type_3">Type<a class="headerlink" href="#type_3" title="Permanent link">&para;</a></h4>
+<p>Boolean; read/write if <code>canSetEnabled</code> is <code>true</code>, read-only if <code>canSetEnabled</code> is <code>false</code>.</p>
+<hr />
+<h3 id="propertybaseiseffect">PropertyBase.isEffect<a class="headerlink" href="#propertybaseiseffect" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.isEffect</code></p>
+<h4 id="description_5">Description<a class="headerlink" href="#description_5" title="Permanent link">&para;</a></h4>
+<p>When <code>true</code>, this property is an effect PropertyGroup.</p>
+<h4 id="type_4">Type<a class="headerlink" href="#type_4" title="Permanent link">&para;</a></h4>
+<p>Boolean; read-only.</p>
+<hr />
+<h3 id="propertybaseismask">PropertyBase.isMask<a class="headerlink" href="#propertybaseismask" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.isMask</code></p>
+<h4 id="description_6">Description<a class="headerlink" href="#description_6" title="Permanent link">&para;</a></h4>
+<p>When <code>true</code>, this property is a mask PropertyGroup.</p>
+<h4 id="type_5">Type<a class="headerlink" href="#type_5" title="Permanent link">&para;</a></h4>
+<p>Boolean; read-only.</p>
+<hr />
+<h3 id="propertybaseismodified">PropertyBase.isModified<a class="headerlink" href="#propertybaseismodified" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.isModified</code></p>
+<h4 id="description_7">Description<a class="headerlink" href="#description_7" title="Permanent link">&para;</a></h4>
+<p>When <code>true</code>, this property has been changed since its creation.</p>
+<h4 id="type_6">Type<a class="headerlink" href="#type_6" title="Permanent link">&para;</a></h4>
+<p>Boolean; read-only.</p>
+<hr />
+<h3 id="propertybasematchname">PropertyBase.matchName<a class="headerlink" href="#propertybasematchname" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.matchName</code></p>
+<h4 id="description_8">Description<a class="headerlink" href="#description_8" title="Permanent link">&para;</a></h4>
+<p>A special name for the property used to build unique naming paths. The match name is not displayed, but you can refer to it in scripts. Every property has a unique match-name identifier. Match names are stable from version to version regardless of the display name (the name attribute value) or any changes to the application. Unlike the display name, it is not localized. An indexed group may not have a name value, but always has a matchName value. (An indexed group has the type <code>PropertyType.INDEXED_GROUP</code>; see <a href="#propertybasepropertytype">PropertyBase.propertyType</a>.)</p>
+<h4 id="type_7">Type<a class="headerlink" href="#type_7" title="Permanent link">&para;</a></h4>
+<p>String; read-only.</p>
+<hr />
+<h3 id="propertybasename">PropertyBase.name<a class="headerlink" href="#propertybasename" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).name</code>
+<br/>
+<code>app.project.item(index).layer(index).propertySpec.name</code>
+<br/></p>
+<h4 id="description_9">Description<a class="headerlink" href="#description_9" title="Permanent link">&para;</a></h4>
+<p>For a layer, the name of the layer. By default, this is the same as the Source name, unless <a href="../../layer/layer/#layerisnameset">Layer.isNameSet</a> returns <code>false</code>.</p>
+<p>For an effect and all properties - the display name of the property. (Compare <a href="#propertybasematchname">PropertyBase.matchName</a>.) It is an error to set the name value if the property is not a child of an indexed group (that is, a property group that has the type <code>PropertyType.INDEXED_GROUP</code>; see <a href="#propertybasepropertytype">PropertyBase.propertyType</a>).</p>
+<h4 id="type_8">Type<a class="headerlink" href="#type_8" title="Permanent link">&para;</a></h4>
+<p>String; read/write for a child of an indexed group; otherwise read-only.</p>
+<hr />
+<h3 id="propertybaseparentproperty">PropertyBase.parentProperty<a class="headerlink" href="#propertybaseparentproperty" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.parentProperty</code></p>
+<h4 id="description_10">Description<a class="headerlink" href="#description_10" title="Permanent link">&para;</a></h4>
+<p>The property group that is the immediate parent of this property, or <code>null</code> if this PropertyBase is a layer.</p>
+<h4 id="type_9">Type<a class="headerlink" href="#type_9" title="Permanent link">&para;</a></h4>
+<p>PropertyGroup object or <code>null</code>; read-only.</p>
+<hr />
+<h3 id="propertybasepropertydepth">PropertyBase.propertyDepth<a class="headerlink" href="#propertybasepropertydepth" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.propertyDepth</code></p>
+<h4 id="description_11">Description<a class="headerlink" href="#description_11" title="Permanent link">&para;</a></h4>
+<p>The number of levels of parent groups between this property and the containing layer. The value 0 for a layer.</p>
+<h4 id="type_10">Type<a class="headerlink" href="#type_10" title="Permanent link">&para;</a></h4>
+<p>Integer; read-only.</p>
+<hr />
+<h3 id="propertybasepropertyindex">PropertyBase.propertyIndex<a class="headerlink" href="#propertybasepropertyindex" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.propertyIndex</code></p>
+<h4 id="description_12">Description<a class="headerlink" href="#description_12" title="Permanent link">&para;</a></h4>
+<p>The position index of this property within its parent group, if it is a child of an indexed group (a property group that has the type <code>PropertyType.INDEXED_GROUP</code>; see <a href="#propertybasepropertytype">PropertyBase.propertyType</a>).</p>
+<h4 id="type_11">Type<a class="headerlink" href="#type_11" title="Permanent link">&para;</a></h4>
+<p>Integer; read-only.</p>
+<hr />
+<h3 id="propertybasepropertytype">PropertyBase.propertyType<a class="headerlink" href="#propertybasepropertytype" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.propertyType</code></p>
+<h4 id="description_13">Description<a class="headerlink" href="#description_13" title="Permanent link">&para;</a></h4>
+<p>The type of this property.</p>
+<h4 id="type_12">Type<a class="headerlink" href="#type_12" title="Permanent link">&para;</a></h4>
+<p>A <code>PropertyType</code> enumerated value; read/write. One of:</p>
+<ul>
+<li><code>PropertyType.PROPERTY</code>: A single property such as position or zoom.</li>
+<li><code>PropertyType.INDEXED_GROUP</code>: A property group whose members have an editable name and an index. Effects and masks are indexed groups. For example, the masks property of a layer refers to a variable number of individual masks by index number.</li>
+<li><code>PropertyType.NAMED_GROUP</code>: A property group in which the member names are not editable. Layers are named groups.</li>
+</ul>
+<hr />
+<h3 id="propertybaseselected">PropertyBase.selected<a class="headerlink" href="#propertybaseselected" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.selected</code></p>
+<h4 id="description_14">Description<a class="headerlink" href="#description_14" title="Permanent link">&para;</a></h4>
+<p>When <code>true</code>, this property is selected. Set to <code>true</code> to select the property, or to <code>false</code> to deselect it. Sampling this attribute repeatedly for a large number of properties can slow down system performance. To read the full set of selected properties of a composition or layer, use either <a href="../../item/compitem/#compitemselectedproperties">CompItem.selectedProperties</a> or <a href="../../layer/layer/#layerselectedproperties">Layer.selectedProperties</a>.</p>
+<h4 id="type_13">Type<a class="headerlink" href="#type_13" title="Permanent link">&para;</a></h4>
+<p>Boolean; read/write.</p>
+<h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h2>
+<h3 id="propertybaseduplicate">PropertyBase.duplicate()<a class="headerlink" href="#propertybaseduplicate" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.duplicate()</code></p>
+<h4 id="description_15">Description<a class="headerlink" href="#description_15" title="Permanent link">&para;</a></h4>
+<p>If this property is a child of an indexed group, creates and returns a new PropertyBase object with the same attribute values as this one. If this property is not a child of an indexed group, the method generates an exception and displays an error. An indexed group has the type <code>PropertyType.INDEXED_GROUP</code>; see <a href="#propertybasepropertytype">PropertyBase.propertyType</a>.</p>
+<h4 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h4>
+<p>None.</p>
+<h4 id="returns">Returns<a class="headerlink" href="#returns" title="Permanent link">&para;</a></h4>
+<p>PropertyBase object.</p>
+<hr />
+<h3 id="propertybasemoveto">PropertyBase.moveTo()<a class="headerlink" href="#propertybasemoveto" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.moveTo(newIndex)</code></p>
+<h4 id="description_16">Description<a class="headerlink" href="#description_16" title="Permanent link">&para;</a></h4>
+<p>Moves this property to a new position in its parent property group. This method is valid only for children of indexed groups; if it is not, or if the index value is not valid, the method generates an exception and displays an error. (An indexed group has the type <code>PropertyType.INDEXED_GROUP</code>; see <a href="#propertybasepropertytype">PropertyBase.propertyType</a>.)</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Using this method invalidates existing references to other children in the same indexed group. For example, if you have three effects on a layer, each effect assigned to a different variable, moving one of the effects invalidates the references for all of these variables. You will need to reassign them.</p>
+</div>
+<h4 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>newIndex</code></td>
+<td>Integer</td>
+<td>The new index position at which to place this property in its group.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_1">Returns<a class="headerlink" href="#returns_1" title="Permanent link">&para;</a></h4>
+<p>Nothing.</p>
+<hr />
+<h3 id="propertybasepropertygroup">PropertyBase.propertyGroup()<a class="headerlink" href="#propertybasepropertygroup" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.propertyGroup([countUp])</code></p>
+<h4 id="description_17">Description<a class="headerlink" href="#description_17" title="Permanent link">&para;</a></h4>
+<p>Gets the PropertyGroup object for an ancestor group of this property at a specified level of the parent-child hierarchy.</p>
+<h4 id="parameters_2">Parameters<a class="headerlink" href="#parameters_2" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>countUp</code></td>
+<td>Integer, in the range <code>[1..propertyDepth]</code></td>
+<td>Optional. The number of levels to ascend within the parent-child hierarchy.  Default is 1, which gets the immediate parent.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_2">Returns<a class="headerlink" href="#returns_2" title="Permanent link">&para;</a></h4>
+<p>PropertyGroup object, or <a href="../../layer/layer/">Layer object</a> if the count reaches the containing layer.</p>
+<h4 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">containing_layer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">my_property</span><span class="p">.</span><span class="nx">propertyGroup</span><span class="p">(</span><span class="nx">my_property</span><span class="p">.</span><span class="nx">propertyDepth</span><span class="p">);</span>
+</code></pre></div>
+<hr />
+<h3 id="propertybaseremove">PropertyBase.remove()<a class="headerlink" href="#propertybaseremove" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).propertySpec.remove()</code></p>
+<h4 id="description_18">Description<a class="headerlink" href="#description_18" title="Permanent link">&para;</a></h4>
+<p>Removes this property from its parent group. If this is a property group, it removes the child properties as well. This method is valid only for children of indexed groups; if it is not, or if the index value is not valid, the method generates an exception and displays an error. (An indexed group has the type <code>PropertyType.INDEXED_GROUP</code>; see <a href="#propertybasepropertytype">PropertyBase.propertyType</a>.) This method can be called on a text animation property (that is, any animator that has been set to a text layer).</p>
+<h4 id="parameters_3">Parameters<a class="headerlink" href="#parameters_3" title="Permanent link">&para;</a></h4>
+<p>None.</p>
+<h4 id="returns_3">Returns<a class="headerlink" href="#returns_3" title="Permanent link">&para;</a></h4>
+<p>Nothing.</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 6, 2024</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.action.edit", "content.action.view", "search.highlight", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.525ec568.min.js"></script>
+      
+    
+  </body>
+</html>

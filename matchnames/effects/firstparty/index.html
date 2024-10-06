@@ -1,0 +1,4891 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ae-scripting.docsforadobe.dev/matchnames/effects/firstparty/">
+      
+      
+        <link rel="prev" href="../../layer/layerstyles/">
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
+    
+    
+      
+        <title>First-Party Effect Match Names - After Effects Scripting Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../_static/extra.css">
+    
+      <link rel="stylesheet" href="../../../_static/syntax-highlight.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#first-party-effect-match-names" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://docsforadobe.dev" title="After Effects Scripting Guide" class="md-header__button md-logo" aria-label="After Effects Scripting Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            After Effects Scripting Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              First-Party Effect Match Names
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/docsforadobe/after-effects-scripting-guide/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    after-effects-scripting-guide
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://docsforadobe.dev" title="After Effects Scripting Guide" class="md-nav__button md-logo" aria-label="After Effects Scripting Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    After Effects Scripting Guide
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/docsforadobe/after-effects-scripting-guide/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    after-effects-scripting-guide
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../introduction/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../introduction/javascript/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Javascript for After Effects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../introduction/changelog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    After Effects Scripting Changlog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../introduction/objectmodel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    After Effects Object Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../introduction/classhierarchy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    After Effects Class Hierarchy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    General
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            General
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../general/globals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Globals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../general/application/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Application
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../general/project/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../general/system/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Item
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Item
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../item/item/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Item object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../item/itemcollection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ItemCollection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../item/avitem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AVItem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../item/compitem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CompItem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../item/folderitem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FolderItem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../item/footageitem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FootageItem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Layer
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Layer
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../layer/layer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Layer object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../layer/layercollection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LayerCollection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../layer/avlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AVLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../layer/cameralayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CameraLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../layer/lightlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LightLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../layer/shapelayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ShapeLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../layer/textlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TextLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../layer/threedmodellayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ThreeDModelLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Property
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Property
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../property/property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Property object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../property/propertybase/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PropertyBase
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../property/propertygroup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PropertyGroup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../property/maskpropertygroup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MaskPropertyGroup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Render Queue
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Render Queue
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../renderqueue/renderqueue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RenderQueue object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../renderqueue/rqitemcollection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RQItemCollection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../renderqueue/renderqueueitem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RenderQueueItem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../renderqueue/omcollection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OMCollection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../renderqueue/outputmodule/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OutputModule
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sources
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Sources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sources/filesource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FileSource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sources/footagesource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FootageSource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sources/placeholdersource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PlaceholderSource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sources/solidsource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SolidSource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Text
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Text
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../text/characterrange/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CharacterRange
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../text/composedlinerange/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ComposedLineRange
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../text/fontobject/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FontObject
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../text/fontsobject/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FontsObject
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../text/paragraphrange/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ParagraphRange
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../text/textdocument/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TextDocument
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Other
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Other
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../other/collection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Collection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../other/importoptions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ImportOptions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../other/keyframeease/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    KeyframeEase
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../other/markervalue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MarkerValue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../other/preferences/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Preferences
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../other/settings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Settings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../other/shape/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Shape
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../other/view/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    View
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../other/viewer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Viewer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../other/viewoptions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ViewOptions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Match Names
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Match Names
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_1" id="__nav_11_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Layers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_1">
+            <span class="md-nav__icon md-icon"></span>
+            Layers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/avlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AV Layer Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/3dlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3D Layer Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/cameralayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Camera Layer Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/lightlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Light Layer Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/textlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Text Layer Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/shapelayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Shape Layer Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/layerstyles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Layer Styles Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_11_2" id="__nav_11_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Effects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_11_2">
+            <span class="md-nav__icon md-icon"></span>
+            Effects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    First-Party Effect Match Names
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    First-Party Effect Match Names
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Page Contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Page Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+	<a href="#3d-channel" class="md-nav__link">
+		<span class="md-ellipsis">
+			3D Channel
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#audio" class="md-nav__link">
+		<span class="md-ellipsis">
+			Audio
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#blur-sharpen" class="md-nav__link">
+		<span class="md-ellipsis">
+			Blur &amp; Sharpen
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#channel" class="md-nav__link">
+		<span class="md-ellipsis">
+			Channel
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#cinema-4d" class="md-nav__link">
+		<span class="md-ellipsis">
+			CINEMA 4D
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#color-correction" class="md-nav__link">
+		<span class="md-ellipsis">
+			Color Correction
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#distort" class="md-nav__link">
+		<span class="md-ellipsis">
+			Distort
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#expression-controls" class="md-nav__link">
+		<span class="md-ellipsis">
+			Expression Controls
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#generate" class="md-nav__link">
+		<span class="md-ellipsis">
+			Generate
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#keying" class="md-nav__link">
+		<span class="md-ellipsis">
+			Keying
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#matte" class="md-nav__link">
+		<span class="md-ellipsis">
+			Matte
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#noise-grain" class="md-nav__link">
+		<span class="md-ellipsis">
+			Noise &amp; Grain
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#obsolete" class="md-nav__link">
+		<span class="md-ellipsis">
+			Obsolete
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#perspective" class="md-nav__link">
+		<span class="md-ellipsis">
+			Perspective
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#simulation" class="md-nav__link">
+		<span class="md-ellipsis">
+			Simulation
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#stylize" class="md-nav__link">
+		<span class="md-ellipsis">
+			Stylize
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#synthetic-aperture" class="md-nav__link">
+		<span class="md-ellipsis">
+			Synthetic Aperture
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#text" class="md-nav__link">
+		<span class="md-ellipsis">
+			Text
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#time" class="md-nav__link">
+		<span class="md-ellipsis">
+			Time
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#transition" class="md-nav__link">
+		<span class="md-ellipsis">
+			Transition
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#utility" class="md-nav__link">
+		<span class="md-ellipsis">
+			Utility
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#_obsolete" class="md-nav__link">
+		<span class="md-ellipsis">
+			_Obsolete
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Page Contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Page Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+	<a href="#3d-channel" class="md-nav__link">
+		<span class="md-ellipsis">
+			3D Channel
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#audio" class="md-nav__link">
+		<span class="md-ellipsis">
+			Audio
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#blur-sharpen" class="md-nav__link">
+		<span class="md-ellipsis">
+			Blur &amp; Sharpen
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#channel" class="md-nav__link">
+		<span class="md-ellipsis">
+			Channel
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#cinema-4d" class="md-nav__link">
+		<span class="md-ellipsis">
+			CINEMA 4D
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#color-correction" class="md-nav__link">
+		<span class="md-ellipsis">
+			Color Correction
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#distort" class="md-nav__link">
+		<span class="md-ellipsis">
+			Distort
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#expression-controls" class="md-nav__link">
+		<span class="md-ellipsis">
+			Expression Controls
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#generate" class="md-nav__link">
+		<span class="md-ellipsis">
+			Generate
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#keying" class="md-nav__link">
+		<span class="md-ellipsis">
+			Keying
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#matte" class="md-nav__link">
+		<span class="md-ellipsis">
+			Matte
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#noise-grain" class="md-nav__link">
+		<span class="md-ellipsis">
+			Noise &amp; Grain
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#obsolete" class="md-nav__link">
+		<span class="md-ellipsis">
+			Obsolete
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#perspective" class="md-nav__link">
+		<span class="md-ellipsis">
+			Perspective
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#simulation" class="md-nav__link">
+		<span class="md-ellipsis">
+			Simulation
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#stylize" class="md-nav__link">
+		<span class="md-ellipsis">
+			Stylize
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#synthetic-aperture" class="md-nav__link">
+		<span class="md-ellipsis">
+			Synthetic Aperture
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#text" class="md-nav__link">
+		<span class="md-ellipsis">
+			Text
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#time" class="md-nav__link">
+		<span class="md-ellipsis">
+			Time
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#transition" class="md-nav__link">
+		<span class="md-ellipsis">
+			Transition
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#utility" class="md-nav__link">
+		<span class="md-ellipsis">
+			Utility
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#_obsolete" class="md-nav__link">
+		<span class="md-ellipsis">
+			_Obsolete
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/docsforadobe/after-effects-scripting-guide/edit/master/docs/matchnames/effects/firstparty.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/docsforadobe/after-effects-scripting-guide/raw/master/docs/matchnames/effects/firstparty.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<p><a href="/">Home</a><span class="breadcrumb md-nav__icon md-icon"></span>Match Names<span class="breadcrumb md-nav__icon md-icon"></span>Effects<span class="breadcrumb md-nav__icon md-icon"></span>First-Party Effect Match Names</p>
+<h1 id="first-party-effect-match-names">First-Party Effect Match Names<a class="headerlink" href="#first-party-effect-match-names" title="Permanent link">&para;</a></h1>
+<p>This list also details effect Bits Per Channel (BPC) and the AE version GPU-acceleration was introduced, if applicable.</p>
+<hr />
+<h2 id="3d-channel">3D Channel<a class="headerlink" href="#3d-channel" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Match Name</th>
+<th>Display Name (EN)</th>
+<th>BPC</th>
+<th>GPU</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ADBE AUX CHANNEL EXTRACT</code></td>
+<td>3D Channel Extract</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE DEPTH MATTE</code></td>
+<td>Depth Matte</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE DEPTH FIELD</code></td>
+<td>Depth of Field</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>EXtractoR</code></td>
+<td>EXtractoR</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE FOG_3D</code></td>
+<td>Fog 3D</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE ID MATTE</code></td>
+<td>ID Matte</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>IDentifier</code></td>
+<td>IDentifier</td>
+<td>32</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="audio">Audio<a class="headerlink" href="#audio" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Match Name</th>
+<th>Display Name (EN)</th>
+<th>BPC</th>
+<th>GPU</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ADBE Aud Reverse</code></td>
+<td>Backwards</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Aud BT</code></td>
+<td>Bass &amp; Treble</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Aud Delay</code></td>
+<td>Delay</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Aud_Flange</code></td>
+<td>Flange &amp; Chorus</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Aud HiLo</code></td>
+<td>High-Low Pass</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Aud Modulator</code></td>
+<td>Modulator</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Param EQ</code></td>
+<td>Parametric EQ</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Aud Reverb</code></td>
+<td>Reverb</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Aud Stereo Mixer</code></td>
+<td>Stereo Mixer</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Aud Tone</code></td>
+<td>Tone</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="blur-sharpen">Blur &amp; Sharpen<a class="headerlink" href="#blur-sharpen" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Match Name</th>
+<th>Display Name (EN)</th>
+<th>BPC</th>
+<th>GPU</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ADBE Bilateral</code></td>
+<td>Bilateral Blur</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Camera Lens Blur</code></td>
+<td>Camera Lens Blur</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE CameraShakeDeblur</code></td>
+<td>Camera-Shake Deblur</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CS CrossBlur</code></td>
+<td>CC Cross Blur</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Radial Blur</code></td>
+<td>CC Radial Blur</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Radial Fast Blur</code></td>
+<td>CC Radial Fast Blur</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Vector Blur</code></td>
+<td>CC Vector Blur</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Channel Blur</code></td>
+<td>Channel Blur</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Compound Blur</code></td>
+<td>Compound Blur</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Motion Blur</code></td>
+<td>Directional Blur</td>
+<td>32</td>
+<td>15.0</td>
+</tr>
+<tr>
+<td><code>ADBE Box Blur2</code></td>
+<td>Fast Box Blur</td>
+<td>32</td>
+<td>14.2</td>
+</tr>
+<tr>
+<td><code>ADBE Gaussian Blur 2</code></td>
+<td>Gaussian Blur</td>
+<td>32</td>
+<td>13.8</td>
+</tr>
+<tr>
+<td><code>ADBE Radial Blur</code></td>
+<td>Radial Blur</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Sharpen</code></td>
+<td>Sharpen</td>
+<td>32</td>
+<td>13.8</td>
+</tr>
+<tr>
+<td><code>ADBE Smart Blur</code></td>
+<td>Smart Blur</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Unsharp Mask2</code></td>
+<td>Unsharp Mask</td>
+<td>32</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="channel">Channel<a class="headerlink" href="#channel" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Match Name</th>
+<th>Display Name (EN)</th>
+<th>BPC</th>
+<th>GPU</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ADBE Arithmetic</code></td>
+<td>Arithmetic</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Blend</code></td>
+<td>Blend</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Calculations</code></td>
+<td>Calculations</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Composite</code></td>
+<td>CC Composite</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Channel Combiner</code></td>
+<td>Channel Combiner</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Compound Arithmetic</code></td>
+<td>Compound Arithmetic</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Invert</code></td>
+<td>Invert</td>
+<td>32</td>
+<td>14.1</td>
+</tr>
+<tr>
+<td><code>ADBE Minimax</code></td>
+<td>Minimax</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Remove Color Matting</code></td>
+<td>Remove Color Matting</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Set Channels</code></td>
+<td>Set Channels</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Set Matte3</code></td>
+<td>Set Matte</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Shift Channels</code></td>
+<td>Shift Channels</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Solid Composite</code></td>
+<td>Solid Composite</td>
+<td>32</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="cinema-4d">CINEMA 4D<a class="headerlink" href="#cinema-4d" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Match Name</th>
+<th>Display Name (EN)</th>
+<th>BPC</th>
+<th>GPU</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CINEMA 4D Effect</code></td>
+<td>CINEWARE</td>
+<td>32</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="color-correction">Color Correction<a class="headerlink" href="#color-correction" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Match Name</th>
+<th>Display Name (EN)</th>
+<th>BPC</th>
+<th>GPU</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ADBE AutoColor</code></td>
+<td>Auto Color</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE AutoContrast</code></td>
+<td>Auto Contrast</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE AutoLevels</code></td>
+<td>Auto Levels</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Black&amp;White</code></td>
+<td>Black &amp; White</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Brightness &amp; Contrast 2</code></td>
+<td>Brightness &amp; Contrast</td>
+<td>32</td>
+<td>14.1</td>
+</tr>
+<tr>
+<td><code>ADBE Broadcast Colors</code></td>
+<td>Broadcast Colors</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CS Color Neutralizer</code></td>
+<td>CC Color Neutralizer</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Color Offset</code></td>
+<td>CC Color Offset</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CS Kernel</code></td>
+<td>CC Kernel</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Toner</code></td>
+<td>CC Toner</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Change Color</code></td>
+<td>Change Color</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Change To Color</code></td>
+<td>Change to Color</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE CHANNEL MIXER</code></td>
+<td>Channel Mixer</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Color Balance 2</code></td>
+<td>Color Balance</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Color Balance (HLS)</code></td>
+<td>Color Balance (HLS)</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Color Link</code></td>
+<td>Color Link</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Deflicker</code></td>
+<td>Color Stabilizer</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>APC Colorama</code></td>
+<td>Colorama</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE CurvesCustom</code></td>
+<td>Curves</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Equalize</code></td>
+<td>Equalize</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Exposure2</code></td>
+<td>Exposure</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Gamma/Pedestal/Gain2</code></td>
+<td>Gamma/Pedestal/Gain</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE HUE SATURATION</code></td>
+<td>Hue/Saturation</td>
+<td>32</td>
+<td>14.1</td>
+</tr>
+<tr>
+<td><code>ADBE Leave Color</code></td>
+<td>Leave Color</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Easy Levels2</code></td>
+<td>Levels</td>
+<td>32</td>
+<td>14.2</td>
+</tr>
+<tr>
+<td><code>ADBE Pro Levels2</code></td>
+<td>Levels (Individual Controls)</td>
+<td>32</td>
+<td>14.2</td>
+</tr>
+<tr>
+<td><code>ADBE Lumetri</code></td>
+<td>Lumetri Color</td>
+<td>32</td>
+<td>13.8</td>
+</tr>
+<tr>
+<td><code>ADBE PhotoFilterPS</code></td>
+<td>Photo Filter</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE PS Arbitrary Map</code></td>
+<td>PS Arbitrary Map</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE SelectiveColor</code></td>
+<td>Selective Color</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE ShadowHighlight</code></td>
+<td>Shadow/Highlight</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Tint</code></td>
+<td>Tint</td>
+<td>32</td>
+<td>14.1</td>
+</tr>
+<tr>
+<td><code>ADBE Tritone</code></td>
+<td>Tritone</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Vibrance</code></td>
+<td>Vibrance</td>
+<td>16</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="distort">Distort<a class="headerlink" href="#distort" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Match Name</th>
+<th>Display Name (EN)</th>
+<th>BPC</th>
+<th>GPU</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ADBE BEZMESH</code></td>
+<td>Bezier Warp</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Bulge</code></td>
+<td>Bulge</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Bend It</code></td>
+<td>CC Bend It</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Bender</code></td>
+<td>CC Bender</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Blobbylize</code></td>
+<td>CC Blobbylize</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Flo Motion</code></td>
+<td>CC Flo Motion</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Griddler</code></td>
+<td>CC Griddler</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Lens</code></td>
+<td>CC Lens</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Page Turn</code></td>
+<td>CC Page Turn</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Power Pin</code></td>
+<td>CC Power Pin</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Ripple Pulse</code></td>
+<td>CC Ripple Pulse</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Slant</code></td>
+<td>CC Slant</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Smear</code></td>
+<td>CC Smear</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Split</code></td>
+<td>CC Split</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Split 2</code></td>
+<td>CC Split 2</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Tiler</code></td>
+<td>CC Tiler</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Corner Pin</code></td>
+<td>Corner Pin</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Upscale</code></td>
+<td>Detail-preserving Upscale</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Displacement Map</code></td>
+<td>Displacement Map</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE LIQUIFY</code></td>
+<td>Liquify</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Magnify</code></td>
+<td>Magnify</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE MESH WARP</code></td>
+<td>Mesh Warp</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Mirror</code></td>
+<td>Mirror</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Offset</code></td>
+<td>Offset</td>
+<td>16</td>
+<td>14.2</td>
+</tr>
+<tr>
+<td><code>ADBE Optics Compensation</code></td>
+<td>Optics Compensation</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Polar Coordinates</code></td>
+<td>Polar Coordinates</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE RESHAPE</code></td>
+<td>Reshape</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Ripple</code></td>
+<td>Ripple</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Rolling Shutter</code></td>
+<td>Rolling Shutter Repair</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE SCHMEAR</code></td>
+<td>Smear</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Spherize</code></td>
+<td>Spherize</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Geometry2</code></td>
+<td>Transform</td>
+<td>32</td>
+<td>15.0</td>
+</tr>
+<tr>
+<td><code>ADBE Turbulent Displace</code></td>
+<td>Turbulent Displace</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Twirl</code></td>
+<td>Twirl</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE WRPMESH</code></td>
+<td>Warp</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE SubspaceStabilizer</code></td>
+<td>Warp Stabilizer VFX</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Wave Warp</code></td>
+<td>Wave Warp</td>
+<td>16</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="expression-controls">Expression Controls<a class="headerlink" href="#expression-controls" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Match Name</th>
+<th>Display Name (EN)</th>
+<th>BPC</th>
+<th>GPU</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ADBE Point3D Control</code></td>
+<td>3D Point Control</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Angle Control</code></td>
+<td>Angle Control</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Checkbox Control</code></td>
+<td>Checkbox Control</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Color Control</code></td>
+<td>Color Control</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Dropdown Control</code></td>
+<td>Dropdown Control</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Layer Control</code></td>
+<td>Layer Control</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Point Control</code></td>
+<td>Point Control</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Slider Control</code></td>
+<td>Slider Control</td>
+<td>32</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="generate">Generate<a class="headerlink" href="#generate" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Match Name</th>
+<th>Display Name (EN)</th>
+<th>BPC</th>
+<th>GPU</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ADBE 4ColorGradient</code></td>
+<td>4-Color Gradient</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Lightning 2</code></td>
+<td>Advanced Lightning</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE AudSpect</code></td>
+<td>Audio Spectrum</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE AudWave</code></td>
+<td>Audio Waveform</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Laser</code></td>
+<td>Beam</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Glue Gun</code></td>
+<td>CC Glue Gun</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Light Burst 2.5</code></td>
+<td>CC Light Burst 2.5</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Light Rays</code></td>
+<td>CC Light Rays</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Light Sweep</code></td>
+<td>CC Light Sweep</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CS Threads</code></td>
+<td>CC Threads</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Cell Pattern</code></td>
+<td>Cell Pattern</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Checkerboard</code></td>
+<td>Checkerboard</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Circle</code></td>
+<td>Circle</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE ELLIPSE</code></td>
+<td>Ellipse</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Eyedropper Fill</code></td>
+<td>Eyedropper Fill</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Fill</code></td>
+<td>Fill</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Fractal</code></td>
+<td>Fractal</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Ramp</code></td>
+<td>Gradient Ramp</td>
+<td>32</td>
+<td>14.2</td>
+</tr>
+<tr>
+<td><code>ADBE Grid</code></td>
+<td>Grid</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Lens Flare</code></td>
+<td>Lens Flare</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Paint Bucket</code></td>
+<td>Paint Bucket</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td><code>APC Radio Waves</code></td>
+<td>Radio Waves</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Scribble Fill</code></td>
+<td>Scribble</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Stroke</code></td>
+<td>Stroke</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td><code>APC Vegas</code></td>
+<td>Vegas</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Write-on</code></td>
+<td>Write-on</td>
+<td>8</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="keying">Keying<a class="headerlink" href="#keying" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Match Name</th>
+<th>Display Name (EN)</th>
+<th>BPC</th>
+<th>GPU</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ADBE Spill2</code></td>
+<td>Advanced Spill Suppressor</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Simple Wire Removal</code></td>
+<td>CC Simple Wire Removal</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Color Difference Key</code></td>
+<td>Color Difference Key</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Color Range</code></td>
+<td>Color Range</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Difference Matte2</code></td>
+<td>Difference Matte</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Extract</code></td>
+<td>Extract</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE ATG Extract</code></td>
+<td>Inner/Outer Key</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE KeyCleaner</code></td>
+<td>Key Cleaner</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>Keylight 906</code></td>
+<td>Keylight (1.2)</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Linear Color Key2</code></td>
+<td>Linear Color Key</td>
+<td>32</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="matte">Matte<a class="headerlink" href="#matte" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Match Name</th>
+<th>Display Name (EN)</th>
+<th>BPC</th>
+<th>GPU</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ADBE Matte Choker</code></td>
+<td>Matte Choker</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ISL MochaShapeImporter</code></td>
+<td>mocha shape</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE RefineRBMatte</code></td>
+<td>Refine Hard Matte</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE RefineMatte2</code></td>
+<td>Refine Soft Matte</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Simple Choker</code></td>
+<td>Simple Choker</td>
+<td>32</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="noise-grain">Noise &amp; Grain<a class="headerlink" href="#noise-grain" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Match Name</th>
+<th>Display Name (EN)</th>
+<th>BPC</th>
+<th>GPU</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>VISINF Grain Implant</code></td>
+<td>Add Grain</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Dust &amp; Scratches</code></td>
+<td>Dust &amp; Scratches</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Fractal Noise</code></td>
+<td>Fractal Noise</td>
+<td>32</td>
+<td>14.2</td>
+</tr>
+<tr>
+<td><code>VISINF Grain Duplication</code></td>
+<td>Match Grain</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Median</code></td>
+<td>Median</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Noise</code></td>
+<td>Noise</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Noise Alpha2</code></td>
+<td>Noise Alpha</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Noise HLS2</code></td>
+<td>Noise HLS</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Noise HLS Auto2</code></td>
+<td>Noise HLS Auto</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td><code>VISINF Grain Removal</code></td>
+<td>Remove Grain</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE AIF Perlin Noise 3D</code></td>
+<td>Turbulent Noise</td>
+<td>32</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="obsolete">Obsolete<a class="headerlink" href="#obsolete" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Match Name</th>
+<th>Display Name (EN)</th>
+<th>BPC</th>
+<th>GPU</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ADBE Basic 3D</code></td>
+<td>Basic 3D</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Basic Text2</code></td>
+<td>Basic Text</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Color Key</code></td>
+<td>Color Key</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Fast Blur</code></td>
+<td>Fast Blur (Legacy)</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Gaussian Blur</code></td>
+<td>Gaussian Blur (Legacy)</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Lightning</code></td>
+<td>Lightning</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Luma Key</code></td>
+<td>Luma Key</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Path Text</code></td>
+<td>Path Text</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Reduce Interlace Flicker</code></td>
+<td>Reduce Interlace Flicker</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Spill Suppressor</code></td>
+<td>Spill Suppressor</td>
+<td>32</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="perspective">Perspective<a class="headerlink" href="#perspective" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Match Name</th>
+<th>Display Name (EN)</th>
+<th>BPC</th>
+<th>GPU</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ADBE 3D Tracker</code></td>
+<td>3D Camera Tracker</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE 3D Glasses2</code></td>
+<td>3D Glasses</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Bevel Alpha</code></td>
+<td>Bevel Alpha</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Bevel Edges</code></td>
+<td>Bevel Edges</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Cylinder</code></td>
+<td>CC Cylinder</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Environment</code></td>
+<td>CC Environment</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Sphere</code></td>
+<td>CC Sphere</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Spotlight</code></td>
+<td>CC Spotlight</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Drop Shadow</code></td>
+<td>Drop Shadow</td>
+<td>32</td>
+<td>14.2</td>
+</tr>
+<tr>
+<td><code>ADBE Radial Shadow</code></td>
+<td>Radial Shadow</td>
+<td>8</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="simulation">Simulation<a class="headerlink" href="#simulation" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Match Name</th>
+<th>Display Name (EN)</th>
+<th>BPC</th>
+<th>GPU</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>APC CardDanceCam</code></td>
+<td>Card Dance</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td><code>APC Caustics</code></td>
+<td>Caustics</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Ball Action</code></td>
+<td>CC Ball Action</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Bubbles</code></td>
+<td>CC Bubbles</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Drizzle</code></td>
+<td>CC Drizzle</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Hair</code></td>
+<td>CC Hair</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Mr. Mercury</code></td>
+<td>CC Mr. Mercury</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Particle Systems II</code></td>
+<td>CC Particle Systems II</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Particle World</code></td>
+<td>CC Particle World</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Pixel Polly</code></td>
+<td>CC Pixel Polly</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CSRainfall</code></td>
+<td>CC Rainfall</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Scatterize</code></td>
+<td>CC Scatterize</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CSSnowfall</code></td>
+<td>CC Snowfall</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Star Burst</code></td>
+<td>CC Star Burst</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>APC Foam</code></td>
+<td>Foam</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Playgnd</code></td>
+<td>Particle Playground</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td><code>APC Shatter</code></td>
+<td>Shatter</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td><code>APC Wave World</code></td>
+<td>Wave World</td>
+<td>8</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="stylize">Stylize<a class="headerlink" href="#stylize" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Match Name</th>
+<th>Display Name (EN)</th>
+<th>BPC</th>
+<th>GPU</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ADBE Brush Strokes</code></td>
+<td>Brush Strokes</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Cartoonify</code></td>
+<td>Cartoon</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CS BlockLoad</code></td>
+<td>CC Block Load</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Burn Film</code></td>
+<td>CC Burn Film</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Glass</code></td>
+<td>CC Glass</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CS HexTile</code></td>
+<td>CC HexTile</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Kaleida</code></td>
+<td>CC Kaleida</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Mr. Smoothie</code></td>
+<td>CC Mr. Smoothie</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Plastic</code></td>
+<td>CC Plastic</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC RepeTile</code></td>
+<td>CC RepeTile</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Threshold</code></td>
+<td>CC Threshold</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Threshold RGB</code></td>
+<td>CC Threshold RGB</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CS Vignette</code></td>
+<td>CC Vignette</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Color Emboss</code></td>
+<td>Color Emboss</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Emboss</code></td>
+<td>Emboss</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Find Edges</code></td>
+<td>Find Edges</td>
+<td>8</td>
+<td>14.1</td>
+</tr>
+<tr>
+<td><code>ADBE Glo2</code></td>
+<td>Glow</td>
+<td>32</td>
+<td>14.1</td>
+</tr>
+<tr>
+<td><code>ADBE Mosaic</code></td>
+<td>Mosaic</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Tile</code></td>
+<td>Motion Tile</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Posterize</code></td>
+<td>Posterize</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Roughen Edges</code></td>
+<td>Roughen Edges</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Scatter</code></td>
+<td>Scatter</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Strobe</code></td>
+<td>Strobe Light</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Texturize</code></td>
+<td>Texturize</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Threshold2</code></td>
+<td>Threshold</td>
+<td>32</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="synthetic-aperture">Synthetic Aperture<a class="headerlink" href="#synthetic-aperture" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Match Name</th>
+<th>Display Name (EN)</th>
+<th>BPC</th>
+<th>GPU</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SYNTHAP CF Color Finesse 2</code></td>
+<td>SA Color Finesse 3</td>
+<td>32</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="text">Text<a class="headerlink" href="#text" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Match Name</th>
+<th>Display Name (EN)</th>
+<th>BPC</th>
+<th>GPU</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ADBE Numbers2</code></td>
+<td>Numbers</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Timecode</code></td>
+<td>Timecode</td>
+<td>8</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="time">Time<a class="headerlink" href="#time" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Match Name</th>
+<th>Display Name (EN)</th>
+<th>BPC</th>
+<th>GPU</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CC Force Motion Blur</code></td>
+<td>CC Force Motion Blur</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Wide Time</code></td>
+<td>CC Wide Time</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Echo</code></td>
+<td>Echo</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE OFMotionBlur</code></td>
+<td>Pixel Motion Blur</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Posterize Time</code></td>
+<td>Posterize Time</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Difference</code></td>
+<td>Time Difference</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Time Displacement</code></td>
+<td>Time Displacement</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Timewarp</code></td>
+<td>Timewarp</td>
+<td>32</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="transition">Transition<a class="headerlink" href="#transition" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Match Name</th>
+<th>Display Name (EN)</th>
+<th>BPC</th>
+<th>GPU</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ADBE Block Dissolve</code></td>
+<td>Block Dissolve</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>APC CardWipeCam</code></td>
+<td>Card Wipe</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Glass Wipe</code></td>
+<td>CC Glass Wipe</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Grid Wipe</code></td>
+<td>CC Grid Wipe</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Image Wipe</code></td>
+<td>CC Image Wipe</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Jaws</code></td>
+<td>CC Jaws</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Light Wipe</code></td>
+<td>CC Light Wipe</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CS LineSweep</code></td>
+<td>CC Line Sweep</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Radial ScaleWipe</code></td>
+<td>CC Radial ScaleWipe</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Scale Wipe</code></td>
+<td>CC Scale Wipe</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Twister</code></td>
+<td>CC Twister</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC WarpoMatic</code></td>
+<td>CC WarpoMatic</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Gradient Wipe</code></td>
+<td>Gradient Wipe</td>
+<td>16</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE IRIS_WIPE</code></td>
+<td>Iris Wipe</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Linear Wipe</code></td>
+<td>Linear Wipe</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Radial Wipe</code></td>
+<td>Radial Wipe</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Venetian Blinds</code></td>
+<td>Venetian Blinds</td>
+<td>32</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="utility">Utility<a class="headerlink" href="#utility" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Match Name</th>
+<th>Display Name (EN)</th>
+<th>BPC</th>
+<th>GPU</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ADBE Apply Color LUT2</code></td>
+<td>Apply Color LUT</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Overbrights</code></td>
+<td>CC Overbrights</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Cineon Converter2</code></td>
+<td>Cineon Converter</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE ProfileToProfile</code></td>
+<td>Color Profile Converter</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE GROW BOUNDS</code></td>
+<td>Grow Bounds</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Compander</code></td>
+<td>HDR Compander</td>
+<td>32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE HDR ToneMap</code></td>
+<td>HDR Highlight Compression</td>
+<td>32</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_obsolete">_Obsolete<a class="headerlink" href="#_obsolete" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Match Name</th>
+<th>Display Name (EN)</th>
+<th>BPC</th>
+<th>GPU</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ADBE Paint</code></td>
+<td>Paint</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Samurai</code></td>
+<td>Roto Brush &amp; Refine Edge</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE FreePin3</code></td>
+<td>Puppet</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE RefineMatte</code></td>
+<td>Refine Matte</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE 3D Glasses</code></td>
+<td>3D Glasses (Obsolete)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Alpha Levels2</code></td>
+<td>Alpha Levels</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Alpha Levels3</code></td>
+<td>Alpha Levels</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Apply Color LUT</code></td>
+<td>Apply Color LUT</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Brightness &amp; Contrast</code></td>
+<td>Brightness &amp; Contrast</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Box Blur</code></td>
+<td>Box Blur</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Cineon Converter</code></td>
+<td>Cineon Converter</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Color Balance</code></td>
+<td>Color Balance</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC PS Classic</code></td>
+<td>CC PS Classic (obsolete)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC PS LE Classic</code></td>
+<td>CC PS LE Classic (obsolete)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Rain</code></td>
+<td>CC Rain</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Snow</code></td>
+<td>CC Snow</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Time Blend</code></td>
+<td>CC Time Blend</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>CC Time Blend FX</code></td>
+<td>CC Time Blend FX</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Exposure</code></td>
+<td>Exposure</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Easy Levels</code></td>
+<td>Levels</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Pro Levels</code></td>
+<td>Levels (Individual Controls)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Noise Alpha</code></td>
+<td>Noise Alpha</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Noise HLS</code></td>
+<td>Noise HLS</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Noise HLS Auto</code></td>
+<td>Noise HLS Auto</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE PSL Bevel Emboss</code></td>
+<td>Photoshop Bevel And Emboss</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE PSL Drop Shadow</code></td>
+<td>Photoshop Drop Shadow</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE PSL Inner Glow</code></td>
+<td>Photoshop Inner Glow</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE PSL Inner Shadow</code></td>
+<td>Photoshop Inner Shadow</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE PSL Outer Glow</code></td>
+<td>Photoshop Outer Glow</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE PSL Solid Fill</code></td>
+<td>Photoshop Solid Fill</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Photo Filter</code></td>
+<td>Photo Filter</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Set Matte2</code></td>
+<td>Set Matte</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Three-Way Color Corrector</code></td>
+<td>Three-Way Color Corrector</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Threshold</code></td>
+<td>Threshold</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Geometry</code></td>
+<td>Transform</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Unsharp Mask</code></td>
+<td>Unsharp Mask</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ADBE Vector Paint</code></td>
+<td>Vector Paint</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 6, 2024</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.action.edit", "content.action.view", "search.highlight", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.525ec568.min.js"></script>
+      
+    
+  </body>
+</html>

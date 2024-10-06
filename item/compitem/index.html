@@ -1,0 +1,3718 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ae-scripting.docsforadobe.dev/item/compitem/">
+      
+      
+        <link rel="prev" href="../avitem/">
+      
+      
+        <link rel="next" href="../folderitem/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
+    
+    
+      
+        <title>CompItem - After Effects Scripting Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../_static/extra.css">
+    
+      <link rel="stylesheet" href="../../_static/syntax-highlight.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#compitem-object" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://docsforadobe.dev" title="After Effects Scripting Guide" class="md-header__button md-logo" aria-label="After Effects Scripting Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            After Effects Scripting Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CompItem
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/docsforadobe/after-effects-scripting-guide/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    after-effects-scripting-guide
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://docsforadobe.dev" title="After Effects Scripting Guide" class="md-nav__button md-logo" aria-label="After Effects Scripting Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    After Effects Scripting Guide
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/docsforadobe/after-effects-scripting-guide/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    after-effects-scripting-guide
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/javascript/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Javascript for After Effects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/changelog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    After Effects Scripting Changlog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/objectmodel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    After Effects Object Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/classhierarchy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    After Effects Class Hierarchy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    General
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            General
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/globals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Globals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/application/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Application
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/project/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/system/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Item
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Item
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../item/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Item object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../itemcollection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ItemCollection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../avitem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AVItem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    CompItem
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    CompItem
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Page Contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Page Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+	<a href="#attributes" class="md-nav__link">
+		<span class="md-ellipsis">
+			Attributes
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+		<nav class="md-nav" aria-label="Attributes">
+			<ul class="md-nav__list">
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemactivecamera" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.activeCamera
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitembgcolor" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.bgColor
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemcounters" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.counters
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemdisplaystartframe" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.displayStartFrame
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemdisplaystarttime" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.displayStartTime
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemdraft3d" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.draft3d
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemdropframe" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.dropFrame
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemframeblending" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.frameBlending
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemframeduration" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.frameDuration
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemhideshylayers" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.hideShyLayers
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemlayers" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.layers
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemmarkerproperty" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.markerProperty
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemmotionblur" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.motionBlur
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemmotionbluradaptivesamplelimit" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.motionBlurAdaptiveSampleLimit
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemmotionblursamplesperframe" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.motionBlurSamplesPerFrame
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemmotiongraphicstemplatecontrollercount" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.motionGraphicsTemplateControllerCount
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemmotiongraphicstemplatename" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.motionGraphicsTemplateName
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemnumlayers" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.numLayers
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitempreservenestedframerate" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.preserveNestedFrameRate
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitempreservenestedresolution" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.preserveNestedResolution
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemrenderer" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.renderer
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemrenderers" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.renderers
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemresolutionfactor" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.resolutionFactor
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemselectedlayers" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.selectedLayers
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemselectedproperties" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.selectedProperties
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemshutterangle" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.shutterAngle
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemshutterphase" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.shutterPhase
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemworkareaduration" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.workAreaDuration
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemworkareastart" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.workAreaStart
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+			</ul>
+		</nav>
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#methods" class="md-nav__link">
+		<span class="md-ellipsis">
+			Methods
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+		<nav class="md-nav" aria-label="Methods">
+			<ul class="md-nav__list">
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemduplicate" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.duplicate()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemexportasmotiongraphicstemplate" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.exportAsMotionGraphicsTemplate()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemgetmotiongraphicstemplatecontrollername" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.getMotionGraphicsTemplateControllerName()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemsetmotiongraphicscontrollername" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.setMotionGraphicsControllerName()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemlayer" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.layer()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemopeninessentialgraphics" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.openInEssentialGraphics()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemopeninviewer" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.openInViewer()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+			</ul>
+		</nav>
+	
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../folderitem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FolderItem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../footageitem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FootageItem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Layer
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Layer
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/layer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Layer object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/layercollection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LayerCollection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/avlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AVLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/cameralayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CameraLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/lightlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LightLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/shapelayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ShapeLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/textlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TextLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/threedmodellayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ThreeDModelLayer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Property
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Property
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../property/property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Property object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../property/propertybase/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PropertyBase
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../property/propertygroup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PropertyGroup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../property/maskpropertygroup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MaskPropertyGroup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Render Queue
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Render Queue
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../renderqueue/renderqueue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RenderQueue object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../renderqueue/rqitemcollection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RQItemCollection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../renderqueue/renderqueueitem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RenderQueueItem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../renderqueue/omcollection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OMCollection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../renderqueue/outputmodule/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OutputModule
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sources
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Sources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/filesource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FileSource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/footagesource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FootageSource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/placeholdersource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PlaceholderSource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/solidsource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SolidSource
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Text
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Text
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../text/characterrange/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CharacterRange
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../text/composedlinerange/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ComposedLineRange
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../text/fontobject/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FontObject
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../text/fontsobject/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FontsObject
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../text/paragraphrange/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ParagraphRange
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../text/textdocument/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TextDocument
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Other
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Other
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/collection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Collection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/importoptions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ImportOptions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/keyframeease/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    KeyframeEase
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/markervalue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MarkerValue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/preferences/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Preferences
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/settings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Settings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/shape/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Shape
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/view/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    View
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/viewer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Viewer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/viewoptions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ViewOptions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Match Names
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Match Names
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_1" id="__nav_11_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Layers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_1">
+            <span class="md-nav__icon md-icon"></span>
+            Layers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/layer/avlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AV Layer Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/layer/3dlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3D Layer Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/layer/cameralayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Camera Layer Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/layer/lightlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Light Layer Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/layer/textlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Text Layer Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/layer/shapelayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Shape Layer Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/layer/layerstyles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Layer Styles Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_2" id="__nav_11_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Effects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_2">
+            <span class="md-nav__icon md-icon"></span>
+            Effects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../matchnames/effects/firstparty/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    First-Party Effect Match Names
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Page Contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Page Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+	<a href="#attributes" class="md-nav__link">
+		<span class="md-ellipsis">
+			Attributes
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+		<nav class="md-nav" aria-label="Attributes">
+			<ul class="md-nav__list">
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemactivecamera" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.activeCamera
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitembgcolor" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.bgColor
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemcounters" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.counters
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemdisplaystartframe" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.displayStartFrame
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemdisplaystarttime" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.displayStartTime
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemdraft3d" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.draft3d
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemdropframe" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.dropFrame
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemframeblending" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.frameBlending
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemframeduration" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.frameDuration
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemhideshylayers" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.hideShyLayers
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemlayers" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.layers
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemmarkerproperty" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.markerProperty
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemmotionblur" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.motionBlur
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemmotionbluradaptivesamplelimit" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.motionBlurAdaptiveSampleLimit
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemmotionblursamplesperframe" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.motionBlurSamplesPerFrame
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemmotiongraphicstemplatecontrollercount" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.motionGraphicsTemplateControllerCount
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemmotiongraphicstemplatename" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.motionGraphicsTemplateName
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemnumlayers" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.numLayers
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitempreservenestedframerate" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.preserveNestedFrameRate
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitempreservenestedresolution" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.preserveNestedResolution
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemrenderer" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.renderer
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemrenderers" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.renderers
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemresolutionfactor" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.resolutionFactor
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemselectedlayers" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.selectedLayers
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemselectedproperties" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.selectedProperties
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemshutterangle" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.shutterAngle
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemshutterphase" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.shutterPhase
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemworkareaduration" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.workAreaDuration
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemworkareastart" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.workAreaStart
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+			</ul>
+		</nav>
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#methods" class="md-nav__link">
+		<span class="md-ellipsis">
+			Methods
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+		<nav class="md-nav" aria-label="Methods">
+			<ul class="md-nav__list">
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemduplicate" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.duplicate()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemexportasmotiongraphicstemplate" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.exportAsMotionGraphicsTemplate()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemgetmotiongraphicstemplatecontrollername" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.getMotionGraphicsTemplateControllerName()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemsetmotiongraphicscontrollername" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.setMotionGraphicsControllerName()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemlayer" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.layer()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemopeninessentialgraphics" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.openInEssentialGraphics()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#compitemopeninviewer" class="md-nav__link">
+		<span class="md-ellipsis">
+			CompItem.openInViewer()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+			</ul>
+		</nav>
+	
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/docsforadobe/after-effects-scripting-guide/edit/master/docs/item/compitem.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/docsforadobe/after-effects-scripting-guide/raw/master/docs/item/compitem.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<p><a href="/">Home</a><span class="breadcrumb md-nav__icon md-icon"></span>Item<span class="breadcrumb md-nav__icon md-icon"></span>CompItem</p>
+<h1 id="compitem-object">CompItem object<a class="headerlink" href="#compitem-object" title="Permanent link">&para;</a></h1>
+<p><code>app.project.item(index)</code>
+<br/>
+<code>app.project.items[index]</code>
+<br/></p>
+<h4 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h4>
+<p>The CompItem object represents a composition, and allows you to manipulate and get information about it. Access the objects by position index number in a project's item collection.</p>
+<blockquote>
+<p>CompItem is a subclass of <a href="../avitem/">AVItem object</a>, which is a subclass of <a href="../item/">Item object</a>. All methods and attributes of AVItem and Item, in addition to those listed below, are available when working with CompItem.</p>
+</blockquote>
+<h4 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h4>
+<p>Given that the first item in the project is a CompItem, the following code displays two alerts. The first shows the number of layers in the CompItem, and the second shows the name of the last layer in the CompItem.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">firstComp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+<span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;number of layers is &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">firstComp</span><span class="p">.</span><span class="nx">numLayers</span><span class="p">);</span>
+<span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;name of last layer is &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">firstComp</span><span class="p">.</span><span class="nx">layer</span><span class="p">(</span><span class="nx">firstComp</span><span class="p">.</span><span class="nx">numLayers</span><span class="p">).</span><span class="nx">name</span><span class="p">);</span>
+</code></pre></div>
+<hr />
+<h2 id="attributes">Attributes<a class="headerlink" href="#attributes" title="Permanent link">&para;</a></h2>
+<h3 id="compitemactivecamera">CompItem.activeCamera<a class="headerlink" href="#compitemactivecamera" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).activeCamera</code></p>
+<h4 id="description_1">Description<a class="headerlink" href="#description_1" title="Permanent link">&para;</a></h4>
+<p>The active camera, which is the front-most camera layer that is enabled. The value is <code>null</code> if the composition contains no enabled camera layers.</p>
+<h4 id="type">Type<a class="headerlink" href="#type" title="Permanent link">&para;</a></h4>
+<p>CameraLayer object; read-only.</p>
+<hr />
+<h3 id="compitembgcolor">CompItem.bgColor<a class="headerlink" href="#compitembgcolor" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).bgColor</code></p>
+<h4 id="description_2">Description<a class="headerlink" href="#description_2" title="Permanent link">&para;</a></h4>
+<p>The background color of the composition. The three array values specify the red, green, and blue components of the color.</p>
+<h4 id="type_1">Type<a class="headerlink" href="#type_1" title="Permanent link">&para;</a></h4>
+<p>An array containing three floating-point values, <code>[R, G, B]</code>, in the range <code>[0.0..1.0]</code>; read/write.</p>
+<hr />
+<h3 id="compitemcounters">CompItem.counters<a class="headerlink" href="#compitemcounters" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).counters</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 13.2 (CC2014).</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This method/property is officially undocumented and was found via research. The information here may be inaccurate, and this whole method/property may disappear or stop working some point. Please contribute if you have more information on it!</p>
+</div>
+<h4 id="description_3">Description<a class="headerlink" href="#description_3" title="Permanent link">&para;</a></h4>
+<p>This attribute works app-wide: if changed on one CompItem, it will change it for every CompItem in the project. The value stays until restarting AE. Once restarted, it will revert to <code>false</code>.</p>
+<p>This parameter doesn't do anything.</p>
+<h4 id="type_2">Type<a class="headerlink" href="#type_2" title="Permanent link">&para;</a></h4>
+<p>Boolean; read/write.</p>
+<hr />
+<h3 id="compitemdisplaystartframe">CompItem.displayStartFrame<a class="headerlink" href="#compitemdisplaystartframe" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).displayStartFrame</code></p>
+<h4 id="description_4">Description<a class="headerlink" href="#description_4" title="Permanent link">&para;</a></h4>
+<p>The frame value of the beginning of the composition.</p>
+<p>This value is an alternative to calculating the start frame using <a href="#compitemdisplaystarttime">CompItem.displayStartTime</a> and <a href="#compitemframeduration">CompItem.frameDuration</a> to compensate for floating-point problems.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 17.1.</p>
+</div>
+<h4 id="type_3">Type<a class="headerlink" href="#type_3" title="Permanent link">&para;</a></h4>
+<p>Integer; read/write.</p>
+<hr />
+<h3 id="compitemdisplaystarttime">CompItem.displayStartTime<a class="headerlink" href="#compitemdisplaystarttime" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).displayStartTime</code></p>
+<h4 id="description_5">Description<a class="headerlink" href="#description_5" title="Permanent link">&para;</a></h4>
+<p>The time set as the beginning of the composition, in seconds. This is the equivalent of the Start Timecode or Start Frame setting in the Composition Settings dialog box.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As of After Effects 17.1, the minimum value is <code>-10800.0</code>. Before 17.1, the minimum value was <code>0.0</code></p>
+</div>
+<h4 id="type_4">Type<a class="headerlink" href="#type_4" title="Permanent link">&para;</a></h4>
+<p>Floating-point valuem in the range <code>[-10800.0..86339.0]</code> (-3:00:00:00 to 23:59:00:00); read/write.</p>
+<hr />
+<h3 id="compitemdraft3d">CompItem.draft3d<a class="headerlink" href="#compitemdraft3d" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).draft3d</code></p>
+<h4 id="description_6">Description<a class="headerlink" href="#description_6" title="Permanent link">&para;</a></h4>
+<p>When <code>true</code>, Draft 3D mode is enabled for the Composition panel. This corresponds to the value of the Draft 3D button in the Composition panel.</p>
+<h4 id="type_5">Type<a class="headerlink" href="#type_5" title="Permanent link">&para;</a></h4>
+<p>Boolean; read/write.</p>
+<hr />
+<h3 id="compitemdropframe">CompItem.dropFrame<a class="headerlink" href="#compitemdropframe" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).dropFrame</code></p>
+<h4 id="description_7">Description<a class="headerlink" href="#description_7" title="Permanent link">&para;</a></h4>
+<p>When <code>true</code>, indicates that the composition uses drop-frame timecode. When <code>false</code>, indicates non-drop-frame timecode. This corresponds to the setting in the Composition Settings dialog box.</p>
+<h4 id="type_6">Type<a class="headerlink" href="#type_6" title="Permanent link">&para;</a></h4>
+<p>Boolean; read/write.</p>
+<hr />
+<h3 id="compitemframeblending">CompItem.frameBlending<a class="headerlink" href="#compitemframeblending" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).frameBlending</code></p>
+<h4 id="description_8">Description<a class="headerlink" href="#description_8" title="Permanent link">&para;</a></h4>
+<p>When <code>true</code>, frame blending is enabled for this Composition. Corresponds to the value of the Frame Blending button in the Composition panel.</p>
+<h4 id="type_7">Type<a class="headerlink" href="#type_7" title="Permanent link">&para;</a></h4>
+<p>Boolean; if <code>true</code>, frame blending is enabled; read/write.</p>
+<hr />
+<h3 id="compitemframeduration">CompItem.frameDuration<a class="headerlink" href="#compitemframeduration" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).frameDuration</code></p>
+<h4 id="description_9">Description<a class="headerlink" href="#description_9" title="Permanent link">&para;</a></h4>
+<p>The duration of a frame, in seconds. This is the inverse of the <code>frameRate</code> value (frames-per-second).</p>
+<h4 id="type_8">Type<a class="headerlink" href="#type_8" title="Permanent link">&para;</a></h4>
+<p>Floating-point value; read/write.</p>
+<hr />
+<h3 id="compitemhideshylayers">CompItem.hideShyLayers<a class="headerlink" href="#compitemhideshylayers" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).hideShyLayers</code></p>
+<h4 id="description_10">Description<a class="headerlink" href="#description_10" title="Permanent link">&para;</a></h4>
+<p>When <code>true</code>, only layers with shy set to <code>false</code> are shown in the Timeline panel. When <code>false</code>, all layers are visible, including those whose shy value is <code>true</code>. Corresponds to the value of the Hide All Shy Layers button in the Composition panel.</p>
+<h4 id="type_9">Type<a class="headerlink" href="#type_9" title="Permanent link">&para;</a></h4>
+<p>Boolean; read/write.</p>
+<hr />
+<h3 id="compitemlayers">CompItem.layers<a class="headerlink" href="#compitemlayers" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layers</code></p>
+<h4 id="description_11">Description<a class="headerlink" href="#description_11" title="Permanent link">&para;</a></h4>
+<p>A <a href="../../layer/layercollection/">LayerCollection object</a> that contains all the Layer objects for layers in this composition.</p>
+<h4 id="type_10">Type<a class="headerlink" href="#type_10" title="Permanent link">&para;</a></h4>
+<p>LayerCollection object; read-only.</p>
+<hr />
+<h3 id="compitemmarkerproperty">CompItem.markerProperty<a class="headerlink" href="#compitemmarkerproperty" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).markerProperty</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 14.0 (CC 2017)</p>
+</div>
+<h4 id="description_12">Description<a class="headerlink" href="#description_12" title="Permanent link">&para;</a></h4>
+<p>A <a href="../../property/propertygroup/">PropertyGroup object</a> that contains all a composition's markers. Composition marker scripting has the same functionality as <a href="../../layer/layer/#layermarker">Layer markers</a>.</p>
+<p>See <a href="../../other/markervalue/">MarkerValue object</a>.</p>
+<h4 id="type_11">Type<a class="headerlink" href="#type_11" title="Permanent link">&para;</a></h4>
+<p>PropertyGroup object or <code>null</code>; read-only.</p>
+<h4 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h4>
+<p>The following sample code creates a project and composition, then creates two composition markers with different properties</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// comp.markerProperty allows you to add markers to a comp.</span>
+<span class="c1">// It has the same functionality as layer.property(&quot;Marker&quot;)</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">currentProj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">newProject</span><span class="p">();</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">comp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">currentProj</span><span class="p">.</span><span class="nx">items</span><span class="p">.</span><span class="nx">addComp</span><span class="p">(</span><span class="s2">&quot;mycomp&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">1920</span><span class="p">,</span><span class="w"> </span><span class="mf">1080</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">29.97</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">solidLayer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">comp</span><span class="p">.</span><span class="nx">layers</span><span class="p">.</span><span class="nx">addSolid</span><span class="p">([</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">],</span><span class="w"> </span><span class="s2">&quot;mylayer&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">1920</span><span class="p">,</span><span class="w"> </span><span class="mf">1080</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">);</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">compMarker</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">MarkerValue</span><span class="p">(</span><span class="s2">&quot;This is a comp marker!&quot;</span><span class="p">);</span>
+<span class="nx">compMarker</span><span class="p">.</span><span class="nx">duration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">compMarker2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">MarkerValue</span><span class="p">(</span><span class="s2">&quot;Another comp marker!&quot;</span><span class="p">);</span>
+<span class="nx">compMarker2</span><span class="p">.</span><span class="nx">duration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+
+<span class="nx">comp</span><span class="p">.</span><span class="nx">markerProperty</span><span class="p">.</span><span class="nx">setValueAtTime</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">compMarker</span><span class="p">);</span>
+<span class="nx">comp</span><span class="p">.</span><span class="nx">markerProperty</span><span class="p">.</span><span class="nx">setValueAtTime</span><span class="p">(</span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="nx">compMarker2</span><span class="p">);</span>
+</code></pre></div>
+<hr />
+<h3 id="compitemmotionblur">CompItem.motionBlur<a class="headerlink" href="#compitemmotionblur" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).motionBlur</code></p>
+<h4 id="description_13">Description<a class="headerlink" href="#description_13" title="Permanent link">&para;</a></h4>
+<p>When <code>true</code>, motion blur is enabled for the composition. Corresponds to the value of the Motion Blur button in the Composition panel.</p>
+<h4 id="type_12">Type<a class="headerlink" href="#type_12" title="Permanent link">&para;</a></h4>
+<p>Boolean; read/write.</p>
+<hr />
+<h3 id="compitemmotionbluradaptivesamplelimit">CompItem.motionBlurAdaptiveSampleLimit<a class="headerlink" href="#compitemmotionbluradaptivesamplelimit" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).motionBlurAdaptiveSampleLimit</code></p>
+<h4 id="description_14">Description<a class="headerlink" href="#description_14" title="Permanent link">&para;</a></h4>
+<p>The maximum number of motion blur samples of 2D layer motion. This corresponds to the Adaptive Sample Limit setting in the Advanced tab of the Composition Settings dialog box.</p>
+<h4 id="type_13">Type<a class="headerlink" href="#type_13" title="Permanent link">&para;</a></h4>
+<p>Integer (between 16 and 256); read/write.</p>
+<hr />
+<h3 id="compitemmotionblursamplesperframe">CompItem.motionBlurSamplesPerFrame<a class="headerlink" href="#compitemmotionblursamplesperframe" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).motionBlurSamplesPerFrame</code></p>
+<h4 id="description_15">Description<a class="headerlink" href="#description_15" title="Permanent link">&para;</a></h4>
+<p>The minimum number of motion blur samples per frame for Classic 3D layers, shape layers, and certain effects. This corresponds to the Samples Per Frame setting in the Advanced tab of the Composition Settings dialog box.</p>
+<h4 id="type_14">Type<a class="headerlink" href="#type_14" title="Permanent link">&para;</a></h4>
+<p>Integer (between 2 and 64); read/write.</p>
+<hr />
+<h3 id="compitemmotiongraphicstemplatecontrollercount">CompItem.motionGraphicsTemplateControllerCount<a class="headerlink" href="#compitemmotiongraphicstemplatecontrollercount" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).motionGraphicsTemplateControllerCount</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 16.1 (CC 2019)</p>
+</div>
+<h4 id="description_16">Description<a class="headerlink" href="#description_16" title="Permanent link">&para;</a></h4>
+<p>The number of properties in the Essential Graphics panel for the composition.</p>
+<h4 id="type_15">Type<a class="headerlink" href="#type_15" title="Permanent link">&para;</a></h4>
+<p>Integer; read-only.</p>
+<hr />
+<h3 id="compitemmotiongraphicstemplatename">CompItem.motionGraphicsTemplateName<a class="headerlink" href="#compitemmotiongraphicstemplatename" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).motionGraphicsTemplateName</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 15.0 (CC 2018)</p>
+</div>
+<h4 id="description_17">Description<a class="headerlink" href="#description_17" title="Permanent link">&para;</a></h4>
+<p>Read or write the name property in the Essential Graphics panel for the composition.</p>
+<p>The name in the Essential Graphics panel is used for the file name of an exported Motion Graphics template (ex., "My Template.mogrt").</p>
+<p>The following example will set the name for the active composition and then return it as an alert</p>
+<div class="highlight"><pre><span></span><code><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">activeItem</span><span class="p">.</span><span class="nx">motionGraphicsTemplateName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;My Template&quot;</span><span class="p">;</span>
+<span class="nx">alert</span><span class="p">(</span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">activeItem</span><span class="p">.</span><span class="nx">motionGraphicsTemplateName</span><span class="p">);</span>
+</code></pre></div>
+<h4 id="type_16">Type<a class="headerlink" href="#type_16" title="Permanent link">&para;</a></h4>
+<p>String; read/write.</p>
+<hr />
+<h3 id="compitemnumlayers">CompItem.numLayers<a class="headerlink" href="#compitemnumlayers" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).numLayers</code></p>
+<h4 id="description_18">Description<a class="headerlink" href="#description_18" title="Permanent link">&para;</a></h4>
+<p>The number of layers in the composition.</p>
+<h4 id="type_17">Type<a class="headerlink" href="#type_17" title="Permanent link">&para;</a></h4>
+<p>Integer; read-only.</p>
+<hr />
+<h3 id="compitempreservenestedframerate">CompItem.preserveNestedFrameRate<a class="headerlink" href="#compitempreservenestedframerate" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).preserveNestedFrameRate</code></p>
+<h4 id="description_19">Description<a class="headerlink" href="#description_19" title="Permanent link">&para;</a></h4>
+<p>When <code>true</code>, the frame rate of nested compositions is preserved in the current composition. Corresponds to the value of the "Preserve frame rate when nested or in render queue" option in the Advanced tab of the Composition Settings dialog box.</p>
+<h4 id="type_18">Type<a class="headerlink" href="#type_18" title="Permanent link">&para;</a></h4>
+<p>Boolean; read/write.</p>
+<hr />
+<h3 id="compitempreservenestedresolution">CompItem.preserveNestedResolution<a class="headerlink" href="#compitempreservenestedresolution" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).preserveNestedResolution</code></p>
+<h4 id="description_20">Description<a class="headerlink" href="#description_20" title="Permanent link">&para;</a></h4>
+<p>When <code>true</code>, the resolution of nested compositions is preserved in the current composition. Corresponds to the value of the "Preserve Resolution When Nested" option in the Advanced tab of the Composition Settings dialog box.</p>
+<h4 id="type_19">Type<a class="headerlink" href="#type_19" title="Permanent link">&para;</a></h4>
+<p>Boolean; read/write.</p>
+<hr />
+<h3 id="compitemrenderer">CompItem.renderer<a class="headerlink" href="#compitemrenderer" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).renderer</code></p>
+<h4 id="description_21">Description<a class="headerlink" href="#description_21" title="Permanent link">&para;</a></h4>
+<p>The current rendering plug-in module to be used to render this composition, as set in the Advanced tab of the Composition Settings dialog box. Allowed values are the members of <a href="#compitemrenderers">CompItem.renderers</a>.</p>
+<h4 id="type_20">Type<a class="headerlink" href="#type_20" title="Permanent link">&para;</a></h4>
+<p>String; read/write.</p>
+<hr />
+<h3 id="compitemrenderers">CompItem.renderers<a class="headerlink" href="#compitemrenderers" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).renderers</code></p>
+<h4 id="description_22">Description<a class="headerlink" href="#description_22" title="Permanent link">&para;</a></h4>
+<p>The available rendering plug-in modules. Member strings reflect installed modules, as seen in the Advanced tab of the Composition Settings dialog box.</p>
+<h4 id="type_21">Type<a class="headerlink" href="#type_21" title="Permanent link">&para;</a></h4>
+<p>Array of strings; read-only.</p>
+<hr />
+<h3 id="compitemresolutionfactor">CompItem.resolutionFactor<a class="headerlink" href="#compitemresolutionfactor" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).resolutionFactor</code></p>
+<h4 id="description_23">Description<a class="headerlink" href="#description_23" title="Permanent link">&para;</a></h4>
+<p>The x and y downsample resolution factors for rendering the composition. The two values in the array specify how many pixels to skip when sampling; the first number controls horizontal sampling, the second controls vertical sampling. Full resolution is <code>[1, 1]</code>, half resolution is <code>[2, 2]</code>, and quarter resolution is <code>[4, 4]</code>. The default is <code>[1, 1]</code>.</p>
+<h4 id="type_22">Type<a class="headerlink" href="#type_22" title="Permanent link">&para;</a></h4>
+<p>Array of two integers in the range <code>[1..99]</code>; read/write.</p>
+<hr />
+<h3 id="compitemselectedlayers">CompItem.selectedLayers<a class="headerlink" href="#compitemselectedlayers" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).selectedLayers</code></p>
+<h4 id="description_24">Description<a class="headerlink" href="#description_24" title="Permanent link">&para;</a></h4>
+<p>All of the selected layers in this composition. This is a 0-based array (the first object is at index 0).</p>
+<h4 id="type_23">Type<a class="headerlink" href="#type_23" title="Permanent link">&para;</a></h4>
+<p>Array of <a href="../../layer/layer/">Layer</a> objects; read-only.</p>
+<hr />
+<h3 id="compitemselectedproperties">CompItem.selectedProperties<a class="headerlink" href="#compitemselectedproperties" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).selectedProperties</code></p>
+<h4 id="description_25">Description<a class="headerlink" href="#description_25" title="Permanent link">&para;</a></h4>
+<p>All of the selected properties (Property and PropertyGroup objects) in this composition. The first property is at index position 0.</p>
+<h4 id="type_24">Type<a class="headerlink" href="#type_24" title="Permanent link">&para;</a></h4>
+<p>Array of <a href="../../property/property/">Property</a> and <a href="../../property/propertygroup/">PropertyGroup</a> objects; read-only.</p>
+<hr />
+<h3 id="compitemshutterangle">CompItem.shutterAngle<a class="headerlink" href="#compitemshutterangle" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).shutterAngle</code></p>
+<h4 id="description_26">Description<a class="headerlink" href="#description_26" title="Permanent link">&para;</a></h4>
+<p>The shutter angle setting for the composition. This corresponds to the Shutter Angle setting in the Advanced tab of the Composition Settings dialog box.</p>
+<h4 id="type_25">Type<a class="headerlink" href="#type_25" title="Permanent link">&para;</a></h4>
+<p>Integer, in the range <code>[0..720]</code>; read/write.</p>
+<hr />
+<h3 id="compitemshutterphase">CompItem.shutterPhase<a class="headerlink" href="#compitemshutterphase" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).shutterPhase</code></p>
+<h4 id="description_27">Description<a class="headerlink" href="#description_27" title="Permanent link">&para;</a></h4>
+<p>The shutter phase setting for the composition. This corresponds to the Shutter Phase setting in the Advanced tab of the Composition Settings dialog box.</p>
+<h4 id="type_26">Type<a class="headerlink" href="#type_26" title="Permanent link">&para;</a></h4>
+<p>Integer, in the range <code>[-360..360]</code>; read/write.</p>
+<hr />
+<h3 id="compitemworkareaduration">CompItem.workAreaDuration<a class="headerlink" href="#compitemworkareaduration" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).workAreaDuration</code></p>
+<h4 id="description_28">Description<a class="headerlink" href="#description_28" title="Permanent link">&para;</a></h4>
+<p>The duration of the work area in seconds. This is the difference of the start-point and end-point times of the Composition work area.</p>
+<h4 id="type_27">Type<a class="headerlink" href="#type_27" title="Permanent link">&para;</a></h4>
+<p>Floating-point value; read/write.</p>
+<hr />
+<h3 id="compitemworkareastart">CompItem.workAreaStart<a class="headerlink" href="#compitemworkareastart" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).workAreaStart</code></p>
+<h4 id="description_29">Description<a class="headerlink" href="#description_29" title="Permanent link">&para;</a></h4>
+<p>The time when the Composition work area begins, in seconds.</p>
+<h4 id="type_28">Type<a class="headerlink" href="#type_28" title="Permanent link">&para;</a></h4>
+<p>Floating-point value; read/write.</p>
+<hr />
+<h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h2>
+<h3 id="compitemduplicate">CompItem.duplicate()<a class="headerlink" href="#compitemduplicate" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).duplicate()</code></p>
+<h4 id="description_30">Description<a class="headerlink" href="#description_30" title="Permanent link">&para;</a></h4>
+<p>Creates and returns a duplicate of this composition, which contains the same layers as the original.</p>
+<h4 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h4>
+<p>None.</p>
+<h4 id="returns">Returns<a class="headerlink" href="#returns" title="Permanent link">&para;</a></h4>
+<p>CompItem object.</p>
+<hr />
+<h3 id="compitemexportasmotiongraphicstemplate">CompItem.exportAsMotionGraphicsTemplate()<a class="headerlink" href="#compitemexportasmotiongraphicstemplate" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).exportAsMotionGraphicsTemplate(doOverWriteFileIfExisting[, file_path])</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 15.0 (CC 2018)</p>
+</div>
+<h4 id="description_31">Description<a class="headerlink" href="#description_31" title="Permanent link">&para;</a></h4>
+<p>Exports the composition as a Motion Graphics template. Returns <code>true</code> if the Motion Graphics template is successfully exported, otherwise <code>false</code>.</p>
+<p>The name in the Essential Graphics panel is used for the file name of the Motion Graphics template (ex., "My Template.mogrt").
+Use the <code>motionGraphicsTemplateName</code> attribute to set the name.</p>
+<p>Optionally specify the path to the folder where the Motion Graphics template file is saved. If not specified, the file will be saved in the current
+user's Motion Graphics Templates folder:</p>
+<table>
+<thead>
+<tr>
+<th>OS</th>
+<th>Path</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>macOS</td>
+<td><code>/Users/&lt;name&gt;/Library/Application Support/Adobe/Common/Motion Graphics Templates/</code></td>
+</tr>
+<tr>
+<td>Windows</td>
+<td><code>C:\Users\&lt;name&gt;\AppData\Roaming\Adobe\Common\Motion Graphics Templates\</code></td>
+</tr>
+</tbody>
+</table>
+<p>If the project has been changed since the last time it was saved, After Effects will prompt the user to save the project. To avoid this, use the
+project <code>save()</code> method before exporting the Motion Graphics template.</p>
+<h4 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>doOverWriteFileIfExisting</code></td>
+<td>Boolean</td>
+<td>Whether to overwrite an existing file of the same name.</td>
+</tr>
+<tr>
+<td><code>file_path</code></td>
+<td>String</td>
+<td>Optional. Path to the folder where the file will be saved.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_1">Returns<a class="headerlink" href="#returns_1" title="Permanent link">&para;</a></h4>
+<p>Boolean.</p>
+<hr />
+<h3 id="compitemgetmotiongraphicstemplatecontrollername">CompItem.getMotionGraphicsTemplateControllerName()<a class="headerlink" href="#compitemgetmotiongraphicstemplatecontrollername" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).getMotionGraphicsTemplateControllerName(index)</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 16.1 (CC 2019)</p>
+</div>
+<h4 id="description_32">Description<a class="headerlink" href="#description_32" title="Permanent link">&para;</a></h4>
+<p>Gets the name of a single property in the Essential Graphics panel.</p>
+<h4 id="parameters_2">Parameters<a class="headerlink" href="#parameters_2" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>index</code></td>
+<td>Integer</td>
+<td>The index of the EGP property whose name will be returned.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_2">Returns<a class="headerlink" href="#returns_2" title="Permanent link">&para;</a></h4>
+<p>String; read-only.</p>
+<hr />
+<h3 id="compitemsetmotiongraphicscontrollername">CompItem.setMotionGraphicsControllerName()<a class="headerlink" href="#compitemsetmotiongraphicscontrollername" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).setMotionGraphicsControllerName(index, newName)</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 16.1 (CC 2019)</p>
+</div>
+<h4 id="description_33">Description<a class="headerlink" href="#description_33" title="Permanent link">&para;</a></h4>
+<p>Sets the name of a single property in the Essential Graphics panel.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To rename a property as it is added to the EGP, see <a href="../../property/property/#propertyaddtomotiongraphicstemplateas">Property.addToMotionGraphicsTemplateAs()</a>.</p>
+</div>
+<h4 id="parameters_3">Parameters<a class="headerlink" href="#parameters_3" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>index</code></td>
+<td>Integer</td>
+<td>The index of the EGP property to be renamed.</td>
+</tr>
+<tr>
+<td><code>newName</code></td>
+<td>String</td>
+<td>The new name for the EGP property.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_3">Returns<a class="headerlink" href="#returns_3" title="Permanent link">&para;</a></h4>
+<p>String; read-only.</p>
+<hr />
+<h3 id="compitemlayer">CompItem.layer()<a class="headerlink" href="#compitemlayer" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index)</code>
+<br/>
+<code>app.project.item(index).layer(otherLayer, relIndex)</code>
+<br/>
+<code>app.project.item(index).layer(name)</code>
+<br/></p>
+<h4 id="description_34">Description<a class="headerlink" href="#description_34" title="Permanent link">&para;</a></h4>
+<p>Returns a Layer object, which can be specified by name, an index position in this layer, or an index position relative to another layer.</p>
+<h4 id="parameters_4">Parameters<a class="headerlink" href="#parameters_4" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>index</code></td>
+<td>Integer, in the range <code>[1..numLayers]</code>, where <code>numLayers</code> is the number of layers in the composition</td>
+<td>The index number of the desired layer in this composition.</td>
+</tr>
+</tbody>
+</table>
+<p>or:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>otherLayer</code></td>
+<td><a href="../../layer/layer/">Layer object</a> in this composition.</td>
+<td>The <code>relIndex</code> value is added to the index value of this layer to find the position of the desired layer.</td>
+</tr>
+<tr>
+<td><code>relIndex</code></td>
+<td>Integer, in the range <code>[1 - otherLayer.index .. numLayers - otherLayer.index]</code>, where <code>numLayers</code> is the number of layers in the composition.</td>
+<td>The position of the desired layer, relative to <code>otherLayer</code>. This value is added to the <code>otherLayer</code> value to derive the absolute index of the layer to return.</td>
+</tr>
+</tbody>
+</table>
+<p>or:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>String</td>
+<td>The name of the desired layer.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_4">Returns<a class="headerlink" href="#returns_4" title="Permanent link">&para;</a></h4>
+<p><a href="../../layer/layer/">Layer object</a>.</p>
+<hr />
+<h3 id="compitemopeninessentialgraphics">CompItem.openInEssentialGraphics()<a class="headerlink" href="#compitemopeninessentialgraphics" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).openInEssentialGraphics()</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 15.0 (CC 2018)</p>
+</div>
+<h4 id="description_35">Description<a class="headerlink" href="#description_35" title="Permanent link">&para;</a></h4>
+<p>Opens the composition in the Essential Graphics panel.</p>
+<h4 id="parameters_5">Parameters<a class="headerlink" href="#parameters_5" title="Permanent link">&para;</a></h4>
+<p>None.</p>
+<h4 id="returns_5">Returns<a class="headerlink" href="#returns_5" title="Permanent link">&para;</a></h4>
+<p>Nothing.</p>
+<hr />
+<h3 id="compitemopeninviewer">CompItem.openInViewer()<a class="headerlink" href="#compitemopeninviewer" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).openInViewer()</code></p>
+<h4 id="description_36">Description<a class="headerlink" href="#description_36" title="Permanent link">&para;</a></h4>
+<p>Opens the composition in a Composition panel, and moves the Composition panel to front and gives it focus.</p>
+<h4 id="parameters_6">Parameters<a class="headerlink" href="#parameters_6" title="Permanent link">&para;</a></h4>
+<p>None.</p>
+<h4 id="returns_6">Returns<a class="headerlink" href="#returns_6" title="Permanent link">&para;</a></h4>
+<p><a href="../../other/viewer/">Viewer object</a> object for the Composition panel, or <code>null</code> if the composition could not be opened.</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 6, 2024</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.action.edit", "content.action.view", "search.highlight", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.525ec568.min.js"></script>
+      
+    
+  </body>
+</html>
