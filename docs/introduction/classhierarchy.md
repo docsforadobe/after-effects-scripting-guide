@@ -20,10 +20,10 @@ Note that some classes exist only as base classes, and demonstrate unexpected be
 ## Properties, Property Groups, and Layers
 
 - [PropertyBase object](../property/propertybase.md) ⚠
-  - [Property object](../property/index.md)
+  - [Property object](../property/property.md)
   - [PropertyGroup object](../property/propertygroup.md)
     - [MaskPropertyGroup object](../property/maskpropertygroup.md)
-    - [Layer object](../layer/index.md) ⚠
+    - [Layer object](../layer/layer.md) ⚠
       - [AVLayer object](../layer/avlayer.md)
         - [ShapeLayer object](../layer/shapelayer.md)
         - [TextLayer object](../layer/textlayer.md)
@@ -34,7 +34,7 @@ Note that some classes exist only as base classes, and demonstrate unexpected be
 
 ## Project Items
 
-- [Item object](../item/index.md) ❌
+- [Item object](../item/item.md) ❌
   - [AVItem object](../item/avitem.md) ❌
     - [CompItem object](../item/compitem.md)
     - [FootageItem object](../item/footageitem.md)

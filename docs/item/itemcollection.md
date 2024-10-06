@@ -43,7 +43,7 @@ CompItem object.
 
 #### Description
 
-Creates a new folder. Creates and returns a new FolderItem object and adds it to this collection. If the ItemCollection belongs to the project or the root folder, then the new folder's `parentFolder` is the root folder. If the ItemCollection belongs to any other folder, the new folder's `parentFolder` is that `FolderItem`. To put items in the folder, set the [Item.parentFolder](index.md#itemparentfolder) attribute
+Creates a new folder. Creates and returns a new FolderItem object and adds it to this collection. If the ItemCollection belongs to the project or the root folder, then the new folder's `parentFolder` is the root folder. If the ItemCollection belongs to any other folder, the new folder's `parentFolder` is that `FolderItem`. To put items in the folder, set the [Item.parentFolder](item.md#itemparentfolder) attribute
 
 #### Parameters
 

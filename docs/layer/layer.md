@@ -270,7 +270,7 @@ Layer object or `null`; read/write.
 
 #### Description
 
-An array containing all of the currently selected [Property](../property/index.md) and [PropertyGroup](../property/propertygroup.md) objects in the layer.
+An array containing all of the currently selected [Property](../property/property.md) and [PropertyGroup](../property/propertygroup.md) objects in the layer.
 
 #### Type
 
@@ -484,7 +484,7 @@ Moves this layer to a position immediately after (below) the specified layer.
 
 | Parameter |           Type           |                Description                |
 | --------- | ------------------------ | ----------------------------------------- |
-| `layer`   | [Layer object](index.md) | The target layer in the same composition. |
+| `layer`   | [Layer object](layer.md) | The target layer in the same composition. |
 
 
 #### Returns
@@ -505,7 +505,7 @@ Moves this layer to a position immediately before (above) the specified layer.
 
 | Parameter |           Type           |                Description                |
 | --------- | ------------------------ | ----------------------------------------- |
-| `layer`   | [Layer object](index.md) | The target layer in the same composition. |
+| `layer`   | [Layer object](layer.md) | The target layer in the same composition. |
 
 #### Returns
 
@@ -583,7 +583,7 @@ If you do not want the child layer to jump, set the [parent](#layerparent) attri
 
 |  Parameter  |           Type           |                                       Description                                        |
 | ----------- | ------------------------ | ---------------------------------------------------------------------------------------- |
-| `newParent` | [Layer object](index.md) | Optional. A layer in the same composition. If not specified, it sets the parent to None. |
+| `newParent` | [Layer object](layer.md) | Optional. A layer in the same composition. If not specified, it sets the parent to None. |
 
 #### Returns
 

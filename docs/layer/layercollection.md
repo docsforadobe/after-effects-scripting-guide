@@ -249,11 +249,10 @@ Returns the first (topmost) layer found in this collection with the specified na
 #### Parameters
 
 | `name` | A string containing the name. |
-| ------ | ----------------------------- |
 
 #### Returns
 
-[Layer object](index.md) or `null`.
+[Layer object](layer.md) or `null`.
 
 ---
 

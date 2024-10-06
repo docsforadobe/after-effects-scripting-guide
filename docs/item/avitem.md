@@ -6,7 +6,7 @@
 
 The AVItem object provides access to attributes and methods of audio/visual files imported into After Effects.
 
-> AVItem is a subclass of Item. All methods and attributes of Item, in addition to those listed below, are available when working with AVItem. See [Item object](index.md)
+> AVItem is a subclass of Item. All methods and attributes of Item, in addition to those listed below, are available when working with AVItem. See [Item object](item.md)
 
 > AVItem is the base class for both CompItem and FootageItem, so AVItem attributes and methods are also available when working with CompItem and FootageItem objects. See [CompItem object](compitem.md) and [FootageItem object](footageitem.md).
 
@@ -141,7 +141,7 @@ Integer, in the range `[1..30000]`; read/write, except as noted.
 
 #### Description
 
-Test whether the AVItem can be used as an alternate source when calling [Property.setAlternateSource()](../property/index.md#propertysetalternatesource).
+Test whether the AVItem can be used as an alternate source when calling [Property.setAlternateSource()](../property/property.md#propertysetalternatesource).
 
 Returns `true` if the item can be used, or otherwise `false`.
 

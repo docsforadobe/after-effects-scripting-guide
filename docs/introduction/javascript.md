@@ -124,7 +124,7 @@ As a user, you can see this in After Effects layers; every layer exists in the t
 
 The same idea exists in After Effects scripting. Many API-accessible elements are part of class hierarchies that inherit and refine properties & methods. This lets the After Effects developers use existing structures to create new API-accessible components, and it allows script developers to use this same hierarchy to work with the After Effects DOM.
 
-For the same example above, [Layer object](../layer/index.md) (itself a subclass of [PropertyGroup object](../property/propertygroup.md)) is the *base class* for [AVLayer object](../layer/avlayer.md), [CameraLayer object](../layer/cameralayer.md), and [LightLayer object](../layer/lightlayer.md). This means that CameraLayer inherits everything from the Layer object, which inherits everything from the PropertyGroup object, which inherits everything from the PropertyBase object.
+For the same example above, [Layer object](../layer/layer.md) (itself a subclass of [PropertyGroup object](../property/propertygroup.md)) is the *base class* for [AVLayer object](../layer/avlayer.md), [CameraLayer object](../layer/cameralayer.md), and [LightLayer object](../layer/lightlayer.md). This means that CameraLayer inherits everything from the Layer object, which inherits everything from the PropertyGroup object, which inherits everything from the PropertyBase object.
 
 This is why you won't see the `name` property on the Layer page, but you can still use `layer.name` in your script; `name` is inherited from [PropertyBase.name](../property/propertybase.md#propertybasename).
 

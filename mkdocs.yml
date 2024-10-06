@@ -10,7 +10,7 @@ extra:
 nav:
     - Home: index.md
     - Introduction:
-        - introduction/index.md
+        - Overview: introduction/overview.md
         - Javascript for After Effects: introduction/javascript.md
         - After Effects Scripting Changlog: introduction/changelog.md
         - After Effects Object Model: introduction/objectmodel.md
@@ -20,15 +20,15 @@ nav:
         - Application: general/application.md
         - Project: general/project.md
         - System: general/system.md
-    - Item Object:
-        - item/index.md
+    - Item:
+        - Item object: item/item.md
         - ItemCollection: item/itemcollection.md
         - AVItem: item/avitem.md
         - CompItem: item/compitem.md
         - FolderItem: item/folderitem.md
         - FootageItem: item/footageitem.md
-    - Layer Object:
-        - layer/index.md
+    - Layer:
+        - Layer object: layer/layer.md
         - LayerCollection: layer/layercollection.md
         - AVLayer: layer/avlayer.md
         - CameraLayer: layer/cameralayer.md
@@ -36,13 +36,13 @@ nav:
         - ShapeLayer: layer/shapelayer.md
         - TextLayer: layer/textlayer.md
         - ThreeDModelLayer: layer/threedmodellayer.md
-    - Property Object:
-        - property/index.md
+    - Property:
+        - Property object: property/property.md
         - PropertyBase: property/propertybase.md
         - PropertyGroup: property/propertygroup.md
         - MaskPropertyGroup: property/maskpropertygroup.md
     - Render Queue:
-        - renderqueue/index.md
+        - RenderQueue object: renderqueue/renderqueue.md
         - RQItemCollection: renderqueue/rqitemcollection.md
         - RenderQueueItem: renderqueue/renderqueueitem.md
         - OMCollection: renderqueue/omcollection.md
@@ -71,14 +71,16 @@ nav:
         - Viewer: other/viewer.md
         - ViewOptions: other/viewoptions.md
     - Match Names:
-        - AV Layer Match Names: matchnames/layer/avlayer.md
-        - 3D Layer Match Names: matchnames/layer/3dlayer.md
-        - Camera Layer Match Names: matchnames/layer/cameralayer.md
-        - Light Layer Match Names: matchnames/layer/lightlayer.md
-        - Text Layer Match Names: matchnames/layer/textlayer.md
-        - Shape Layer Match Names: matchnames/layer/shapelayer.md
-        - Layer Styles Match Names: matchnames/layer/layerstyles.md
-        - First-Party Effect Match Names: matchnames/effects/firstparty.md
+        - Layers:
+            - AV Layer Match Names: matchnames/layer/avlayer.md
+            - 3D Layer Match Names: matchnames/layer/3dlayer.md
+            - Camera Layer Match Names: matchnames/layer/cameralayer.md
+            - Light Layer Match Names: matchnames/layer/lightlayer.md
+            - Text Layer Match Names: matchnames/layer/textlayer.md
+            - Shape Layer Match Names: matchnames/layer/shapelayer.md
+            - Layer Styles Match Names: matchnames/layer/layerstyles.md
+        - Effects:
+            - First-Party Effect Match Names: matchnames/effects/firstparty.md
 
 
 # Do not touch below-- shared for all docs
@@ -89,7 +91,6 @@ theme:
     features:
         - content.action.edit
         - content.action.view
-        - navigation.indexes
         - search.highlight
         - search.suggest
         - toc.follow

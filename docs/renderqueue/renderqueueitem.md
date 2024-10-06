@@ -78,7 +78,7 @@ Integer; read-only.
 
 The name of a callback function that is called whenever the value of the [RenderQueueItem.status](#renderqueueitemstatus) attribute changes.
 
-You cannot make changes to render queue items or to the application while rendering is in progress or paused; you can, however, use this callback to pause or stop the rendering process. See [RenderQueue.pauseRendering()](index.md#renderqueuepauserendering) and [RenderQueue.stopRendering()](index.md#renderqueuestoprendering). See also [app.onError](../general/application.md#apponerror).
+You cannot make changes to render queue items or to the application while rendering is in progress or paused; you can, however, use this callback to pause or stop the rendering process. See [RenderQueue.pauseRendering()](renderqueue.md#renderqueuepauserendering) and [RenderQueue.stopRendering()](renderqueue.md#renderqueuestoprendering). See also [app.onError](../general/application.md#apponerror).
 
 #### Type
 

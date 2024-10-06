@@ -6,7 +6,7 @@
 
 The AVLayer object provides an interface to those layers that contain AVItem objects (composition layers, footage layers, solid layers, text layers, and sound layers).
 
-> AVLayer is a subclass of [Layer object](index.md). All methods and attributes of Layer, in addition to those listed below, are available when working with AVLayer.
+> AVLayer is a subclass of [Layer object](layer.md). All methods and attributes of Layer, in addition to those listed below, are available when working with AVLayer.
 
 > AVLayer is a base class for [TextLayer object](textlayer.md), so AVLayer attributes and methods are available when working with TextLayer objects.
 
@@ -687,9 +687,9 @@ Media Replacement layers are recognized as AVLayers with an [AVLayer.source](#av
 
 The AVLayer needs to comply with the restrictions below in order to be treated as a Media Replacement layer:
 
-- [Layer.hasVideo](../layer/index.md#layerhasvideo) should return `true`.
+- [Layer.hasVideo](../layer/layer.md#layerhasvideo) should return `true`.
 - [AVLayer.adjustmentLayer](#avlayeradjustmentlayer) should return `false`.
-- [Layer.nullLayer](../layer/index.md#layernulllayer) should return `false`.
+- [Layer.nullLayer](../layer/layer.md#layernulllayer) should return `false`.
 - If the [AVLayer.source](#avlayersource) is a [FootageItem object](../item/footageitem.md), then FootageItem.FootageSource should not be a [SolidSource object](../sources/solidsource.md).
 - If the [AVLayer.source](#avlayersource) is a [FootageItem object](../item/footageitem.md) and the FootageItem.FootageSource is a [FileSource object](../sources/filesource.md) then that FileSource should not point to a non-media file e.g. a JSX script file.
 

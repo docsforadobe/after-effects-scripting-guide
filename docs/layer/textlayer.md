@@ -6,7 +6,7 @@
 
 The TextLayer object represents a text layer within a composition. Create it using the [LayerCollection object's addText method](layercollection.md#layercollectionaddtext). It can be accessed in an item's layer collection either by index number or by a name string.
 
-> TextLayer is a subclass of [AVLayer](avlayer.md), which is a subclass of [Layer](index.md). All methods and attributes of AVLayer and Layer are available when working with TextLayer.
+> TextLayer is a subclass of [AVLayer](avlayer.md), which is a subclass of [Layer](layer.md). All methods and attributes of AVLayer and Layer are available when working with TextLayer.
 
 #### AE Properties
 
