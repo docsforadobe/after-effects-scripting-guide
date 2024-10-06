@@ -119,6 +119,7 @@ markdown_extensions:
     - pymdownx.superfences
     - toc:
         title: Page Contents
+        permalink: true
         toc_depth: 3
 
 plugins:
