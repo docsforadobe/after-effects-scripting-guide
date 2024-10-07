@@ -1,6 +1,20 @@
 :root {}
 
+/* Duplicated here to override screen-size limit*/
 .breadcrumb.md-nav__icon::after {
+  background-color: currentcolor;
+  border-radius: 100%;
+  content: "";
+  display: inline-block;
+  -webkit-mask-image: var(--md-nav-icon--next);
+  mask-image: var(--md-nav-icon--next);
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+
   height: 0.9rem;
   width: 0.9rem;
   vertical-align: -0.2rem;
