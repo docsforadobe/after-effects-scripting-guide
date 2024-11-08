@@ -32,9 +32,9 @@ This works in several main phases:
 
 ### Setting up the new system
 
-1. Install `mkdocs` (which will be used to serve the resulting .md files) and `mkdocs-material` (the theme):
+1. Install `mkdocs`, `mkdocs-material` (the theme), and any required plugins:
     ```sh
-    pip install mkdocs mkdocs-material
+    pip install -r requirements.txt
     ```
 
 ### Setting up the repo for deployment
@@ -72,6 +72,10 @@ Instead of initializing Mkdocs from scratch, we're going to just copy files over
 2. Update anything related to "After Effects Scripting Guide" and make it relevant for this repo
     - `./.mkdocs.yml`
     - `./docs/index.md`
+3. Open a terminal to the root folder, and run the below command to serve the docs
+    ```sh
+    mkdocs serve
+    ```
 
 ---
 

@@ -18,12 +18,18 @@ This project is written in [Markdown](https://en.wikipedia.org/wiki/Markdown), s
 
 Before pushing to the online project (or submitting a PR), we ask that you develop & test the project locally to ensure the result is what you'd expect.
 
-To build locally, follow [Docsify's "Quick Start" guide](https://docsify.js.org/#/quickstart).
+To build locally:
 
-- Install node.js & npm
-- Install docsify
-- Navigate to the project directory and use the command `docsify serve ./docs`
-- Open your browser to `http://localhost:3000` to view the live-updating docs
+- Install python & pip
+- From a terminal, navigate to the project directory and run the following command to install dependencies:
+```sh
+pip install -r requirements.txt
+```
+- When done, run the following command to serve the docs:
+```sh
+mkdocs serve
+```
+- Open your browser to the provided url (`http://127.0.0.1:8000`) by default to view the live-updating docs
 
 ---
 
