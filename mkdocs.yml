@@ -115,9 +115,6 @@ extra_css:
     - _static/extra.css
     - _static/syntax-highlight.css
 
-hooks:
-  - hooks/breadcrumbs.py
-
 markdown_extensions:
     - admonition
     - pymdownx.superfences
