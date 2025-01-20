@@ -10,7 +10,7 @@ This initially came from the Adobe After Effects CS6 Scripting Guide, and has be
 
 This endeavour is primarily community-supported & run; contributors are welcome and encouraged to suggest fixes, adjustments, notes/warnings, and anything else that may help the project.
 
-This project is written in [Markdown](https://en.wikipedia.org/wiki/Markdown), styled & served using [Docsify](https://docsify.js.org).
+This project is written in [Markdown](https://en.wikipedia.org/wiki/Markdown), styled & served using [mkdocs](https://www.mkdocs.org/).
 
 ---
 
@@ -35,7 +35,7 @@ mkdocs serve
 
 ## Admonitions Usage
 
-Currently, the following [callouts](https://docsify.js.org/#/helpers?id=important-content) are in use in this project. Try to keep one piece of data per note, for easier parsing.
+Currently, the following [admonitions](https://squidfunk.github.io/mkdocs-material/reference/admonitions/) are in use in this project. Try to keep one piece of data per note, for easier parsing.
 
 ```
 !!! note
