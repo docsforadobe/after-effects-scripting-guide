@@ -3,7 +3,7 @@
 `app.project.item(index).layer(index)`
 
 !!! note
-    This functionality was added in After Effects (Beta) 24.4 and is subject to change while it remains in Beta.
+    This functionality was added in After Effects 24.4
 
 #### Description
 
