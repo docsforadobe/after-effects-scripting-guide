@@ -35,9 +35,27 @@ LightLayer defines no additional attributes, but has different AE properties tha
 
 ## Attributes
 
+### LightLayer.lightSource:
+
+`app.project.item(index).layer(index).lightSource`
+
+!!! note
+    `LightLayer.lightSource` was added in After Effects 24.3
+
+#### Description
+
+For a light layer, the layer to use as a light source when `LightLayer.lightType` is `LightType.ENVIRONMENT`.
+
+`LightLayer.layerSource` must be a footage layer referencing a .EXR or .HDR footage item. Trying to set this attribute to any other layer produces an error.
+
+---
+
 ### LightLayer.lightType
 
 `app.project.item(index).layer(index).lightType`
+
+!!! note
+    `LightType.ENVIRONMENT` was added in After Effects 24.3
 
 #### Description
 
@@ -51,3 +69,4 @@ A `LightType` enumerated value; read/write. One of:
 - `LightType.SPOT`
 - `LightType.POINT`
 - `LightType.AMBIENT`
+- `LightType.ENVIRONMENT`
