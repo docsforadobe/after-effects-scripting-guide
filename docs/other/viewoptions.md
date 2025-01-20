@@ -84,7 +84,7 @@ Floating-point value, in the range `[-40..40]`
 
 #### Description
 
-The state of the Fast Previews menuThis is a read/write attribute using an enumerated value:
+The state of the Fast Previews menu. This is a read/write attribute using an enumerated value:
 
 !!! warning
     If you try to get or set the attribute's value in the Layer or Footage panel, you'll get an error message.
