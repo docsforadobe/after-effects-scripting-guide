@@ -1,0 +1,129 @@
+# Site metadata
+site_name: After Effects Scripting Guide
+site_url: https://ae-scripting.docsforadobe.dev/
+repo_url: https://github.com/docsforadobe/after-effects-scripting-guide/
+repo_name: "after-effects-scripting-guide"
+extra:
+    homepage: https://docsforadobe.dev
+
+# Customize navigation
+nav:
+    - Home: index.md
+    - Introduction:
+        - Overview: introduction/overview.md
+        - Javascript for After Effects: introduction/javascript.md
+        - After Effects Scripting Changlog: introduction/changelog.md
+        - After Effects Object Model: introduction/objectmodel.md
+        - After Effects Class Hierarchy: introduction/classhierarchy.md
+    - General:
+        - Globals: general/globals.md
+        - Application: general/application.md
+        - Project: general/project.md
+        - System: general/system.md
+    - Item:
+        - Item object: item/item.md
+        - ItemCollection: item/itemcollection.md
+        - AVItem: item/avitem.md
+        - CompItem: item/compitem.md
+        - FolderItem: item/folderitem.md
+        - FootageItem: item/footageitem.md
+    - Layer:
+        - Layer object: layer/layer.md
+        - LayerCollection: layer/layercollection.md
+        - AVLayer: layer/avlayer.md
+        - CameraLayer: layer/cameralayer.md
+        - LightLayer: layer/lightlayer.md
+        - ShapeLayer: layer/shapelayer.md
+        - TextLayer: layer/textlayer.md
+        - ThreeDModelLayer: layer/threedmodellayer.md
+    - Property:
+        - Property object: property/property.md
+        - PropertyBase: property/propertybase.md
+        - PropertyGroup: property/propertygroup.md
+        - MaskPropertyGroup: property/maskpropertygroup.md
+    - Render Queue:
+        - RenderQueue object: renderqueue/renderqueue.md
+        - RQItemCollection: renderqueue/rqitemcollection.md
+        - RenderQueueItem: renderqueue/renderqueueitem.md
+        - OMCollection: renderqueue/omcollection.md
+        - OutputModule: renderqueue/outputmodule.md
+    - Sources:
+        - FileSource: sources/filesource.md
+        - FootageSource: sources/footagesource.md
+        - PlaceholderSource: sources/placeholdersource.md
+        - SolidSource: sources/solidsource.md
+    - Text:
+        - CharacterRange: text/characterrange.md
+        - ComposedLineRange: text/composedlinerange.md
+        - FontObject: text/fontobject.md
+        - FontsObject: text/fontsobject.md
+        - ParagraphRange: text/paragraphrange.md
+        - TextDocument: text/textdocument.md
+    - Other:
+        - Collection: other/collection.md
+        - ImportOptions: other/importoptions.md
+        - KeyframeEase: other/keyframeease.md
+        - MarkerValue: other/markervalue.md
+        - Preferences: other/preferences.md
+        - Settings: other/settings.md
+        - Shape: other/shape.md
+        - View: other/view.md
+        - Viewer: other/viewer.md
+        - ViewOptions: other/viewoptions.md
+    - Match Names:
+        - Layers:
+            - AV Layer Match Names: matchnames/layer/avlayer.md
+            - 3D Layer Match Names: matchnames/layer/3dlayer.md
+            - Camera Layer Match Names: matchnames/layer/cameralayer.md
+            - Light Layer Match Names: matchnames/layer/lightlayer.md
+            - Text Layer Match Names: matchnames/layer/textlayer.md
+            - Shape Layer Match Names: matchnames/layer/shapelayer.md
+            - Layer Styles Match Names: matchnames/layer/layerstyles.md
+        - Effects:
+            - First-Party Effect Match Names: matchnames/effects/firstparty.md
+
+
+# Do not touch below-- shared for all docs
+
+theme:
+    name: material
+    custom_dir: overrides
+    features:
+        - content.action.edit
+        - content.action.view
+        - search.highlight
+        - search.suggest
+        - toc.follow
+    palette:
+        # Palette toggle for dark mode
+        - media: "(prefers-color-scheme: dark)"
+          primary: black
+          scheme: slate
+          toggle:
+              icon: material/brightness-4
+              name: Switch to light mode
+
+        # Palette toggle for light mode
+        - media: "(prefers-color-scheme: light)"
+          primary: white
+          scheme: default
+          toggle:
+              icon: material/brightness-7
+              name: Switch to dark mode
+
+extra_css:
+    - _static/extra.css
+    - _static/syntax-highlight.css
+
+markdown_extensions:
+    - admonition
+    - pymdownx.superfences
+    - toc:
+        title: Page Contents
+        permalink: true
+        toc_depth: 3
+
+plugins:
+    - git-revision-date-localized
+    - search:
+        separator: '[\s\-,\.:!=\[\]()"/]+'

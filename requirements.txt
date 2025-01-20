@@ -1,4 +1,3 @@
-sphinx==5.0
-sphinx_rtd_theme
-sphinx_rtd_dark_mode
-docutils<0.18
+mkdocs
+mkdocs-material
+mkdocs-git-revision-date-localized-plugin
