@@ -1,0 +1,14 @@
+{% extends "main.html" %}
+
+<!-- Extra header script to strip .html suffix from legacy links -->
+{% block extrahead %}
+<script>
+    if (window.location.href.endsWith(".html")) {
+      window.location.href = window.location.href.replace(".html", "");
+    }
+</script>
+{% endblock %}
+
+{% block content %}
+  <h1>404 - Not found</h1>
+{% endblock %}
