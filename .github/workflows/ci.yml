@@ -27,5 +27,6 @@ jobs:
           path: .cache
           restore-keys: |
             mkdocs-material-
+          ssh-key: ${{ secrets.DEPLOY_KEY }}
       - run: pip install mkdocs-material mkdocs-git-revision-date-localized-plugin
       - run: mkdocs gh-deploy --force
