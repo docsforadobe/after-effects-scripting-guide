@@ -53,9 +53,11 @@ This works in several main phases:
     sphinx-build -M markdown ./docs ./build
     ```
 2. For simplicity, we're going to merge these files from `./build/markdown`/ straight into `./docs/`, so that all of each subfolder's .rst files sit alongside their .md files
-    - If you're iffy on this / want more caution, feel free to do this later (but the rest of this doc will assume you've made this change)
+   - Move all files from `./build/markdown/` into `./docs/`
 3. Delete the `./build/` folder, as it won't be needed
-4. Rename `./docs/index.md` to `./docs/_sidebar.md`
+4. Rename `./docs/index.md` to `./docs/_nav.md`
+   - This is a temporary process that we'll resolve later
+   - It needs to be rewritten in a different format, and moved into `./mkdocs.yml`, with this file deleted
 
 ---
 
@@ -113,9 +115,13 @@ Instead of initializing Mkdocs from scratch, we're going to just copy files over
 
 ### Manual Cleanup
 
-#### Sidebar
+#### Sidebar / Navigation
 
-Reformat the `./docs/_sidebar.md` file to match the exact same list layout as the same file in the [After Effects Scripting Guide](https://github.com/docsforadobe/after-effects-scripting-guide/)
+The sidebar / navigation needs to be present inside of `./mkdocs.yml`, formatted identically to how it's presented in the [After Effects Scripting Guide](https://github.com/docsforadobe/after-effects-scripting-guide/) repo.
+
+Earlier, we set aside `./docs/_nav.md` as a reference point. Now, use that file as the basis for how to display the nav within the `nav` section within `./mkdocs.yml`.
+
+When finished, delete `./docs/_nav.md`.
 
 #### Links
 
