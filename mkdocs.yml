@@ -5,6 +5,7 @@ repo_url: https://github.com/docsforadobe/after-effects-scripting-guide/
 repo_name: "after-effects-scripting-guide"
 extra:
     homepage: https://docsforadobe.dev
+copyright: All content is copyright Adobe Systems Incorporated.
 
 # Customize navigation
 nav:
@@ -129,6 +130,7 @@ plugins:
     - search:
         separator: '[\s\-,\.:!=\[\]()"/]+'
     - print-site:
-        print_page_title: "Printable Docs"
         add_cover_page: true
         add_print_site_banner: true
+        cover_page_template: "overrides/templates/print_site_cover_page.tpl"
+        print_page_title: "Printable Docs"
