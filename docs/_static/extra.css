@@ -1,13 +1,13 @@
 :root {
 
+    table {
+        white-space: nowrap;
+    }
+
     /*
     * Only wrap the last column of a table
     */
-    table {
-        white-space: nowrap;
-
-        td:nth-last-child(1) {
-            white-space: normal;
-        }
+    td:last-child {
+        white-space: normal;
     }
 }
