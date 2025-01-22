@@ -82,7 +82,6 @@ nav:
             - Layer Styles Match Names: matchnames/layer/layerstyles.md
         - Effects:
             - First-Party Effect Match Names: matchnames/effects/firstparty.md
-    - Printable Docs: /print_page
 
 
 # Do not touch below-- shared for all docs

@@ -1,0 +1,25 @@
+<div class="md-copyright">
+  {% if config.copyright %}
+    <div class="md-copyright__highlight">
+      {{ config.copyright }}
+    </div>
+  {% endif %}
+  {% if not config.extra.generator == false %}
+    Made with
+    <a
+      href="https://squidfunk.github.io/mkdocs-material/"
+      target="_blank" rel="noopener"
+    >
+      Material for MkDocs
+    </a>
+  {% endif %}
+</div>
+
+<!-- Print button -->
+<div class="md-copyright">
+  {% if page.url_to_print_page %}
+  <a href="{{ page.url_to_print_page }}" title="Print Site" class="md-content__button md-icon">
+      {% include ".icons/material/printer.svg" %}
+  </a>
+  {% endif %}
+</div>
