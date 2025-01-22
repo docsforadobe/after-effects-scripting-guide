@@ -134,3 +134,4 @@ plugins:
         add_print_site_banner: true
         cover_page_template: "overrides/templates/print_site_cover_page.tpl"
         print_page_title: "Printable Docs"
+        print_site_banner_template: "overrides/templates/print_site_banner.tpl"
