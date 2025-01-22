@@ -128,4 +128,7 @@ plugins:
     - git-revision-date-localized
     - search:
         separator: '[\s\-,\.:!=\[\]()"/]+'
-    - print-site
+    - print-site:
+        print_page_title: "Printable Docs"
+        add_cover_page: true
+        add_print_site_banner: true
