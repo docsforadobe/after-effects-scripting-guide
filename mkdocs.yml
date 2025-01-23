@@ -116,8 +116,12 @@ theme:
               name: Switch to dark mode
 
 extra_css:
+    # CSS specific to this file
     - _static/extra.css
-    - _static/syntax-highlight.css
+
+    # CSS shared between the whole org
+    - https://docsforadobe.dev/_global/global.css
+    - https://docsforadobe.dev/_global/global-syntax-highlight.css
 
 markdown_extensions:
     - admonition
