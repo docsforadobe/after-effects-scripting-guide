@@ -26,7 +26,12 @@ jobs:
         with:
           key: mkdocs-material-${{ env.cache_id }}
           path: .cache
+          fetch-depth: 0
           restore-keys: |
             mkdocs-material-
-      - run: pip install mkdocs-material mkdocs-git-revision-date-localized-plugin mkdocs-print-site-plugin
+      - run: >
+          pip install
+          mkdocs-material
+          mkdocs-git-revision-date-localized-plugin
+          mkdocs-print-site-plugin
       - run: mkdocs gh-deploy --force
