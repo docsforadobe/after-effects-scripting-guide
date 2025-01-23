@@ -3,9 +3,6 @@ site_name: After Effects Scripting Guide
 site_url: https://ae-scripting.docsforadobe.dev/
 repo_url: https://github.com/docsforadobe/after-effects-scripting-guide/
 repo_name: "after-effects-scripting-guide"
-extra:
-    homepage: https://docsforadobe.dev
-copyright: All content is copyright Adobe Systems Incorporated.
 
 # Customize navigation
 nav:
@@ -85,6 +82,11 @@ nav:
 
 
 # Do not touch below-- shared for all docs
+
+copyright: All content is copyright Adobe Systems Incorporated.
+
+extra:
+    homepage: https://docsforadobe.dev
 
 theme:
     name: material
