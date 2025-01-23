@@ -5,6 +5,7 @@ repo_url: https://github.com/docsforadobe/after-effects-scripting-guide/
 repo_name: "after-effects-scripting-guide"
 extra:
     homepage: https://docsforadobe.dev
+copyright: All content is copyright Adobe Systems Incorporated.
 
 # Customize navigation
 nav:
@@ -127,3 +128,9 @@ plugins:
     - git-revision-date-localized
     - search:
         separator: '[\s\-,\.:!=\[\]()"/]+'
+    - print-site:
+        add_cover_page: true
+        add_print_site_banner: true
+        cover_page_template: "overrides/templates/print_site_cover_page.tpl"
+        print_page_title: "Offline Docs"
+        print_site_banner_template: "overrides/templates/print_site_banner.tpl"
