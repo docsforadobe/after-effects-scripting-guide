@@ -1,13 +1,6 @@
 :root {
 
-    table {
+    td code {
         white-space: nowrap;
-    }
-
-    /*
-    * Only wrap the last column of a table
-    */
-    td:last-child {
-        white-space: normal;
     }
 }
