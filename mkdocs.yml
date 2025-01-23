@@ -129,6 +129,8 @@ plugins:
     - git-revision-date-localized
     - search:
         separator: '[\s\-,\.:!=\[\]()"/]+'
+
+    # Note: print-site must be last!
     - print-site:
         add_cover_page: true
         add_print_site_banner: true
