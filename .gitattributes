@@ -1,0 +1,3 @@
+# Override linguist skipping main folder
+docs/** -linguist-documentation
+docs/** linguist-detectable
