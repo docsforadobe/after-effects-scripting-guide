@@ -1,6 +1,3 @@
-:root {
-
-    td code {
-        white-space: nowrap;
-    }
+td code {
+    white-space: nowrap;
 }
