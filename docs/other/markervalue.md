@@ -21,34 +21,33 @@ For information on the usage of markers see "Using markers" in After Effects Hel
 #### Examples
 
 - To set a **layer** marker that says "Fade Up" at the 2 second mark:
+    ```javascript
+    var myMarker = new MarkerValue("FadeUp");
+    myLayer.property("Marker").setValueAtTime(2, myMarker);
+    // or
+    myLayer.marker.setValueAtTime(2, myMarker);
+    ```
 
-> ```javascript
-> var myMarker = new MarkerValue("FadeUp");
-> myLayer.property("Marker").setValueAtTime(2, myMarker);
-> // or
-> myLayer.marker.setValueAtTime(2, myMarker);
-> ```
 - To set a **comp** marker that says "Fade Up" at the 2 second mark:
-
-```javascript
-var myMarker = new MarkerValue("FadeUp");
-comp.markerProperty.setValueAtTime(2, myMarker);
-```
+    ```javascript
+    var myMarker = new MarkerValue("FadeUp");
+    comp.markerProperty.setValueAtTime(2, myMarker);
+    ```
 
 - To get comment values from a particular marker:
-  ```javascript
-  var layer = app.project.item(1).layer(1);
-  var markerProperty = layer.marker;
+    ```javascript
+    var layer = app.project.item(1).layer(1);
+    var markerProperty = layer.marker;
 
-  var commentOfFirstMarker = markerProperty.keyValue(1).comment;
+    var commentOfFirstMarker = markerProperty.keyValue(1).comment;
 
-  // or
-  var commentOfMarkerAtTime4 = markerProperty.valueAtTime(4.0, true).comment;
+    // or
+    var commentOfMarkerAtTime4 = markerProperty.valueAtTime(4.0, true).comment;
 
-  // or
-  var markerValueAtTimeClosestToTime4 = markerProperty.keyValue(markerProperty.nearestKeyIndex(4.0));
-  var commentOfMarkerClosestToTime4 = markerValueAtTimeClosestToTime4.comment;
-  ```
+    // or
+    var markerValueAtTimeClosestToTime4 = markerProperty.keyValue(markerProperty.nearestKeyIndex(4.0));
+    var commentOfMarkerClosestToTime4 = markerValueAtTimeClosestToTime4.comment;
+    ```
 
 ---
 

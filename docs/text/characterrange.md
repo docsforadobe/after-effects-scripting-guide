@@ -227,8 +227,8 @@ Checks will be made that both [CharacterRange object](#characterrange-object) in
 
 The internal steps of the operation are:
 
-> - Delete the text from the target instance.
-> - Paste the text from the source instance.
+- Delete the text from the target instance.
+- Paste the text from the source instance.
 
 As the span of the [CharacterRange object](#characterrange-object) is not adjusted by this call, when the source [CharacterRange object](#characterrange-object) instance has a shorter span than the target [CharacterRange object](#characterrange-object) instance, the target instance may become invalid.
 

@@ -171,8 +171,8 @@ By default this happens automatically—this property will disable it from happe
 
 Boolean; read/write. One of:
 
-> - `false` is the default—sync from Adobe Fonts may be attempted.
-> - `true` means that no sync or install will be attempted.
+- `false` is the default—sync from Adobe Fonts may be attempted.
+- `true` means that no sync or install will be attempted.
 
 ---
 
@@ -270,8 +270,8 @@ alert(str);
 
 Array of generic objects;
 
-> - Key `chars` will be set to number of characters the in the range.
-> - Key `ctScript` will be set to the `CTScript` which applies to the characters in the range.
+- Key `chars` will be set to number of characters the in the range.
+- Key `ctScript` will be set to the `CTScript` which applies to the characters in the range.
 
 —
 
