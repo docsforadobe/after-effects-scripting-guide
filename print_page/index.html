@@ -3047,6 +3047,7 @@
 <p>If you're not sure where to start, take a look at the <a href="#introduction-overview">Overview</a> for how scripting works in After Effects, or <a href="#introduction-changelog">Changelog</a> for updates to the scripting API over time.</p>
 <h2 id="index-contribution">Contribution<a class="headerlink" href="#index-contribution" title="Permanent link">&para;</a></h2>
 <p>This endeavour is primarily community-supported &amp; run; contributors are welcome and encouraged to suggest fixes, adjustments, notes/warnings, and anything else that may help the project.</p>
+<p>For specific information on how to contribute &amp; best practices, see the <a href="https://docsforadobe.dev/contributing/contribution-guide/">Documentation Contribution Guide</a>.</p>
 <h2 id="index-licensing-ownership">Licensing &amp; Ownership<a class="headerlink" href="#index-licensing-ownership" title="Permanent link">&para;</a></h2>
 <p>This project exists for educational purposes only.</p>
 <p>All content is copyright Adobe Systems Incorporated.</p></section>
@@ -6493,9 +6494,10 @@ Archived Team Projects are not included.</p>
 <br/></p>
 <h4 id="item-item-description">Description<a class="headerlink" href="#item-item-description" title="Permanent link">&para;</a></h4>
 <p>The Item object represents an item that can appear in the Project panel. The first item is at index 1.</p>
-<blockquote>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <p>Item is the base class for <a href="#item-avitem">AVItem object</a> and for <a href="#item-folderitem">FolderItem object</a>, which are in turn the base classes for various other item types, so Item attributes and methods are available when working with all of these item types.</p>
-</blockquote>
+</div>
 <h4 id="item-item-example">Example<a class="headerlink" href="#item-item-example" title="Permanent link">&para;</a></h4>
 <p>This example gets the second item from the project and checks that it is a folder. It then removes from the folder any top-level item that is not currently selected. It also checks to make sure that, for each item in the folder, the parent is properly set to the correct folder.</p>
 <div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">myFolder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">2</span><span class="p">);</span>
@@ -6806,9 +6808,10 @@ Archived Team Projects are not included.</p>
 <p><code>app.project.items</code></p>
 <h4 id="item-itemcollection-description">Description<a class="headerlink" href="#item-itemcollection-description" title="Permanent link">&para;</a></h4>
 <p>The ItemCollection object represents a collection of items. The ItemCollection belonging to a Project object contains all the Item objects for items in the project. The ItemCollection belonging to a FolderItem object contains all the Item objects for items in that folder.</p>
-<blockquote>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <p>ItemCollection is a subclass of <a href="#other-collection">Collection object</a>. All methods and attributes of Collection, in addition to those listed below, are available when working with ItemCollection.</p>
-</blockquote>
+</div>
 <hr />
 <h2 id="item-itemcollection-methods">Methods<a class="headerlink" href="#item-itemcollection-methods" title="Permanent link">&para;</a></h2>
 <h3 id="item-itemcollection-itemcollectionaddcomp">ItemCollection.addComp()<a class="headerlink" href="#item-itemcollection-itemcollectionaddcomp" title="Permanent link">&para;</a></h3>
@@ -6898,10 +6901,14 @@ Archived Team Projects are not included.</p>
 <p><code>app.project.item(index)</code></p>
 <h4 id="item-avitem-description">Description<a class="headerlink" href="#item-avitem-description" title="Permanent link">&para;</a></h4>
 <p>The AVItem object provides access to attributes and methods of audio/visual files imported into After Effects.</p>
-<blockquote>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <p>AVItem is a subclass of Item. All methods and attributes of Item, in addition to those listed below, are available when working with AVItem. See <a href="#item-item">Item object</a></p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <p>AVItem is the base class for both CompItem and FootageItem, so AVItem attributes and methods are also available when working with CompItem and FootageItem objects. See <a href="#item-compitem">CompItem object</a> and <a href="#item-footageitem">FootageItem object</a>.</p>
-</blockquote>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>CompItems and FootageItems, while logical descendants of AVItem, are not <em>really</em> subclasses of AVItem as AVItem doesn't exist in Extendscript, ie. attempting to check if <code>item instanceof AVItem</code> will fail because AVItem is undefined. This is also true for <code>Item</code> itself.</p>
@@ -7264,9 +7271,10 @@ If any file has an unlabeled alpha channel, and the user preference says to ask 
 <br/></p>
 <h4 id="item-compitem-description">Description<a class="headerlink" href="#item-compitem-description" title="Permanent link">&para;</a></h4>
 <p>The CompItem object represents a composition, and allows you to manipulate and get information about it. Access the objects by position index number in a project's item collection.</p>
-<blockquote>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <p>CompItem is a subclass of <a href="#item-avitem">AVItem object</a>, which is a subclass of <a href="#item-item">Item object</a>. All methods and attributes of AVItem and Item, in addition to those listed below, are available when working with CompItem.</p>
-</blockquote>
+</div>
 <h4 id="item-compitem-example">Example<a class="headerlink" href="#item-compitem-example" title="Permanent link">&para;</a></h4>
 <p>Given that the first item in the project is a CompItem, the following code displays two alerts. The first shows the number of layers in the CompItem, and the second shows the name of the last layer in the CompItem.</p>
 <div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">firstComp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
@@ -7813,9 +7821,10 @@ project <code>save()</code> method before exporting the Motion Graphics template
 <code>app.project.items[index]</code></p>
 <h4 id="item-footageitem-description">Description<a class="headerlink" href="#item-footageitem-description" title="Permanent link">&para;</a></h4>
 <p>The FootageItem object represents a footage item imported into a project, which appears in the Project panel. These are accessed by position index number in a project's item collection.</p>
-<blockquote>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <p>FootageItem is a subclass of <a href="#item-avitem">AVItem object</a>, which is a subclass of <a href="#item-item">Item object</a>. All methods and attributes of AVItem and Item, in addition to those listed below, are available when working with FootageItem.</p>
-</blockquote>
+</div>
 <hr />
 <h2 id="item-footageitem-attributes">Attributes<a class="headerlink" href="#item-footageitem-attributes" title="Permanent link">&para;</a></h2>
 <h3 id="item-footageitem-footageitemfile">FootageItem.file<a class="headerlink" href="#item-footageitem-footageitemfile" title="Permanent link">&para;</a></h3>
@@ -7997,10 +8006,14 @@ project <code>save()</code> method before exporting the Motion Graphics template
 <p><code>app.project.item(index).layer(index)</code></p>
 <h4 id="layer-layer-description">Description<a class="headerlink" href="#layer-layer-description" title="Permanent link">&para;</a></h4>
 <p>The Layer object provides access to layers within compositions. It can be accessed from an item's layer collection either by index number or by a name string.</p>
-<blockquote>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <p>Layer is a subclass of <a href="#property-propertygroup">PropertyGroup</a>, which is a subclass of <a href="#property-propertybase">PropertyBase</a>. All methods and attributes of PropertyGroup, in addition to those listed below, are available when working with Layer, with the exception that <code>propertyIndex</code> attribute is set to <code>undefined</code>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <p>Layer is the base class for <a href="#layer-cameralayer">CameraLayer object</a>, <a href="#layer-lightlayer">LightLayer object</a>, and <a href="#layer-avlayer">AVLayer object</a>, so Layer attributes and methods are available when working with all layer types. Layers contain AE properties, in addition to their JavaScript attributes and methods. For examples of how to access properties in layers, see <a href="#property-propertybase">PropertyBase object</a>.</p>
-</blockquote>
+</div>
 <h4 id="layer-layer-example">Example<a class="headerlink" href="#layer-layer-example" title="Permanent link">&para;</a></h4>
 <p>If the first item in the project is a <a href="#item-compitem">CompItem</a>, this example disables the first layer in that composition and renames it. This might, for example, turn an icon off in the composition.</p>
 <div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">firstLayer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">layer</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
@@ -8418,9 +8431,10 @@ The ID is not displayed anywhere in the user interface..</p>
 <p><code>app.project.item(index).layers</code></p>
 <h4 id="layer-layercollection-description">Description<a class="headerlink" href="#layer-layercollection-description" title="Permanent link">&para;</a></h4>
 <p>The LayerCollection object represents a set of layers. The LayerCollection belonging to a <a href="#item-compitem">CompItem object</a> contains all the layer objects for layers in the composition. The methods of the collection object allow you to manipulate the layer list.</p>
-<blockquote>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <p>LayerCollection is a subclass of <a href="#other-collection">Collection object</a>. All methods and attributes of Collection, in addition to those listed below, are available when working with LayerCollection.</p>
-</blockquote>
+</div>
 <h4 id="layer-layercollection-example">Example<a class="headerlink" href="#layer-layercollection-example" title="Permanent link">&para;</a></h4>
 <p>Given that the first item in the project is a CompItem and the second item is an AVItem, this example shows the number of layers in the CompItem's layer collection, adds a new layer based on an AVItem in the project, then displays the new number of layers.</p>
 <div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">firstComp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
@@ -8750,10 +8764,14 @@ The ID is not displayed anywhere in the user interface..</p>
 <p><code>app.project.item(index).layer(index)</code></p>
 <h4 id="layer-avlayer-description">Description<a class="headerlink" href="#layer-avlayer-description" title="Permanent link">&para;</a></h4>
 <p>The AVLayer object provides an interface to those layers that contain AVItem objects (composition layers, footage layers, solid layers, text layers, and sound layers).</p>
-<blockquote>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <p>AVLayer is a subclass of <a href="#layer-layer">Layer object</a>. All methods and attributes of Layer, in addition to those listed below, are available when working with AVLayer.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <p>AVLayer is a base class for <a href="#layer-textlayer">TextLayer object</a>, so AVLayer attributes and methods are available when working with TextLayer objects.</p>
-</blockquote>
+</div>
 <h4 id="layer-avlayer-ae-properties">AE Properties<a class="headerlink" href="#layer-avlayer-ae-properties" title="Permanent link">&para;</a></h4>
 <p>Different types of layers have different AE properties. AVLayer has the following properties and property groups:</p>
 <ul>
@@ -9494,9 +9512,10 @@ See <a href="#layer-avlayer-avlayerremovetrackmatte">AVLayer.removeTrackMatte()<
 <p><code>app.project.item(index).layer(index)</code></p>
 <h4 id="layer-cameralayer-description">Description<a class="headerlink" href="#layer-cameralayer-description" title="Permanent link">&para;</a></h4>
 <p>The CameraLayer object represents a camera layer within a composition. Create it using <a href="#layer-layercollection-layercollectionaddcamera">LayerCollection.addCamera()</a>. It can be accessed in an item's layer collection either by index number or by a name string.</p>
-<blockquote>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <p>CameraLayer is a subclass of <a href="#layer-layer">Layer object</a>. All methods and attributes of Layer are available when working with CameraLayer.</p>
-</blockquote>
+</div>
 <h4 id="layer-cameralayer-ae-properties">AE Properties<a class="headerlink" href="#layer-cameralayer-ae-properties" title="Permanent link">&para;</a></h4>
 <p>CameraLayer defines no additional attributes, but has different AE properties than other layer types. It has the following properties and property groups:</p>
 <ul>
@@ -9519,9 +9538,10 @@ See <a href="#layer-avlayer-avlayerremovetrackmatte">AVLayer.removeTrackMatte()<
 <p><code>app.project.item(index).layer(index)</code></p>
 <h4 id="layer-lightlayer-description">Description<a class="headerlink" href="#layer-lightlayer-description" title="Permanent link">&para;</a></h4>
 <p>The LightLayer object represents a light layer within a composition. Create it using the <a href="#layer-layercollection-layercollectionaddlight">LayerCollection.addLight()</a> method. It can be accessed in an item's layer collection either by index number or by a name string.</p>
-<blockquote>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <p>LightLayer is a subclass of <a href="#layer-layer">Layer object</a>. All methods and attributes of Layer are available when working with Light-Layer.</p>
-</blockquote>
+</div>
 <h4 id="layer-lightlayer-ae-properties">AE Properties<a class="headerlink" href="#layer-lightlayer-ae-properties" title="Permanent link">&para;</a></h4>
 <p>LightLayer defines no additional attributes, but has different AE properties than other layer types. It has thefollowing properties and property groups:</p>
 <ul>
@@ -9580,15 +9600,17 @@ See <a href="#layer-avlayer-avlayerremovetrackmatte">AVLayer.removeTrackMatte()<
 <p><code>app.project.item(index).layer(index)</code></p>
 <h4 id="layer-shapelayer-description">Description<a class="headerlink" href="#layer-shapelayer-description" title="Permanent link">&para;</a></h4>
 <p>The ShapeLayer object represents a shape layer within a composition. Create it using <a href="#layer-layercollection-layercollectionaddshape">LayerCollection.addShape()</a>. It can be accessed in an item's layer collection either by index number or by a name string.</p>
-<blockquote>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <p>ShapeLayer is a subclass of <a href="#layer-avlayer">AVLayer</a>, which is a subclass of <a href="#layer-layer">Layer</a>. All methods and attributes of AVLayer and Layer are available when working with ShapeLayer.</p>
-</blockquote></section><section class="print-page" id="layer-textlayer"><h1 id="layer-textlayer-textlayer-object">TextLayer object<a class="headerlink" href="#layer-textlayer-textlayer-object" title="Permanent link">&para;</a></h1>
+</div></section><section class="print-page" id="layer-textlayer"><h1 id="layer-textlayer-textlayer-object">TextLayer object<a class="headerlink" href="#layer-textlayer-textlayer-object" title="Permanent link">&para;</a></h1>
 <p><code>app.project.item(index).layer(index)</code></p>
 <h4 id="layer-textlayer-description">Description<a class="headerlink" href="#layer-textlayer-description" title="Permanent link">&para;</a></h4>
 <p>The TextLayer object represents a text layer within a composition. Create it using the <a href="#layer-layercollection-layercollectionaddtext">LayerCollection object's addText method</a>. It can be accessed in an item's layer collection either by index number or by a name string.</p>
-<blockquote>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <p>TextLayer is a subclass of <a href="#layer-avlayer">AVLayer</a>, which is a subclass of <a href="#layer-layer">Layer</a>. All methods and attributes of AVLayer and Layer are available when working with TextLayer.</p>
-</blockquote>
+</div>
 <h4 id="layer-textlayer-ae-properties">AE Properties<a class="headerlink" href="#layer-textlayer-ae-properties" title="Permanent link">&para;</a></h4>
 <p>TextLayer defines no additional attributes, but has the following AE properties and property groups, in addition to those inherited from AVLayer:</p>
 <ul>
@@ -9624,7 +9646,10 @@ See <a href="#layer-avlayer-avlayerremovetrackmatte">AVLayer.removeTrackMatte()<
 </div>
 <h4 id="layer-threedmodellayer-description">Description<a class="headerlink" href="#layer-threedmodellayer-description" title="Permanent link">&para;</a></h4>
 <p>The ThreeDModelLayer object represents a 3D Model layer within a composition.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <p>ThreeDModelLayer is a subclass of <a href="#layer-avlayer">AVLayer object</a>. All methods and attributes of AVLayer are available when working with ThreeDModelLayer.</p>
+</div>
 <h4 id="layer-threedmodellayer-ae-properties">AE Properties<a class="headerlink" href="#layer-threedmodellayer-ae-properties" title="Permanent link">&para;</a></h4>
 <p>ThreeDModelLayer inherits the following properties and property groups from <a href="#layer-avlayer">AVLayer object</a>:</p>
 <ul>
@@ -9658,9 +9683,10 @@ See <a href="#layer-avlayer-avlayerremovetrackmatte">AVLayer.removeTrackMatte()<
 <p><code>app.project.item(index).layer(index).propertySpec</code></p>
 <h4 id="property-property-description">Description<a class="headerlink" href="#property-property-description" title="Permanent link">&para;</a></h4>
 <p>The Property object contains value, keyframe, and expression information about a particular AE property of a layer. An AE property is a value, often animatable, of an effect, mask, or transform within an individual layer. For examples of how to access properties, see <a href="#property-propertybase">PropertyBase object</a> and <a href="#property-propertygroup-propertygroupproperty">PropertyGroup.property()</a>.</p>
-<blockquote>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <p>Property is a subclass of <a href="#property-propertybase">PropertyBase</a>. All methods and attributes of PropertyBase, in addition to those listed below, are available when working with Property.</p>
-</blockquote>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>JavaScript objects commonly referred to as "properties" are called "attributes" in this guide, to avoid confusion with the After Effects definition of property.</p>
@@ -11192,9 +11218,10 @@ must also be true.</p>
 <span class="kd">var</span><span class="w"> </span><span class="nx">effect1againtoo2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">layer</span><span class="p">(</span><span class="mf">1</span><span class="p">)(</span><span class="s2">&quot;Effects&quot;</span><span class="p">)(</span><span class="s2">&quot;Add Grain&quot;</span><span class="p">)(</span><span class="s2">&quot;Viewing Mode&quot;</span><span class="p">);</span>
 </code></pre></div>
 <p>See also <a href="#property-propertygroup-propertygroupproperty">PropertyGroup.property()</a>.</p>
-<blockquote>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <p>PropertyBase is the base class for both <a href="#property-property">Property</a> and <a href="#property-propertygroup">PropertyGroup</a>, so PropertyBase attributes and methods are available when working with properties and property groups.</p>
-</blockquote>
+</div>
 <h4 id="property-propertybase-reference-invalidation">Reference invalidation<a class="headerlink" href="#property-propertybase-reference-invalidation" title="Permanent link">&para;</a></h4>
 <p>When something occurs that changes an object sufficiently for the reference to become invalid, script references to that object can generate errors. In simple cases this is straightforward. For example, if you delete anobject, a reference to the deleted object generates the warning "Object is Invalid":</p>
 <div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">layer1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">layer</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
@@ -11415,10 +11442,14 @@ must also be true.</p>
 <p><code>app.project.item(index).layer(index).propertyGroupSpec</code></p>
 <h4 id="property-propertygroup-description">Description<a class="headerlink" href="#property-propertygroup-description" title="Permanent link">&para;</a></h4>
 <p>The PropertyGroup object represents a group of properties. It can contain Property objects and other PropertyGroup objects. Property groups can be nested to provide a parent-child hierarchy, with a Layer object at the top (root) down to a single Property object, such as the mask feather of the third mask. To traverse the group hierarchy, use PropertyBase methods and attributes; see <a href="#property-propertybase-propertybasepropertygroup">PropertyBase.propertyGroup()</a>. For examples of how to access properties and property groups, see <a href="#property-propertybase">PropertyBase object</a>.</p>
-<blockquote>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <p>PropertyGroup is a subclass of <a href="#property-propertybase">PropertyBase</a>. All methods and attributes of PropertyBase, in addition to those listed below, are available when working with PropertyGroup.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <p>PropertyGroup is a base class for <a href="#layer-layer">Layer</a> and <a href="#property-maskpropertygroup">MaskPropertyGroup</a>. PropertyGroup attributes and methods are available when working with layer or mask groups.</p>
-</blockquote>
+</div>
 <hr />
 <h2 id="property-propertygroup-attributes">Attributes<a class="headerlink" href="#property-propertygroup-attributes" title="Permanent link">&para;</a></h2>
 <h3 id="property-propertygroup-propertygroupnumproperties">PropertyGroup.numProperties<a class="headerlink" href="#property-propertygroup-propertygroupnumproperties" title="Permanent link">&para;</a></h3>
@@ -11619,9 +11650,10 @@ The only exception is a text animator property, which can be added to a named gr
 <p><code>app.project.item(index).layer(index).mask</code></p>
 <h4 id="property-maskpropertygroup-description">Description<a class="headerlink" href="#property-maskpropertygroup-description" title="Permanent link">&para;</a></h4>
 <p>The MaskPropertyGroup object encapsulates mask attributes in a layer.</p>
-<blockquote>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <p>MaskPropertyGroup is a subclass of <a href="#property-propertygroup">PropertyGroup object</a>. All methods and attributes of <a href="#property-propertybase">PropertyBase object</a> and PropertyGroup, in addition to those listed below, are available when working with MaskPropertyGroup.</p>
-</blockquote>
+</div>
 <hr />
 <h2 id="property-maskpropertygroup-attributes">Attributes<a class="headerlink" href="#property-maskpropertygroup-attributes" title="Permanent link">&para;</a></h2>
 <h3 id="property-maskpropertygroup-maskpropertygroupcolor">MaskPropertyGroup.color<a class="headerlink" href="#property-maskpropertygroup-maskpropertygroupcolor" title="Permanent link">&para;</a></h3>
@@ -11888,9 +11920,10 @@ This is exposed in the UI as a checkbox in the lower right corner of the Render 
 <p><code>app.project.renderQueue.items</code></p>
 <h4 id="renderqueue-rqitemcollection-description">Description<a class="headerlink" href="#renderqueue-rqitemcollection-description" title="Permanent link">&para;</a></h4>
 <p>The RQItemCollection contains all of the render-queue items in a project, as shown in the Render Queue panel of the project. The collection provides access to the <a href="#renderqueue-renderqueueitem">RenderQueueItem objects</a>, and allows you to create them from compositions. The first RenderQueueItem object in the collection is at index position 1.</p>
-<blockquote>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <p>RQItemCollection is a subclass of <a href="#other-collection">Collection object</a>. All methods and attributes of Collection are available when working with RQItemCollection.</p>
-</blockquote>
+</div>
 <hr />
 <h2 id="renderqueue-rqitemcollection-methods">Methods<a class="headerlink" href="#renderqueue-rqitemcollection-methods" title="Permanent link">&para;</a></h2>
 <h3 id="renderqueue-rqitemcollection-rqitemcollectionadd">RQItemCollection.add()<a class="headerlink" href="#renderqueue-rqitemcollection-rqitemcollectionadd" title="Permanent link">&para;</a></h3>
@@ -12246,9 +12279,10 @@ This is exposed in the UI as a checkbox in the lower right corner of the Render 
 <p><code>app.project.renderQueue.items.outputModules</code></p>
 <h4 id="renderqueue-omcollection-description">Description<a class="headerlink" href="#renderqueue-omcollection-description" title="Permanent link">&para;</a></h4>
 <p>The OMCollection contains all of the output modules in a render queue. The collection provides access to the <a href="#renderqueue-outputmodule">OutputModule objects</a>, and allows you to create them. The first OutputModule object in the collection is at index position 1.</p>
-<blockquote>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <p>OMCollection is a subclass of <a href="#other-collection">Collection object</a>. All methods and attributes of Collection are available when working with OMCollection.</p>
-</blockquote>
+</div>
 <hr />
 <h2 id="renderqueue-omcollection-methods">Methods<a class="headerlink" href="#renderqueue-omcollection-methods" title="Permanent link">&para;</a></h2>
 <h3 id="renderqueue-omcollection-omcollectionadd">OMCollection.add()<a class="headerlink" href="#renderqueue-omcollection-omcollectionadd" title="Permanent link">&para;</a></h3>
@@ -12517,9 +12551,10 @@ This is exposed in the UI as a checkbox in the lower right corner of the Render 
 <br/></p>
 <h4 id="sources-filesource-description">Description<a class="headerlink" href="#sources-filesource-description" title="Permanent link">&para;</a></h4>
 <p>The FileSource object describes footage that comes from a file.</p>
-<blockquote>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <p>FileSource is a subclass of <a href="#sources-footagesource">FootageSource object</a>. All methods and attributes of FootageSource, in addition to those listed below, are available when working with FileSource.</p>
-</blockquote>
+</div>
 <hr />
 <h2 id="sources-filesource-attributes">Attributes<a class="headerlink" href="#sources-filesource-attributes" title="Permanent link">&para;</a></h2>
 <h3 id="sources-filesource-filesourcefile">FileSource.file<a class="headerlink" href="#sources-filesource-filesourcefile" title="Permanent link">&para;</a></h3>
@@ -12561,9 +12596,10 @@ This is exposed in the UI as a checkbox in the lower right corner of the Render 
 <br/></p>
 <h4 id="sources-footagesource-description">Description<a class="headerlink" href="#sources-footagesource-description" title="Permanent link">&para;</a></h4>
 <p>The FootageSource object holds information describing the source of some footage. It is used as the <code>mainSource</code> of a <a href="#item-footageitem">FootageItem object</a>, or the <code>proxySource</code> of a <a href="#item-compitem">CompItem object</a> or FootageItem.</p>
-<blockquote>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <p>FootageSource is the base class for <a href="#sources-solidsource">SolidSource object</a>, so FootageSource attributes and methods are available when working with SolidSource objects.</p>
-</blockquote>
+</div>
 <hr />
 <h2 id="sources-footagesource-attributes">Attributes<a class="headerlink" href="#sources-footagesource-attributes" title="Permanent link">&para;</a></h2>
 <h3 id="sources-footagesource-footagesourcealphamode">FootageSource.alphaMode<a class="headerlink" href="#sources-footagesource-footagesourcealphamode" title="Permanent link">&para;</a></h3>
@@ -12754,18 +12790,20 @@ This is exposed in the UI as a checkbox in the lower right corner of the Render 
 <br/></p>
 <h4 id="sources-placeholdersource-description">Description<a class="headerlink" href="#sources-placeholdersource-description" title="Permanent link">&para;</a></h4>
 <p>The PlaceholderSource object describes the footage source of a placeholder.</p>
-<blockquote>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <p>PlaceholderSource is a subclass of <a href="#sources-footagesource">FootageSource object</a>. All methods and attributes of FootageSource are available when working with PlaceholderSource. PlaceholderSource does not define any additional methods or attributes.</p>
-</blockquote></section><section class="print-page" id="sources-solidsource"><h1 id="sources-solidsource-solidsource-object">SolidSource object<a class="headerlink" href="#sources-solidsource-solidsource-object" title="Permanent link">&para;</a></h1>
+</div></section><section class="print-page" id="sources-solidsource"><h1 id="sources-solidsource-solidsource-object">SolidSource object<a class="headerlink" href="#sources-solidsource-solidsource-object" title="Permanent link">&para;</a></h1>
 <p><code>app.project.item(index).mainSource</code>
 <br/>
 <code>app.project.item(index).proxySource</code>
 <br/></p>
 <h4 id="sources-solidsource-description">Description<a class="headerlink" href="#sources-solidsource-description" title="Permanent link">&para;</a></h4>
 <p>The SolidSource object represents a solid-color footage source.</p>
-<blockquote>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <p>SolidSource is a subclass of <a href="#sources-footagesource">FootageSource</a>. All methods and attributes of FootageSource, in addition to those listed below, are available when working with SolidSource.</p>
-</blockquote>
+</div>
 <hr />
 <h2 id="sources-solidsource-attributes">Attributes<a class="headerlink" href="#sources-solidsource-attributes" title="Permanent link">&para;</a></h2>
 <h3 id="sources-solidsource-solidsourcecolor">SolidSource.color<a class="headerlink" href="#sources-solidsource-solidsourcecolor" title="Permanent link">&para;</a></h3>
@@ -12946,12 +12984,10 @@ The value returned here represents what is applied to the characters, without re
 <p>Copies, using paste semantics, from the <code>characterRange</code> parameter to the callee <a href="#text-characterrange-characterrange-object">CharacterRange object</a>. The two instances may be the same, and the spans may be different.</p>
 <p>Checks will be made that both <a href="#text-characterrange-characterrange-object">CharacterRange object</a> instances are valid.</p>
 <p>The internal steps of the operation are:</p>
-<blockquote>
 <ul>
 <li>Delete the text from the target instance.</li>
 <li>Paste the text from the source instance.</li>
 </ul>
-</blockquote>
 <p>As the span of the <a href="#text-characterrange-characterrange-object">CharacterRange object</a> is not adjusted by this call, when the source <a href="#text-characterrange-characterrange-object">CharacterRange object</a> instance has a shorter span than the target <a href="#text-characterrange-characterrange-object">CharacterRange object</a> instance, the target instance may become invalid.</p>
 <h4 id="text-characterrange-parameters">Parameters<a class="headerlink" href="#text-characterrange-parameters" title="Permanent link">&para;</a></h4>
 <table>
@@ -13563,12 +13599,10 @@ Each object is composed of the axis <code>name</code>, <code>tag</code>, <code>m
 </div>
 <h4 id="text-fontsobject-type_5">Type<a class="headerlink" href="#text-fontsobject-type_5" title="Permanent link">&para;</a></h4>
 <p>Boolean; read/write. One of:</p>
-<blockquote>
 <ul>
 <li><code>false</code> is the default—sync from Adobe Fonts may be attempted.</li>
 <li><code>true</code> means that no sync or install will be attempted.</li>
 </ul>
-</blockquote>
 <hr />
 <h3 id="text-fontsobject-fontsobjectmissingorsubstitutedfonts">FontsObject.missingOrSubstitutedFonts<a class="headerlink" href="#text-fontsobject-fontsobjectmissingorsubstitutedfonts" title="Permanent link">&para;</a></h3>
 <p><code>app.fonts.missingOrSubstitutedFonts</code></p>
@@ -13657,12 +13691,10 @@ Each object is composed of the axis <code>name</code>, <code>tag</code>, <code>m
 </table>
 <h4 id="text-fontsobject-returns">Returns<a class="headerlink" href="#text-fontsobject-returns" title="Permanent link">&para;</a></h4>
 <p>Array of generic objects;</p>
-<blockquote>
 <ul>
 <li>Key <code>chars</code> will be set to number of characters the in the range.</li>
 <li>Key <code>ctScript</code> will be set to the <code>CTScript</code> which applies to the characters in the range.</li>
 </ul>
-</blockquote>
 <p>—</p>
 <h3 id="text-fontsobject-fontsobjectgetdefaultfontforctscript">FontsObject.getDefaultFontForCTScript()<a class="headerlink" href="#text-fontsobject-fontsobjectgetdefaultfontforctscript" title="Permanent link">&para;</a></h3>
 <p><code>app.fonts.getDefaultFontForCTScript(ctScript)</code></p>
@@ -15441,22 +15473,23 @@ Key <code>end</code> will be set to text index of the end of the paragraph (grea
 <p>For information on the usage of markers see "Using markers" in After Effects Help.</p>
 <h4 id="other-markervalue-examples">Examples<a class="headerlink" href="#other-markervalue-examples" title="Permanent link">&para;</a></h4>
 <ul>
-<li>To set a <strong>layer</strong> marker that says "Fade Up" at the 2 second mark:</li>
-</ul>
-<blockquote>
-<p><div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">myMarker</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">MarkerValue</span><span class="p">(</span><span class="s2">&quot;FadeUp&quot;</span><span class="p">);</span>
+<li>
+<p>To set a <strong>layer</strong> marker that says "Fade Up" at the 2 second mark:
+    <div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">myMarker</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">MarkerValue</span><span class="p">(</span><span class="s2">&quot;FadeUp&quot;</span><span class="p">);</span>
 <span class="nx">myLayer</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="s2">&quot;Marker&quot;</span><span class="p">).</span><span class="nx">setValueAtTime</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">myMarker</span><span class="p">);</span>
 <span class="c1">// or</span>
 <span class="nx">myLayer</span><span class="p">.</span><span class="nx">marker</span><span class="p">.</span><span class="nx">setValueAtTime</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">myMarker</span><span class="p">);</span>
-</code></pre></div>
-- To set a <strong>comp</strong> marker that says "Fade Up" at the 2 second mark:</p>
-</blockquote>
-<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">myMarker</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">MarkerValue</span><span class="p">(</span><span class="s2">&quot;FadeUp&quot;</span><span class="p">);</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>To set a <strong>comp</strong> marker that says "Fade Up" at the 2 second mark:
+    <div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">myMarker</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">MarkerValue</span><span class="p">(</span><span class="s2">&quot;FadeUp&quot;</span><span class="p">);</span>
 <span class="nx">comp</span><span class="p">.</span><span class="nx">markerProperty</span><span class="p">.</span><span class="nx">setValueAtTime</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">myMarker</span><span class="p">);</span>
-</code></pre></div>
-<ul>
-<li>To get comment values from a particular marker:
-  <div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">layer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">layer</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>To get comment values from a particular marker:
+    <div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">layer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">layer</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">markerProperty</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">layer</span><span class="p">.</span><span class="nx">marker</span><span class="p">;</span>
 
 <span class="kd">var</span><span class="w"> </span><span class="nx">commentOfFirstMarker</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">markerProperty</span><span class="p">.</span><span class="nx">keyValue</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">comment</span><span class="p">;</span>
@@ -15467,7 +15500,8 @@ Key <code>end</code> will be set to text index of the end of the paragraph (grea
 <span class="c1">// or</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">markerValueAtTimeClosestToTime4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">markerProperty</span><span class="p">.</span><span class="nx">keyValue</span><span class="p">(</span><span class="nx">markerProperty</span><span class="p">.</span><span class="nx">nearestKeyIndex</span><span class="p">(</span><span class="mf">4.0</span><span class="p">));</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">commentOfMarkerClosestToTime4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">markerValueAtTimeClosestToTime4</span><span class="p">.</span><span class="nx">comment</span><span class="p">;</span>
-</code></pre></div></li>
+</code></pre></div></p>
+</li>
 </ul>
 <hr />
 <h2 id="other-markervalue-attributes">Attributes<a class="headerlink" href="#other-markervalue-attributes" title="Permanent link">&para;</a></h2>
