@@ -9,7 +9,8 @@
 
 The CompItem object represents a composition, and allows you to manipulate and get information about it. Access the objects by position index number in a project's item collection.
 
-> CompItem is a subclass of [AVItem object](avitem.md), which is a subclass of [Item object](item.md). All methods and attributes of AVItem and Item, in addition to those listed below, are available when working with CompItem.
+!!! info
+    CompItem is a subclass of [AVItem object](avitem.md), which is a subclass of [Item object](item.md). All methods and attributes of AVItem and Item, in addition to those listed below, are available when working with CompItem.
 
 #### Example
 

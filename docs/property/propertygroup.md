@@ -6,9 +6,11 @@
 
 The PropertyGroup object represents a group of properties. It can contain Property objects and other PropertyGroup objects. Property groups can be nested to provide a parent-child hierarchy, with a Layer object at the top (root) down to a single Property object, such as the mask feather of the third mask. To traverse the group hierarchy, use PropertyBase methods and attributes; see [PropertyBase.propertyGroup()](propertybase.md#propertybasepropertygroup). For examples of how to access properties and property groups, see [PropertyBase object](propertybase.md).
 
-> PropertyGroup is a subclass of [PropertyBase](propertybase.md). All methods and attributes of PropertyBase, in addition to those listed below, are available when working with PropertyGroup.
+!!! info
+    PropertyGroup is a subclass of [PropertyBase](propertybase.md). All methods and attributes of PropertyBase, in addition to those listed below, are available when working with PropertyGroup.
 
-> PropertyGroup is a base class for [Layer](../layer/layer.md) and [MaskPropertyGroup](maskpropertygroup.md). PropertyGroup attributes and methods are available when working with layer or mask groups.
+!!! info
+    PropertyGroup is a base class for [Layer](../layer/layer.md) and [MaskPropertyGroup](maskpropertygroup.md). PropertyGroup attributes and methods are available when working with layer or mask groups.
 
 ---
 

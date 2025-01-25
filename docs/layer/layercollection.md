@@ -6,7 +6,8 @@
 
 The LayerCollection object represents a set of layers. The LayerCollection belonging to a [CompItem object](../item/compitem.md) contains all the layer objects for layers in the composition. The methods of the collection object allow you to manipulate the layer list.
 
-> LayerCollection is a subclass of [Collection object](../other/collection.md). All methods and attributes of Collection, in addition to those listed below, are available when working with LayerCollection.
+!!! info
+    LayerCollection is a subclass of [Collection object](../other/collection.md). All methods and attributes of Collection, in addition to those listed below, are available when working with LayerCollection.
 
 #### Example
 

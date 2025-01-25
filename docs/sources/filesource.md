@@ -9,7 +9,8 @@
 
 The FileSource object describes footage that comes from a file.
 
-> FileSource is a subclass of [FootageSource object](footagesource.md). All methods and attributes of FootageSource, in addition to those listed below, are available when working with FileSource.
+!!! info
+    FileSource is a subclass of [FootageSource object](footagesource.md). All methods and attributes of FootageSource, in addition to those listed below, are available when working with FileSource.
 
 ---
 

@@ -6,7 +6,8 @@
 
 The LightLayer object represents a light layer within a composition. Create it using the [LayerCollection.addLight()](layercollection.md#layercollectionaddlight) method. It can be accessed in an item's layer collection either by index number or by a name string.
 
-> LightLayer is a subclass of [Layer object](layer.md). All methods and attributes of Layer are available when working with Light-Layer.
+!!! info
+    LightLayer is a subclass of [Layer object](layer.md). All methods and attributes of Layer are available when working with Light-Layer.
 
 #### AE Properties
 

@@ -15,7 +15,8 @@ var effect1againtoo2 = app.project.item(1).layer(1)("Effects")("Add Grain")("Vie
 
 See also [PropertyGroup.property()](propertygroup.md#propertygroupproperty).
 
-> PropertyBase is the base class for both [Property](property.md) and [PropertyGroup](propertygroup.md), so PropertyBase attributes and methods are available when working with properties and property groups.
+!!! info
+    PropertyBase is the base class for both [Property](property.md) and [PropertyGroup](propertygroup.md), so PropertyBase attributes and methods are available when working with properties and property groups.
 
 #### Reference invalidation
 

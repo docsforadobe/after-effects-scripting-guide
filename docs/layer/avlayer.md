@@ -6,9 +6,11 @@
 
 The AVLayer object provides an interface to those layers that contain AVItem objects (composition layers, footage layers, solid layers, text layers, and sound layers).
 
-> AVLayer is a subclass of [Layer object](layer.md). All methods and attributes of Layer, in addition to those listed below, are available when working with AVLayer.
+!!! info
+    AVLayer is a subclass of [Layer object](layer.md). All methods and attributes of Layer, in addition to those listed below, are available when working with AVLayer.
 
-> AVLayer is a base class for [TextLayer object](textlayer.md), so AVLayer attributes and methods are available when working with TextLayer objects.
+!!! info
+    AVLayer is a base class for [TextLayer object](textlayer.md), so AVLayer attributes and methods are available when working with TextLayer objects.
 
 #### AE Properties
 

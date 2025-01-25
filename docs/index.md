@@ -17,6 +17,8 @@ If you're not sure where to start, take a look at the [Overview](./introduction/
 
 This endeavour is primarily community-supported & run; contributors are welcome and encouraged to suggest fixes, adjustments, notes/warnings, and anything else that may help the project.
 
+For specific information on how to contribute & best practices, see the [Documentation Contribution Guide](https://docsforadobe.dev/contributing/contribution-guide/).
+
 ## Licensing & Ownership
 
 This project exists for educational purposes only.

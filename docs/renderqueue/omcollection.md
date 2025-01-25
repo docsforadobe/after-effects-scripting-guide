@@ -6,7 +6,8 @@
 
 The OMCollection contains all of the output modules in a render queue. The collection provides access to the [OutputModule objects](outputmodule.md), and allows you to create them. The first OutputModule object in the collection is at index position 1.
 
-> OMCollection is a subclass of [Collection object](../other/collection.md). All methods and attributes of Collection are available when working with OMCollection.
+!!! info
+    OMCollection is a subclass of [Collection object](../other/collection.md). All methods and attributes of Collection are available when working with OMCollection.
 
 ---
 

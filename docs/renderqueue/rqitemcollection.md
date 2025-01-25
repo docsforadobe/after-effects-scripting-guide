@@ -6,7 +6,8 @@
 
 The RQItemCollection contains all of the render-queue items in a project, as shown in the Render Queue panel of the project. The collection provides access to the [RenderQueueItem objects](renderqueueitem.md), and allows you to create them from compositions. The first RenderQueueItem object in the collection is at index position 1.
 
-> RQItemCollection is a subclass of [Collection object](../other/collection.md). All methods and attributes of Collection are available when working with RQItemCollection.
+!!! info
+    RQItemCollection is a subclass of [Collection object](../other/collection.md). All methods and attributes of Collection are available when working with RQItemCollection.
 
 ---
 

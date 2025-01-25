@@ -9,7 +9,8 @@
 
 The ThreeDModelLayer object represents a 3D Model layer within a composition.
 
-ThreeDModelLayer is a subclass of [AVLayer object](avlayer.md). All methods and attributes of AVLayer are available when working with ThreeDModelLayer.
+!!! info
+    ThreeDModelLayer is a subclass of [AVLayer object](avlayer.md). All methods and attributes of AVLayer are available when working with ThreeDModelLayer.
 
 #### AE Properties
 
