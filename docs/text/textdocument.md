@@ -389,7 +389,8 @@ Boolean; read-only.
 
 !!! note
     This functionality was added in After Effects 13.2 (CC 2014.2)
-As of After Effects 14 (CC2017), it seems this is also writeable.
+
+    As of After Effects 14 (CC2017), it seems this is also writeable.
 
 #### Description
 
