@@ -5021,12 +5021,12 @@ must also be true.</p>
 <tr>
 <td><code>inType</code></td>
 <td><code>KeyframeInterpolationType</code> enum.</td>
-<td>The incoming interpolation type. One of:<br/>- <code>KeyframeInterpolationType.LINEAR</code><br/>- <code>KeyframeInterpolationType.BEZIER</code><br/>- <code>KeyframeInterpolationType.HOLD</code></td>
+<td>The incoming interpolation type. One of:<ul><li><code>KeyframeInterpolationType.LINEAR</code></li><li><code>KeyframeInterpolationType.BEZIER</code></li><li><code>KeyframeInterpolationType.HOLD</code></li></ul></td>
 </tr>
 <tr>
 <td><code>outType</code></td>
 <td><code>KeyframeInterpolationType</code> enum.</td>
-<td>Optional. The outgoing interpolation type. If not supplied, the 'out' type is set to the <code>inType</code> value. One of:<br/>- <code>KeyframeInterpolationType.LINEAR</code><br/>- <code>KeyframeInterpolationType.BEZIER</code><br/>- <code>KeyframeInterpolationType.HOLD</code></td>
+<td>Optional. The outgoing interpolation type. If not supplied, the 'out' type is set to the <code>inType</code> value. One of:<ul><li><code>KeyframeInterpolationType.LINEAR</code></li><li><code>KeyframeInterpolationType.BEZIER</code></li><li><code>KeyframeInterpolationType.HOLD</code></li></ul></td>
 </tr>
 </tbody>
 </table>
@@ -5092,13 +5092,14 @@ must also be true.</p>
 <tr>
 <td><code>items</code></td>
 <td>Array of strings</td>
-<td>Values which will replace the existing menu entries in a Dropdown Menu Control.<br/><br/>- Only strings are allowed.<br/>- Empty item strings are not allowed.<br/>- Duplicate item strings are not allowed.<br/>- The character <code>"\"</code> is not allowed in the item strings.<br/>- The string <code>"(-"</code> can be specified as of the item strings, to create a separator line in the dropdown menu. The separator lines will claim an index for each of themselves.</td>
+<td>Values which will replace the existing menu entries in a Dropdown Menu Control.<ul><li>Only strings are allowed.</li><li>Empty item strings are not allowed.</li><li>Duplicate item strings are not allowed.</li><li>The character <code>"\"</code> is not allowed in the item strings.</li><li>The string <code>"(-"</code> can be specified as of the item strings, to create a separator line in the dropdown menu. The separator lines will claim an index for each of themselves.</li></ul></td>
 </tr>
 </tbody>
 </table>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Item strings should be in ASCII or MultiByte encodable in the current code-page. In other words, the item strings should be provided in the script of the running system. For example: Specifying the item strings in Japanese while running the script on an English system will create a dropdown effect with illegible characters in the item strings.</p>
+<p>Item strings should be in ASCII or MultiByte encodable in the current code-page. In other words, the item strings should be provided in the script of the running system.</p>
+<p>For example: Specifying the item strings in Japanese while running the script on an English system will create a dropdown effect with illegible characters in the item strings.</p>
 </div>
 <h4 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">dropdownItems</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
@@ -5253,12 +5254,12 @@ must also be true.</p>
 <tr>
 <td><code>inTangent</code></td>
 <td>An array of 2 or 3 floating-point values.</td>
-<td>The incoming tangent vector.<br/><br/>- If the property value type is <code>PropertyValueType.TwoD_SPATIAL</code>, the array contains 2 values.<br/>- If the property value type is <code>PropertyValueType.ThreeD_SPATIAL</code>, the array contains 3 values.</td>
+<td>The incoming tangent vector.<ul><li>If the property value type is <code>PropertyValueType.TwoD_SPATIAL</code>, the array contains 2 values.</li><li>If the property value type is <code>PropertyValueType.ThreeD_SPATIAL</code>, the array contains 3 values.</li></ul></td>
 </tr>
 <tr>
 <td><code>outTangent</code></td>
 <td>An array of 2 or 3 floating-point values.</td>
-<td>Optional. The outgoing tangent vector. If not supplied, the <code>out</code> tangent is set to the <code>inTangent</code> value.<br/><br/>- If the property value type is <code>PropertyValueType.TwoD_SPATIAL</code>, the array contains 2 values.<br/>- If the property value type is <code>PropertyValueType.ThreeD_SPATIAL</code>, the array contains 3 values.</td>
+<td>Optional. The outgoing tangent vector. If not supplied, the <code>out</code> tangent is set to the <code>inTangent</code> value.<ul><li>If the property value type is <code>PropertyValueType.TwoD_SPATIAL</code>, the array contains 2 values.</li><li>If the property value type is <code>PropertyValueType.ThreeD_SPATIAL</code>, the array contains 3 values.</li></ul></td>
 </tr>
 </tbody>
 </table>
@@ -5345,12 +5346,12 @@ must also be true.</p>
 <tr>
 <td><code>inTemporalEase</code></td>
 <td>An array of 1, 2, or 3 <a href="../../other/keyframeease/">KeyframeEase objects</a></td>
-<td>The incoming temporal ease. <br/><br/>- If the property value type is <code>PropertyValueType.TwoD</code>, the array contains 2 objects.<br/>- If the property value type is <code>PropertyValueType.ThreeD</code>, the array contains 3 objects.<br/>- For all other value types, the array contains 1 object.</td>
+<td>The incoming temporal ease. <ul><li>If the property value type is <code>PropertyValueType.TwoD</code>, the array contains 2 objects.</li><li>If the property value type is <code>PropertyValueType.ThreeD</code>, the array contains 3 objects.</li><li>For all other value types, the array contains 1 object.</li></ul></td>
 </tr>
 <tr>
 <td><code>outTemporalEase</code></td>
 <td>An array of 1, 2, or 3 <a href="../../other/keyframeease/">KeyframeEase objects</a></td>
-<td>Optional. The outgoing temporal ease. If not supplied, the outgoing ease is set to the <code>inTemporalEase</code> value.<br/><br/>- If the property value type is <code>PropertyValueType.TwoD</code>, the array contains 2 objects.<br/>- If the property value type is <code>PropertyValueType.ThreeD</code>, the array contains 3 objects.<br/>- For all other value types, the array contains 1 object.</td>
+<td>Optional. The outgoing temporal ease. If not supplied, the outgoing ease is set to the <code>inTemporalEase</code> value.<ul><li>If the property value type is <code>PropertyValueType.TwoD</code>, the array contains 2 objects.</li><li>If the property value type is <code>PropertyValueType.ThreeD</code>, the array contains 3 objects.</li><li>For all other value types, the array contains 1 object.</li></ul></td>
 </tr>
 </tbody>
 </table>
@@ -5494,7 +5495,7 @@ must also be true.</p>
 <tr>
 <td><code>preExpression</code></td>
 <td>Boolean</td>
-<td>If the property has an expression and this is <code>true</code>, return the value for the specified time without applying the expression to it. When <code>false</code>, return the result of evaluating the expression for the specified time. Ignored if the property does not have an associated expression.</td>
+<td>If the property has an expression and this is <code>true</code>, return the value for the specified time without applying the expression to it.<br/>When <code>false</code>, return the result of evaluating the expression for the specified time. Ignored if the property does not have an associated expression.</td>
 </tr>
 </tbody>
 </table>
@@ -5520,7 +5521,7 @@ must also be true.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 25, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 27, 2025</span>
   </span>
 
     

@@ -2424,7 +2424,7 @@ The only exception is a text animator property, which can be added to a named gr
 <tr>
 <td><code>name</code></td>
 <td>String</td>
-<td>The display name or match name of the property to add. (See <a href="../propertybase/#propertybasematchname">PropertyBase.matchName</a>). The following names are supported:<br/>- Any match name for a property that can be added through the user interface. For example, <code>"ADBE Mask Atom</code>", <code>"ADBE Paint Atom</code>", <code>"ADBE Text Position</code>", <code>"ADBE Text Anchor Point</code>".<br/>- When adding to an ADBE Mask Parade: <code>"ADBE Mask Atom</code>", <code>"Mask</code>".<br/>- When adding to an ADBE Effect Parade, any effect by match name, such as <code>"ADBE Bulge</code>", <code>"ADBE Glo2</code>", <code>"APC Vegas</code>".<br/>- Any effect by display name, such as <code>"Bulge</code>", <code>"Glow</code>", <code>"Vegas</code>".<br/>- For text animators, <code>"ADBE Text Animator</code>".<br/>- For selectors, Range Selector has the name <code>"ADBE Text Selector</code>", Wiggly Selector has the name <code>"ADBE Text Wiggly Selector</code>", and Expression Selector has the name <code>"ADBE Text Expressible Selector</code>".</td>
+<td>The display name or match name of the property to add. (See <a href="../propertybase/#propertybasematchname">PropertyBase.matchName</a>). The following names are supported:<ul><li>Any match name for a property that can be added through the user interface. For example, <code>"ADBE Mask Atom</code>", <code>"ADBE Paint Atom</code>", <code>"ADBE Text Position</code>", <code>"ADBE Text Anchor Point</code>".</li><li>When adding to an ADBE Mask Parade: <code>"ADBE Mask Atom</code>", <code>"Mask</code>".</li><li>When adding to an ADBE Effect Parade, any effect by match name, such as <code>"ADBE Bulge</code>", <code>"ADBE Glo2</code>", <code>"APC Vegas</code>".</li><li>Any effect by display name, such as <code>"Bulge</code>", <code>"Glow</code>", <code>"Vegas</code>".</li><li>For text animators, <code>"ADBE Text Animator</code>".</li><li>For selectors, Range Selector has the name <code>"ADBE Text Selector</code>", Wiggly Selector has the name <code>"ADBE Text Wiggly Selector</code>", and Expression Selector has the name <code>"ADBE Text Expressible Selector</code>".</li></ul></td>
 </tr>
 </tbody>
 </table>
@@ -2493,7 +2493,7 @@ The only exception is a text animator property, which can be added to a named gr
 <tr>
 <td><code>name</code></td>
 <td>String</td>
-<td>The name of the child property. This can be:<br/>- Any match name<br/>- Any name in expression "parenthesis style" syntax, meaning the display name or the compact English name<br/>- Any name in expression "intercap style" syntax.<br/><br/>For supported property names, see the table below.</td>
+<td>The name of the child property. This can be:<ul><li>Any match name</li><li>Any name in expression "parenthesis style" syntax, meaning the display name or the compact English name</li><li>Any name in expression "intercap style" syntax.</li></ul>For supported property names, see the table below.</td>
 </tr>
 </tbody>
 </table>
@@ -2510,47 +2510,47 @@ The only exception is a text animator property, which can be added to a named gr
 <tbody>
 <tr>
 <td>From any Layer</td>
-<td>- <code>"ADBE Mask Parade</code>", or <code>"Masks</code>"<br/>- <code>"ADBE Effect Parade</code>", or <code>"Effects</code>"<br/>- <code>"ADBE MTrackers</code>", or <code>"Motion Trackers</code>"</td>
+<td><ul><li><code>"ADBE Mask Parade</code>", or <code>"Masks</code>"</li><li><code>"ADBE Effect Parade</code>", or <code>"Effects</code>"</li><li><code>"ADBE MTrackers</code>", or <code>"Motion Trackers</code>"</li></ul></td>
 </tr>
 <tr>
 <td>From an AVLayer</td>
-<td>- <code>"Anchor Point</code>" or <code>"anchorPoint</code>"<br/>- <code>"Position</code>" or <code>"position</code>"<br/>- <code>"Scale</code>" or <code>"scale</code>"<br/>- <code>"Rotation</code>" or <code>"rotation</code>"<br/>- <code>"Z Rotation</code>" or <code>"zRotation</code>" or <code>"Rotation Z</code>" or <code>"rotationZ</code>"<br/>- <code>"Opacity</code>" or <code>"opacity</code>"<br/>- <code>"Marker</code>" or <code>"marker</code>"</td>
+<td><ul><li><code>"Anchor Point</code>" or <code>"anchorPoint</code>"</li><li><code>"Position</code>" or <code>"position</code>"</li><li><code>"Scale</code>" or <code>"scale</code>"</li><li><code>"Rotation</code>" or <code>"rotation</code>"</li><li><code>"Z Rotation</code>" or <code>"zRotation</code>" or <code>"Rotation Z</code>" or <code>"rotationZ</code>"</li><li><code>"Opacity</code>" or <code>"opacity</code>"</li><li><code>"Marker</code>" or <code>"marker</code>"</li></ul></td>
 </tr>
 <tr>
 <td>From an AVLayer with a non-still source</td>
-<td>- <code>"Time Remap</code>" or <code>"timeRemapEnabled</code>"</td>
+<td><ul><li><code>"Time Remap</code>" or <code>"timeRemapEnabled</code>"</li></ul></td>
 </tr>
 <tr>
 <td>From an AVLayer with an audio component</td>
-<td>- <code>"Audio Levels</code>" or <code>"audioLevels</code>"</td>
+<td><ul><li><code>"Audio Levels</code>" or <code>"audioLevels</code>"</li></ul></td>
 </tr>
 <tr>
 <td>From a camera layer</td>
-<td>- <code>"Zoom</code>" or <code>"zoom</code>"<br/>- <code>"Depth of Field</code>" or <code>"depthOfField</code>"<br/>- <code>"Focus Distance</code>" or <code>"focusDistance</code>"<br/>- <code>"Aperture</code>" or <code>"aperture</code>"<br/>- <code>"Blur Level</code>" or <code>"blurLevel</code>"</td>
+<td><ul><li><code>"Zoom</code>" or <code>"zoom</code>"</li><li><code>"Depth of Field</code>" or <code>"depthOfField</code>"</li><li><code>"Focus Distance</code>" or <code>"focusDistance</code>"</li><li><code>"Aperture</code>" or <code>"aperture</code>"</li><li><code>"Blur Level</code>" or <code>"blurLevel</code>"</li></ul></td>
 </tr>
 <tr>
 <td>From a light layer</td>
-<td>- <code>"Intensity</code>" or <code>"intensity</code>"<br/>- <code>"Color</code>" or <code>"color</code>"<br/>- <code>"Cone Angle</code>" or <code>"coneAngle</code>"<br/>- <code>"Cone Feather</code>" or <code>"coneFeather</code>"<br/>- <code>"Shadow Darkness</code>" or <code>"shadowDarkness</code>"<br/>- <code>"Shadow Diffusion</code>" or <code>"shadowDiffusion</code>"<br/>- <code>"Casts Shadows</code>" or <code>"castsShadows</code>"</td>
+<td><ul><li><code>"Intensity</code>" or <code>"intensity</code>"</li><li><code>"Color</code>" or <code>"color</code>"</li><li><code>"Cone Angle</code>" or <code>"coneAngle</code>"</li><li><code>"Cone Feather</code>" or <code>"coneFeather</code>"</li><li><code>"Shadow Darkness</code>" or <code>"shadowDarkness</code>"</li><li><code>"Shadow Diffusion</code>" or <code>"shadowDiffusion</code>"</li><li><code>"Casts Shadows</code>" or <code>"castsShadows</code>"</li></ul></td>
 </tr>
 <tr>
 <td>From a 3D layer</td>
-<td>- <code>"Accepts Shadows</code>" or <code>"acceptsShadows</code>"<br/>- <code>"Accepts Lights</code>" or <code>"acceptsLights</code>"<br/>- <code>"Ambient</code>" or <code>"ambient</code>"<br/>- <code>"Diffuse</code>" or <code>"diffuse</code>"<br/>- <code>"Specular</code>" or <code>"specular</code>" (these are for the Specular Intensity property)<br/>- <code>"Shininess</code>" or <code>"shininess</code>" (these are for the Specular Shininess property)<br/>- <code>"Casts Shadows</code>" or <code>"castsShadows</code>"<br/>- <code>"Light Transmission</code>" or <code>"lightTransmission</code>"<br/>- <code>"Metal</code>" or <code>"metal</code>"</td>
+<td><ul><li><code>"Accepts Shadows</code>" or <code>"acceptsShadows</code>"</li><li><code>"Accepts Lights</code>" or <code>"acceptsLights</code>"</li><li><code>"Ambient</code>" or <code>"ambient</code>"</li><li><code>"Diffuse</code>" or <code>"diffuse</code>"</li><li><code>"Specular</code>" or <code>"specular</code>" (these are for the Specular Intensity property)</li><li><code>"Shininess</code>" or <code>"shininess</code>" (these are for the Specular Shininess property)</li><li><code>"Casts Shadows</code>" or <code>"castsShadows</code>"</li><li><code>"Light Transmission</code>" or <code>"lightTransmission</code>"</li><li><code>"Metal</code>" or <code>"metal</code>"</td>
 </tr>
 <tr>
 <td>From a camera, light or 3D layer</td>
-<td>- <code>"X Rotation</code>" or <code>"xRotation</code>" or <code>"Rotation X</code>" or <code>"rotationX</code>"<br/>- <code>"Y Rotation</code>" or <code>"yRotation</code>" or <code>"Rotation Y</code>" or <code>"rotationY</code>"<br/>- <code>"Orientation</code>" or <code>"orientation</code>"</td>
+<td><ul><li><code>"X Rotation</code>" or <code>"xRotation</code>" or <code>"Rotation X</code>" or <code>"rotationX</code>"</li><li><code>"Y Rotation</code>" or <code>"yRotation</code>" or <code>"Rotation Y</code>" or <code>"rotationY</code>"</li><li><code>"Orientation</code>" or <code>"orientation</code>"</li></ul></td>
 </tr>
 <tr>
 <td>From a text layer</td>
-<td>- <code>"Source Text</code>" or <code>"source Text</code>" or <code>"Text</code>" or <code>"text</code>"</td>
+<td><ul><li><code>"Source Text</code>" or <code>"source Text</code>" or <code>"Text</code>" or <code>"text</code>"</li></ul></td>
 </tr>
 <tr>
 <td>From PropertyGroup <code>"ADBE Mask Parade</code>"</td>
-<td>- <code>"ADBE Mask Atom</code>"</td>
+<td><ul><li><code>"ADBE Mask Atom</code>"</li></ul></td>
 </tr>
 <tr>
 <td>From PropertyGroup <code>"ADBE Mask Atom</code>"</td>
-<td>- <code>"ADBE Mask Shape</code>", or <code>"maskShape</code>", or <code>"maskPath</code>"<br/>- <code>"ADBE Mask Feather</code>", or <code>"maskFeather</code>"<br/>- <code>"ADBE Mask Opacity</code>", or <code>"maskOpacity</code>"<br/>- <code>"ADBE Mask Offset</code>", or <code>"maskOffset"</code></td>
+<td><ul><li><code>"ADBE Mask Shape</code>", or <code>"maskShape</code>", or <code>"maskPath</code>"</li><li><code>"ADBE Mask Feather</code>", or <code>"maskFeather</code>"</li><li><code>"ADBE Mask Opacity</code>", or <code>"maskOpacity</code>"</li><li><code>"ADBE Mask Offset</code>", or <code>"maskOffset"</code></li></ul></td>
 </tr>
 </tbody>
 </table>
@@ -2587,7 +2587,7 @@ The only exception is a text animator property, which can be added to a named gr
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 25, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 27, 2025</span>
   </span>
 
     

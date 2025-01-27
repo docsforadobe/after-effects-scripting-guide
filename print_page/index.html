@@ -5069,7 +5069,7 @@
 </tr>
 <tr>
 <td><code>SwatchValue.r</code><br/><code>SwatchValue.g</code><br/><code>SwatchValue.b</code></td>
-<td>When <code>type = "RGB"</code>, the color values in the range <code>[0.0..1.0]</code>.<br/><code>[0, 0, 0]</code> is Black.</td>
+<td>When <code>type = "RGB"</code>, the color values in the range <code>[0.0..1.0]</code>.<br/><br/><code>[0, 0, 0]</code> is Black.</td>
 </tr>
 <tr>
 <td><code>SwatchValue.c</code><br/><code>SwatchValue.m</code><br/><code>SwatchValue.y</code><br/><code>SwatchValue.k</code></td>
@@ -5077,7 +5077,7 @@
 </tr>
 <tr>
 <td><code>SwatchValue.L</code><br/><code>SwatchValue.a</code><br/><code>SwatchValue.b</code><br/><code>SwatchValue.value</code></td>
-<td>When <code>type = "LAB"</code>, the color values.<br/><code>L</code> is in the range <code>[0.0..1.0]</code>.<br/><code>a</code> and <code>b</code>are in the range <code>[-128.0..+128.0]</code>.<br/><code>[0, 0, 0]</code> is Black.<br/>When <code>type = "Gray"</code>, the <code>value</code> range is <code>[0.0..1.0]</code>.<br/><code>0.0</code> is Black.</td>
+<td>When <code>type = "LAB"</code>, the color values.<br/><code>L</code> is in the range <code>[0.0..1.0]</code>.<br/><code>a</code> and <code>b</code>are in the range <code>[-128.0..+128.0]</code>.<br/><code>[0, 0, 0]</code> is Black.<br/><br/>When <code>type = "Gray"</code>, the <code>value</code> range is <code>[0.0..1.0]</code>.<br/><code>0.0</code> is Black.</td>
 </tr>
 </tbody>
 </table>
@@ -5133,7 +5133,7 @@
 <tr>
 <td><code>target</code></td>
 <td><code>PurgeTarget</code> enum</td>
-<td>The type of elements to purge from memory. One of:<br/>- <code>PurgeTarget.ALL_CACHES</code>: Purges all data that After Effects has cached to both RAM and disk cache.<br/>- <code>PurgeTarget.ALL_MEMORY_CACHES</code>: Purges all data that After Effects has cached to RAM. <em>(new in 24.3)</em><br/>- <code>PurgeTarget.UNDO_CACHES</code>: Purges all data saved in the undo cache.<br/>- <code>PurgeTarget.SNAPSHOT_CACHES</code>: Purges all data cached as composition/layer snapshots.<br/>- <code>PurgeTarget.IMAGE_CACHES</code>: Purges all saved image data.</td>
+<td>The type of elements to purge from memory. One of:<ul><li><code>PurgeTarget.ALL_CACHES</code>: Purges all data that After Effects has cached to both RAM and disk cache.</li><li><code>PurgeTarget.ALL_MEMORY_CACHES</code>: Purges all data that After Effects has cached to RAM. <em>(new in 24.3)</em></li><li><code>PurgeTarget.UNDO_CACHES</code>: Purges all data saved in the undo cache.</li><li><code>PurgeTarget.SNAPSHOT_CACHES</code>: Purges all data cached as composition/layer snapshots.</li><li><code>PurgeTarget.IMAGE_CACHES</code>: Purges all saved image data.</li></ul></td>
 </tr>
 </tbody>
 </table>
@@ -5772,7 +5772,7 @@ see <a href="#general-application-appavailablegpuacceltypes">app.availableGPUAcc
 <tr>
 <td><code>closeOptions</code></td>
 <td><code>CloseOptions</code> enum</td>
-<td>Action to be performed on close. One of:<br/>- <code>CloseOptions.DO_NOT_SAVE_CHANGES</code>: Close without saving.<br/>- <code>CloseOptions.PROMPT_TO_SAVE_CHANGES</code>: Prompt for whether to save changes before close.<br/>- <code>CloseOptions.SAVE_CHANGES</code>: Save automatically on close.</td>
+<td>Action to be performed on close. One of:<ul><li><code>CloseOptions.DO_NOT_SAVE_CHANGES</code>: Close without saving.</li><li><code>CloseOptions.PROMPT_TO_SAVE_CHANGES</code>: Prompt for whether to save changes before close.</li><li><code>CloseOptions.SAVE_CHANGES</code>: Save automatically on close.</li></ul></td>
 </tr>
 </tbody>
 </table>
@@ -6410,7 +6410,7 @@ Archived Team Projects are not included.</p>
 <tr>
 <td><code>ResolveType</code></td>
 <td><code>ResolveType</code> enum</td>
-<td>The type of conflict resolution to use. One of:<br/>- <code>ResolveType.ACCEPT_THEIRS</code>: Take the shared version. The shared version replaces your version.<br/>- <code>ResolveType.ACCEPT_YOURS</code>: Keep your version of the project. The shared version is not taken.<br/>- <code>ResolveType.ACCEPT_THEIRS_AND_COPY</code>: Copy and rename your version, then take the shared version. The shared version replaces your original version.</td>
+<td>The type of conflict resolution to use. One of:<ul><li><code>ResolveType.ACCEPT_THEIRS</code>: Take the shared version. The shared version replaces your version.</li><li><code>ResolveType.ACCEPT_YOURS</code>: Keep your version of the project. The shared version is not taken.</li><li><code>ResolveType.ACCEPT_THEIRS_AND_COPY</code>: Copy and rename your version, then take the shared version. The shared version replaces your original version.</li></ul></td>
 </tr>
 </tbody>
 </table>
@@ -8312,7 +8312,7 @@ The ID is not displayed anywhere in the user interface..</p>
 <tr>
 <td><code>applyOptions</code></td>
 <td><code>SceneEditDetectionMode</code> enum</td>
-<td>How the detected edits will be applied. One of:<br/>- <code>SceneEditDetectionMode.MARKERS</code>: Create markers at edit points.<br/>- <code>SceneEditDetectionMode.SPLIT</code>: Split layer.<br/>- <code>SceneEditDetectionMode.SPLIT_PRECOMP</code>: Split layer at edit points and pre-compose each one.<br/>- <code>SceneEditDetectionMode.NONE</code>: Detected edits are not applied to the layer.</td>
+<td>How the detected edits will be applied. One of:<ul><li><code>SceneEditDetectionMode.MARKERS</code>: Create markers at edit points.</li><li><code>SceneEditDetectionMode.SPLIT</code>: Split layer.</li><li><code>SceneEditDetectionMode.SPLIT_PRECOMP</code>: Split layer at edit points and pre-compose each one.</li><li><code>SceneEditDetectionMode.NONE</code>: Detected edits are not applied to the layer.</li></ul></td>
 </tr>
 </tbody>
 </table>
@@ -10730,12 +10730,12 @@ must also be true.</p>
 <tr>
 <td><code>inType</code></td>
 <td><code>KeyframeInterpolationType</code> enum.</td>
-<td>The incoming interpolation type. One of:<br/>- <code>KeyframeInterpolationType.LINEAR</code><br/>- <code>KeyframeInterpolationType.BEZIER</code><br/>- <code>KeyframeInterpolationType.HOLD</code></td>
+<td>The incoming interpolation type. One of:<ul><li><code>KeyframeInterpolationType.LINEAR</code></li><li><code>KeyframeInterpolationType.BEZIER</code></li><li><code>KeyframeInterpolationType.HOLD</code></li></ul></td>
 </tr>
 <tr>
 <td><code>outType</code></td>
 <td><code>KeyframeInterpolationType</code> enum.</td>
-<td>Optional. The outgoing interpolation type. If not supplied, the 'out' type is set to the <code>inType</code> value. One of:<br/>- <code>KeyframeInterpolationType.LINEAR</code><br/>- <code>KeyframeInterpolationType.BEZIER</code><br/>- <code>KeyframeInterpolationType.HOLD</code></td>
+<td>Optional. The outgoing interpolation type. If not supplied, the 'out' type is set to the <code>inType</code> value. One of:<ul><li><code>KeyframeInterpolationType.LINEAR</code></li><li><code>KeyframeInterpolationType.BEZIER</code></li><li><code>KeyframeInterpolationType.HOLD</code></li></ul></td>
 </tr>
 </tbody>
 </table>
@@ -10801,13 +10801,14 @@ must also be true.</p>
 <tr>
 <td><code>items</code></td>
 <td>Array of strings</td>
-<td>Values which will replace the existing menu entries in a Dropdown Menu Control.<br/><br/>- Only strings are allowed.<br/>- Empty item strings are not allowed.<br/>- Duplicate item strings are not allowed.<br/>- The character <code>"\"</code> is not allowed in the item strings.<br/>- The string <code>"(-"</code> can be specified as of the item strings, to create a separator line in the dropdown menu. The separator lines will claim an index for each of themselves.</td>
+<td>Values which will replace the existing menu entries in a Dropdown Menu Control.<ul><li>Only strings are allowed.</li><li>Empty item strings are not allowed.</li><li>Duplicate item strings are not allowed.</li><li>The character <code>"\"</code> is not allowed in the item strings.</li><li>The string <code>"(-"</code> can be specified as of the item strings, to create a separator line in the dropdown menu. The separator lines will claim an index for each of themselves.</li></ul></td>
 </tr>
 </tbody>
 </table>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Item strings should be in ASCII or MultiByte encodable in the current code-page. In other words, the item strings should be provided in the script of the running system. For example: Specifying the item strings in Japanese while running the script on an English system will create a dropdown effect with illegible characters in the item strings.</p>
+<p>Item strings should be in ASCII or MultiByte encodable in the current code-page. In other words, the item strings should be provided in the script of the running system.</p>
+<p>For example: Specifying the item strings in Japanese while running the script on an English system will create a dropdown effect with illegible characters in the item strings.</p>
 </div>
 <h4 id="property-property-example_1">Example<a class="headerlink" href="#property-property-example_1" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">dropdownItems</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
@@ -10962,12 +10963,12 @@ must also be true.</p>
 <tr>
 <td><code>inTangent</code></td>
 <td>An array of 2 or 3 floating-point values.</td>
-<td>The incoming tangent vector.<br/><br/>- If the property value type is <code>PropertyValueType.TwoD_SPATIAL</code>, the array contains 2 values.<br/>- If the property value type is <code>PropertyValueType.ThreeD_SPATIAL</code>, the array contains 3 values.</td>
+<td>The incoming tangent vector.<ul><li>If the property value type is <code>PropertyValueType.TwoD_SPATIAL</code>, the array contains 2 values.</li><li>If the property value type is <code>PropertyValueType.ThreeD_SPATIAL</code>, the array contains 3 values.</li></ul></td>
 </tr>
 <tr>
 <td><code>outTangent</code></td>
 <td>An array of 2 or 3 floating-point values.</td>
-<td>Optional. The outgoing tangent vector. If not supplied, the <code>out</code> tangent is set to the <code>inTangent</code> value.<br/><br/>- If the property value type is <code>PropertyValueType.TwoD_SPATIAL</code>, the array contains 2 values.<br/>- If the property value type is <code>PropertyValueType.ThreeD_SPATIAL</code>, the array contains 3 values.</td>
+<td>Optional. The outgoing tangent vector. If not supplied, the <code>out</code> tangent is set to the <code>inTangent</code> value.<ul><li>If the property value type is <code>PropertyValueType.TwoD_SPATIAL</code>, the array contains 2 values.</li><li>If the property value type is <code>PropertyValueType.ThreeD_SPATIAL</code>, the array contains 3 values.</li></ul></td>
 </tr>
 </tbody>
 </table>
@@ -11054,12 +11055,12 @@ must also be true.</p>
 <tr>
 <td><code>inTemporalEase</code></td>
 <td>An array of 1, 2, or 3 <a href="#other-keyframeease">KeyframeEase objects</a></td>
-<td>The incoming temporal ease. <br/><br/>- If the property value type is <code>PropertyValueType.TwoD</code>, the array contains 2 objects.<br/>- If the property value type is <code>PropertyValueType.ThreeD</code>, the array contains 3 objects.<br/>- For all other value types, the array contains 1 object.</td>
+<td>The incoming temporal ease. <ul><li>If the property value type is <code>PropertyValueType.TwoD</code>, the array contains 2 objects.</li><li>If the property value type is <code>PropertyValueType.ThreeD</code>, the array contains 3 objects.</li><li>For all other value types, the array contains 1 object.</li></ul></td>
 </tr>
 <tr>
 <td><code>outTemporalEase</code></td>
 <td>An array of 1, 2, or 3 <a href="#other-keyframeease">KeyframeEase objects</a></td>
-<td>Optional. The outgoing temporal ease. If not supplied, the outgoing ease is set to the <code>inTemporalEase</code> value.<br/><br/>- If the property value type is <code>PropertyValueType.TwoD</code>, the array contains 2 objects.<br/>- If the property value type is <code>PropertyValueType.ThreeD</code>, the array contains 3 objects.<br/>- For all other value types, the array contains 1 object.</td>
+<td>Optional. The outgoing temporal ease. If not supplied, the outgoing ease is set to the <code>inTemporalEase</code> value.<ul><li>If the property value type is <code>PropertyValueType.TwoD</code>, the array contains 2 objects.</li><li>If the property value type is <code>PropertyValueType.ThreeD</code>, the array contains 3 objects.</li><li>For all other value types, the array contains 1 object.</li></ul></td>
 </tr>
 </tbody>
 </table>
@@ -11203,7 +11204,7 @@ must also be true.</p>
 <tr>
 <td><code>preExpression</code></td>
 <td>Boolean</td>
-<td>If the property has an expression and this is <code>true</code>, return the value for the specified time without applying the expression to it. When <code>false</code>, return the result of evaluating the expression for the specified time. Ignored if the property does not have an associated expression.</td>
+<td>If the property has an expression and this is <code>true</code>, return the value for the specified time without applying the expression to it.<br/>When <code>false</code>, return the result of evaluating the expression for the specified time. Ignored if the property does not have an associated expression.</td>
 </tr>
 </tbody>
 </table>
@@ -11504,7 +11505,7 @@ The only exception is a text animator property, which can be added to a named gr
 <tr>
 <td><code>name</code></td>
 <td>String</td>
-<td>The display name or match name of the property to add. (See <a href="#property-propertybase-propertybasematchname">PropertyBase.matchName</a>). The following names are supported:<br/>- Any match name for a property that can be added through the user interface. For example, <code>"ADBE Mask Atom</code>", <code>"ADBE Paint Atom</code>", <code>"ADBE Text Position</code>", <code>"ADBE Text Anchor Point</code>".<br/>- When adding to an ADBE Mask Parade: <code>"ADBE Mask Atom</code>", <code>"Mask</code>".<br/>- When adding to an ADBE Effect Parade, any effect by match name, such as <code>"ADBE Bulge</code>", <code>"ADBE Glo2</code>", <code>"APC Vegas</code>".<br/>- Any effect by display name, such as <code>"Bulge</code>", <code>"Glow</code>", <code>"Vegas</code>".<br/>- For text animators, <code>"ADBE Text Animator</code>".<br/>- For selectors, Range Selector has the name <code>"ADBE Text Selector</code>", Wiggly Selector has the name <code>"ADBE Text Wiggly Selector</code>", and Expression Selector has the name <code>"ADBE Text Expressible Selector</code>".</td>
+<td>The display name or match name of the property to add. (See <a href="#property-propertybase-propertybasematchname">PropertyBase.matchName</a>). The following names are supported:<ul><li>Any match name for a property that can be added through the user interface. For example, <code>"ADBE Mask Atom</code>", <code>"ADBE Paint Atom</code>", <code>"ADBE Text Position</code>", <code>"ADBE Text Anchor Point</code>".</li><li>When adding to an ADBE Mask Parade: <code>"ADBE Mask Atom</code>", <code>"Mask</code>".</li><li>When adding to an ADBE Effect Parade, any effect by match name, such as <code>"ADBE Bulge</code>", <code>"ADBE Glo2</code>", <code>"APC Vegas</code>".</li><li>Any effect by display name, such as <code>"Bulge</code>", <code>"Glow</code>", <code>"Vegas</code>".</li><li>For text animators, <code>"ADBE Text Animator</code>".</li><li>For selectors, Range Selector has the name <code>"ADBE Text Selector</code>", Wiggly Selector has the name <code>"ADBE Text Wiggly Selector</code>", and Expression Selector has the name <code>"ADBE Text Expressible Selector</code>".</li></ul></td>
 </tr>
 </tbody>
 </table>
@@ -11573,7 +11574,7 @@ The only exception is a text animator property, which can be added to a named gr
 <tr>
 <td><code>name</code></td>
 <td>String</td>
-<td>The name of the child property. This can be:<br/>- Any match name<br/>- Any name in expression "parenthesis style" syntax, meaning the display name or the compact English name<br/>- Any name in expression "intercap style" syntax.<br/><br/>For supported property names, see the table below.</td>
+<td>The name of the child property. This can be:<ul><li>Any match name</li><li>Any name in expression "parenthesis style" syntax, meaning the display name or the compact English name</li><li>Any name in expression "intercap style" syntax.</li></ul>For supported property names, see the table below.</td>
 </tr>
 </tbody>
 </table>
@@ -11590,47 +11591,47 @@ The only exception is a text animator property, which can be added to a named gr
 <tbody>
 <tr>
 <td>From any Layer</td>
-<td>- <code>"ADBE Mask Parade</code>", or <code>"Masks</code>"<br/>- <code>"ADBE Effect Parade</code>", or <code>"Effects</code>"<br/>- <code>"ADBE MTrackers</code>", or <code>"Motion Trackers</code>"</td>
+<td><ul><li><code>"ADBE Mask Parade</code>", or <code>"Masks</code>"</li><li><code>"ADBE Effect Parade</code>", or <code>"Effects</code>"</li><li><code>"ADBE MTrackers</code>", or <code>"Motion Trackers</code>"</li></ul></td>
 </tr>
 <tr>
 <td>From an AVLayer</td>
-<td>- <code>"Anchor Point</code>" or <code>"anchorPoint</code>"<br/>- <code>"Position</code>" or <code>"position</code>"<br/>- <code>"Scale</code>" or <code>"scale</code>"<br/>- <code>"Rotation</code>" or <code>"rotation</code>"<br/>- <code>"Z Rotation</code>" or <code>"zRotation</code>" or <code>"Rotation Z</code>" or <code>"rotationZ</code>"<br/>- <code>"Opacity</code>" or <code>"opacity</code>"<br/>- <code>"Marker</code>" or <code>"marker</code>"</td>
+<td><ul><li><code>"Anchor Point</code>" or <code>"anchorPoint</code>"</li><li><code>"Position</code>" or <code>"position</code>"</li><li><code>"Scale</code>" or <code>"scale</code>"</li><li><code>"Rotation</code>" or <code>"rotation</code>"</li><li><code>"Z Rotation</code>" or <code>"zRotation</code>" or <code>"Rotation Z</code>" or <code>"rotationZ</code>"</li><li><code>"Opacity</code>" or <code>"opacity</code>"</li><li><code>"Marker</code>" or <code>"marker</code>"</li></ul></td>
 </tr>
 <tr>
 <td>From an AVLayer with a non-still source</td>
-<td>- <code>"Time Remap</code>" or <code>"timeRemapEnabled</code>"</td>
+<td><ul><li><code>"Time Remap</code>" or <code>"timeRemapEnabled</code>"</li></ul></td>
 </tr>
 <tr>
 <td>From an AVLayer with an audio component</td>
-<td>- <code>"Audio Levels</code>" or <code>"audioLevels</code>"</td>
+<td><ul><li><code>"Audio Levels</code>" or <code>"audioLevels</code>"</li></ul></td>
 </tr>
 <tr>
 <td>From a camera layer</td>
-<td>- <code>"Zoom</code>" or <code>"zoom</code>"<br/>- <code>"Depth of Field</code>" or <code>"depthOfField</code>"<br/>- <code>"Focus Distance</code>" or <code>"focusDistance</code>"<br/>- <code>"Aperture</code>" or <code>"aperture</code>"<br/>- <code>"Blur Level</code>" or <code>"blurLevel</code>"</td>
+<td><ul><li><code>"Zoom</code>" or <code>"zoom</code>"</li><li><code>"Depth of Field</code>" or <code>"depthOfField</code>"</li><li><code>"Focus Distance</code>" or <code>"focusDistance</code>"</li><li><code>"Aperture</code>" or <code>"aperture</code>"</li><li><code>"Blur Level</code>" or <code>"blurLevel</code>"</li></ul></td>
 </tr>
 <tr>
 <td>From a light layer</td>
-<td>- <code>"Intensity</code>" or <code>"intensity</code>"<br/>- <code>"Color</code>" or <code>"color</code>"<br/>- <code>"Cone Angle</code>" or <code>"coneAngle</code>"<br/>- <code>"Cone Feather</code>" or <code>"coneFeather</code>"<br/>- <code>"Shadow Darkness</code>" or <code>"shadowDarkness</code>"<br/>- <code>"Shadow Diffusion</code>" or <code>"shadowDiffusion</code>"<br/>- <code>"Casts Shadows</code>" or <code>"castsShadows</code>"</td>
+<td><ul><li><code>"Intensity</code>" or <code>"intensity</code>"</li><li><code>"Color</code>" or <code>"color</code>"</li><li><code>"Cone Angle</code>" or <code>"coneAngle</code>"</li><li><code>"Cone Feather</code>" or <code>"coneFeather</code>"</li><li><code>"Shadow Darkness</code>" or <code>"shadowDarkness</code>"</li><li><code>"Shadow Diffusion</code>" or <code>"shadowDiffusion</code>"</li><li><code>"Casts Shadows</code>" or <code>"castsShadows</code>"</li></ul></td>
 </tr>
 <tr>
 <td>From a 3D layer</td>
-<td>- <code>"Accepts Shadows</code>" or <code>"acceptsShadows</code>"<br/>- <code>"Accepts Lights</code>" or <code>"acceptsLights</code>"<br/>- <code>"Ambient</code>" or <code>"ambient</code>"<br/>- <code>"Diffuse</code>" or <code>"diffuse</code>"<br/>- <code>"Specular</code>" or <code>"specular</code>" (these are for the Specular Intensity property)<br/>- <code>"Shininess</code>" or <code>"shininess</code>" (these are for the Specular Shininess property)<br/>- <code>"Casts Shadows</code>" or <code>"castsShadows</code>"<br/>- <code>"Light Transmission</code>" or <code>"lightTransmission</code>"<br/>- <code>"Metal</code>" or <code>"metal</code>"</td>
+<td><ul><li><code>"Accepts Shadows</code>" or <code>"acceptsShadows</code>"</li><li><code>"Accepts Lights</code>" or <code>"acceptsLights</code>"</li><li><code>"Ambient</code>" or <code>"ambient</code>"</li><li><code>"Diffuse</code>" or <code>"diffuse</code>"</li><li><code>"Specular</code>" or <code>"specular</code>" (these are for the Specular Intensity property)</li><li><code>"Shininess</code>" or <code>"shininess</code>" (these are for the Specular Shininess property)</li><li><code>"Casts Shadows</code>" or <code>"castsShadows</code>"</li><li><code>"Light Transmission</code>" or <code>"lightTransmission</code>"</li><li><code>"Metal</code>" or <code>"metal</code>"</td>
 </tr>
 <tr>
 <td>From a camera, light or 3D layer</td>
-<td>- <code>"X Rotation</code>" or <code>"xRotation</code>" or <code>"Rotation X</code>" or <code>"rotationX</code>"<br/>- <code>"Y Rotation</code>" or <code>"yRotation</code>" or <code>"Rotation Y</code>" or <code>"rotationY</code>"<br/>- <code>"Orientation</code>" or <code>"orientation</code>"</td>
+<td><ul><li><code>"X Rotation</code>" or <code>"xRotation</code>" or <code>"Rotation X</code>" or <code>"rotationX</code>"</li><li><code>"Y Rotation</code>" or <code>"yRotation</code>" or <code>"Rotation Y</code>" or <code>"rotationY</code>"</li><li><code>"Orientation</code>" or <code>"orientation</code>"</li></ul></td>
 </tr>
 <tr>
 <td>From a text layer</td>
-<td>- <code>"Source Text</code>" or <code>"source Text</code>" or <code>"Text</code>" or <code>"text</code>"</td>
+<td><ul><li><code>"Source Text</code>" or <code>"source Text</code>" or <code>"Text</code>" or <code>"text</code>"</li></ul></td>
 </tr>
 <tr>
 <td>From PropertyGroup <code>"ADBE Mask Parade</code>"</td>
-<td>- <code>"ADBE Mask Atom</code>"</td>
+<td><ul><li><code>"ADBE Mask Atom</code>"</li></ul></td>
 </tr>
 <tr>
 <td>From PropertyGroup <code>"ADBE Mask Atom</code>"</td>
-<td>- <code>"ADBE Mask Shape</code>", or <code>"maskShape</code>", or <code>"maskPath</code>"<br/>- <code>"ADBE Mask Feather</code>", or <code>"maskFeather</code>"<br/>- <code>"ADBE Mask Opacity</code>", or <code>"maskOpacity</code>"<br/>- <code>"ADBE Mask Offset</code>", or <code>"maskOffset"</code></td>
+<td><ul><li><code>"ADBE Mask Shape</code>", or <code>"maskShape</code>", or <code>"maskPath</code>"</li><li><code>"ADBE Mask Feather</code>", or <code>"maskFeather</code>"</li><li><code>"ADBE Mask Opacity</code>", or <code>"maskOpacity</code>"</li><li><code>"ADBE Mask Offset</code>", or <code>"maskOffset"</code></li></ul></td>
 </tr>
 </tbody>
 </table>
@@ -12778,7 +12779,7 @@ This is exposed in the UI as a checkbox in the lower right corner of the Render 
 <tr>
 <td><code>method</code></td>
 <td><code>PulldownMethod</code> enum.</td>
-<td>The method to use for estimation. One of:<br/>- <code>PulldownMethod.PULLDOWN_3_2</code><br/>- <code>PulldownMethod.ADVANCE_24P</code></td>
+<td>The method to use for estimation. One of:<ul><li><code>PulldownMethod.PULLDOWN_3_2</code></li><li><code>PulldownMethod.ADVANCE_24P</code></li></ul></td>
 </tr>
 </tbody>
 </table>
@@ -15049,7 +15050,7 @@ The Font instance returned in the case of duplicate PostScript names will be the
 <tr>
 <td><code>signedCharacterEnd</code></td>
 <td>Signed integer.</td>
-<td>Optional. If not specified, will be computed at <code>(characterStart + 1)</code>.<br/>If set to <code>-1</code>, then the <a href="#text-characterrange">CharacterRange object</a> will dynamically calculate this on access to be equal to the (text) length of the <a href="#text-textdocument-textdocument-object">TextDocument object</a>.<br/><code>signedCharacterEnd</code> must be greater than or equal to <code>characterStart</code>, and less than or equal to the (text) length of the <a href="#text-textdocument-textdocument-object">TextDocument object</a>.</td>
+<td>Optional. If not specified, will be computed at <code>(characterStart + 1)</code>.<br/><br/>If set to <code>-1</code>, then the <a href="#text-characterrange">CharacterRange object</a> will dynamically calculate this on access to be equal to the (text) length of the <a href="#text-textdocument-textdocument-object">TextDocument object</a>.<br/><br/><code>signedCharacterEnd</code> must be greater than or equal to <code>characterStart</code>, and less than or equal to the (text) length of the <a href="#text-textdocument-textdocument-object">TextDocument object</a>.</td>
 </tr>
 </tbody>
 </table>
@@ -15118,7 +15119,7 @@ Remember that the composed lines are static and subsequent changes to the <a hre
 <tr>
 <td><code>signedComposedLineIndexEnd</code></td>
 <td>Signed integer.</td>
-<td>Optional. If not specified, will be computed at <code>(composedLineIndexStart + 1)</code>.<br/>If set to -1, then the <a href="#text-composedlinerange">ComposedLineRange object</a> will dynamically calculate this on access to the last composed line of the <a href="#text-textdocument-textdocument-object">TextDocument object</a>.<br/><code>signedComposedLineIndexEnd</code> must be greater than <code>composedLineIndexStart</code>, and less than or equal to the number of composed lines in the <a href="#text-textdocument-textdocument-object">TextDocument object</a>.</td>
+<td>Optional. If not specified, will be computed at <code>(composedLineIndexStart + 1)</code>.<br/><br/>If set to -1, then the <a href="#text-composedlinerange">ComposedLineRange object</a> will dynamically calculate this on access to the last composed line of the <a href="#text-textdocument-textdocument-object">TextDocument object</a>.<br/><br/><code>signedComposedLineIndexEnd</code> must be greater than <code>composedLineIndexStart</code>, and less than or equal to the number of composed lines in the <a href="#text-textdocument-textdocument-object">TextDocument object</a>.</td>
 </tr>
 </tbody>
 </table>
@@ -15185,7 +15186,7 @@ Key <code>end</code> will be set to text index of the end of the paragraph (grea
 <tr>
 <td><code>signedParagraphIndexEnd</code></td>
 <td>Signed integer</td>
-<td>Optional. If not specified, will be computed at <code>(paragraphIndexStart + 1)</code>.<br/>If set to -1, then the <a href="#text-paragraphrange">ParagraphRange object</a> will dynamically calculate this on access to the last paragraph of the <a href="#text-textdocument-textdocument-object">TextDocument object</a>.<br/><code>signedParagraphIndexEnd</code> must be greater than <code>paragraphIndexStart</code>, and less than or equal to the number of paragraphs in the <a href="#text-textdocument-textdocument-object">TextDocument object</a>.</td>
+<td>Optional. If not specified, will be computed at <code>(paragraphIndexStart + 1)</code>.<br/><br/>If set to -1, then the <a href="#text-paragraphrange">ParagraphRange object</a> will dynamically calculate this on access to the last paragraph of the <a href="#text-textdocument-textdocument-object">TextDocument object</a>.<br/><br/><code>signedParagraphIndexEnd</code> must be greater than <code>paragraphIndexStart</code>, and less than or equal to the number of paragraphs in the <a href="#text-textdocument-textdocument-object">TextDocument object</a>.</td>
 </tr>
 </tbody>
 </table>
@@ -15376,7 +15377,7 @@ Key <code>end</code> will be set to text index of the end of the paragraph (grea
 <tr>
 <td><code>type</code></td>
 <td><code>ImportAsType</code> enum.</td>
-<td>The type of file that can be imported. One of:<br/>- <code>ImportAsType.COMP</code><br/>- <code>ImportAsType.FOOTAGE</code><br/>- <code>ImportAsType.COMP_CROPPED_LAYERS</code><br/>- <code>ImportAsType.PROJECT</code></td>
+<td>The type of file that can be imported. One of:<ul><li><code>ImportAsType.COMP</code></li><li><code>ImportAsType.FOOTAGE</code></li><li><code>ImportAsType.COMP_CROPPED_LAYERS</code></li><li><code>ImportAsType.PROJECT</code></li></ul></td>
 </tr>
 </tbody>
 </table>
