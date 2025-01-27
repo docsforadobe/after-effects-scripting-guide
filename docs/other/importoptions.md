@@ -156,9 +156,9 @@ Reports whether the file can be imported as the source of a particular object ty
 
 #### Parameters
 
-| Parameter |         Type         |                                                                                 Description                                                                                 |
-| --------- | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `type`    | `ImportAsType` enum. | The type of file that can be imported. One of:<br/>- `ImportAsType.COMP`<br/>- `ImportAsType.FOOTAGE`<br/>- `ImportAsType.COMP_CROPPED_LAYERS`<br/>- `ImportAsType.PROJECT` |
+| Parameter |         Type         |                                                                                         Description                                                                                          |
+| --------- | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `type`    | `ImportAsType` enum. | The type of file that can be imported. One of:<ul><li>`ImportAsType.COMP`</li><li>`ImportAsType.FOOTAGE`</li><li>`ImportAsType.COMP_CROPPED_LAYERS`</li><li>`ImportAsType.PROJECT`</li></ul> |
 
 #### Returns
 

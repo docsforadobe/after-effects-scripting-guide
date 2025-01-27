@@ -657,9 +657,9 @@ Closes the project with the option of saving changes automatically, prompting th
 
 #### Parameters
 
-|   Parameter    |        Type         |                                                                                                                              Description                                                                                                                               |
-| -------------- | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `closeOptions` | `CloseOptions` enum | Action to be performed on close. One of:<br/>- `CloseOptions.DO_NOT_SAVE_CHANGES`: Close without saving.<br/>- `CloseOptions.PROMPT_TO_SAVE_CHANGES`: Prompt for whether to save changes before close.<br/>- `CloseOptions.SAVE_CHANGES`: Save automatically on close. |
+|   Parameter    |        Type         |                                                                                                                                      Description                                                                                                                                      |
+| -------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `closeOptions` | `CloseOptions` enum | Action to be performed on close. One of:<ul><li>`CloseOptions.DO_NOT_SAVE_CHANGES`: Close without saving.</li><li>`CloseOptions.PROMPT_TO_SAVE_CHANGES`: Prompt for whether to save changes before close.</li><li>`CloseOptions.SAVE_CHANGES`: Save automatically on close.</li></ul> |
 
 
 #### Returns
@@ -858,8 +858,8 @@ Removes all items from the project except those specified. Same as the File > Re
 
 #### Parameters
 
-|    Parameter     |                   Type                    |      Description      |
-| ---------------- | ----------------------------------------- | --------------------- |
+|    Parameter     |                   Type                   |      Description      |
+| ---------------- | ---------------------------------------- | --------------------- |
 | `array_of_items` | Array of [Item objects](../item/item.md) | The items to be kept. |
 
 #### Returns
@@ -1314,9 +1314,9 @@ Resolves a conflict between the open team project and the version on the team pr
 
 #### Parameters
 
-|   Parameter   |        Type        |                                                                                                                                                                                                      Description                                                                                                                                                                                                      |
-| ------------- | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `ResolveType` | `ResolveType` enum | The type of conflict resolution to use. One of:<br/>- `ResolveType.ACCEPT_THEIRS`: Take the shared version. The shared version replaces your version.<br/>- `ResolveType.ACCEPT_YOURS`: Keep your version of the project. The shared version is not taken.<br/>- `ResolveType.ACCEPT_THEIRS_AND_COPY`: Copy and rename your version, then take the shared version. The shared version replaces your original version. |
+|   Parameter   |        Type        |                                                                                                                                                                                                             Description                                                                                                                                                                                                              |
+| ------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `ResolveType` | `ResolveType` enum | The type of conflict resolution to use. One of:<ul><li>`ResolveType.ACCEPT_THEIRS`: Take the shared version. The shared version replaces your version.</li><li>`ResolveType.ACCEPT_YOURS`: Keep your version of the project. The shared version is not taken.</li><li>`ResolveType.ACCEPT_THEIRS_AND_COPY`: Copy and rename your version, then take the shared version. The shared version replaces your original version.</li></ul> |
 
 
 #### Returns

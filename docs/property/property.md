@@ -617,8 +617,8 @@ Use the [Property.canAddToMotionGraphicsTemplate()](#propertycanaddtomotiongraph
 
 #### Parameters
 
-| Parameter |               Type               |                      Description                      |
-| --------- | -------------------------------- | ----------------------------------------------------- |
+| Parameter |              Type               |                      Description                      |
+| --------- | ------------------------------- | ----------------------------------------------------- |
 | `comp`    | [CompItem](../item/compitem.md) | The composition that you wish to add the property to. |
 
 #### Returns
@@ -646,10 +646,10 @@ Use the [Property.canAddToMotionGraphicsTemplate()](#propertycanaddtomotiongraph
 
 #### Parameters
 
-| Parameter |               Type               |                      Description                      |
-| --------- | -------------------------------- | ----------------------------------------------------- |
+| Parameter |              Type               |                      Description                      |
+| --------- | ------------------------------- | ----------------------------------------------------- |
 | `comp`    | [CompItem](../item/compitem.md) | The composition that you wish to add the property to. |
-| `name`    | String                           | The new name.                                         |
+| `name`    | String                          | The new name.                                         |
 
 #### Returns
 
@@ -681,8 +681,8 @@ Supported property types are:
 
 #### Parameters
 
-| Parameter |               Type               |                      Description                      |
-| --------- | -------------------------------- | ----------------------------------------------------- |
+| Parameter |              Type               |                      Description                      |
+| --------- | ------------------------------- | ----------------------------------------------------- |
 | `comp`    | [CompItem](../item/compitem.md) | The composition that you wish to add the property to. |
 
 #### Returns
@@ -1132,8 +1132,8 @@ The Property object and the input parameters for the AVItem that is being called
 
 #### Parameters
 
-|  Parameter  |                Type                 |      Description       |
-| ----------- | ----------------------------------- | ---------------------- |
+|  Parameter  |                Type                |      Description       |
+| ----------- | ---------------------------------- | ---------------------- |
 | `newSource` | [AVItem object](../item/avitem.md) | The new source AVItem. |
 
 #### Returns
@@ -1152,11 +1152,11 @@ Sets the `in` and `out` interpolation types for the specified keyframe.
 
 #### Parameters
 
-| Parameter  |                 Type                 |                                                                                                                Description                                                                                                                |
-| ---------- | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `keyIndex` | Integer, in the range `[1..numKeys]` | The index for the keyframe, as returned by the [addKey](#propertyaddkey) or [nearestKeyIndex](#propertynearestkeyindex).                                                                                                                  |
-| `inType`   | `KeyframeInterpolationType` enum.    | The incoming interpolation type. One of:<br/>- `KeyframeInterpolationType.LINEAR`<br/>- `KeyframeInterpolationType.BEZIER`<br/>- `KeyframeInterpolationType.HOLD`                                                                         |
-| `outType`  | `KeyframeInterpolationType` enum.    | Optional. The outgoing interpolation type. If not supplied, the 'out' type is set to the `inType` value. One of:<br/>- `KeyframeInterpolationType.LINEAR`<br/>- `KeyframeInterpolationType.BEZIER`<br/>- `KeyframeInterpolationType.HOLD` |
+| Parameter  |                 Type                 |                                                                                                                       Description                                                                                                                        |
+| ---------- | ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `keyIndex` | Integer, in the range `[1..numKeys]` | The index for the keyframe, as returned by the [addKey](#propertyaddkey) or [nearestKeyIndex](#propertynearestkeyindex).                                                                                                                                 |
+| `inType`   | `KeyframeInterpolationType` enum.    | The incoming interpolation type. One of:<ul><li>`KeyframeInterpolationType.LINEAR`</li><li>`KeyframeInterpolationType.BEZIER`</li><li>`KeyframeInterpolationType.HOLD`</li></ul>                                                                         |
+| `outType`  | `KeyframeInterpolationType` enum.    | Optional. The outgoing interpolation type. If not supplied, the 'out' type is set to the `inType` value. One of:<ul><li>`KeyframeInterpolationType.LINEAR`</li><li>`KeyframeInterpolationType.BEZIER`</li><li>`KeyframeInterpolationType.HOLD`</li></ul> |
 
 #### Returns
 
@@ -1205,12 +1205,14 @@ Sets parameters for a Dropdown Menu Control's Menu Property. This method will ov
 
 #### Parameters
 
-| Parameter |       Type       |                                                                                                             Description                                                                                                                                                                                                                                                                                                                                      |
-| --------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `items`   | Array of strings | Values which will replace the existing menu entries in a Dropdown Menu Control.<br/><br/>- Only strings are allowed.<br/>- Empty item strings are not allowed.<br/>- Duplicate item strings are not allowed.<br/>- The character `"\"` is not allowed in the item strings.<br/>- The string `"(-"` can be specified as of the item strings, to create a separator line in the dropdown menu. The separator lines will claim an index for each of themselves. |
+| Parameter |       Type       |                                                                                                                                                                                                                                Description                                                                                                                                                                                                                                 |
+| --------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `items`   | Array of strings | Values which will replace the existing menu entries in a Dropdown Menu Control.<ul><li>Only strings are allowed.</li><li>Empty item strings are not allowed.</li><li>Duplicate item strings are not allowed.</li><li>The character `"\"` is not allowed in the item strings.</li><li>The string `"(-"` can be specified as of the item strings, to create a separator line in the dropdown menu. The separator lines will claim an index for each of themselves.</li></ul> |
 
 !!! tip
-    Item strings should be in ASCII or MultiByte encodable in the current code-page. In other words, the item strings should be provided in the script of the running system. For example: Specifying the item strings in Japanese while running the script on an English system will create a dropdown effect with illegible characters in the item strings.
+    Item strings should be in ASCII or MultiByte encodable in the current code-page. In other words, the item strings should be provided in the script of the running system.
+
+    For example: Specifying the item strings in Japanese while running the script on an English system will create a dropdown effect with illegible characters in the item strings.
 
 #### Example
 
@@ -1327,11 +1329,11 @@ Sets the incoming and outgoing tangent vectors for the specified keyframe. If th
 
 #### Parameters
 
-|  Parameter   |                   Type                    |                                                                                                                                                       Description                                                                                                                                                       |
-| ------------ | ----------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `keyIndex`   | Integer, in the range `[1..numKeys]`      | The index for the keyframe, as returned by the [addKey](#propertyaddkey) or [nearestKeyIndex](#propertynearestkeyindex).                                                                                                                                                                                                |
-| `inTangent`  | An array of 2 or 3 floating-point values. | The incoming tangent vector.<br/><br/>- If the property value type is `PropertyValueType.TwoD_SPATIAL`, the array contains 2 values.<br/>- If the property value type is `PropertyValueType.ThreeD_SPATIAL`, the array contains 3 values.                                                                               |
-| `outTangent` | An array of 2 or 3 floating-point values. | Optional. The outgoing tangent vector. If not supplied, the `out` tangent is set to the `inTangent` value.<br/><br/>- If the property value type is `PropertyValueType.TwoD_SPATIAL`, the array contains 2 values.<br/>- If the property value type is `PropertyValueType.ThreeD_SPATIAL`, the array contains 3 values. |
+|  Parameter   |                   Type                    |                                                                                                                                                           Description                                                                                                                                                           |
+| ------------ | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `keyIndex`   | Integer, in the range `[1..numKeys]`      | The index for the keyframe, as returned by the [addKey](#propertyaddkey) or [nearestKeyIndex](#propertynearestkeyindex).                                                                                                                                                                                                        |
+| `inTangent`  | An array of 2 or 3 floating-point values. | The incoming tangent vector.<ul><li>If the property value type is `PropertyValueType.TwoD_SPATIAL`, the array contains 2 values.</li><li>If the property value type is `PropertyValueType.ThreeD_SPATIAL`, the array contains 3 values.</li></ul>                                                                               |
+| `outTangent` | An array of 2 or 3 floating-point values. | Optional. The outgoing tangent vector. If not supplied, the `out` tangent is set to the `inTangent` value.<ul><li>If the property value type is `PropertyValueType.TwoD_SPATIAL`, the array contains 2 values.</li><li>If the property value type is `PropertyValueType.ThreeD_SPATIAL`, the array contains 3 values.</li></ul> |
 
 #### Returns
 
@@ -1391,11 +1393,11 @@ Sets the incoming and outgoing temporal ease for the specified keyframe. See [Ke
 
 #### Parameters
 
-|     Parameter     |                                  Type                                   |                                                                                                                                                                                 Description                                                                                                                                                                                 |
-| ----------------- | ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `keyIndex`        | Integer, in the range `[1..numKeys]`                                    | The index for the keyframe, as returned by the [addKey](#propertyaddkey) or [nearestKeyIndex](#propertynearestkeyindex).                                                                                                                                                                                                                                                    |
-| `inTemporalEase`  | An array of 1, 2, or 3 [KeyframeEase objects](../other/keyframeease.md) | The incoming temporal ease. <br/><br/>- If the property value type is `PropertyValueType.TwoD`, the array contains 2 objects.<br/>- If the property value type is `PropertyValueType.ThreeD`, the array contains 3 objects.<br/>- For all other value types, the array contains 1 object.                                                                                   |
-| `outTemporalEase` | An array of 1, 2, or 3 [KeyframeEase objects](../other/keyframeease.md) | Optional. The outgoing temporal ease. If not supplied, the outgoing ease is set to the `inTemporalEase` value.<br/><br/>- If the property value type is `PropertyValueType.TwoD`, the array contains 2 objects.<br/>- If the property value type is `PropertyValueType.ThreeD`, the array contains 3 objects.<br/>- For all other value types, the array contains 1 object. |
+|     Parameter     |                                  Type                                   |                                                                                                                                                                                      Description                                                                                                                                                                                      |
+| ----------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `keyIndex`        | Integer, in the range `[1..numKeys]`                                    | The index for the keyframe, as returned by the [addKey](#propertyaddkey) or [nearestKeyIndex](#propertynearestkeyindex).                                                                                                                                                                                                                                                              |
+| `inTemporalEase`  | An array of 1, 2, or 3 [KeyframeEase objects](../other/keyframeease.md) | The incoming temporal ease. <ul><li>If the property value type is `PropertyValueType.TwoD`, the array contains 2 objects.</li><li>If the property value type is `PropertyValueType.ThreeD`, the array contains 3 objects.</li><li>For all other value types, the array contains 1 object.</li></ul>                                                                                   |
+| `outTemporalEase` | An array of 1, 2, or 3 [KeyframeEase objects](../other/keyframeease.md) | Optional. The outgoing temporal ease. If not supplied, the outgoing ease is set to the `inTemporalEase` value.<ul><li>If the property value type is `PropertyValueType.TwoD`, the array contains 2 objects.</li><li>If the property value type is `PropertyValueType.ThreeD`, the array contains 3 objects.</li><li>For all other value types, the array contains 1 object.</li></ul> |
 
 #### Returns
 
@@ -1499,10 +1501,10 @@ The value of the named property as evaluated at the specified time. Note that th
 
 #### Parameters
 
-|    Parameter    |         Type         |                                                                                                                                        Description                                                                                                                                        |
-| --------------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `time`          | Floating-point value | The time, in seconds, at which to set the value. The beginning of the composition is 0.                                                                                                                                                                                                   |
-| `preExpression` | Boolean              | If the property has an expression and this is `true`, return the value for the specified time without applying the expression to it. When `false`, return the result of evaluating the expression for the specified time. Ignored if the property does not have an associated expression. |
+|    Parameter    |         Type         |                                                                                                                                          Description                                                                                                                                          |
+| --------------- | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `time`          | Floating-point value | The time, in seconds, at which to set the value. The beginning of the composition is 0.                                                                                                                                                                                                       |
+| `preExpression` | Boolean              | If the property has an expression and this is `true`, return the value for the specified time without applying the expression to it.<br/>When `false`, return the result of evaluating the expression for the specified time. Ignored if the property does not have an associated expression. |
 
 #### Returns
 
