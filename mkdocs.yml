@@ -88,6 +88,36 @@ copyright: All content is copyright Adobe Systems Incorporated.
 extra:
     homepage: https://docsforadobe.dev
 
+extra_css:
+    # CSS shared between the whole org
+    - https://docsforadobe.dev/_global/global.css
+    - https://docsforadobe.dev/_global/global-syntax-highlight.css
+
+    # CSS specific to this file
+    - _static/extra.css
+
+markdown_extensions:
+    - admonition
+    - markdown_grid_tables
+    - pymdownx.superfences
+    - toc:
+        title: Page Contents
+        permalink: true
+        toc_depth: 3
+
+plugins:
+    - git-revision-date-localized
+    - search:
+        separator: '[\s\-,\.:!=\[\]()"/]+'
+
+    # Note: print-site must be last!
+    - print-site:
+        add_cover_page: true
+        add_print_site_banner: true
+        cover_page_template: "overrides/templates/print_site_cover_page.tpl"
+        print_page_title: "Offline Docs"
+        print_site_banner_template: "overrides/templates/print_site_banner.tpl"
+
 theme:
     name: material
     custom_dir: overrides
@@ -114,33 +144,3 @@ theme:
           toggle:
               icon: material/brightness-7
               name: Switch to dark mode
-
-extra_css:
-    # CSS shared between the whole org
-    - https://docsforadobe.dev/_global/global.css
-    - https://docsforadobe.dev/_global/global-syntax-highlight.css
-
-    # CSS specific to this file
-    - _static/extra.css
-
-markdown_extensions:
-    - admonition
-    - pymdownx.superfences
-    - markdown_grid_tables
-    - toc:
-        title: Page Contents
-        permalink: true
-        toc_depth: 3
-
-plugins:
-    - git-revision-date-localized
-    - search:
-        separator: '[\s\-,\.:!=\[\]()"/]+'
-
-    # Note: print-site must be last!
-    - print-site:
-        add_cover_page: true
-        add_print_site_banner: true
-        cover_page_template: "overrides/templates/print_site_cover_page.tpl"
-        print_page_title: "Offline Docs"
-        print_site_banner_template: "overrides/templates/print_site_banner.tpl"
