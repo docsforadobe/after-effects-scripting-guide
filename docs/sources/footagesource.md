@@ -1,9 +1,9 @@
 # FootageSource object
 
 `app.project.item(index).mainSource`
-<br/>
+
 `app.project.item(index).proxySource`
-<br/>
+
 
 #### Description
 
@@ -19,9 +19,9 @@ The FootageSource object holds information describing the source of some footage
 ### FootageSource.alphaMode
 
 `app.project.item(index).mainSource.alphaMode`
-<br/>
+
 `app.project.item(index).proxySource.alphaMode`
-<br/>
+
 
 #### Description
 
@@ -40,9 +40,9 @@ An Alpha Mode enumerated value; (read/write). One of:
 ### FootageSource.conformFrameRate
 
 `app.project.item(index).mainSource.conformFrameRate`
-<br/>
+
 `app.project.item(index).proxySource.conformFrameRate`
-<br/>
+
 
 #### Description
 
@@ -57,9 +57,9 @@ Floating-point value, in the range `[0.0..99.0]`; read/write.
 ### FootageSource.displayFrameRate
 
 `app.project.item(index).mainSource.displayFrameRate`
-<br/>
+
 `app.project.item(index).proxySource.displayFrameRate`
-<br/>
+
 
 #### Description
 
@@ -74,9 +74,9 @@ Floating-point value, in the range `[0.0..99.0]`; read-only.
 ### FootageSource.fieldSeparationType
 
 `app.project.item(index).mainSource.fieldSeparationType`
-<br/>
+
 `app.project.item(index).proxySource.fieldSeparationType`
-<br/>
+
 
 #### Description
 
@@ -95,9 +95,9 @@ A `FieldSeparationType` enumerated value; read/write. One of:
 ### FootageSource.hasAlpha
 
 `app.project.item(index).mainSource.hasAlpha`
-<br/>
+
 `app.project.item(index).proxySource.hasAlpha`
-<br/>
+
 
 #### Description
 
@@ -112,9 +112,9 @@ Boolean; read-only.
 ### FootageSource.highQualityFieldSeparation
 
 `app.project.item(index).mainSource.highQualityFieldSeparation`
-<br/>
+
 `app.project.item(index).proxySource.highQualityFieldSeparation`
-<br/>
+
 
 #### Description
 
@@ -129,9 +129,9 @@ Boolean; read/write.
 ### FootageSource.invertAlpha
 
 `app.project.item(index).mainSource.invertAlpha`
-<br/>
+
 `app.project.item(index).proxySource.invertAlpha`
-<br/>
+
 
 #### Description
 
@@ -146,9 +146,9 @@ Boolean; read/write.
 ### FootageSource.isStill
 
 `app.project.item(index).mainSource.isStill`
-<br/>
+
 `app.project.item(index).proxySource.isStill`
-<br/>
+
 
 #### Description
 
@@ -163,9 +163,9 @@ Boolean; read-only.
 ### FootageSource.loop
 
 `app.project.item(index).mainSource.loop`
-<br/>
+
 `app.project.item(index).proxySource.loop`
-<br/>
+
 
 #### Description
 
@@ -180,9 +180,9 @@ Integer, in the range `[1..9999]`; default is 1; read/write.
 ### FootageSource.nativeFrameRate
 
 `app.project.item(index).mainSource.nativeFrameRate`
-<br/>
+
 `app.project.item(index).proxySource.nativeFrameRate`
-<br/>
+
 
 #### Description
 
@@ -197,9 +197,9 @@ Floating-point value; read-only.
 ### FootageSource.premulColor
 
 `app.project.item(index).mainSource.premulColor`
-<br/>
+
 `app.project.item(index).proxySource.premulColor`
-<br/>
+
 
 #### Description
 
@@ -214,9 +214,9 @@ Array of three floating-point values, `[R, G, B]`, in the range `[0.0..1.0]`; re
 ### FootageSource.removePulldown
 
 `app.project.item(index).mainSource.removePulldown`
-<br/>
+
 `app.project.item(index).proxySource.removePulldown`
-<br/>
+
 
 #### Description
 
@@ -245,9 +245,9 @@ A `PulldownPhase` enumerated value; read/write. One of:
 ### FootageSource.guessAlphaMode()
 
 `app.project.item(index).mainSource.guessAlphaMode()`
-<br/>
+
 `app.project.item(index).proxySource.guessAlphaMode()`
-<br/>
+
 
 #### Description
 
@@ -266,9 +266,9 @@ Nothing.
 ### FootageSource.guessPulldown()
 
 `app.project.item(index).mainSource.guessPulldown(method)`
-<br/>
+
 `app.project.item(index).proxySource.guessPulldown(method)`
-<br/>
+
 
 #### Description
 

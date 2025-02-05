@@ -123,9 +123,9 @@ Boolean.
 ### PropertyGroup.property()
 
 `app.project.item(index).layer(index).propertyGroupSpec.property(index)`
-<br/>
+
 `app.project.item(index).layer(index).propertyGroupSpec.property(name)`
-<br/>
+
 
 #### Description
 

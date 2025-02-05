@@ -1,7 +1,7 @@
 # CharacterRange object
 
 `app.project.item(index).layer(index).text.sourceText.value.characterRange(characterIndexStart, [signedCharacterIndexEnd])`
-<br/>
+
 
 !!! note
     This functionality was added in After Effects 24.3
@@ -180,9 +180,9 @@ If this attribute has a mixed value, it will be read as `undefined`.
 
 !!! warning
     The Text layer can override per-character attribute setting via the All Strokes First or All Fills First setting on the CharPanel.
-<br/>
-The value returned here represents what is applied to the characters, without regard to the possible Text layer override.
-<br/>
+
+    The value returned here represents what is applied to the characters, without regard to the possible Text layer override.
+
 
 #### Type
 

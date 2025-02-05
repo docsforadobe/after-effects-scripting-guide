@@ -1,9 +1,9 @@
 # Item object
 
 `app.project.item(index)`
-<br/>
+
 `app.project.items[index]`
-<br/>
+
 
 #### Description
 

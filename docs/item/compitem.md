@@ -1,9 +1,9 @@
 # CompItem object
 
 `app.project.item(index)`
-<br/>
+
 `app.project.items[index]`
-<br/>
+
 
 #### Description
 
@@ -601,11 +601,11 @@ String; read-only.
 ### CompItem.layer()
 
 `app.project.item(index).layer(index)`
-<br/>
+
 `app.project.item(index).layer(otherLayer, relIndex)`
-<br/>
+
 `app.project.item(index).layer(name)`
-<br/>
+
 
 #### Description
 

@@ -1,9 +1,9 @@
 # FileSource object
 
 `app.project.item(index).mainSource`
-<br/>
+
 `app.project.item(index).proxySource`
-<br/>
+
 
 #### Description
 
@@ -19,9 +19,9 @@ The FileSource object describes footage that comes from a file.
 ### FileSource.file
 
 `app.project.item(index).mainSource.file`
-<br/>
+
 `app.project.item(index).proxySource.file`
-<br/>
+
 
 #### Description
 
@@ -39,9 +39,9 @@ The [Extendscript File](https://extendscript.docsforadobe.dev/file-system-access
 ### FileSource.missingFootagePath
 
 `app.project.item(index).mainSource.missingFootagePath`
-<br/>
+
 `app.project.item(index).proxySource.missingFootagePath`
-<br/>
+
 
 #### Description
 

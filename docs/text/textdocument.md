@@ -1,9 +1,9 @@
 # TextDocument object
 
 `new TextDocument(docText)`
-<br/>
+
 `app.project.item(index).layer(index).property("Source Text").value`
-<br/>
+
 
 #### Description
 
@@ -607,9 +607,9 @@ Boolean; read/write.
 
 !!! note
     The read functionality was added in After Effects 13.2 (CC 2014.2).
-<br/>
-The write functionality was added in After Effects 24.0
-<br/>
+
+    The write functionality was added in After Effects 24.0
+
 
 #### Description
 
@@ -637,9 +637,8 @@ var isFauxBold = myTextLayer.sourceText.value.fauxBold;
 
 !!! note
     The read functionality was added in After Effects 13.2 (CC 2014.2).
-<br/>
-The write functionality was added in After Effects 24.0
-<br/>
+
+    The write functionality was added in After Effects 24.0
 
 #### Description
 

@@ -1,9 +1,9 @@
 # SolidSource object
 
 `app.project.item(index).mainSource`
-<br/>
+
 `app.project.item(index).proxySource`
-<br/>
+
 
 #### Description
 

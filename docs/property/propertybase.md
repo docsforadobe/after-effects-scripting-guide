@@ -54,9 +54,9 @@ alert(effect2.name); // invalid reference because group index positions have cha
 ### PropertyBase.active
 
 `app.project.item(index).layer(index).active`
-<br/>
+
 `app.project.item(index).layer(index).propertySpec.active`
-<br/>
+
 
 #### Description
 
@@ -111,9 +111,9 @@ Boolean; read-only.
 ### PropertyBase.enabled
 
 `app.project.item(index).layer(index).enabled`
-<br/>
+
 `app.project.item(index).layer(index).propertySpec.enabled`
-<br/>
+
 
 #### Description
 
@@ -186,9 +186,9 @@ String; read-only.
 ### PropertyBase.name
 
 `app.project.item(index).layer(index).name`
-<br/>
+
 `app.project.item(index).layer(index).propertySpec.name`
-<br/>
+
 
 #### Description
 

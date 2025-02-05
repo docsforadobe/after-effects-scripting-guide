@@ -1053,9 +1053,9 @@ Floating-point value.
 ### Property.keyValue()
 
 `app.project.item(index).layer(index).propertySpec.keyValue(keyIndex)`
-<br/>
+
 `app.project.item(index).layer(index).propertySpec.keyValue(markerComment)`
-<br/>
+
 
 #### Description
 

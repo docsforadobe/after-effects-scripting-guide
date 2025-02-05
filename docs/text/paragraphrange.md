@@ -1,7 +1,6 @@
 # ParagraphRange object
 
 `app.project.item(index).layer(index).text.sourceText.value.paragraphRange(paragraphIndexStart, [signedParagraphIndexEnd])`
-<br/>
 
 !!! note
     This functionality was added in After Effects 24.3
