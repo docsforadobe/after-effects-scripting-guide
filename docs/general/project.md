@@ -525,10 +525,10 @@ if (usedList.length) {
          // the other properties. So we have adjusted the name returned
          // by usedFonts to make this clear as we expect that is where
          // it will be used next.
-         var layerTimeD  = usedAt[i].layerTimeD;
+         var layerTimeD = usedAt[i].layerTimeD;
 
          var layer = app.project.layerByID(layerID);
-         str += "   Layer:'" + String(layer.property("Source Text").valueAtTime(layerTimeD, false)) + "'\n";
+         str += "    Layer:'" + String(layer.property("Source Text").valueAtTime(layerTimeD, false)) + "'\n";
     }
     alert(str);
 }
