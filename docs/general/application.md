@@ -793,9 +793,17 @@ Purges unused data of the specified types. Replicates the Purge options in the E
 
 #### Parameters
 
-| Parameter |        Type        |                                                                                                                                                                                                                                                            Description                                                                                                                                                                                                                                                            |
-| --------- | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `target`  | `PurgeTarget` enum | The type of elements to purge from memory. One of:<ul><li>`PurgeTarget.ALL_CACHES`: Purges all data that After Effects has cached to both RAM and disk cache.</li><li>`PurgeTarget.ALL_MEMORY_CACHES`: Purges all data that After Effects has cached to RAM. *(new in 24.3)*</li><li>`PurgeTarget.UNDO_CACHES`: Purges all data saved in the undo cache.</li><li>`PurgeTarget.SNAPSHOT_CACHES`: Purges all data cached as composition/layer snapshots.</li><li>`PurgeTarget.IMAGE_CACHES`: Purges all saved image data.</li></ul> |
++-----------+--------------------+----------------------------------------------------------------------------------------------------------+
+| Parameter |        Type        |                                               Description                                                |
++===========+====================+==========================================================================================================+
+| `target`  | `PurgeTarget` enum | The type of elements to purge from memory. One of:                                                       |
+|           |                    |                                                                                                          |
+|           |                    | - `PurgeTarget.ALL_CACHES`: Purges all data that After Effects has cached to both RAM and disk cache.    |
+|           |                    | - `PurgeTarget.ALL_MEMORY_CACHES`: Purges all data that After Effects has cached to RAM. *(new in 24.3)* |
+|           |                    | - `PurgeTarget.UNDO_CACHES`: Purges all data saved in the undo cache.                                    |
+|           |                    | - `PurgeTarget.SNAPSHOT_CACHES`: Purges all data cached as composition/layer snapshots.                  |
+|           |                    | - `PurgeTarget.IMAGE_CACHES`: Purges all saved image data.                                               |
++-----------+--------------------+----------------------------------------------------------------------------------------------------------+
 
 #### Returns
 

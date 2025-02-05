@@ -446,9 +446,16 @@ Just as in the UI, `doSceneEditDetection` will fail and error if called on a non
 
 #### Parameters
 
-|   Parameter    |             Type              |                                                                                                                                                                                   Description                                                                                                                                                                                   |
-| -------------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `applyOptions` | `SceneEditDetectionMode` enum | How the detected edits will be applied. One of:<ul><li>`SceneEditDetectionMode.MARKERS`: Create markers at edit points.</li><li>`SceneEditDetectionMode.SPLIT`: Split layer.</li><li>`SceneEditDetectionMode.SPLIT_PRECOMP`: Split layer at edit points and pre-compose each one.</li><li>`SceneEditDetectionMode.NONE`: Detected edits are not applied to the layer.</li></ul> |
++----------------+-------------------------------+------------------------------------------------------------------------------------------------+
+|   Parameter    |             Type              |                                          Description                                           |
++================+===============================+================================================================================================+
+| `applyOptions` | `SceneEditDetectionMode` enum | How the detected edits will be applied. One of:                                                |
+|                |                               |                                                                                                |
+|                |                               | - `SceneEditDetectionMode.MARKERS`: Create markers at edit points.                             |
+|                |                               | - `SceneEditDetectionMode.SPLIT`: Split layer.                                                 |
+|                |                               | - `SceneEditDetectionMode.SPLIT_PRECOMP`: Split layer at edit points and pre-compose each one. |
+|                |                               | - `SceneEditDetectionMode.NONE`: Detected edits are not applied to the layer.                  |
++----------------+-------------------------------+------------------------------------------------------------------------------------------------+
 
 #### Returns
 

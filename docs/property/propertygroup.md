@@ -82,9 +82,18 @@ var sliderProperty = effectsProperty.property(sliderIndex).property("ADBE Slider
 
 #### Parameters
 
-| Parameter |  Type  |                                                                                                                                                                                                                                                                                                                                                                                                                                                           Description                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| --------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `name`    | String | The display name or match name of the property to add. (See [PropertyBase.matchName](propertybase.md#propertybasematchname)). The following names are supported:<ul><li>Any match name for a property that can be added through the user interface. For example, `"ADBE Mask Atom`", `"ADBE Paint Atom`", `"ADBE Text Position`", `"ADBE Text Anchor Point`".</li><li>When adding to an ADBE Mask Parade: `"ADBE Mask Atom`", `"Mask`".</li><li>When adding to an ADBE Effect Parade, any effect by match name, such as `"ADBE Bulge`", `"ADBE Glo2`", `"APC Vegas`".</li><li>Any effect by display name, such as `"Bulge`", `"Glow`", `"Vegas`".</li><li>For text animators, `"ADBE Text Animator`".</li><li>For selectors, Range Selector has the name `"ADBE Text Selector`", Wiggly Selector has the name `"ADBE Text Wiggly Selector`", and Expression Selector has the name `"ADBE Text Expressible Selector`".</li></ul> |
++-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Parameter |  Type  |                                                                                                Description                                                                                                |
++===========+========+===========================================================================================================================================================================================================+
+| `name`    | String | The display name or [matchName](propertybase.md#propertybasematchname) of the property to add. The following names are supported:                                                                         |
+|           |        |                                                                                                                                                                                                           |
+|           |        | - Any match name for a property that can be added through the user interface. For example, `"ADBE Mask Atom`", `"ADBE Paint Atom`", `"ADBE Text Position`", `"ADBE Text Anchor Point`".                   |
+|           |        | - When adding to an ADBE Mask Parade: `"ADBE Mask Atom`", `"Mask`".                                                                                                                                       |
+|           |        | - When adding to an ADBE Effect Parade, any effect by match name, such as `"ADBE Bulge`", `"ADBE Glo2`", `"APC Vegas`".                                                                                   |
+|           |        | - Any effect by display name, such as `"Bulge`", `"Glow`", `"Vegas`".                                                                                                                                     |
+|           |        | - For text animators, `"ADBE Text Animator`".                                                                                                                                                             |
+|           |        | - For selectors, Range Selector has the name `"ADBE Text Selector`", Wiggly Selector has the name `"ADBE Text Wiggly Selector`", and Expression Selector has the name `"ADBE Text Expressible Selector`". |
++-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 #### Returns
 
@@ -145,10 +154,19 @@ For example, the following call searches two levels down, and returns the first 
 
 #### Parameters
 
-| Parameter |                    Type                    |                                                                                                                                              Description                                                                                                                                               |
-| --------- | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `index`   | Integer, in the range `[1..numProperties]` | The index for the child property, in this is an indexed group.                                                                                                                                                                                                                                         |
-| `name`    | String                                     | The name of the child property. This can be:<ul><li>Any match name</li><li>Any name in expression "parenthesis style" syntax, meaning the display name or the compact English name</li><li>Any name in expression "intercap style" syntax.</li></ul>For supported property names, see the table below. |
++-----------+---------+-----------------------------------------------------------------------------------------------------------+
+| Parameter |  Type   |                                                Description                                                |
++===========+=========+===========================================================================================================+
+| `index`   | Integer | The index for the child property, in the range `[1..numProperties]`, if this is an indexed group.         |
++-----------+---------+-----------------------------------------------------------------------------------------------------------+
+| `name`    | String  | The name of the child property. This can be:                                                              |
+|           |         |                                                                                                           |
+|           |         | - Any match name                                                                                          |
+|           |         | - Any name in expression "parenthesis style" syntax, meaning the display name or the compact English name |
+|           |         | - Any name in expression "intercap style" syntax.                                                         |
+|           |         |                                                                                                           |
+|           |         | For supported property names, see the table below.                                                        |
++-----------+---------+-----------------------------------------------------------------------------------------------------------+
 
 #### Returns
 
@@ -156,19 +174,62 @@ For example, the following call searches two levels down, and returns the first 
 
 #### Properties accessible by name
 
-|                 Source                  |                                                                                                                                                                                                                                          Values                                                                                                                                                                                                                                          |
-| --------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| From any Layer                          | <ul><li>`"ADBE Mask Parade`", or `"Masks`"</li><li>`"ADBE Effect Parade`", or `"Effects`"</li><li>`"ADBE MTrackers`", or `"Motion Trackers`"</li></ul>                                                                                                                                                                                                                                                                                                                                   |
-| From an AVLayer                         | <ul><li>`"Anchor Point`" or `"anchorPoint`"</li><li>`"Position`" or `"position`"</li><li>`"Scale`" or `"scale`"</li><li>`"Rotation`" or `"rotation`"</li><li>`"Z Rotation`" or `"zRotation`" or `"Rotation Z`" or `"rotationZ`"</li><li>`"Opacity`" or `"opacity`"</li><li>`"Marker`" or `"marker`"</li></ul>                                                                                                                                                                            |
-| From an AVLayer with a non-still source | <ul><li>`"Time Remap`" or `"timeRemapEnabled`"</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| From an AVLayer with an audio component | <ul><li>`"Audio Levels`" or `"audioLevels`"</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| From a camera layer                     | <ul><li>`"Zoom`" or `"zoom`"</li><li>`"Depth of Field`" or `"depthOfField`"</li><li>`"Focus Distance`" or `"focusDistance`"</li><li>`"Aperture`" or `"aperture`"</li><li>`"Blur Level`" or `"blurLevel`"</li></ul>                                                                                                                                                                                                                                                                       |
-| From a light layer                      | <ul><li>`"Intensity`" or `"intensity`"</li><li>`"Color`" or `"color`"</li><li>`"Cone Angle`" or `"coneAngle`"</li><li>`"Cone Feather`" or `"coneFeather`"</li><li>`"Shadow Darkness`" or `"shadowDarkness`"</li><li>`"Shadow Diffusion`" or `"shadowDiffusion`"</li><li>`"Casts Shadows`" or `"castsShadows`"</li></ul>                                                                                                                                                                  |
-| From a 3D layer                         | <ul><li>`"Accepts Shadows`" or `"acceptsShadows`"</li><li>`"Accepts Lights`" or `"acceptsLights`"</li><li>`"Ambient`" or `"ambient`"</li><li>`"Diffuse`" or `"diffuse`"</li><li>`"Specular`" or `"specular`" (these are for the Specular Intensity property)</li><li>`"Shininess`" or `"shininess`" (these are for the Specular Shininess property)</li><li>`"Casts Shadows`" or `"castsShadows`"</li><li>`"Light Transmission`" or `"lightTransmission`"</li><li>`"Metal`" or `"metal`" |
-| From a camera, light or 3D layer        | <ul><li>`"X Rotation`" or `"xRotation`" or `"Rotation X`" or `"rotationX`"</li><li>`"Y Rotation`" or `"yRotation`" or `"Rotation Y`" or `"rotationY`"</li><li>`"Orientation`" or `"orientation`"</li></ul>                                                                                                                                                                                                                                                                               |
-| From a text layer                       | <ul><li>`"Source Text`" or `"source Text`" or `"Text`" or `"text`"</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                             |
-| From PropertyGroup `"ADBE Mask Parade`" | <ul><li>`"ADBE Mask Atom`"</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| From PropertyGroup `"ADBE Mask Atom`"   | <ul><li>`"ADBE Mask Shape`", or `"maskShape`", or `"maskPath`"</li><li>`"ADBE Mask Feather`", or `"maskFeather`"</li><li>`"ADBE Mask Opacity`", or `"maskOpacity`"</li><li>`"ADBE Mask Offset`", or `"maskOffset"`</li></ul>                                                                                                                                                                                                                                                             |
++-----------------------------------------+----------------------------------------------------------------------------------+
+|                 Source                  |                                      Values                                      |
++=========================================+==================================================================================+
+| From any Layer                          | - `"ADBE Mask Parade`", or `"Masks`"                                             |
+|                                         | - `"ADBE Effect Parade`", or `"Effects`"                                         |
+|                                         | - `"ADBE MTrackers`", or `"Motion Trackers`"                                     |
++-----------------------------------------+----------------------------------------------------------------------------------+
+| From an AVLayer                         | - `"Anchor Point`" or `"anchorPoint`"                                            |
+|                                         | - `"Position`" or `"position`"                                                   |
+|                                         | - `"Scale`" or `"scale`"                                                         |
+|                                         | - `"Rotation`" or `"rotation`"                                                   |
+|                                         | - `"Z Rotation`" or `"zRotation`" or `"Rotation Z`" or `"rotationZ`"             |
+|                                         | - `"Opacity`" or `"opacity`"                                                     |
+|                                         | - `"Marker`" or `"marker`"                                                       |
++-----------------------------------------+----------------------------------------------------------------------------------+
+| From an AVLayer with a non-still source | - `"Time Remap`" or `"timeRemapEnabled`"                                         |
++-----------------------------------------+----------------------------------------------------------------------------------+
+| From an AVLayer with an audio component | - `"Audio Levels`" or `"audioLevels`"                                            |
++-----------------------------------------+----------------------------------------------------------------------------------+
+| From a camera layer                     | - `"Zoom`" or `"zoom`"                                                           |
+|                                         | - `"Depth of Field`" or `"depthOfField`"                                         |
+|                                         | - `"Focus Distance`" or `"focusDistance`"                                        |
+|                                         | - `"Aperture`" or `"aperture`"                                                   |
+|                                         | - `"Blur Level`" or `"blurLevel`"                                                |
++-----------------------------------------+----------------------------------------------------------------------------------+
+| From a light layer                      | - `"Intensity`" or `"intensity`"                                                 |
+|                                         | - `"Color`" or `"color`"                                                         |
+|                                         | - `"Cone Angle`" or `"coneAngle`"                                                |
+|                                         | - `"Cone Feather`" or `"coneFeather`"                                            |
+|                                         | - `"Shadow Darkness`" or `"shadowDarkness`"                                      |
+|                                         | - `"Shadow Diffusion`" or `"shadowDiffusion`"                                    |
+|                                         | - `"Casts Shadows`" or `"castsShadows`"                                          |
++-----------------------------------------+----------------------------------------------------------------------------------+
+| From a 3D layer                         | - `"Accepts Shadows`" or `"acceptsShadows`"                                      |
+|                                         | - `"Accepts Lights`" or `"acceptsLights`"                                        |
+|                                         | - `"Ambient`" or `"ambient`"                                                     |
+|                                         | - `"Diffuse`" or `"diffuse`"                                                     |
+|                                         | - `"Specular`" or `"specular`" (these are for the Specular Intensity property)   |
+|                                         | - `"Shininess`" or `"shininess`" (these are for the Specular Shininess property) |
+|                                         | - `"Casts Shadows`" or `"castsShadows`"                                          |
+|                                         | - `"Light Transmission`" or `"lightTransmission`"                                |
+|                                         | - `"Metal`" or `"metal`"                                                         |
++-----------------------------------------+----------------------------------------------------------------------------------+
+| From a camera, light or 3D layer        | - `"X Rotation`" or `"xRotation`" or `"Rotation X`" or `"rotationX`"             |
+|                                         | - `"Y Rotation`" or `"yRotation`" or `"Rotation Y`" or `"rotationY`"             |
+|                                         | - `"Orientation`" or `"orientation`"                                             |
++-----------------------------------------+----------------------------------------------------------------------------------+
+| From a text layer                       | - `"Source Text`" or `"source Text`" or `"Text`" or `"text`"                     |
++-----------------------------------------+----------------------------------------------------------------------------------+
+| From PropertyGroup `"ADBE Mask Parade`" | - `"ADBE Mask Atom`"                                                             |
++-----------------------------------------+----------------------------------------------------------------------------------+
+| From PropertyGroup `"ADBE Mask Atom`"   | - `"ADBE Mask Shape`", or `"maskShape`", or `"maskPath`"                         |
+|                                         | - `"ADBE Mask Feather`", or `"maskFeather`"                                      |
+|                                         | - `"ADBE Mask Opacity`", or `"maskOpacity`"                                      |
+|                                         | - `"ADBE Mask Offset`", or `"maskOffset"`                                        |
++-----------------------------------------+----------------------------------------------------------------------------------+
 
 #### Examples
 
