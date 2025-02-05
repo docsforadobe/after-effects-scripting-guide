@@ -126,6 +126,7 @@ extra_css:
 markdown_extensions:
     - admonition
     - pymdownx.superfences
+    - markdown_grid_tables
     - toc:
         title: Page Contents
         permalink: true

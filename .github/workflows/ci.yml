@@ -32,7 +32,8 @@ jobs:
             mkdocs-material-
       - run: >
           pip install
-          mkdocs-material
+          markdown_grid_tables
           mkdocs-git-revision-date-localized-plugin
+          mkdocs-material
           mkdocs-print-site-plugin
       - run: mkdocs gh-deploy --force
