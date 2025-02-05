@@ -227,10 +227,10 @@ A `SubstitutedFontReplacementMatchPolicy` enumerated value; read/write. One of:
 
 - `SubstitutedFontReplacementMatchPolicy.POSTSCRIPT_NAME` is the default; any [Font object](fontobject.md) which has the same PostScript name is a valid candidate for replacement of a substituted [Font object](fontobject.md).
 - `SubstitutedFontReplacementMatchPolicy.CTFI_EQUAL` requires that the following properties of substituted [Font object](fontobject.md) must match to be considered a valid candidate:
-  > - [postScriptName](fontobject.md#fontobjectpostscriptname)
-  > - [technology](fontobject.md#fontobjecttechnology)
-  > - [writingScripts](fontobject.md#fontobjectwritingscripts) (primary)
-  > - [designVector](fontobject.md#fontobjectdesignvector)
+    - [postScriptName](fontobject.md#fontobjectpostscriptname)
+    - [technology](fontobject.md#fontobjecttechnology)
+    - [writingScripts](fontobject.md#fontobjectwritingscripts) (primary)
+    - [designVector](fontobject.md#fontobjectdesignvector)
 - `SubstitutedFontReplacementMatchPolicy.DISABLED` means that no [Font object](fontobject.md) is an acceptable replacement for a the substituted [Font object](fontobject.md).
 
 ---
@@ -253,9 +253,9 @@ If a character is deemed to be included in one or more `CTScript` values, the va
 ```javascript
 var scriptsV = app.fonts.getCTScriptForString("ABヂ", CTScript.CT_ROMAN_SCRIPT);
 var str = "[0] chars:" + scriptsV[0].chars +   // 2
-          " ctScript:" + getEnumAsString(scriptsV[0].ctScript) +
-          "\n[1] chars:" + scriptsV[1].chars + // 1
-          " ctScript:" + getEnumAsString(scriptsV[1].ctScript);
+            " ctScript:" + getEnumAsString(scriptsV[0].ctScript) +
+            "\n[1] chars:" + scriptsV[1].chars + // 1
+            " ctScript:" + getEnumAsString(scriptsV[1].ctScript);
 alert(str);
 ```
 

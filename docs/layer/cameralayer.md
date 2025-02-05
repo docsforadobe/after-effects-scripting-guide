@@ -15,16 +15,16 @@ CameraLayer defines no additional attributes, but has different AE properties th
 
 - `Marker`
 - `Transform`
-  - `PointofInterest`
-  - `Position`
-  - `Scale`
-  - `Orientation`
-  - `XRotation`
-  - `YRotation`
-  - `Rotation`
-  - `Opacity`
+    - `PointofInterest`
+    - `Position`
+    - `Scale`
+    - `Orientation`
+    - `XRotation`
+    - `YRotation`
+    - `Rotation`
+    - `Opacity`
 - `CameraOptions`
-  - `Zoom`
-  - `DepthofField`
-  - `FocusDistance`
-  - `BlurLevel`
+    - `Zoom`
+    - `DepthofField`
+    - `FocusDistance`
+    - `BlurLevel`

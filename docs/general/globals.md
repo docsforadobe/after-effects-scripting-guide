@@ -87,13 +87,13 @@ var myComp = app.project.activeItem;
 var x = 0;
 
 for (var i = 1; i <= myComp.numLayers; i++) {
-  // If you use Math.random(), this does not work
-  // x = 400 * (Math.random()) - 200;
-  // use new generateRandomNumber() instead
+    // If you use Math.random(), this does not work
+    // x = 400 * (Math.random()) - 200;
+    // use new generateRandomNumber() instead
 
-  x = 400 * generateRandomNumber() - 200;
-  var currentPos = myComp.layer(i).property("Position").value;
-  myComp.layer(i).property("Position").setValue([currentPos[0] + x, currentPos[1]]);
+    x = 400 * generateRandomNumber() - 200;
+    var currentPos = myComp.layer(i).property("Position").value;
+    myComp.layer(i).property("Position").setValue([currentPos[0] + x, currentPos[1]]);
 }
 ```
 

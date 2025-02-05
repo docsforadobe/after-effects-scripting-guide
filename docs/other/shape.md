@@ -22,34 +22,34 @@ For closed mask shapes, variable-width mask feather points can exist anywhere al
 #### Examples
 
 - Create a square mask. A square is a closed shape with 4 vertices. The `inTangents` and `outTangents` for connected straight-line segments are 0, the default, and do not need to be explicitly set.
-  > ```javascript
-  > var myShape = new Shape();
-  > myShape.vertices = [[0,0], [0,100], [100,100], [100,0]];
-  > myShape.closed = true;
-  > ```
+    ```javascript
+    var myShape = new Shape();
+    myShape.vertices = [[0,0], [0,100], [100,100], [100,0]];
+    myShape.closed = true;
+    ```
 - Create a "U" shaped mask. A "U" is an open shape with the same 4 vertices used in the square.
-  > ```javascript
-  > var myShape = new Shape();
-  > myShape.vertices = [[0,0], [0,100], [100,100], [100,0]];
-  > myShape.closed = false;
-  > ```
+    ```javascript
+    var myShape = new Shape();
+    myShape.vertices = [[0,0], [0,100], [100,100], [100,0]];
+    myShape.closed = false;
+    ```
 - Create an oval. An oval is a closed shape with 4 vertices and with inTangent and outTangent values.
-  > ```javascript
-  > var myShape = new Shape();
-  > myShape.vertices = [[300,50], [200,150],[300,250],[400,150]];
-  > myShape.inTangents = [[55.23,0],[0,-55.23],[-55.23,0],[0,55.23]];
-  > myShape.outTangents = [[-55.23,0],[0,55.23],[55.23,0],[0,-55.23]];
-  > myShape.closed = true;
-  > ```
+    ```javascript
+    var myShape = new Shape();
+    myShape.vertices = [[300,50], [200,150],[300,250],[400,150]];
+    myShape.inTangents = [[55.23,0],[0,-55.23],[-55.23,0],[0,55.23]];
+    myShape.outTangents = [[-55.23,0],[0,55.23],[55.23,0],[0,-55.23]];
+    myShape.closed = true;
+    ```
 - Create a square mask with two feather points. A large square mask with two feather points, one closer to the left end the second mask segment (off the bottom edge) with a radius of 30 pixels and the other one centered the third mask segment (off the right edge) with a larger radius of 100 pixels.
-  > ```javascript
-  > var myShape = new Shape();
-  > myShape.vertices = [[100,100], [100,400], [400,400], [400,100]]; // segments drawn counter clockwise
-  > myShape.closed = true;
-  > myShape.featherSegLocs = [1, 2]; // segments are numbered starting at 0, so second segment is 1
-  > myShape.featherRelSegLocs = [0.15, 0.5]; // 0.15 is closer to the lower-left corner of the square
-  > myShape.featherRadii = [30, 100]; // second feather point (onright-sidesegment) has a larger radius
-  > ```
+    ```javascript
+    var myShape = new Shape();
+    myShape.vertices = [[100,100], [100,400], [400,400], [400,100]]; // segments drawn counter clockwise
+    myShape.closed = true;
+    myShape.featherSegLocs = [1, 2]; // segments are numbered starting at 0, so second segment is 1
+    myShape.featherRelSegLocs = [0.15, 0.5]; // 0.15 is closer to the lower-left corner of the square
+    myShape.featherRadii = [30, 100]; // second feather point (onright-sidesegment) has a larger radius
+    ```
 
 ---
 

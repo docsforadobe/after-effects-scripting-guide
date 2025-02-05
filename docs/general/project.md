@@ -228,20 +228,20 @@ var type_str = "";
 // check the current value and alert the user
 
 switch (currentGPUSettings) {
-   case GpuAccelType.CUDA:
-      type_str = "CUDA";
-      break;
-   case GpuAccelType.METAL:
-      type_str = "Metal";
-      break;
-   case GpuAccelType.OPENCL:
-      type_str = "OpenCL";
-      break;
-   case GpuAccelType.SOFTWARE:
-      type_str = "Software";
-      break;
-   default:
-      type_str = "UNKNOWN";
+    case GpuAccelType.CUDA:
+        type_str = "CUDA";
+        break;
+    case GpuAccelType.METAL:
+        type_str = "Metal";
+        break;
+    case GpuAccelType.OPENCL:
+        type_str = "OpenCL";
+        break;
+    case GpuAccelType.SOFTWARE:
+        type_str = "Software";
+        break;
+    default:
+        type_str = "UNKNOWN";
 }
 
 alert("Your current setting is " + type_str);
@@ -519,16 +519,16 @@ if (usedList.length) {
 
     var str = "[0]:" + font.postScriptName + "\n";
     for (var i = 0; i < usedAt.length; i++) {
-         var layerID = usedAt[i].layerID;
-         // valueAtTime() for Source Text property is expecting timed
-         // to be in Layer Time instead of Comp Time, unlike any of
-         // the other properties. So we have adjusted the name returned
-         // by usedFonts to make this clear as we expect that is where
-         // it will be used next.
-         var layerTimeD = usedAt[i].layerTimeD;
+        var layerID = usedAt[i].layerID;
+        // valueAtTime() for Source Text property is expecting timed
+        // to be in Layer Time instead of Comp Time, unlike any of
+        // the other properties. So we have adjusted the name returned
+        // by usedFonts to make this clear as we expect that is where
+        // it will be used next.
+        var layerTimeD = usedAt[i].layerTimeD;
 
-         var layer = app.project.layerByID(layerID);
-         str += "    Layer:'" + String(layer.property("Source Text").valueAtTime(layerTimeD, false)) + "'\n";
+        var layer = app.project.layerByID(layerID);
+        str += "    Layer:'" + String(layer.property("Source Text").valueAtTime(layerTimeD, false)) + "'\n";
     }
     alert(str);
 }
@@ -824,7 +824,7 @@ var firstLayer = firstComp.layer(1);
 var layerID = firstLayer.id;
 
 if (app.project.layerByID(layerID) === firstLayer) {
-   alert("You can get the Layer from the ID!");
+    alert("You can get the Layer from the ID!");
 }
 ```
 

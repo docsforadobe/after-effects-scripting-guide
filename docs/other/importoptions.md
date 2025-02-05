@@ -114,7 +114,7 @@ Integer; read/write.
 
 ```javascript
 /*
-  Import 20 frames of the sequence, starting at frame 10 and ending at frame 30
+    Import 20 frames of the sequence, starting at frame 10 and ending at frame 30
  */
 var mySequence = '~/Desktop/sequence/image_000.png';
 

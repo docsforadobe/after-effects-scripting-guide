@@ -60,9 +60,9 @@ var myProperty = myLayer.scale;
 var scaleValue = myProperty.valueAtTime(3.5, false);
 
 if (scaleValue[0] === 10 && scaleValue[1] === 50) {
-  alert("hurray");
+    alert("hurray");
 } else {
-  alert("oops");
+    alert("oops");
 }
 ```
 
@@ -80,11 +80,11 @@ Change the key frame values for the first three keyframes of some sourcetext:
 ```javascript
 var myProperty = myTextLayer.sourceText;
 if (myProperty.numKeys < 3) {
-  alert("error, I thought there were 3 keyframes");
+    alert("error, I thought there were 3 keyframes");
 } else {
-  myProperty.setValueAtKey(1, newTextDocument("keynumber1"));
-  myProperty.setValueAtKey(2, newTextDocument("keynumber2"));
-  myProperty.setValueAtKey(3, newTextDocument("keynumber3"));
+    myProperty.setValueAtKey(1, newTextDocument("keynumber1"));
+    myProperty.setValueAtKey(2, newTextDocument("keynumber2"));
+    myProperty.setValueAtKey(3, newTextDocument("keynumber3"));
 }
 ```
 
@@ -236,7 +236,7 @@ secondComp.layers.add(firstComp);
 
 var essentialOpacity = secondComp.layer(1).essentialProperty.property(1);
 if (essentialOpacity.essentialPropertySource == opacityProp) {
-  alert("You can get the source Property from an Essential Property!");
+    alert("You can get the source Property from an Essential Property!");
 }
 ```
 

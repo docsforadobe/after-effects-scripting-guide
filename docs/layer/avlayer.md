@@ -22,35 +22,35 @@ Different types of layers have different AE properties. AVLayer has the followin
 - Masks
 - Effects
 - Transform
-  - Anchor Point
-  - Position
-  - Scale
-  - Orientation
-  - X Rotation
-  - Y Rotation
-  - Rotation
-  - Opacity
+    - Anchor Point
+    - Position
+    - Scale
+    - Orientation
+    - X Rotation
+    - Y Rotation
+    - Rotation
+    - Opacity
 - Layer Styles
 - Geometry Options // Ray-traced 3D
 - Material Options
-  - Casts Shadows
-  - Light Transmission
-  - Accepts Shadows
-  - Accepts Lights
-  - Appears in Reflections // Ray-traced 3D
-  - Ambient
-  - Diffuse
-  - Specular Intensity
-  - Specular Shininess
-  - Metal
-  - Reflection Intensity // Ray-traced 3D
-  - Reflection Sharpness // Ray-traced 3D
-  - Reflection Rolloff // Ray-traced 3D
-  - Transparency // Ray-traced 3D
-  - Transparency Rolloff // Ray-traced 3D
-  - Index of Refraction // Ray-traced 3D
+    - Casts Shadows
+    - Light Transmission
+    - Accepts Shadows
+    - Accepts Lights
+    - Appears in Reflections // Ray-traced 3D
+    - Ambient
+    - Diffuse
+    - Specular Intensity
+    - Specular Shininess
+    - Metal
+    - Reflection Intensity // Ray-traced 3D
+    - Reflection Sharpness // Ray-traced 3D
+    - Reflection Rolloff // Ray-traced 3D
+    - Transparency // Ray-traced 3D
+    - Transparency Rolloff // Ray-traced 3D
+    - Index of Refraction // Ray-traced 3D
 - Audio
-  - AudioLevels
+    - AudioLevels
 
 #### Example
 
@@ -664,7 +664,7 @@ newLayer.threeDLayer = true;
 newLayer.blendingMode = BlendingMode.ALPHA_ADD;
 var transform = newLayer.calculateTransformFromPoints(tl, tr, bl);
 for (var sel in transform) {
-  newLayer.transform[sel].setValue(transform[sel]);
+    newLayer.transform[sel].setValue(transform[sel]);
 }
 ```
 

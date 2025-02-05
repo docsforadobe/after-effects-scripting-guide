@@ -230,11 +230,11 @@ String; read-only. Some common values include:
 ```javascript
 var lang = app.isoLanguage;
 if (lang === "en_US") {
-  alert("After Effects is running in English.");
+    alert("After Effects is running in English.");
 } else if (lang === "fr_FR") {
-  alert("After Effects is running in French.");
+    alert("After Effects is running in French.");
 } else {
-  alert("After Effects is running not in English or French.");
+    alert("After Effects is running not in English or French.");
 }
 ```
 
@@ -298,7 +298,7 @@ A function name string, or `null` if no function is assigned; read/write.
 
 ```javascript
 function err(errString) {
-  alert(errString) ;
+    alert(errString) ;
 }
 app.onError = err;
 ```
@@ -649,10 +649,10 @@ A new Project object for the specified project, or `null` if the user cancels th
 ```javascript
 var my_file = new File("../my_folder/my_test.aep");
 if (my_file.exists) {
-  var new_project = app.open(my_file);
-  if (new_project) {
-    alert(new_project.file.name);
-  }
+    var new_project = app.open(my_file);
+    if (new_project) {
+        alert(new_project.file.name);
+    }
 }
 ```
 
@@ -698,8 +698,8 @@ var normalEnd = $.hiresTimer / 1000;
 app.project.close(CloseOptions.DO_NOT_SAVE_CHANGES);
 
 alert( "The difference is " + parseInt(normalEnd-fastEnd) + " ms" +
-       "\n\nFast: " + fastEnd + " ms" +
-       "\nNormal:" + normalEnd + " ms" );
+        "\n\nFast: " + fastEnd + " ms" +
+        "\nNormal:" + normalEnd + " ms" );
 ```
 
 ---

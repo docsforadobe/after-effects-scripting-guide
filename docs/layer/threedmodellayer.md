@@ -19,17 +19,17 @@ ThreeDModelLayer inherits the following properties and property groups from [AVL
 - Marker
 - Time Remap
 - Transform
-  - Anchor Point
-  - Position
-  - Scale
-  - Orientation
-  - X Rotation
-  - Y Rotation
-  - Rotation
-  - Opacity
+    - Anchor Point
+    - Position
+    - Scale
+    - Orientation
+    - X Rotation
+    - Y Rotation
+    - Rotation
+    - Opacity
 - Layer Styles
 - Audio
-  - AudioLevels
+    - AudioLevels
 
 #### Example
 
@@ -39,6 +39,6 @@ If the first item in the project is a CompItem, and the first layer of that Comp
 var modelLayer = app.project.item(1).layer(1);
 if (modelLayer instanceof ThreeDModelLayer)
 {
-   // do something
+    // do something
 }
 ```

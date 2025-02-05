@@ -267,11 +267,11 @@ Set output module item 1 of render queue item 3 with values that you create:
 
 ```javascript
 var crop_data = {
-  "Crop":        true,
-  "Crop Bottom": 0,
-  "Crop Left":   0,
-  "Crop Right":  8,
-  "Crop Top":    10
+    "Crop":        true,
+    "Crop Bottom": 0,
+    "Crop Left":   0,
+    "Crop Right":  8,
+    "Crop Top":    10
 };
 
 app.project.renderQueue.item(1).outputModule(3).setSettings( crop_data );
@@ -286,11 +286,11 @@ var new_dir = new Folder( "~/new_output" );
 var new_path = new_dir.fsName;
 
 var new_data = {
-  "Output File Info": {
-      "Base Path":      new_path,
-      "Subfolder Path": "draft",
-      "File Name":      file_name
-  }
+    "Output File Info": {
+        "Base Path":      new_path,
+        "Subfolder Path": "draft",
+        "File Name":      file_name
+    }
 };
 
 om1.setSettings( new_data );
@@ -307,14 +307,14 @@ var new_path = "/Users/myAccount/new_output";
 var separator = "/";
 
 if ($.os.indexOf("Mac") == -1) {
-  new_path = "C:\Users\myAccount\new_output";
-  separator = "\\";
+    new_path = "C:\Users\myAccount\new_output";
+    separator = "\\";
 }
 
 var new_data = {
-  "Output File Info": {
-    "Full Flat Path": new_path + separator + file_name
-  }
+    "Output File Info": {
+        "Full Flat Path": new_path + separator + file_name
+    }
 };
 
 om1.setSettings( new_data );

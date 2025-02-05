@@ -455,11 +455,11 @@ app.project.renderQueue.item(2).setSettings( rqItem1_settable_str );
 // Set render queue item 3 with values you create.
 
 var my_renderSettings = {
-  "Color Depth":        "32 bits per channel",
-  "Quality":            "Best",
-  "Effects":            "All On",
-  "Time Span Duration": "1.0",
-  "Time Span Start":    "2.0"
+    "Color Depth":        "32 bits per channel",
+    "Quality":            "Best",
+    "Effects":            "All On",
+    "Time Span Duration": "1.0",
+    "Time Span Start":    "2.0"
 };
 
 app.project.renderQueue.item(2).setSettings( my_renderSettings );
