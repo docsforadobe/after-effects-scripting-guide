@@ -1501,10 +1501,10 @@ The value of the named property as evaluated at the specified time. Note that th
 
 #### Parameters
 
-|    Parameter    |         Type         |                                                                                                                                          Description                                                                                                                                          |
-| --------------- | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `time`          | Floating-point value | The time, in seconds, at which to set the value. The beginning of the composition is 0.                                                                                                                                                                                                       |
-| `preExpression` | Boolean              | If the property has an expression and this is `true`, return the value for the specified time without applying the expression to it.<br/>When `false`, return the result of evaluating the expression for the specified time. Ignored if the property does not have an associated expression. |
+|    Parameter    |         Type         |                                                                                                                                        Description                                                                                                                                        |
+| --------------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `time`          | Floating-point value | The time, in seconds, at which to set the value. The beginning of the composition is 0.                                                                                                                                                                                                   |
+| `preExpression` | Boolean              | If the property has an expression and this is `true`, return the value for the specified time without applying the expression to it. When `false`, return the result of evaluating the expression for the specified time. Ignored if the property does not have an associated expression. |
 
 #### Returns
 

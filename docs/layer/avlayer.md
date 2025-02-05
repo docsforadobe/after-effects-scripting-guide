@@ -792,19 +792,25 @@ alert(myLayer.trackMatteType);
 
 Replaces the source for this layer.
 
+!!! warning
+    If this method is performed on a null layer, the layers `isNull` attribute is not changed from `true`. This causes the layer not to be visible in comp viewer and renders.
+
 #### Parameters
 
-|    Parameter     |                Type                 |                                                                                                                                              Description                                                                                                                                              |
-| ---------------- | ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `newSource`      | [AVItem object](../item/avitem.md) | The new source AVItem object.                                                                                                                                                                                                                                                                         |
-| `fixExpressions` | Boolean                             | `true` to adjust expressions for the new source, otherwise `false`.<br/>Note that this feature can be resource-intensive; if replacing a large amount of footage, do this only at the end of the operation. See also [Project.autoFixExpressions()](../general/project.md#projectautofixexpressions). |
++------------------+------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|    Parameter     |                Type                |                                                                                                       Description                                                                                                        |
++==================+====================================+==========================================================================================================================================================================================================================+
+| `newSource`      | [AVItem object](../item/avitem.md) | The new source AVItem object.                                                                                                                                                                                            |
++------------------+------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| `fixExpressions` | Boolean                            | `true` to adjust expressions for the new source, otherwise `false`.                                                                                                                                                      |
+|                  |                                    |                                                                                                                                                                                                                          |
+|                  |                                    | !!! warning                                                                                                                                                                                                              |
+|                  |                                    |      This feature can be resource-intensive; if replacing a large amount of footage, do this only at the end of the operation. See also [Project.autoFixExpressions()](../general/project.md#projectautofixexpressions). |
++------------------+------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 #### Returns
 
 Nothing.
-
-!!! warning
-    If this method is performed on a null layer, the layers `isNull` attribute is not changed from `true`. This causes the layer not to be visible in comp viewer and renders.
 
 ---
 

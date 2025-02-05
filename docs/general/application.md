@@ -721,14 +721,36 @@ Loads color swatch data from an Adobe Swatch Exchange (ASE) file.
 
 The swatch data, in this format:
 
-|                                    Property                                     |                                                                                                                   Description                                                                                                                    |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `data.majorVersion`<br/>`data.minorVersion`                                     | The ASE version number.                                                                                                                                                                                                                          |
-| `data.values`                                                                   | An array of Swatch Value.                                                                                                                                                                                                                        |
-| `SwatchValue.type`                                                              | One of "RGB", "CMYK", "LAB", "Gray"                                                                                                                                                                                                              |
-| `SwatchValue.r`<br/>`SwatchValue.g`<br/>`SwatchValue.b`                         | When `type = "RGB"`, the color values in the range `[0.0..1.0]`.<br/><br/>`[0, 0, 0]` is Black.                                                                                                                                                  |
-| `SwatchValue.c`<br/>`SwatchValue.m`<br/>`SwatchValue.y`<br/>`SwatchValue.k`     | When `type` = "CMYK", the color values in the range `[0.0..1.0]`.<br/>`[0, 0, 0, 0]` is White.                                                                                                                                                   |
-| `SwatchValue.L`<br/>`SwatchValue.a`<br/>`SwatchValue.b`<br/>`SwatchValue.value` | When `type = "LAB"`, the color values.<br/>`L` is in the range `[0.0..1.0]`.<br/>`a` and `b`are in the range `[-128.0..+128.0]`.<br/>`[0, 0, 0]` is Black.<br/><br/>When `type = "Gray"`, the `value` range is `[0.0..1.0]`.<br/>`0.0` is Black. |
++---------------------+-------------------------------------------------------------------+
+|      Property       |                            Description                            |
++=====================+===================================================================+
+| `data.majorVersion` | The ASE version number.                                           |
+| `data.minorVersion` |                                                                   |
++---------------------+-------------------------------------------------------------------+
+| `data.values`       | An array of Swatch Value.                                         |
++---------------------+-------------------------------------------------------------------+
+| `SwatchValue.type`  | One of "RGB", "CMYK", "LAB", "Gray"                               |
++---------------------+-------------------------------------------------------------------+
+| `SwatchValue.r`     | When `type = "RGB"`, the color values in the range `[0.0..1.0]`.  |
+| `SwatchValue.g`     |                                                                   |
+| `SwatchValue.b`     | `[0, 0, 0]` is Black.                                             |
++---------------------+-------------------------------------------------------------------+
+| `SwatchValue.c`     | When `type = "CMYK"`, the color values in the range `[0.0..1.0]`. |
+| `SwatchValue.m`     |                                                                   |
+| `SwatchValue.y`     | `[0, 0, 0, 0]` is White.                                          |
+| `SwatchValue.k`     |                                                                   |
++---------------------+-------------------------------------------------------------------+
+| `SwatchValue.L`     | When `type = "LAB"`, the color values.                            |
+| `SwatchValue.a`     |                                                                   |
+| `SwatchValue.b`     | - `L` is in the range `[0.0..1.0]`                                |
+|                     | - `a` and `b`are in the range `[-128.0..+128.0]`                  |
+|                     |                                                                   |
+|                     | `[0, 0, 0]` is Black.                                             |
++---------------------+-------------------------------------------------------------------+
+| `SwatchValue.value` | When `type = "Gray"`, the `value` range is `[0.0..1.0]`.          |
+|                     |                                                                   |
+|                     | `0.0` is Black.                                                   |
++---------------------+-------------------------------------------------------------------+
 
 ---
 
