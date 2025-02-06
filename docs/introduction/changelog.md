@@ -10,6 +10,11 @@ What's new and changed for scripting?
 
 ## After Effects 25
 
+### [After Effects 25.2 Beta build 98](https://community.adobe.com/t5/after-effects-beta-discussions/animated-environmental-lights-available-now-in-after-effects-beta/td-p/15130220) (February 2025)
+
+- Scripting methods and attributes added:
+    - Updated: [LightLayer.lightSource](../layer/lightlayer.md#lightlayerlightsource)
+
 ### [After Effects 25.0 Beta build 26](https://community.adobe.com/t5/after-effects-beta-discussions/new-in-ae-25-0-build-25-scripting-hooks-for-font-fallback-management/m-p/14809794) (August 2024)
 
 - Scripting methods and attributes added:

@@ -41,13 +41,15 @@ LightLayer defines no additional attributes, but has different AE properties tha
 `app.project.item(index).layer(index).lightSource`
 
 !!! note
-    `LightLayer.lightSource` was added in After Effects 24.3
+    `LightLayer.lightSource` was added in After Effects 24.3, but allowed only HDR and EXR layers as sources.
+
+    In After Effects (Beta) 25.2.0.098, it was updated to allow any 2D layer type as a source.
 
 #### Description
 
 For a light layer, the layer to use as a light source when `LightLayer.lightType` is `LightType.ENVIRONMENT`.
 
-`LightLayer.layerSource` must be a footage layer referencing a .EXR or .HDR footage item. Trying to set this attribute to any other layer produces an error.
+`LightLayer.lightSource` can be any 2D video, still, or pre-composition layer in the same composition. Attempting to assign a 3D layer as the `.lightSource` will result in an "Invalid light source specified" error.
 
 ---
 
