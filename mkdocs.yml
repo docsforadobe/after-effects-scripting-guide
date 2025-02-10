@@ -1,10 +1,13 @@
-# Site metadata
+# Do not modify below line! Inherits common components.
+INHERIT: ./docs/_global/mkdocs.yml
+
+#### Site metadata & nav - update these!
+
 site_name: After Effects Scripting Guide
 site_url: https://ae-scripting.docsforadobe.dev/
 repo_url: https://github.com/docsforadobe/after-effects-scripting-guide/
 repo_name: "after-effects-scripting-guide"
 
-# Customize navigation
 nav:
     - Home: index.md
     - Introduction:
@@ -80,67 +83,29 @@ nav:
         - Effects:
             - First-Party Effect Match Names: matchnames/effects/firstparty.md
 
-
-# Do not touch below-- shared for all docs
-
-copyright: All content is copyright Adobe Systems Incorporated.
+#### Additional config below - modify sparingly!
 
 extra:
-    homepage: https://docsforadobe.dev
+    # Custom guide-specific overrides
+    #
+    # Valid keys are:
+    #     custom_dir: str
+    #     hooks:
+    #         - path/to/hook.py
+    #     not_in_nav:
+    #         - gitignore_style/path/to/exclude
+    #     theme_features:
+    #         - theme.feature
+    overrides: {}
 
+# CSS for this guide
 extra_css:
-    # CSS shared between the whole org
-    - https://docsforadobe.dev/_global/global.css
-    - https://docsforadobe.dev/_global/global-syntax-highlight.css
-
-    # CSS specific to this file
     - _static/extra.css
 
-markdown_extensions:
-    - admonition
-    - markdown_grid_tables
-    - pymdownx.superfences
-    - toc:
-        title: Page Contents
-        permalink: true
-        toc_depth: 3
+# JS for this guide
+extra_javascript:
+    - _static/extra.js
 
-plugins:
-    - git-revision-date-localized
-    - search:
-        separator: '[\s\-,\.:!=\[\]()"/]+'
+markdown_extensions: {}
 
-    # Note: print-site must be last!
-    - print-site:
-        add_cover_page: true
-        add_print_site_banner: true
-        cover_page_template: "overrides/templates/print_site_cover_page.tpl"
-        print_page_title: "Offline Docs"
-        print_site_banner_template: "overrides/templates/print_site_banner.tpl"
-
-theme:
-    name: material
-    custom_dir: overrides
-    features:
-        - announce.dismiss
-        - content.action.edit
-        - content.action.view
-        - search.highlight
-        - search.suggest
-        - toc.follow
-    palette:
-        # Palette toggle for dark mode
-        - media: "(prefers-color-scheme: dark)"
-          primary: black
-          scheme: slate
-          toggle:
-              icon: material/brightness-4
-              name: Switch to light mode
-
-        # Palette toggle for light mode
-        - media: "(prefers-color-scheme: light)"
-          primary: white
-          scheme: default
-          toggle:
-              icon: material/brightness-7
-              name: Switch to dark mode
+plugins: {}
