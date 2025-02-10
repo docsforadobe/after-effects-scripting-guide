@@ -1,0 +1,74 @@
+# Shared config for all repos
+copyright: All content is copyright Adobe Systems Incorporated.
+
+extra:
+    homepage: https://docsforadobe.dev
+
+    # Using overrides here as we can't inherit "extra_css"
+    overrides:
+        extra_css:
+            - docs/_global/css/global.css
+            - docs/_global/css/global-syntax-highlight.css
+        extra_javascript:
+            - docs/_global/js/global.js
+
+hooks:
+    - docs/_global/hooks/merge_inherited_config.py
+
+markdown_extensions:
+    admonition: {}
+    markdown_grid_tables: {}
+    md_in_html: {}
+    pymdownx.details: {}
+    pymdownx.superfences: {}
+    pymdownx.tabbed:
+        alternate_style: true
+    pymdownx.tasklist:
+        custom_checkbox: true
+    toc:
+        title: Page Contents
+        permalink: true
+        toc_depth: 3
+
+not_in_nav: |
+  _global
+
+plugins:
+    git-revision-date-localized: {}
+    search:
+        separator: '[\s\-,\.:!=\[\]()"/]+'
+
+    # Note: print-site must be last!
+    print-site:
+        add_cover_page: true
+        add_print_site_banner: true
+        cover_page_template: "docs/_global/overrides/templates/print_site_cover_page.tpl"
+        print_page_title: "Offline Docs"
+        print_site_banner_template: "docs/_global/overrides/templates/print_site_banner.tpl"
+
+theme:
+    name: material
+    custom_dir: docs/_global/overrides
+    features:
+        - announce.dismiss
+        - content.action.edit
+        - content.action.view
+        - search.highlight
+        - search.suggest
+        - toc.follow
+    palette:
+        # Palette toggle for dark mode
+        - media: "(prefers-color-scheme: dark)"
+          primary: black
+          scheme: slate
+          toggle:
+              icon: material/brightness-4
+              name: Switch to light mode
+
+        # Palette toggle for light mode
+        - media: "(prefers-color-scheme: light)"
+          primary: white
+          scheme: default
+          toggle:
+              icon: material/brightness-7
+              name: Switch to dark mode
