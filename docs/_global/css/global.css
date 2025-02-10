@@ -1,0 +1,4 @@
+/* Fix issue with 'code' text in tables wrapping to multiple lines */
+td code {
+    white-space: nowrap;
+}
