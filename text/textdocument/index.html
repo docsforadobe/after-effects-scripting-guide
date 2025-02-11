@@ -4104,35 +4104,35 @@
 <p>The TextDocument object stores a value for a TextLayer's Source Text property. Create it with the constructor, passing the string to be encapsulated.</p>
 <h4 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h4>
 <p>This sets a value of some source text and displays an alert showing the new value.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">myTextDocument</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">TextDocument</span><span class="p">(</span><span class="s2">&quot;HappyCake&quot;</span><span class="p">);</span>
-<span class="nx">myTextLayer</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="s2">&quot;Source Text&quot;</span><span class="p">).</span><span class="nx">setValue</span><span class="p">(</span><span class="nx">myTextDocument</span><span class="p">);</span>
-<span class="nx">alert</span><span class="p">(</span><span class="nx">myTextLayer</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="s2">&quot;Source Text&quot;</span><span class="p">).</span><span class="nx">value</span><span class="p">);</span>
-</code></pre></div>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-0-1"><span class="kd">var</span><span class="w"> </span><span class="nx">myTextDocument</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">TextDocument</span><span class="p">(</span><span class="s2">&quot;HappyCake&quot;</span><span class="p">);</span>
+</span><span id="__span-0-2"><span class="nx">myTextLayer</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="s2">&quot;Source Text&quot;</span><span class="p">).</span><span class="nx">setValue</span><span class="p">(</span><span class="nx">myTextDocument</span><span class="p">);</span>
+</span><span id="__span-0-3"><span class="nx">alert</span><span class="p">(</span><span class="nx">myTextLayer</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="s2">&quot;Source Text&quot;</span><span class="p">).</span><span class="nx">value</span><span class="p">);</span>
+</span></code></pre></div>
 <p>This sets keyframe values for text that show different words over time</p>
-<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">textProp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myTextLayer</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="s2">&quot;Source Text&quot;</span><span class="p">);</span>
-<span class="nx">textProp</span><span class="p">.</span><span class="nx">setValueAtTime</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">newTextDocument</span><span class="p">(</span><span class="s2">&quot;Happy&quot;</span><span class="p">));</span>
-<span class="nx">textProp</span><span class="p">.</span><span class="nx">setValueAtTime</span><span class="p">(</span><span class="mf">.33</span><span class="p">,</span><span class="w"> </span><span class="nx">newTextDocument</span><span class="p">(</span><span class="s2">&quot;cake&quot;</span><span class="p">));</span>
-<span class="nx">textProp</span><span class="p">.</span><span class="nx">setValueAtTime</span><span class="p">(</span><span class="mf">.66</span><span class="p">,</span><span class="w"> </span><span class="nx">newTextDocument</span><span class="p">(</span><span class="s2">&quot;is&quot;</span><span class="p">));</span>
-<span class="nx">textProp</span><span class="p">.</span><span class="nx">setValueAtTime</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">newTextDocument</span><span class="p">(</span><span class="s2">&quot;yummy!&quot;</span><span class="p">));</span>
-</code></pre></div>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-1-1"><span class="kd">var</span><span class="w"> </span><span class="nx">textProp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myTextLayer</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="s2">&quot;Source Text&quot;</span><span class="p">);</span>
+</span><span id="__span-1-2"><span class="nx">textProp</span><span class="p">.</span><span class="nx">setValueAtTime</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">newTextDocument</span><span class="p">(</span><span class="s2">&quot;Happy&quot;</span><span class="p">));</span>
+</span><span id="__span-1-3"><span class="nx">textProp</span><span class="p">.</span><span class="nx">setValueAtTime</span><span class="p">(</span><span class="mf">.33</span><span class="p">,</span><span class="w"> </span><span class="nx">newTextDocument</span><span class="p">(</span><span class="s2">&quot;cake&quot;</span><span class="p">));</span>
+</span><span id="__span-1-4"><span class="nx">textProp</span><span class="p">.</span><span class="nx">setValueAtTime</span><span class="p">(</span><span class="mf">.66</span><span class="p">,</span><span class="w"> </span><span class="nx">newTextDocument</span><span class="p">(</span><span class="s2">&quot;is&quot;</span><span class="p">));</span>
+</span><span id="__span-1-5"><span class="nx">textProp</span><span class="p">.</span><span class="nx">setValueAtTime</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">newTextDocument</span><span class="p">(</span><span class="s2">&quot;yummy!&quot;</span><span class="p">));</span>
+</span></code></pre></div>
 <p>This sets various character and paragraph settings for some text</p>
-<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">textProp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myTextLayer</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="s2">&quot;Source Text&quot;</span><span class="p">);</span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">textDocument</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">textProp</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
-<span class="nx">myString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Happy holidays!&quot;</span><span class="p">;</span>
-<span class="nx">textDocument</span><span class="p">.</span><span class="nx">resetCharStyle</span><span class="p">();</span>
-<span class="nx">textDocument</span><span class="p">.</span><span class="nx">fontSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">60</span><span class="p">;</span>
-<span class="nx">textDocument</span><span class="p">.</span><span class="nx">fillColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">];</span>
-<span class="nx">textDocument</span><span class="p">.</span><span class="nx">strokeColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">];</span>
-<span class="nx">textDocument</span><span class="p">.</span><span class="nx">strokeWidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
-<span class="nx">textDocument</span><span class="p">.</span><span class="nx">font</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Times New Roman PSMT&quot;</span><span class="p">;</span>
-<span class="nx">textDocument</span><span class="p">.</span><span class="nx">strokeOverFill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
-<span class="nx">textDocument</span><span class="p">.</span><span class="nx">applyStroke</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
-<span class="nx">textDocument</span><span class="p">.</span><span class="nx">applyFill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
-<span class="nx">textDocument</span><span class="p">.</span><span class="nx">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myString</span><span class="p">;</span>
-<span class="nx">textDocument</span><span class="p">.</span><span class="nx">justification</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ParagraphJustification</span><span class="p">.</span><span class="nx">CENTER_JUSTIFY</span><span class="p">;</span>
-<span class="nx">textDocument</span><span class="p">.</span><span class="nx">tracking</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">50</span><span class="p">;</span>
-<span class="nx">textProp</span><span class="p">.</span><span class="nx">setValue</span><span class="p">(</span><span class="nx">textDocument</span><span class="p">);</span>
-</code></pre></div>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-2-1"><span class="kd">var</span><span class="w"> </span><span class="nx">textProp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myTextLayer</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="s2">&quot;Source Text&quot;</span><span class="p">);</span>
+</span><span id="__span-2-2"><span class="kd">var</span><span class="w"> </span><span class="nx">textDocument</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">textProp</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
+</span><span id="__span-2-3"><span class="nx">myString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Happy holidays!&quot;</span><span class="p">;</span>
+</span><span id="__span-2-4"><span class="nx">textDocument</span><span class="p">.</span><span class="nx">resetCharStyle</span><span class="p">();</span>
+</span><span id="__span-2-5"><span class="nx">textDocument</span><span class="p">.</span><span class="nx">fontSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">60</span><span class="p">;</span>
+</span><span id="__span-2-6"><span class="nx">textDocument</span><span class="p">.</span><span class="nx">fillColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">];</span>
+</span><span id="__span-2-7"><span class="nx">textDocument</span><span class="p">.</span><span class="nx">strokeColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">];</span>
+</span><span id="__span-2-8"><span class="nx">textDocument</span><span class="p">.</span><span class="nx">strokeWidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
+</span><span id="__span-2-9"><span class="nx">textDocument</span><span class="p">.</span><span class="nx">font</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Times New Roman PSMT&quot;</span><span class="p">;</span>
+</span><span id="__span-2-10"><span class="nx">textDocument</span><span class="p">.</span><span class="nx">strokeOverFill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+</span><span id="__span-2-11"><span class="nx">textDocument</span><span class="p">.</span><span class="nx">applyStroke</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+</span><span id="__span-2-12"><span class="nx">textDocument</span><span class="p">.</span><span class="nx">applyFill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+</span><span id="__span-2-13"><span class="nx">textDocument</span><span class="p">.</span><span class="nx">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myString</span><span class="p">;</span>
+</span><span id="__span-2-14"><span class="nx">textDocument</span><span class="p">.</span><span class="nx">justification</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ParagraphJustification</span><span class="p">.</span><span class="nx">CENTER_JUSTIFY</span><span class="p">;</span>
+</span><span id="__span-2-15"><span class="nx">textDocument</span><span class="p">.</span><span class="nx">tracking</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">50</span><span class="p">;</span>
+</span><span id="__span-2-16"><span class="nx">textProp</span><span class="p">.</span><span class="nx">setValue</span><span class="p">(</span><span class="nx">textDocument</span><span class="p">);</span>
+</span></code></pre></div>
 <hr />
 <h2 id="attributes">Attributes<a class="headerlink" href="#attributes" title="Permanent link">&para;</a></h2>
 <h3 id="textdocumentallcaps">TextDocument.allCaps<a class="headerlink" href="#textdocumentallcaps" title="Permanent link">&para;</a></h3>
@@ -4250,22 +4250,22 @@
 </div>
 <h4 id="type_7">Type<a class="headerlink" href="#type_7" title="Permanent link">&para;</a></h4>
 <p>Array of floating-point values in the form of</p>
-<div class="highlight"><pre><span></span><code><span class="p">[</span>
-<span class="w">    </span><span class="nx">line0</span><span class="p">.</span><span class="nx">start_x</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">line0</span><span class="p">.</span><span class="nx">start_y</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">line0</span><span class="p">.</span><span class="nx">end_x</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">line0</span><span class="p">.</span><span class="nx">end_y</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">line1</span><span class="p">.</span><span class="nx">start_x</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">line1</span><span class="p">.</span><span class="nx">start_y</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">line1</span><span class="p">.</span><span class="nx">end_x</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">line1</span><span class="p">.</span><span class="nx">end_y</span><span class="p">,</span>
-<span class="w">    </span><span class="p">...</span>
-<span class="w">    </span><span class="nx">lineN</span><span class="o">-</span><span class="mf">1.</span><span class="nx">start_x</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">lineN</span><span class="o">-</span><span class="mf">1.</span><span class="nx">start_y</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">lineN</span><span class="o">-</span><span class="mf">1.</span><span class="nx">end_x</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">lineN</span><span class="o">-</span><span class="mf">1.</span><span class="nx">end_y</span>
-<span class="p">]</span>
-</code></pre></div>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-3-1"><span class="p">[</span>
+</span><span id="__span-3-2"><span class="w">    </span><span class="nx">line0</span><span class="p">.</span><span class="nx">start_x</span><span class="p">,</span>
+</span><span id="__span-3-3"><span class="w">    </span><span class="nx">line0</span><span class="p">.</span><span class="nx">start_y</span><span class="p">,</span>
+</span><span id="__span-3-4"><span class="w">    </span><span class="nx">line0</span><span class="p">.</span><span class="nx">end_x</span><span class="p">,</span>
+</span><span id="__span-3-5"><span class="w">    </span><span class="nx">line0</span><span class="p">.</span><span class="nx">end_y</span><span class="p">,</span>
+</span><span id="__span-3-6"><span class="w">    </span><span class="nx">line1</span><span class="p">.</span><span class="nx">start_x</span><span class="p">,</span>
+</span><span id="__span-3-7"><span class="w">    </span><span class="nx">line1</span><span class="p">.</span><span class="nx">start_y</span><span class="p">,</span>
+</span><span id="__span-3-8"><span class="w">    </span><span class="nx">line1</span><span class="p">.</span><span class="nx">end_x</span><span class="p">,</span>
+</span><span id="__span-3-9"><span class="w">    </span><span class="nx">line1</span><span class="p">.</span><span class="nx">end_y</span><span class="p">,</span>
+</span><span id="__span-3-10"><span class="w">    </span><span class="p">...</span>
+</span><span id="__span-3-11"><span class="w">    </span><span class="nx">lineN</span><span class="o">-</span><span class="mf">1.</span><span class="nx">start_x</span><span class="p">,</span>
+</span><span id="__span-3-12"><span class="w">    </span><span class="nx">lineN</span><span class="o">-</span><span class="mf">1.</span><span class="nx">start_y</span><span class="p">,</span>
+</span><span id="__span-3-13"><span class="w">    </span><span class="nx">lineN</span><span class="o">-</span><span class="mf">1.</span><span class="nx">end_x</span><span class="p">,</span>
+</span><span id="__span-3-14"><span class="w">    </span><span class="nx">lineN</span><span class="o">-</span><span class="mf">1.</span><span class="nx">end_y</span>
+</span><span id="__span-3-15"><span class="p">]</span>
+</span></code></pre></div>
 <hr />
 <h3 id="textdocumentbaselineshift">TextDocument.baselineShift<a class="headerlink" href="#textdocumentbaselineshift" title="Permanent link">&para;</a></h3>
 <p><code>textDocument.baselineShift</code></p>
@@ -4386,10 +4386,10 @@ The box only grows down.</p>
 <h4 id="type_15">Type<a class="headerlink" href="#type_15" title="Permanent link">&para;</a></h4>
 <p>Array of ([X,Y]) position coordinates; read/write.</p>
 <h4 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="c1">// For a paragraph Text layer returns [x, y] position from layer anchor point in layer coordinates.</span>
-<span class="c1">// e.g. approximately [0, -25] with default character panel settings.</span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">boxTextLayerPos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myTextLayer</span><span class="p">.</span><span class="nx">sourceText</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">boxTextPos</span><span class="p">;</span>
-</code></pre></div>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-4-1"><span class="c1">// For a paragraph Text layer returns [x, y] position from layer anchor point in layer coordinates.</span>
+</span><span id="__span-4-2"><span class="c1">// e.g. approximately [0, -25] with default character panel settings.</span>
+</span><span id="__span-4-3"><span class="kd">var</span><span class="w"> </span><span class="nx">boxTextLayerPos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myTextLayer</span><span class="p">.</span><span class="nx">sourceText</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">boxTextPos</span><span class="p">;</span>
+</span></code></pre></div>
 <hr />
 <h3 id="textdocumentboxtextsize">TextDocument.boxTextSize<a class="headerlink" href="#textdocumentboxtextsize" title="Permanent link">&para;</a></h3>
 <p><code>textDocument.boxTextSize</code></p>
@@ -4547,8 +4547,8 @@ The box only grows down.</p>
 <h4 id="type_24">Type<a class="headerlink" href="#type_24" title="Permanent link">&para;</a></h4>
 <p>Boolean; read/write.</p>
 <h4 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">isFauxBold</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myTextLayer</span><span class="p">.</span><span class="nx">sourceText</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">fauxBold</span><span class="p">;</span>
-</code></pre></div>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-5-1"><span class="kd">var</span><span class="w"> </span><span class="nx">isFauxBold</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myTextLayer</span><span class="p">.</span><span class="nx">sourceText</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">fauxBold</span><span class="p">;</span>
+</span></code></pre></div>
 <hr />
 <h3 id="textdocumentfauxitalic">TextDocument.fauxItalic<a class="headerlink" href="#textdocumentfauxitalic" title="Permanent link">&para;</a></h3>
 <p><code>textDocument.fauxItalic</code></p>
@@ -4765,8 +4765,8 @@ The Font instance returned in the case of duplicate PostScript names will be the
 <h4 id="type_37">Type<a class="headerlink" href="#type_37" title="Permanent link">&para;</a></h4>
 <p>Floating-point value; read-write.</p>
 <h4 id="example_2">Example<a class="headerlink" href="#example_2" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">valOfHScale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myTextLayer</span><span class="p">.</span><span class="nx">sourceText</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">horizontalScale</span><span class="p">;</span>
-</code></pre></div>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-6-1"><span class="kd">var</span><span class="w"> </span><span class="nx">valOfHScale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myTextLayer</span><span class="p">.</span><span class="nx">sourceText</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">horizontalScale</span><span class="p">;</span>
+</span></code></pre></div>
 <hr />
 <h3 id="textdocumentjustification">TextDocument.justification<a class="headerlink" href="#textdocumentjustification" title="Permanent link">&para;</a></h3>
 <p><code>textDocument.justification</code></p>
@@ -4829,15 +4829,15 @@ The Font instance returned in the case of duplicate PostScript names will be the
 <h4 id="type_40">Type<a class="headerlink" href="#type_40" title="Permanent link">&para;</a></h4>
 <p>Floating-point value; read/write.</p>
 <h4 id="example_3">Example<a class="headerlink" href="#example_3" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="c1">// This creates a Text layer and sets the leading to 100</span>
-
-<span class="kd">var</span><span class="w"> </span><span class="nx">composition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">activeItem</span><span class="p">;</span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">myTextLayer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">comp</span><span class="p">.</span><span class="nx">layers</span><span class="p">.</span><span class="nx">addText</span><span class="p">(</span><span class="s2">&quot;Spring\nSummer\nAutumn\nWinter&quot;</span><span class="p">);</span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">myTextSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myTextLayer</span><span class="p">.</span><span class="nx">sourceText</span><span class="p">;</span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">myTextDocument</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myTextSource</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
-<span class="nx">myTextDocument</span><span class="p">.</span><span class="nx">leading</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">100</span><span class="p">;</span>
-<span class="nx">myTextSource</span><span class="p">.</span><span class="nx">setValue</span><span class="p">(</span><span class="nx">myTextDocument</span><span class="p">);</span>
-</code></pre></div>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-7-1"><span class="c1">// This creates a Text layer and sets the leading to 100</span>
+</span><span id="__span-7-2">
+</span><span id="__span-7-3"><span class="kd">var</span><span class="w"> </span><span class="nx">composition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">activeItem</span><span class="p">;</span>
+</span><span id="__span-7-4"><span class="kd">var</span><span class="w"> </span><span class="nx">myTextLayer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">comp</span><span class="p">.</span><span class="nx">layers</span><span class="p">.</span><span class="nx">addText</span><span class="p">(</span><span class="s2">&quot;Spring\nSummer\nAutumn\nWinter&quot;</span><span class="p">);</span>
+</span><span id="__span-7-5"><span class="kd">var</span><span class="w"> </span><span class="nx">myTextSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myTextLayer</span><span class="p">.</span><span class="nx">sourceText</span><span class="p">;</span>
+</span><span id="__span-7-6"><span class="kd">var</span><span class="w"> </span><span class="nx">myTextDocument</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myTextSource</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
+</span><span id="__span-7-7"><span class="nx">myTextDocument</span><span class="p">.</span><span class="nx">leading</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">100</span><span class="p">;</span>
+</span><span id="__span-7-8"><span class="nx">myTextSource</span><span class="p">.</span><span class="nx">setValue</span><span class="p">(</span><span class="nx">myTextDocument</span><span class="p">);</span>
+</span></code></pre></div>
 <hr />
 <h3 id="textdocumentleadingtype">TextDocument.leadingType<a class="headerlink" href="#textdocumentleadingtype" title="Permanent link">&para;</a></h3>
 <p><code>textDocument.leadingType</code></p>
@@ -5464,7 +5464,7 @@ Key <code>end</code> will be set to text index of the end of the paragraph (grea
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "search.highlight", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.copy", "search.highlight", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>

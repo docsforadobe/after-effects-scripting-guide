@@ -1,4 +1,7 @@
-/* Fix issue with 'code' text in tables wrapping to multiple lines */
-td code {
+/*
+    Fix issue with 'code' text in tables wrapping to multiple lines
+    Excludes any preformatted code blocks within tables
+*/
+td code:not(.md-code__content) {
     white-space: nowrap;
 }

@@ -3401,26 +3401,26 @@
 </ul>
 <h4 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h4>
 <p>The following sample code checks the current computer's available GPU acceleration types, and sets it to Metal if available.</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// app.availableGPUAccelTypes returns GPU acceleration types available on the current system.</span>
-<span class="c1">// You can use this to check before setting the GPU acceleration type.</span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">newType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">GpuAccelType</span><span class="p">.</span><span class="nx">METAL</span><span class="p">;</span>
-
-<span class="c1">// Before trying to set, check which GPU acceleration types are available on the current system.</span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">canSet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">currentOptions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">availableGPUAccelTypes</span><span class="p">;</span>
-<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">op</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">currentOptions</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">currentOptions</span><span class="p">[</span><span class="nx">op</span><span class="p">]</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">newType</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nx">canSet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">canSet</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Set the GPU acceleration type.</span>
-<span class="w">    </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">gpuAccelType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">newType</span><span class="p">;</span>
-<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Metal is not available on this OS.&quot;</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-0-1"><span class="c1">// app.availableGPUAccelTypes returns GPU acceleration types available on the current system.</span>
+</span><span id="__span-0-2"><span class="c1">// You can use this to check before setting the GPU acceleration type.</span>
+</span><span id="__span-0-3"><span class="kd">var</span><span class="w"> </span><span class="nx">newType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">GpuAccelType</span><span class="p">.</span><span class="nx">METAL</span><span class="p">;</span>
+</span><span id="__span-0-4">
+</span><span id="__span-0-5"><span class="c1">// Before trying to set, check which GPU acceleration types are available on the current system.</span>
+</span><span id="__span-0-6"><span class="kd">var</span><span class="w"> </span><span class="nx">canSet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+</span><span id="__span-0-7"><span class="kd">var</span><span class="w"> </span><span class="nx">currentOptions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">availableGPUAccelTypes</span><span class="p">;</span>
+</span><span id="__span-0-8"><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">op</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">currentOptions</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-9"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">currentOptions</span><span class="p">[</span><span class="nx">op</span><span class="p">]</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">newType</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-10"><span class="w">        </span><span class="nx">canSet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+</span><span id="__span-0-11"><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-12"><span class="p">}</span>
+</span><span id="__span-0-13">
+</span><span id="__span-0-14"><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">canSet</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-15"><span class="w">    </span><span class="c1">// Set the GPU acceleration type.</span>
+</span><span id="__span-0-16"><span class="w">    </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">gpuAccelType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">newType</span><span class="p">;</span>
+</span><span id="__span-0-17"><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-18"><span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Metal is not available on this OS.&quot;</span><span class="p">);</span>
+</span><span id="__span-0-19"><span class="p">}</span>
+</span></code></pre></div>
 <hr />
 <h3 id="appbuildname">app.buildName<a class="headerlink" href="#appbuildname" title="Permanent link">&para;</a></h3>
 <p><code>app.buildName</code></p>
@@ -3485,8 +3485,8 @@
 </tbody>
 </table>
 <h4 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">effectName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">effects</span><span class="p">[</span><span class="mf">12</span><span class="p">].</span><span class="nx">displayName</span><span class="p">;</span>
-</code></pre></div>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-1-1"><span class="kd">var</span><span class="w"> </span><span class="nx">effectName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">effects</span><span class="p">[</span><span class="mf">12</span><span class="p">].</span><span class="nx">displayName</span><span class="p">;</span>
+</span></code></pre></div>
 <hr />
 <h3 id="appexitafterlaunchandeval">app.exitAfterLaunchAndEval<a class="headerlink" href="#appexitafterlaunchandeval" title="Permanent link">&para;</a></h3>
 <p><code>app.exitAfterLaunchAndEval</code></p>
@@ -3508,8 +3508,8 @@
 <h4 id="type_7">Type<a class="headerlink" href="#type_7" title="Permanent link">&para;</a></h4>
 <p>Integer; read/write.</p>
 <h4 id="example_2">Example<a class="headerlink" href="#example_2" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="nx">app</span><span class="p">.</span><span class="nx">exitCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// on quit, if value is 2, an error has occurred</span>
-</code></pre></div>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-2-1"><span class="nx">app</span><span class="p">.</span><span class="nx">exitCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// on quit, if value is 2, an error has occurred</span>
+</span></code></pre></div>
 <hr />
 <h3 id="appfonts">app.fonts<a class="headerlink" href="#appfonts" title="Permanent link">&para;</a></h3>
 <p><code>app.fonts</code></p>
@@ -3542,15 +3542,15 @@
 <li><code>ko_KR</code> for Korean (Korea)</li>
 </ul>
 <h4 id="example_3">Example<a class="headerlink" href="#example_3" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">lang</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">isoLanguage</span><span class="p">;</span>
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">lang</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;en_US&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;After Effects is running in English.&quot;</span><span class="p">);</span>
-<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">lang</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;fr_FR&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;After Effects is running in French.&quot;</span><span class="p">);</span>
-<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;After Effects is running not in English or French.&quot;</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-3-1"><span class="kd">var</span><span class="w"> </span><span class="nx">lang</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">isoLanguage</span><span class="p">;</span>
+</span><span id="__span-3-2"><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">lang</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;en_US&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-3"><span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;After Effects is running in English.&quot;</span><span class="p">);</span>
+</span><span id="__span-3-4"><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">lang</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;fr_FR&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-5"><span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;After Effects is running in French.&quot;</span><span class="p">);</span>
+</span><span id="__span-3-6"><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-7"><span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;After Effects is running not in English or French.&quot;</span><span class="p">);</span>
+</span><span id="__span-3-8"><span class="p">}</span>
+</span></code></pre></div>
 <hr />
 <h3 id="appisrenderengine">app.isRenderEngine<a class="headerlink" href="#appisrenderengine" title="Permanent link">&para;</a></h3>
 <p><code>app.isRenderEngine</code></p>
@@ -3580,11 +3580,11 @@
 <h4 id="type_13">Type<a class="headerlink" href="#type_13" title="Permanent link">&para;</a></h4>
 <p>A function name string, or <code>null</code> if no function is assigned; read/write.</p>
 <h4 id="example_4">Example<a class="headerlink" href="#example_4" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">err</span><span class="p">(</span><span class="nx">errString</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="nx">errString</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nx">app</span><span class="p">.</span><span class="nx">onError</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">err</span><span class="p">;</span>
-</code></pre></div>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-4-1"><span class="kd">function</span><span class="w"> </span><span class="nx">err</span><span class="p">(</span><span class="nx">errString</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-2"><span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="nx">errString</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+</span><span id="__span-4-3"><span class="p">}</span>
+</span><span id="__span-4-4"><span class="nx">app</span><span class="p">.</span><span class="nx">onError</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">err</span><span class="p">;</span>
+</span></code></pre></div>
 <hr />
 <h3 id="apppreferences">app.preferences<a class="headerlink" href="#apppreferences" title="Permanent link">&para;</a></h3>
 <p><code>app.preferences</code></p>
@@ -3626,9 +3626,9 @@
 <h4 id="type_18">Type<a class="headerlink" href="#type_18" title="Permanent link">&para;</a></h4>
 <p>String; read-only.</p>
 <h4 id="example_5">Example<a class="headerlink" href="#example_5" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">ver</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">version</span><span class="p">;</span>
-<span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;This machine is running version &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">ver</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot; of AfterEffects.&quot;</span><span class="p">);</span>
-</code></pre></div>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-5-1"><span class="kd">var</span><span class="w"> </span><span class="nx">ver</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">version</span><span class="p">;</span>
+</span><span id="__span-5-2"><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;This machine is running version &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">ver</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot; of AfterEffects.&quot;</span><span class="p">);</span>
+</span></code></pre></div>
 <hr />
 <h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h2>
 <h3 id="appactivate">app.activate()<a class="headerlink" href="#appactivate" title="Permanent link">&para;</a></h3>
@@ -3776,9 +3776,9 @@
 <h4 id="returns_7">Returns<a class="headerlink" href="#returns_7" title="Permanent link">&para;</a></h4>
 <p>None.</p>
 <h4 id="example_6">Example<a class="headerlink" href="#example_6" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="c1">// calls the Convert to Bezier Path command</span>
-<span class="nx">app</span><span class="p">.</span><span class="nx">executeCommand</span><span class="p">(</span><span class="mf">4162</span><span class="p">);</span>
-</code></pre></div>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-6-1"><span class="c1">// calls the Convert to Bezier Path command</span>
+</span><span id="__span-6-2"><span class="nx">app</span><span class="p">.</span><span class="nx">executeCommand</span><span class="p">(</span><span class="mf">4162</span><span class="p">);</span>
+</span></code></pre></div>
 <hr />
 <h3 id="appfindmenucommandid">app.findMenuCommandId()<a class="headerlink" href="#appfindmenucommandid" title="Permanent link">&para;</a></h3>
 <p><code>app.findMenuCommandId(command)</code></p>
@@ -3810,8 +3810,8 @@
 <h4 id="returns_8">Returns<a class="headerlink" href="#returns_8" title="Permanent link">&para;</a></h4>
 <p>Integer, the ID number of the menu command.</p>
 <h4 id="example_7">Example<a class="headerlink" href="#example_7" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="nx">app</span><span class="p">.</span><span class="nx">findMenuCommandId</span><span class="p">(</span><span class="s2">&quot;Convert To Bezier Path&quot;</span><span class="p">)</span>
-</code></pre></div>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-7-1"><span class="nx">app</span><span class="p">.</span><span class="nx">findMenuCommandId</span><span class="p">(</span><span class="s2">&quot;Convert To Bezier Path&quot;</span><span class="p">)</span>
+</span></code></pre></div>
 <hr />
 <h3 id="appnewproject">app.newProject()<a class="headerlink" href="#appnewproject" title="Permanent link">&para;</a></h3>
 <p><code>app.newProject()</code></p>
@@ -3823,9 +3823,9 @@
 <h4 id="returns_9">Returns<a class="headerlink" href="#returns_9" title="Permanent link">&para;</a></h4>
 <p>A new Project object, or <code>null</code> if no new project is created.</p>
 <h4 id="example_8">Example<a class="headerlink" href="#example_8" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">close</span><span class="p">(</span><span class="nx">CloseOptions</span><span class="p">.</span><span class="nx">DO_NOT_SAVE_CHANGES</span><span class="p">);</span>
-<span class="nx">app</span><span class="p">.</span><span class="nx">newProject</span><span class="p">();</span>
-</code></pre></div>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-8-1"><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">close</span><span class="p">(</span><span class="nx">CloseOptions</span><span class="p">.</span><span class="nx">DO_NOT_SAVE_CHANGES</span><span class="p">);</span>
+</span><span id="__span-8-2"><span class="nx">app</span><span class="p">.</span><span class="nx">newProject</span><span class="p">();</span>
+</span></code></pre></div>
 <hr />
 <h3 id="appopen">app.open()<a class="headerlink" href="#appopen" title="Permanent link">&para;</a></h3>
 <p><code>app.open()</code></p>
@@ -3852,14 +3852,14 @@
 <h4 id="returns_10">Returns<a class="headerlink" href="#returns_10" title="Permanent link">&para;</a></h4>
 <p>A new Project object for the specified project, or <code>null</code> if the user cancels the Open dialog box.</p>
 <h4 id="example_9">Example<a class="headerlink" href="#example_9" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">my_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">File</span><span class="p">(</span><span class="s2">&quot;../my_folder/my_test.aep&quot;</span><span class="p">);</span>
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">my_file</span><span class="p">.</span><span class="nx">exists</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">new_project</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">my_file</span><span class="p">);</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">new_project</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nx">alert</span><span class="p">(</span><span class="nx">new_project</span><span class="p">.</span><span class="nx">file</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-9-1"><span class="kd">var</span><span class="w"> </span><span class="nx">my_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">File</span><span class="p">(</span><span class="s2">&quot;../my_folder/my_test.aep&quot;</span><span class="p">);</span>
+</span><span id="__span-9-2"><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">my_file</span><span class="p">.</span><span class="nx">exists</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-3"><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">new_project</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">my_file</span><span class="p">);</span>
+</span><span id="__span-9-4"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">new_project</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-5"><span class="w">        </span><span class="nx">alert</span><span class="p">(</span><span class="nx">new_project</span><span class="p">.</span><span class="nx">file</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+</span><span id="__span-9-6"><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-9-7"><span class="p">}</span>
+</span></code></pre></div>
 <hr />
 <h3 id="appopenfast">app.openFast()<a class="headerlink" href="#appopenfast" title="Permanent link">&para;</a></h3>
 <p><code>app.openFast(file)</code></p>
@@ -3889,24 +3889,24 @@
 <h4 id="returns_11">Returns<a class="headerlink" href="#returns_11" title="Permanent link">&para;</a></h4>
 <p>A new Project object for the specified project.</p>
 <h4 id="example_10">Example<a class="headerlink" href="#example_10" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">projectFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">File</span><span class="p">(</span><span class="s2">&quot;someFile.aep&quot;</span><span class="p">);</span>
-
-<span class="nx">$</span><span class="p">.</span><span class="nx">hiresTimer</span><span class="p">;</span>
-<span class="nx">app</span><span class="p">.</span><span class="nx">openFast</span><span class="p">(</span><span class="nx">projectFile</span><span class="p">);</span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">fastEnd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">.</span><span class="nx">hiresTimer</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">1000</span><span class="p">;</span>
-
-<span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">close</span><span class="p">(</span><span class="nx">CloseOptions</span><span class="p">.</span><span class="nx">DO_NOT_SAVE_CHANGES</span><span class="p">);</span>
-
-<span class="nx">$</span><span class="p">.</span><span class="nx">hiresTimer</span><span class="p">;</span>
-<span class="nx">app</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">projectFile</span><span class="p">);</span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">normalEnd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">.</span><span class="nx">hiresTimer</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">1000</span><span class="p">;</span>
-
-<span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">close</span><span class="p">(</span><span class="nx">CloseOptions</span><span class="p">.</span><span class="nx">DO_NOT_SAVE_CHANGES</span><span class="p">);</span>
-
-<span class="nx">alert</span><span class="p">(</span><span class="w"> </span><span class="s2">&quot;The difference is &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">normalEnd</span><span class="o">-</span><span class="nx">fastEnd</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot; ms&quot;</span><span class="w"> </span><span class="o">+</span>
-<span class="w">        </span><span class="s2">&quot;\n\nFast: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">fastEnd</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot; ms&quot;</span><span class="w"> </span><span class="o">+</span>
-<span class="w">        </span><span class="s2">&quot;\nNormal:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">normalEnd</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot; ms&quot;</span><span class="w"> </span><span class="p">);</span>
-</code></pre></div>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-10-1"><span class="kd">var</span><span class="w"> </span><span class="nx">projectFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">File</span><span class="p">(</span><span class="s2">&quot;someFile.aep&quot;</span><span class="p">);</span>
+</span><span id="__span-10-2">
+</span><span id="__span-10-3"><span class="nx">$</span><span class="p">.</span><span class="nx">hiresTimer</span><span class="p">;</span>
+</span><span id="__span-10-4"><span class="nx">app</span><span class="p">.</span><span class="nx">openFast</span><span class="p">(</span><span class="nx">projectFile</span><span class="p">);</span>
+</span><span id="__span-10-5"><span class="kd">var</span><span class="w"> </span><span class="nx">fastEnd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">.</span><span class="nx">hiresTimer</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">1000</span><span class="p">;</span>
+</span><span id="__span-10-6">
+</span><span id="__span-10-7"><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">close</span><span class="p">(</span><span class="nx">CloseOptions</span><span class="p">.</span><span class="nx">DO_NOT_SAVE_CHANGES</span><span class="p">);</span>
+</span><span id="__span-10-8">
+</span><span id="__span-10-9"><span class="nx">$</span><span class="p">.</span><span class="nx">hiresTimer</span><span class="p">;</span>
+</span><span id="__span-10-10"><span class="nx">app</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">projectFile</span><span class="p">);</span>
+</span><span id="__span-10-11"><span class="kd">var</span><span class="w"> </span><span class="nx">normalEnd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">.</span><span class="nx">hiresTimer</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">1000</span><span class="p">;</span>
+</span><span id="__span-10-12">
+</span><span id="__span-10-13"><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">close</span><span class="p">(</span><span class="nx">CloseOptions</span><span class="p">.</span><span class="nx">DO_NOT_SAVE_CHANGES</span><span class="p">);</span>
+</span><span id="__span-10-14">
+</span><span id="__span-10-15"><span class="nx">alert</span><span class="p">(</span><span class="w"> </span><span class="s2">&quot;The difference is &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">normalEnd</span><span class="o">-</span><span class="nx">fastEnd</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot; ms&quot;</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-10-16"><span class="w">        </span><span class="s2">&quot;\n\nFast: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">fastEnd</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot; ms&quot;</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-10-17"><span class="w">        </span><span class="s2">&quot;\nNormal:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">normalEnd</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot; ms&quot;</span><span class="w"> </span><span class="p">);</span>
+</span></code></pre></div>
 <hr />
 <h3 id="appparseswatchfile">app.parseSwatchFile()<a class="headerlink" href="#appparseswatchfile" title="Permanent link">&para;</a></h3>
 <p><code>app.parseSwatchFile(file)</code></p>
@@ -4251,9 +4251,9 @@ After execution of the script is complete, these settings will be reset to what 
 <h4 id="returns_20">Returns<a class="headerlink" href="#returns_20" title="Permanent link">&para;</a></h4>
 <p>Nothing.</p>
 <h4 id="example_11">Example<a class="headerlink" href="#example_11" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">theFolder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Folder</span><span class="p">(</span><span class="s2">&quot;c:/tool&quot;</span><span class="p">);</span>
-<span class="nx">app</span><span class="p">.</span><span class="nx">watchFolder</span><span class="p">(</span><span class="nx">theFolder</span><span class="p">);</span>
-</code></pre></div>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-11-1"><span class="kd">var</span><span class="w"> </span><span class="nx">theFolder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Folder</span><span class="p">(</span><span class="s2">&quot;c:/tool&quot;</span><span class="p">);</span>
+</span><span id="__span-11-2"><span class="nx">app</span><span class="p">.</span><span class="nx">watchFolder</span><span class="p">(</span><span class="nx">theFolder</span><span class="p">);</span>
+</span></code></pre></div>
 <h4 id="see-also_2">See Also<a class="headerlink" href="#see-also_2" title="Permanent link">&para;</a></h4>
 <ul>
 <li><a href="#appendwatchfolder">app.endWatchFolder()</a></li>
@@ -4343,7 +4343,7 @@ After execution of the script is complete, these settings will be reset to what 
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "search.highlight", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.copy", "search.highlight", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>

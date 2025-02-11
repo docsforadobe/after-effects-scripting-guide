@@ -2974,13 +2974,13 @@
 <h4 id="type_4">Type<a class="headerlink" href="#type_4" title="Permanent link">&para;</a></h4>
 <p>A function name string, or <code>null</code> if no function is assigned.</p>
 <h4 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">myStatusChanged</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">renderQueue</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">status</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">renderQueue</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">onstatus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myStatusChanged</span><span class="p">();</span>
-<span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">renderQueue</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">render</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w"> </span><span class="c1">// changes status and shows dialog</span>
-</code></pre></div>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-0-1"><span class="kd">function</span><span class="w"> </span><span class="nx">myStatusChanged</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-2"><span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">renderQueue</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">status</span><span class="p">);</span>
+</span><span id="__span-0-3"><span class="p">}</span>
+</span><span id="__span-0-4">
+</span><span id="__span-0-5"><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">renderQueue</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">onstatus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myStatusChanged</span><span class="p">();</span>
+</span><span id="__span-0-6"><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">renderQueue</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">render</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w"> </span><span class="c1">// changes status and shows dialog</span>
+</span></code></pre></div>
 <hr />
 <h3 id="renderqueueitemoutputmodules">RenderQueueItem.outputModules<a class="headerlink" href="#renderqueueitemoutputmodules" title="Permanent link">&para;</a></h3>
 <p><code>app.project.renderQueue.item(index).outputModules</code></p>
@@ -3112,13 +3112,13 @@
 <li>Archived version: <a href="https://web.archive.org/web/20200622100656/https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva">https://web.archive.org/web/20200622100656/https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva</a></li>
 </ul>
 <h4 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="c1">// Get current value of render setting&#39;s &quot;Proxy Use&quot;</span>
-<span class="c1">// Key and value strings are English.</span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">rqItem1_proxyUse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">renderQueue</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">getSetting</span><span class="p">(</span><span class="s2">&quot;Proxy Use&quot;</span><span class="p">);</span>
-
-<span class="c1">// Get string version of same setting, add &quot;-str&quot; at the end of key string</span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">rqItem1_proxyUse_str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">renderQueue</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">getSetting</span><span class="p">(</span><span class="s2">&quot;Proxy Use-str&quot;</span><span class="p">);</span>
-</code></pre></div>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-1-1"><span class="c1">// Get current value of render setting&#39;s &quot;Proxy Use&quot;</span>
+</span><span id="__span-1-2"><span class="c1">// Key and value strings are English.</span>
+</span><span id="__span-1-3"><span class="kd">var</span><span class="w"> </span><span class="nx">rqItem1_proxyUse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">renderQueue</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">getSetting</span><span class="p">(</span><span class="s2">&quot;Proxy Use&quot;</span><span class="p">);</span>
+</span><span id="__span-1-4">
+</span><span id="__span-1-5"><span class="c1">// Get string version of same setting, add &quot;-str&quot; at the end of key string</span>
+</span><span id="__span-1-6"><span class="kd">var</span><span class="w"> </span><span class="nx">rqItem1_proxyUse_str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">renderQueue</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">getSetting</span><span class="p">(</span><span class="s2">&quot;Proxy Use-str&quot;</span><span class="p">);</span>
+</span></code></pre></div>
 <hr />
 <h3 id="renderqueueitemgetsettings">RenderQueueItem.getSettings()<a class="headerlink" href="#renderqueueitemgetsettings" title="Permanent link">&para;</a></h3>
 <p><code>app.project.renderQueue.item(index).getSettings()</code></p>
@@ -3133,12 +3133,12 @@
 <li>Archived version: <a href="https://web.archive.org/web/20200622100656/https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva">https://web.archive.org/web/20200622100656/https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva</a></li>
 </ul>
 <h4 id="example_2">Example<a class="headerlink" href="#example_2" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="c1">// Get object that contains all possible values of all render settings of</span>
-<span class="c1">// render queue item 1 and convert to JSON format.</span>
-
-<span class="kd">var</span><span class="w"> </span><span class="nx">rqItem1_spec_str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">renderQueue</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">getSettings</span><span class="p">(</span><span class="nx">GetSettingsFormat</span><span class="p">.</span><span class="nx">SPEC</span><span class="p">);</span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">rqItem1_spec_str_json</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">rqItem1_spec_str</span><span class="p">.</span><span class="nx">toSource</span><span class="p">();</span>
-</code></pre></div>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-2-1"><span class="c1">// Get object that contains all possible values of all render settings of</span>
+</span><span id="__span-2-2"><span class="c1">// render queue item 1 and convert to JSON format.</span>
+</span><span id="__span-2-3">
+</span><span id="__span-2-4"><span class="kd">var</span><span class="w"> </span><span class="nx">rqItem1_spec_str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">renderQueue</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">getSettings</span><span class="p">(</span><span class="nx">GetSettingsFormat</span><span class="p">.</span><span class="nx">SPEC</span><span class="p">);</span>
+</span><span id="__span-2-5"><span class="kd">var</span><span class="w"> </span><span class="nx">rqItem1_spec_str_json</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">rqItem1_spec_str</span><span class="p">.</span><span class="nx">toSource</span><span class="p">();</span>
+</span></code></pre></div>
 <hr />
 <h3 id="renderqueueitemoutputmodule">RenderQueueItem.outputModule()<a class="headerlink" href="#renderqueueitemoutputmodule" title="Permanent link">&para;</a></h3>
 <p><code>app.project.renderQueue.item(index).outputModule(index)</code></p>
@@ -3208,15 +3208,15 @@
 <p>Depreciated Source: <a href="https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva">https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva</a></p>
 <p>Archived version: <a href="https://web.archive.org/web/20200622100656/https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva">https://web.archive.org/web/20200622100656/https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva</a></p>
 <h4 id="example_3">Example<a class="headerlink" href="#example_3" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="c1">// Set value of &quot;Proxy Use&quot; to &quot;Use All Proxies&quot;</span>
-
-<span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">renderQueue</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">setSetting</span><span class="p">(</span><span class="s2">&quot;Proxy Use&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Use All Proxies&quot;</span><span class="p">);</span>
-
-<span class="c1">// You can use numbers, too.</span>
-<span class="c1">// The next line does the same as the previous example.</span>
-
-<span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">renderQueue</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">setSetting</span><span class="p">(</span><span class="s2">&quot;Proxy Use&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">);</span>
-</code></pre></div>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-3-1"><span class="c1">// Set value of &quot;Proxy Use&quot; to &quot;Use All Proxies&quot;</span>
+</span><span id="__span-3-2">
+</span><span id="__span-3-3"><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">renderQueue</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">setSetting</span><span class="p">(</span><span class="s2">&quot;Proxy Use&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Use All Proxies&quot;</span><span class="p">);</span>
+</span><span id="__span-3-4">
+</span><span id="__span-3-5"><span class="c1">// You can use numbers, too.</span>
+</span><span id="__span-3-6"><span class="c1">// The next line does the same as the previous example.</span>
+</span><span id="__span-3-7">
+</span><span id="__span-3-8"><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">renderQueue</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">setSetting</span><span class="p">(</span><span class="s2">&quot;Proxy Use&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">);</span>
+</span></code></pre></div>
 <hr />
 <h3 id="renderqueueitemsetsettings">RenderQueueItem.setSettings()<a class="headerlink" href="#renderqueueitemsetsettings" title="Permanent link">&para;</a></h3>
 <p><code>app.project.renderQueue.item(index).setSettings()</code></p>
@@ -3231,30 +3231,30 @@
 <li>Archived version: <a href="https://web.archive.org/web/20200622100656/https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva">https://web.archive.org/web/20200622100656/https://blogs.adobe.com/creativecloud/new-changed-after-effects-cc-2014/?segment=dva</a></li>
 </ul>
 <h4 id="example_4">Example<a class="headerlink" href="#example_4" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="c1">// Get an object that contains string version of settable render setting</span>
-<span class="c1">// values of render queue item 1.</span>
-<span class="c1">// To get the values in the number format, use</span>
-<span class="c1">// GetSettingsFormat.NUMBER_SETTABLE as an argument.</span>
-
-<span class="kd">var</span><span class="w"> </span><span class="nx">rqItem1_settable_str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">renderQueue</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">getSettings</span><span class="p">(</span><span class="w"> </span><span class="nx">GetSettingsFormat</span><span class="p">.</span><span class="nx">STRING_SETTABLE</span><span class="w"> </span><span class="p">);</span>
-
-<span class="c1">// Set render queue item 2 with values that you got from render</span>
-<span class="c1">//queue item 1.</span>
-
-<span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">renderQueue</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">2</span><span class="p">).</span><span class="nx">setSettings</span><span class="p">(</span><span class="w"> </span><span class="nx">rqItem1_settable_str</span><span class="w"> </span><span class="p">);</span>
-
-<span class="c1">// Set render queue item 3 with values you create.</span>
-
-<span class="kd">var</span><span class="w"> </span><span class="nx">my_renderSettings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="s2">&quot;Color Depth&quot;</span><span class="o">:</span><span class="w">        </span><span class="s2">&quot;32 bits per channel&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="s2">&quot;Quality&quot;</span><span class="o">:</span><span class="w">            </span><span class="s2">&quot;Best&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="s2">&quot;Effects&quot;</span><span class="o">:</span><span class="w">            </span><span class="s2">&quot;All On&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="s2">&quot;Time Span Duration&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;1.0&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="s2">&quot;Time Span Start&quot;</span><span class="o">:</span><span class="w">    </span><span class="s2">&quot;2.0&quot;</span>
-<span class="p">};</span>
-
-<span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">renderQueue</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">2</span><span class="p">).</span><span class="nx">setSettings</span><span class="p">(</span><span class="w"> </span><span class="nx">my_renderSettings</span><span class="w"> </span><span class="p">);</span>
-</code></pre></div>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-4-1"><span class="c1">// Get an object that contains string version of settable render setting</span>
+</span><span id="__span-4-2"><span class="c1">// values of render queue item 1.</span>
+</span><span id="__span-4-3"><span class="c1">// To get the values in the number format, use</span>
+</span><span id="__span-4-4"><span class="c1">// GetSettingsFormat.NUMBER_SETTABLE as an argument.</span>
+</span><span id="__span-4-5">
+</span><span id="__span-4-6"><span class="kd">var</span><span class="w"> </span><span class="nx">rqItem1_settable_str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">renderQueue</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">getSettings</span><span class="p">(</span><span class="w"> </span><span class="nx">GetSettingsFormat</span><span class="p">.</span><span class="nx">STRING_SETTABLE</span><span class="w"> </span><span class="p">);</span>
+</span><span id="__span-4-7">
+</span><span id="__span-4-8"><span class="c1">// Set render queue item 2 with values that you got from render</span>
+</span><span id="__span-4-9"><span class="c1">//queue item 1.</span>
+</span><span id="__span-4-10">
+</span><span id="__span-4-11"><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">renderQueue</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">2</span><span class="p">).</span><span class="nx">setSettings</span><span class="p">(</span><span class="w"> </span><span class="nx">rqItem1_settable_str</span><span class="w"> </span><span class="p">);</span>
+</span><span id="__span-4-12">
+</span><span id="__span-4-13"><span class="c1">// Set render queue item 3 with values you create.</span>
+</span><span id="__span-4-14">
+</span><span id="__span-4-15"><span class="kd">var</span><span class="w"> </span><span class="nx">my_renderSettings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-16"><span class="w">    </span><span class="s2">&quot;Color Depth&quot;</span><span class="o">:</span><span class="w">        </span><span class="s2">&quot;32 bits per channel&quot;</span><span class="p">,</span>
+</span><span id="__span-4-17"><span class="w">    </span><span class="s2">&quot;Quality&quot;</span><span class="o">:</span><span class="w">            </span><span class="s2">&quot;Best&quot;</span><span class="p">,</span>
+</span><span id="__span-4-18"><span class="w">    </span><span class="s2">&quot;Effects&quot;</span><span class="o">:</span><span class="w">            </span><span class="s2">&quot;All On&quot;</span><span class="p">,</span>
+</span><span id="__span-4-19"><span class="w">    </span><span class="s2">&quot;Time Span Duration&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;1.0&quot;</span><span class="p">,</span>
+</span><span id="__span-4-20"><span class="w">    </span><span class="s2">&quot;Time Span Start&quot;</span><span class="o">:</span><span class="w">    </span><span class="s2">&quot;2.0&quot;</span>
+</span><span id="__span-4-21"><span class="p">};</span>
+</span><span id="__span-4-22">
+</span><span id="__span-4-23"><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">renderQueue</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">2</span><span class="p">).</span><span class="nx">setSettings</span><span class="p">(</span><span class="w"> </span><span class="nx">my_renderSettings</span><span class="w"> </span><span class="p">);</span>
+</span></code></pre></div>
 
 
 
@@ -3338,7 +3338,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "search.highlight", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.copy", "search.highlight", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
