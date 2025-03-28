@@ -116,7 +116,8 @@ afterfx.exe -s "alert("You just sent an alert to After Effects")"
 Alternatively, you can specify the location of the JSX file to be executed. For example:
 
 ```bat
-afterfx.exe -r c:\myDocuments\Scripts\yourAEScriptHere.jsx afterfx.exe -r "c:\myDocuments\Scripts\Script Name with Spaces.jsx"
+afterfx.exe -r c:\myDocuments\Scripts\yourAEScriptHere.jsx
+afterfx.exe -r "c:\myDocuments\Scripts\Script Name with Spaces.jsx"
 ```
 
 ### How to include After Effects scripting in an AppleScript (Mac OS)
