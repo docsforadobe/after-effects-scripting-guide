@@ -42,6 +42,7 @@
 | `ADBE Text Index End`           | End               |
 | `ADBE Text Index Offset`        | Offset            |
 | `ADBE Text Range Advanced`      | Advanced          |
+| `ADBE Text Range Units`         | Units             |
 | `ADBE Text Selector Mode`       | Mode              |
 | `ADBE Text Selector Max Amount` | Amount            |
 | `ADBE Text Selector Smoothness` | Smoothness        |
