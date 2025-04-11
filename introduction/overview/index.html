@@ -2604,32 +2604,35 @@
 <div class="language-bat highlight"><pre><span></span><code><span id="__span-2-1">afterfx.exe -r c:\myDocuments\Scripts\yourAEScriptHere.jsx
 </span><span id="__span-2-2">afterfx.exe -r <span class="s2">&quot;c:\myDocuments\Scripts\Script Name with Spaces.jsx&quot;</span>
 </span></code></pre></div>
+<p>If the program closes immediately after executing the command, you may need to remove the quotes from the script path in this command line:</p>
+<div class="language-bat highlight"><pre><span></span><code><span id="__span-3-1">afterfx.exe -r c:\myDocuments\Scripts\Script Name with Spaces.jsx
+</span></code></pre></div>
 <h3 id="how-to-include-after-effects-scripting-in-an-applescript-mac-os">How to include After Effects scripting in an AppleScript (Mac OS)<a class="headerlink" href="#how-to-include-after-effects-scripting-in-an-applescript-mac-os" title="Permanent link">&para;</a></h3>
 <p>The following are three examples of AppleScript scripts that will send an existing JSX file containing an After Effects script to the application without using the After Effects user interface to execute the script.</p>
 <p>In the first example, you copy your After Effects script directly into the Script Editor and then run it. The script text appears within quotation marks following the DoScript command, so internal quotes in the script must be escaped using the backslash escape character, as follows</p>
-<div class="language-applescript highlight"><pre><span></span><code><span id="__span-3-1"><span class="k">tell</span> <span class="nb">application</span> <span class="s2">&quot;Adobe After Effects CS6&quot;</span>
-</span><span id="__span-3-2">    <span class="nv">DoScript</span> <span class="s2">&quot;alert(\&quot;You just sent an alert to After Effects\&quot;)&quot;</span>
-</span><span id="__span-3-3"><span class="k">end</span> <span class="k">tell</span>
+<div class="language-applescript highlight"><pre><span></span><code><span id="__span-4-1"><span class="k">tell</span> <span class="nb">application</span> <span class="s2">&quot;Adobe After Effects CS6&quot;</span>
+</span><span id="__span-4-2">    <span class="nv">DoScript</span> <span class="s2">&quot;alert(\&quot;You just sent an alert to After Effects\&quot;)&quot;</span>
+</span><span id="__span-4-3"><span class="k">end</span> <span class="k">tell</span>
 </span></code></pre></div>
 <p>Alternatively, you could display a dialog box asking for the location of the JSX file to be executed, as follows:</p>
-<div class="language-applescript highlight"><pre><span></span><code><span id="__span-4-1"><span class="k">set</span> <span class="nv">theFile</span> <span class="k">to</span> <span class="nb">choose file</span>
-</span><span id="__span-4-2"><span class="k">tell</span> <span class="nb">application</span> <span class="s2">&quot;Adobe After Effects CS6&quot;</span>
-</span><span id="__span-4-3">    <span class="nv">DoScriptFile</span> <span class="nv">theFile</span>
-</span><span id="__span-4-4"><span class="k">end</span> <span class="k">tell</span>
+<div class="language-applescript highlight"><pre><span></span><code><span id="__span-5-1"><span class="k">set</span> <span class="nv">theFile</span> <span class="k">to</span> <span class="nb">choose file</span>
+</span><span id="__span-5-2"><span class="k">tell</span> <span class="nb">application</span> <span class="s2">&quot;Adobe After Effects CS6&quot;</span>
+</span><span id="__span-5-3">    <span class="nv">DoScriptFile</span> <span class="nv">theFile</span>
+</span><span id="__span-5-4"><span class="k">end</span> <span class="k">tell</span>
 </span></code></pre></div>
 <p>Finally, this script is perhaps most useful when you are working directly on editing a JSX script and want to send it to After Effects for testing or to run. To use it effectively you must enter the application that contains the open JSX file (in this example it is TextEdit); if you do not know the proper name of the application, type in your best guess to replace "TextEdit" and AppleScript prompts you to locate it.</p>
 <p>Simply highlight the script text that you want to run, and then activate this AppleScript:</p>
-<div class="language-applescript highlight"><pre><span></span><code><span id="__span-5-1"><span class="cm">(*</span>
-</span><span id="__span-5-2"><span class="cm">This script sends the current selection to After Effects as a script.</span>
-</span><span id="__span-5-3"><span class="cm">*)</span>
-</span><span id="__span-5-4">
-</span><span id="__span-5-5"><span class="k">tell</span> <span class="nb">application</span> <span class="s2">&quot;TextEdit&quot;</span>
-</span><span id="__span-5-6">    <span class="k">set</span> <span class="nv">the_script</span> <span class="k">to</span> <span class="nb">text</span> <span class="k">of</span> <span class="nb">front</span> <span class="na">document</span>
-</span><span id="__span-5-7"><span class="k">end</span> <span class="k">tell</span>
-</span><span id="__span-5-8">
-</span><span id="__span-5-9"><span class="k">tell</span> <span class="nb">application</span> <span class="s2">&quot;Adobe After Effects CS6&quot;</span> <span class="nb">activate</span>
-</span><span id="__span-5-10">    <span class="nv">DoScript</span> <span class="nv">the_script</span>
-</span><span id="__span-5-11"><span class="k">end</span> <span class="k">tell</span>
+<div class="language-applescript highlight"><pre><span></span><code><span id="__span-6-1"><span class="cm">(*</span>
+</span><span id="__span-6-2"><span class="cm">This script sends the current selection to After Effects as a script.</span>
+</span><span id="__span-6-3"><span class="cm">*)</span>
+</span><span id="__span-6-4">
+</span><span id="__span-6-5"><span class="k">tell</span> <span class="nb">application</span> <span class="s2">&quot;TextEdit&quot;</span>
+</span><span id="__span-6-6">    <span class="k">set</span> <span class="nv">the_script</span> <span class="k">to</span> <span class="nb">text</span> <span class="k">of</span> <span class="nb">front</span> <span class="na">document</span>
+</span><span id="__span-6-7"><span class="k">end</span> <span class="k">tell</span>
+</span><span id="__span-6-8">
+</span><span id="__span-6-9"><span class="k">tell</span> <span class="nb">application</span> <span class="s2">&quot;Adobe After Effects CS6&quot;</span> <span class="nb">activate</span>
+</span><span id="__span-6-10">    <span class="nv">DoScript</span> <span class="nv">the_script</span>
+</span><span id="__span-6-11"><span class="k">end</span> <span class="k">tell</span>
 </span></code></pre></div>
 <h3 id="running-scripts-automatically-during-application-startup-or-shutdown">Running scripts automatically during application startup or shutdown<a class="headerlink" href="#running-scripts-automatically-during-application-startup-or-shutdown" title="Permanent link">&para;</a></h3>
 <p>Within the Scripts folder are two folders called Startup and Shutdown. After Effects runs scripts in these folders automatically, in alphabetical order, on starting and quitting, respectively.</p>
@@ -2640,25 +2643,25 @@
 <h3 id="running-scripts-from-the-window-menu">Running scripts from the Window menu<a class="headerlink" href="#running-scripts-from-the-window-menu" title="Permanent link">&para;</a></h3>
 <p>Scripts in the ScriptUI Panels folder are available from the bottom of the Window menu. If a script has been written to provide a user interface in a dockable panel, the script should be put in the ScriptUI folder. ScriptUI panels work much the same as the default panels in the After Effects user interface.</p>
 <p>Instead of creating a Window object and adding controls to it, a ScriptUI Panels script uses the <code>this</code> object that represents the panel. For example, the following code adds a button to a panel:</p>
-<div class="language-javascript highlight"><pre><span></span><code><span id="__span-6-1"><span class="kd">var</span><span class="w"> </span><span class="nx">myPanel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">;</span>
-</span><span id="__span-6-2"><span class="nx">myPanel</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;button&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">100</span><span class="p">,</span><span class="w"> </span><span class="mf">30</span><span class="p">],</span><span class="w"> </span><span class="s2">&quot;Tool #1&quot;</span><span class="p">);</span>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-7-1"><span class="kd">var</span><span class="w"> </span><span class="nx">myPanel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">;</span>
+</span><span id="__span-7-2"><span class="nx">myPanel</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;button&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">100</span><span class="p">,</span><span class="w"> </span><span class="mf">30</span><span class="p">],</span><span class="w"> </span><span class="s2">&quot;Tool #1&quot;</span><span class="p">);</span>
 </span></code></pre></div>
 <p>If your script creates its user interface in a function, you cannot use <code>this</code> as it will refer to the function itself, not the panel. In this case, you should pass the <code>this</code> object as an argument to your function. For example:</p>
-<div class="language-javascript highlight"><pre><span></span><code><span id="__span-7-1"><span class="kd">function</span><span class="w"> </span><span class="nx">createUI</span><span class="p">(</span><span class="nx">thisObj</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-7-2"><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">myPanel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">thisObj</span><span class="p">;</span>
-</span><span id="__span-7-3"><span class="w">    </span><span class="nx">myPanel</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;button&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">100</span><span class="p">,</span><span class="w"> </span><span class="mf">30</span><span class="p">],</span><span class="w"> </span><span class="s2">&quot;Tool #1&quot;</span><span class="p">);</span>
-</span><span id="__span-7-4"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">myPanel</span><span class="p">;</span>
-</span><span id="__span-7-5"><span class="p">}</span>
-</span><span id="__span-7-6"><span class="kd">var</span><span class="w"> </span><span class="nx">myToolsPanel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createUI</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-8-1"><span class="kd">function</span><span class="w"> </span><span class="nx">createUI</span><span class="p">(</span><span class="nx">thisObj</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-2"><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">myPanel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">thisObj</span><span class="p">;</span>
+</span><span id="__span-8-3"><span class="w">    </span><span class="nx">myPanel</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;button&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">100</span><span class="p">,</span><span class="w"> </span><span class="mf">30</span><span class="p">],</span><span class="w"> </span><span class="s2">&quot;Tool #1&quot;</span><span class="p">);</span>
+</span><span id="__span-8-4"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">myPanel</span><span class="p">;</span>
+</span><span id="__span-8-5"><span class="p">}</span>
+</span><span id="__span-8-6"><span class="kd">var</span><span class="w"> </span><span class="nx">myToolsPanel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createUI</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
 </span></code></pre></div>
 <p>You cannot use the File &gt; Scripts &gt; Run Script File menu command to run a script that refers to this. To make your script work with either a Window object (accessible from the File &gt; Scripts menu) or a native panel (accessible from the Window menu), check whether this is a Panel object. For example:</p>
-<div class="language-javascript highlight"><pre><span></span><code><span id="__span-8-1"><span class="kd">function</span><span class="w"> </span><span class="nx">createUI</span><span class="p">(</span><span class="nx">thisObj</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-8-2"><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">myPanel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">thisObj</span><span class="w"> </span><span class="ow">instanceof</span><span class="w"> </span><span class="nx">Panel</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="nx">thisObj</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Window</span><span class="p">(</span><span class="s2">&quot;palette&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;My Tools&quot;</span><span class="p">,</span>
-</span><span id="__span-8-3"><span class="w">    </span><span class="p">[</span><span class="mf">100</span><span class="p">,</span><span class="w"> </span><span class="mf">100</span><span class="p">,</span><span class="w"> </span><span class="mf">300</span><span class="p">,</span><span class="w"> </span><span class="mf">300</span><span class="p">]);</span>
-</span><span id="__span-8-4"><span class="w">    </span><span class="nx">myPanel</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;button&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">100</span><span class="p">,</span><span class="w"> </span><span class="mf">30</span><span class="p">],</span><span class="w"> </span><span class="s2">&quot;Tool #1&quot;</span><span class="p">);</span>
-</span><span id="__span-8-5"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">myPanel</span><span class="p">;</span>
-</span><span id="__span-8-6"><span class="p">}</span>
-</span><span id="__span-8-7"><span class="kd">var</span><span class="w"> </span><span class="nx">myToolsPanel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createUI</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-9-1"><span class="kd">function</span><span class="w"> </span><span class="nx">createUI</span><span class="p">(</span><span class="nx">thisObj</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-2"><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">myPanel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">thisObj</span><span class="w"> </span><span class="ow">instanceof</span><span class="w"> </span><span class="nx">Panel</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="nx">thisObj</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Window</span><span class="p">(</span><span class="s2">&quot;palette&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;My Tools&quot;</span><span class="p">,</span>
+</span><span id="__span-9-3"><span class="w">    </span><span class="p">[</span><span class="mf">100</span><span class="p">,</span><span class="w"> </span><span class="mf">100</span><span class="p">,</span><span class="w"> </span><span class="mf">300</span><span class="p">,</span><span class="w"> </span><span class="mf">300</span><span class="p">]);</span>
+</span><span id="__span-9-4"><span class="w">    </span><span class="nx">myPanel</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;button&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">100</span><span class="p">,</span><span class="w"> </span><span class="mf">30</span><span class="p">],</span><span class="w"> </span><span class="s2">&quot;Tool #1&quot;</span><span class="p">);</span>
+</span><span id="__span-9-5"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">myPanel</span><span class="p">;</span>
+</span><span id="__span-9-6"><span class="p">}</span>
+</span><span id="__span-9-7"><span class="kd">var</span><span class="w"> </span><span class="nx">myToolsPanel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createUI</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
 </span></code></pre></div>
 <h3 id="stopping-a-running-script">Stopping a running script<a class="headerlink" href="#stopping-a-running-script" title="Permanent link">&para;</a></h3>
 <p>A script can be stopped by pressing Esc or Cmd+period (in Mac OS) when the After Effects or the script's user interface has focus. However, a script that is busy processing a lot of data might not be very responsive.</p>
@@ -2682,7 +2685,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 28, 2025 13:55:25">March 28, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 11, 2025 05:37:57">April 11, 2025</span>
   </span>
 
     
