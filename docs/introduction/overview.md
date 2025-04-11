@@ -120,6 +120,12 @@ afterfx.exe -r c:\myDocuments\Scripts\yourAEScriptHere.jsx
 afterfx.exe -r "c:\myDocuments\Scripts\Script Name with Spaces.jsx"
 ```
 
+If the program closes immediately after executing the command, you may need to remove the quotes from the script path in this command line:
+
+```bat
+afterfx.exe -r c:\myDocuments\Scripts\Script Name with Spaces.jsx
+```
+
 ### How to include After Effects scripting in an AppleScript (Mac OS)
 
 The following are three examples of AppleScript scripts that will send an existing JSX file containing an After Effects script to the application without using the After Effects user interface to execute the script.
