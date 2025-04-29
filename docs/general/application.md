@@ -329,7 +329,7 @@ The project that is currently loaded. See [Project object](project.md).
 
 #### Type
 
-Project object; read-only.
+[Project object](./project.md); read-only.
 
 ---
 
@@ -612,7 +612,7 @@ None.
 
 #### Returns
 
-A new Project object, or `null` if no new project is created.
+A new [Project object](./project.md), or `null` if no new project is created.
 
 #### Example
 
@@ -642,7 +642,7 @@ Opens a project.
 
 #### Returns
 
-A new Project object for the specified project, or `null` if the user cancels the Open dialog box.
+A new [Project object](./project.md) for the specified project, or `null` if the user cancels the Open dialog box.
 
 #### Example
 
@@ -677,7 +677,7 @@ Opens a project faster than `app.open()` by skipping some checks.
 
 #### Returns
 
-A new Project object for the specified project.
+A new [Project object](./project.md) for the specified project.
 
 #### Example
 

@@ -31,13 +31,15 @@ if (!(secondItem instanceof FolderItem)) {
 
 #### Description
 
-An ItemCollection object containing Item object that represents the top-level contents of this folder.
+An [ItemCollection object](../item/itemcollection.md) containing Item object that represents the top-level contents of this folder.
 
-Unlike the ItemCollection in the Project object, this collection contains only the top-level items in the folder. The top-level within the folder is not the same as top-level within the project. Only those items that are top-level in the root folder are also top-level in the Project.
+Unlike the ItemCollection in the [Project object](../general/project.md), this collection contains only the top-level items in the folder. The top-level within the folder is not the same as top-level within the project.
+
+Only those items that are top-level in the root folder are also top-level in the Project.
 
 #### Type
 
-ItemCollection object; read-only.
+[ItemCollection object](../item/itemcollection.md); read-only.
 
 ---
 
