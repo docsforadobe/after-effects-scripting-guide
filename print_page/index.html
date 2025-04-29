@@ -14,7 +14,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
     
     
       
@@ -22,7 +22,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.2afb09e1.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -5135,7 +5135,7 @@
 <h4 id="general-application-description_16">Description<a class="headerlink" href="#general-application-description_16" title="Permanent link">&para;</a></h4>
 <p>The project that is currently loaded. See <a href="#general-project">Project object</a>.</p>
 <h4 id="general-application-type_15">Type<a class="headerlink" href="#general-application-type_15" title="Permanent link">&para;</a></h4>
-<p>Project object; read-only.</p>
+<p><a href="#general-project">Project object</a>; read-only.</p>
 <hr />
 <h3 id="general-application-appsaveprojectoncrash">app.saveProjectOnCrash<a class="headerlink" href="#general-application-appsaveprojectoncrash" title="Permanent link">&para;</a></h3>
 <p><code>app.saveProjectOnCrash</code></p>
@@ -5358,7 +5358,7 @@
 <h4 id="general-application-parameters_9">Parameters<a class="headerlink" href="#general-application-parameters_9" title="Permanent link">&para;</a></h4>
 <p>None.</p>
 <h4 id="general-application-returns_9">Returns<a class="headerlink" href="#general-application-returns_9" title="Permanent link">&para;</a></h4>
-<p>A new Project object, or <code>null</code> if no new project is created.</p>
+<p>A new <a href="#general-project">Project object</a>, or <code>null</code> if no new project is created.</p>
 <h4 id="general-application-example_8">Example<a class="headerlink" href="#general-application-example_8" title="Permanent link">&para;</a></h4>
 <div class="language-javascript highlight"><pre><span></span><code><span id="__span-8-1"><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">close</span><span class="p">(</span><span class="nx">CloseOptions</span><span class="p">.</span><span class="nx">DO_NOT_SAVE_CHANGES</span><span class="p">);</span>
 </span><span id="__span-8-2"><span class="nx">app</span><span class="p">.</span><span class="nx">newProject</span><span class="p">();</span>
@@ -5387,7 +5387,7 @@
 </tbody>
 </table>
 <h4 id="general-application-returns_10">Returns<a class="headerlink" href="#general-application-returns_10" title="Permanent link">&para;</a></h4>
-<p>A new Project object for the specified project, or <code>null</code> if the user cancels the Open dialog box.</p>
+<p>A new <a href="#general-project">Project object</a> for the specified project, or <code>null</code> if the user cancels the Open dialog box.</p>
 <h4 id="general-application-example_9">Example<a class="headerlink" href="#general-application-example_9" title="Permanent link">&para;</a></h4>
 <div class="language-javascript highlight"><pre><span></span><code><span id="__span-9-1"><span class="kd">var</span><span class="w"> </span><span class="nx">my_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">File</span><span class="p">(</span><span class="s2">&quot;../my_folder/my_test.aep&quot;</span><span class="p">);</span>
 </span><span id="__span-9-2"><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">my_file</span><span class="p">.</span><span class="nx">exists</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -5424,7 +5424,7 @@
 </tbody>
 </table>
 <h4 id="general-application-returns_11">Returns<a class="headerlink" href="#general-application-returns_11" title="Permanent link">&para;</a></h4>
-<p>A new Project object for the specified project.</p>
+<p>A new <a href="#general-project">Project object</a> for the specified project.</p>
 <h4 id="general-application-example_10">Example<a class="headerlink" href="#general-application-example_10" title="Permanent link">&para;</a></h4>
 <div class="language-javascript highlight"><pre><span></span><code><span id="__span-10-1"><span class="kd">var</span><span class="w"> </span><span class="nx">projectFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">File</span><span class="p">(</span><span class="s2">&quot;someFile.aep&quot;</span><span class="p">);</span>
 </span><span id="__span-10-2">
@@ -7333,7 +7333,7 @@ Archived Team Projects are not included.</p>
 </span></code></pre></div></section><section class="print-page" id="item-itemcollection" heading-number="4.2"><h1 id="item-itemcollection-itemcollection-object">ItemCollection object<a class="headerlink" href="#item-itemcollection-itemcollection-object" title="Permanent link">&para;</a></h1>
 <p><code>app.project.items</code></p>
 <h4 id="item-itemcollection-description">Description<a class="headerlink" href="#item-itemcollection-description" title="Permanent link">&para;</a></h4>
-<p>The ItemCollection object represents a collection of items. The ItemCollection belonging to a Project object contains all the Item objects for items in the project. The ItemCollection belonging to a FolderItem object contains all the Item objects for items in that folder.</p>
+<p>The ItemCollection object represents a collection of items. The ItemCollection belonging to a <a href="#general-project">Project object</a> contains all the Item objects for items in the project. The ItemCollection belonging to a FolderItem object contains all the Item objects for items in that folder.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>ItemCollection is a subclass of <a href="#other-collection">Collection object</a>. All methods and attributes of Collection, in addition to those listed below, are available when working with ItemCollection.</p>
@@ -8300,10 +8300,11 @@ project <code>save()</code> method before exporting the Motion Graphics template
 <h3 id="item-folderitem-folderitemitems">FolderItem.items<a class="headerlink" href="#item-folderitem-folderitemitems" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).items</code></p>
 <h4 id="item-folderitem-description_1">Description<a class="headerlink" href="#item-folderitem-description_1" title="Permanent link">&para;</a></h4>
-<p>An ItemCollection object containing Item object that represents the top-level contents of this folder.</p>
-<p>Unlike the ItemCollection in the Project object, this collection contains only the top-level items in the folder. The top-level within the folder is not the same as top-level within the project. Only those items that are top-level in the root folder are also top-level in the Project.</p>
+<p>An <a href="#item-itemcollection">ItemCollection object</a> containing Item object that represents the top-level contents of this folder.</p>
+<p>Unlike the ItemCollection in the <a href="#general-project">Project object</a>, this collection contains only the top-level items in the folder. The top-level within the folder is not the same as top-level within the project.</p>
+<p>Only those items that are top-level in the root folder are also top-level in the Project.</p>
 <h4 id="item-folderitem-type">Type<a class="headerlink" href="#item-folderitem-type" title="Permanent link">&para;</a></h4>
-<p>ItemCollection object; read-only.</p>
+<p><a href="#item-itemcollection">ItemCollection object</a>; read-only.</p>
 <hr />
 <h3 id="item-folderitem-folderitemnumitems">FolderItem.numItems<a class="headerlink" href="#item-folderitem-folderitemnumitems" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).numItems</code></p>
