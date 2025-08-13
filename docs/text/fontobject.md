@@ -230,6 +230,25 @@ String; read-only.
 
 ---
 
+### FontObject.otherFontsWithSameDict
+
+`app.fonts.fontsWithDefaultDesignAxes[0].otherFontsWithSameDict`
+
+!!! note
+    This functionality was added in After Effects (Beta) 25.0 and is subject to change while it remains in Beta.
+
+#### Description
+
+Returns an Array of [Font object](#font-object) instances which share the same font dictionary as this [Font object](#font-object).
+
+Will return an empty Array if this [Font object](#font-object) is not a Variable font, or the Variable font only has one instance.
+
+#### Type
+
+Array of [Font objects](#font-object); read-only.
+
+---
+
 ### FontObject.postScriptName
 
 `app.fonts.allFonts[0][0].postScriptName`
@@ -475,30 +494,6 @@ Boolean.
 
 ---
 
-### FontObject.otherFontsWithSameDict()
-
-`app.fonts.fontsWithDefaultDesignAxes[0].otherFontsWithSameDict(fontObject)`
-
-!!! note
-    This functionality was added in After Effects (Beta) 25.0 and is subject to change while it remains in Beta.
-
-#### Description
-
-Given an [Font object](#font-object) passed as an argument, returns an Array of [Font object](#font-object) instances which share the same font dictionary as the [Font object](#font-object) the function is called on.
-
-Will return an empty Array if the argument is not a Variable font, or the Variable font only has one instance (the parameter one).
-
-#### Parameters
-
-|  Parameter   |            Type             |   Description   |
-| ------------ | --------------------------- | --------------- |
-| `fontObject` | [Font object](#font-object) | Object to check |
-
-#### Returns
-
-Array of [Font objects](#font-object), may be empty.
-
----
 
 ### FontObject.postScriptNameForDesignVector()
 

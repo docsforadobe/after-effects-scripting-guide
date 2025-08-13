@@ -20,7 +20,7 @@ What's new and changed for scripting?
 - Scripting methods and attributes added:
     - Added: [CharacterRange.pasteFrom()](../text/characterrange.md#characterrangepastefrom)
     - Added: [FontObject.hasGlyphsFor()](../text/fontobject.md#fontobjecthasglyphsfor)
-    - Added: [FontObject.otherFontsWithSameDict()](../text/fontobject.md#fontobjectotherfontswithsamedict)
+    - Added: [FontObject.otherFontsWithSameDict](../text/fontobject.md#fontobjectotherfontswithsamedict)
     - Added: [FontsObject.getCTScriptForString()](../text/fontsobject.md#fontsobjectgetctscriptforstring)
     - Added: [FontsObject.getDefaultFontForCTScript()](../text/fontsobject.md#fontsobjectgetdefaultfontforctscript)
     - Added: [FontsObject.setDefaultFontForCTScript()](../text/fontsobject.md#fontsobjectsetdefaultfontforctscript)
