@@ -55,7 +55,7 @@ What's new and changed for scripting?
     - Added: [Project.replaceFont()](../general/project.md#projectreplacefont)
     - Added: [Project.usedFonts](../general/project.md#projectusedfonts)
 
-### [After Effects 24.4 Beta build 25](https://community.adobe.com/t5/after-effects-beta-discussions/scripting-new-api-for-3d-model-layers/td-p/14580044) (March 2024)
+### [After Effects 24.4](https://helpx.adobe.com/after-effects/using/whats-new/2024-4.html) (May 2024)
 
 - Added: [ThreeDModelLayer object](../layer/threedmodellayer.md)
 
