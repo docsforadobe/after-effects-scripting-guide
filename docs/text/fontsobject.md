@@ -242,7 +242,7 @@ A `SubstitutedFontReplacementMatchPolicy` enumerated value; read/write. One of:
 `app.fonts.getCTScriptForString(charString, preferredCTScript)`
 
 !!! note
-    This functionality was added in After Effects (Beta) 25.0 and is subject to change while it remains in Beta.
+    This functionality was added in After Effects 25.1
 
 #### Description
 
@@ -280,7 +280,7 @@ Array of generic objects;
 `app.fonts.getDefaultFontForCTScript(ctScript)`
 
 !!! note
-    This functionality was added in After Effects (Beta) 25.0 and is subject to change while it remains in Beta.
+    This functionality was added in After Effects 25.1
 
 #### Description
 
@@ -440,7 +440,7 @@ Boolean; One of:
 `app.fonts.setDefaultFontForCTScript(ctScript, font)`
 
 !!! note
-    This functionality was added in After Effects (Beta) 25.0 and is subject to change while it remains in Beta.
+    This functionality was added in After Effects 25.1
 
 #### Description
 

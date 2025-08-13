@@ -15,7 +15,7 @@ What's new and changed for scripting?
 - Scripting methods and attributes added:
     - Updated: [LightLayer.lightSource](../layer/lightlayer.md#lightlayerlightsource)
 
-### [After Effects 25.0 Beta build 26](https://community.adobe.com/t5/after-effects-beta-discussions/new-in-ae-25-0-build-25-scripting-hooks-for-font-fallback-management/m-p/14809794) (August 2024)
+### [After Effects 25.1](https://helpx.adobe.com/after-effects/using/whats-new/2025-1.html) (December 2024)
 
 - Scripting methods and attributes added:
     - Added: [CharacterRange.pasteFrom()](../text/characterrange.md#characterrangepastefrom)

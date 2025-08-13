@@ -235,7 +235,7 @@ String; read-only.
 `app.fonts.fontsWithDefaultDesignAxes[0].otherFontsWithSameDict`
 
 !!! note
-    This functionality was added in After Effects (Beta) 25.0 and is subject to change while it remains in Beta.
+    This functionality was added in After Effects 25.1
 
 #### Description
 
@@ -448,7 +448,7 @@ An array of `CTScript` enumerated values; read-only. One or more of:
 `app.fonts.allFonts[0][0].hasGlyphsFor(charString)`
 
 !!! note
-    This functionality was added in After Effects (Beta) 25.0 and is subject to change while it remains in Beta.
+    This functionality was added in After Effects 25.1
 
 #### Description
 
