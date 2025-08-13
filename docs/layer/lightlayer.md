@@ -43,7 +43,7 @@ LightLayer defines no additional attributes, but has different AE properties tha
 !!! note
     `LightLayer.lightSource` was added in After Effects 24.3, but allowed only HDR and EXR layers as sources.
 
-    In After Effects (Beta) 25.2.0.098, it was updated to allow any 2D layer type as a source.
+    In After Effects 25.2, it was updated to allow any 2D layer type as a source.
 
 #### Description
 
