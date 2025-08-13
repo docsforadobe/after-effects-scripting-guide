@@ -10,6 +10,10 @@ What's new and changed for scripting?
 
 ## After Effects 25
 
+### [After Effects 25.4](https://helpx.adobe.com/after-effects/using/whats-new/2025-4.html) (August 2025)
+
+- Scripting method added: [app.restart()](../general/application.md#apprestart)
+
 ### [After Effects 25.2](https://helpx.adobe.com/after-effects/using/whats-new/2025-2.html) (April 2025)
 
 - Scripting methods and attributes added:
