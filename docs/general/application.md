@@ -829,6 +829,24 @@ Nothing.
 
 ---
 
+### app.restart()
+
+`app.restart()`
+
+#### Description
+
+Restarts the After Effects application.
+
+#### Parameters
+
+None.
+
+#### Returns
+
+Nothing.
+
+---
+
 ### app.scheduleTask()
 
 `app.scheduleTask(stringToExecute, delay, repeat)`

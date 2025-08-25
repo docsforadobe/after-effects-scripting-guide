@@ -10,17 +10,21 @@ What's new and changed for scripting?
 
 ## After Effects 25
 
-### [After Effects 25.2 Beta build 98](https://community.adobe.com/t5/after-effects-beta-discussions/animated-environmental-lights-available-now-in-after-effects-beta/td-p/15130220) (February 2025)
+### [After Effects 25.4](https://helpx.adobe.com/after-effects/using/whats-new/2025-4.html) (August 2025)
+
+- Scripting method added: [app.restart()](../general/application.md#apprestart)
+
+### [After Effects 25.2](https://helpx.adobe.com/after-effects/using/whats-new/2025-2.html) (April 2025)
 
 - Scripting methods and attributes added:
     - Updated: [LightLayer.lightSource](../layer/lightlayer.md#lightlayerlightsource)
 
-### [After Effects 25.0 Beta build 26](https://community.adobe.com/t5/after-effects-beta-discussions/new-in-ae-25-0-build-25-scripting-hooks-for-font-fallback-management/m-p/14809794) (August 2024)
+### [After Effects 25.1](https://helpx.adobe.com/after-effects/using/whats-new/2025-1.html) (December 2024)
 
 - Scripting methods and attributes added:
     - Added: [CharacterRange.pasteFrom()](../text/characterrange.md#characterrangepastefrom)
     - Added: [FontObject.hasGlyphsFor()](../text/fontobject.md#fontobjecthasglyphsfor)
-    - Added: [FontObject.otherFontsWithSameDict()](../text/fontobject.md#fontobjectotherfontswithsamedict)
+    - Added: [FontObject.otherFontsWithSameDict](../text/fontobject.md#fontobjectotherfontswithsamedict)
     - Added: [FontsObject.getCTScriptForString()](../text/fontsobject.md#fontsobjectgetctscriptforstring)
     - Added: [FontsObject.getDefaultFontForCTScript()](../text/fontsobject.md#fontsobjectgetdefaultfontforctscript)
     - Added: [FontsObject.setDefaultFontForCTScript()](../text/fontsobject.md#fontsobjectsetdefaultfontforctscript)
@@ -51,7 +55,7 @@ What's new and changed for scripting?
     - Added: [Project.replaceFont()](../general/project.md#projectreplacefont)
     - Added: [Project.usedFonts](../general/project.md#projectusedfonts)
 
-### [After Effects 24.4 Beta build 25](https://community.adobe.com/t5/after-effects-beta-discussions/scripting-new-api-for-3d-model-layers/td-p/14580044) (March 2024)
+### [After Effects 24.4](https://helpx.adobe.com/after-effects/using/whats-new/2024-4.html) (May 2024)
 
 - Added: [ThreeDModelLayer object](../layer/threedmodellayer.md)
 
