@@ -4,7 +4,11 @@
 
 #### Description
 
-The ItemCollection object represents a collection of items. The ItemCollection belonging to a [Project object](../general/project.md) contains all the Item objects for items in the project. The ItemCollection belonging to a FolderItem object contains all the Item objects for items in that folder.
+The ItemCollection object represents a collection of [Items](../item/item.md).
+
+The ItemCollection belonging to a [Project object](../general/project.md) contains all the Item objects for [items in the project](../general/project.md#projectitems).
+
+The ItemCollection belonging to a [FolderItem object](../item/folderitem.md) contains all the Item objects for [items in that folder](../item/folderitem.md#folderitemitems).
 
 !!! info
     ItemCollection is a subclass of [Collection object](../other/collection.md). All methods and attributes of Collection, in addition to those listed below, are available when working with ItemCollection.
@@ -19,7 +23,11 @@ The ItemCollection object represents a collection of items. The ItemCollection b
 
 #### Description
 
-Creates a new composition. Creates and returns a new CompItem object and adds it to this collection. If the ItemCollection belongs to the project or the root folder, then the new item's `parentFolder` is the root folder. If the ItemCollection belongs to any other folder, the new item's `parentFolder` is that `FolderItem`.
+Creates and returns a new [CompItem object](../item/compitem.md) and adds it to this collection.
+
+If the ItemCollection belongs to the project or the root folder, then the new item's [`parentFolder`](../item/item.md#itemparentfolder) is the [root folder](../general/project.md#projectrootfolder).
+
+If the ItemCollection belongs to any other folder, the new item's `parentFolder` is that [FolderItem](../item/folderitem.md).
 
 #### Parameters
 
@@ -34,7 +42,7 @@ Creates a new composition. Creates and returns a new CompItem object and adds it
 
 #### Returns
 
-CompItem object.
+[CompItem object](../item/compitem.md)
 
 ---
 
@@ -44,7 +52,11 @@ CompItem object.
 
 #### Description
 
-Creates a new folder. Creates and returns a new FolderItem object and adds it to this collection. If the ItemCollection belongs to the project or the root folder, then the new folder's `parentFolder` is the root folder. If the ItemCollection belongs to any other folder, the new folder's `parentFolder` is that `FolderItem`. To put items in the folder, set the [Item.parentFolder](item.md#itemparentfolder) attribute
+Creates and returns a new [FolderItem object](../item/folderitem.md) and adds it to this collection.
+
+If the ItemCollection belongs to the [project](../general/project.md#projectitems) or the [root folder](../general/project.md#projectrootfolder), then the new folder's `parentFolder` is the root folder.
+
+If the ItemCollection belongs to any other folder, the new folder's `parentFolder` is that FolderItem. To put items in the folder, set the [Item.parentFolder](item.md#itemparentfolder) attribute.
 
 #### Parameters
 
@@ -54,11 +66,11 @@ Creates a new folder. Creates and returns a new FolderItem object and adds it to
 
 #### Returns
 
-FolderItem object.
+[FolderItem object](../item/folderitem.md).
 
 #### Example
 
-This script creates a new FolderItem in the Project panel and moves compositions into it.
+This script creates a new [FolderItem](../item/folderitem.md) in the Project panel and moves compositions into it.
 
 ```javascript
 //create a new FolderItem in project, with name "comps"
