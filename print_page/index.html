@@ -13633,8 +13633,8 @@ This is exposed in the UI as a checkbox in the lower right corner of the Render 
 <h4 id="renderqueue-renderqueueitem-type_3">Type<a class="headerlink" href="#renderqueue-renderqueueitem-type_3" title="Permanent link">&para;</a></h4>
 <p>Integer; read-only.</p>
 <hr />
-<h3 id="renderqueue-renderqueueitem-renderqueueitemonstatus">RenderQueueItem.onstatus<a class="headerlink" href="#renderqueue-renderqueueitem-renderqueueitemonstatus" title="Permanent link">&para;</a></h3>
-<p><code>app.project.renderQueue.item(index).onstatus</code></p>
+<h3 id="renderqueue-renderqueueitem-renderqueueitemonstatuschanged">RenderQueueItem.onStatusChanged<a class="headerlink" href="#renderqueue-renderqueueitem-renderqueueitemonstatuschanged" title="Permanent link">&para;</a></h3>
+<p><code>app.project.renderQueue.item(index).onStatusChanged</code></p>
 <h4 id="renderqueue-renderqueueitem-description_5">Description<a class="headerlink" href="#renderqueue-renderqueueitem-description_5" title="Permanent link">&para;</a></h4>
 <p>The name of a callback function that is called whenever the value of the <a href="#renderqueue-renderqueueitem-renderqueueitemstatus">RenderQueueItem.status</a> attribute changes.</p>
 <p>You cannot make changes to render queue items or to the application while rendering is in progress or paused; you can, however, use this callback to pause or stop the rendering process. See <a href="#renderqueue-renderqueue-renderqueuepauserendering">RenderQueue.pauseRendering()</a> and <a href="#renderqueue-renderqueue-renderqueuestoprendering">RenderQueue.stopRendering()</a>. See also <a href="#general-application-apponerror">app.onError</a>.</p>
@@ -13645,7 +13645,7 @@ This is exposed in the UI as a checkbox in the lower right corner of the Render 
 </span><span id="__span-0-2"><span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">renderQueue</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">status</span><span class="p">);</span>
 </span><span id="__span-0-3"><span class="p">}</span>
 </span><span id="__span-0-4">
-</span><span id="__span-0-5"><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">renderQueue</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">onstatus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myStatusChanged</span><span class="p">();</span>
+</span><span id="__span-0-5"><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">renderQueue</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">onStatusChanged</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myStatusChanged</span><span class="p">;</span>
 </span><span id="__span-0-6"><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">renderQueue</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">render</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w"> </span><span class="c1">// changes status and shows dialog</span>
 </span></code></pre></div>
 <hr />
