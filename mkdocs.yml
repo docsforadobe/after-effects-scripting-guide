@@ -37,6 +37,7 @@ nav:
         - ShapeLayer: layer/shapelayer.md
         - TextLayer: layer/textlayer.md
         - ThreeDModelLayer: layer/threedmodellayer.md
+        - ParametricMeshLayer: layer/parametricmeshlayer.md
     - Property:
         - Property object: property/property.md
         - PropertyBase: property/propertybase.md

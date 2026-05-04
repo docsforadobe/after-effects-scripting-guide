@@ -117,7 +117,7 @@ Gets a specified item from the ite ms collection.
 
 #### Description
 
-Pauses the current rendering process, or continues a paused rendering process. This is the same as clicking Pause in the Render Queue panel during a render. You can call this method from an [RenderQueueItem.onstatus](renderqueueitem.md#renderqueueitemonstatus) or [app.onError](../general/application.md#apponerror) callback.
+Pauses the current rendering process, or continues a paused rendering process. This is the same as clicking Pause in the Render Queue panel during a render. You can call this method from an [RenderQueueItem.onStatusChanged](renderqueueitem.md#renderqueueitemonstatuschanged) or [app.onError](../general/application.md#apponerror) callback.
 
 #### Parameters
 
@@ -140,7 +140,7 @@ Nothing.
 Starts the rendering process. This is the same as clicking Render in the Render Queue panel. The method does not return until the render process is complete. To pause or stop the rendering process, call [RenderQueue.pauseRendering()](#renderqueuepauserendering) or [RenderQueue.stopRendering()](#renderqueuestoprendering) from an `onError` or `onstatus` callback.
 
 - To respond to errors during the rendering process, define a callback function in [app.onError](../general/application.md#apponerror).
-- To respond to changes in the status of a particular item while the render is progressing, define a callback function in [RenderQueueItem.onstatus](renderqueueitem.md#renderqueueitemonstatus) in the associated RenderQueueItem object.
+- To respond to changes in the status of a particular item while the render is progressing, define a callback function in [RenderQueueItem.onStatusChanged](renderqueueitem.md#renderqueueitemonstatuschanged) in the associated RenderQueueItem object.
 
 #### Parameters
 
@@ -178,7 +178,7 @@ Nothing.
 
 #### Description
 
-Stops the rendering process. This is the same as clicking Stop in the Render Queue panel during a render. You can call this method from an [RenderQueueItem.onstatus](renderqueueitem.md#renderqueueitemonstatus) or [app.onError](../general/application.md#apponerror) callback.
+Stops the rendering process. This is the same as clicking Stop in the Render Queue panel during a render. You can call this method from an [RenderQueueItem.onStatusChanged](renderqueueitem.md#renderqueueitemonstatuschanged) or [app.onError](../general/application.md#apponerror) callback.
 
 #### Parameters
 
