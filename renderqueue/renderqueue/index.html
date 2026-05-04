@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -1157,6 +1157,34 @@
     
   
     ThreeDModelLayer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../layer/parametricmeshlayer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ParametricMeshLayer
   
 
     
@@ -3192,7 +3220,7 @@ This is exposed in the UI as a checkbox in the lower right corner of the Render 
 <h3 id="renderqueuepauserendering">RenderQueue.pauseRendering()<a class="headerlink" href="#renderqueuepauserendering" title="Permanent link">&para;</a></h3>
 <p><code>app.project.renderQueue.pauseRendering(pause)</code></p>
 <h4 id="description_7">Description<a class="headerlink" href="#description_7" title="Permanent link">&para;</a></h4>
-<p>Pauses the current rendering process, or continues a paused rendering process. This is the same as clicking Pause in the Render Queue panel during a render. You can call this method from an <a href="../renderqueueitem/#renderqueueitemonstatus">RenderQueueItem.onstatus</a> or <a href="../../general/application/#apponerror">app.onError</a> callback.</p>
+<p>Pauses the current rendering process, or continues a paused rendering process. This is the same as clicking Pause in the Render Queue panel during a render. You can call this method from an <a href="../renderqueueitem/#renderqueueitemonstatuschanged">RenderQueueItem.onStatusChanged</a> or <a href="../../general/application/#apponerror">app.onError</a> callback.</p>
 <h4 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -3219,7 +3247,7 @@ This is exposed in the UI as a checkbox in the lower right corner of the Render 
 <p>Starts the rendering process. This is the same as clicking Render in the Render Queue panel. The method does not return until the render process is complete. To pause or stop the rendering process, call <a href="#renderqueuepauserendering">RenderQueue.pauseRendering()</a> or <a href="#renderqueuestoprendering">RenderQueue.stopRendering()</a> from an <code>onError</code> or <code>onstatus</code> callback.</p>
 <ul>
 <li>To respond to errors during the rendering process, define a callback function in <a href="../../general/application/#apponerror">app.onError</a>.</li>
-<li>To respond to changes in the status of a particular item while the render is progressing, define a callback function in <a href="../renderqueueitem/#renderqueueitemonstatus">RenderQueueItem.onstatus</a> in the associated RenderQueueItem object.</li>
+<li>To respond to changes in the status of a particular item while the render is progressing, define a callback function in <a href="../renderqueueitem/#renderqueueitemonstatuschanged">RenderQueueItem.onStatusChanged</a> in the associated RenderQueueItem object.</li>
 </ul>
 <h4 id="parameters_2">Parameters<a class="headerlink" href="#parameters_2" title="Permanent link">&para;</a></h4>
 <p>None.</p>
@@ -3253,7 +3281,7 @@ This is exposed in the UI as a checkbox in the lower right corner of the Render 
 <h3 id="renderqueuestoprendering">RenderQueue.stopRendering()<a class="headerlink" href="#renderqueuestoprendering" title="Permanent link">&para;</a></h3>
 <p><code>app.project.renderQueue.stopRendering()</code></p>
 <h4 id="description_10">Description<a class="headerlink" href="#description_10" title="Permanent link">&para;</a></h4>
-<p>Stops the rendering process. This is the same as clicking Stop in the Render Queue panel during a render. You can call this method from an <a href="../renderqueueitem/#renderqueueitemonstatus">RenderQueueItem.onstatus</a> or <a href="../../general/application/#apponerror">app.onError</a> callback.</p>
+<p>Stops the rendering process. This is the same as clicking Stop in the Render Queue panel during a render. You can call this method from an <a href="../renderqueueitem/#renderqueueitemonstatuschanged">RenderQueueItem.onStatusChanged</a> or <a href="../../general/application/#apponerror">app.onError</a> callback.</p>
 <h4 id="parameters_4">Parameters<a class="headerlink" href="#parameters_4" title="Permanent link">&para;</a></h4>
 <p>None.</p>
 <h4 id="returns_4">Returns<a class="headerlink" href="#returns_4" title="Permanent link">&para;</a></h4>
@@ -3325,7 +3353,7 @@ This is exposed in the UI as a checkbox in the lower right corner of the Render 
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 3, 2024 17:17:17 UTC">October 3, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 30, 2026 19:18:59 UTC">April 30, 2026</span>
   </span>
 
     
