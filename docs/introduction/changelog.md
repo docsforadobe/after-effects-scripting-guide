@@ -10,7 +10,7 @@ What's new and changed for scripting?
 
 ## After Effects 26
 
-### [After Effects 26.3 Beta Build 58](https://community.adobe.com/announcements-532/new-in-beta-parametric-mesh-scripting-apis-1559505) (April 2026)
+### [After Effects 26.3](https://helpx.adobe.com/after-effects/using/whats-new.html) (June 2026)
 
 - Scripting methods and attributes added:
     - Added: [LayerCollection.addParametricMesh()](../layer/layercollection.md#layercollectionaddparametricmesh)
@@ -18,8 +18,9 @@ What's new and changed for scripting?
     - Added: [ParametricMeshLayer.ParametricMeshType](../layer/parametricmeshlayer.md/#parametricmeshlayerparametricmeshtype)
     - Added: [ParametricMeshLayer.ParametricMeshOptions](../layer/parametricmeshlayer.md/#parametricmeshlayerparametricmeshoptions)
     - Added: [ParametricMeshLayer.ParametricBevelOptions](../layer/parametricmeshlayer.md#parametricmeshlayerparametricbeveloptions)
+    - Added: [CameraLayer `FocusAreaWidth` and `NearFarBlurMultiplier` AE Properties](../layer/cameralayer.md) *(Advanced 3D only)*
 
-### [After Effects 26.0](https://helpx.adobe.com/after-effects/using/2026.html) (January 2026)
+### [After Effects 26.0](https://helpx.adobe.com/after-effects/using/whats-new.html) (January 2026)
 
 - Scripting methods and attributes added:
     - Added: [PropertyGroup.addVariableFontAxis()](../property/propertygroup.md#propertygroupaddvariablefontaxis)
