@@ -3,7 +3,7 @@
 `app.project.item(index).layer(index)`
 
 !!! note
-    This functionality was added in After Effects (Beta) 26.3 and is subject to change while it remains in Beta.
+    This functionality was added in After Effects 26.3.
 
 #### Description
 
@@ -46,7 +46,7 @@ if (layer instanceof ParametricMeshLayer)
 `app.project.item(index).layer(index).parametricMeshType`
 
 !!! note
-    This functionality was added in After Effects (Beta) 26.3 and is subject to change while it remains in Beta.
+    This functionality was added in After Effects 26.3.
 
 #### Description
 
@@ -70,7 +70,7 @@ A `ParametricMeshType` enumerated value; read/write. One of:
 `app.project.item(index).layer(index).parametricMeshOptions`
 
 !!! note
-    This functionality was added in After Effects (Beta) 26.3 and is subject to change while it remains in Beta.
+    This functionality was added in After Effects 26.3.
 
 #### Description
 
@@ -140,7 +140,7 @@ Gets/sets details about the structure of the parametric mesh.
 `app.project.item(index).layer(index).parametricBevelOptions`
 
 !!! note
-    This functionality was added in After Effects (Beta) 26.3 and is subject to change while it remains in Beta.
+    This functionality was added in After Effects 26.3.
 
 #### Description
 
