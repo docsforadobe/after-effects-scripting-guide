@@ -264,7 +264,7 @@ Creates a new point text layer with [TextDocument.lineOrientation](../text/textd
 `app.project.item(index).layers.addParametricMesh(name, meshType)`
 
 !!! note
-    This functionality was added in After Effects (Beta) 26.3 and is subject to change while it remains in Beta.
+    This functionality was added in After Effects 26.3.
 
 #### Description
 

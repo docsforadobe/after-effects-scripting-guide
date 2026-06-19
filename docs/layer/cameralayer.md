@@ -27,4 +27,15 @@ CameraLayer defines no additional attributes, but has different AE properties th
     - `Zoom`
     - `DepthofField`
     - `FocusDistance`
+    - `Aperture`
     - `BlurLevel`
+    - `IrisShape`
+    - `IrisRotation`
+    - `IrisRoundness`
+    - `IrisAspectRatio`
+    - `IrisDiffractionFringe`
+    - `HighlightGain`
+    - `HighlightThreshold`
+    - `HighlightSaturation`
+    - `FocusAreaWidth` *(After Effects 26.3; Advanced 3D only)*
+    - `NearFarBlurMultiplier` *(After Effects 26.3; Advanced 3D only)*
