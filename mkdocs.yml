@@ -63,6 +63,7 @@ nav:
         - TextDocument: text/textdocument.md
     - Other:
         - Collection: other/collection.md
+        - GuideOptions: other/guideoptions.md
         - ImportOptions: other/importoptions.md
         - KeyframeEase: other/keyframeease.md
         - MarkerValue: other/markervalue.md
