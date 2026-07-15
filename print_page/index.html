@@ -2037,6 +2037,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../other/guideoptions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GuideOptions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../other/importoptions/" class="md-nav__link">
         
   
@@ -3436,9 +3464,22 @@
 				
 				
 					<li class="md-nav__item">
+	<a href="#other-guideoptions" class="md-nav__link">
+		<span class="md-ellipsis">
+			10.2 GuideOptions
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
 	<a href="#other-importoptions" class="md-nav__link">
 		<span class="md-ellipsis">
-			10.2 ImportOptions
+			10.3 ImportOptions
 		</span>
 	</a>
 
@@ -3451,7 +3492,7 @@
 					<li class="md-nav__item">
 	<a href="#other-keyframeease" class="md-nav__link">
 		<span class="md-ellipsis">
-			10.3 KeyframeEase
+			10.4 KeyframeEase
 		</span>
 	</a>
 
@@ -3464,7 +3505,7 @@
 					<li class="md-nav__item">
 	<a href="#other-markervalue" class="md-nav__link">
 		<span class="md-ellipsis">
-			10.4 MarkerValue
+			10.5 MarkerValue
 		</span>
 	</a>
 
@@ -3477,7 +3518,7 @@
 					<li class="md-nav__item">
 	<a href="#other-preferences" class="md-nav__link">
 		<span class="md-ellipsis">
-			10.5 Preferences
+			10.6 Preferences
 		</span>
 	</a>
 
@@ -3490,7 +3531,7 @@
 					<li class="md-nav__item">
 	<a href="#other-settings" class="md-nav__link">
 		<span class="md-ellipsis">
-			10.6 Settings
+			10.7 Settings
 		</span>
 	</a>
 
@@ -3503,7 +3544,7 @@
 					<li class="md-nav__item">
 	<a href="#other-shape" class="md-nav__link">
 		<span class="md-ellipsis">
-			10.7 Shape
+			10.8 Shape
 		</span>
 	</a>
 
@@ -3516,7 +3557,7 @@
 					<li class="md-nav__item">
 	<a href="#other-view" class="md-nav__link">
 		<span class="md-ellipsis">
-			10.8 View
+			10.9 View
 		</span>
 	</a>
 
@@ -3529,7 +3570,7 @@
 					<li class="md-nav__item">
 	<a href="#other-viewer" class="md-nav__link">
 		<span class="md-ellipsis">
-			10.9 Viewer
+			10.10 Viewer
 		</span>
 	</a>
 
@@ -3542,7 +3583,7 @@
 					<li class="md-nav__item">
 	<a href="#other-viewoptions" class="md-nav__link">
 		<span class="md-ellipsis">
-			10.10 ViewOptions
+			10.11 ViewOptions
 		</span>
 	</a>
 
@@ -4320,6 +4361,26 @@
 <p>When checking <code>object instanceof {class}</code> with these classes, AE will either throw an error that <code>{class} is undefined</code> or return <code>false</code>, depending on how the class was implemented. The list below documents which base-only classes report which behaviours.</p></section><section class="print-page" id="introduction-changelog" heading-number="2.3"><h1 id="introduction-changelog-changelog">Changelog<a class="headerlink" href="#introduction-changelog-changelog" title="Permanent link">&para;</a></h1>
 <p>What's new and changed for scripting?</p>
 <hr />
+<h2 id="introduction-changelog-after-effects-beta">After Effects (Beta)<a class="headerlink" href="#introduction-changelog-after-effects-beta" title="Permanent link">&para;</a></h2>
+<h3 id="introduction-changelog-after-effects-beta-265-july-2026"><a href="https://helpx.adobe.com/after-effects/desktop/what-s-new/after-effects-beta.html">After Effects (Beta) 26.5</a> (July 2026)<a class="headerlink" href="#introduction-changelog-after-effects-beta-265-july-2026" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects (Beta) 26.5 and is subject to change while it remains in Beta.</p>
+</div>
+<ul>
+<li>Guide scripting extended with a <code>GuideOptions</code>-based API (percentage positioning, per-guide color, and pinning):<ul>
+<li>Added: <a href="#other-guideoptions">GuideOptions object</a></li>
+<li>Added: <a href="#other-guideoptions-guideorientationtype">GuideOrientationType</a> and <a href="#other-guideoptions-guidepositiontype">GuidePositionType</a> enumerated values</li>
+<li>Added: <a href="#item-item-itemgetguideasobject">Item.getGuideAsObject()</a> and <a href="#layer-layer-layergetguideasobject">Layer.getGuideAsObject()</a></li>
+<li>Added: <code>GuideOptions</code> overloads of <a href="#item-item-itemaddguide">Item.addGuide()</a> / <a href="#item-item-itemsetguide">Item.setGuide()</a> and <a href="#layer-layer-layeraddguide">Layer.addGuide()</a> / <a href="#layer-layer-layersetguide">Layer.setGuide()</a></li>
+</ul>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Differences between versions</p>
+<p><strong>Breaking change:</strong> The integer values behind <code>orientationType</code> and <code>positionType</code> on <a href="#item-item-itemguides">Item.guides</a> / <a href="#layer-layer-layerguides">Layer.guides</a> differ between versions of After Effects. In the beta, always compare against the enumerated constants rather than raw integer literals.</p>
+</div>
+<hr />
 <h2 id="introduction-changelog-after-effects-26">After Effects 26<a class="headerlink" href="#introduction-changelog-after-effects-26" title="Permanent link">&para;</a></h2>
 <h3 id="introduction-changelog-after-effects-263-june-2026"><a href="https://helpx.adobe.com/after-effects/using/whats-new.html">After Effects 26.3</a> (June 2026)<a class="headerlink" href="#introduction-changelog-after-effects-263-june-2026" title="Permanent link">&para;</a></h3>
 <ul>
@@ -4593,9 +4654,14 @@
 </ul>
 </li>
 <li>Scripting access to add, remove, and set existing guides:<ul>
+<li>Added: <a href="#item-item-itemguides">Item.guides</a></li>
 <li>Added: <a href="#item-item-itemaddguide">Item.addGuide()</a></li>
 <li>Added: <a href="#item-item-itemremoveguide">Item.removeGuide()</a></li>
 <li>Added: <a href="#item-item-itemsetguide">Item.setGuide()</a></li>
+<li>Added: <a href="#layer-layer-layerguides">Layer.guides</a></li>
+<li>Added: <a href="#layer-layer-layeraddguide">Layer.addGuide()</a></li>
+<li>Added: <a href="#layer-layer-layerremoveguide">Layer.removeGuide()</a></li>
+<li>Added: <a href="#layer-layer-layersetguide">Layer.setGuide()</a></li>
 </ul>
 </li>
 <li>Scripting access to additional EGP property attributes:<ul>
@@ -7594,9 +7660,77 @@ Archived Team Projects are not included.</p>
 <p>This functionality was added in After Effects 16.1 (CC 2019)</p>
 </div>
 <h4 id="item-item-description_3">Description<a class="headerlink" href="#item-item-description_3" title="Permanent link">&para;</a></h4>
-<p>An array of <code>guide</code> objects, containing <code>orientationType</code>, <code>positionType</code>, and <code>position</code> attributes.</p>
+<p>An array of objects describing the guides in the item's view. The properties on each entry depend on the version of After Effects.</p>
+<p>In After Effects 16.1 (CC 2019) and later, each entry has the following properties:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>orientationType</code></td>
+<td>Integer</td>
+<td><code>0</code> for a horizontal guide, <code>1</code> for a vertical guide.</td>
+</tr>
+<tr>
+<td><code>positionType</code></td>
+<td>Integer</td>
+<td>Always <code>0</code> (a pixel position).</td>
+</tr>
+<tr>
+<td><code>position</code></td>
+<td>Floating-point value</td>
+<td>The guide's position, in pixels.</td>
+</tr>
+</tbody>
+</table>
+<p>In After Effects (Beta) 26.5 and later, each entry has the following properties:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>orientationType</code></td>
+<td><code>GuideOrientationType</code></td>
+<td><code>GuideOrientationType.HORIZONTAL</code> or <code>GuideOrientationType.VERTICAL</code>.</td>
+</tr>
+<tr>
+<td><code>positionType</code></td>
+<td><code>GuidePositionType</code></td>
+<td><code>GuidePositionType.PIXEL</code> or <code>GuidePositionType.PERCENTAGE</code>.</td>
+</tr>
+<tr>
+<td><code>position</code></td>
+<td>Floating-point value</td>
+<td>The guide's position, in pixels or percent depending on <code>positionType</code>.</td>
+</tr>
+<tr>
+<td><code>color</code></td>
+<td>Array of 3 floats</td>
+<td><code>[R, G, B]</code>, each <code>0.0</code>-<code>1.0</code>.</td>
+</tr>
+<tr>
+<td><code>pinned</code></td>
+<td>Boolean</td>
+<td><code>true</code> if pinned to the opposite (bottom/right) edge.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Differences between versions</p>
+<p><strong>Breaking change:</strong> The integer values behind <code>orientationType</code> and <code>positionType</code> differ between versions of After Effects. Always compare against the enumerated constants (for example <a href="#other-guideoptions-guideorientationtype">GuideOrientationType.HORIZONTAL</a>) rather than raw integer literals — a test such as <code>guide.orientationType === 0</code> is not portable and may stop matching in a future version.</p>
+</div>
 <h4 id="item-item-type_2">Type<a class="headerlink" href="#item-item-type_2" title="Permanent link">&para;</a></h4>
-<p>Array; read-only.</p>
+<p>Array of objects; read-only.</p>
 <hr />
 <h3 id="item-item-itemid">Item.id<a class="headerlink" href="#item-item-itemid" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).id</code></p>
@@ -7740,12 +7874,17 @@ Archived Team Projects are not included.</p>
 <h2 id="item-item-methods">Methods<a class="headerlink" href="#item-item-methods" title="Permanent link">&para;</a></h2>
 <h3 id="item-item-itemaddguide">Item.addGuide()<a class="headerlink" href="#item-item-itemaddguide" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).addGuide(orientationType, position)</code></p>
+<p><code>app.project.item(index).addGuide(guideOptions)</code></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This functionality was added in After Effects 16.1 (CC 2019)</p>
+<p>The <code>(orientationType, position)</code> form was added in After Effects 16.1 (CC 2019). The <code>GuideOptions</code> form was added in After Effects (Beta) 26.5 and is subject to change while it remains in Beta.</p>
 </div>
 <h4 id="item-item-description_10">Description<a class="headerlink" href="#item-item-description_10" title="Permanent link">&para;</a></h4>
-<p>Creates a new guide and adds it to the <code>guides</code> object of the Item.</p>
+<p>Adds a guide to the item's view and returns its index. There are two forms:</p>
+<ul>
+<li><strong><code>addGuide(orientationType, position)</code></strong> - adds a pixel guide using an orientation and a pixel position.</li>
+<li><strong><code>addGuide(guideOptions)</code></strong> - adds a guide described by a <a href="#other-guideoptions">GuideOptions</a> object, allowing percentage positioning, per-guide color, and pinning. <em>(After Effects (Beta) 26.5 and later; calling this form in an earlier version raises an error.)</em></li>
+</ul>
 <h4 id="item-item-parameters">Parameters<a class="headerlink" href="#item-item-parameters" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -7759,29 +7898,79 @@ Archived Team Projects are not included.</p>
 <tr>
 <td><code>orientationType</code></td>
 <td>Integer</td>
-<td><code>0</code> for a horizontal guide, <code>1</code> for a vertical guide. Any other value defaults to horizontal.</td>
+<td><code>0</code> for a horizontal guide, <code>1</code> for a vertical guide. Any other value defaults to horizontal. In After Effects (Beta) 26.5 and later you may also pass <code>GuideOrientationType.HORIZONTAL</code> / <code>GuideOrientationType.VERTICAL</code>.</td>
 </tr>
 <tr>
 <td><code>position</code></td>
-<td>Integer</td>
-<td>The X or Y coordinate position of the guide in pixels, depending on its <code>orientationType</code>.</td>
+<td>Floating-point value</td>
+<td>The X or Y coordinate position of the guide in pixels. Clamped to ±100,000; non-finite values are rejected.</td>
+</tr>
+<tr>
+<td><code>guideOptions</code></td>
+<td>GuideOptions object</td>
+<td>A <a href="#other-guideoptions">GuideOptions</a> describing the new guide.</td>
 </tr>
 </tbody>
 </table>
 <h4 id="item-item-returns">Returns<a class="headerlink" href="#item-item-returns" title="Permanent link">&para;</a></h4>
 <p>Integer; the index of the newly-created guide.</p>
 <h4 id="item-item-example_3">Example<a class="headerlink" href="#item-item-example_3" title="Permanent link">&para;</a></h4>
-<p>Adds a vertical guide at 500 pixels on the X axis to the <code>activeItem</code> of a project.</p>
-<div class="language-javascript highlight"><pre><span></span><code><span id="__span-3-1"><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">activeItem</span><span class="p">.</span><span class="nx">addGuide</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">500</span><span class="p">);</span>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-3-1"><span class="kd">var</span><span class="w"> </span><span class="nx">item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+</span><span id="__span-3-2">
+</span><span id="__span-3-3"><span class="c1">// (orientationType, position) form: a vertical guide at 500 px on the X axis.</span>
+</span><span id="__span-3-4"><span class="nx">item</span><span class="p">.</span><span class="nx">addGuide</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">500</span><span class="p">);</span>
+</span><span id="__span-3-5">
+</span><span id="__span-3-6"><span class="c1">// GuideOptions form: a vertical guide at 50%, red, pinned to the right edge.</span>
+</span><span id="__span-3-7"><span class="kd">var</span><span class="w"> </span><span class="nx">opts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">GuideOptions</span><span class="p">();</span>
+</span><span id="__span-3-8"><span class="nx">opts</span><span class="p">.</span><span class="nx">orientation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">GuideOrientationType</span><span class="p">.</span><span class="nx">VERTICAL</span><span class="p">;</span>
+</span><span id="__span-3-9"><span class="nx">opts</span><span class="p">.</span><span class="nx">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">50</span><span class="p">;</span>
+</span><span id="__span-3-10"><span class="nx">opts</span><span class="p">.</span><span class="nx">positionType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">GuidePositionType</span><span class="p">.</span><span class="nx">PERCENTAGE</span><span class="p">;</span>
+</span><span id="__span-3-11"><span class="nx">opts</span><span class="p">.</span><span class="nx">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">];</span>
+</span><span id="__span-3-12"><span class="nx">opts</span><span class="p">.</span><span class="nx">pinned</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+</span><span id="__span-3-13"><span class="nx">item</span><span class="p">.</span><span class="nx">addGuide</span><span class="p">(</span><span class="nx">opts</span><span class="p">);</span>
+</span></code></pre></div>
+<hr />
+<h3 id="item-item-itemgetguideasobject">Item.getGuideAsObject()<a class="headerlink" href="#item-item-itemgetguideasobject" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).getGuideAsObject(guideIndex)</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects (Beta) 26.5 and is subject to change while it remains in Beta. Calling it in an earlier version raises the error "getGuideAsObject() is not available in this version of After Effects."</p>
+</div>
+<h4 id="item-item-description_11">Description<a class="headerlink" href="#item-item-description_11" title="Permanent link">&para;</a></h4>
+<p>Returns the guide at the specified index as a <a href="#other-guideoptions">GuideOptions</a> object, which you can modify and pass back to <a href="#item-item-itemsetguide">setGuide()</a>. This is a convenient way to read a guide's full state (orientation, position, position type, color, pinning).</p>
+<h4 id="item-item-parameters_1">Parameters<a class="headerlink" href="#item-item-parameters_1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>guideIndex</code></td>
+<td>Integer</td>
+<td>The index of the guide to read.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="item-item-returns_1">Returns<a class="headerlink" href="#item-item-returns_1" title="Permanent link">&para;</a></h4>
+<p>A <a href="#other-guideoptions">GuideOptions</a> object.</p>
+<h4 id="item-item-example_4">Example<a class="headerlink" href="#item-item-example_4" title="Permanent link">&para;</a></h4>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-4-1"><span class="kd">var</span><span class="w"> </span><span class="nx">item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+</span><span id="__span-4-2"><span class="kd">var</span><span class="w"> </span><span class="nx">g</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">getGuideAsObject</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
+</span><span id="__span-4-3"><span class="nx">g</span><span class="p">.</span><span class="nx">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">];</span><span class="w">   </span><span class="c1">// tweak just the color</span>
+</span><span id="__span-4-4"><span class="nx">item</span><span class="p">.</span><span class="nx">setGuide</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">g</span><span class="p">);</span><span class="w">   </span><span class="c1">// write it back</span>
 </span></code></pre></div>
 <hr />
 <h3 id="item-item-itemremove">Item.remove()<a class="headerlink" href="#item-item-itemremove" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).remove()</code></p>
-<h4 id="item-item-description_11">Description<a class="headerlink" href="#item-item-description_11" title="Permanent link">&para;</a></h4>
+<h4 id="item-item-description_12">Description<a class="headerlink" href="#item-item-description_12" title="Permanent link">&para;</a></h4>
 <p>Deletes this item from the project and the Project panel. If the item is a FolderItem, all the items contained in the folder are also removed from the project. No files or folders are removed from the disk.</p>
-<h4 id="item-item-parameters_1">Parameters<a class="headerlink" href="#item-item-parameters_1" title="Permanent link">&para;</a></h4>
+<h4 id="item-item-parameters_2">Parameters<a class="headerlink" href="#item-item-parameters_2" title="Permanent link">&para;</a></h4>
 <p>None.</p>
-<h4 id="item-item-returns_1">Returns<a class="headerlink" href="#item-item-returns_1" title="Permanent link">&para;</a></h4>
+<h4 id="item-item-returns_2">Returns<a class="headerlink" href="#item-item-returns_2" title="Permanent link">&para;</a></h4>
 <p>Nothing.</p>
 <hr />
 <h3 id="item-item-itemremoveguide">Item.removeGuide()<a class="headerlink" href="#item-item-itemremoveguide" title="Permanent link">&para;</a></h3>
@@ -7790,9 +7979,9 @@ Archived Team Projects are not included.</p>
 <p class="admonition-title">Note</p>
 <p>This functionality was added in After Effects 16.1 (CC 2019)</p>
 </div>
-<h4 id="item-item-description_12">Description<a class="headerlink" href="#item-item-description_12" title="Permanent link">&para;</a></h4>
-<p>Removes an existing guide. Choose the guide based on its index inside the <code>Item.guides</code> object.</p>
-<h4 id="item-item-parameters_2">Parameters<a class="headerlink" href="#item-item-parameters_2" title="Permanent link">&para;</a></h4>
+<h4 id="item-item-description_13">Description<a class="headerlink" href="#item-item-description_13" title="Permanent link">&para;</a></h4>
+<p>Removes an existing guide. Choose the guide based on its index inside the <a href="#item-item-itemguides">Item.guides</a> array.</p>
+<h4 id="item-item-parameters_3">Parameters<a class="headerlink" href="#item-item-parameters_3" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -7809,11 +7998,11 @@ Archived Team Projects are not included.</p>
 </tr>
 </tbody>
 </table>
-<h4 id="item-item-returns_2">Returns<a class="headerlink" href="#item-item-returns_2" title="Permanent link">&para;</a></h4>
+<h4 id="item-item-returns_3">Returns<a class="headerlink" href="#item-item-returns_3" title="Permanent link">&para;</a></h4>
 <p>Nothing.</p>
-<h4 id="item-item-example_4">Example<a class="headerlink" href="#item-item-example_4" title="Permanent link">&para;</a></h4>
+<h4 id="item-item-example_5">Example<a class="headerlink" href="#item-item-example_5" title="Permanent link">&para;</a></h4>
 <p>Removes the first guide in <code>activeItem</code>.</p>
-<div class="language-javascript highlight"><pre><span></span><code><span id="__span-4-1"><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">activeItem</span><span class="p">.</span><span class="nx">removeGuide</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-5-1"><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">activeItem</span><span class="p">.</span><span class="nx">removeGuide</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
 </span></code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -7821,15 +8010,23 @@ Archived Team Projects are not included.</p>
 </div>
 <hr />
 <h3 id="item-item-itemsetguide">Item.setGuide()<a class="headerlink" href="#item-item-itemsetguide" title="Permanent link">&para;</a></h3>
-<p><code>app.project.item(index).setGuide(position,guideIndex)</code></p>
+<p><code>app.project.item(index).setGuide(position, guideIndex)</code></p>
+<p><code>app.project.item(index).setGuide(guideIndex, guideOptions)</code></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This functionality was added in After Effects 16.1 (CC 2019)</p>
+<p>The <code>(position, guideIndex)</code> form was added in After Effects 16.1 (CC 2019). The <code>(guideIndex, guideOptions)</code> form was added in After Effects (Beta) 26.5 and is subject to change while it remains in Beta.</p>
 </div>
-<h4 id="item-item-description_13">Description<a class="headerlink" href="#item-item-description_13" title="Permanent link">&para;</a></h4>
-<p>Modifies the <code>position</code> of an existing guide. Choose the guide based on its <code>guideIndex</code> inside the <code>Item.guides</code> array.</p>
-<p>A guide's <code>orientationType</code> may not be changed after it is created.</p>
-<h4 id="item-item-parameters_3">Parameters<a class="headerlink" href="#item-item-parameters_3" title="Permanent link">&para;</a></h4>
+<h4 id="item-item-description_14">Description<a class="headerlink" href="#item-item-description_14" title="Permanent link">&para;</a></h4>
+<p>Updates an existing guide. There are two forms, distinguished by the type of the second argument:</p>
+<ul>
+<li><strong><code>setGuide(position, guideIndex)</code></strong> - moves the guide at <code>guideIndex</code> to a new pixel <code>position</code>. <em>Note the order: position first, index second.</em> A guide's <code>orientationType</code> may not be changed after it is created.</li>
+<li><strong><code>setGuide(guideIndex, guideOptions)</code></strong> - applies the properties set on a <a href="#other-guideoptions">GuideOptions</a> object to the guide at <code>guideIndex</code>. Only the properties you set are changed (partial update). <em>(After Effects (Beta) 26.5 and later.)</em></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The two forms take their arguments in the <strong>opposite order</strong>: the <code>(position, guideIndex)</code> form takes the position first, while the <code>(guideIndex, guideOptions)</code> form takes the index first. After Effects decides which form you mean from the type of the second argument (a number selects the <code>(position, guideIndex)</code> form; a <code>GuideOptions</code> object selects the <code>(guideIndex, guideOptions)</code> form).</p>
+</div>
+<h4 id="item-item-parameters_4">Parameters<a class="headerlink" href="#item-item-parameters_4" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -7841,21 +8038,35 @@ Archived Team Projects are not included.</p>
 <tbody>
 <tr>
 <td><code>position</code></td>
-<td>Integer</td>
-<td>The new X or Y coordinate position of the guide in pixels, depending on its existing <code>orientationType</code>.</td>
+<td>Floating-point value</td>
+<td>The new X or Y coordinate position of the guide in pixels. Clamped to ±100,000; non-finite values are rejected.</td>
 </tr>
 <tr>
 <td><code>guideIndex</code></td>
 <td>Integer</td>
 <td>The index of the guide to be modified.</td>
 </tr>
+<tr>
+<td><code>guideOptions</code></td>
+<td>GuideOptions object</td>
+<td>A <a href="#other-guideoptions">GuideOptions</a> whose set properties are applied to the guide.</td>
+</tr>
 </tbody>
 </table>
-<h4 id="item-item-returns_3">Returns<a class="headerlink" href="#item-item-returns_3" title="Permanent link">&para;</a></h4>
+<h4 id="item-item-returns_4">Returns<a class="headerlink" href="#item-item-returns_4" title="Permanent link">&para;</a></h4>
 <p>Nothing.</p>
-<h4 id="item-item-example_5">Example<a class="headerlink" href="#item-item-example_5" title="Permanent link">&para;</a></h4>
-<p>Changes the position of the first guide in <code>activeItem</code> to 1200 pixels.</p>
-<div class="language-javascript highlight"><pre><span></span><code><span id="__span-5-1"><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">activeItem</span><span class="p">.</span><span class="nx">setGuide</span><span class="p">(</span><span class="mf">1200</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span>
+<h4 id="item-item-example_6">Example<a class="headerlink" href="#item-item-example_6" title="Permanent link">&para;</a></h4>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-6-1"><span class="kd">var</span><span class="w"> </span><span class="nx">item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+</span><span id="__span-6-2">
+</span><span id="__span-6-3"><span class="c1">// (position, guideIndex) form: move guide 0 to 1200 px (position first, index second).</span>
+</span><span id="__span-6-4"><span class="nx">item</span><span class="p">.</span><span class="nx">setGuide</span><span class="p">(</span><span class="mf">1200</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span>
+</span><span id="__span-6-5">
+</span><span id="__span-6-6"><span class="c1">// GuideOptions form: recolor guide 0 and switch it to a percentage position.</span>
+</span><span id="__span-6-7"><span class="kd">var</span><span class="w"> </span><span class="nx">opts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">GuideOptions</span><span class="p">();</span>
+</span><span id="__span-6-8"><span class="nx">opts</span><span class="p">.</span><span class="nx">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">75</span><span class="p">;</span>
+</span><span id="__span-6-9"><span class="nx">opts</span><span class="p">.</span><span class="nx">positionType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">GuidePositionType</span><span class="p">.</span><span class="nx">PERCENTAGE</span><span class="p">;</span>
+</span><span id="__span-6-10"><span class="nx">opts</span><span class="p">.</span><span class="nx">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">];</span>
+</span><span id="__span-6-11"><span class="nx">item</span><span class="p">.</span><span class="nx">setGuide</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">opts</span><span class="p">);</span><span class="w">   </span><span class="c1">// index first, options second</span>
 </span></code></pre></div></section><section class="print-page" id="item-itemcollection" heading-number="4.2"><h1 id="item-itemcollection-itemcollection-object">ItemCollection object<a class="headerlink" href="#item-itemcollection-itemcollection-object" title="Permanent link">&para;</a></h1>
 <p><code>app.project.items</code></p>
 <h4 id="item-itemcollection-description">Description<a class="headerlink" href="#item-itemcollection-description" title="Permanent link">&para;</a></h4>
@@ -9103,11 +9314,90 @@ project <code>save()</code> method before exporting the Motion Graphics template
 <h4 id="layer-layer-type_2">Type<a class="headerlink" href="#layer-layer-type_2" title="Permanent link">&para;</a></h4>
 <p>CompItem object; read-only.</p>
 <hr />
+<h3 id="layer-layer-layerguides">Layer.guides<a class="headerlink" href="#layer-layer-layerguides" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).guides</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 16.1 (CC 2019)</p>
+</div>
+<h4 id="layer-layer-description_4">Description<a class="headerlink" href="#layer-layer-description_4" title="Permanent link">&para;</a></h4>
+<p>An array of objects describing the guides in the layer's view. The properties on each entry depend on the version of After Effects.</p>
+<p>In After Effects 16.1 (CC 2019) and later, each entry has the following properties:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>orientationType</code></td>
+<td>Integer</td>
+<td><code>0</code> for a horizontal guide, <code>1</code> for a vertical guide.</td>
+</tr>
+<tr>
+<td><code>positionType</code></td>
+<td>Integer</td>
+<td>Always <code>0</code> (a pixel position).</td>
+</tr>
+<tr>
+<td><code>position</code></td>
+<td>Floating-point value</td>
+<td>The guide's position, in pixels.</td>
+</tr>
+</tbody>
+</table>
+<p>In After Effects (Beta) 26.5 and later, each entry has the following properties:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>orientationType</code></td>
+<td><code>GuideOrientationType</code></td>
+<td><code>GuideOrientationType.HORIZONTAL</code> or <code>GuideOrientationType.VERTICAL</code>.</td>
+</tr>
+<tr>
+<td><code>positionType</code></td>
+<td><code>GuidePositionType</code></td>
+<td><code>GuidePositionType.PIXEL</code> or <code>GuidePositionType.PERCENTAGE</code>.</td>
+</tr>
+<tr>
+<td><code>position</code></td>
+<td>Floating-point value</td>
+<td>The guide's position, in pixels or percent depending on <code>positionType</code>.</td>
+</tr>
+<tr>
+<td><code>color</code></td>
+<td>Array of 3 floats</td>
+<td><code>[R, G, B]</code>, each <code>0.0</code>-<code>1.0</code>.</td>
+</tr>
+<tr>
+<td><code>pinned</code></td>
+<td>Boolean</td>
+<td><code>true</code> if pinned to the opposite (bottom/right) edge.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Differences between versions</p>
+<p><strong>Breaking change:</strong> The integer values behind <code>orientationType</code> and <code>positionType</code> differ between versions of After Effects. In the beta, always compare against the enumerated constants (for example <a href="#other-guideoptions-guideorientationtype">GuideOrientationType.HORIZONTAL</a>) rather than raw integer literals — a test such as <code>guide.orientationType === 0</code> is not portable and may stop matching in a future version.</p>
+</div>
+<h4 id="layer-layer-type_3">Type<a class="headerlink" href="#layer-layer-type_3" title="Permanent link">&para;</a></h4>
+<p>Array of objects; read-only.</p>
+<hr />
 <h3 id="layer-layer-layerhasvideo">Layer.hasVideo<a class="headerlink" href="#layer-layer-layerhasvideo" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).hasVideo</code></p>
-<h4 id="layer-layer-description_4">Description<a class="headerlink" href="#layer-layer-description_4" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-description_5">Description<a class="headerlink" href="#layer-layer-description_5" title="Permanent link">&para;</a></h4>
 <p>When <code>true</code>, the layer has a video switch (the eyeball icon) in the Timeline panel; otherwise <code>false</code>.</p>
-<h4 id="layer-layer-type_3">Type<a class="headerlink" href="#layer-layer-type_3" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-type_4">Type<a class="headerlink" href="#layer-layer-type_4" title="Permanent link">&para;</a></h4>
 <p>Boolean; read-only.</p>
 <hr />
 <h3 id="layer-layer-layerid">Layer.id<a class="headerlink" href="#layer-layer-layerid" title="Permanent link">&para;</a></h3>
@@ -9116,63 +9406,63 @@ project <code>save()</code> method before exporting the Motion Graphics template
 <p class="admonition-title">Note</p>
 <p>This functionality was added in After Effects 22.0 (2022)</p>
 </div>
-<h4 id="layer-layer-description_5">Description<a class="headerlink" href="#layer-layer-description_5" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-description_6">Description<a class="headerlink" href="#layer-layer-description_6" title="Permanent link">&para;</a></h4>
 <p>Instance property on Layer which returns a unique and persistent identification number used internally to identify a Layer between sessions.</p>
 <p>The value of the ID remains the same when the project is saved to a file and later reloaded.</p>
 <p>However, when you import this project into another project, new IDs are assigned to all Layers in the imported project.
 The ID is not displayed anywhere in the user interface..</p>
-<h4 id="layer-layer-type_4">Type<a class="headerlink" href="#layer-layer-type_4" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-type_5">Type<a class="headerlink" href="#layer-layer-type_5" title="Permanent link">&para;</a></h4>
 <p>Integer; read-only.</p>
 <hr />
 <h3 id="layer-layer-layerindex">Layer.index<a class="headerlink" href="#layer-layer-layerindex" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).index</code></p>
-<h4 id="layer-layer-description_6">Description<a class="headerlink" href="#layer-layer-description_6" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-description_7">Description<a class="headerlink" href="#layer-layer-description_7" title="Permanent link">&para;</a></h4>
 <p>The index position of the layer.</p>
-<h4 id="layer-layer-type_5">Type<a class="headerlink" href="#layer-layer-type_5" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-type_6">Type<a class="headerlink" href="#layer-layer-type_6" title="Permanent link">&para;</a></h4>
 <p>Integer, in the range <code>[1..numLayers]</code>; read-only.</p>
 <hr />
 <h3 id="layer-layer-layerinpoint">Layer.inPoint<a class="headerlink" href="#layer-layer-layerinpoint" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).inPoint</code></p>
-<h4 id="layer-layer-description_7">Description<a class="headerlink" href="#layer-layer-description_7" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-description_8">Description<a class="headerlink" href="#layer-layer-description_8" title="Permanent link">&para;</a></h4>
 <p>The "in" point of the layer, expressed in composition time (seconds).</p>
-<h4 id="layer-layer-type_6">Type<a class="headerlink" href="#layer-layer-type_6" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-type_7">Type<a class="headerlink" href="#layer-layer-type_7" title="Permanent link">&para;</a></h4>
 <p>Floating-point value, in the range <code>[-10800.0..10800.0]</code> (minus or plus three hours); read/write.</p>
 <hr />
 <h3 id="layer-layer-layerisnameset">Layer.isNameSet<a class="headerlink" href="#layer-layer-layerisnameset" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).isNameSet</code></p>
-<h4 id="layer-layer-description_8">Description<a class="headerlink" href="#layer-layer-description_8" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-description_9">Description<a class="headerlink" href="#layer-layer-description_9" title="Permanent link">&para;</a></h4>
 <p><code>true</code> if the value of the name attribute has been set explicitly, rather than automatically from the source.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>This always returns <code>true</code> for layers that do not have a <a href="#layer-avlayer-avlayersource">AVLayer.source</a></p>
 </div>
-<h4 id="layer-layer-type_7">Type<a class="headerlink" href="#layer-layer-type_7" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-type_8">Type<a class="headerlink" href="#layer-layer-type_8" title="Permanent link">&para;</a></h4>
 <p>Boolean; read-only.</p>
 <hr />
 <h3 id="layer-layer-layerlabel">Layer.label<a class="headerlink" href="#layer-layer-layerlabel" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).label</code></p>
-<h4 id="layer-layer-description_9">Description<a class="headerlink" href="#layer-layer-description_9" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-description_10">Description<a class="headerlink" href="#layer-layer-description_10" title="Permanent link">&para;</a></h4>
 <p>The label color for the item. Colors are represented by their number (0 for None, or 1 to 16 for one of the preset colors in the Labels preferences).</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Custom label colors cannot be set programmatically.</p>
 </div>
-<h4 id="layer-layer-type_8">Type<a class="headerlink" href="#layer-layer-type_8" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-type_9">Type<a class="headerlink" href="#layer-layer-type_9" title="Permanent link">&para;</a></h4>
 <p>Integer (0 to 16); read/write.</p>
 <hr />
 <h3 id="layer-layer-layerlocked">Layer.locked<a class="headerlink" href="#layer-layer-layerlocked" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).locked</code></p>
-<h4 id="layer-layer-description_10">Description<a class="headerlink" href="#layer-layer-description_10" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-description_11">Description<a class="headerlink" href="#layer-layer-description_11" title="Permanent link">&para;</a></h4>
 <p>When <code>true</code>, the layer is locked; otherwise <code>false</code>. This corresponds to the lock toggle in the Layer panel.</p>
-<h4 id="layer-layer-type_9">Type<a class="headerlink" href="#layer-layer-type_9" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-type_10">Type<a class="headerlink" href="#layer-layer-type_10" title="Permanent link">&para;</a></h4>
 <p>Boolean; read/write.</p>
 <hr />
 <h3 id="layer-layer-layermarker">Layer.marker<a class="headerlink" href="#layer-layer-layermarker" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).marker</code></p>
-<h4 id="layer-layer-description_11">Description<a class="headerlink" href="#layer-layer-description_11" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-description_12">Description<a class="headerlink" href="#layer-layer-description_12" title="Permanent link">&para;</a></h4>
 <p>A <a href="#property-propertygroup">PropertyGroup object</a> that contains all a layer's markers. Layer marker scripting has the same functionality as <a href="#item-compitem-compitemmarkerproperty">Comp markers</a>.</p>
 <p>See <a href="#other-markervalue">MarkerValue object</a>.</p>
-<h4 id="layer-layer-type_10">Type<a class="headerlink" href="#layer-layer-type_10" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-type_11">Type<a class="headerlink" href="#layer-layer-type_11" title="Permanent link">&para;</a></h4>
 <p>PropertyGroup object or <code>null</code>; read-only.</p>
 <h4 id="layer-layer-example_1">Example<a class="headerlink" href="#layer-layer-example_1" title="Permanent link">&para;</a></h4>
 <p>The following sample code creates two layer markers with different properties</p>
@@ -9190,74 +9480,74 @@ The ID is not displayed anywhere in the user interface..</p>
 <hr />
 <h3 id="layer-layer-layernulllayer">Layer.nullLayer<a class="headerlink" href="#layer-layer-layernulllayer" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).nullLayer</code></p>
-<h4 id="layer-layer-description_12">Description<a class="headerlink" href="#layer-layer-description_12" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-description_13">Description<a class="headerlink" href="#layer-layer-description_13" title="Permanent link">&para;</a></h4>
 <p>When <code>true</code>, the layer was created as a null object; otherwise <code>false</code>.</p>
-<h4 id="layer-layer-type_11">Type<a class="headerlink" href="#layer-layer-type_11" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-type_12">Type<a class="headerlink" href="#layer-layer-type_12" title="Permanent link">&para;</a></h4>
 <p>Boolean; read-only.</p>
 <hr />
 <h3 id="layer-layer-layeroutpoint">Layer.outPoint<a class="headerlink" href="#layer-layer-layeroutpoint" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).outPoint</code></p>
-<h4 id="layer-layer-description_13">Description<a class="headerlink" href="#layer-layer-description_13" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-description_14">Description<a class="headerlink" href="#layer-layer-description_14" title="Permanent link">&para;</a></h4>
 <p>The "out" point of the layer, expressed in composition time (seconds).</p>
-<h4 id="layer-layer-type_12">Type<a class="headerlink" href="#layer-layer-type_12" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-type_13">Type<a class="headerlink" href="#layer-layer-type_13" title="Permanent link">&para;</a></h4>
 <p>Floating-point value, in the range <code>[-10800.0..10800.0]</code> (minus or plus three hours); read/write.</p>
 <hr />
 <h3 id="layer-layer-layerparent">Layer.parent<a class="headerlink" href="#layer-layer-layerparent" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).parent</code></p>
-<h4 id="layer-layer-description_14">Description<a class="headerlink" href="#layer-layer-description_14" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-description_15">Description<a class="headerlink" href="#layer-layer-description_15" title="Permanent link">&para;</a></h4>
 <p>The parent of this layer; can be <code>null</code>.</p>
 <p>Offset values are calculated to counterbalance any transforms above this layer in the hierarchy, so that when you set the parent there is no apparent jump in the layer's transform.</p>
 <p>For example, if the new parent has a rotation of 30 degrees, the child layer is assigned a rotation of -30 degrees.</p>
 <p>To set the parent without changing the child layer's transform values, use the <a href="#layer-layer-layersetparentwithjump">setParentWithJump</a> method.</p>
-<h4 id="layer-layer-type_13">Type<a class="headerlink" href="#layer-layer-type_13" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-type_14">Type<a class="headerlink" href="#layer-layer-type_14" title="Permanent link">&para;</a></h4>
 <p>Layer object or <code>null</code>; read/write.</p>
 <hr />
 <h3 id="layer-layer-layerselectedproperties">Layer.selectedProperties<a class="headerlink" href="#layer-layer-layerselectedproperties" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).selectedProperties</code></p>
-<h4 id="layer-layer-description_15">Description<a class="headerlink" href="#layer-layer-description_15" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-description_16">Description<a class="headerlink" href="#layer-layer-description_16" title="Permanent link">&para;</a></h4>
 <p>An array containing all of the currently selected <a href="#property-property">Property</a> and <a href="#property-propertygroup">PropertyGroup</a> objects in the layer.</p>
-<h4 id="layer-layer-type_14">Type<a class="headerlink" href="#layer-layer-type_14" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-type_15">Type<a class="headerlink" href="#layer-layer-type_15" title="Permanent link">&para;</a></h4>
 <p>Array of <a href="#property-propertybase">PropertyBase</a> objects; read-only.</p>
 <hr />
 <h3 id="layer-layer-layershy">Layer.shy<a class="headerlink" href="#layer-layer-layershy" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).shy</code></p>
-<h4 id="layer-layer-description_16">Description<a class="headerlink" href="#layer-layer-description_16" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-description_17">Description<a class="headerlink" href="#layer-layer-description_17" title="Permanent link">&para;</a></h4>
 <p>When <code>true</code>, the layer is "shy", meaning that it is hidden in the Layer panel if the composition's "Hide all shy layers" option is toggled on.</p>
-<h4 id="layer-layer-type_15">Type<a class="headerlink" href="#layer-layer-type_15" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-type_16">Type<a class="headerlink" href="#layer-layer-type_16" title="Permanent link">&para;</a></h4>
 <p>Boolean; read/write.</p>
 <hr />
 <h3 id="layer-layer-layersolo">Layer.solo<a class="headerlink" href="#layer-layer-layersolo" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).solo</code></p>
-<h4 id="layer-layer-description_17">Description<a class="headerlink" href="#layer-layer-description_17" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-description_18">Description<a class="headerlink" href="#layer-layer-description_18" title="Permanent link">&para;</a></h4>
 <p>When <code>true</code>, the layer is soloed, otherwise <code>false</code>.</p>
-<h4 id="layer-layer-type_16">Type<a class="headerlink" href="#layer-layer-type_16" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-type_17">Type<a class="headerlink" href="#layer-layer-type_17" title="Permanent link">&para;</a></h4>
 <p>Boolean; read/write.</p>
 <hr />
 <h3 id="layer-layer-layerstarttime">Layer.startTime<a class="headerlink" href="#layer-layer-layerstarttime" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).startTime</code></p>
-<h4 id="layer-layer-description_18">Description<a class="headerlink" href="#layer-layer-description_18" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-description_19">Description<a class="headerlink" href="#layer-layer-description_19" title="Permanent link">&para;</a></h4>
 <p>The start time of the layer, expressed in composition time (seconds).</p>
-<h4 id="layer-layer-type_17">Type<a class="headerlink" href="#layer-layer-type_17" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-type_18">Type<a class="headerlink" href="#layer-layer-type_18" title="Permanent link">&para;</a></h4>
 <p>Floating-point value, in the range <code>[-10800.0..10800.0]</code> (minus or plus three hours); read/write.</p>
 <hr />
 <h3 id="layer-layer-layerstretch">Layer.stretch<a class="headerlink" href="#layer-layer-layerstretch" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).stretch</code></p>
-<h4 id="layer-layer-description_19">Description<a class="headerlink" href="#layer-layer-description_19" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-description_20">Description<a class="headerlink" href="#layer-layer-description_20" title="Permanent link">&para;</a></h4>
 <p>The layer's time stretch, expressed as a percentage. A value of 100 means no stretch. Values between 0 and 1 are set to 1, and values between -1 and 0 (not including 0) are set to -1.</p>
-<h4 id="layer-layer-type_18">Type<a class="headerlink" href="#layer-layer-type_18" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-type_19">Type<a class="headerlink" href="#layer-layer-type_19" title="Permanent link">&para;</a></h4>
 <p>Floating-point value, in the range <code>[-9900.0..9900.0]</code>; read/write.</p>
 <hr />
 <h3 id="layer-layer-layertime">Layer.time<a class="headerlink" href="#layer-layer-layertime" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).time</code></p>
-<h4 id="layer-layer-description_20">Description<a class="headerlink" href="#layer-layer-description_20" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-description_21">Description<a class="headerlink" href="#layer-layer-description_21" title="Permanent link">&para;</a></h4>
 <p>The current time of the layer, expressed in composition time (seconds).</p>
-<h4 id="layer-layer-type_19">Type<a class="headerlink" href="#layer-layer-type_19" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-type_20">Type<a class="headerlink" href="#layer-layer-type_20" title="Permanent link">&para;</a></h4>
 <p>Floating-point value; read-only.</p>
 <hr />
 <h2 id="layer-layer-methods">Methods<a class="headerlink" href="#layer-layer-methods" title="Permanent link">&para;</a></h2>
 <h3 id="layer-layer-layeractiveattime">Layer.activeAtTime()<a class="headerlink" href="#layer-layer-layeractiveattime" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).activeAtTime(time)</code></p>
-<h4 id="layer-layer-description_21">Description<a class="headerlink" href="#layer-layer-description_21" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-description_22">Description<a class="headerlink" href="#layer-layer-description_22" title="Permanent link">&para;</a></h4>
 <p>Returns <code>true</code> if this layer will be active at the specified time.</p>
 <p>To return <code>true</code>, the layer must be enabled, no other layer may be soloing unless this layer is soloed too, and the time must be between the <code>inPoint</code> and <code>outPoint</code> values of this layer.</p>
 <h4 id="layer-layer-parameters">Parameters<a class="headerlink" href="#layer-layer-parameters" title="Permanent link">&para;</a></h4>
@@ -9280,16 +9570,74 @@ The ID is not displayed anywhere in the user interface..</p>
 <h4 id="layer-layer-returns">Returns<a class="headerlink" href="#layer-layer-returns" title="Permanent link">&para;</a></h4>
 <p>Boolean.</p>
 <hr />
+<h3 id="layer-layer-layeraddguide">Layer.addGuide()<a class="headerlink" href="#layer-layer-layeraddguide" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).addGuide(orientationType, position)</code></p>
+<p><code>app.project.item(index).layer(index).addGuide(guideOptions)</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code>(orientationType, position)</code> form was added in After Effects 16.1 (CC 2019). The <code>GuideOptions</code> form was added in After Effects (Beta) 26.5 and is subject to change while it remains in Beta.</p>
+</div>
+<h4 id="layer-layer-description_23">Description<a class="headerlink" href="#layer-layer-description_23" title="Permanent link">&para;</a></h4>
+<p>Adds a guide to the layer's view and returns its index. There are two forms:</p>
+<ul>
+<li><strong><code>addGuide(orientationType, position)</code></strong> - adds a pixel guide using an orientation and a pixel position.</li>
+<li><strong><code>addGuide(guideOptions)</code></strong> - adds a guide described by a <a href="#other-guideoptions">GuideOptions</a> object, allowing percentage positioning, per-guide color, and pinning. <em>(After Effects (Beta) 26.5 and later; calling this form in an earlier version raises an error.)</em></li>
+</ul>
+<h4 id="layer-layer-parameters_1">Parameters<a class="headerlink" href="#layer-layer-parameters_1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>orientationType</code></td>
+<td>Integer</td>
+<td><code>0</code> for a horizontal guide, <code>1</code> for a vertical guide. Any other value defaults to horizontal. In After Effects (Beta) 26.5 and later you may also pass <code>GuideOrientationType.HORIZONTAL</code> / <code>GuideOrientationType.VERTICAL</code>.</td>
+</tr>
+<tr>
+<td><code>position</code></td>
+<td>Floating-point value</td>
+<td>The X or Y coordinate position of the guide in pixels. Clamped to ±100,000; non-finite values are rejected.</td>
+</tr>
+<tr>
+<td><code>guideOptions</code></td>
+<td>GuideOptions object</td>
+<td>A <a href="#other-guideoptions">GuideOptions</a> describing the new guide.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="layer-layer-returns_1">Returns<a class="headerlink" href="#layer-layer-returns_1" title="Permanent link">&para;</a></h4>
+<p>Integer; the index of the newly-created guide.</p>
+<h4 id="layer-layer-example_2">Example<a class="headerlink" href="#layer-layer-example_2" title="Permanent link">&para;</a></h4>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-2-1"><span class="kd">var</span><span class="w"> </span><span class="nx">layer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">layer</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+</span><span id="__span-2-2">
+</span><span id="__span-2-3"><span class="c1">// (orientationType, position) form: a vertical guide at 500 px on the X axis.</span>
+</span><span id="__span-2-4"><span class="nx">layer</span><span class="p">.</span><span class="nx">addGuide</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">500</span><span class="p">);</span>
+</span><span id="__span-2-5">
+</span><span id="__span-2-6"><span class="c1">// GuideOptions form: a vertical guide at 50%, red, pinned to the right edge.</span>
+</span><span id="__span-2-7"><span class="kd">var</span><span class="w"> </span><span class="nx">opts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">GuideOptions</span><span class="p">();</span>
+</span><span id="__span-2-8"><span class="nx">opts</span><span class="p">.</span><span class="nx">orientation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">GuideOrientationType</span><span class="p">.</span><span class="nx">VERTICAL</span><span class="p">;</span>
+</span><span id="__span-2-9"><span class="nx">opts</span><span class="p">.</span><span class="nx">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">50</span><span class="p">;</span>
+</span><span id="__span-2-10"><span class="nx">opts</span><span class="p">.</span><span class="nx">positionType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">GuidePositionType</span><span class="p">.</span><span class="nx">PERCENTAGE</span><span class="p">;</span>
+</span><span id="__span-2-11"><span class="nx">opts</span><span class="p">.</span><span class="nx">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">];</span>
+</span><span id="__span-2-12"><span class="nx">opts</span><span class="p">.</span><span class="nx">pinned</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+</span><span id="__span-2-13"><span class="nx">layer</span><span class="p">.</span><span class="nx">addGuide</span><span class="p">(</span><span class="nx">opts</span><span class="p">);</span>
+</span></code></pre></div>
+<hr />
 <h3 id="layer-layer-layerapplypreset">Layer.applyPreset()<a class="headerlink" href="#layer-layer-layerapplypreset" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).applyPreset(presetName);</code></p>
-<h4 id="layer-layer-description_22">Description<a class="headerlink" href="#layer-layer-description_22" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-description_24">Description<a class="headerlink" href="#layer-layer-description_24" title="Permanent link">&para;</a></h4>
 <p>Applies the specified collection of animation settings (an animation preset) to all the currently selected layers of the comp to which the layer belongs. If no layer is selected, it applies the animation preset to a new solid layer.</p>
 <p>Predefined animation preset files are installed in the Presets folder, and users can create new animation presets through the user interface.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The animation preset is applied to the the selected layer(s) of the comp, not to the layer whose applyPreset function is called. Hence, the layer whose applyPreset function is called effectively just determines the comp whose layers are processed.</p>
 </div>
-<h4 id="layer-layer-parameters_1">Parameters<a class="headerlink" href="#layer-layer-parameters_1" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-parameters_2">Parameters<a class="headerlink" href="#layer-layer-parameters_2" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -9306,12 +9654,12 @@ The ID is not displayed anywhere in the user interface..</p>
 </tr>
 </tbody>
 </table>
-<h4 id="layer-layer-returns_1">Returns<a class="headerlink" href="#layer-layer-returns_1" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-returns_2">Returns<a class="headerlink" href="#layer-layer-returns_2" title="Permanent link">&para;</a></h4>
 <p>Nothing.</p>
 <hr />
 <h3 id="layer-layer-layercopytocomp">Layer.copyToComp()<a class="headerlink" href="#layer-layer-layercopytocomp" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).copyToComp(intoComp)</code></p>
-<h4 id="layer-layer-description_23">Description<a class="headerlink" href="#layer-layer-description_23" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-description_25">Description<a class="headerlink" href="#layer-layer-description_25" title="Permanent link">&para;</a></h4>
 <p>Copies the layer into the specified composition. The original layer remains unchanged.</p>
 <p>Creates a new Layer object with the same values as this one, and prepends the new object to the <a href="#layer-layercollection">LayerCollection object</a> in the target CompItem. Retrieve the copy using into <code>Comp.layer(1)</code>.</p>
 <p>Copying in a layer changes the index positions of previously existing layers in the target composition.</p>
@@ -9324,7 +9672,7 @@ The ID is not displayed anywhere in the user interface..</p>
 <p class="admonition-title">Warning</p>
 <p>As of After Effects 13.7 (13.6, has not been tested), if the copied layer has an effect on it and the user undoes the action, After Effects will Crash.</p>
 </div>
-<h4 id="layer-layer-parameters_2">Parameters<a class="headerlink" href="#layer-layer-parameters_2" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-parameters_3">Parameters<a class="headerlink" href="#layer-layer-parameters_3" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -9341,7 +9689,7 @@ The ID is not displayed anywhere in the user interface..</p>
 </tr>
 </tbody>
 </table>
-<h4 id="layer-layer-returns_2">Returns<a class="headerlink" href="#layer-layer-returns_2" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-returns_3">Returns<a class="headerlink" href="#layer-layer-returns_3" title="Permanent link">&para;</a></h4>
 <p>Nothing.</p>
 <hr />
 <h3 id="layer-layer-layerdosceneeditdetection">Layer.doSceneEditDetection()<a class="headerlink" href="#layer-layer-layerdosceneeditdetection" title="Permanent link">&para;</a></h3>
@@ -9350,10 +9698,10 @@ The ID is not displayed anywhere in the user interface..</p>
 <p class="admonition-title">Note</p>
 <p>This functionality was added in After Effects 22.3 (2022)</p>
 </div>
-<h4 id="layer-layer-description_24">Description<a class="headerlink" href="#layer-layer-description_24" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-description_26">Description<a class="headerlink" href="#layer-layer-description_26" title="Permanent link">&para;</a></h4>
 <p>Runs Scene Edit Detection on the layer that the method is called on and returns an array containing the times of any detected scenes. This is the same as selecting a layer in the Timeline and choosing "Layer &gt; Scene Edit Detection" with the single argument determining whether the edits are applied as markers, layer splits, pre-comps, or are not applied to the layer.</p>
 <p>Just as in the UI, <code>doSceneEditDetection</code> will fail and error if called on a non-video layer or a video layer with Time Remapping enabled.</p>
-<h4 id="layer-layer-parameters_3">Parameters<a class="headerlink" href="#layer-layer-parameters_3" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-parameters_4">Parameters<a class="headerlink" href="#layer-layer-parameters_4" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -9397,46 +9745,26 @@ The ID is not displayed anywhere in the user interface..</p>
 </tr>
 </tbody>
 </table>
-<h4 id="layer-layer-returns_3">Returns<a class="headerlink" href="#layer-layer-returns_3" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-returns_4">Returns<a class="headerlink" href="#layer-layer-returns_4" title="Permanent link">&para;</a></h4>
 <p>Array of floating-point values; the times of the detected edit points expressed in composition time.</p>
 <hr />
 <h3 id="layer-layer-layerduplicate">Layer.duplicate()<a class="headerlink" href="#layer-layer-layerduplicate" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).duplicate()</code></p>
-<h4 id="layer-layer-description_25">Description<a class="headerlink" href="#layer-layer-description_25" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-description_27">Description<a class="headerlink" href="#layer-layer-description_27" title="Permanent link">&para;</a></h4>
 <p>Duplicates the layer. Creates a new Layer object in which all values are the same as in this one. This has the same effect as selecting a layer in the user interface and choosing Edit &gt; Duplicate, except the selection in the user interface does not change when you call this method.</p>
-<h4 id="layer-layer-parameters_4">Parameters<a class="headerlink" href="#layer-layer-parameters_4" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-parameters_5">Parameters<a class="headerlink" href="#layer-layer-parameters_5" title="Permanent link">&para;</a></h4>
 <p>None.</p>
-<h4 id="layer-layer-returns_4">Returns<a class="headerlink" href="#layer-layer-returns_4" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-returns_5">Returns<a class="headerlink" href="#layer-layer-returns_5" title="Permanent link">&para;</a></h4>
 <p>Layer object.</p>
 <hr />
-<h3 id="layer-layer-layermoveafter">Layer.moveAfter()<a class="headerlink" href="#layer-layer-layermoveafter" title="Permanent link">&para;</a></h3>
-<p><code>app.project.item(index).layer(index).moveAfter(layer)</code></p>
-<h4 id="layer-layer-description_26">Description<a class="headerlink" href="#layer-layer-description_26" title="Permanent link">&para;</a></h4>
-<p>Moves this layer to a position immediately after (below) the specified layer.</p>
-<h4 id="layer-layer-parameters_5">Parameters<a class="headerlink" href="#layer-layer-parameters_5" title="Permanent link">&para;</a></h4>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>layer</code></td>
-<td><a href="#layer-layer">Layer object</a></td>
-<td>The target layer in the same composition.</td>
-</tr>
-</tbody>
-</table>
-<h4 id="layer-layer-returns_5">Returns<a class="headerlink" href="#layer-layer-returns_5" title="Permanent link">&para;</a></h4>
-<p>Nothing.</p>
-<hr />
-<h3 id="layer-layer-layermovebefore">Layer.moveBefore()<a class="headerlink" href="#layer-layer-layermovebefore" title="Permanent link">&para;</a></h3>
-<p><code>app.project.item(index).layer(index).moveBefore(layer)</code></p>
-<h4 id="layer-layer-description_27">Description<a class="headerlink" href="#layer-layer-description_27" title="Permanent link">&para;</a></h4>
-<p>Moves this layer to a position immediately before (above) the specified layer.</p>
+<h3 id="layer-layer-layergetguideasobject">Layer.getGuideAsObject()<a class="headerlink" href="#layer-layer-layergetguideasobject" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).getGuideAsObject(guideIndex)</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects (Beta) 26.5 and is subject to change while it remains in Beta. Calling it in an earlier version raises the error "getGuideAsObject() is not available in this version of After Effects."</p>
+</div>
+<h4 id="layer-layer-description_28">Description<a class="headerlink" href="#layer-layer-description_28" title="Permanent link">&para;</a></h4>
+<p>Returns the guide at the specified index as a <a href="#other-guideoptions">GuideOptions</a> object, which you can modify and pass back to <a href="#layer-layer-layersetguide">setGuide()</a>. This is a convenient way to read a guide's full state (orientation, position, position type, color, pinning).</p>
 <h4 id="layer-layer-parameters_6">Parameters<a class="headerlink" href="#layer-layer-parameters_6" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -9448,49 +9776,199 @@ The ID is not displayed anywhere in the user interface..</p>
 </thead>
 <tbody>
 <tr>
+<td><code>guideIndex</code></td>
+<td>Integer</td>
+<td>The index of the guide to read.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="layer-layer-returns_6">Returns<a class="headerlink" href="#layer-layer-returns_6" title="Permanent link">&para;</a></h4>
+<p>A <a href="#other-guideoptions">GuideOptions</a> object.</p>
+<h4 id="layer-layer-example_3">Example<a class="headerlink" href="#layer-layer-example_3" title="Permanent link">&para;</a></h4>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-3-1"><span class="kd">var</span><span class="w"> </span><span class="nx">layer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">layer</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+</span><span id="__span-3-2"><span class="kd">var</span><span class="w"> </span><span class="nx">g</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">layer</span><span class="p">.</span><span class="nx">getGuideAsObject</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
+</span><span id="__span-3-3"><span class="nx">g</span><span class="p">.</span><span class="nx">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">];</span><span class="w">   </span><span class="c1">// tweak just the color</span>
+</span><span id="__span-3-4"><span class="nx">layer</span><span class="p">.</span><span class="nx">setGuide</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">g</span><span class="p">);</span><span class="w">   </span><span class="c1">// write it back</span>
+</span></code></pre></div>
+<hr />
+<h3 id="layer-layer-layermoveafter">Layer.moveAfter()<a class="headerlink" href="#layer-layer-layermoveafter" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).moveAfter(layer)</code></p>
+<h4 id="layer-layer-description_29">Description<a class="headerlink" href="#layer-layer-description_29" title="Permanent link">&para;</a></h4>
+<p>Moves this layer to a position immediately after (below) the specified layer.</p>
+<h4 id="layer-layer-parameters_7">Parameters<a class="headerlink" href="#layer-layer-parameters_7" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
 <td><code>layer</code></td>
 <td><a href="#layer-layer">Layer object</a></td>
 <td>The target layer in the same composition.</td>
 </tr>
 </tbody>
 </table>
-<h4 id="layer-layer-returns_6">Returns<a class="headerlink" href="#layer-layer-returns_6" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-returns_7">Returns<a class="headerlink" href="#layer-layer-returns_7" title="Permanent link">&para;</a></h4>
+<p>Nothing.</p>
+<hr />
+<h3 id="layer-layer-layermovebefore">Layer.moveBefore()<a class="headerlink" href="#layer-layer-layermovebefore" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).moveBefore(layer)</code></p>
+<h4 id="layer-layer-description_30">Description<a class="headerlink" href="#layer-layer-description_30" title="Permanent link">&para;</a></h4>
+<p>Moves this layer to a position immediately before (above) the specified layer.</p>
+<h4 id="layer-layer-parameters_8">Parameters<a class="headerlink" href="#layer-layer-parameters_8" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>layer</code></td>
+<td><a href="#layer-layer">Layer object</a></td>
+<td>The target layer in the same composition.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="layer-layer-returns_8">Returns<a class="headerlink" href="#layer-layer-returns_8" title="Permanent link">&para;</a></h4>
 <p>Nothing.</p>
 <hr />
 <h3 id="layer-layer-layermovetobeginning">Layer.moveToBeginning()<a class="headerlink" href="#layer-layer-layermovetobeginning" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).moveToBeginning()</code></p>
-<h4 id="layer-layer-description_28">Description<a class="headerlink" href="#layer-layer-description_28" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-description_31">Description<a class="headerlink" href="#layer-layer-description_31" title="Permanent link">&para;</a></h4>
 <p>Moves this layer to the topmost position of the layer stack (the first layer).</p>
-<h4 id="layer-layer-parameters_7">Parameters<a class="headerlink" href="#layer-layer-parameters_7" title="Permanent link">&para;</a></h4>
-<p>None.</p>
-<h4 id="layer-layer-returns_7">Returns<a class="headerlink" href="#layer-layer-returns_7" title="Permanent link">&para;</a></h4>
-<p>Nothing.</p>
-<hr />
-<h3 id="layer-layer-layermovetoend">Layer.moveToEnd()<a class="headerlink" href="#layer-layer-layermovetoend" title="Permanent link">&para;</a></h3>
-<p><code>app.project.item(index).layer(index).moveToEnd()</code></p>
-<h4 id="layer-layer-description_29">Description<a class="headerlink" href="#layer-layer-description_29" title="Permanent link">&para;</a></h4>
-<p>Moves this layer to the bottom position of the layer stack (the last layer).</p>
-<h4 id="layer-layer-parameters_8">Parameters<a class="headerlink" href="#layer-layer-parameters_8" title="Permanent link">&para;</a></h4>
-<p>None.</p>
-<h4 id="layer-layer-returns_8">Returns<a class="headerlink" href="#layer-layer-returns_8" title="Permanent link">&para;</a></h4>
-<p>Nothing.</p>
-<hr />
-<h3 id="layer-layer-layerremove">Layer.remove()<a class="headerlink" href="#layer-layer-layerremove" title="Permanent link">&para;</a></h3>
-<p><code>app.project.item(index).layer(index).remove()</code></p>
-<h4 id="layer-layer-description_30">Description<a class="headerlink" href="#layer-layer-description_30" title="Permanent link">&para;</a></h4>
-<p>Deletes the specified layer from the composition.</p>
 <h4 id="layer-layer-parameters_9">Parameters<a class="headerlink" href="#layer-layer-parameters_9" title="Permanent link">&para;</a></h4>
 <p>None.</p>
 <h4 id="layer-layer-returns_9">Returns<a class="headerlink" href="#layer-layer-returns_9" title="Permanent link">&para;</a></h4>
 <p>Nothing.</p>
 <hr />
+<h3 id="layer-layer-layermovetoend">Layer.moveToEnd()<a class="headerlink" href="#layer-layer-layermovetoend" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).moveToEnd()</code></p>
+<h4 id="layer-layer-description_32">Description<a class="headerlink" href="#layer-layer-description_32" title="Permanent link">&para;</a></h4>
+<p>Moves this layer to the bottom position of the layer stack (the last layer).</p>
+<h4 id="layer-layer-parameters_10">Parameters<a class="headerlink" href="#layer-layer-parameters_10" title="Permanent link">&para;</a></h4>
+<p>None.</p>
+<h4 id="layer-layer-returns_10">Returns<a class="headerlink" href="#layer-layer-returns_10" title="Permanent link">&para;</a></h4>
+<p>Nothing.</p>
+<hr />
+<h3 id="layer-layer-layerremove">Layer.remove()<a class="headerlink" href="#layer-layer-layerremove" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).remove()</code></p>
+<h4 id="layer-layer-description_33">Description<a class="headerlink" href="#layer-layer-description_33" title="Permanent link">&para;</a></h4>
+<p>Deletes the specified layer from the composition.</p>
+<h4 id="layer-layer-parameters_11">Parameters<a class="headerlink" href="#layer-layer-parameters_11" title="Permanent link">&para;</a></h4>
+<p>None.</p>
+<h4 id="layer-layer-returns_11">Returns<a class="headerlink" href="#layer-layer-returns_11" title="Permanent link">&para;</a></h4>
+<p>Nothing.</p>
+<hr />
+<h3 id="layer-layer-layerremoveguide">Layer.removeGuide()<a class="headerlink" href="#layer-layer-layerremoveguide" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).removeGuide(guideIndex)</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 16.1 (CC 2019)</p>
+</div>
+<h4 id="layer-layer-description_34">Description<a class="headerlink" href="#layer-layer-description_34" title="Permanent link">&para;</a></h4>
+<p>Removes an existing guide. Choose the guide based on its index inside the <a href="#layer-layer-layerguides">Layer.guides</a> array.</p>
+<h4 id="layer-layer-parameters_12">Parameters<a class="headerlink" href="#layer-layer-parameters_12" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>guideIndex</code></td>
+<td>Integer</td>
+<td>The index of the guide to be removed.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="layer-layer-returns_12">Returns<a class="headerlink" href="#layer-layer-returns_12" title="Permanent link">&para;</a></h4>
+<p>Nothing.</p>
+<h4 id="layer-layer-example_4">Example<a class="headerlink" href="#layer-layer-example_4" title="Permanent link">&para;</a></h4>
+<p>Removes the first guide on the first layer of <code>activeItem</code>.</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-4-1"><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">layer</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">removeGuide</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
+</span></code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Removing a guide will cause all higher guide indexes to shift downward.</p>
+</div>
+<hr />
+<h3 id="layer-layer-layersetguide">Layer.setGuide()<a class="headerlink" href="#layer-layer-layersetguide" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).setGuide(position, guideIndex)</code></p>
+<p><code>app.project.item(index).layer(index).setGuide(guideIndex, guideOptions)</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code>(position, guideIndex)</code> form was added in After Effects 16.1 (CC 2019). The <code>(guideIndex, guideOptions)</code> form was added in After Effects (Beta) 26.5 and is subject to change while it remains in Beta.</p>
+</div>
+<h4 id="layer-layer-description_35">Description<a class="headerlink" href="#layer-layer-description_35" title="Permanent link">&para;</a></h4>
+<p>Updates an existing guide. There are two forms, distinguished by the type of the second argument:</p>
+<ul>
+<li><strong><code>setGuide(position, guideIndex)</code></strong> - moves the guide at <code>guideIndex</code> to a new pixel <code>position</code>. <em>Note the order: position first, index second.</em> A guide's <code>orientationType</code> may not be changed after it is created.</li>
+<li><strong><code>setGuide(guideIndex, guideOptions)</code></strong> - applies the properties set on a <a href="#other-guideoptions">GuideOptions</a> object to the guide at <code>guideIndex</code>. Only the properties you set are changed (partial update). <em>(After Effects (Beta) 26.5 and later.)</em></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The two forms take their arguments in the <strong>opposite order</strong>: the <code>(position, guideIndex)</code> form takes the position first, while the <code>(guideIndex, guideOptions)</code> form takes the index first. After Effects decides which form you mean from the type of the second argument (a number selects the <code>(position, guideIndex)</code> form; a <code>GuideOptions</code> object selects the <code>(guideIndex, guideOptions)</code> form).</p>
+</div>
+<h4 id="layer-layer-parameters_13">Parameters<a class="headerlink" href="#layer-layer-parameters_13" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>position</code></td>
+<td>Floating-point value</td>
+<td>The new X or Y coordinate position of the guide in pixels. Clamped to ±100,000; non-finite values are rejected.</td>
+</tr>
+<tr>
+<td><code>guideIndex</code></td>
+<td>Integer</td>
+<td>The index of the guide to be modified.</td>
+</tr>
+<tr>
+<td><code>guideOptions</code></td>
+<td>GuideOptions object</td>
+<td>A <a href="#other-guideoptions">GuideOptions</a> whose set properties are applied to the guide.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="layer-layer-returns_13">Returns<a class="headerlink" href="#layer-layer-returns_13" title="Permanent link">&para;</a></h4>
+<p>Nothing.</p>
+<h4 id="layer-layer-example_5">Example<a class="headerlink" href="#layer-layer-example_5" title="Permanent link">&para;</a></h4>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-5-1"><span class="kd">var</span><span class="w"> </span><span class="nx">layer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">layer</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+</span><span id="__span-5-2">
+</span><span id="__span-5-3"><span class="c1">// (position, guideIndex) form: move guide 0 to 1200 px (position first, index second).</span>
+</span><span id="__span-5-4"><span class="nx">layer</span><span class="p">.</span><span class="nx">setGuide</span><span class="p">(</span><span class="mf">1200</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span>
+</span><span id="__span-5-5">
+</span><span id="__span-5-6"><span class="c1">// GuideOptions form: recolor guide 0 and switch it to a percentage position.</span>
+</span><span id="__span-5-7"><span class="kd">var</span><span class="w"> </span><span class="nx">opts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">GuideOptions</span><span class="p">();</span>
+</span><span id="__span-5-8"><span class="nx">opts</span><span class="p">.</span><span class="nx">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">75</span><span class="p">;</span>
+</span><span id="__span-5-9"><span class="nx">opts</span><span class="p">.</span><span class="nx">positionType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">GuidePositionType</span><span class="p">.</span><span class="nx">PERCENTAGE</span><span class="p">;</span>
+</span><span id="__span-5-10"><span class="nx">opts</span><span class="p">.</span><span class="nx">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">];</span>
+</span><span id="__span-5-11"><span class="nx">layer</span><span class="p">.</span><span class="nx">setGuide</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">opts</span><span class="p">);</span><span class="w">   </span><span class="c1">// index first, options second</span>
+</span></code></pre></div>
+<hr />
 <h3 id="layer-layer-layersetparentwithjump">Layer.setParentWithJump()<a class="headerlink" href="#layer-layer-layersetparentwithjump" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).setParentWithJump([newParent])</code></p>
-<h4 id="layer-layer-description_31">Description<a class="headerlink" href="#layer-layer-description_31" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-description_36">Description<a class="headerlink" href="#layer-layer-description_36" title="Permanent link">&para;</a></h4>
 <p>Sets the parent of this layer to the specified layer, without changing the transform values of the child layer.</p>
 <p>There may be an apparent jump in the rotation, translation, or scale of the child layer, as this layer's transform values are combined with those of its ancestors.</p>
 <p>If you do not want the child layer to jump, set the <a href="#layer-layer-layerparent">parent</a> attribute directly. In this case, an offset is calculated and set in the child layer's transform fields, to prevent the jump from occurring.</p>
-<h4 id="layer-layer-parameters_10">Parameters<a class="headerlink" href="#layer-layer-parameters_10" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-parameters_14">Parameters<a class="headerlink" href="#layer-layer-parameters_14" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -9507,7 +9985,7 @@ The ID is not displayed anywhere in the user interface..</p>
 </tr>
 </tbody>
 </table>
-<h4 id="layer-layer-returns_10">Returns<a class="headerlink" href="#layer-layer-returns_10" title="Permanent link">&para;</a></h4>
+<h4 id="layer-layer-returns_14">Returns<a class="headerlink" href="#layer-layer-returns_14" title="Permanent link">&para;</a></h4>
 <p>Nothing.</p></section><section class="print-page" id="layer-layercollection" heading-number="5.2"><h1 id="layer-layercollection-layercollection-object">LayerCollection object<a class="headerlink" href="#layer-layercollection-layercollection-object" title="Permanent link">&para;</a></h1>
 <p><code>app.project.item(index).layers</code></p>
 <h4 id="layer-layercollection-description">Description<a class="headerlink" href="#layer-layercollection-description" title="Permanent link">&para;</a></h4>
@@ -17229,7 +17707,109 @@ If set to -1, then the <a href="#text-paragraphrange">ParagraphRange object</a> 
 <td>Retrieves an object in the collection by its index number. The first object is at index 1.</td>
 </tr>
 </tbody>
-</table></section><section class="print-page" id="other-importoptions" heading-number="10.2"><h1 id="other-importoptions-importoptions-object">ImportOptions object<a class="headerlink" href="#other-importoptions-importoptions-object" title="Permanent link">&para;</a></h1>
+</table></section><section class="print-page" id="other-guideoptions" heading-number="10.2"><h1 id="other-guideoptions-guideoptions-object">GuideOptions object<a class="headerlink" href="#other-guideoptions-guideoptions-object" title="Permanent link">&para;</a></h1>
+<p><code>new GuideOptions()</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects (Beta) 26.5 and is subject to change while it remains in Beta.</p>
+</div>
+<h4 id="other-guideoptions-description">Description<a class="headerlink" href="#other-guideoptions-description" title="Permanent link">&para;</a></h4>
+<p>A configuration object passed to <a href="#item-item-itemaddguide">Item.addGuide()</a>, <a href="#item-item-itemsetguide">Item.setGuide()</a>, and the corresponding <a href="#layer-layer">Layer</a> methods, and returned by <a href="#item-item-itemgetguideasobject">Item.getGuideAsObject()</a>. Every property is optional; when used with <code>setGuide</code>, only the properties you set are changed, enabling partial updates.</p>
+<h4 id="other-guideoptions-example">Example<a class="headerlink" href="#other-guideoptions-example" title="Permanent link">&para;</a></h4>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-0-1"><span class="kd">var</span><span class="w"> </span><span class="nx">opts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">GuideOptions</span><span class="p">();</span>
+</span><span id="__span-0-2"><span class="nx">opts</span><span class="p">.</span><span class="nx">orientation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">GuideOrientationType</span><span class="p">.</span><span class="nx">VERTICAL</span><span class="p">;</span>
+</span><span id="__span-0-3"><span class="nx">opts</span><span class="p">.</span><span class="nx">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">50</span><span class="p">;</span>
+</span><span id="__span-0-4"><span class="nx">opts</span><span class="p">.</span><span class="nx">positionType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">GuidePositionType</span><span class="p">.</span><span class="nx">PERCENTAGE</span><span class="p">;</span>
+</span><span id="__span-0-5"><span class="nx">opts</span><span class="p">.</span><span class="nx">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">];</span><span class="w">   </span><span class="c1">// magenta</span>
+</span><span id="__span-0-6"><span class="nx">opts</span><span class="p">.</span><span class="nx">pinned</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+</span><span id="__span-0-7"><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">addGuide</span><span class="p">(</span><span class="nx">opts</span><span class="p">);</span>
+</span></code></pre></div>
+<hr />
+<h2 id="other-guideoptions-attributes">Attributes<a class="headerlink" href="#other-guideoptions-attributes" title="Permanent link">&para;</a></h2>
+<h3 id="other-guideoptions-guideoptionsorientation">GuideOptions.orientation<a class="headerlink" href="#other-guideoptions-guideoptionsorientation" title="Permanent link">&para;</a></h3>
+<p><code>guideOptions.orientation</code></p>
+<h4 id="other-guideoptions-description_1">Description<a class="headerlink" href="#other-guideoptions-description_1" title="Permanent link">&para;</a></h4>
+<p>The guide's orientation: <a href="#other-guideoptions-guideorientationtype">GuideOrientationType.HORIZONTAL</a> or <a href="#other-guideoptions-guideorientationtype">GuideOrientationType.VERTICAL</a>.</p>
+<h4 id="other-guideoptions-type">Type<a class="headerlink" href="#other-guideoptions-type" title="Permanent link">&para;</a></h4>
+<p>A <code>GuideOrientationType</code> enumerated value; read/write.</p>
+<hr />
+<h3 id="other-guideoptions-guideoptionsposition">GuideOptions.position<a class="headerlink" href="#other-guideoptions-guideoptionsposition" title="Permanent link">&para;</a></h3>
+<p><code>guideOptions.position</code></p>
+<h4 id="other-guideoptions-description_2">Description<a class="headerlink" href="#other-guideoptions-description_2" title="Permanent link">&para;</a></h4>
+<p>The guide's position, in pixels or percent depending on <code>positionType</code>. Clamped to ±100,000 px or ±300%; non-finite values are rejected.</p>
+<h4 id="other-guideoptions-type_1">Type<a class="headerlink" href="#other-guideoptions-type_1" title="Permanent link">&para;</a></h4>
+<p>Floating-point value; read/write.</p>
+<hr />
+<h3 id="other-guideoptions-guideoptionspositiontype">GuideOptions.positionType<a class="headerlink" href="#other-guideoptions-guideoptionspositiontype" title="Permanent link">&para;</a></h3>
+<p><code>guideOptions.positionType</code></p>
+<h4 id="other-guideoptions-description_3">Description<a class="headerlink" href="#other-guideoptions-description_3" title="Permanent link">&para;</a></h4>
+<p>How <code>position</code> is interpreted: <a href="#other-guideoptions-guidepositiontype">GuidePositionType.PIXEL</a> or <a href="#other-guideoptions-guidepositiontype">GuidePositionType.PERCENTAGE</a>.</p>
+<h4 id="other-guideoptions-type_2">Type<a class="headerlink" href="#other-guideoptions-type_2" title="Permanent link">&para;</a></h4>
+<p>A <code>GuidePositionType</code> enumerated value; read/write.</p>
+<hr />
+<h3 id="other-guideoptions-guideoptionscolor">GuideOptions.color<a class="headerlink" href="#other-guideoptions-guideoptionscolor" title="Permanent link">&para;</a></h3>
+<p><code>guideOptions.color</code></p>
+<h4 id="other-guideoptions-description_4">Description<a class="headerlink" href="#other-guideoptions-description_4" title="Permanent link">&para;</a></h4>
+<p>The guide's color as an array of three floats, <code>[R, G, B]</code>, each in the range <code>0.0</code>-<code>1.0</code>.</p>
+<h4 id="other-guideoptions-type_3">Type<a class="headerlink" href="#other-guideoptions-type_3" title="Permanent link">&para;</a></h4>
+<p>Array of 3 floating-point values; read/write.</p>
+<hr />
+<h3 id="other-guideoptions-guideoptionspinned">GuideOptions.pinned<a class="headerlink" href="#other-guideoptions-guideoptionspinned" title="Permanent link">&para;</a></h3>
+<p><code>guideOptions.pinned</code></p>
+<h4 id="other-guideoptions-description_5">Description<a class="headerlink" href="#other-guideoptions-description_5" title="Permanent link">&para;</a></h4>
+<p>When <code>true</code>, the guide is pinned to the opposite edge (bottom for horizontal guides, right for vertical guides).</p>
+<h4 id="other-guideoptions-type_4">Type<a class="headerlink" href="#other-guideoptions-type_4" title="Permanent link">&para;</a></h4>
+<p>Boolean; read/write.</p>
+<hr />
+<h2 id="other-guideoptions-guideorientationtype">GuideOrientationType<a class="headerlink" href="#other-guideoptions-guideorientationtype" title="Permanent link">&para;</a></h2>
+<p>The orientation of a guide, used by <a href="#other-guideoptions-guideoptionsorientation">GuideOptions.orientation</a> and the <a href="#item-item-itemguides">Item.guides</a> / <a href="#layer-layer-layerguides">Layer.guides</a> properties.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GuideOrientationType.HORIZONTAL</code></td>
+<td>A horizontal guide.</td>
+</tr>
+<tr>
+<td><code>GuideOrientationType.VERTICAL</code></td>
+<td>A vertical guide.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These enumerated constants were added in After Effects (Beta) 26.5 and are subject to change while they remain in Beta. Always compare <code>orientationType</code> against these constants rather than raw integers, because the underlying integer values differ between versions of After Effects. In the non-beta application the constants are unavailable and <a href="#item-item-itemguides">Item.guides</a> / <a href="#layer-layer-layerguides">Layer.guides</a> report <code>orientationType</code> as a plain integer (<code>0</code> for horizontal, <code>1</code> for vertical).</p>
+</div>
+<hr />
+<h2 id="other-guideoptions-guidepositiontype">GuidePositionType<a class="headerlink" href="#other-guideoptions-guidepositiontype" title="Permanent link">&para;</a></h2>
+<p>How a guide's <code>position</code> value is interpreted, used by <a href="#other-guideoptions-guideoptionspositiontype">GuideOptions.positionType</a> and the <a href="#item-item-itemguides">Item.guides</a> / <a href="#layer-layer-layerguides">Layer.guides</a> properties.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GuidePositionType.PIXEL</code></td>
+<td><code>position</code> is measured in pixels.</td>
+</tr>
+<tr>
+<td><code>GuidePositionType.PERCENTAGE</code></td>
+<td><code>position</code> is measured as a percentage of the frame.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These enumerated constants were added in After Effects (Beta) 26.5 and are subject to change while they remain in Beta. Always compare <code>positionType</code> against these constants rather than raw integers, because the underlying integer values differ between versions of After Effects. In the non-beta application the constants are unavailable and <a href="#item-item-itemguides">Item.guides</a> / <a href="#layer-layer-layerguides">Layer.guides</a> report <code>positionType</code> as a plain integer (always <code>0</code>, pixels).</p>
+</div></section><section class="print-page" id="other-importoptions" heading-number="10.3"><h1 id="other-importoptions-importoptions-object">ImportOptions object<a class="headerlink" href="#other-importoptions-importoptions-object" title="Permanent link">&para;</a></h1>
 <p><code>new ImportOptions();</code></p>
 <p><code>new ImportOptions(file);</code></p>
 <h4 id="other-importoptions-description">Description<a class="headerlink" href="#other-importoptions-description" title="Permanent link">&para;</a></h4>
@@ -17418,7 +17998,7 @@ If set to -1, then the <a href="#text-paragraphrange">ParagraphRange object</a> 
 </span><span id="__span-3-3"><span class="nx">importOptions</span><span class="p">.</span><span class="nx">isFileNameNumbered</span><span class="p">(</span><span class="s1">&#39;003image.png&#39;</span><span class="p">);</span><span class="w">  </span><span class="c1">// &quot;isNumbered&quot;: true, &quot;num&quot;: 3</span>
 </span><span id="__span-3-4"><span class="nx">importOptions</span><span class="p">.</span><span class="nx">isFileNameNumbered</span><span class="p">(</span><span class="s1">&#39;ima0102ge.png&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// &quot;isNumbered&quot;: true, &quot;num&quot;: 102</span>
 </span><span id="__span-3-5"><span class="nx">importOptions</span><span class="p">.</span><span class="nx">isFileNameNumbered</span><span class="p">(</span><span class="s1">&#39;image0120.png&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// &quot;isNumbered&quot;: true, &quot;num&quot;: 120</span>
-</span></code></pre></div></section><section class="print-page" id="other-keyframeease" heading-number="10.3"><h1 id="other-keyframeease-keyframeease-object">KeyframeEase object<a class="headerlink" href="#other-keyframeease-keyframeease-object" title="Permanent link">&para;</a></h1>
+</span></code></pre></div></section><section class="print-page" id="other-keyframeease" heading-number="10.4"><h1 id="other-keyframeease-keyframeease-object">KeyframeEase object<a class="headerlink" href="#other-keyframeease-keyframeease-object" title="Permanent link">&para;</a></h1>
 <p><code>myKey = new KeyframeEase(speed, influence);</code></p>
 <h4 id="other-keyframeease-description">Description<a class="headerlink" href="#other-keyframeease-description" title="Permanent link">&para;</a></h4>
 <p>The KeyframeEase object encapsulates the keyframe ease settings of a layer's AE property. Keyframe ease is determined by the speed and influence values that you set using the property's <a href="#property-property-propertysettemporaleaseatkey">setTemporalEaseAtKey</a> method. The constructor creates a KeyframeEase object. Both parameters are required.</p>
@@ -17453,7 +18033,7 @@ If set to -1, then the <a href="#text-paragraphrange">ParagraphRange object</a> 
 <h4 id="other-keyframeease-description_2">Description<a class="headerlink" href="#other-keyframeease-description_2" title="Permanent link">&para;</a></h4>
 <p>The speed value of the keyframe. The units depend on the type of keyframe, and are displayed in the Keyframe Velocity dialog box.</p>
 <h4 id="other-keyframeease-type_1">Type<a class="headerlink" href="#other-keyframeease-type_1" title="Permanent link">&para;</a></h4>
-<p>Floating-point value; read/write.</p></section><section class="print-page" id="other-markervalue" heading-number="10.4"><h1 id="other-markervalue-markervalue-object">MarkerValue object<a class="headerlink" href="#other-markervalue-markervalue-object" title="Permanent link">&para;</a></h1>
+<p>Floating-point value; read/write.</p></section><section class="print-page" id="other-markervalue" heading-number="10.5"><h1 id="other-markervalue-markervalue-object">MarkerValue object<a class="headerlink" href="#other-markervalue-markervalue-object" title="Permanent link">&para;</a></h1>
 <p><code>new MarkerValue(comment, chapter, url, frameTarget, cuePointName, params)</code></p>
 <h4 id="other-markervalue-description">Description<a class="headerlink" href="#other-markervalue-description" title="Permanent link">&para;</a></h4>
 <p>The MarkerValue object represents a layer or composition marker, which associates a comment, and optionally a chapter reference point, Web-page link, or Flash Video cue point with a particular point in a layer.</p>
@@ -17602,7 +18182,7 @@ If set to -1, then the <a href="#text-paragraphrange">ParagraphRange object</a> 
 </span><span id="__span-3-4"><span class="nx">parms</span><span class="p">.</span><span class="nx">assignMe</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;A string&quot;</span>
 </span><span id="__span-3-5"><span class="nx">mv</span><span class="p">.</span><span class="nx">setParameters</span><span class="p">(</span><span class="nx">parms</span><span class="p">);</span>
 </span><span id="__span-3-6"><span class="nx">myLayer</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="s2">&quot;Marker&quot;</span><span class="p">).</span><span class="nx">setValueAtTime</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">mv</span><span class="p">);</span>
-</span></code></pre></div></section><section class="print-page" id="other-preferences" heading-number="10.5"><h1 id="other-preferences-preferences-object">Preferences object<a class="headerlink" href="#other-preferences-preferences-object" title="Permanent link">&para;</a></h1>
+</span></code></pre></div></section><section class="print-page" id="other-preferences" heading-number="10.6"><h1 id="other-preferences-preferences-object">Preferences object<a class="headerlink" href="#other-preferences-preferences-object" title="Permanent link">&para;</a></h1>
 <p><code>app.preferences</code></p>
 <h4 id="other-preferences-description">Description<a class="headerlink" href="#other-preferences-description" title="Permanent link">&para;</a></h4>
 <p>The Preferences object provides an easy way to manage internal AE preferences, such as you'd find in AE's Preferences menu. These are saved in the After Effects preference files, and are persistent between application sessions.</p>
@@ -18013,7 +18593,7 @@ If set to -1, then the <a href="#text-paragraphrange">ParagraphRange object</a> 
 <h4 id="other-preferences-parameters_11">Parameters<a class="headerlink" href="#other-preferences-parameters_11" title="Permanent link">&para;</a></h4>
 <p>None.</p>
 <h4 id="other-preferences-returns_11">Returns<a class="headerlink" href="#other-preferences-returns_11" title="Permanent link">&para;</a></h4>
-<p>Nothing.</p></section><section class="print-page" id="other-settings" heading-number="10.6"><h1 id="other-settings-settings-object">Settings object<a class="headerlink" href="#other-settings-settings-object" title="Permanent link">&para;</a></h1>
+<p>Nothing.</p></section><section class="print-page" id="other-settings" heading-number="10.7"><h1 id="other-settings-settings-object">Settings object<a class="headerlink" href="#other-settings-settings-object" title="Permanent link">&para;</a></h1>
 <p><code>app.settings</code></p>
 <h4 id="other-settings-description">Description<a class="headerlink" href="#other-settings-description" title="Permanent link">&para;</a></h4>
 <p>The Settings object provides an easy way to manage settings for third-party scripts. The settings are saved in the main After Effects preferences file, and are persistent between application sessions.</p>
@@ -18155,7 +18735,7 @@ If set to -1, then the <a href="#text-paragraphrange">ParagraphRange object</a> 
 <div class="language-javascript highlight"><pre><span></span><code><span id="__span-1-1"><span class="kd">var</span><span class="w"> </span><span class="nx">trimPrecompsSetting</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
 </span><span id="__span-1-2"><span class="nx">app</span><span class="p">.</span><span class="nx">settings</span><span class="p">.</span><span class="nx">saveSetting</span><span class="p">(</span><span class="s2">&quot;Precomp Cropper&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;trimPrecomps&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">trimPrecompsSetting</span><span class="p">);</span>
 </span></code></pre></div>
-<p>Note that the setting will be saved as a string. You'll want to parse it into a bool later, if needed.</p></section><section class="print-page" id="other-shape" heading-number="10.7"><h1 id="other-shape-shape-object">Shape object<a class="headerlink" href="#other-shape-shape-object" title="Permanent link">&para;</a></h1>
+<p>Note that the setting will be saved as a string. You'll want to parse it into a bool later, if needed.</p></section><section class="print-page" id="other-shape" heading-number="10.8"><h1 id="other-shape-shape-object">Shape object<a class="headerlink" href="#other-shape-shape-object" title="Permanent link">&para;</a></h1>
 <p><code>app.project.item(index).layer(index).property(index).property("maskShape").value</code></p>
 <h4 id="other-shape-description">Description<a class="headerlink" href="#other-shape-description" title="Permanent link">&para;</a></h4>
 <p>The Shape object encapsulates information describing a shape in a shape layer, or the outline shape of a Mask. It is the value of the "Mask Path" AE properties, and of the "Path" AE property of a shape layer. Use the constructor, <code>new Shape()</code>, to create a new, empty Shape object, then set the attributes individually to define the shape.</p>
@@ -18326,7 +18906,7 @@ Values are stored in the array in the order that feather points are created.</p>
 <div class="language-javascript highlight"><pre><span></span><code><span id="__span-5-1"><span class="nx">myShape</span><span class="p">.</span><span class="nx">vertices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[[</span><span class="mf">0</span><span class="p">,</span><span class="mf">0</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="mf">1</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="mf">0</span><span class="p">]];</span>
 </span></code></pre></div>
 <h4 id="other-shape-type_10">Type<a class="headerlink" href="#other-shape-type_10" title="Permanent link">&para;</a></h4>
-<p>Array of floating-point pair arrays; read/write.</p></section><section class="print-page" id="other-view" heading-number="10.8"><h1 id="other-view-view-object">View object<a class="headerlink" href="#other-view-view-object" title="Permanent link">&para;</a></h1>
+<p>Array of floating-point pair arrays; read/write.</p></section><section class="print-page" id="other-view" heading-number="10.9"><h1 id="other-view-view-object">View object<a class="headerlink" href="#other-view-view-object" title="Permanent link">&para;</a></h1>
 <p><code>app.activeViewer.views[0]</code></p>
 <h4 id="other-view-description">Description<a class="headerlink" href="#other-view-description" title="Permanent link">&para;</a></h4>
 <p>The View object represents a specific view.</p>
@@ -18355,7 +18935,7 @@ Calling this method will set the <a href="#other-view-viewactive">view's active 
 <h4 id="other-view-parameters">Parameters<a class="headerlink" href="#other-view-parameters" title="Permanent link">&para;</a></h4>
 <p>None.</p>
 <h4 id="other-view-returns">Returns<a class="headerlink" href="#other-view-returns" title="Permanent link">&para;</a></h4>
-<p>Boolean, indicating if the view panel was made active.</p></section><section class="print-page" id="other-viewer" heading-number="10.9"><h1 id="other-viewer-viewer-object">Viewer object<a class="headerlink" href="#other-viewer-viewer-object" title="Permanent link">&para;</a></h1>
+<p>Boolean, indicating if the view panel was made active.</p></section><section class="print-page" id="other-viewer" heading-number="10.10"><h1 id="other-viewer-viewer-object">Viewer object<a class="headerlink" href="#other-viewer-viewer-object" title="Permanent link">&para;</a></h1>
 <p><code>app.activeViewer</code></p>
 <h4 id="other-viewer-description">Description<a class="headerlink" href="#other-viewer-description" title="Permanent link">&para;</a></h4>
 <p>The Viewer object represents a Composition, Layer, or Footage panel.</p>
@@ -18418,7 +18998,7 @@ Calling this method will set the <a href="#other-viewer-vieweractive">viewer's a
 <h4 id="other-viewer-parameters">Parameters<a class="headerlink" href="#other-viewer-parameters" title="Permanent link">&para;</a></h4>
 <p>None.</p>
 <h4 id="other-viewer-returns">Returns<a class="headerlink" href="#other-viewer-returns" title="Permanent link">&para;</a></h4>
-<p>Boolean indicating if the viewer panel was made active.</p></section><section class="print-page" id="other-viewoptions" heading-number="10.10"><h1 id="other-viewoptions-viewoptions-object">ViewOptions object<a class="headerlink" href="#other-viewoptions-viewoptions-object" title="Permanent link">&para;</a></h1>
+<p>Boolean indicating if the viewer panel was made active.</p></section><section class="print-page" id="other-viewoptions" heading-number="10.11"><h1 id="other-viewoptions-viewoptions-object">ViewOptions object<a class="headerlink" href="#other-viewoptions-viewoptions-object" title="Permanent link">&para;</a></h1>
 <p><code>app.activeViewer.views[0].options</code></p>
 <h4 id="other-viewoptions-description">Description<a class="headerlink" href="#other-viewoptions-description" title="Permanent link">&para;</a></h4>
 <p>The ViewOptions object represents the options for a given <a href="#other-view">View object</a></p>
@@ -23419,49 +23999,54 @@ Calling this method will set the <a href="#other-viewer-vieweractive">viewer's a
                 .print-site-enumerate-headings #other-collection h2:before { content: '10.1.' counter(counter-other-collection-2) ' ' }
                 .print-site-enumerate-headings #other-collection h2 {  counter-increment: counter-other-collection-2 }
             
-.print-site-enumerate-headings #other-importoptions > h1:before { content: '10.2 ' }
+.print-site-enumerate-headings #other-guideoptions > h1:before { content: '10.2 ' }
 
-                .print-site-enumerate-headings #other-importoptions h2:before { content: '10.2.' counter(counter-other-importoptions-2) ' ' }
+                .print-site-enumerate-headings #other-guideoptions h2:before { content: '10.2.' counter(counter-other-guideoptions-2) ' ' }
+                .print-site-enumerate-headings #other-guideoptions h2 {  counter-increment: counter-other-guideoptions-2 }
+            
+.print-site-enumerate-headings #other-importoptions > h1:before { content: '10.3 ' }
+
+                .print-site-enumerate-headings #other-importoptions h2:before { content: '10.3.' counter(counter-other-importoptions-2) ' ' }
                 .print-site-enumerate-headings #other-importoptions h2 {  counter-increment: counter-other-importoptions-2 }
             
-.print-site-enumerate-headings #other-keyframeease > h1:before { content: '10.3 ' }
+.print-site-enumerate-headings #other-keyframeease > h1:before { content: '10.4 ' }
 
-                .print-site-enumerate-headings #other-keyframeease h2:before { content: '10.3.' counter(counter-other-keyframeease-2) ' ' }
+                .print-site-enumerate-headings #other-keyframeease h2:before { content: '10.4.' counter(counter-other-keyframeease-2) ' ' }
                 .print-site-enumerate-headings #other-keyframeease h2 {  counter-increment: counter-other-keyframeease-2 }
             
-.print-site-enumerate-headings #other-markervalue > h1:before { content: '10.4 ' }
+.print-site-enumerate-headings #other-markervalue > h1:before { content: '10.5 ' }
 
-                .print-site-enumerate-headings #other-markervalue h2:before { content: '10.4.' counter(counter-other-markervalue-2) ' ' }
+                .print-site-enumerate-headings #other-markervalue h2:before { content: '10.5.' counter(counter-other-markervalue-2) ' ' }
                 .print-site-enumerate-headings #other-markervalue h2 {  counter-increment: counter-other-markervalue-2 }
             
-.print-site-enumerate-headings #other-preferences > h1:before { content: '10.5 ' }
+.print-site-enumerate-headings #other-preferences > h1:before { content: '10.6 ' }
 
-                .print-site-enumerate-headings #other-preferences h2:before { content: '10.5.' counter(counter-other-preferences-2) ' ' }
+                .print-site-enumerate-headings #other-preferences h2:before { content: '10.6.' counter(counter-other-preferences-2) ' ' }
                 .print-site-enumerate-headings #other-preferences h2 {  counter-increment: counter-other-preferences-2 }
             
-.print-site-enumerate-headings #other-settings > h1:before { content: '10.6 ' }
+.print-site-enumerate-headings #other-settings > h1:before { content: '10.7 ' }
 
-                .print-site-enumerate-headings #other-settings h2:before { content: '10.6.' counter(counter-other-settings-2) ' ' }
+                .print-site-enumerate-headings #other-settings h2:before { content: '10.7.' counter(counter-other-settings-2) ' ' }
                 .print-site-enumerate-headings #other-settings h2 {  counter-increment: counter-other-settings-2 }
             
-.print-site-enumerate-headings #other-shape > h1:before { content: '10.7 ' }
+.print-site-enumerate-headings #other-shape > h1:before { content: '10.8 ' }
 
-                .print-site-enumerate-headings #other-shape h2:before { content: '10.7.' counter(counter-other-shape-2) ' ' }
+                .print-site-enumerate-headings #other-shape h2:before { content: '10.8.' counter(counter-other-shape-2) ' ' }
                 .print-site-enumerate-headings #other-shape h2 {  counter-increment: counter-other-shape-2 }
             
-.print-site-enumerate-headings #other-view > h1:before { content: '10.8 ' }
+.print-site-enumerate-headings #other-view > h1:before { content: '10.9 ' }
 
-                .print-site-enumerate-headings #other-view h2:before { content: '10.8.' counter(counter-other-view-2) ' ' }
+                .print-site-enumerate-headings #other-view h2:before { content: '10.9.' counter(counter-other-view-2) ' ' }
                 .print-site-enumerate-headings #other-view h2 {  counter-increment: counter-other-view-2 }
             
-.print-site-enumerate-headings #other-viewer > h1:before { content: '10.9 ' }
+.print-site-enumerate-headings #other-viewer > h1:before { content: '10.10 ' }
 
-                .print-site-enumerate-headings #other-viewer h2:before { content: '10.9.' counter(counter-other-viewer-2) ' ' }
+                .print-site-enumerate-headings #other-viewer h2:before { content: '10.10.' counter(counter-other-viewer-2) ' ' }
                 .print-site-enumerate-headings #other-viewer h2 {  counter-increment: counter-other-viewer-2 }
             
-.print-site-enumerate-headings #other-viewoptions > h1:before { content: '10.10 ' }
+.print-site-enumerate-headings #other-viewoptions > h1:before { content: '10.11 ' }
 
-                .print-site-enumerate-headings #other-viewoptions h2:before { content: '10.10.' counter(counter-other-viewoptions-2) ' ' }
+                .print-site-enumerate-headings #other-viewoptions h2:before { content: '10.11.' counter(counter-other-viewoptions-2) ' ' }
                 .print-site-enumerate-headings #other-viewoptions h2 {  counter-increment: counter-other-viewoptions-2 }
             
 .print-site-enumerate-headings #section-11 > h1:before { content: '11 ' }

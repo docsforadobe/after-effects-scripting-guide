@@ -955,6 +955,19 @@
 				
 				
 					<li class="md-nav__item">
+	<a href="#itemgetguideasobject" class="md-nav__link">
+		<span class="md-ellipsis">
+			Item.getGuideAsObject()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
 	<a href="#itemremove" class="md-nav__link">
 		<span class="md-ellipsis">
 			Item.remove()
@@ -2289,6 +2302,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../other/guideoptions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GuideOptions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../other/importoptions/" class="md-nav__link">
         
   
@@ -3118,6 +3159,19 @@
 				
 				
 					<li class="md-nav__item">
+	<a href="#itemgetguideasobject" class="md-nav__link">
+		<span class="md-ellipsis">
+			Item.getGuideAsObject()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
 	<a href="#itemremove" class="md-nav__link">
 		<span class="md-ellipsis">
 			Item.remove()
@@ -3246,9 +3300,77 @@
 <p>This functionality was added in After Effects 16.1 (CC 2019)</p>
 </div>
 <h4 id="description_3">Description<a class="headerlink" href="#description_3" title="Permanent link">&para;</a></h4>
-<p>An array of <code>guide</code> objects, containing <code>orientationType</code>, <code>positionType</code>, and <code>position</code> attributes.</p>
+<p>An array of objects describing the guides in the item's view. The properties on each entry depend on the version of After Effects.</p>
+<p>In After Effects 16.1 (CC 2019) and later, each entry has the following properties:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>orientationType</code></td>
+<td>Integer</td>
+<td><code>0</code> for a horizontal guide, <code>1</code> for a vertical guide.</td>
+</tr>
+<tr>
+<td><code>positionType</code></td>
+<td>Integer</td>
+<td>Always <code>0</code> (a pixel position).</td>
+</tr>
+<tr>
+<td><code>position</code></td>
+<td>Floating-point value</td>
+<td>The guide's position, in pixels.</td>
+</tr>
+</tbody>
+</table>
+<p>In After Effects (Beta) 26.5 and later, each entry has the following properties:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>orientationType</code></td>
+<td><code>GuideOrientationType</code></td>
+<td><code>GuideOrientationType.HORIZONTAL</code> or <code>GuideOrientationType.VERTICAL</code>.</td>
+</tr>
+<tr>
+<td><code>positionType</code></td>
+<td><code>GuidePositionType</code></td>
+<td><code>GuidePositionType.PIXEL</code> or <code>GuidePositionType.PERCENTAGE</code>.</td>
+</tr>
+<tr>
+<td><code>position</code></td>
+<td>Floating-point value</td>
+<td>The guide's position, in pixels or percent depending on <code>positionType</code>.</td>
+</tr>
+<tr>
+<td><code>color</code></td>
+<td>Array of 3 floats</td>
+<td><code>[R, G, B]</code>, each <code>0.0</code>-<code>1.0</code>.</td>
+</tr>
+<tr>
+<td><code>pinned</code></td>
+<td>Boolean</td>
+<td><code>true</code> if pinned to the opposite (bottom/right) edge.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Differences between versions</p>
+<p><strong>Breaking change:</strong> The integer values behind <code>orientationType</code> and <code>positionType</code> differ between versions of After Effects. Always compare against the enumerated constants (for example <a href="../../other/guideoptions/#guideorientationtype">GuideOrientationType.HORIZONTAL</a>) rather than raw integer literals — a test such as <code>guide.orientationType === 0</code> is not portable and may stop matching in a future version.</p>
+</div>
 <h4 id="type_2">Type<a class="headerlink" href="#type_2" title="Permanent link">&para;</a></h4>
-<p>Array; read-only.</p>
+<p>Array of objects; read-only.</p>
 <hr />
 <h3 id="itemid">Item.id<a class="headerlink" href="#itemid" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).id</code></p>
@@ -3392,12 +3514,17 @@
 <h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h2>
 <h3 id="itemaddguide">Item.addGuide()<a class="headerlink" href="#itemaddguide" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).addGuide(orientationType, position)</code></p>
+<p><code>app.project.item(index).addGuide(guideOptions)</code></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This functionality was added in After Effects 16.1 (CC 2019)</p>
+<p>The <code>(orientationType, position)</code> form was added in After Effects 16.1 (CC 2019). The <code>GuideOptions</code> form was added in After Effects (Beta) 26.5 and is subject to change while it remains in Beta.</p>
 </div>
 <h4 id="description_10">Description<a class="headerlink" href="#description_10" title="Permanent link">&para;</a></h4>
-<p>Creates a new guide and adds it to the <code>guides</code> object of the Item.</p>
+<p>Adds a guide to the item's view and returns its index. There are two forms:</p>
+<ul>
+<li><strong><code>addGuide(orientationType, position)</code></strong> - adds a pixel guide using an orientation and a pixel position.</li>
+<li><strong><code>addGuide(guideOptions)</code></strong> - adds a guide described by a <a href="../../other/guideoptions/">GuideOptions</a> object, allowing percentage positioning, per-guide color, and pinning. <em>(After Effects (Beta) 26.5 and later; calling this form in an earlier version raises an error.)</em></li>
+</ul>
 <h4 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -3411,29 +3538,79 @@
 <tr>
 <td><code>orientationType</code></td>
 <td>Integer</td>
-<td><code>0</code> for a horizontal guide, <code>1</code> for a vertical guide. Any other value defaults to horizontal.</td>
+<td><code>0</code> for a horizontal guide, <code>1</code> for a vertical guide. Any other value defaults to horizontal. In After Effects (Beta) 26.5 and later you may also pass <code>GuideOrientationType.HORIZONTAL</code> / <code>GuideOrientationType.VERTICAL</code>.</td>
 </tr>
 <tr>
 <td><code>position</code></td>
-<td>Integer</td>
-<td>The X or Y coordinate position of the guide in pixels, depending on its <code>orientationType</code>.</td>
+<td>Floating-point value</td>
+<td>The X or Y coordinate position of the guide in pixels. Clamped to ±100,000; non-finite values are rejected.</td>
+</tr>
+<tr>
+<td><code>guideOptions</code></td>
+<td>GuideOptions object</td>
+<td>A <a href="../../other/guideoptions/">GuideOptions</a> describing the new guide.</td>
 </tr>
 </tbody>
 </table>
 <h4 id="returns">Returns<a class="headerlink" href="#returns" title="Permanent link">&para;</a></h4>
 <p>Integer; the index of the newly-created guide.</p>
 <h4 id="example_3">Example<a class="headerlink" href="#example_3" title="Permanent link">&para;</a></h4>
-<p>Adds a vertical guide at 500 pixels on the X axis to the <code>activeItem</code> of a project.</p>
-<div class="language-javascript highlight"><pre><span></span><code><span id="__span-3-1"><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">activeItem</span><span class="p">.</span><span class="nx">addGuide</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">500</span><span class="p">);</span>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-3-1"><span class="kd">var</span><span class="w"> </span><span class="nx">item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+</span><span id="__span-3-2">
+</span><span id="__span-3-3"><span class="c1">// (orientationType, position) form: a vertical guide at 500 px on the X axis.</span>
+</span><span id="__span-3-4"><span class="nx">item</span><span class="p">.</span><span class="nx">addGuide</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">500</span><span class="p">);</span>
+</span><span id="__span-3-5">
+</span><span id="__span-3-6"><span class="c1">// GuideOptions form: a vertical guide at 50%, red, pinned to the right edge.</span>
+</span><span id="__span-3-7"><span class="kd">var</span><span class="w"> </span><span class="nx">opts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">GuideOptions</span><span class="p">();</span>
+</span><span id="__span-3-8"><span class="nx">opts</span><span class="p">.</span><span class="nx">orientation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">GuideOrientationType</span><span class="p">.</span><span class="nx">VERTICAL</span><span class="p">;</span>
+</span><span id="__span-3-9"><span class="nx">opts</span><span class="p">.</span><span class="nx">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">50</span><span class="p">;</span>
+</span><span id="__span-3-10"><span class="nx">opts</span><span class="p">.</span><span class="nx">positionType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">GuidePositionType</span><span class="p">.</span><span class="nx">PERCENTAGE</span><span class="p">;</span>
+</span><span id="__span-3-11"><span class="nx">opts</span><span class="p">.</span><span class="nx">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">];</span>
+</span><span id="__span-3-12"><span class="nx">opts</span><span class="p">.</span><span class="nx">pinned</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+</span><span id="__span-3-13"><span class="nx">item</span><span class="p">.</span><span class="nx">addGuide</span><span class="p">(</span><span class="nx">opts</span><span class="p">);</span>
+</span></code></pre></div>
+<hr />
+<h3 id="itemgetguideasobject">Item.getGuideAsObject()<a class="headerlink" href="#itemgetguideasobject" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).getGuideAsObject(guideIndex)</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects (Beta) 26.5 and is subject to change while it remains in Beta. Calling it in an earlier version raises the error "getGuideAsObject() is not available in this version of After Effects."</p>
+</div>
+<h4 id="description_11">Description<a class="headerlink" href="#description_11" title="Permanent link">&para;</a></h4>
+<p>Returns the guide at the specified index as a <a href="../../other/guideoptions/">GuideOptions</a> object, which you can modify and pass back to <a href="#itemsetguide">setGuide()</a>. This is a convenient way to read a guide's full state (orientation, position, position type, color, pinning).</p>
+<h4 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>guideIndex</code></td>
+<td>Integer</td>
+<td>The index of the guide to read.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_1">Returns<a class="headerlink" href="#returns_1" title="Permanent link">&para;</a></h4>
+<p>A <a href="../../other/guideoptions/">GuideOptions</a> object.</p>
+<h4 id="example_4">Example<a class="headerlink" href="#example_4" title="Permanent link">&para;</a></h4>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-4-1"><span class="kd">var</span><span class="w"> </span><span class="nx">item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+</span><span id="__span-4-2"><span class="kd">var</span><span class="w"> </span><span class="nx">g</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">getGuideAsObject</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
+</span><span id="__span-4-3"><span class="nx">g</span><span class="p">.</span><span class="nx">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">];</span><span class="w">   </span><span class="c1">// tweak just the color</span>
+</span><span id="__span-4-4"><span class="nx">item</span><span class="p">.</span><span class="nx">setGuide</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">g</span><span class="p">);</span><span class="w">   </span><span class="c1">// write it back</span>
 </span></code></pre></div>
 <hr />
 <h3 id="itemremove">Item.remove()<a class="headerlink" href="#itemremove" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).remove()</code></p>
-<h4 id="description_11">Description<a class="headerlink" href="#description_11" title="Permanent link">&para;</a></h4>
+<h4 id="description_12">Description<a class="headerlink" href="#description_12" title="Permanent link">&para;</a></h4>
 <p>Deletes this item from the project and the Project panel. If the item is a FolderItem, all the items contained in the folder are also removed from the project. No files or folders are removed from the disk.</p>
-<h4 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">&para;</a></h4>
+<h4 id="parameters_2">Parameters<a class="headerlink" href="#parameters_2" title="Permanent link">&para;</a></h4>
 <p>None.</p>
-<h4 id="returns_1">Returns<a class="headerlink" href="#returns_1" title="Permanent link">&para;</a></h4>
+<h4 id="returns_2">Returns<a class="headerlink" href="#returns_2" title="Permanent link">&para;</a></h4>
 <p>Nothing.</p>
 <hr />
 <h3 id="itemremoveguide">Item.removeGuide()<a class="headerlink" href="#itemremoveguide" title="Permanent link">&para;</a></h3>
@@ -3442,9 +3619,9 @@
 <p class="admonition-title">Note</p>
 <p>This functionality was added in After Effects 16.1 (CC 2019)</p>
 </div>
-<h4 id="description_12">Description<a class="headerlink" href="#description_12" title="Permanent link">&para;</a></h4>
-<p>Removes an existing guide. Choose the guide based on its index inside the <code>Item.guides</code> object.</p>
-<h4 id="parameters_2">Parameters<a class="headerlink" href="#parameters_2" title="Permanent link">&para;</a></h4>
+<h4 id="description_13">Description<a class="headerlink" href="#description_13" title="Permanent link">&para;</a></h4>
+<p>Removes an existing guide. Choose the guide based on its index inside the <a href="#itemguides">Item.guides</a> array.</p>
+<h4 id="parameters_3">Parameters<a class="headerlink" href="#parameters_3" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -3461,11 +3638,11 @@
 </tr>
 </tbody>
 </table>
-<h4 id="returns_2">Returns<a class="headerlink" href="#returns_2" title="Permanent link">&para;</a></h4>
+<h4 id="returns_3">Returns<a class="headerlink" href="#returns_3" title="Permanent link">&para;</a></h4>
 <p>Nothing.</p>
-<h4 id="example_4">Example<a class="headerlink" href="#example_4" title="Permanent link">&para;</a></h4>
+<h4 id="example_5">Example<a class="headerlink" href="#example_5" title="Permanent link">&para;</a></h4>
 <p>Removes the first guide in <code>activeItem</code>.</p>
-<div class="language-javascript highlight"><pre><span></span><code><span id="__span-4-1"><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">activeItem</span><span class="p">.</span><span class="nx">removeGuide</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-5-1"><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">activeItem</span><span class="p">.</span><span class="nx">removeGuide</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
 </span></code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -3473,15 +3650,23 @@
 </div>
 <hr />
 <h3 id="itemsetguide">Item.setGuide()<a class="headerlink" href="#itemsetguide" title="Permanent link">&para;</a></h3>
-<p><code>app.project.item(index).setGuide(position,guideIndex)</code></p>
+<p><code>app.project.item(index).setGuide(position, guideIndex)</code></p>
+<p><code>app.project.item(index).setGuide(guideIndex, guideOptions)</code></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This functionality was added in After Effects 16.1 (CC 2019)</p>
+<p>The <code>(position, guideIndex)</code> form was added in After Effects 16.1 (CC 2019). The <code>(guideIndex, guideOptions)</code> form was added in After Effects (Beta) 26.5 and is subject to change while it remains in Beta.</p>
 </div>
-<h4 id="description_13">Description<a class="headerlink" href="#description_13" title="Permanent link">&para;</a></h4>
-<p>Modifies the <code>position</code> of an existing guide. Choose the guide based on its <code>guideIndex</code> inside the <code>Item.guides</code> array.</p>
-<p>A guide's <code>orientationType</code> may not be changed after it is created.</p>
-<h4 id="parameters_3">Parameters<a class="headerlink" href="#parameters_3" title="Permanent link">&para;</a></h4>
+<h4 id="description_14">Description<a class="headerlink" href="#description_14" title="Permanent link">&para;</a></h4>
+<p>Updates an existing guide. There are two forms, distinguished by the type of the second argument:</p>
+<ul>
+<li><strong><code>setGuide(position, guideIndex)</code></strong> - moves the guide at <code>guideIndex</code> to a new pixel <code>position</code>. <em>Note the order: position first, index second.</em> A guide's <code>orientationType</code> may not be changed after it is created.</li>
+<li><strong><code>setGuide(guideIndex, guideOptions)</code></strong> - applies the properties set on a <a href="../../other/guideoptions/">GuideOptions</a> object to the guide at <code>guideIndex</code>. Only the properties you set are changed (partial update). <em>(After Effects (Beta) 26.5 and later.)</em></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The two forms take their arguments in the <strong>opposite order</strong>: the <code>(position, guideIndex)</code> form takes the position first, while the <code>(guideIndex, guideOptions)</code> form takes the index first. After Effects decides which form you mean from the type of the second argument (a number selects the <code>(position, guideIndex)</code> form; a <code>GuideOptions</code> object selects the <code>(guideIndex, guideOptions)</code> form).</p>
+</div>
+<h4 id="parameters_4">Parameters<a class="headerlink" href="#parameters_4" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -3493,21 +3678,35 @@
 <tbody>
 <tr>
 <td><code>position</code></td>
-<td>Integer</td>
-<td>The new X or Y coordinate position of the guide in pixels, depending on its existing <code>orientationType</code>.</td>
+<td>Floating-point value</td>
+<td>The new X or Y coordinate position of the guide in pixels. Clamped to ±100,000; non-finite values are rejected.</td>
 </tr>
 <tr>
 <td><code>guideIndex</code></td>
 <td>Integer</td>
 <td>The index of the guide to be modified.</td>
 </tr>
+<tr>
+<td><code>guideOptions</code></td>
+<td>GuideOptions object</td>
+<td>A <a href="../../other/guideoptions/">GuideOptions</a> whose set properties are applied to the guide.</td>
+</tr>
 </tbody>
 </table>
-<h4 id="returns_3">Returns<a class="headerlink" href="#returns_3" title="Permanent link">&para;</a></h4>
+<h4 id="returns_4">Returns<a class="headerlink" href="#returns_4" title="Permanent link">&para;</a></h4>
 <p>Nothing.</p>
-<h4 id="example_5">Example<a class="headerlink" href="#example_5" title="Permanent link">&para;</a></h4>
-<p>Changes the position of the first guide in <code>activeItem</code> to 1200 pixels.</p>
-<div class="language-javascript highlight"><pre><span></span><code><span id="__span-5-1"><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">activeItem</span><span class="p">.</span><span class="nx">setGuide</span><span class="p">(</span><span class="mf">1200</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span>
+<h4 id="example_6">Example<a class="headerlink" href="#example_6" title="Permanent link">&para;</a></h4>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-6-1"><span class="kd">var</span><span class="w"> </span><span class="nx">item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+</span><span id="__span-6-2">
+</span><span id="__span-6-3"><span class="c1">// (position, guideIndex) form: move guide 0 to 1200 px (position first, index second).</span>
+</span><span id="__span-6-4"><span class="nx">item</span><span class="p">.</span><span class="nx">setGuide</span><span class="p">(</span><span class="mf">1200</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span>
+</span><span id="__span-6-5">
+</span><span id="__span-6-6"><span class="c1">// GuideOptions form: recolor guide 0 and switch it to a percentage position.</span>
+</span><span id="__span-6-7"><span class="kd">var</span><span class="w"> </span><span class="nx">opts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">GuideOptions</span><span class="p">();</span>
+</span><span id="__span-6-8"><span class="nx">opts</span><span class="p">.</span><span class="nx">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">75</span><span class="p">;</span>
+</span><span id="__span-6-9"><span class="nx">opts</span><span class="p">.</span><span class="nx">positionType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">GuidePositionType</span><span class="p">.</span><span class="nx">PERCENTAGE</span><span class="p">;</span>
+</span><span id="__span-6-10"><span class="nx">opts</span><span class="p">.</span><span class="nx">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">];</span>
+</span><span id="__span-6-11"><span class="nx">item</span><span class="p">.</span><span class="nx">setGuide</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">opts</span><span class="p">);</span><span class="w">   </span><span class="c1">// index first, options second</span>
 </span></code></pre></div>
 
 
@@ -3529,7 +3728,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 5, 2025 16:50:32 UTC">February 5, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 7, 2026 01:31:00 UTC">July 7, 2026</span>
   </span>
 
     

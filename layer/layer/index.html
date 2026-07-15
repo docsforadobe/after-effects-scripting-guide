@@ -1069,6 +1069,19 @@
 				
 				
 					<li class="md-nav__item">
+	<a href="#layerguides" class="md-nav__link">
+		<span class="md-ellipsis">
+			Layer.guides
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
 	<a href="#layerhasvideo" class="md-nav__link">
 		<span class="md-ellipsis">
 			Layer.hasVideo
@@ -1320,6 +1333,19 @@
 				
 				
 					<li class="md-nav__item">
+	<a href="#layeraddguide" class="md-nav__link">
+		<span class="md-ellipsis">
+			Layer.addGuide()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
 	<a href="#layerapplypreset" class="md-nav__link">
 		<span class="md-ellipsis">
 			Layer.applyPreset()
@@ -1362,6 +1388,19 @@
 	<a href="#layerduplicate" class="md-nav__link">
 		<span class="md-ellipsis">
 			Layer.duplicate()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#layergetguideasobject" class="md-nav__link">
+		<span class="md-ellipsis">
+			Layer.getGuideAsObject()
 		</span>
 	</a>
 
@@ -1427,6 +1466,32 @@
 	<a href="#layerremove" class="md-nav__link">
 		<span class="md-ellipsis">
 			Layer.remove()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#layerremoveguide" class="md-nav__link">
+		<span class="md-ellipsis">
+			Layer.removeGuide()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#layersetguide" class="md-nav__link">
+		<span class="md-ellipsis">
+			Layer.setGuide()
 		</span>
 	</a>
 
@@ -2523,6 +2588,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../other/guideoptions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GuideOptions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../other/importoptions/" class="md-nav__link">
         
   
@@ -3244,6 +3337,19 @@
 				
 				
 					<li class="md-nav__item">
+	<a href="#layerguides" class="md-nav__link">
+		<span class="md-ellipsis">
+			Layer.guides
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
 	<a href="#layerhasvideo" class="md-nav__link">
 		<span class="md-ellipsis">
 			Layer.hasVideo
@@ -3495,6 +3601,19 @@
 				
 				
 					<li class="md-nav__item">
+	<a href="#layeraddguide" class="md-nav__link">
+		<span class="md-ellipsis">
+			Layer.addGuide()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
 	<a href="#layerapplypreset" class="md-nav__link">
 		<span class="md-ellipsis">
 			Layer.applyPreset()
@@ -3537,6 +3656,19 @@
 	<a href="#layerduplicate" class="md-nav__link">
 		<span class="md-ellipsis">
 			Layer.duplicate()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#layergetguideasobject" class="md-nav__link">
+		<span class="md-ellipsis">
+			Layer.getGuideAsObject()
 		</span>
 	</a>
 
@@ -3602,6 +3734,32 @@
 	<a href="#layerremove" class="md-nav__link">
 		<span class="md-ellipsis">
 			Layer.remove()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#layerremoveguide" class="md-nav__link">
+		<span class="md-ellipsis">
+			Layer.removeGuide()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#layersetguide" class="md-nav__link">
+		<span class="md-ellipsis">
+			Layer.setGuide()
 		</span>
 	</a>
 
@@ -3708,11 +3866,90 @@
 <h4 id="type_2">Type<a class="headerlink" href="#type_2" title="Permanent link">&para;</a></h4>
 <p>CompItem object; read-only.</p>
 <hr />
+<h3 id="layerguides">Layer.guides<a class="headerlink" href="#layerguides" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).guides</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 16.1 (CC 2019)</p>
+</div>
+<h4 id="description_4">Description<a class="headerlink" href="#description_4" title="Permanent link">&para;</a></h4>
+<p>An array of objects describing the guides in the layer's view. The properties on each entry depend on the version of After Effects.</p>
+<p>In After Effects 16.1 (CC 2019) and later, each entry has the following properties:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>orientationType</code></td>
+<td>Integer</td>
+<td><code>0</code> for a horizontal guide, <code>1</code> for a vertical guide.</td>
+</tr>
+<tr>
+<td><code>positionType</code></td>
+<td>Integer</td>
+<td>Always <code>0</code> (a pixel position).</td>
+</tr>
+<tr>
+<td><code>position</code></td>
+<td>Floating-point value</td>
+<td>The guide's position, in pixels.</td>
+</tr>
+</tbody>
+</table>
+<p>In After Effects (Beta) 26.5 and later, each entry has the following properties:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>orientationType</code></td>
+<td><code>GuideOrientationType</code></td>
+<td><code>GuideOrientationType.HORIZONTAL</code> or <code>GuideOrientationType.VERTICAL</code>.</td>
+</tr>
+<tr>
+<td><code>positionType</code></td>
+<td><code>GuidePositionType</code></td>
+<td><code>GuidePositionType.PIXEL</code> or <code>GuidePositionType.PERCENTAGE</code>.</td>
+</tr>
+<tr>
+<td><code>position</code></td>
+<td>Floating-point value</td>
+<td>The guide's position, in pixels or percent depending on <code>positionType</code>.</td>
+</tr>
+<tr>
+<td><code>color</code></td>
+<td>Array of 3 floats</td>
+<td><code>[R, G, B]</code>, each <code>0.0</code>-<code>1.0</code>.</td>
+</tr>
+<tr>
+<td><code>pinned</code></td>
+<td>Boolean</td>
+<td><code>true</code> if pinned to the opposite (bottom/right) edge.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Differences between versions</p>
+<p><strong>Breaking change:</strong> The integer values behind <code>orientationType</code> and <code>positionType</code> differ between versions of After Effects. In the beta, always compare against the enumerated constants (for example <a href="../../other/guideoptions/#guideorientationtype">GuideOrientationType.HORIZONTAL</a>) rather than raw integer literals — a test such as <code>guide.orientationType === 0</code> is not portable and may stop matching in a future version.</p>
+</div>
+<h4 id="type_3">Type<a class="headerlink" href="#type_3" title="Permanent link">&para;</a></h4>
+<p>Array of objects; read-only.</p>
+<hr />
 <h3 id="layerhasvideo">Layer.hasVideo<a class="headerlink" href="#layerhasvideo" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).hasVideo</code></p>
-<h4 id="description_4">Description<a class="headerlink" href="#description_4" title="Permanent link">&para;</a></h4>
+<h4 id="description_5">Description<a class="headerlink" href="#description_5" title="Permanent link">&para;</a></h4>
 <p>When <code>true</code>, the layer has a video switch (the eyeball icon) in the Timeline panel; otherwise <code>false</code>.</p>
-<h4 id="type_3">Type<a class="headerlink" href="#type_3" title="Permanent link">&para;</a></h4>
+<h4 id="type_4">Type<a class="headerlink" href="#type_4" title="Permanent link">&para;</a></h4>
 <p>Boolean; read-only.</p>
 <hr />
 <h3 id="layerid">Layer.id<a class="headerlink" href="#layerid" title="Permanent link">&para;</a></h3>
@@ -3721,63 +3958,63 @@
 <p class="admonition-title">Note</p>
 <p>This functionality was added in After Effects 22.0 (2022)</p>
 </div>
-<h4 id="description_5">Description<a class="headerlink" href="#description_5" title="Permanent link">&para;</a></h4>
+<h4 id="description_6">Description<a class="headerlink" href="#description_6" title="Permanent link">&para;</a></h4>
 <p>Instance property on Layer which returns a unique and persistent identification number used internally to identify a Layer between sessions.</p>
 <p>The value of the ID remains the same when the project is saved to a file and later reloaded.</p>
 <p>However, when you import this project into another project, new IDs are assigned to all Layers in the imported project.
 The ID is not displayed anywhere in the user interface..</p>
-<h4 id="type_4">Type<a class="headerlink" href="#type_4" title="Permanent link">&para;</a></h4>
+<h4 id="type_5">Type<a class="headerlink" href="#type_5" title="Permanent link">&para;</a></h4>
 <p>Integer; read-only.</p>
 <hr />
 <h3 id="layerindex">Layer.index<a class="headerlink" href="#layerindex" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).index</code></p>
-<h4 id="description_6">Description<a class="headerlink" href="#description_6" title="Permanent link">&para;</a></h4>
+<h4 id="description_7">Description<a class="headerlink" href="#description_7" title="Permanent link">&para;</a></h4>
 <p>The index position of the layer.</p>
-<h4 id="type_5">Type<a class="headerlink" href="#type_5" title="Permanent link">&para;</a></h4>
+<h4 id="type_6">Type<a class="headerlink" href="#type_6" title="Permanent link">&para;</a></h4>
 <p>Integer, in the range <code>[1..numLayers]</code>; read-only.</p>
 <hr />
 <h3 id="layerinpoint">Layer.inPoint<a class="headerlink" href="#layerinpoint" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).inPoint</code></p>
-<h4 id="description_7">Description<a class="headerlink" href="#description_7" title="Permanent link">&para;</a></h4>
+<h4 id="description_8">Description<a class="headerlink" href="#description_8" title="Permanent link">&para;</a></h4>
 <p>The "in" point of the layer, expressed in composition time (seconds).</p>
-<h4 id="type_6">Type<a class="headerlink" href="#type_6" title="Permanent link">&para;</a></h4>
+<h4 id="type_7">Type<a class="headerlink" href="#type_7" title="Permanent link">&para;</a></h4>
 <p>Floating-point value, in the range <code>[-10800.0..10800.0]</code> (minus or plus three hours); read/write.</p>
 <hr />
 <h3 id="layerisnameset">Layer.isNameSet<a class="headerlink" href="#layerisnameset" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).isNameSet</code></p>
-<h4 id="description_8">Description<a class="headerlink" href="#description_8" title="Permanent link">&para;</a></h4>
+<h4 id="description_9">Description<a class="headerlink" href="#description_9" title="Permanent link">&para;</a></h4>
 <p><code>true</code> if the value of the name attribute has been set explicitly, rather than automatically from the source.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>This always returns <code>true</code> for layers that do not have a <a href="../avlayer/#avlayersource">AVLayer.source</a></p>
 </div>
-<h4 id="type_7">Type<a class="headerlink" href="#type_7" title="Permanent link">&para;</a></h4>
+<h4 id="type_8">Type<a class="headerlink" href="#type_8" title="Permanent link">&para;</a></h4>
 <p>Boolean; read-only.</p>
 <hr />
 <h3 id="layerlabel">Layer.label<a class="headerlink" href="#layerlabel" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).label</code></p>
-<h4 id="description_9">Description<a class="headerlink" href="#description_9" title="Permanent link">&para;</a></h4>
+<h4 id="description_10">Description<a class="headerlink" href="#description_10" title="Permanent link">&para;</a></h4>
 <p>The label color for the item. Colors are represented by their number (0 for None, or 1 to 16 for one of the preset colors in the Labels preferences).</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Custom label colors cannot be set programmatically.</p>
 </div>
-<h4 id="type_8">Type<a class="headerlink" href="#type_8" title="Permanent link">&para;</a></h4>
+<h4 id="type_9">Type<a class="headerlink" href="#type_9" title="Permanent link">&para;</a></h4>
 <p>Integer (0 to 16); read/write.</p>
 <hr />
 <h3 id="layerlocked">Layer.locked<a class="headerlink" href="#layerlocked" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).locked</code></p>
-<h4 id="description_10">Description<a class="headerlink" href="#description_10" title="Permanent link">&para;</a></h4>
+<h4 id="description_11">Description<a class="headerlink" href="#description_11" title="Permanent link">&para;</a></h4>
 <p>When <code>true</code>, the layer is locked; otherwise <code>false</code>. This corresponds to the lock toggle in the Layer panel.</p>
-<h4 id="type_9">Type<a class="headerlink" href="#type_9" title="Permanent link">&para;</a></h4>
+<h4 id="type_10">Type<a class="headerlink" href="#type_10" title="Permanent link">&para;</a></h4>
 <p>Boolean; read/write.</p>
 <hr />
 <h3 id="layermarker">Layer.marker<a class="headerlink" href="#layermarker" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).marker</code></p>
-<h4 id="description_11">Description<a class="headerlink" href="#description_11" title="Permanent link">&para;</a></h4>
+<h4 id="description_12">Description<a class="headerlink" href="#description_12" title="Permanent link">&para;</a></h4>
 <p>A <a href="../../property/propertygroup/">PropertyGroup object</a> that contains all a layer's markers. Layer marker scripting has the same functionality as <a href="../../item/compitem/#compitemmarkerproperty">Comp markers</a>.</p>
 <p>See <a href="../../other/markervalue/">MarkerValue object</a>.</p>
-<h4 id="type_10">Type<a class="headerlink" href="#type_10" title="Permanent link">&para;</a></h4>
+<h4 id="type_11">Type<a class="headerlink" href="#type_11" title="Permanent link">&para;</a></h4>
 <p>PropertyGroup object or <code>null</code>; read-only.</p>
 <h4 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h4>
 <p>The following sample code creates two layer markers with different properties</p>
@@ -3795,74 +4032,74 @@ The ID is not displayed anywhere in the user interface..</p>
 <hr />
 <h3 id="layernulllayer">Layer.nullLayer<a class="headerlink" href="#layernulllayer" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).nullLayer</code></p>
-<h4 id="description_12">Description<a class="headerlink" href="#description_12" title="Permanent link">&para;</a></h4>
+<h4 id="description_13">Description<a class="headerlink" href="#description_13" title="Permanent link">&para;</a></h4>
 <p>When <code>true</code>, the layer was created as a null object; otherwise <code>false</code>.</p>
-<h4 id="type_11">Type<a class="headerlink" href="#type_11" title="Permanent link">&para;</a></h4>
+<h4 id="type_12">Type<a class="headerlink" href="#type_12" title="Permanent link">&para;</a></h4>
 <p>Boolean; read-only.</p>
 <hr />
 <h3 id="layeroutpoint">Layer.outPoint<a class="headerlink" href="#layeroutpoint" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).outPoint</code></p>
-<h4 id="description_13">Description<a class="headerlink" href="#description_13" title="Permanent link">&para;</a></h4>
+<h4 id="description_14">Description<a class="headerlink" href="#description_14" title="Permanent link">&para;</a></h4>
 <p>The "out" point of the layer, expressed in composition time (seconds).</p>
-<h4 id="type_12">Type<a class="headerlink" href="#type_12" title="Permanent link">&para;</a></h4>
+<h4 id="type_13">Type<a class="headerlink" href="#type_13" title="Permanent link">&para;</a></h4>
 <p>Floating-point value, in the range <code>[-10800.0..10800.0]</code> (minus or plus three hours); read/write.</p>
 <hr />
 <h3 id="layerparent">Layer.parent<a class="headerlink" href="#layerparent" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).parent</code></p>
-<h4 id="description_14">Description<a class="headerlink" href="#description_14" title="Permanent link">&para;</a></h4>
+<h4 id="description_15">Description<a class="headerlink" href="#description_15" title="Permanent link">&para;</a></h4>
 <p>The parent of this layer; can be <code>null</code>.</p>
 <p>Offset values are calculated to counterbalance any transforms above this layer in the hierarchy, so that when you set the parent there is no apparent jump in the layer's transform.</p>
 <p>For example, if the new parent has a rotation of 30 degrees, the child layer is assigned a rotation of -30 degrees.</p>
 <p>To set the parent without changing the child layer's transform values, use the <a href="#layersetparentwithjump">setParentWithJump</a> method.</p>
-<h4 id="type_13">Type<a class="headerlink" href="#type_13" title="Permanent link">&para;</a></h4>
+<h4 id="type_14">Type<a class="headerlink" href="#type_14" title="Permanent link">&para;</a></h4>
 <p>Layer object or <code>null</code>; read/write.</p>
 <hr />
 <h3 id="layerselectedproperties">Layer.selectedProperties<a class="headerlink" href="#layerselectedproperties" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).selectedProperties</code></p>
-<h4 id="description_15">Description<a class="headerlink" href="#description_15" title="Permanent link">&para;</a></h4>
+<h4 id="description_16">Description<a class="headerlink" href="#description_16" title="Permanent link">&para;</a></h4>
 <p>An array containing all of the currently selected <a href="../../property/property/">Property</a> and <a href="../../property/propertygroup/">PropertyGroup</a> objects in the layer.</p>
-<h4 id="type_14">Type<a class="headerlink" href="#type_14" title="Permanent link">&para;</a></h4>
+<h4 id="type_15">Type<a class="headerlink" href="#type_15" title="Permanent link">&para;</a></h4>
 <p>Array of <a href="../../property/propertybase/">PropertyBase</a> objects; read-only.</p>
 <hr />
 <h3 id="layershy">Layer.shy<a class="headerlink" href="#layershy" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).shy</code></p>
-<h4 id="description_16">Description<a class="headerlink" href="#description_16" title="Permanent link">&para;</a></h4>
+<h4 id="description_17">Description<a class="headerlink" href="#description_17" title="Permanent link">&para;</a></h4>
 <p>When <code>true</code>, the layer is "shy", meaning that it is hidden in the Layer panel if the composition's "Hide all shy layers" option is toggled on.</p>
-<h4 id="type_15">Type<a class="headerlink" href="#type_15" title="Permanent link">&para;</a></h4>
+<h4 id="type_16">Type<a class="headerlink" href="#type_16" title="Permanent link">&para;</a></h4>
 <p>Boolean; read/write.</p>
 <hr />
 <h3 id="layersolo">Layer.solo<a class="headerlink" href="#layersolo" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).solo</code></p>
-<h4 id="description_17">Description<a class="headerlink" href="#description_17" title="Permanent link">&para;</a></h4>
+<h4 id="description_18">Description<a class="headerlink" href="#description_18" title="Permanent link">&para;</a></h4>
 <p>When <code>true</code>, the layer is soloed, otherwise <code>false</code>.</p>
-<h4 id="type_16">Type<a class="headerlink" href="#type_16" title="Permanent link">&para;</a></h4>
+<h4 id="type_17">Type<a class="headerlink" href="#type_17" title="Permanent link">&para;</a></h4>
 <p>Boolean; read/write.</p>
 <hr />
 <h3 id="layerstarttime">Layer.startTime<a class="headerlink" href="#layerstarttime" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).startTime</code></p>
-<h4 id="description_18">Description<a class="headerlink" href="#description_18" title="Permanent link">&para;</a></h4>
+<h4 id="description_19">Description<a class="headerlink" href="#description_19" title="Permanent link">&para;</a></h4>
 <p>The start time of the layer, expressed in composition time (seconds).</p>
-<h4 id="type_17">Type<a class="headerlink" href="#type_17" title="Permanent link">&para;</a></h4>
+<h4 id="type_18">Type<a class="headerlink" href="#type_18" title="Permanent link">&para;</a></h4>
 <p>Floating-point value, in the range <code>[-10800.0..10800.0]</code> (minus or plus three hours); read/write.</p>
 <hr />
 <h3 id="layerstretch">Layer.stretch<a class="headerlink" href="#layerstretch" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).stretch</code></p>
-<h4 id="description_19">Description<a class="headerlink" href="#description_19" title="Permanent link">&para;</a></h4>
+<h4 id="description_20">Description<a class="headerlink" href="#description_20" title="Permanent link">&para;</a></h4>
 <p>The layer's time stretch, expressed as a percentage. A value of 100 means no stretch. Values between 0 and 1 are set to 1, and values between -1 and 0 (not including 0) are set to -1.</p>
-<h4 id="type_18">Type<a class="headerlink" href="#type_18" title="Permanent link">&para;</a></h4>
+<h4 id="type_19">Type<a class="headerlink" href="#type_19" title="Permanent link">&para;</a></h4>
 <p>Floating-point value, in the range <code>[-9900.0..9900.0]</code>; read/write.</p>
 <hr />
 <h3 id="layertime">Layer.time<a class="headerlink" href="#layertime" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).time</code></p>
-<h4 id="description_20">Description<a class="headerlink" href="#description_20" title="Permanent link">&para;</a></h4>
+<h4 id="description_21">Description<a class="headerlink" href="#description_21" title="Permanent link">&para;</a></h4>
 <p>The current time of the layer, expressed in composition time (seconds).</p>
-<h4 id="type_19">Type<a class="headerlink" href="#type_19" title="Permanent link">&para;</a></h4>
+<h4 id="type_20">Type<a class="headerlink" href="#type_20" title="Permanent link">&para;</a></h4>
 <p>Floating-point value; read-only.</p>
 <hr />
 <h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h2>
 <h3 id="layeractiveattime">Layer.activeAtTime()<a class="headerlink" href="#layeractiveattime" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).activeAtTime(time)</code></p>
-<h4 id="description_21">Description<a class="headerlink" href="#description_21" title="Permanent link">&para;</a></h4>
+<h4 id="description_22">Description<a class="headerlink" href="#description_22" title="Permanent link">&para;</a></h4>
 <p>Returns <code>true</code> if this layer will be active at the specified time.</p>
 <p>To return <code>true</code>, the layer must be enabled, no other layer may be soloing unless this layer is soloed too, and the time must be between the <code>inPoint</code> and <code>outPoint</code> values of this layer.</p>
 <h4 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h4>
@@ -3885,16 +4122,74 @@ The ID is not displayed anywhere in the user interface..</p>
 <h4 id="returns">Returns<a class="headerlink" href="#returns" title="Permanent link">&para;</a></h4>
 <p>Boolean.</p>
 <hr />
+<h3 id="layeraddguide">Layer.addGuide()<a class="headerlink" href="#layeraddguide" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).addGuide(orientationType, position)</code></p>
+<p><code>app.project.item(index).layer(index).addGuide(guideOptions)</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code>(orientationType, position)</code> form was added in After Effects 16.1 (CC 2019). The <code>GuideOptions</code> form was added in After Effects (Beta) 26.5 and is subject to change while it remains in Beta.</p>
+</div>
+<h4 id="description_23">Description<a class="headerlink" href="#description_23" title="Permanent link">&para;</a></h4>
+<p>Adds a guide to the layer's view and returns its index. There are two forms:</p>
+<ul>
+<li><strong><code>addGuide(orientationType, position)</code></strong> - adds a pixel guide using an orientation and a pixel position.</li>
+<li><strong><code>addGuide(guideOptions)</code></strong> - adds a guide described by a <a href="../../other/guideoptions/">GuideOptions</a> object, allowing percentage positioning, per-guide color, and pinning. <em>(After Effects (Beta) 26.5 and later; calling this form in an earlier version raises an error.)</em></li>
+</ul>
+<h4 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>orientationType</code></td>
+<td>Integer</td>
+<td><code>0</code> for a horizontal guide, <code>1</code> for a vertical guide. Any other value defaults to horizontal. In After Effects (Beta) 26.5 and later you may also pass <code>GuideOrientationType.HORIZONTAL</code> / <code>GuideOrientationType.VERTICAL</code>.</td>
+</tr>
+<tr>
+<td><code>position</code></td>
+<td>Floating-point value</td>
+<td>The X or Y coordinate position of the guide in pixels. Clamped to ±100,000; non-finite values are rejected.</td>
+</tr>
+<tr>
+<td><code>guideOptions</code></td>
+<td>GuideOptions object</td>
+<td>A <a href="../../other/guideoptions/">GuideOptions</a> describing the new guide.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_1">Returns<a class="headerlink" href="#returns_1" title="Permanent link">&para;</a></h4>
+<p>Integer; the index of the newly-created guide.</p>
+<h4 id="example_2">Example<a class="headerlink" href="#example_2" title="Permanent link">&para;</a></h4>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-2-1"><span class="kd">var</span><span class="w"> </span><span class="nx">layer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">layer</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+</span><span id="__span-2-2">
+</span><span id="__span-2-3"><span class="c1">// (orientationType, position) form: a vertical guide at 500 px on the X axis.</span>
+</span><span id="__span-2-4"><span class="nx">layer</span><span class="p">.</span><span class="nx">addGuide</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">500</span><span class="p">);</span>
+</span><span id="__span-2-5">
+</span><span id="__span-2-6"><span class="c1">// GuideOptions form: a vertical guide at 50%, red, pinned to the right edge.</span>
+</span><span id="__span-2-7"><span class="kd">var</span><span class="w"> </span><span class="nx">opts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">GuideOptions</span><span class="p">();</span>
+</span><span id="__span-2-8"><span class="nx">opts</span><span class="p">.</span><span class="nx">orientation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">GuideOrientationType</span><span class="p">.</span><span class="nx">VERTICAL</span><span class="p">;</span>
+</span><span id="__span-2-9"><span class="nx">opts</span><span class="p">.</span><span class="nx">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">50</span><span class="p">;</span>
+</span><span id="__span-2-10"><span class="nx">opts</span><span class="p">.</span><span class="nx">positionType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">GuidePositionType</span><span class="p">.</span><span class="nx">PERCENTAGE</span><span class="p">;</span>
+</span><span id="__span-2-11"><span class="nx">opts</span><span class="p">.</span><span class="nx">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">];</span>
+</span><span id="__span-2-12"><span class="nx">opts</span><span class="p">.</span><span class="nx">pinned</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+</span><span id="__span-2-13"><span class="nx">layer</span><span class="p">.</span><span class="nx">addGuide</span><span class="p">(</span><span class="nx">opts</span><span class="p">);</span>
+</span></code></pre></div>
+<hr />
 <h3 id="layerapplypreset">Layer.applyPreset()<a class="headerlink" href="#layerapplypreset" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).applyPreset(presetName);</code></p>
-<h4 id="description_22">Description<a class="headerlink" href="#description_22" title="Permanent link">&para;</a></h4>
+<h4 id="description_24">Description<a class="headerlink" href="#description_24" title="Permanent link">&para;</a></h4>
 <p>Applies the specified collection of animation settings (an animation preset) to all the currently selected layers of the comp to which the layer belongs. If no layer is selected, it applies the animation preset to a new solid layer.</p>
 <p>Predefined animation preset files are installed in the Presets folder, and users can create new animation presets through the user interface.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The animation preset is applied to the the selected layer(s) of the comp, not to the layer whose applyPreset function is called. Hence, the layer whose applyPreset function is called effectively just determines the comp whose layers are processed.</p>
 </div>
-<h4 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">&para;</a></h4>
+<h4 id="parameters_2">Parameters<a class="headerlink" href="#parameters_2" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -3911,12 +4206,12 @@ The ID is not displayed anywhere in the user interface..</p>
 </tr>
 </tbody>
 </table>
-<h4 id="returns_1">Returns<a class="headerlink" href="#returns_1" title="Permanent link">&para;</a></h4>
+<h4 id="returns_2">Returns<a class="headerlink" href="#returns_2" title="Permanent link">&para;</a></h4>
 <p>Nothing.</p>
 <hr />
 <h3 id="layercopytocomp">Layer.copyToComp()<a class="headerlink" href="#layercopytocomp" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).copyToComp(intoComp)</code></p>
-<h4 id="description_23">Description<a class="headerlink" href="#description_23" title="Permanent link">&para;</a></h4>
+<h4 id="description_25">Description<a class="headerlink" href="#description_25" title="Permanent link">&para;</a></h4>
 <p>Copies the layer into the specified composition. The original layer remains unchanged.</p>
 <p>Creates a new Layer object with the same values as this one, and prepends the new object to the <a href="../layercollection/">LayerCollection object</a> in the target CompItem. Retrieve the copy using into <code>Comp.layer(1)</code>.</p>
 <p>Copying in a layer changes the index positions of previously existing layers in the target composition.</p>
@@ -3929,7 +4224,7 @@ The ID is not displayed anywhere in the user interface..</p>
 <p class="admonition-title">Warning</p>
 <p>As of After Effects 13.7 (13.6, has not been tested), if the copied layer has an effect on it and the user undoes the action, After Effects will Crash.</p>
 </div>
-<h4 id="parameters_2">Parameters<a class="headerlink" href="#parameters_2" title="Permanent link">&para;</a></h4>
+<h4 id="parameters_3">Parameters<a class="headerlink" href="#parameters_3" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -3946,7 +4241,7 @@ The ID is not displayed anywhere in the user interface..</p>
 </tr>
 </tbody>
 </table>
-<h4 id="returns_2">Returns<a class="headerlink" href="#returns_2" title="Permanent link">&para;</a></h4>
+<h4 id="returns_3">Returns<a class="headerlink" href="#returns_3" title="Permanent link">&para;</a></h4>
 <p>Nothing.</p>
 <hr />
 <h3 id="layerdosceneeditdetection">Layer.doSceneEditDetection()<a class="headerlink" href="#layerdosceneeditdetection" title="Permanent link">&para;</a></h3>
@@ -3955,10 +4250,10 @@ The ID is not displayed anywhere in the user interface..</p>
 <p class="admonition-title">Note</p>
 <p>This functionality was added in After Effects 22.3 (2022)</p>
 </div>
-<h4 id="description_24">Description<a class="headerlink" href="#description_24" title="Permanent link">&para;</a></h4>
+<h4 id="description_26">Description<a class="headerlink" href="#description_26" title="Permanent link">&para;</a></h4>
 <p>Runs Scene Edit Detection on the layer that the method is called on and returns an array containing the times of any detected scenes. This is the same as selecting a layer in the Timeline and choosing "Layer &gt; Scene Edit Detection" with the single argument determining whether the edits are applied as markers, layer splits, pre-comps, or are not applied to the layer.</p>
 <p>Just as in the UI, <code>doSceneEditDetection</code> will fail and error if called on a non-video layer or a video layer with Time Remapping enabled.</p>
-<h4 id="parameters_3">Parameters<a class="headerlink" href="#parameters_3" title="Permanent link">&para;</a></h4>
+<h4 id="parameters_4">Parameters<a class="headerlink" href="#parameters_4" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -4002,46 +4297,26 @@ The ID is not displayed anywhere in the user interface..</p>
 </tr>
 </tbody>
 </table>
-<h4 id="returns_3">Returns<a class="headerlink" href="#returns_3" title="Permanent link">&para;</a></h4>
+<h4 id="returns_4">Returns<a class="headerlink" href="#returns_4" title="Permanent link">&para;</a></h4>
 <p>Array of floating-point values; the times of the detected edit points expressed in composition time.</p>
 <hr />
 <h3 id="layerduplicate">Layer.duplicate()<a class="headerlink" href="#layerduplicate" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).duplicate()</code></p>
-<h4 id="description_25">Description<a class="headerlink" href="#description_25" title="Permanent link">&para;</a></h4>
+<h4 id="description_27">Description<a class="headerlink" href="#description_27" title="Permanent link">&para;</a></h4>
 <p>Duplicates the layer. Creates a new Layer object in which all values are the same as in this one. This has the same effect as selecting a layer in the user interface and choosing Edit &gt; Duplicate, except the selection in the user interface does not change when you call this method.</p>
-<h4 id="parameters_4">Parameters<a class="headerlink" href="#parameters_4" title="Permanent link">&para;</a></h4>
+<h4 id="parameters_5">Parameters<a class="headerlink" href="#parameters_5" title="Permanent link">&para;</a></h4>
 <p>None.</p>
-<h4 id="returns_4">Returns<a class="headerlink" href="#returns_4" title="Permanent link">&para;</a></h4>
+<h4 id="returns_5">Returns<a class="headerlink" href="#returns_5" title="Permanent link">&para;</a></h4>
 <p>Layer object.</p>
 <hr />
-<h3 id="layermoveafter">Layer.moveAfter()<a class="headerlink" href="#layermoveafter" title="Permanent link">&para;</a></h3>
-<p><code>app.project.item(index).layer(index).moveAfter(layer)</code></p>
-<h4 id="description_26">Description<a class="headerlink" href="#description_26" title="Permanent link">&para;</a></h4>
-<p>Moves this layer to a position immediately after (below) the specified layer.</p>
-<h4 id="parameters_5">Parameters<a class="headerlink" href="#parameters_5" title="Permanent link">&para;</a></h4>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>layer</code></td>
-<td><a href="./">Layer object</a></td>
-<td>The target layer in the same composition.</td>
-</tr>
-</tbody>
-</table>
-<h4 id="returns_5">Returns<a class="headerlink" href="#returns_5" title="Permanent link">&para;</a></h4>
-<p>Nothing.</p>
-<hr />
-<h3 id="layermovebefore">Layer.moveBefore()<a class="headerlink" href="#layermovebefore" title="Permanent link">&para;</a></h3>
-<p><code>app.project.item(index).layer(index).moveBefore(layer)</code></p>
-<h4 id="description_27">Description<a class="headerlink" href="#description_27" title="Permanent link">&para;</a></h4>
-<p>Moves this layer to a position immediately before (above) the specified layer.</p>
+<h3 id="layergetguideasobject">Layer.getGuideAsObject()<a class="headerlink" href="#layergetguideasobject" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).getGuideAsObject(guideIndex)</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects (Beta) 26.5 and is subject to change while it remains in Beta. Calling it in an earlier version raises the error "getGuideAsObject() is not available in this version of After Effects."</p>
+</div>
+<h4 id="description_28">Description<a class="headerlink" href="#description_28" title="Permanent link">&para;</a></h4>
+<p>Returns the guide at the specified index as a <a href="../../other/guideoptions/">GuideOptions</a> object, which you can modify and pass back to <a href="#layersetguide">setGuide()</a>. This is a convenient way to read a guide's full state (orientation, position, position type, color, pinning).</p>
 <h4 id="parameters_6">Parameters<a class="headerlink" href="#parameters_6" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -4053,49 +4328,199 @@ The ID is not displayed anywhere in the user interface..</p>
 </thead>
 <tbody>
 <tr>
+<td><code>guideIndex</code></td>
+<td>Integer</td>
+<td>The index of the guide to read.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_6">Returns<a class="headerlink" href="#returns_6" title="Permanent link">&para;</a></h4>
+<p>A <a href="../../other/guideoptions/">GuideOptions</a> object.</p>
+<h4 id="example_3">Example<a class="headerlink" href="#example_3" title="Permanent link">&para;</a></h4>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-3-1"><span class="kd">var</span><span class="w"> </span><span class="nx">layer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">layer</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+</span><span id="__span-3-2"><span class="kd">var</span><span class="w"> </span><span class="nx">g</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">layer</span><span class="p">.</span><span class="nx">getGuideAsObject</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
+</span><span id="__span-3-3"><span class="nx">g</span><span class="p">.</span><span class="nx">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">];</span><span class="w">   </span><span class="c1">// tweak just the color</span>
+</span><span id="__span-3-4"><span class="nx">layer</span><span class="p">.</span><span class="nx">setGuide</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">g</span><span class="p">);</span><span class="w">   </span><span class="c1">// write it back</span>
+</span></code></pre></div>
+<hr />
+<h3 id="layermoveafter">Layer.moveAfter()<a class="headerlink" href="#layermoveafter" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).moveAfter(layer)</code></p>
+<h4 id="description_29">Description<a class="headerlink" href="#description_29" title="Permanent link">&para;</a></h4>
+<p>Moves this layer to a position immediately after (below) the specified layer.</p>
+<h4 id="parameters_7">Parameters<a class="headerlink" href="#parameters_7" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
 <td><code>layer</code></td>
 <td><a href="./">Layer object</a></td>
 <td>The target layer in the same composition.</td>
 </tr>
 </tbody>
 </table>
-<h4 id="returns_6">Returns<a class="headerlink" href="#returns_6" title="Permanent link">&para;</a></h4>
+<h4 id="returns_7">Returns<a class="headerlink" href="#returns_7" title="Permanent link">&para;</a></h4>
+<p>Nothing.</p>
+<hr />
+<h3 id="layermovebefore">Layer.moveBefore()<a class="headerlink" href="#layermovebefore" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).moveBefore(layer)</code></p>
+<h4 id="description_30">Description<a class="headerlink" href="#description_30" title="Permanent link">&para;</a></h4>
+<p>Moves this layer to a position immediately before (above) the specified layer.</p>
+<h4 id="parameters_8">Parameters<a class="headerlink" href="#parameters_8" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>layer</code></td>
+<td><a href="./">Layer object</a></td>
+<td>The target layer in the same composition.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_8">Returns<a class="headerlink" href="#returns_8" title="Permanent link">&para;</a></h4>
 <p>Nothing.</p>
 <hr />
 <h3 id="layermovetobeginning">Layer.moveToBeginning()<a class="headerlink" href="#layermovetobeginning" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).moveToBeginning()</code></p>
-<h4 id="description_28">Description<a class="headerlink" href="#description_28" title="Permanent link">&para;</a></h4>
+<h4 id="description_31">Description<a class="headerlink" href="#description_31" title="Permanent link">&para;</a></h4>
 <p>Moves this layer to the topmost position of the layer stack (the first layer).</p>
-<h4 id="parameters_7">Parameters<a class="headerlink" href="#parameters_7" title="Permanent link">&para;</a></h4>
-<p>None.</p>
-<h4 id="returns_7">Returns<a class="headerlink" href="#returns_7" title="Permanent link">&para;</a></h4>
-<p>Nothing.</p>
-<hr />
-<h3 id="layermovetoend">Layer.moveToEnd()<a class="headerlink" href="#layermovetoend" title="Permanent link">&para;</a></h3>
-<p><code>app.project.item(index).layer(index).moveToEnd()</code></p>
-<h4 id="description_29">Description<a class="headerlink" href="#description_29" title="Permanent link">&para;</a></h4>
-<p>Moves this layer to the bottom position of the layer stack (the last layer).</p>
-<h4 id="parameters_8">Parameters<a class="headerlink" href="#parameters_8" title="Permanent link">&para;</a></h4>
-<p>None.</p>
-<h4 id="returns_8">Returns<a class="headerlink" href="#returns_8" title="Permanent link">&para;</a></h4>
-<p>Nothing.</p>
-<hr />
-<h3 id="layerremove">Layer.remove()<a class="headerlink" href="#layerremove" title="Permanent link">&para;</a></h3>
-<p><code>app.project.item(index).layer(index).remove()</code></p>
-<h4 id="description_30">Description<a class="headerlink" href="#description_30" title="Permanent link">&para;</a></h4>
-<p>Deletes the specified layer from the composition.</p>
 <h4 id="parameters_9">Parameters<a class="headerlink" href="#parameters_9" title="Permanent link">&para;</a></h4>
 <p>None.</p>
 <h4 id="returns_9">Returns<a class="headerlink" href="#returns_9" title="Permanent link">&para;</a></h4>
 <p>Nothing.</p>
 <hr />
+<h3 id="layermovetoend">Layer.moveToEnd()<a class="headerlink" href="#layermovetoend" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).moveToEnd()</code></p>
+<h4 id="description_32">Description<a class="headerlink" href="#description_32" title="Permanent link">&para;</a></h4>
+<p>Moves this layer to the bottom position of the layer stack (the last layer).</p>
+<h4 id="parameters_10">Parameters<a class="headerlink" href="#parameters_10" title="Permanent link">&para;</a></h4>
+<p>None.</p>
+<h4 id="returns_10">Returns<a class="headerlink" href="#returns_10" title="Permanent link">&para;</a></h4>
+<p>Nothing.</p>
+<hr />
+<h3 id="layerremove">Layer.remove()<a class="headerlink" href="#layerremove" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).remove()</code></p>
+<h4 id="description_33">Description<a class="headerlink" href="#description_33" title="Permanent link">&para;</a></h4>
+<p>Deletes the specified layer from the composition.</p>
+<h4 id="parameters_11">Parameters<a class="headerlink" href="#parameters_11" title="Permanent link">&para;</a></h4>
+<p>None.</p>
+<h4 id="returns_11">Returns<a class="headerlink" href="#returns_11" title="Permanent link">&para;</a></h4>
+<p>Nothing.</p>
+<hr />
+<h3 id="layerremoveguide">Layer.removeGuide()<a class="headerlink" href="#layerremoveguide" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).removeGuide(guideIndex)</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects 16.1 (CC 2019)</p>
+</div>
+<h4 id="description_34">Description<a class="headerlink" href="#description_34" title="Permanent link">&para;</a></h4>
+<p>Removes an existing guide. Choose the guide based on its index inside the <a href="#layerguides">Layer.guides</a> array.</p>
+<h4 id="parameters_12">Parameters<a class="headerlink" href="#parameters_12" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>guideIndex</code></td>
+<td>Integer</td>
+<td>The index of the guide to be removed.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_12">Returns<a class="headerlink" href="#returns_12" title="Permanent link">&para;</a></h4>
+<p>Nothing.</p>
+<h4 id="example_4">Example<a class="headerlink" href="#example_4" title="Permanent link">&para;</a></h4>
+<p>Removes the first guide on the first layer of <code>activeItem</code>.</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-4-1"><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">layer</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">removeGuide</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
+</span></code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Removing a guide will cause all higher guide indexes to shift downward.</p>
+</div>
+<hr />
+<h3 id="layersetguide">Layer.setGuide()<a class="headerlink" href="#layersetguide" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).setGuide(position, guideIndex)</code></p>
+<p><code>app.project.item(index).layer(index).setGuide(guideIndex, guideOptions)</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code>(position, guideIndex)</code> form was added in After Effects 16.1 (CC 2019). The <code>(guideIndex, guideOptions)</code> form was added in After Effects (Beta) 26.5 and is subject to change while it remains in Beta.</p>
+</div>
+<h4 id="description_35">Description<a class="headerlink" href="#description_35" title="Permanent link">&para;</a></h4>
+<p>Updates an existing guide. There are two forms, distinguished by the type of the second argument:</p>
+<ul>
+<li><strong><code>setGuide(position, guideIndex)</code></strong> - moves the guide at <code>guideIndex</code> to a new pixel <code>position</code>. <em>Note the order: position first, index second.</em> A guide's <code>orientationType</code> may not be changed after it is created.</li>
+<li><strong><code>setGuide(guideIndex, guideOptions)</code></strong> - applies the properties set on a <a href="../../other/guideoptions/">GuideOptions</a> object to the guide at <code>guideIndex</code>. Only the properties you set are changed (partial update). <em>(After Effects (Beta) 26.5 and later.)</em></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The two forms take their arguments in the <strong>opposite order</strong>: the <code>(position, guideIndex)</code> form takes the position first, while the <code>(guideIndex, guideOptions)</code> form takes the index first. After Effects decides which form you mean from the type of the second argument (a number selects the <code>(position, guideIndex)</code> form; a <code>GuideOptions</code> object selects the <code>(guideIndex, guideOptions)</code> form).</p>
+</div>
+<h4 id="parameters_13">Parameters<a class="headerlink" href="#parameters_13" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>position</code></td>
+<td>Floating-point value</td>
+<td>The new X or Y coordinate position of the guide in pixels. Clamped to ±100,000; non-finite values are rejected.</td>
+</tr>
+<tr>
+<td><code>guideIndex</code></td>
+<td>Integer</td>
+<td>The index of the guide to be modified.</td>
+</tr>
+<tr>
+<td><code>guideOptions</code></td>
+<td>GuideOptions object</td>
+<td>A <a href="../../other/guideoptions/">GuideOptions</a> whose set properties are applied to the guide.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_13">Returns<a class="headerlink" href="#returns_13" title="Permanent link">&para;</a></h4>
+<p>Nothing.</p>
+<h4 id="example_5">Example<a class="headerlink" href="#example_5" title="Permanent link">&para;</a></h4>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-5-1"><span class="kd">var</span><span class="w"> </span><span class="nx">layer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">layer</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+</span><span id="__span-5-2">
+</span><span id="__span-5-3"><span class="c1">// (position, guideIndex) form: move guide 0 to 1200 px (position first, index second).</span>
+</span><span id="__span-5-4"><span class="nx">layer</span><span class="p">.</span><span class="nx">setGuide</span><span class="p">(</span><span class="mf">1200</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span>
+</span><span id="__span-5-5">
+</span><span id="__span-5-6"><span class="c1">// GuideOptions form: recolor guide 0 and switch it to a percentage position.</span>
+</span><span id="__span-5-7"><span class="kd">var</span><span class="w"> </span><span class="nx">opts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">GuideOptions</span><span class="p">();</span>
+</span><span id="__span-5-8"><span class="nx">opts</span><span class="p">.</span><span class="nx">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">75</span><span class="p">;</span>
+</span><span id="__span-5-9"><span class="nx">opts</span><span class="p">.</span><span class="nx">positionType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">GuidePositionType</span><span class="p">.</span><span class="nx">PERCENTAGE</span><span class="p">;</span>
+</span><span id="__span-5-10"><span class="nx">opts</span><span class="p">.</span><span class="nx">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">];</span>
+</span><span id="__span-5-11"><span class="nx">layer</span><span class="p">.</span><span class="nx">setGuide</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">opts</span><span class="p">);</span><span class="w">   </span><span class="c1">// index first, options second</span>
+</span></code></pre></div>
+<hr />
 <h3 id="layersetparentwithjump">Layer.setParentWithJump()<a class="headerlink" href="#layersetparentwithjump" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).setParentWithJump([newParent])</code></p>
-<h4 id="description_31">Description<a class="headerlink" href="#description_31" title="Permanent link">&para;</a></h4>
+<h4 id="description_36">Description<a class="headerlink" href="#description_36" title="Permanent link">&para;</a></h4>
 <p>Sets the parent of this layer to the specified layer, without changing the transform values of the child layer.</p>
 <p>There may be an apparent jump in the rotation, translation, or scale of the child layer, as this layer's transform values are combined with those of its ancestors.</p>
 <p>If you do not want the child layer to jump, set the <a href="#layerparent">parent</a> attribute directly. In this case, an offset is calculated and set in the child layer's transform fields, to prevent the jump from occurring.</p>
-<h4 id="parameters_10">Parameters<a class="headerlink" href="#parameters_10" title="Permanent link">&para;</a></h4>
+<h4 id="parameters_14">Parameters<a class="headerlink" href="#parameters_14" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -4112,7 +4537,7 @@ The ID is not displayed anywhere in the user interface..</p>
 </tr>
 </tbody>
 </table>
-<h4 id="returns_10">Returns<a class="headerlink" href="#returns_10" title="Permanent link">&para;</a></h4>
+<h4 id="returns_14">Returns<a class="headerlink" href="#returns_14" title="Permanent link">&para;</a></h4>
 <p>Nothing.</p>
 
 
@@ -4134,7 +4559,7 @@ The ID is not displayed anywhere in the user interface..</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 5, 2025 19:31:35 UTC">February 5, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 7, 2026 01:31:00 UTC">July 7, 2026</span>
   </span>
 
     
