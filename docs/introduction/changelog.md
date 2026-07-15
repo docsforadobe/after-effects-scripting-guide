@@ -8,6 +8,25 @@ What's new and changed for scripting?
 
 ---
 
+## After Effects (Beta)
+
+
+### [After Effects (Beta) 26.5](https://helpx.adobe.com/after-effects/desktop/what-s-new/after-effects-beta.html) (July 2026)
+
+!!! note
+    This functionality was added in After Effects (Beta) 26.5 and is subject to change while it remains in Beta.
+
+- Guide scripting extended with a `GuideOptions`-based API (percentage positioning, per-guide color, and pinning):
+    - Added: [GuideOptions object](../other/guideoptions.md)
+    - Added: [GuideOrientationType](../other/guideoptions.md#guideorientationtype) and [GuidePositionType](../other/guideoptions.md#guidepositiontype) enumerated values
+    - Added: [Item.getGuideAsObject()](../item/item.md#itemgetguideasobject) and [Layer.getGuideAsObject()](../layer/layer.md#layergetguideasobject)
+    - Added: `GuideOptions` overloads of [Item.addGuide()](../item/item.md#itemaddguide) / [Item.setGuide()](../item/item.md#itemsetguide) and [Layer.addGuide()](../layer/layer.md#layeraddguide) / [Layer.setGuide()](../layer/layer.md#layersetguide)
+
+!!! warning "Differences between versions"
+    **Breaking change:** The integer values behind `orientationType` and `positionType` on [Item.guides](../item/item.md#itemguides) / [Layer.guides](../layer/layer.md#layerguides) differ between versions of After Effects. In the beta, always compare against the enumerated constants rather than raw integer literals.
+
+---
+
 ## After Effects 26
 
 ### [After Effects 26.3](https://helpx.adobe.com/after-effects/using/whats-new.html) (June 2026)
@@ -253,9 +272,14 @@ What's new and changed for scripting?
     - Added: [ViewOptions.guidesVisibility](../other/viewoptions.md#viewoptionsguidesvisibility)
     - Added: [ViewOptions.rulers](../other/viewoptions.md#viewoptionsrulers)
 - Scripting access to add, remove, and set existing guides:
+    - Added: [Item.guides](../item/item.md#itemguides)
     - Added: [Item.addGuide()](../item/item.md#itemaddguide)
     - Added: [Item.removeGuide()](../item/item.md#itemremoveguide)
     - Added: [Item.setGuide()](../item/item.md#itemsetguide)
+    - Added: [Layer.guides](../layer/layer.md#layerguides)
+    - Added: [Layer.addGuide()](../layer/layer.md#layeraddguide)
+    - Added: [Layer.removeGuide()](../layer/layer.md#layerremoveguide)
+    - Added: [Layer.setGuide()](../layer/layer.md#layersetguide)
 - Scripting access to additional EGP property attributes:
     - Added: [CompItem.motionGraphicsTemplateControllerCount](../item/compitem.md#compitemmotiongraphicstemplatecontrollercount)
     - Added: [CompItem.getMotionGraphicsTemplateControllerName()](../item/compitem.md#compitemgetmotiongraphicstemplatecontrollername)

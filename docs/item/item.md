@@ -78,11 +78,32 @@ String; read-only.
 
 #### Description
 
-An array of `guide` objects, containing `orientationType`, `positionType`, and `position` attributes.
+An array of objects describing the guides in the item's view. The properties on each entry depend on the version of After Effects.
+
+In After Effects 16.1 (CC 2019) and later, each entry has the following properties:
+
+| Property          | Type                 | Description                                           |
+| ----------------- | -------------------- | ----------------------------------------------------- |
+| `orientationType` | Integer              | `0` for a horizontal guide, `1` for a vertical guide. |
+| `positionType`    | Integer              | Always `0` (a pixel position).                        |
+| `position`        | Floating-point value | The guide's position, in pixels.                      |
+
+In After Effects (Beta) 26.5 and later, each entry has the following properties:
+
+| Property          | Type                   | Description                                                              |
+| ----------------- | ---------------------- | ------------------------------------------------------------------------ |
+| `orientationType` | `GuideOrientationType` | `GuideOrientationType.HORIZONTAL` or `GuideOrientationType.VERTICAL`.     |
+| `positionType`    | `GuidePositionType`    | `GuidePositionType.PIXEL` or `GuidePositionType.PERCENTAGE`.             |
+| `position`        | Floating-point value   | The guide's position, in pixels or percent depending on `positionType`.  |
+| `color`           | Array of 3 floats      | `[R, G, B]`, each `0.0`-`1.0`.                                            |
+| `pinned`          | Boolean                | `true` if pinned to the opposite (bottom/right) edge.                    |
+
+!!! warning "Differences between versions"
+    **Breaking change:** The integer values behind `orientationType` and `positionType` differ between versions of After Effects. Always compare against the enumerated constants (for example [GuideOrientationType.HORIZONTAL](../other/guideoptions.md#guideorientationtype)) rather than raw integer literals — a test such as `guide.orientationType === 0` is not portable and may stop matching in a future version.
 
 #### Type
 
-Array; read-only.
+Array of objects; read-only.
 
 ---
 
@@ -221,19 +242,25 @@ if (/Composition|Komposition|Composición|Composizione|コンポジション|컴
 
 `app.project.item(index).addGuide(orientationType, position)`
 
+`app.project.item(index).addGuide(guideOptions)`
+
 !!! note
-    This functionality was added in After Effects 16.1 (CC 2019)
+    The `(orientationType, position)` form was added in After Effects 16.1 (CC 2019). The `GuideOptions` form was added in After Effects (Beta) 26.5 and is subject to change while it remains in Beta.
 
 #### Description
 
-Creates a new guide and adds it to the `guides` object of the Item.
+Adds a guide to the item's view and returns its index. There are two forms:
+
+- **`addGuide(orientationType, position)`** - adds a pixel guide using an orientation and a pixel position.
+- **`addGuide(guideOptions)`** - adds a guide described by a [GuideOptions](../other/guideoptions.md) object, allowing percentage positioning, per-guide color, and pinning. *(After Effects (Beta) 26.5 and later; calling this form in an earlier version raises an error.)*
 
 #### Parameters
 
-|     Parameter     |  Type   |                                          Description                                          |
-| ----------------- | ------- | --------------------------------------------------------------------------------------------- |
-| `orientationType` | Integer | `0` for a horizontal guide, `1` for a vertical guide. Any other value defaults to horizontal. |
-| `position`        | Integer | The X or Y coordinate position of the guide in pixels, depending on its `orientationType`.    |
+|     Parameter     |         Type         |                                                Description                                                |
+| ----------------- | -------------------- | --------------------------------------------------------------------------------------------------------- |
+| `orientationType` | Integer              | `0` for a horizontal guide, `1` for a vertical guide. Any other value defaults to horizontal. In After Effects (Beta) 26.5 and later you may also pass `GuideOrientationType.HORIZONTAL` / `GuideOrientationType.VERTICAL`. |
+| `position`        | Floating-point value | The X or Y coordinate position of the guide in pixels. Clamped to ±100,000; non-finite values are rejected. |
+| `guideOptions`    | GuideOptions object  | A [GuideOptions](../other/guideoptions.md) describing the new guide.                                      |
 
 #### Returns
 
@@ -241,10 +268,52 @@ Integer; the index of the newly-created guide.
 
 #### Example
 
-Adds a vertical guide at 500 pixels on the X axis to the `activeItem` of a project.
+```javascript
+var item = app.project.item(1);
+
+// (orientationType, position) form: a vertical guide at 500 px on the X axis.
+item.addGuide(1, 500);
+
+// GuideOptions form: a vertical guide at 50%, red, pinned to the right edge.
+var opts = new GuideOptions();
+opts.orientation = GuideOrientationType.VERTICAL;
+opts.position = 50;
+opts.positionType = GuidePositionType.PERCENTAGE;
+opts.color = [1, 0, 0];
+opts.pinned = true;
+item.addGuide(opts);
+```
+
+---
+
+### Item.getGuideAsObject()
+
+`app.project.item(index).getGuideAsObject(guideIndex)`
+
+!!! note
+    This functionality was added in After Effects (Beta) 26.5 and is subject to change while it remains in Beta. Calling it in an earlier version raises the error "getGuideAsObject() is not available in this version of After Effects."
+
+#### Description
+
+Returns the guide at the specified index as a [GuideOptions](../other/guideoptions.md) object, which you can modify and pass back to [setGuide()](#itemsetguide). This is a convenient way to read a guide's full state (orientation, position, position type, color, pinning).
+
+#### Parameters
+
+|  Parameter   |  Type   |          Description           |
+| ------------ | ------- | ------------------------------ |
+| `guideIndex` | Integer | The index of the guide to read. |
+
+#### Returns
+
+A [GuideOptions](../other/guideoptions.md) object.
+
+#### Example
 
 ```javascript
-app.project.activeItem.addGuide(1, 500);
+var item = app.project.item(1);
+var g = item.getGuideAsObject(0);
+g.color = [0, 0, 1];   // tweak just the color
+item.setGuide(0, g);   // write it back
 ```
 
 ---
@@ -276,7 +345,7 @@ Nothing.
 
 #### Description
 
-Removes an existing guide. Choose the guide based on its index inside the `Item.guides` object.
+Removes an existing guide. Choose the guide based on its index inside the [Item.guides](#itemguides) array.
 
 #### Parameters
 
@@ -303,23 +372,30 @@ app.project.activeItem.removeGuide(0);
 
 ### Item.setGuide()
 
-`app.project.item(index).setGuide(position,guideIndex)`
+`app.project.item(index).setGuide(position, guideIndex)`
+
+`app.project.item(index).setGuide(guideIndex, guideOptions)`
 
 !!! note
-    This functionality was added in After Effects 16.1 (CC 2019)
+    The `(position, guideIndex)` form was added in After Effects 16.1 (CC 2019). The `(guideIndex, guideOptions)` form was added in After Effects (Beta) 26.5 and is subject to change while it remains in Beta.
 
 #### Description
 
-Modifies the `position` of an existing guide. Choose the guide based on its `guideIndex` inside the `Item.guides` array.
+Updates an existing guide. There are two forms, distinguished by the type of the second argument:
 
-A guide's `orientationType` may not be changed after it is created.
+- **`setGuide(position, guideIndex)`** - moves the guide at `guideIndex` to a new pixel `position`. *Note the order: position first, index second.* A guide's `orientationType` may not be changed after it is created.
+- **`setGuide(guideIndex, guideOptions)`** - applies the properties set on a [GuideOptions](../other/guideoptions.md) object to the guide at `guideIndex`. Only the properties you set are changed (partial update). *(After Effects (Beta) 26.5 and later.)*
+
+!!! warning
+    The two forms take their arguments in the **opposite order**: the `(position, guideIndex)` form takes the position first, while the `(guideIndex, guideOptions)` form takes the index first. After Effects decides which form you mean from the type of the second argument (a number selects the `(position, guideIndex)` form; a `GuideOptions` object selects the `(guideIndex, guideOptions)` form).
 
 #### Parameters
 
-|  Parameter   |  Type   |                                               Description                                               |
-| ------------ | ------- | ------------------------------------------------------------------------------------------------------- |
-| `position`   | Integer | The new X or Y coordinate position of the guide in pixels, depending on its existing `orientationType`. |
-| `guideIndex` | Integer | The index of the guide to be modified.                                                                  |
+|   Parameter    |         Type         |                                               Description                                               |
+| -------------- | -------------------- | ------------------------------------------------------------------------------------------------------- |
+| `position`     | Floating-point value | The new X or Y coordinate position of the guide in pixels. Clamped to ±100,000; non-finite values are rejected. |
+| `guideIndex`   | Integer              | The index of the guide to be modified.                                                                  |
+| `guideOptions` | GuideOptions object  | A [GuideOptions](../other/guideoptions.md) whose set properties are applied to the guide.               |
 
 #### Returns
 
@@ -327,8 +403,16 @@ Nothing.
 
 #### Example
 
-Changes the position of the first guide in `activeItem` to 1200 pixels.
-
 ```javascript
-app.project.activeItem.setGuide(1200, 0);
+var item = app.project.item(1);
+
+// (position, guideIndex) form: move guide 0 to 1200 px (position first, index second).
+item.setGuide(1200, 0);
+
+// GuideOptions form: recolor guide 0 and switch it to a percentage position.
+var opts = new GuideOptions();
+opts.position = 75;
+opts.positionType = GuidePositionType.PERCENTAGE;
+opts.color = [0, 1, 0];
+item.setGuide(0, opts);   // index first, options second
 ```
