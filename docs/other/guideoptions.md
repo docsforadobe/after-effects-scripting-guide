@@ -3,7 +3,7 @@
 `new GuideOptions()`
 
 !!! note
-    This functionality was added in After Effects (Beta) 26.5 and is subject to change while it remains in Beta.
+    This functionality was added in After Effects 26.5
 
 #### Description
 
@@ -105,7 +105,7 @@ The orientation of a guide, used by [GuideOptions.orientation](#guideoptionsorie
 | `GuideOrientationType.VERTICAL`   | A vertical guide.    |
 
 !!! note
-    These enumerated constants were added in After Effects (Beta) 26.5 and are subject to change while they remain in Beta. Always compare `orientationType` against these constants rather than raw integers, because the underlying integer values differ between versions of After Effects. In the non-beta application the constants are unavailable and [Item.guides](../item/item.md#itemguides) / [Layer.guides](../layer/layer.md#layerguides) report `orientationType` as a plain integer (`0` for horizontal, `1` for vertical).
+    These enumerated constants were added in After Effects 26.5. Always compare `orientationType` against these constants rather than raw integers, because the underlying integer values differ between versions of After Effects. In versions prior to 26.5, the constants are unavailable and [Item.guides](../item/item.md#itemguides) / [Layer.guides](../layer/layer.md#layerguides) report `orientationType` as a plain integer (`0` for horizontal, `1` for vertical).
 
 ---
 
@@ -119,4 +119,4 @@ How a guide's `position` value is interpreted, used by [GuideOptions.positionTyp
 | `GuidePositionType.PERCENTAGE` | `position` is measured as a percentage of the frame. |
 
 !!! note
-    These enumerated constants were added in After Effects (Beta) 26.5 and are subject to change while they remain in Beta. Always compare `positionType` against these constants rather than raw integers, because the underlying integer values differ between versions of After Effects. In the non-beta application the constants are unavailable and [Item.guides](../item/item.md#itemguides) / [Layer.guides](../layer/layer.md#layerguides) report `positionType` as a plain integer (always `0`, pixels).
+    These enumerated constants were added in After Effects 26.5. Always compare `positionType` against these constants rather than raw integers, because the underlying integer values differ between versions of After Effects. In versions prior to 26.5, the constants are unavailable and [Item.guides](../item/item.md#itemguides) / [Layer.guides](../layer/layer.md#layerguides) report `positionType` as a plain integer (always `0`, pixels).

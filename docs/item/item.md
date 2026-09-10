@@ -88,7 +88,7 @@ In After Effects 16.1 (CC 2019) and later, each entry has the following properti
 | `positionType`    | Integer              | Always `0` (a pixel position).                        |
 | `position`        | Floating-point value | The guide's position, in pixels.                      |
 
-In After Effects (Beta) 26.5 and later, each entry has the following properties:
+In After Effects 26.5 and later, each entry has the following properties:
 
 | Property          | Type                   | Description                                                              |
 | ----------------- | ---------------------- | ------------------------------------------------------------------------ |
@@ -245,20 +245,20 @@ if (/Composition|Komposition|Composición|Composizione|コンポジション|컴
 `app.project.item(index).addGuide(guideOptions)`
 
 !!! note
-    The `(orientationType, position)` form was added in After Effects 16.1 (CC 2019). The `GuideOptions` form was added in After Effects (Beta) 26.5 and is subject to change while it remains in Beta.
+    The `(orientationType, position)` form was added in After Effects 16.1 (CC 2019). The `GuideOptions` form was added in After Effects 26.5.
 
 #### Description
 
 Adds a guide to the item's view and returns its index. There are two forms:
 
 - **`addGuide(orientationType, position)`** - adds a pixel guide using an orientation and a pixel position.
-- **`addGuide(guideOptions)`** - adds a guide described by a [GuideOptions](../other/guideoptions.md) object, allowing percentage positioning, per-guide color, and pinning. *(After Effects (Beta) 26.5 and later; calling this form in an earlier version raises an error.)*
+- **`addGuide(guideOptions)`** - adds a guide described by a [GuideOptions](../other/guideoptions.md) object, allowing percentage positioning, per-guide color, and pinning. *(After Effects 26.5 and later; calling this form in an earlier version raises an error.)*
 
 #### Parameters
 
 |     Parameter     |         Type         |                                                Description                                                |
 | ----------------- | -------------------- | --------------------------------------------------------------------------------------------------------- |
-| `orientationType` | Integer              | `0` for a horizontal guide, `1` for a vertical guide. Any other value defaults to horizontal. In After Effects (Beta) 26.5 and later you may also pass `GuideOrientationType.HORIZONTAL` / `GuideOrientationType.VERTICAL`. |
+| `orientationType` | Integer              | `0` for a horizontal guide, `1` for a vertical guide. Any other value defaults to horizontal. In After Effects 26.5 and later you may also pass `GuideOrientationType.HORIZONTAL` / `GuideOrientationType.VERTICAL`. |
 | `position`        | Floating-point value | The X or Y coordinate position of the guide in pixels. Clamped to ±100,000; non-finite values are rejected. |
 | `guideOptions`    | GuideOptions object  | A [GuideOptions](../other/guideoptions.md) describing the new guide.                                      |
 
@@ -291,7 +291,7 @@ item.addGuide(opts);
 `app.project.item(index).getGuideAsObject(guideIndex)`
 
 !!! note
-    This functionality was added in After Effects (Beta) 26.5 and is subject to change while it remains in Beta. Calling it in an earlier version raises the error "getGuideAsObject() is not available in this version of After Effects."
+    This functionality was added in After Effects 26.5. Calling it in an earlier version raises the error "getGuideAsObject() is not available in this version of After Effects."
 
 #### Description
 
@@ -377,14 +377,14 @@ app.project.activeItem.removeGuide(0);
 `app.project.item(index).setGuide(guideIndex, guideOptions)`
 
 !!! note
-    The `(position, guideIndex)` form was added in After Effects 16.1 (CC 2019). The `(guideIndex, guideOptions)` form was added in After Effects (Beta) 26.5 and is subject to change while it remains in Beta.
+    The `(position, guideIndex)` form was added in After Effects 16.1 (CC 2019). The `(guideIndex, guideOptions)` form was added in After Effects 26.5.
 
 #### Description
 
 Updates an existing guide. There are two forms, distinguished by the type of the second argument:
 
 - **`setGuide(position, guideIndex)`** - moves the guide at `guideIndex` to a new pixel `position`. *Note the order: position first, index second.* A guide's `orientationType` may not be changed after it is created.
-- **`setGuide(guideIndex, guideOptions)`** - applies the properties set on a [GuideOptions](../other/guideoptions.md) object to the guide at `guideIndex`. Only the properties you set are changed (partial update). *(After Effects (Beta) 26.5 and later.)*
+- **`setGuide(guideIndex, guideOptions)`** - applies the properties set on a [GuideOptions](../other/guideoptions.md) object to the guide at `guideIndex`. Only the properties you set are changed (partial update). *(After Effects 26.5 and later.)*
 
 !!! warning
     The two forms take their arguments in the **opposite order**: the `(position, guideIndex)` form takes the position first, while the `(guideIndex, guideOptions)` form takes the index first. After Effects decides which form you mean from the type of the second argument (a number selects the `(position, guideIndex)` form; a `GuideOptions` object selects the `(guideIndex, guideOptions)` form).
