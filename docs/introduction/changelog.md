@@ -29,6 +29,14 @@ What's new and changed for scripting?
 
 ## After Effects 26
 
+### [After Effects 26.5](https://helpx.adobe.com/after-effects/using/whats-new.html) (September 2026)
+
+- Scripting access added to the render-stage popup on layer parameters (the dropdown that picks Source, Only Masks, or All Effects):
+    - Added: [Property.layerInputStage](../property/property.md#propertylayerinputstage) and [Property.setLayerInputStage()](../property/property.md#propertysetlayerinputstage)
+    - Added: [Property.inputLayerAndStage](../property/property.md#propertyinputlayerandstage) and [Property.setInputLayerAndStage()](../property/property.md#propertysetinputlayerandstage)
+    - Added: [Property.getInputStageCycleSafeLimit()](../property/property.md#propertygetinputstagecyclesafelimit)
+    - Added: [Property.LayerInputStageType](../property/property.md#propertylayerinputstagetype) enumerated values
+
 ### [After Effects 26.3](https://helpx.adobe.com/after-effects/using/whats-new.html) (June 2026)
 
 - Scripting methods and attributes added:
