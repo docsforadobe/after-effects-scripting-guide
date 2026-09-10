@@ -8,26 +8,23 @@ What's new and changed for scripting?
 
 ---
 
-## After Effects (Beta)
+## After Effects 26
 
-
-### [After Effects (Beta) 26.5](https://helpx.adobe.com/after-effects/desktop/what-s-new/after-effects-beta.html) (July 2026)
-
-!!! note
-    This functionality was added in After Effects (Beta) 26.5 and is subject to change while it remains in Beta.
+### [After Effects 26.5](https://helpx.adobe.com/after-effects/using/whats-new.html) (September 2026)
 
 - Guide scripting extended with a `GuideOptions`-based API (percentage positioning, per-guide color, and pinning):
     - Added: [GuideOptions object](../other/guideoptions.md)
     - Added: [GuideOrientationType](../other/guideoptions.md#guideorientationtype) and [GuidePositionType](../other/guideoptions.md#guidepositiontype) enumerated values
     - Added: [Item.getGuideAsObject()](../item/item.md#itemgetguideasobject) and [Layer.getGuideAsObject()](../layer/layer.md#layergetguideasobject)
     - Added: `GuideOptions` overloads of [Item.addGuide()](../item/item.md#itemaddguide) / [Item.setGuide()](../item/item.md#itemsetguide) and [Layer.addGuide()](../layer/layer.md#layeraddguide) / [Layer.setGuide()](../layer/layer.md#layersetguide)
+- Scripting access added to the render-stage popup on layer parameters (the dropdown that picks Source, Only Masks, or All Effects):
+    - Added: [Property.layerInputStage](../property/property.md#propertylayerinputstage) and [Property.setLayerInputStage()](../property/property.md#propertysetlayerinputstage)
+    - Added: [Property.inputLayerAndStage](../property/property.md#propertyinputlayerandstage) and [Property.setInputLayerAndStage()](../property/property.md#propertysetinputlayerandstage)
+    - Added: [Property.getInputStageCycleSafeLimit()](../property/property.md#propertygetinputstagecyclesafelimit)
+    - Added: [Property.LayerInputStageType](../property/property.md#propertylayerinputstagetype) enumerated values
 
 !!! warning "Differences between versions"
-    **Breaking change:** The integer values behind `orientationType` and `positionType` on [Item.guides](../item/item.md#itemguides) / [Layer.guides](../layer/layer.md#layerguides) differ between versions of After Effects. In the beta, always compare against the enumerated constants rather than raw integer literals.
-
----
-
-## After Effects 26
+    **Breaking change:** The integer values behind `orientationType` and `positionType` on [Item.guides](../item/item.md#itemguides) / [Layer.guides](../layer/layer.md#layerguides) differ between versions of After Effects. Always compare against the enumerated constants rather than raw integer literals.
 
 ### [After Effects 26.3](https://helpx.adobe.com/after-effects/using/whats-new.html) (June 2026)
 

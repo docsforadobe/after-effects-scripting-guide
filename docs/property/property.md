@@ -316,6 +316,25 @@ Boolean; read-only.
 
 ---
 
+### Property.inputLayerAndStage
+
+`app.project.item(index).layer(index).propertySpec.inputLayerAndStage`
+
+!!! note
+    This functionality was added in After Effects 26.5
+
+#### Description
+
+For a layer parameter (a property whose [propertyValueType](#propertypropertyvaluetype) is `PropertyValueType.LAYER_INDEX`), the source layer and render stage together, as `[layerIndex, stageIndex]`. A `layerIndex` of `0` means no layer is selected. `stageIndex` is one of the [LayerInputStageType](#propertylayerinputstagetype) sentinels. Generates an exception if the property is not a layer parameter.
+
+Use [Property.setInputLayerAndStage()](#propertysetinputlayerandstage) to set both values atomically. To work with the render stage on its own, see [layerInputStage](#propertylayerinputstage).
+
+#### Type
+
+Array of 2 integers, `[layerIndex, stageIndex]`; read-only.
+
+---
+
 ### Property.isDropdownEffect
 
 `app.project.item(index).layer(index).propertySpec.isDropdownEffect`
@@ -401,6 +420,50 @@ must also be true.
 #### Type
 
 Boolean; read-only.
+
+---
+
+### Property.layerInputStage
+
+`app.project.item(index).layer(index).propertySpec.layerInputStage`
+
+!!! note
+    This functionality was added in After Effects 26.5
+
+#### Description
+
+For a layer parameter (a property whose [propertyValueType](#propertypropertyvaluetype) is `PropertyValueType.LAYER_INDEX`), the render stage at which the source layer is sampled — the same value shown by the stage popup next to the layer parameter in the Effect Controls or Timeline panel. Generates an exception if the property is not a layer parameter.
+
+The value is one of the [LayerInputStageType](#propertylayerinputstagetype) sentinels.
+
+Use [Property.setLayerInputStage()](#propertysetlayerinputstage) to change the value. To read the source layer and render stage together, see [inputLayerAndStage](#propertyinputlayerandstage).
+
+#### Type
+
+Integer; read-only.
+
+---
+
+### Property.LayerInputStageType
+
+`app.project.item(index).layer(index).propertySpec.LayerInputStageType`
+
+!!! note
+    This functionality was added in After Effects 26.5
+
+#### Description
+
+A namespace object exposing the named render-stage sentinel values, for use with [layerInputStage](#propertylayerinputstage), [setLayerInputStage()](#propertysetlayerinputstage), [inputLayerAndStage](#propertyinputlayerandstage), [setInputLayerAndStage()](#propertysetinputlayerandstage), and [getInputStageCycleSafeLimit()](#propertygetinputstagecyclesafelimit).
+
+| Value                             | Description                                                 |
+| ---------------------------------- | ------------------------------------------------------------ |
+| `LayerInputStageType.SOURCE`       | `0`. The source layer, before masks and effects.              |
+| `LayerInputStageType.ALL_EFFECTS`  | `-1`. The source layer with masks and all effects applied.    |
+| `LayerInputStageType.ONLY_MASKS`   | `-2`. The source layer with masks applied, effects skipped.   |
+
+#### Type
+
+Object; read-only.
 
 ---
 
@@ -750,6 +813,32 @@ Supported property types are:
 #### Returns
 
 Boolean.
+
+---
+
+### Property.getInputStageCycleSafeLimit()
+
+`app.project.item(index).layer(index).propertySpec.getInputStageCycleSafeLimit()`
+
+!!! note
+    This functionality was added in After Effects 26.5
+
+#### Description
+
+For a layer parameter, returns the highest render stage that would not introduce a render cycle, given the current project state. The result is one of the [LayerInputStageType](#propertylayerinputstagetype) sentinels. Generates an exception if the property is not a layer parameter.
+
+`LayerInputStageType.SOURCE` is always safe and is not constrained by this limit.
+
+!!! tip
+    The safe limit depends on the current source layer and its effects, so re-call this method before validating a prospective stage value — the result can change when effects are added, removed, or reordered, or when the source layer changes.
+
+#### Parameters
+
+None.
+
+#### Returns
+
+Integer; one of the [LayerInputStageType](#propertylayerinputstagetype) values.
 
 ---
 
@@ -1204,6 +1293,30 @@ Nothing.
 
 ---
 
+### Property.setInputLayerAndStage()
+
+`app.project.item(index).layer(index).propertySpec.setInputLayerAndStage(layerIndex, stageIndex)`
+
+!!! note
+    This functionality was added in After Effects 26.5
+
+#### Description
+
+Sets the source layer and render stage of a layer parameter together, as a single undo step. Use this instead of setting the source layer and calling [setLayerInputStage()](#propertysetlayerinputstage) separately when both values need to change atomically. Generates an exception if the property is not a layer parameter.
+
+#### Parameters
+
+| Parameter    | Type                                                                | Description                                  |
+| ------------ | -------------------------------------------------------------------- | --------------------------------------------- |
+| `layerIndex` | Integer, in the range `[0..numLayers]`                               | The source layer index. `0` means no layer.   |
+| `stageIndex` | Integer; one of the [LayerInputStageType](#propertylayerinputstagetype) values | The render stage.                             |
+
+#### Returns
+
+Nothing.
+
+---
+
 ### Property.setInterpolationTypeAtKey()
 
 `app.project.item(index).layer(index).propertySpec.setInterpolationTypeAtKey(keyIndex, inType[, outType])`
@@ -1255,6 +1368,29 @@ Set the label color for the keyframe. Colors are represented by their number (0 
 | ------------ | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
 | `keyIndex`   | Integer, in the range `[1..numKeys]` | The index for the keyframe, as returned by the [addKey](#propertyaddkey) or [nearestKeyIndex](#propertynearestkeyindex). |
 | `labelIndex` | Integer, in the range `[0..16]`      | The index for the new label value.                                                                                       |
+
+#### Returns
+
+Nothing.
+
+---
+
+### Property.setLayerInputStage()
+
+`app.project.item(index).layer(index).propertySpec.setLayerInputStage(stageIndex)`
+
+!!! note
+    This functionality was added in After Effects 26.5
+
+#### Description
+
+Sets the render stage of a layer parameter, without changing its source layer. See [layerInputStage](#propertylayerinputstage). Generates an exception if the property is not a layer parameter.
+
+#### Parameters
+
+| Parameter    | Type                                                                | Description        |
+| ------------ | -------------------------------------------------------------------- | ------------------- |
+| `stageIndex` | Integer; one of the [LayerInputStageType](#propertylayerinputstagetype) values | The render stage.   |
 
 #### Returns
 
