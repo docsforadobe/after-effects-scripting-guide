@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -4658,27 +4658,27 @@
 <p>The TextDocument object stores a value for a TextLayer's Source Text property. Create it with the constructor, passing the string to be encapsulated.</p>
 <h4 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h4>
 <p>This sets a value of some source text and displays an alert showing the new value.</p>
-<div class="language-javascript highlight"><pre><span></span><code><span id="__span-0-1"><span class="kd">var</span><span class="w"> </span><span class="nx">myTextDocument</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">TextDocument</span><span class="p">(</span><span class="s2">&quot;HappyCake&quot;</span><span class="p">);</span>
-</span><span id="__span-0-2"><span class="nx">myTextLayer</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="s2">&quot;Source Text&quot;</span><span class="p">).</span><span class="nx">setValue</span><span class="p">(</span><span class="nx">myTextDocument</span><span class="p">);</span>
-</span><span id="__span-0-3"><span class="nx">alert</span><span class="p">(</span><span class="nx">myTextLayer</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="s2">&quot;Source Text&quot;</span><span class="p">).</span><span class="nx">value</span><span class="p">);</span>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-0-1"><span class="kd">var</span><span class="w"> </span><span class="nx">myTextDocument</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">TextDocument</span><span class="p">(</span><span class="s2">"HappyCake"</span><span class="p">);</span>
+</span><span id="__span-0-2"><span class="nx">myTextLayer</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="s2">"Source Text"</span><span class="p">).</span><span class="nx">setValue</span><span class="p">(</span><span class="nx">myTextDocument</span><span class="p">);</span>
+</span><span id="__span-0-3"><span class="nx">alert</span><span class="p">(</span><span class="nx">myTextLayer</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="s2">"Source Text"</span><span class="p">).</span><span class="nx">value</span><span class="p">);</span>
 </span></code></pre></div>
 <p>This sets keyframe values for text that show different words over time</p>
-<div class="language-javascript highlight"><pre><span></span><code><span id="__span-1-1"><span class="kd">var</span><span class="w"> </span><span class="nx">textProp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myTextLayer</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="s2">&quot;Source Text&quot;</span><span class="p">);</span>
-</span><span id="__span-1-2"><span class="nx">textProp</span><span class="p">.</span><span class="nx">setValueAtTime</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">newTextDocument</span><span class="p">(</span><span class="s2">&quot;Happy&quot;</span><span class="p">));</span>
-</span><span id="__span-1-3"><span class="nx">textProp</span><span class="p">.</span><span class="nx">setValueAtTime</span><span class="p">(</span><span class="mf">.33</span><span class="p">,</span><span class="w"> </span><span class="nx">newTextDocument</span><span class="p">(</span><span class="s2">&quot;cake&quot;</span><span class="p">));</span>
-</span><span id="__span-1-4"><span class="nx">textProp</span><span class="p">.</span><span class="nx">setValueAtTime</span><span class="p">(</span><span class="mf">.66</span><span class="p">,</span><span class="w"> </span><span class="nx">newTextDocument</span><span class="p">(</span><span class="s2">&quot;is&quot;</span><span class="p">));</span>
-</span><span id="__span-1-5"><span class="nx">textProp</span><span class="p">.</span><span class="nx">setValueAtTime</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">newTextDocument</span><span class="p">(</span><span class="s2">&quot;yummy!&quot;</span><span class="p">));</span>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-1-1"><span class="kd">var</span><span class="w"> </span><span class="nx">textProp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myTextLayer</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="s2">"Source Text"</span><span class="p">);</span>
+</span><span id="__span-1-2"><span class="nx">textProp</span><span class="p">.</span><span class="nx">setValueAtTime</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">newTextDocument</span><span class="p">(</span><span class="s2">"Happy"</span><span class="p">));</span>
+</span><span id="__span-1-3"><span class="nx">textProp</span><span class="p">.</span><span class="nx">setValueAtTime</span><span class="p">(</span><span class="mf">.33</span><span class="p">,</span><span class="w"> </span><span class="nx">newTextDocument</span><span class="p">(</span><span class="s2">"cake"</span><span class="p">));</span>
+</span><span id="__span-1-4"><span class="nx">textProp</span><span class="p">.</span><span class="nx">setValueAtTime</span><span class="p">(</span><span class="mf">.66</span><span class="p">,</span><span class="w"> </span><span class="nx">newTextDocument</span><span class="p">(</span><span class="s2">"is"</span><span class="p">));</span>
+</span><span id="__span-1-5"><span class="nx">textProp</span><span class="p">.</span><span class="nx">setValueAtTime</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">newTextDocument</span><span class="p">(</span><span class="s2">"yummy!"</span><span class="p">));</span>
 </span></code></pre></div>
 <p>This sets various character and paragraph settings for some text</p>
-<div class="language-javascript highlight"><pre><span></span><code><span id="__span-2-1"><span class="kd">var</span><span class="w"> </span><span class="nx">textProp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myTextLayer</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="s2">&quot;Source Text&quot;</span><span class="p">);</span>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-2-1"><span class="kd">var</span><span class="w"> </span><span class="nx">textProp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myTextLayer</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="s2">"Source Text"</span><span class="p">);</span>
 </span><span id="__span-2-2"><span class="kd">var</span><span class="w"> </span><span class="nx">textDocument</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">textProp</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
-</span><span id="__span-2-3"><span class="nx">myString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Happy holidays!&quot;</span><span class="p">;</span>
+</span><span id="__span-2-3"><span class="nx">myString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Happy holidays!"</span><span class="p">;</span>
 </span><span id="__span-2-4"><span class="nx">textDocument</span><span class="p">.</span><span class="nx">resetCharStyle</span><span class="p">();</span>
 </span><span id="__span-2-5"><span class="nx">textDocument</span><span class="p">.</span><span class="nx">fontSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">60</span><span class="p">;</span>
 </span><span id="__span-2-6"><span class="nx">textDocument</span><span class="p">.</span><span class="nx">fillColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">];</span>
 </span><span id="__span-2-7"><span class="nx">textDocument</span><span class="p">.</span><span class="nx">strokeColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">];</span>
 </span><span id="__span-2-8"><span class="nx">textDocument</span><span class="p">.</span><span class="nx">strokeWidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
-</span><span id="__span-2-9"><span class="nx">textDocument</span><span class="p">.</span><span class="nx">font</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Times New Roman PSMT&quot;</span><span class="p">;</span>
+</span><span id="__span-2-9"><span class="nx">textDocument</span><span class="p">.</span><span class="nx">font</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Times New Roman PSMT"</span><span class="p">;</span>
 </span><span id="__span-2-10"><span class="nx">textDocument</span><span class="p">.</span><span class="nx">strokeOverFill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
 </span><span id="__span-2-11"><span class="nx">textDocument</span><span class="p">.</span><span class="nx">applyStroke</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
 </span><span id="__span-2-12"><span class="nx">textDocument</span><span class="p">.</span><span class="nx">applyFill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
@@ -5386,7 +5386,7 @@ The Font instance returned in the case of duplicate PostScript names will be the
 <div class="language-javascript highlight"><pre><span></span><code><span id="__span-7-1"><span class="c1">// This creates a Text layer and sets the leading to 100</span>
 </span><span id="__span-7-2">
 </span><span id="__span-7-3"><span class="kd">var</span><span class="w"> </span><span class="nx">composition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">activeItem</span><span class="p">;</span>
-</span><span id="__span-7-4"><span class="kd">var</span><span class="w"> </span><span class="nx">myTextLayer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">comp</span><span class="p">.</span><span class="nx">layers</span><span class="p">.</span><span class="nx">addText</span><span class="p">(</span><span class="s2">&quot;Spring\nSummer\nAutumn\nWinter&quot;</span><span class="p">);</span>
+</span><span id="__span-7-4"><span class="kd">var</span><span class="w"> </span><span class="nx">myTextLayer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">comp</span><span class="p">.</span><span class="nx">layers</span><span class="p">.</span><span class="nx">addText</span><span class="p">(</span><span class="s2">"Spring\nSummer\nAutumn\nWinter"</span><span class="p">);</span>
 </span><span id="__span-7-5"><span class="kd">var</span><span class="w"> </span><span class="nx">myTextSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myTextLayer</span><span class="p">.</span><span class="nx">sourceText</span><span class="p">;</span>
 </span><span id="__span-7-6"><span class="kd">var</span><span class="w"> </span><span class="nx">myTextDocument</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myTextSource</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
 </span><span id="__span-7-7"><span class="nx">myTextDocument</span><span class="p">.</span><span class="nx">leading</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">100</span><span class="p">;</span>
@@ -6054,7 +6054,7 @@ If set to -1, then the <a href="../paragraphrange/">ParagraphRange object</a> wi
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.copy", "search.highlight", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../js/print-site.js"></script>
       

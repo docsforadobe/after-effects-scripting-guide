@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -3336,7 +3336,7 @@
 </span><span id="__span-0-5"><span class="kd">var</span><span class="w"> </span><span class="nx">firstFontFamilyName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">firstFontGroup</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">familyName</span><span class="p">;</span>
 </span><span id="__span-0-6"><span class="kd">var</span><span class="w"> </span><span class="nx">firstFamilyStyle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">firstFontGroup</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">styleName</span><span class="p">;</span>
 </span><span id="__span-0-7">
-</span><span id="__span-0-8"><span class="nx">alert</span><span class="p">(</span><span class="nx">firstFontFamilyName</span><span class="o">+</span><span class="s2">&quot; &quot;</span><span class="o">+</span><span class="nx">firstFamilyStyle</span><span class="p">);</span>
+</span><span id="__span-0-8"><span class="nx">alert</span><span class="p">(</span><span class="nx">firstFontFamilyName</span><span class="o">+</span><span class="s2">" "</span><span class="o">+</span><span class="nx">firstFamilyStyle</span><span class="p">);</span>
 </span></code></pre></div>
 <hr />
 <h3 id="fontsobjectfavoritefontfamilylist">FontsObject.favoriteFontFamilyList<a class="headerlink" href="#fontsobjectfavoritefontfamilylist" title="Permanent link">&para;</a></h3>
@@ -3464,11 +3464,11 @@
 <h4 id="description_10">Description<a class="headerlink" href="#description_10" title="Permanent link">&para;</a></h4>
 <p>This function will return an array of generic objects describing the number of characters in the range and the <code>CTScript</code> enum assigned to them. See <a href="../fontobject/#fontobjectwritingscripts">FontObject.writingScripts</a> for a full list of <code>CTScript</code> enumerated values.</p>
 <p>If a character is deemed to be included in one or more <code>CTScript</code> values, the value specfied in the second argument <code>preferredCTScript</code> will break the tie.</p>
-<div class="language-javascript highlight"><pre><span></span><code><span id="__span-3-1"><span class="kd">var</span><span class="w"> </span><span class="nx">scriptsV</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">fonts</span><span class="p">.</span><span class="nx">getCTScriptForString</span><span class="p">(</span><span class="s2">&quot;ABヂ&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">CTScript</span><span class="p">.</span><span class="nx">CT_ROMAN_SCRIPT</span><span class="p">);</span>
-</span><span id="__span-3-2"><span class="kd">var</span><span class="w"> </span><span class="nx">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;[0] chars:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">scriptsV</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">chars</span><span class="w"> </span><span class="o">+</span><span class="w">   </span><span class="c1">// 2</span>
-</span><span id="__span-3-3"><span class="w">            </span><span class="s2">&quot; ctScript:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">getEnumAsString</span><span class="p">(</span><span class="nx">scriptsV</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">ctScript</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
-</span><span id="__span-3-4"><span class="w">            </span><span class="s2">&quot;\n[1] chars:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">scriptsV</span><span class="p">[</span><span class="mf">1</span><span class="p">].</span><span class="nx">chars</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="c1">// 1</span>
-</span><span id="__span-3-5"><span class="w">            </span><span class="s2">&quot; ctScript:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">getEnumAsString</span><span class="p">(</span><span class="nx">scriptsV</span><span class="p">[</span><span class="mf">1</span><span class="p">].</span><span class="nx">ctScript</span><span class="p">);</span>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-3-1"><span class="kd">var</span><span class="w"> </span><span class="nx">scriptsV</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">fonts</span><span class="p">.</span><span class="nx">getCTScriptForString</span><span class="p">(</span><span class="s2">"ABヂ"</span><span class="p">,</span><span class="w"> </span><span class="nx">CTScript</span><span class="p">.</span><span class="nx">CT_ROMAN_SCRIPT</span><span class="p">);</span>
+</span><span id="__span-3-2"><span class="kd">var</span><span class="w"> </span><span class="nx">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"[0] chars:"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">scriptsV</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">chars</span><span class="w"> </span><span class="o">+</span><span class="w">   </span><span class="c1">// 2</span>
+</span><span id="__span-3-3"><span class="w">            </span><span class="s2">" ctScript:"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">getEnumAsString</span><span class="p">(</span><span class="nx">scriptsV</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">ctScript</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-3-4"><span class="w">            </span><span class="s2">"\n[1] chars:"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">scriptsV</span><span class="p">[</span><span class="mf">1</span><span class="p">].</span><span class="nx">chars</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="c1">// 1</span>
+</span><span id="__span-3-5"><span class="w">            </span><span class="s2">" ctScript:"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">getEnumAsString</span><span class="p">(</span><span class="nx">scriptsV</span><span class="p">[</span><span class="mf">1</span><span class="p">].</span><span class="nx">ctScript</span><span class="p">);</span>
 </span><span id="__span-3-6"><span class="nx">alert</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span>
 </span></code></pre></div>
 <h4 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h4>
@@ -3580,7 +3580,7 @@ Unicode characters mapped to the <code>CTScript</code>.</p>
 <p class="admonition-title">Tip</p>
 <p>The returned array length can be more than 1 if you have multiple copies of a same font.</p>
 </div>
-<div class="language-javascript highlight"><pre><span></span><code><span id="__span-6-1"><span class="kd">var</span><span class="w"> </span><span class="nx">fontList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">fonts</span><span class="p">.</span><span class="nx">getFontsByFamilyNameAndStyleName</span><span class="p">(</span><span class="s2">&quot;Abolition&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Regular&quot;</span><span class="p">)</span>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-6-1"><span class="kd">var</span><span class="w"> </span><span class="nx">fontList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">fonts</span><span class="p">.</span><span class="nx">getFontsByFamilyNameAndStyleName</span><span class="p">(</span><span class="s2">"Abolition"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Regular"</span><span class="p">)</span>
 </span><span id="__span-6-2"><span class="nx">alert</span><span class="p">(</span><span class="nx">fontList</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
 </span></code></pre></div>
 <h4 id="parameters_3">Parameters<a class="headerlink" href="#parameters_3" title="Permanent link">&para;</a></h4>
@@ -3615,7 +3615,7 @@ Unicode characters mapped to the <code>CTScript</code>.</p>
 <p>It is perfectly valid to have multiple <a href="../fontobject/">Font objects</a> which share the same PostScript name, the order of these is determined by the order in which they were enumerated in the font environment. The entry at <code>[0]</code> will be used when setting the <a href="../textdocument/#textdocumentfontobject">TextDocument.fontObject</a> property.</p>
 <p>In addition, there is a special property of this API with regards to Variable fonts. If no <a href="../fontobject/">Font object</a> matching the requested PostScript exists, but we find that there exist a variable font which matches the requested PostScript name prefix, then this Variable font instance will be requested to create a matching <a href="../fontobject/">Font object</a>. This is the only way that we will return an instance which did not exist prior to invoking this method.</p>
 <p>If no matching font is found, it will return an empty Array.</p>
-<div class="language-javascript highlight"><pre><span></span><code><span id="__span-7-1"><span class="kd">var</span><span class="w"> </span><span class="nx">fontList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">fonts</span><span class="p">.</span><span class="nx">getFontsByPostScriptName</span><span class="p">(</span><span class="s2">&quot;Abolition&quot;</span><span class="p">)</span>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-7-1"><span class="kd">var</span><span class="w"> </span><span class="nx">fontList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">fonts</span><span class="p">.</span><span class="nx">getFontsByPostScriptName</span><span class="p">(</span><span class="s2">"Abolition"</span><span class="p">)</span>
 </span><span id="__span-7-2"><span class="nx">alert</span><span class="p">(</span><span class="nx">fontList</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
 </span></code></pre></div>
 <h4 id="parameters_4">Parameters<a class="headerlink" href="#parameters_4" title="Permanent link">&para;</a></h4>
@@ -3679,9 +3679,9 @@ mapped to the <code>CTScript</code>.</p>
 to expose which fonts will be used for which <code>CTScript</code> values (see <a href="#fontsobjectgetdefaultfontforctscript">FontsObject.getDefaultFontForCTScript()</a>).</p>
 <p>The font assigned to the <code>CTScript.CT_ROMAN_SCRIPT</code> is the one which is used to re-initialize the Character Panel after resetting the character style.</p>
 <p>To reset the default for a specific <code>CTScript</code> back to the value it had at App launch, simply pass in <code>null</code>.</p>
-<div class="language-javascript highlight"><pre><span></span><code><span id="__span-9-1"><span class="kd">var</span><span class="w"> </span><span class="nx">font</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">fonts</span><span class="p">.</span><span class="nx">getFontsByPostScriptName</span><span class="p">(</span><span class="s2">&quot;MyriadPro-Regular&quot;</span><span class="p">)[</span><span class="mf">0</span><span class="p">];</span>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-9-1"><span class="kd">var</span><span class="w"> </span><span class="nx">font</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">fonts</span><span class="p">.</span><span class="nx">getFontsByPostScriptName</span><span class="p">(</span><span class="s2">"MyriadPro-Regular"</span><span class="p">)[</span><span class="mf">0</span><span class="p">];</span>
 </span><span id="__span-9-2"><span class="kd">var</span><span class="w"> </span><span class="nx">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">fonts</span><span class="p">.</span><span class="nx">setDefaultFontForCTScript</span><span class="p">(</span><span class="nx">CTScript</span><span class="p">.</span><span class="nx">CT_ROMAN_SCRIPT</span><span class="p">,</span><span class="w"> </span><span class="nx">font</span><span class="p">);</span>
-</span><span id="__span-9-3"><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;set:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">ret</span><span class="p">);</span>
+</span><span id="__span-9-3"><span class="nx">alert</span><span class="p">(</span><span class="s2">"set:"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">ret</span><span class="p">);</span>
 </span></code></pre></div>
 <h4 id="parameters_5">Parameters<a class="headerlink" href="#parameters_5" title="Permanent link">&para;</a></h4>
 <table>
@@ -3800,7 +3800,7 @@ to expose which fonts will be used for which <code>CTScript</code> values (see <
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.copy", "search.highlight", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../js/print-site.js"></script>
       

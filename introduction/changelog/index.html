@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -491,25 +491,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-	<a href="#after-effects-beta" class="md-nav__link">
-		<span class="md-ellipsis">
-			After Effects (Beta)
-		</span>
-	</a>
-
-	<!-- Table of contents list -->
-	
-		<nav class="md-nav" aria-label="After Effects (Beta)">
-			<ul class="md-nav__list">
-				
-				
-				
-			</ul>
-		</nav>
-	
-</li>
-      
-        <li class="md-nav__item">
 	<a href="#after-effects-26" class="md-nav__link">
 		<span class="md-ellipsis">
 			After Effects 26
@@ -520,6 +501,8 @@
 	
 		<nav class="md-nav" aria-label="After Effects 26">
 			<ul class="md-nav__list">
+				
+				
 				
 				
 				
@@ -3125,25 +3108,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-	<a href="#after-effects-beta" class="md-nav__link">
-		<span class="md-ellipsis">
-			After Effects (Beta)
-		</span>
-	</a>
-
-	<!-- Table of contents list -->
-	
-		<nav class="md-nav" aria-label="After Effects (Beta)">
-			<ul class="md-nav__list">
-				
-				
-				
-			</ul>
-		</nav>
-	
-</li>
-      
-        <li class="md-nav__item">
 	<a href="#after-effects-26" class="md-nav__link">
 		<span class="md-ellipsis">
 			After Effects 26
@@ -3154,6 +3118,8 @@
 	
 		<nav class="md-nav" aria-label="After Effects 26">
 			<ul class="md-nav__list">
+				
+				
 				
 				
 				
@@ -3502,12 +3468,8 @@
 <h1 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h1>
 <p>What's new and changed for scripting?</p>
 <hr />
-<h2 id="after-effects-beta">After Effects (Beta)<a class="headerlink" href="#after-effects-beta" title="Permanent link">&para;</a></h2>
-<h3 id="after-effects-beta-265-july-2026"><a href="https://helpx.adobe.com/after-effects/desktop/what-s-new/after-effects-beta.html">After Effects (Beta) 26.5</a> (July 2026)<a class="headerlink" href="#after-effects-beta-265-july-2026" title="Permanent link">&para;</a></h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This functionality was added in After Effects (Beta) 26.5 and is subject to change while it remains in Beta.</p>
-</div>
+<h2 id="after-effects-26">After Effects 26<a class="headerlink" href="#after-effects-26" title="Permanent link">&para;</a></h2>
+<h3 id="after-effects-265-september-2026"><a href="https://helpx.adobe.com/after-effects/using/whats-new.html">After Effects 26.5</a> (September 2026)<a class="headerlink" href="#after-effects-265-september-2026" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Guide scripting extended with a <code>GuideOptions</code>-based API (percentage positioning, per-guide color, and pinning):<ul>
 <li>Added: <a href="../../other/guideoptions/">GuideOptions object</a></li>
@@ -3516,13 +3478,18 @@
 <li>Added: <code>GuideOptions</code> overloads of <a href="../../item/item/#itemaddguide">Item.addGuide()</a> / <a href="../../item/item/#itemsetguide">Item.setGuide()</a> and <a href="../../layer/layer/#layeraddguide">Layer.addGuide()</a> / <a href="../../layer/layer/#layersetguide">Layer.setGuide()</a></li>
 </ul>
 </li>
+<li>Scripting access added to the render-stage popup on layer parameters (the dropdown that picks Source, Only Masks, or All Effects):<ul>
+<li>Added: <a href="../../property/property/#propertylayerinputstage">Property.layerInputStage</a> and <a href="../../property/property/#propertysetlayerinputstage">Property.setLayerInputStage()</a></li>
+<li>Added: <a href="../../property/property/#propertyinputlayerandstage">Property.inputLayerAndStage</a> and <a href="../../property/property/#propertysetinputlayerandstage">Property.setInputLayerAndStage()</a></li>
+<li>Added: <a href="../../property/property/#propertygetinputstagecyclesafelimit">Property.getInputStageCycleSafeLimit()</a></li>
+<li>Added: <a href="../../property/property/#propertylayerinputstagetype">Property.LayerInputStageType</a> enumerated values</li>
+</ul>
+</li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Differences between versions</p>
-<p><strong>Breaking change:</strong> The integer values behind <code>orientationType</code> and <code>positionType</code> on <a href="../../item/item/#itemguides">Item.guides</a> / <a href="../../layer/layer/#layerguides">Layer.guides</a> differ between versions of After Effects. In the beta, always compare against the enumerated constants rather than raw integer literals.</p>
+<p><strong>Breaking change:</strong> The integer values behind <code>orientationType</code> and <code>positionType</code> on <a href="../../item/item/#itemguides">Item.guides</a> / <a href="../../layer/layer/#layerguides">Layer.guides</a> differ between versions of After Effects. Always compare against the enumerated constants rather than raw integer literals.</p>
 </div>
-<hr />
-<h2 id="after-effects-26">After Effects 26<a class="headerlink" href="#after-effects-26" title="Permanent link">&para;</a></h2>
 <h3 id="after-effects-263-june-2026"><a href="https://helpx.adobe.com/after-effects/using/whats-new.html">After Effects 26.3</a> (June 2026)<a class="headerlink" href="#after-effects-263-june-2026" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Scripting methods and attributes added:<ul>
@@ -4116,7 +4083,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 7, 2026 01:31:00 UTC">July 7, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 10, 2026 18:08:53 UTC">September 10, 2026</span>
   </span>
 
     
@@ -4185,7 +4152,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.copy", "search.highlight", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../js/print-site.js"></script>
       

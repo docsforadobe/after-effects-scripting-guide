@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -3098,7 +3098,7 @@
 <p>The ImportOptions object encapsulates the options used to import a file with the <a href="../../general/project/#projectimportfile">Project.importFile()</a> methods.</p>
 <p>The constructor takes an optional parameter, an <a href="https://extendscript.docsforadobe.dev/file-system-access/file-object.html">Extendscript File</a> object for the file.</p>
 <p>If it is not supplied, you must explicitly set the value of the <code>file</code> attribute before using the object with the <code>importFile</code> method. For example:</p>
-<div class="language-javascript highlight"><pre><span></span><code><span id="__span-0-1"><span class="ow">new</span><span class="w"> </span><span class="nx">ImportOptions</span><span class="p">().</span><span class="nx">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">File</span><span class="p">(</span><span class="s2">&quot;myfile.psd&quot;</span><span class="p">);</span>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-0-1"><span class="ow">new</span><span class="w"> </span><span class="nx">ImportOptions</span><span class="p">().</span><span class="nx">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">File</span><span class="p">(</span><span class="s2">"myfile.psd"</span><span class="p">);</span>
 </span></code></pre></div>
 <hr />
 <h2 id="attributes">Attributes<a class="headerlink" href="#attributes" title="Permanent link">&para;</a></h2>
@@ -3166,7 +3166,7 @@
 <div class="language-javascript highlight"><pre><span></span><code><span id="__span-1-1"><span class="cm">/*</span>
 </span><span id="__span-1-2"><span class="cm">    Import 20 frames of the sequence, starting at frame 10 and ending at frame 30</span>
 </span><span id="__span-1-3"><span class="cm"> */</span>
-</span><span id="__span-1-4"><span class="kd">var</span><span class="w"> </span><span class="nx">mySequence</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;~/Desktop/sequence/image_000.png&#39;</span><span class="p">;</span>
+</span><span id="__span-1-4"><span class="kd">var</span><span class="w"> </span><span class="nx">mySequence</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'~/Desktop/sequence/image_000.png'</span><span class="p">;</span>
 </span><span id="__span-1-5">
 </span><span id="__span-1-6"><span class="kd">var</span><span class="w"> </span><span class="nx">importOptions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ImportOptions</span><span class="p">();</span>
 </span><span id="__span-1-7"><span class="nx">importOptions</span><span class="p">.</span><span class="nx">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">File</span><span class="p">(</span><span class="nx">mySequence</span><span class="p">);</span>
@@ -3237,7 +3237,7 @@
 <h4 id="returns">Returns<a class="headerlink" href="#returns" title="Permanent link">&para;</a></h4>
 <p>Boolean.</p>
 <h4 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h4>
-<div class="language-javascript highlight"><pre><span></span><code><span id="__span-2-1"><span class="kd">var</span><span class="w"> </span><span class="nx">io</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ImportOptions</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">File</span><span class="p">(</span><span class="s2">&quot;c:\\myFile.psd&quot;</span><span class="p">));</span>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-2-1"><span class="kd">var</span><span class="w"> </span><span class="nx">io</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ImportOptions</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">File</span><span class="p">(</span><span class="s2">"c:\\myFile.psd"</span><span class="p">));</span>
 </span><span id="__span-2-2"><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">io</span><span class="p">.</span><span class="nx">canImportAs</span><span class="p">(</span><span class="nx">ImportAsType</span><span class="p">.</span><span class="nx">COMP</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-2-3"><span class="w">    </span><span class="nx">io</span><span class="p">.</span><span class="nx">importAs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ImportAsType</span><span class="p">.</span><span class="nx">COMP</span><span class="p">;</span>
 </span><span id="__span-2-4"><span class="p">}</span>
@@ -3276,10 +3276,10 @@
 </ul>
 <h4 id="example_2">Example<a class="headerlink" href="#example_2" title="Permanent link">&para;</a></h4>
 <div class="language-javascript highlight"><pre><span></span><code><span id="__span-3-1"><span class="kd">var</span><span class="w"> </span><span class="nx">importOptions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ImportOptions</span><span class="p">();</span>
-</span><span id="__span-3-2"><span class="nx">importOptions</span><span class="p">.</span><span class="nx">isFileNameNumbered</span><span class="p">(</span><span class="s1">&#39;image.png&#39;</span><span class="p">);</span><span class="w">     </span><span class="c1">// &quot;isNumbered&quot;: false, &quot;num&quot;: 0</span>
-</span><span id="__span-3-3"><span class="nx">importOptions</span><span class="p">.</span><span class="nx">isFileNameNumbered</span><span class="p">(</span><span class="s1">&#39;003image.png&#39;</span><span class="p">);</span><span class="w">  </span><span class="c1">// &quot;isNumbered&quot;: true, &quot;num&quot;: 3</span>
-</span><span id="__span-3-4"><span class="nx">importOptions</span><span class="p">.</span><span class="nx">isFileNameNumbered</span><span class="p">(</span><span class="s1">&#39;ima0102ge.png&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// &quot;isNumbered&quot;: true, &quot;num&quot;: 102</span>
-</span><span id="__span-3-5"><span class="nx">importOptions</span><span class="p">.</span><span class="nx">isFileNameNumbered</span><span class="p">(</span><span class="s1">&#39;image0120.png&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// &quot;isNumbered&quot;: true, &quot;num&quot;: 120</span>
+</span><span id="__span-3-2"><span class="nx">importOptions</span><span class="p">.</span><span class="nx">isFileNameNumbered</span><span class="p">(</span><span class="s1">'image.png'</span><span class="p">);</span><span class="w">     </span><span class="c1">// "isNumbered": false, "num": 0</span>
+</span><span id="__span-3-3"><span class="nx">importOptions</span><span class="p">.</span><span class="nx">isFileNameNumbered</span><span class="p">(</span><span class="s1">'003image.png'</span><span class="p">);</span><span class="w">  </span><span class="c1">// "isNumbered": true, "num": 3</span>
+</span><span id="__span-3-4"><span class="nx">importOptions</span><span class="p">.</span><span class="nx">isFileNameNumbered</span><span class="p">(</span><span class="s1">'ima0102ge.png'</span><span class="p">);</span><span class="w"> </span><span class="c1">// "isNumbered": true, "num": 102</span>
+</span><span id="__span-3-5"><span class="nx">importOptions</span><span class="p">.</span><span class="nx">isFileNameNumbered</span><span class="p">(</span><span class="s1">'image0120.png'</span><span class="p">);</span><span class="w"> </span><span class="c1">// "isNumbered": true, "num": 120</span>
 </span></code></pre></div>
 
 
@@ -3370,7 +3370,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.copy", "search.highlight", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../js/print-site.js"></script>
       

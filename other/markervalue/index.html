@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -3183,15 +3183,15 @@
 <ul>
 <li>
 <p>To set a <strong>layer</strong> marker that says "Fade Up" at the 2 second mark:
-    <div class="language-javascript highlight"><pre><span></span><code><span id="__span-0-1"><span class="kd">var</span><span class="w"> </span><span class="nx">myMarker</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">MarkerValue</span><span class="p">(</span><span class="s2">&quot;FadeUp&quot;</span><span class="p">);</span>
-</span><span id="__span-0-2"><span class="nx">myLayer</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="s2">&quot;Marker&quot;</span><span class="p">).</span><span class="nx">setValueAtTime</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">myMarker</span><span class="p">);</span>
+    <div class="language-javascript highlight"><pre><span></span><code><span id="__span-0-1"><span class="kd">var</span><span class="w"> </span><span class="nx">myMarker</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">MarkerValue</span><span class="p">(</span><span class="s2">"FadeUp"</span><span class="p">);</span>
+</span><span id="__span-0-2"><span class="nx">myLayer</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="s2">"Marker"</span><span class="p">).</span><span class="nx">setValueAtTime</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">myMarker</span><span class="p">);</span>
 </span><span id="__span-0-3"><span class="c1">// or</span>
 </span><span id="__span-0-4"><span class="nx">myLayer</span><span class="p">.</span><span class="nx">marker</span><span class="p">.</span><span class="nx">setValueAtTime</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">myMarker</span><span class="p">);</span>
 </span></code></pre></div></p>
 </li>
 <li>
 <p>To set a <strong>comp</strong> marker that says "Fade Up" at the 2 second mark:
-    <div class="language-javascript highlight"><pre><span></span><code><span id="__span-1-1"><span class="kd">var</span><span class="w"> </span><span class="nx">myMarker</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">MarkerValue</span><span class="p">(</span><span class="s2">&quot;FadeUp&quot;</span><span class="p">);</span>
+    <div class="language-javascript highlight"><pre><span></span><code><span id="__span-1-1"><span class="kd">var</span><span class="w"> </span><span class="nx">myMarker</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">MarkerValue</span><span class="p">(</span><span class="s2">"FadeUp"</span><span class="p">);</span>
 </span><span id="__span-1-2"><span class="nx">comp</span><span class="p">.</span><span class="nx">markerProperty</span><span class="p">.</span><span class="nx">setValueAtTime</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">myMarker</span><span class="p">);</span>
 </span></code></pre></div></p>
 </li>
@@ -3312,12 +3312,12 @@
 <h4 id="returns_1">Returns<a class="headerlink" href="#returns_1" title="Permanent link">&para;</a></h4>
 <p>Nothing.</p>
 <h4 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h4>
-<div class="language-javascript highlight"><pre><span></span><code><span id="__span-3-1"><span class="kd">var</span><span class="w"> </span><span class="nx">mv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">MarkerValue</span><span class="p">(</span><span class="s2">&quot;MyMarker&quot;</span><span class="p">);</span>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-3-1"><span class="kd">var</span><span class="w"> </span><span class="nx">mv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">MarkerValue</span><span class="p">(</span><span class="s2">"MyMarker"</span><span class="p">);</span>
 </span><span id="__span-3-2"><span class="kd">var</span><span class="w"> </span><span class="nx">parms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{};</span>
 </span><span id="__span-3-3"><span class="nx">parms</span><span class="p">.</span><span class="nx">timeToBlink</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
-</span><span id="__span-3-4"><span class="nx">parms</span><span class="p">.</span><span class="nx">assignMe</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;A string&quot;</span>
+</span><span id="__span-3-4"><span class="nx">parms</span><span class="p">.</span><span class="nx">assignMe</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"A string"</span>
 </span><span id="__span-3-5"><span class="nx">mv</span><span class="p">.</span><span class="nx">setParameters</span><span class="p">(</span><span class="nx">parms</span><span class="p">);</span>
-</span><span id="__span-3-6"><span class="nx">myLayer</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="s2">&quot;Marker&quot;</span><span class="p">).</span><span class="nx">setValueAtTime</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">mv</span><span class="p">);</span>
+</span><span id="__span-3-6"><span class="nx">myLayer</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="s2">"Marker"</span><span class="p">).</span><span class="nx">setValueAtTime</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">mv</span><span class="p">);</span>
 </span></code></pre></div>
 
 
@@ -3408,7 +3408,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.copy", "search.highlight", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../js/print-site.js"></script>
       

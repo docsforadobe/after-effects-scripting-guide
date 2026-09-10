@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -3320,7 +3320,7 @@
 </span><span id="__span-0-23">
 </span><span id="__span-0-24"><span class="c1">// This line will tell you the output module file info.</span>
 </span><span id="__span-0-25">
-</span><span id="__span-0-26"><span class="kd">var</span><span class="w"> </span><span class="nx">current_omFileTempalte</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">renderQueue</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">outputModule</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">getSettings</span><span class="p">(</span><span class="nx">GetSettingsFormat</span><span class="p">.</span><span class="nx">STRING</span><span class="p">)[</span><span class="s2">&quot;Output File Info&quot;</span><span class="p">][</span><span class="s2">&quot;File Template&quot;</span><span class="p">];</span>
+</span><span id="__span-0-26"><span class="kd">var</span><span class="w"> </span><span class="nx">current_omFileTempalte</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">renderQueue</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">outputModule</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">getSettings</span><span class="p">(</span><span class="nx">GetSettingsFormat</span><span class="p">.</span><span class="nx">STRING</span><span class="p">)[</span><span class="s2">"Output File Info"</span><span class="p">][</span><span class="s2">"File Template"</span><span class="p">];</span>
 </span></code></pre></div>
 <hr />
 <h3 id="outputmoduleremove">OutputModule.remove()<a class="headerlink" href="#outputmoduleremove" title="Permanent link">&para;</a></h3>
@@ -3400,11 +3400,11 @@
 </span></code></pre></div>
 <p>Set output module item 1 of render queue item 3 with values that you create:</p>
 <div class="language-javascript highlight"><pre><span></span><code><span id="__span-2-1"><span class="kd">var</span><span class="w"> </span><span class="nx">crop_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-2"><span class="w">    </span><span class="s2">&quot;Crop&quot;</span><span class="o">:</span><span class="w">        </span><span class="kc">true</span><span class="p">,</span>
-</span><span id="__span-2-3"><span class="w">    </span><span class="s2">&quot;Crop Bottom&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
-</span><span id="__span-2-4"><span class="w">    </span><span class="s2">&quot;Crop Left&quot;</span><span class="o">:</span><span class="w">   </span><span class="mf">0</span><span class="p">,</span>
-</span><span id="__span-2-5"><span class="w">    </span><span class="s2">&quot;Crop Right&quot;</span><span class="o">:</span><span class="w">  </span><span class="mf">8</span><span class="p">,</span>
-</span><span id="__span-2-6"><span class="w">    </span><span class="s2">&quot;Crop Top&quot;</span><span class="o">:</span><span class="w">    </span><span class="mf">10</span>
+</span><span id="__span-2-2"><span class="w">    </span><span class="s2">"Crop"</span><span class="o">:</span><span class="w">        </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-2-3"><span class="w">    </span><span class="s2">"Crop Bottom"</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+</span><span id="__span-2-4"><span class="w">    </span><span class="s2">"Crop Left"</span><span class="o">:</span><span class="w">   </span><span class="mf">0</span><span class="p">,</span>
+</span><span id="__span-2-5"><span class="w">    </span><span class="s2">"Crop Right"</span><span class="o">:</span><span class="w">  </span><span class="mf">8</span><span class="p">,</span>
+</span><span id="__span-2-6"><span class="w">    </span><span class="s2">"Crop Top"</span><span class="o">:</span><span class="w">    </span><span class="mf">10</span>
 </span><span id="__span-2-7"><span class="p">};</span>
 </span><span id="__span-2-8">
 </span><span id="__span-2-9"><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">renderQueue</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">outputModule</span><span class="p">(</span><span class="mf">3</span><span class="p">).</span><span class="nx">setSettings</span><span class="p">(</span><span class="w"> </span><span class="nx">crop_data</span><span class="w"> </span><span class="p">);</span>
@@ -3412,14 +3412,14 @@
 <p>Route the output file to the user directory:</p>
 <div class="language-javascript highlight"><pre><span></span><code><span id="__span-3-1"><span class="kd">var</span><span class="w"> </span><span class="nx">om1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">renderQueue</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">outputModule</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
 </span><span id="__span-3-2"><span class="kd">var</span><span class="w"> </span><span class="nx">file_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">File</span><span class="p">.</span><span class="nx">decode</span><span class="p">(</span><span class="w"> </span><span class="nx">om1</span><span class="p">.</span><span class="nx">file</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="c1">// Name contains special character, space?</span>
-</span><span id="__span-3-3"><span class="kd">var</span><span class="w"> </span><span class="nx">new_dir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Folder</span><span class="p">(</span><span class="w"> </span><span class="s2">&quot;~/new_output&quot;</span><span class="w"> </span><span class="p">);</span>
+</span><span id="__span-3-3"><span class="kd">var</span><span class="w"> </span><span class="nx">new_dir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Folder</span><span class="p">(</span><span class="w"> </span><span class="s2">"~/new_output"</span><span class="w"> </span><span class="p">);</span>
 </span><span id="__span-3-4"><span class="kd">var</span><span class="w"> </span><span class="nx">new_path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">new_dir</span><span class="p">.</span><span class="nx">fsName</span><span class="p">;</span>
 </span><span id="__span-3-5">
 </span><span id="__span-3-6"><span class="kd">var</span><span class="w"> </span><span class="nx">new_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-7"><span class="w">    </span><span class="s2">&quot;Output File Info&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-8"><span class="w">        </span><span class="s2">&quot;Base Path&quot;</span><span class="o">:</span><span class="w">      </span><span class="nx">new_path</span><span class="p">,</span>
-</span><span id="__span-3-9"><span class="w">        </span><span class="s2">&quot;Subfolder Path&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;draft&quot;</span><span class="p">,</span>
-</span><span id="__span-3-10"><span class="w">        </span><span class="s2">&quot;File Name&quot;</span><span class="o">:</span><span class="w">      </span><span class="nx">file_name</span>
+</span><span id="__span-3-7"><span class="w">    </span><span class="s2">"Output File Info"</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-8"><span class="w">        </span><span class="s2">"Base Path"</span><span class="o">:</span><span class="w">      </span><span class="nx">new_path</span><span class="p">,</span>
+</span><span id="__span-3-9"><span class="w">        </span><span class="s2">"Subfolder Path"</span><span class="o">:</span><span class="w"> </span><span class="s2">"draft"</span><span class="p">,</span>
+</span><span id="__span-3-10"><span class="w">        </span><span class="s2">"File Name"</span><span class="o">:</span><span class="w">      </span><span class="nx">file_name</span>
 </span><span id="__span-3-11"><span class="w">    </span><span class="p">}</span>
 </span><span id="__span-3-12"><span class="p">};</span>
 </span><span id="__span-3-13">
@@ -3430,17 +3430,17 @@
 </span><span id="__span-4-2">
 </span><span id="__span-4-3"><span class="c1">// Name contains special character, such as space?</span>
 </span><span id="__span-4-4"><span class="kd">var</span><span class="w"> </span><span class="nx">file_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">File</span><span class="p">.</span><span class="nx">decode</span><span class="p">(</span><span class="w"> </span><span class="nx">om1</span><span class="p">.</span><span class="nx">file</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="p">);</span>
-</span><span id="__span-4-5"><span class="kd">var</span><span class="w"> </span><span class="nx">new_path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;/Users/myAccount/new_output&quot;</span><span class="p">;</span>
-</span><span id="__span-4-6"><span class="kd">var</span><span class="w"> </span><span class="nx">separator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;/&quot;</span><span class="p">;</span>
+</span><span id="__span-4-5"><span class="kd">var</span><span class="w"> </span><span class="nx">new_path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"/Users/myAccount/new_output"</span><span class="p">;</span>
+</span><span id="__span-4-6"><span class="kd">var</span><span class="w"> </span><span class="nx">separator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"/"</span><span class="p">;</span>
 </span><span id="__span-4-7">
-</span><span id="__span-4-8"><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">$</span><span class="p">.</span><span class="nx">os</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">&quot;Mac&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-9"><span class="w">    </span><span class="nx">new_path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;C:\Users\myAccount\new_output&quot;</span><span class="p">;</span>
-</span><span id="__span-4-10"><span class="w">    </span><span class="nx">separator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;\\&quot;</span><span class="p">;</span>
+</span><span id="__span-4-8"><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">$</span><span class="p">.</span><span class="nx">os</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">"Mac"</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-9"><span class="w">    </span><span class="nx">new_path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"C:\Users\myAccount\new_output"</span><span class="p">;</span>
+</span><span id="__span-4-10"><span class="w">    </span><span class="nx">separator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"\\"</span><span class="p">;</span>
 </span><span id="__span-4-11"><span class="p">}</span>
 </span><span id="__span-4-12">
 </span><span id="__span-4-13"><span class="kd">var</span><span class="w"> </span><span class="nx">new_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-14"><span class="w">    </span><span class="s2">&quot;Output File Info&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-15"><span class="w">        </span><span class="s2">&quot;Full Flat Path&quot;</span><span class="o">:</span><span class="w"> </span><span class="nx">new_path</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">separator</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">file_name</span>
+</span><span id="__span-4-14"><span class="w">    </span><span class="s2">"Output File Info"</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-15"><span class="w">        </span><span class="s2">"Full Flat Path"</span><span class="o">:</span><span class="w"> </span><span class="nx">new_path</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">separator</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">file_name</span>
 </span><span id="__span-4-16"><span class="w">    </span><span class="p">}</span>
 </span><span id="__span-4-17"><span class="p">};</span>
 </span><span id="__span-4-18">
@@ -3535,7 +3535,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.copy", "search.highlight", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../js/print-site.js"></script>
       

@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -3355,10 +3355,10 @@
 <p><code>app.project.item(index).layer(index).propertySpec</code></p>
 <h4 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h4>
 <p>Properties are accessed by name through layers, using various kinds of expression syntax, as controlled by application preferences. For example, the following are all ways of access properties in the Effects group</p>
-<div class="language-javascript highlight"><pre><span></span><code><span id="__span-0-1"><span class="kd">var</span><span class="w"> </span><span class="nx">effect1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">layer</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">effect</span><span class="p">(</span><span class="s2">&quot;AddGrain&quot;</span><span class="p">)(</span><span class="s2">&quot;Viewing Mode&quot;</span><span class="p">);</span>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-0-1"><span class="kd">var</span><span class="w"> </span><span class="nx">effect1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">layer</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">effect</span><span class="p">(</span><span class="s2">"AddGrain"</span><span class="p">)(</span><span class="s2">"Viewing Mode"</span><span class="p">);</span>
 </span><span id="__span-0-2"><span class="kd">var</span><span class="w"> </span><span class="nx">effect1again</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">layer</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">effect</span><span class="p">.</span><span class="nx">addGrain</span><span class="p">.</span><span class="nx">viewingMode</span><span class="p">;</span>
-</span><span id="__span-0-3"><span class="kd">var</span><span class="w"> </span><span class="nx">effect1againtoo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">layer</span><span class="p">(</span><span class="mf">1</span><span class="p">)(</span><span class="s2">&quot;Effects&quot;</span><span class="p">).</span><span class="nx">addGrain</span><span class="p">.</span><span class="nx">viewingMode</span><span class="p">;</span>
-</span><span id="__span-0-4"><span class="kd">var</span><span class="w"> </span><span class="nx">effect1againtoo2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">layer</span><span class="p">(</span><span class="mf">1</span><span class="p">)(</span><span class="s2">&quot;Effects&quot;</span><span class="p">)(</span><span class="s2">&quot;Add Grain&quot;</span><span class="p">)(</span><span class="s2">&quot;Viewing Mode&quot;</span><span class="p">);</span>
+</span><span id="__span-0-3"><span class="kd">var</span><span class="w"> </span><span class="nx">effect1againtoo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">layer</span><span class="p">(</span><span class="mf">1</span><span class="p">)(</span><span class="s2">"Effects"</span><span class="p">).</span><span class="nx">addGrain</span><span class="p">.</span><span class="nx">viewingMode</span><span class="p">;</span>
+</span><span id="__span-0-4"><span class="kd">var</span><span class="w"> </span><span class="nx">effect1againtoo2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">item</span><span class="p">(</span><span class="mf">1</span><span class="p">).</span><span class="nx">layer</span><span class="p">(</span><span class="mf">1</span><span class="p">)(</span><span class="s2">"Effects"</span><span class="p">)(</span><span class="s2">"Add Grain"</span><span class="p">)(</span><span class="s2">"Viewing Mode"</span><span class="p">);</span>
 </span></code></pre></div>
 <p>See also <a href="../propertygroup/#propertygroupproperty">PropertyGroup.property()</a>.</p>
 <div class="admonition info">
@@ -3665,7 +3665,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.copy", "search.highlight", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../js/print-site.js"></script>
       
