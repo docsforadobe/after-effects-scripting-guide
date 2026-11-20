@@ -23,7 +23,8 @@ highlight_config = dict()
 if 'pymdownx.highlight' in user_extensions:
     highlight_config = user_extensions.get('pymdownx.highlight')
 
-ExistingHighlighter = HighlightExtension().get_pymdownx_highlighter()(**highlight_config)
+md = markdown.Markdown(extensions=["pymdownx.highlight"])
+ExistingHighlighter = HighlightExtension().get_pymdownx_highlighter()(md, **highlight_config)
 
 def on_page_content(html: str, page: Page, config: MkDocsConfig, files: Files, **kwargs):
     def inline_pre_to_code_fence(match):
