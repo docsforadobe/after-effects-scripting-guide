@@ -10,7 +10,7 @@ The PropertyGroup object represents a group of properties. It can contain Proper
     PropertyGroup is a subclass of [PropertyBase](propertybase.md). All methods and attributes of PropertyBase, in addition to those listed below, are available when working with PropertyGroup.
 
 !!! info
-    PropertyGroup is a base class for [Layer](../layer/layer.md) and [MaskPropertyGroup](maskpropertygroup.md). PropertyGroup attributes and methods are available when working with layer or mask groups.
+    PropertyGroup is a base class for [Layer](../layer/layer.md), [MaskPropertyGroup](maskpropertygroup.md), [MaterialAssignmentPropertyGroup](materialassignmentpropertygroup.md), and [MaterialPropertyGroup](materialpropertygroup.md). PropertyGroup attributes and methods are available when working with these objects.
 
 ---
 

@@ -41,6 +41,59 @@ if (layer instanceof ParametricMeshLayer)
 
 ## Attributes
 
+### ParametricMeshLayer.canAddOrRemoveMaterialOverride
+
+`app.project.item(index).layer(index).canAddOrRemoveMaterialOverride`
+
+!!! warning
+    This functionality is in After Effects (Beta) 27.1 and is subject to change while it remains in Beta.
+
+#### Description
+
+This value is `false` for parametric mesh layers because their material override is always present and cannot be removed. The material source can still be changed with [MaterialPropertyGroup.setMaterialOverride()](../property/materialpropertygroup.md#materialpropertygroupsetmaterialoverride).
+
+#### Type
+
+Boolean; read-only.
+
+---
+
+### ParametricMeshLayer.materialAssignment
+
+`app.project.item(index).layer(index).materialAssignment`
+
+!!! warning
+    This functionality is in After Effects (Beta) 27.1 and is subject to change while it remains in Beta.
+
+#### Description
+
+The layer's material assignment group. A ParametricMeshLayer has one material assignment, accessible with `MaterialAssignment.DEFAULT`.
+
+The assignment's [material properties](../property/materialpropertygroup.md#ae-properties) depend on its source. The default material exposes properties such as Base Color and Roughness. Substance and layer sources expose texture transform properties. Uniform Tiling and Randomize Offset are not available on parametric mesh layers.
+
+#### Type
+
+[MaterialAssignmentPropertyGroup object](../property/materialassignmentpropertygroup.md); read-only.
+
+---
+
+### ParametricMeshLayer.materialAssignmentCount
+
+`app.project.item(index).layer(index).materialAssignmentCount`
+
+!!! warning
+    This functionality is in After Effects (Beta) 27.1 and is subject to change while it remains in Beta.
+
+#### Description
+
+The total number of material assignments on the layer, including assignments whose material override has not been added. A ParametricMeshLayer has one material assignment. This value is the same as `materialAssignment.numProperties`.
+
+#### Type
+
+Integer; read-only.
+
+---
+
 ### ParametricMeshLayer.parametricMeshType
 
 `app.project.item(index).layer(index).parametricMeshType`
@@ -168,4 +221,3 @@ Gets/sets details about the beveling of the parametric mesh.
 - `parametricBevelOptions.sides`
 
 ---
-

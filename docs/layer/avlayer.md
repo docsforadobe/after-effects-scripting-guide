@@ -327,6 +327,23 @@ Floating-point value; read-only.
 
 ---
 
+### AVLayer.isMaterialSource
+
+`app.project.item(index).layer(index).isMaterialSource`
+
+!!! warning
+    This functionality is in After Effects (Beta) 27.1 and is subject to change while it remains in Beta.
+
+#### Description
+
+`true` if any material assignment uses this layer as its material source; otherwise `false`.
+
+#### Type
+
+Boolean; read-only.
+
+---
+
 ### AVLayer.isNameFromSource
 
 `app.project.item(index).layer(index).isNameFromSource`
