@@ -1254,6 +1254,45 @@
 				
 				
 					<li class="md-nav__item">
+	<a href="#parametricmeshlayercanaddorremovematerialoverride" class="md-nav__link">
+		<span class="md-ellipsis">
+			ParametricMeshLayer.canAddOrRemoveMaterialOverride
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#parametricmeshlayermaterialassignment" class="md-nav__link">
+		<span class="md-ellipsis">
+			ParametricMeshLayer.materialAssignment
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#parametricmeshlayermaterialassignmentcount" class="md-nav__link">
+		<span class="md-ellipsis">
+			ParametricMeshLayer.materialAssignmentCount
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
 	<a href="#parametricmeshlayerparametricmeshtype" class="md-nav__link">
 		<span class="md-ellipsis">
 			ParametricMeshLayer.parametricMeshType
@@ -1430,6 +1469,62 @@
     
   
     PropertyGroup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../property/materialassignmentpropertygroup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MaterialAssignmentPropertyGroup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../property/materialpropertygroup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MaterialPropertyGroup
   
 
     
@@ -2852,6 +2947,45 @@
 				
 				
 					<li class="md-nav__item">
+	<a href="#parametricmeshlayercanaddorremovematerialoverride" class="md-nav__link">
+		<span class="md-ellipsis">
+			ParametricMeshLayer.canAddOrRemoveMaterialOverride
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#parametricmeshlayermaterialassignment" class="md-nav__link">
+		<span class="md-ellipsis">
+			ParametricMeshLayer.materialAssignment
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#parametricmeshlayermaterialassignmentcount" class="md-nav__link">
+		<span class="md-ellipsis">
+			ParametricMeshLayer.materialAssignmentCount
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
 	<a href="#parametricmeshlayerparametricmeshtype" class="md-nav__link">
 		<span class="md-ellipsis">
 			ParametricMeshLayer.parametricMeshType
@@ -2968,15 +3102,49 @@
 </span><span id="__span-0-5"><span class="p">}</span>
 </span></code></pre></div>
 <h2 id="attributes">Attributes<a class="headerlink" href="#attributes" title="Permanent link">&para;</a></h2>
+<h3 id="parametricmeshlayercanaddorremovematerialoverride">ParametricMeshLayer.canAddOrRemoveMaterialOverride<a class="headerlink" href="#parametricmeshlayercanaddorremovematerialoverride" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).canAddOrRemoveMaterialOverride</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This functionality is in After Effects (Beta) 27.1 and is subject to change while it remains in Beta.</p>
+</div>
+<h4 id="description_1">Description<a class="headerlink" href="#description_1" title="Permanent link">&para;</a></h4>
+<p>This value is <code>false</code> for parametric mesh layers because their material override is always present and cannot be removed. The material source can still be changed with <a href="../../property/materialpropertygroup/#materialpropertygroupsetmaterialoverride">MaterialPropertyGroup.setMaterialOverride()</a>.</p>
+<h4 id="type">Type<a class="headerlink" href="#type" title="Permanent link">&para;</a></h4>
+<p>Boolean; read-only.</p>
+<hr />
+<h3 id="parametricmeshlayermaterialassignment">ParametricMeshLayer.materialAssignment<a class="headerlink" href="#parametricmeshlayermaterialassignment" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).materialAssignment</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This functionality is in After Effects (Beta) 27.1 and is subject to change while it remains in Beta.</p>
+</div>
+<h4 id="description_2">Description<a class="headerlink" href="#description_2" title="Permanent link">&para;</a></h4>
+<p>The layer's material assignment group. A ParametricMeshLayer has one material assignment, accessible with <code>MaterialAssignment.DEFAULT</code>.</p>
+<p>The assignment's <a href="../../property/materialpropertygroup/#ae-properties">material properties</a> depend on its source. The default material exposes properties such as Base Color and Roughness. Substance and layer sources expose texture transform properties. Uniform Tiling and Randomize Offset are not available on parametric mesh layers.</p>
+<h4 id="type_1">Type<a class="headerlink" href="#type_1" title="Permanent link">&para;</a></h4>
+<p><a href="../../property/materialassignmentpropertygroup/">MaterialAssignmentPropertyGroup object</a>; read-only.</p>
+<hr />
+<h3 id="parametricmeshlayermaterialassignmentcount">ParametricMeshLayer.materialAssignmentCount<a class="headerlink" href="#parametricmeshlayermaterialassignmentcount" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).materialAssignmentCount</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This functionality is in After Effects (Beta) 27.1 and is subject to change while it remains in Beta.</p>
+</div>
+<h4 id="description_3">Description<a class="headerlink" href="#description_3" title="Permanent link">&para;</a></h4>
+<p>The total number of material assignments on the layer, including assignments whose material override has not been added. A ParametricMeshLayer has one material assignment. This value is the same as <code>materialAssignment.numProperties</code>.</p>
+<h4 id="type_2">Type<a class="headerlink" href="#type_2" title="Permanent link">&para;</a></h4>
+<p>Integer; read-only.</p>
+<hr />
 <h3 id="parametricmeshlayerparametricmeshtype">ParametricMeshLayer.parametricMeshType<a class="headerlink" href="#parametricmeshlayerparametricmeshtype" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).parametricMeshType</code></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This functionality was added in After Effects 26.3.</p>
 </div>
-<h4 id="description_1">Description<a class="headerlink" href="#description_1" title="Permanent link">&para;</a></h4>
+<h4 id="description_4">Description<a class="headerlink" href="#description_4" title="Permanent link">&para;</a></h4>
 <p>For a parametric mesh layer, its mesh type. Trying to set this attribute for a non-parametric mesh layer produces an error.</p>
-<h4 id="type">Type<a class="headerlink" href="#type" title="Permanent link">&para;</a></h4>
+<h4 id="type_3">Type<a class="headerlink" href="#type_3" title="Permanent link">&para;</a></h4>
 <p>A <code>ParametricMeshType</code> enumerated value; read/write. One of:</p>
 <ul>
 <li><code>ParametricMeshType.SPHERE</code></li>
@@ -2993,9 +3161,9 @@
 <p class="admonition-title">Note</p>
 <p>This functionality was added in After Effects 26.3.</p>
 </div>
-<h4 id="description_2">Description<a class="headerlink" href="#description_2" title="Permanent link">&para;</a></h4>
+<h4 id="description_5">Description<a class="headerlink" href="#description_5" title="Permanent link">&para;</a></h4>
 <p>Gets/sets details about the structure of the parametric mesh.</p>
-<h4 id="type_1">Type<a class="headerlink" href="#type_1" title="Permanent link">&para;</a></h4>
+<h4 id="type_4">Type<a class="headerlink" href="#type_4" title="Permanent link">&para;</a></h4>
 <p><code>ParametricMeshOptions</code> based on the ParametricMeshType of the layer, as follows.</p>
 <h4 id="for-parametricmeshtypecube">For ParametricMeshType.CUBE<a class="headerlink" href="#for-parametricmeshtypecube" title="Permanent link">&para;</a></h4>
 <ul>
@@ -3063,13 +3231,13 @@
 <p class="admonition-title">Note</p>
 <p>This functionality was added in After Effects 26.3.</p>
 </div>
-<h4 id="description_3">Description<a class="headerlink" href="#description_3" title="Permanent link">&para;</a></h4>
+<h4 id="description_6">Description<a class="headerlink" href="#description_6" title="Permanent link">&para;</a></h4>
 <p>Gets/sets details about the beveling of the parametric mesh.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Only Parametric Mesh Layers with <code>ParametricMeshType.CUBE</code>, <code>ParametricMeshType.CONE</code>, and <code>ParametricMeshType.CYLINDER</code> have <code>parametricBevelOptions</code>.</p>
 </div>
-<h4 id="type_2">Type<a class="headerlink" href="#type_2" title="Permanent link">&para;</a></h4>
+<h4 id="type_5">Type<a class="headerlink" href="#type_5" title="Permanent link">&para;</a></h4>
 <p><code>ParametricBevelOptions</code> based on the ParametricMeshType of the layer, as follows.</p>
 <h4 id="for-parametricmeshtypecube_1">For ParametricMeshType.CUBE<a class="headerlink" href="#for-parametricmeshtypecube_1" title="Permanent link">&para;</a></h4>
 <ul>
@@ -3109,7 +3277,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 18, 2026 22:29:48 UTC">June 18, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 24, 2026 00:29:41 UTC">November 24, 2026</span>
   </span>
 
     

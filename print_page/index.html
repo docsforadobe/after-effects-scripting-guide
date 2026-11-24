@@ -1345,6 +1345,62 @@
   
   
     <li class="md-nav__item">
+      <a href="../property/materialassignmentpropertygroup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MaterialAssignmentPropertyGroup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../property/materialpropertygroup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MaterialPropertyGroup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../property/maskpropertygroup/" class="md-nav__link">
         
   
@@ -3175,9 +3231,35 @@
 				
 				
 					<li class="md-nav__item">
+	<a href="#property-materialassignmentpropertygroup" class="md-nav__link">
+		<span class="md-ellipsis">
+			6.4 MaterialAssignmentPropertyGroup
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#property-materialpropertygroup" class="md-nav__link">
+		<span class="md-ellipsis">
+			6.5 MaterialPropertyGroup
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
 	<a href="#property-maskpropertygroup" class="md-nav__link">
 		<span class="md-ellipsis">
-			6.4 MaskPropertyGroup
+			6.6 MaskPropertyGroup
 		</span>
 	</a>
 
@@ -4361,6 +4443,19 @@
 <p>When checking <code>object instanceof {class}</code> with these classes, AE will either throw an error that <code>{class} is undefined</code> or return <code>false</code>, depending on how the class was implemented. The list below documents which base-only classes report which behaviours.</p></section><section class="print-page" id="introduction-changelog" heading-number="2.3"><h1 id="introduction-changelog-changelog">Changelog<a class="headerlink" href="#introduction-changelog-changelog" title="Permanent link">&para;</a></h1>
 <p>What's new and changed for scripting?</p>
 <hr />
+<h2 id="introduction-changelog-after-effects-27">After Effects 27<a class="headerlink" href="#introduction-changelog-after-effects-27" title="Permanent link">&para;</a></h2>
+<h3 id="introduction-changelog-after-effects-271-beta-build-52">After Effects 27.1 Beta Build 52<a class="headerlink" href="#introduction-changelog-after-effects-271-beta-build-52" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Scripting methods and attributes added:<ul>
+<li>Added: <a href="#layer-avlayer-avlayerismaterialsource">AVLayer.isMaterialSource</a></li>
+<li>Added material assignment APIs to <a href="#layer-parametricmeshlayer-parametricmeshlayermaterialassignment">ParametricMeshLayer</a>, <a href="#layer-threedmodellayer-threedmodellayermaterialassignment">ThreeDModelLayer</a>, <a href="#layer-shapelayer-shapelayermaterialassignment">ShapeLayer</a>, and <a href="#layer-textlayer-textlayermaterialassignment">TextLayer</a></li>
+<li>Added: <a href="#property-materialassignmentpropertygroup">MaterialAssignmentPropertyGroup object</a></li>
+<li>Added: <a href="#property-materialpropertygroup">MaterialPropertyGroup object</a></li>
+</ul>
+</li>
+<li>Added documentation for <a href="#matchnames-layer-3dlayer-materials">material assignment, material property, and displacement match names</a>.</li>
+</ul>
+<hr />
 <h2 id="introduction-changelog-after-effects-26">After Effects 26<a class="headerlink" href="#introduction-changelog-after-effects-26" title="Permanent link">&para;</a></h2>
 <h3 id="introduction-changelog-after-effects-265-september-2026"><a href="https://helpx.adobe.com/after-effects/using/whats-new.html">After Effects 26.5</a> (September 2026)<a class="headerlink" href="#introduction-changelog-after-effects-265-september-2026" title="Permanent link">&para;</a></h3>
 <ul>
@@ -5161,11 +5256,15 @@
 <li><a href="#property-propertybase">PropertyBase object</a> ⚠<ul>
 <li><a href="#property-property">Property object</a></li>
 <li><a href="#property-propertygroup">PropertyGroup object</a><ul>
+<li><a href="#property-materialassignmentpropertygroup">MaterialAssignmentPropertyGroup object</a></li>
+<li><a href="#property-materialpropertygroup">MaterialPropertyGroup object</a></li>
 <li><a href="#property-maskpropertygroup">MaskPropertyGroup object</a></li>
 <li><a href="#layer-layer">Layer object</a> ⚠<ul>
 <li><a href="#layer-avlayer">AVLayer object</a><ul>
+<li><a href="#layer-parametricmeshlayer">ParametricMeshLayer object</a></li>
 <li><a href="#layer-shapelayer">ShapeLayer object</a></li>
 <li><a href="#layer-textlayer">TextLayer object</a></li>
+<li><a href="#layer-threedmodellayer">ThreeDModelLayer object</a></li>
 </ul>
 </li>
 <li><a href="#layer-cameralayer">CameraLayer object</a></li>
@@ -10672,11 +10771,22 @@ and <code>outPoint</code> of this layer.</p>
 <h4 id="layer-avlayer-type_14">Type<a class="headerlink" href="#layer-avlayer-type_14" title="Permanent link">&para;</a></h4>
 <p>Floating-point value; read-only.</p>
 <hr />
+<h3 id="layer-avlayer-avlayerismaterialsource">AVLayer.isMaterialSource<a class="headerlink" href="#layer-avlayer-avlayerismaterialsource" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).isMaterialSource</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This functionality is in After Effects (Beta) 27.1 and is subject to change while it remains in Beta.</p>
+</div>
+<h4 id="layer-avlayer-description_16">Description<a class="headerlink" href="#layer-avlayer-description_16" title="Permanent link">&para;</a></h4>
+<p><code>true</code> if any material assignment uses this layer as its material source; otherwise <code>false</code>.</p>
+<h4 id="layer-avlayer-type_15">Type<a class="headerlink" href="#layer-avlayer-type_15" title="Permanent link">&para;</a></h4>
+<p>Boolean; read-only.</p>
+<hr />
 <h3 id="layer-avlayer-avlayerisnamefromsource">AVLayer.isNameFromSource<a class="headerlink" href="#layer-avlayer-avlayerisnamefromsource" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).isNameFromSource</code></p>
-<h4 id="layer-avlayer-description_16">Description<a class="headerlink" href="#layer-avlayer-description_16" title="Permanent link">&para;</a></h4>
+<h4 id="layer-avlayer-description_17">Description<a class="headerlink" href="#layer-avlayer-description_17" title="Permanent link">&para;</a></h4>
 <p><code>true</code> if the layer has no expressly set name, but contains a named source. In this case, <code>layer.name</code> has the same value as <code>layer.source.name</code>. <code>false</code> if the layer has an expressly set name, or if the layer does not have a source.</p>
-<h4 id="layer-avlayer-type_15">Type<a class="headerlink" href="#layer-avlayer-type_15" title="Permanent link">&para;</a></h4>
+<h4 id="layer-avlayer-type_16">Type<a class="headerlink" href="#layer-avlayer-type_16" title="Permanent link">&para;</a></h4>
 <p>Boolean; read-only.</p>
 <hr />
 <h3 id="layer-avlayer-avlayeristrackmatte">AVLayer.isTrackMatte<a class="headerlink" href="#layer-avlayer-avlayeristrackmatte" title="Permanent link">&para;</a></h3>
@@ -10685,30 +10795,30 @@ and <code>outPoint</code> of this layer.</p>
 <p class="admonition-title">Note</p>
 <p>This functionality was updated in After Effects 23.0. Track Matte is no longer dependent on layer order.</p>
 </div>
-<h4 id="layer-avlayer-description_17">Description<a class="headerlink" href="#layer-avlayer-description_17" title="Permanent link">&para;</a></h4>
+<h4 id="layer-avlayer-description_18">Description<a class="headerlink" href="#layer-avlayer-description_18" title="Permanent link">&para;</a></h4>
 <p><code>true</code> if this layer is being used as a track matte.</p>
-<h4 id="layer-avlayer-type_16">Type<a class="headerlink" href="#layer-avlayer-type_16" title="Permanent link">&para;</a></h4>
+<h4 id="layer-avlayer-type_17">Type<a class="headerlink" href="#layer-avlayer-type_17" title="Permanent link">&para;</a></h4>
 <p>Boolean; read-only.</p>
 <hr />
 <h3 id="layer-avlayer-avlayermotionblur">AVLayer.motionBlur<a class="headerlink" href="#layer-avlayer-avlayermotionblur" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).motionBlur</code></p>
-<h4 id="layer-avlayer-description_18">Description<a class="headerlink" href="#layer-avlayer-description_18" title="Permanent link">&para;</a></h4>
+<h4 id="layer-avlayer-description_19">Description<a class="headerlink" href="#layer-avlayer-description_19" title="Permanent link">&para;</a></h4>
 <p><code>true</code> if motion blur is enabled for the layer.</p>
-<h4 id="layer-avlayer-type_17">Type<a class="headerlink" href="#layer-avlayer-type_17" title="Permanent link">&para;</a></h4>
+<h4 id="layer-avlayer-type_18">Type<a class="headerlink" href="#layer-avlayer-type_18" title="Permanent link">&para;</a></h4>
 <p>Boolean; read/write.</p>
 <hr />
 <h3 id="layer-avlayer-avlayerpreservetransparency">AVLayer.preserveTransparency<a class="headerlink" href="#layer-avlayer-avlayerpreservetransparency" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).preserveTransparency</code></p>
-<h4 id="layer-avlayer-description_19">Description<a class="headerlink" href="#layer-avlayer-description_19" title="Permanent link">&para;</a></h4>
+<h4 id="layer-avlayer-description_20">Description<a class="headerlink" href="#layer-avlayer-description_20" title="Permanent link">&para;</a></h4>
 <p><code>true</code> if preserve transparency is enabled for the layer.</p>
-<h4 id="layer-avlayer-type_18">Type<a class="headerlink" href="#layer-avlayer-type_18" title="Permanent link">&para;</a></h4>
+<h4 id="layer-avlayer-type_19">Type<a class="headerlink" href="#layer-avlayer-type_19" title="Permanent link">&para;</a></h4>
 <p>Boolean; read/write.</p>
 <hr />
 <h3 id="layer-avlayer-avlayerquality">AVLayer.quality<a class="headerlink" href="#layer-avlayer-avlayerquality" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).quality</code></p>
-<h4 id="layer-avlayer-description_20">Description<a class="headerlink" href="#layer-avlayer-description_20" title="Permanent link">&para;</a></h4>
+<h4 id="layer-avlayer-description_21">Description<a class="headerlink" href="#layer-avlayer-description_21" title="Permanent link">&para;</a></h4>
 <p>The quality with which this layer is displayed.</p>
-<h4 id="layer-avlayer-type_19">Type<a class="headerlink" href="#layer-avlayer-type_19" title="Permanent link">&para;</a></h4>
+<h4 id="layer-avlayer-type_20">Type<a class="headerlink" href="#layer-avlayer-type_20" title="Permanent link">&para;</a></h4>
 <p>A <code>LayerQuality</code> enumerated value; read/write. One of:</p>
 <ul>
 <li><code>LayerQuality.BEST</code></li>
@@ -10722,9 +10832,9 @@ and <code>outPoint</code> of this layer.</p>
 <p class="admonition-title">Note</p>
 <p>This functionality was added in After Effects 12.0 (CC)</p>
 </div>
-<h4 id="layer-avlayer-description_21">Description<a class="headerlink" href="#layer-avlayer-description_21" title="Permanent link">&para;</a></h4>
+<h4 id="layer-avlayer-description_22">Description<a class="headerlink" href="#layer-avlayer-description_22" title="Permanent link">&para;</a></h4>
 <p>Set/get layer sampling method (bicubic or bilinear)</p>
-<h4 id="layer-avlayer-type_20">Type<a class="headerlink" href="#layer-avlayer-type_20" title="Permanent link">&para;</a></h4>
+<h4 id="layer-avlayer-type_21">Type<a class="headerlink" href="#layer-avlayer-type_21" title="Permanent link">&para;</a></h4>
 <p>A <code>LayerSamplingQuality</code> enumerated value; read/write. One of:</p>
 <ul>
 <li><code>LayerSamplingQuality.BICUBIC</code></li>
@@ -10733,30 +10843,30 @@ and <code>outPoint</code> of this layer.</p>
 <hr />
 <h3 id="layer-avlayer-avlayersource">AVLayer.source<a class="headerlink" href="#layer-avlayer-avlayersource" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).source</code></p>
-<h4 id="layer-avlayer-description_22">Description<a class="headerlink" href="#layer-avlayer-description_22" title="Permanent link">&para;</a></h4>
+<h4 id="layer-avlayer-description_23">Description<a class="headerlink" href="#layer-avlayer-description_23" title="Permanent link">&para;</a></h4>
 <p>The source AVItem for this layer. The value is <code>null</code> in a Text layer. Use <a href="#layer-avlayer-avlayerreplacesource">AVLayer.replaceSource()</a> to change the value.</p>
-<h4 id="layer-avlayer-type_21">Type<a class="headerlink" href="#layer-avlayer-type_21" title="Permanent link">&para;</a></h4>
+<h4 id="layer-avlayer-type_22">Type<a class="headerlink" href="#layer-avlayer-type_22" title="Permanent link">&para;</a></h4>
 <p>AVItem object; read-only.</p>
 <hr />
 <h3 id="layer-avlayer-avlayerthreedlayer">AVLayer.threeDLayer<a class="headerlink" href="#layer-avlayer-avlayerthreedlayer" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).threeDLayer</code></p>
-<h4 id="layer-avlayer-description_23">Description<a class="headerlink" href="#layer-avlayer-description_23" title="Permanent link">&para;</a></h4>
+<h4 id="layer-avlayer-description_24">Description<a class="headerlink" href="#layer-avlayer-description_24" title="Permanent link">&para;</a></h4>
 <p><code>true</code> if this is a 3D layer.</p>
-<h4 id="layer-avlayer-type_22">Type<a class="headerlink" href="#layer-avlayer-type_22" title="Permanent link">&para;</a></h4>
+<h4 id="layer-avlayer-type_23">Type<a class="headerlink" href="#layer-avlayer-type_23" title="Permanent link">&para;</a></h4>
 <p>Boolean; read/write.</p>
 <hr />
 <h3 id="layer-avlayer-avlayerthreedperchar">AVLayer.threeDPerChar<a class="headerlink" href="#layer-avlayer-avlayerthreedperchar" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).threeDPerChar</code></p>
-<h4 id="layer-avlayer-description_24">Description<a class="headerlink" href="#layer-avlayer-description_24" title="Permanent link">&para;</a></h4>
+<h4 id="layer-avlayer-description_25">Description<a class="headerlink" href="#layer-avlayer-description_25" title="Permanent link">&para;</a></h4>
 <p><code>true</code> if this layer has the Enable Per-character 3D switch set, allowing its characters to be animated off the plane of the text layer. Applies only to text layers.</p>
-<h4 id="layer-avlayer-type_23">Type<a class="headerlink" href="#layer-avlayer-type_23" title="Permanent link">&para;</a></h4>
+<h4 id="layer-avlayer-type_24">Type<a class="headerlink" href="#layer-avlayer-type_24" title="Permanent link">&para;</a></h4>
 <p>Boolean; read/write.</p>
 <hr />
 <h3 id="layer-avlayer-avlayertimeremapenabled">AVLayer.timeRemapEnabled<a class="headerlink" href="#layer-avlayer-avlayertimeremapenabled" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).timeRemapEnabled</code></p>
-<h4 id="layer-avlayer-description_25">Description<a class="headerlink" href="#layer-avlayer-description_25" title="Permanent link">&para;</a></h4>
+<h4 id="layer-avlayer-description_26">Description<a class="headerlink" href="#layer-avlayer-description_26" title="Permanent link">&para;</a></h4>
 <p><code>true</code> if time remapping is enabled for this layer.</p>
-<h4 id="layer-avlayer-type_24">Type<a class="headerlink" href="#layer-avlayer-type_24" title="Permanent link">&para;</a></h4>
+<h4 id="layer-avlayer-type_25">Type<a class="headerlink" href="#layer-avlayer-type_25" title="Permanent link">&para;</a></h4>
 <p>Boolean; read/write.</p>
 <hr />
 <h3 id="layer-avlayer-avlayertrackmattelayer">AVLayer.trackMatteLayer<a class="headerlink" href="#layer-avlayer-avlayertrackmattelayer" title="Permanent link">&para;</a></h3>
@@ -10765,9 +10875,9 @@ and <code>outPoint</code> of this layer.</p>
 <p class="admonition-title">Note</p>
 <p>This functionality was added in After Effects 23.0</p>
 </div>
-<h4 id="layer-avlayer-description_26">Description<a class="headerlink" href="#layer-avlayer-description_26" title="Permanent link">&para;</a></h4>
+<h4 id="layer-avlayer-description_27">Description<a class="headerlink" href="#layer-avlayer-description_27" title="Permanent link">&para;</a></h4>
 <p>Returns the track matte layer for this layer. Returns <code>null</code> if this layer has no track matte layer.</p>
-<h4 id="layer-avlayer-type_25">Type<a class="headerlink" href="#layer-avlayer-type_25" title="Permanent link">&para;</a></h4>
+<h4 id="layer-avlayer-type_26">Type<a class="headerlink" href="#layer-avlayer-type_26" title="Permanent link">&para;</a></h4>
 <p>AVLayer object; read only.</p>
 <hr />
 <h3 id="layer-avlayer-avlayertrackmattetype">AVLayer.trackMatteType<a class="headerlink" href="#layer-avlayer-avlayertrackmattetype" title="Permanent link">&para;</a></h3>
@@ -10780,10 +10890,10 @@ and <code>outPoint</code> of this layer.</p>
 <p class="admonition-title">Warning</p>
 <p>This is a Legacy API we don't recommend using for setting Track Matte Type in new scripts. Please consider using the latest track matte APIs <a href="#layer-avlayer-avlayersettrackmatte">AVLayer.setTrackMatte()</a> and <a href="#layer-avlayer-avlayerremovetrackmatte">AVLayer.removeTrackMatte()</a> for your tasks.</p>
 </div>
-<h4 id="layer-avlayer-description_27">Description<a class="headerlink" href="#layer-avlayer-description_27" title="Permanent link">&para;</a></h4>
+<h4 id="layer-avlayer-description_28">Description<a class="headerlink" href="#layer-avlayer-description_28" title="Permanent link">&para;</a></h4>
 <p>If this layer has a track matte, specifies the way the track matte is applied.
 Specifying the <code>TrackMatteType.NO_TRACK_MATTE</code> type will remove the track matte for this layer and reset the track matte type.</p>
-<h4 id="layer-avlayer-type_26">Type<a class="headerlink" href="#layer-avlayer-type_26" title="Permanent link">&para;</a></h4>
+<h4 id="layer-avlayer-type_27">Type<a class="headerlink" href="#layer-avlayer-type_27" title="Permanent link">&para;</a></h4>
 <p>A <code>TrackMatteType</code> enumerated value; read/write. One of:</p>
 <ul>
 <li><code>TrackMatteType.ALPHA</code></li>
@@ -10807,9 +10917,9 @@ Specifying the <code>TrackMatteType.NO_TRACK_MATTE</code> type will remove the t
 <hr />
 <h3 id="layer-avlayer-avlayerwidth">AVLayer.width<a class="headerlink" href="#layer-avlayer-avlayerwidth" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).width</code></p>
-<h4 id="layer-avlayer-description_28">Description<a class="headerlink" href="#layer-avlayer-description_28" title="Permanent link">&para;</a></h4>
+<h4 id="layer-avlayer-description_29">Description<a class="headerlink" href="#layer-avlayer-description_29" title="Permanent link">&para;</a></h4>
 <p>The width of the layer in pixels.</p>
-<h4 id="layer-avlayer-type_27">Type<a class="headerlink" href="#layer-avlayer-type_27" title="Permanent link">&para;</a></h4>
+<h4 id="layer-avlayer-type_28">Type<a class="headerlink" href="#layer-avlayer-type_28" title="Permanent link">&para;</a></h4>
 <p>Floating-point value; read-only.</p>
 <hr />
 <h2 id="layer-avlayer-methods">Methods<a class="headerlink" href="#layer-avlayer-methods" title="Permanent link">&para;</a></h2>
@@ -10819,7 +10929,7 @@ Specifying the <code>TrackMatteType.NO_TRACK_MATTE</code> type will remove the t
 <p class="admonition-title">Note</p>
 <p>This functionality was added in After Effects 18.0 (2021)</p>
 </div>
-<h4 id="layer-avlayer-description_29">Description<a class="headerlink" href="#layer-avlayer-description_29" title="Permanent link">&para;</a></h4>
+<h4 id="layer-avlayer-description_30">Description<a class="headerlink" href="#layer-avlayer-description_30" title="Permanent link">&para;</a></h4>
 <p>Adds the layer to the Essential Graphics Panel for the specified composition.</p>
 <p>Returns <code>true</code> if the layer is successfully added, or otherwise <code>false</code>.</p>
 <p>If the layer cannot be added, it is either because it is not a layer type for which media can be replaced (referred to as Media Replacement Layers), or the layer has already been added to the EGP for that composition. After Effects will present a warning dialog if the layer cannot be added to the EGP.</p>
@@ -10850,7 +10960,7 @@ Specifying the <code>TrackMatteType.NO_TRACK_MATTE</code> type will remove the t
 <p class="admonition-title">Note</p>
 <p>This functionality was added in After Effects 18.0 (2021)</p>
 </div>
-<h4 id="layer-avlayer-description_30">Description<a class="headerlink" href="#layer-avlayer-description_30" title="Permanent link">&para;</a></h4>
+<h4 id="layer-avlayer-description_31">Description<a class="headerlink" href="#layer-avlayer-description_31" title="Permanent link">&para;</a></h4>
 <p>Adds the layer to the Essential Graphics Panel for the specified composition.</p>
 <p>Returns <code>true</code> if the layer is successfully added, or otherwise <code>false</code>.</p>
 <p>If the layer cannot be added, it is either because it is not a layer type for which media can be replaced (referred to as Media Replacement Layers), or the layer has already been added to the EGP for that composition. After Effects will present a warning dialog if the layer cannot be added to the EGP.</p>
@@ -10882,7 +10992,7 @@ Specifying the <code>TrackMatteType.NO_TRACK_MATTE</code> type will remove the t
 <hr />
 <h3 id="layer-avlayer-avlayeraudioactiveattime">AVLayer.audioActiveAtTime()<a class="headerlink" href="#layer-avlayer-avlayeraudioactiveattime" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).audioActiveAtTime(time)</code></p>
-<h4 id="layer-avlayer-description_31">Description<a class="headerlink" href="#layer-avlayer-description_31" title="Permanent link">&para;</a></h4>
+<h4 id="layer-avlayer-description_32">Description<a class="headerlink" href="#layer-avlayer-description_32" title="Permanent link">&para;</a></h4>
 <p>Returns <code>true</code> if this layer's audio will be active at the specified time.</p>
 <p>For this method to return <code>true</code>, <code>audioEnabled</code> must be <code>true</code>, no other layer with audio may be soloing unless this layer is soloed too, and the time must be between the <code>inPoint</code> and <code>outPoint</code> of this layer.</p>
 <h4 id="layer-avlayer-parameters_2">Parameters<a class="headerlink" href="#layer-avlayer-parameters_2" title="Permanent link">&para;</a></h4>
@@ -10907,7 +11017,7 @@ Specifying the <code>TrackMatteType.NO_TRACK_MATTE</code> type will remove the t
 <hr />
 <h3 id="layer-avlayer-avlayercalculatetransformfrompoints">AVLayer.calculateTransformFromPoints()<a class="headerlink" href="#layer-avlayer-avlayercalculatetransformfrompoints" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).calculateTransformFromPoints(pointTopLeft, pointTopRight, pointBottomRight)</code></p>
-<h4 id="layer-avlayer-description_32">Description<a class="headerlink" href="#layer-avlayer-description_32" title="Permanent link">&para;</a></h4>
+<h4 id="layer-avlayer-description_33">Description<a class="headerlink" href="#layer-avlayer-description_33" title="Permanent link">&para;</a></h4>
 <p>Calculates a transformation from a set of points in this layer.</p>
 <h4 id="layer-avlayer-parameters_3">Parameters<a class="headerlink" href="#layer-avlayer-parameters_3" title="Permanent link">&para;</a></h4>
 <table>
@@ -10954,7 +11064,7 @@ Specifying the <code>TrackMatteType.NO_TRACK_MATTE</code> type will remove the t
 <p class="admonition-title">Note</p>
 <p>This functionality was added in After Effects 18.0 (2021)</p>
 </div>
-<h4 id="layer-avlayer-description_33">Description<a class="headerlink" href="#layer-avlayer-description_33" title="Permanent link">&para;</a></h4>
+<h4 id="layer-avlayer-description_34">Description<a class="headerlink" href="#layer-avlayer-description_34" title="Permanent link">&para;</a></h4>
 <p>Test whether or not the layer can be added to the Essential Graphics Panel for the specified composition.</p>
 <p>Returns <code>true</code> if the layer can be added, or otherwise <code>false</code>.</p>
 <p>If the layer cannot be added, it is either because it is not a layer type for which media can be replaced (referred to as Media Replacement Layers), or the layer has already been added to the EGP for that composition.</p>
@@ -10993,7 +11103,7 @@ Specifying the <code>TrackMatteType.NO_TRACK_MATTE</code> type will remove the t
 <p class="admonition-title">Note</p>
 <p>This functionality was added in After Effects 13.2 (CC 2014.2)</p>
 </div>
-<h4 id="layer-avlayer-description_34">Description<a class="headerlink" href="#layer-avlayer-description_34" title="Permanent link">&para;</a></h4>
+<h4 id="layer-avlayer-description_35">Description<a class="headerlink" href="#layer-avlayer-description_35" title="Permanent link">&para;</a></h4>
 <p>Converts composition coordinates, such as <code>sourcePointToComp</code>, to layer coordinates.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -11021,7 +11131,7 @@ Specifying the <code>TrackMatteType.NO_TRACK_MATTE</code> type will remove the t
 <hr />
 <h3 id="layer-avlayer-avlayeropeninviewer">AVLayer.openInViewer()<a class="headerlink" href="#layer-avlayer-avlayeropeninviewer" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).openInViewer()</code></p>
-<h4 id="layer-avlayer-description_35">Description<a class="headerlink" href="#layer-avlayer-description_35" title="Permanent link">&para;</a></h4>
+<h4 id="layer-avlayer-description_36">Description<a class="headerlink" href="#layer-avlayer-description_36" title="Permanent link">&para;</a></h4>
 <p>Opens the layer in a Layer panel, and moves the Layer panel to front and gives it focus.</p>
 <h4 id="layer-avlayer-parameters_6">Parameters<a class="headerlink" href="#layer-avlayer-parameters_6" title="Permanent link">&para;</a></h4>
 <p>None.</p>
@@ -11034,7 +11144,7 @@ Specifying the <code>TrackMatteType.NO_TRACK_MATTE</code> type will remove the t
 <p class="admonition-title">Note</p>
 <p>This functionality was added in After Effects 23.0</p>
 </div>
-<h4 id="layer-avlayer-description_36">Description<a class="headerlink" href="#layer-avlayer-description_36" title="Permanent link">&para;</a></h4>
+<h4 id="layer-avlayer-description_37">Description<a class="headerlink" href="#layer-avlayer-description_37" title="Permanent link">&para;</a></h4>
 <p>Removes the track matte for this layer while preserving the TrackMatteType.
 See <a href="#layer-avlayer-avlayersettrackmatte">AVLayer.setTrackMatte()</a> for another way of removing track matte.</p>
 <h4 id="layer-avlayer-parameters_7">Parameters<a class="headerlink" href="#layer-avlayer-parameters_7" title="Permanent link">&para;</a></h4>
@@ -11053,7 +11163,7 @@ See <a href="#layer-avlayer-avlayersettrackmatte">AVLayer.setTrackMatte()</a> fo
 <hr />
 <h3 id="layer-avlayer-avlayerreplacesource">AVLayer.replaceSource()<a class="headerlink" href="#layer-avlayer-avlayerreplacesource" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).replaceSource(newSource, fixExpressions)</code></p>
-<h4 id="layer-avlayer-description_37">Description<a class="headerlink" href="#layer-avlayer-description_37" title="Permanent link">&para;</a></h4>
+<h4 id="layer-avlayer-description_38">Description<a class="headerlink" href="#layer-avlayer-description_38" title="Permanent link">&para;</a></h4>
 <p>Replaces the source for this layer.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -11119,7 +11229,7 @@ See <a href="#layer-avlayer-avlayersettrackmatte">AVLayer.setTrackMatte()</a> fo
 <p class="admonition-title">Note</p>
 <p>This functionality was added in After Effects 23.0</p>
 </div>
-<h4 id="layer-avlayer-description_38">Description<a class="headerlink" href="#layer-avlayer-description_38" title="Permanent link">&para;</a></h4>
+<h4 id="layer-avlayer-description_39">Description<a class="headerlink" href="#layer-avlayer-description_39" title="Permanent link">&para;</a></h4>
 <p>Sets the track matte layer and type for this layer. Passing in <code>null</code> to trackMatteLayer parameter removes the track matte.
 See <a href="#layer-avlayer-avlayerremovetrackmatte">AVLayer.removeTrackMatte()</a> for another way of removing track matte.</p>
 <h4 id="layer-avlayer-parameters_9">Parameters<a class="headerlink" href="#layer-avlayer-parameters_9" title="Permanent link">&para;</a></h4>
@@ -11174,7 +11284,7 @@ See <a href="#layer-avlayer-avlayerremovetrackmatte">AVLayer.removeTrackMatte()<
 <p class="admonition-title">Note</p>
 <p>This functionality was added in After Effects 13.2 (CC 2014.2)</p>
 </div>
-<h4 id="layer-avlayer-description_39">Description<a class="headerlink" href="#layer-avlayer-description_39" title="Permanent link">&para;</a></h4>
+<h4 id="layer-avlayer-description_40">Description<a class="headerlink" href="#layer-avlayer-description_40" title="Permanent link">&para;</a></h4>
 <p>Converts layer coordinates, such as <code>boxTextPos</code>, to composition coordinates.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -11207,7 +11317,7 @@ See <a href="#layer-avlayer-avlayerremovetrackmatte">AVLayer.removeTrackMatte()<
 <hr />
 <h3 id="layer-avlayer-avlayersourcerectattime">AVLayer.sourceRectAtTime()<a class="headerlink" href="#layer-avlayer-avlayersourcerectattime" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).sourceRectAtTime(timeT, extents)</code></p>
-<h4 id="layer-avlayer-description_40">Description<a class="headerlink" href="#layer-avlayer-description_40" title="Permanent link">&para;</a></h4>
+<h4 id="layer-avlayer-description_41">Description<a class="headerlink" href="#layer-avlayer-description_41" title="Permanent link">&para;</a></h4>
 <p>Retrieves the rectangle bounds of the layer at the specified time index, corrected for text or shape layer content. Use, for example, to write text that is properly aligned to the baseline.</p>
 <h4 id="layer-avlayer-parameters_11">Parameters<a class="headerlink" href="#layer-avlayer-parameters_11" title="Permanent link">&para;</a></h4>
 <table>
@@ -11343,7 +11453,59 @@ See <a href="#layer-avlayer-avlayerremovetrackmatte">AVLayer.removeTrackMatte()<
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>ShapeLayer is a subclass of <a href="#layer-avlayer">AVLayer</a>, which is a subclass of <a href="#layer-layer">Layer</a>. All methods and attributes of AVLayer and Layer are available when working with ShapeLayer.</p>
-</div></section><section class="print-page" id="layer-textlayer" heading-number="5.7"><h1 id="layer-textlayer-textlayer-object">TextLayer object<a class="headerlink" href="#layer-textlayer-textlayer-object" title="Permanent link">&para;</a></h1>
+</div>
+<h2 id="layer-shapelayer-attributes">Attributes<a class="headerlink" href="#layer-shapelayer-attributes" title="Permanent link">&para;</a></h2>
+<h3 id="layer-shapelayer-shapelayercanaddorremovematerialoverride">ShapeLayer.canAddOrRemoveMaterialOverride<a class="headerlink" href="#layer-shapelayer-shapelayercanaddorremovematerialoverride" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).canAddOrRemoveMaterialOverride</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This functionality is in After Effects (Beta) 27.1 and is subject to change while it remains in Beta.</p>
+</div>
+<h4 id="layer-shapelayer-description_1">Description<a class="headerlink" href="#layer-shapelayer-description_1" title="Permanent link">&para;</a></h4>
+<p><code>true</code> if Shape layers support adding or removing material overrides.</p>
+<p>Shape layers return <code>true</code> even when they are 2D or the composition uses another renderer. Material assignment access and override operations will fail unless the layer is 3D in an Advanced 3D composition.</p>
+<h4 id="layer-shapelayer-type">Type<a class="headerlink" href="#layer-shapelayer-type" title="Permanent link">&para;</a></h4>
+<p>Boolean; read-only.</p>
+<hr />
+<h3 id="layer-shapelayer-shapelayermaterialassignment">ShapeLayer.materialAssignment<a class="headerlink" href="#layer-shapelayer-shapelayermaterialassignment" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).materialAssignment</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This functionality is in After Effects (Beta) 27.1 and is subject to change while it remains in Beta.</p>
+</div>
+<h4 id="layer-shapelayer-description_2">Description<a class="headerlink" href="#layer-shapelayer-description_2" title="Permanent link">&para;</a></h4>
+<p>The layer's material assignment group. Material assignments are available when the Shape layer is 3D and the composition uses the Advanced 3D renderer. The front, bevel, side, and back assignments can be selected with <code>MaterialAssignment.FRONT</code>, <code>MaterialAssignment.BEVEL</code>, <code>MaterialAssignment.SIDE</code>, and <code>MaterialAssignment.BACK</code>.</p>
+<p>Each assignment's <a href="#property-materialpropertygroup-ae-properties">material properties</a> depend on its source and projection mode. A default source exposes no additional material properties or texture transforms. Substance and layer sources expose texture controls, and a layer source also exposes material properties such as Opacity, Roughness, and Metallic.</p>
+<h4 id="layer-shapelayer-type_1">Type<a class="headerlink" href="#layer-shapelayer-type_1" title="Permanent link">&para;</a></h4>
+<p><a href="#property-materialassignmentpropertygroup">MaterialAssignmentPropertyGroup object</a>; read-only.</p>
+<hr />
+<h3 id="layer-shapelayer-shapelayermaterialassignmentcount">ShapeLayer.materialAssignmentCount<a class="headerlink" href="#layer-shapelayer-shapelayermaterialassignmentcount" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).materialAssignmentCount</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This functionality is in After Effects (Beta) 27.1 and is subject to change while it remains in Beta.</p>
+</div>
+<h4 id="layer-shapelayer-description_3">Description<a class="headerlink" href="#layer-shapelayer-description_3" title="Permanent link">&para;</a></h4>
+<p>The total number of material assignments available on a 3D Shape layer in an Advanced 3D composition. The value is 4 for the front, bevel, side, and back assignments, including assignments whose override has not been added. This value is the same as <code>materialAssignment.numProperties</code>.</p>
+<h4 id="layer-shapelayer-type_2">Type<a class="headerlink" href="#layer-shapelayer-type_2" title="Permanent link">&para;</a></h4>
+<p>Integer; read-only.</p>
+<hr />
+<h2 id="layer-shapelayer-methods">Methods<a class="headerlink" href="#layer-shapelayer-methods" title="Permanent link">&para;</a></h2>
+<h3 id="layer-shapelayer-shapelayeraddallmaterialoverrides">ShapeLayer.addAllMaterialOverrides()<a class="headerlink" href="#layer-shapelayer-shapelayeraddallmaterialoverrides" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).addAllMaterialOverrides()</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This functionality is in After Effects (Beta) 27.1 and is subject to change while it remains in Beta.</p>
+</div>
+<h4 id="layer-shapelayer-description_4">Description<a class="headerlink" href="#layer-shapelayer-description_4" title="Permanent link">&para;</a></h4>
+<p>Adds every material override that is not already present, preserving existing material sources and property values.</p>
+<p>On layers that support adding or removing overrides, this method does nothing if all overrides are already present.</p>
+<p>The layer must be 3D, have available material assignments, and belong to a composition that uses the Advanced 3D renderer.</p>
+<h4 id="layer-shapelayer-parameters">Parameters<a class="headerlink" href="#layer-shapelayer-parameters" title="Permanent link">&para;</a></h4>
+<p>None.</p>
+<h4 id="layer-shapelayer-returns">Returns<a class="headerlink" href="#layer-shapelayer-returns" title="Permanent link">&para;</a></h4>
+<p>Nothing.</p>
+<hr /></section><section class="print-page" id="layer-textlayer" heading-number="5.7"><h1 id="layer-textlayer-textlayer-object">TextLayer object<a class="headerlink" href="#layer-textlayer-textlayer-object" title="Permanent link">&para;</a></h1>
 <p><code>app.project.item(index).layer(index)</code></p>
 <h4 id="layer-textlayer-description">Description<a class="headerlink" href="#layer-textlayer-description" title="Permanent link">&para;</a></h4>
 <p>The TextLayer object represents a text layer within a composition. Create it using the <a href="#layer-layercollection-layercollectionaddtext">LayerCollection object's addText method</a>. It can be accessed in an item's layer collection either by index number or by a name string.</p>
@@ -11370,6 +11532,58 @@ See <a href="#layer-avlayer-avlayerremovetrackmatte">AVLayer.removeTrackMatte()<
 <li><code>InterCharacterBlending</code></li>
 <li><code>Animators</code></li>
 </ul>
+<h2 id="layer-textlayer-attributes">Attributes<a class="headerlink" href="#layer-textlayer-attributes" title="Permanent link">&para;</a></h2>
+<h3 id="layer-textlayer-textlayercanaddorremovematerialoverride">TextLayer.canAddOrRemoveMaterialOverride<a class="headerlink" href="#layer-textlayer-textlayercanaddorremovematerialoverride" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).canAddOrRemoveMaterialOverride</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This functionality is in After Effects (Beta) 27.1 and is subject to change while it remains in Beta.</p>
+</div>
+<h4 id="layer-textlayer-description_1">Description<a class="headerlink" href="#layer-textlayer-description_1" title="Permanent link">&para;</a></h4>
+<p><code>true</code> if Text layers support adding or removing material overrides.</p>
+<p>Text layers return <code>true</code> even when they are 2D or the composition uses another renderer. Material assignment access and override operations will fail unless the layer is 3D in an Advanced 3D composition.</p>
+<h4 id="layer-textlayer-type">Type<a class="headerlink" href="#layer-textlayer-type" title="Permanent link">&para;</a></h4>
+<p>Boolean; read-only.</p>
+<hr />
+<h3 id="layer-textlayer-textlayermaterialassignment">TextLayer.materialAssignment<a class="headerlink" href="#layer-textlayer-textlayermaterialassignment" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).materialAssignment</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This functionality is in After Effects (Beta) 27.1 and is subject to change while it remains in Beta.</p>
+</div>
+<h4 id="layer-textlayer-description_2">Description<a class="headerlink" href="#layer-textlayer-description_2" title="Permanent link">&para;</a></h4>
+<p>The layer's material assignment group. Material assignments are available when the Text layer is 3D and the composition uses the Advanced 3D renderer. The front, bevel, side, and back assignments can be selected with <code>MaterialAssignment.FRONT</code>, <code>MaterialAssignment.BEVEL</code>, <code>MaterialAssignment.SIDE</code>, and <code>MaterialAssignment.BACK</code>.</p>
+<p>Each assignment's <a href="#property-materialpropertygroup-ae-properties">material properties</a> depend on its source and projection mode. A default source exposes no additional material properties or texture transforms. Substance and layer sources expose texture controls, and a layer source also exposes material properties such as Opacity, Roughness, and Metallic.</p>
+<h4 id="layer-textlayer-type_1">Type<a class="headerlink" href="#layer-textlayer-type_1" title="Permanent link">&para;</a></h4>
+<p><a href="#property-materialassignmentpropertygroup">MaterialAssignmentPropertyGroup object</a>; read-only.</p>
+<hr />
+<h3 id="layer-textlayer-textlayermaterialassignmentcount">TextLayer.materialAssignmentCount<a class="headerlink" href="#layer-textlayer-textlayermaterialassignmentcount" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).materialAssignmentCount</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This functionality is in After Effects (Beta) 27.1 and is subject to change while it remains in Beta.</p>
+</div>
+<h4 id="layer-textlayer-description_3">Description<a class="headerlink" href="#layer-textlayer-description_3" title="Permanent link">&para;</a></h4>
+<p>The total number of material assignments available on a 3D Text layer in an Advanced 3D composition. The value is 4 for the front, bevel, side, and back assignments, including assignments whose override has not been added. This value is the same as <code>materialAssignment.numProperties</code>.</p>
+<h4 id="layer-textlayer-type_2">Type<a class="headerlink" href="#layer-textlayer-type_2" title="Permanent link">&para;</a></h4>
+<p>Integer; read-only.</p>
+<hr />
+<h2 id="layer-textlayer-methods">Methods<a class="headerlink" href="#layer-textlayer-methods" title="Permanent link">&para;</a></h2>
+<h3 id="layer-textlayer-textlayeraddallmaterialoverrides">TextLayer.addAllMaterialOverrides()<a class="headerlink" href="#layer-textlayer-textlayeraddallmaterialoverrides" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).addAllMaterialOverrides()</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This functionality is in After Effects (Beta) 27.1 and is subject to change while it remains in Beta.</p>
+</div>
+<h4 id="layer-textlayer-description_4">Description<a class="headerlink" href="#layer-textlayer-description_4" title="Permanent link">&para;</a></h4>
+<p>Adds every material override that is not already present, preserving existing material sources and property values.</p>
+<p>On layers that support adding or removing overrides, this method does nothing if all overrides are already present.</p>
+<p>The layer must be 3D, have available material assignments, and belong to a composition that uses the Advanced 3D renderer.</p>
+<h4 id="layer-textlayer-parameters">Parameters<a class="headerlink" href="#layer-textlayer-parameters" title="Permanent link">&para;</a></h4>
+<p>None.</p>
+<h4 id="layer-textlayer-returns">Returns<a class="headerlink" href="#layer-textlayer-returns" title="Permanent link">&para;</a></h4>
+<p>Nothing.</p>
+<hr />
 <h4 id="layer-textlayer-unused-properties-and-attributes">Unused Properties and Attributes<a class="headerlink" href="#layer-textlayer-unused-properties-and-attributes" title="Permanent link">&para;</a></h4>
 <p>The <code>TimeRemapandMotionTrackers</code> properties, inherited from AVLayer, are not applicable to text layers, and their related AVLayer attributes are not used:</p>
 <ul>
@@ -11419,7 +11633,61 @@ See <a href="#layer-avlayer-avlayerremovetrackmatte">AVLayer.removeTrackMatte()<
 </span><span id="__span-0-3"><span class="p">{</span>
 </span><span id="__span-0-4"><span class="w">    </span><span class="c1">// do something</span>
 </span><span id="__span-0-5"><span class="p">}</span>
-</span></code></pre></div></section><section class="print-page" id="layer-parametricmeshlayer" heading-number="5.9"><h1 id="layer-parametricmeshlayer-parametricmeshlayer-object">ParametricMeshLayer object<a class="headerlink" href="#layer-parametricmeshlayer-parametricmeshlayer-object" title="Permanent link">&para;</a></h1>
+</span></code></pre></div>
+<h2 id="layer-threedmodellayer-attributes">Attributes<a class="headerlink" href="#layer-threedmodellayer-attributes" title="Permanent link">&para;</a></h2>
+<h3 id="layer-threedmodellayer-threedmodellayercanaddorremovematerialoverride">ThreeDModelLayer.canAddOrRemoveMaterialOverride<a class="headerlink" href="#layer-threedmodellayer-threedmodellayercanaddorremovematerialoverride" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).canAddOrRemoveMaterialOverride</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This functionality is in After Effects (Beta) 27.1 and is subject to change while it remains in Beta.</p>
+</div>
+<h4 id="layer-threedmodellayer-description_1">Description<a class="headerlink" href="#layer-threedmodellayer-description_1" title="Permanent link">&para;</a></h4>
+<p><code>true</code> if this layer type supports adding or removing material overrides. This indicates type support, not whether any material override currently exists.</p>
+<p>A single-material model has an always-present override and returns <code>false</code>; a multi-material model returns <code>true</code>.</p>
+<h4 id="layer-threedmodellayer-type">Type<a class="headerlink" href="#layer-threedmodellayer-type" title="Permanent link">&para;</a></h4>
+<p>Boolean; read-only.</p>
+<hr />
+<h3 id="layer-threedmodellayer-threedmodellayermaterialassignment">ThreeDModelLayer.materialAssignment<a class="headerlink" href="#layer-threedmodellayer-threedmodellayermaterialassignment" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).materialAssignment</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This functionality is in After Effects (Beta) 27.1 and is subject to change while it remains in Beta.</p>
+</div>
+<h4 id="layer-threedmodellayer-description_2">Description<a class="headerlink" href="#layer-threedmodellayer-description_2" title="Permanent link">&para;</a></h4>
+<p>The layer's material assignment group. Imported 3D models can contain multiple model-defined material names. Access assignments by 1-based index or exact name.</p>
+<p>Each assignment exposes Texture Offset, Texture Rotation, and Texture Scale even for the default material. Other <a href="#property-materialpropertygroup-ae-properties">material properties</a> depend on the source and projection mode. Uniform Tiling and Randomize Offset are not available on imported model layers.</p>
+<h4 id="layer-threedmodellayer-type_1">Type<a class="headerlink" href="#layer-threedmodellayer-type_1" title="Permanent link">&para;</a></h4>
+<p><a href="#property-materialassignmentpropertygroup">MaterialAssignmentPropertyGroup object</a>; read-only.</p>
+<hr />
+<h3 id="layer-threedmodellayer-threedmodellayermaterialassignmentcount">ThreeDModelLayer.materialAssignmentCount<a class="headerlink" href="#layer-threedmodellayer-threedmodellayermaterialassignmentcount" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).materialAssignmentCount</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This functionality is in After Effects (Beta) 27.1 and is subject to change while it remains in Beta.</p>
+</div>
+<h4 id="layer-threedmodellayer-description_3">Description<a class="headerlink" href="#layer-threedmodellayer-description_3" title="Permanent link">&para;</a></h4>
+<p>The total number of material assignments defined by the imported 3D model, including assignments whose material override has not been added. This value is the same as <code>materialAssignment.numProperties</code>.</p>
+<p>If the model has no available material assignments, accessing this attribute fails rather than returning 0.</p>
+<h4 id="layer-threedmodellayer-type_2">Type<a class="headerlink" href="#layer-threedmodellayer-type_2" title="Permanent link">&para;</a></h4>
+<p>Integer; read-only.</p>
+<hr />
+<h2 id="layer-threedmodellayer-methods">Methods<a class="headerlink" href="#layer-threedmodellayer-methods" title="Permanent link">&para;</a></h2>
+<h3 id="layer-threedmodellayer-threedmodellayeraddallmaterialoverrides">ThreeDModelLayer.addAllMaterialOverrides()<a class="headerlink" href="#layer-threedmodellayer-threedmodellayeraddallmaterialoverrides" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).addAllMaterialOverrides()</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This functionality is in After Effects (Beta) 27.1 and is subject to change while it remains in Beta.</p>
+</div>
+<h4 id="layer-threedmodellayer-description_4">Description<a class="headerlink" href="#layer-threedmodellayer-description_4" title="Permanent link">&para;</a></h4>
+<p>Adds every material override that is not already present, preserving existing material sources and property values.</p>
+<p>On layers that support adding or removing overrides, this method does nothing if all overrides are already present.</p>
+<p>This method requires a layer that supports adding or removing overrides and has available material assignments.</p>
+<p>Single-material models always have their material override present, so this method is not supported on those layers.</p>
+<h4 id="layer-threedmodellayer-parameters">Parameters<a class="headerlink" href="#layer-threedmodellayer-parameters" title="Permanent link">&para;</a></h4>
+<p>None.</p>
+<h4 id="layer-threedmodellayer-returns">Returns<a class="headerlink" href="#layer-threedmodellayer-returns" title="Permanent link">&para;</a></h4>
+<p>Nothing.</p>
+<hr /></section><section class="print-page" id="layer-parametricmeshlayer" heading-number="5.9"><h1 id="layer-parametricmeshlayer-parametricmeshlayer-object">ParametricMeshLayer object<a class="headerlink" href="#layer-parametricmeshlayer-parametricmeshlayer-object" title="Permanent link">&para;</a></h1>
 <p><code>app.project.item(index).layer(index)</code></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -11460,15 +11728,49 @@ See <a href="#layer-avlayer-avlayerremovetrackmatte">AVLayer.removeTrackMatte()<
 </span><span id="__span-0-5"><span class="p">}</span>
 </span></code></pre></div>
 <h2 id="layer-parametricmeshlayer-attributes">Attributes<a class="headerlink" href="#layer-parametricmeshlayer-attributes" title="Permanent link">&para;</a></h2>
+<h3 id="layer-parametricmeshlayer-parametricmeshlayercanaddorremovematerialoverride">ParametricMeshLayer.canAddOrRemoveMaterialOverride<a class="headerlink" href="#layer-parametricmeshlayer-parametricmeshlayercanaddorremovematerialoverride" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).canAddOrRemoveMaterialOverride</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This functionality is in After Effects (Beta) 27.1 and is subject to change while it remains in Beta.</p>
+</div>
+<h4 id="layer-parametricmeshlayer-description_1">Description<a class="headerlink" href="#layer-parametricmeshlayer-description_1" title="Permanent link">&para;</a></h4>
+<p>This value is <code>false</code> for parametric mesh layers because their material override is always present and cannot be removed. The material source can still be changed with <a href="#property-materialpropertygroup-materialpropertygroupsetmaterialoverride">MaterialPropertyGroup.setMaterialOverride()</a>.</p>
+<h4 id="layer-parametricmeshlayer-type">Type<a class="headerlink" href="#layer-parametricmeshlayer-type" title="Permanent link">&para;</a></h4>
+<p>Boolean; read-only.</p>
+<hr />
+<h3 id="layer-parametricmeshlayer-parametricmeshlayermaterialassignment">ParametricMeshLayer.materialAssignment<a class="headerlink" href="#layer-parametricmeshlayer-parametricmeshlayermaterialassignment" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).materialAssignment</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This functionality is in After Effects (Beta) 27.1 and is subject to change while it remains in Beta.</p>
+</div>
+<h4 id="layer-parametricmeshlayer-description_2">Description<a class="headerlink" href="#layer-parametricmeshlayer-description_2" title="Permanent link">&para;</a></h4>
+<p>The layer's material assignment group. A ParametricMeshLayer has one material assignment, accessible with <code>MaterialAssignment.DEFAULT</code>.</p>
+<p>The assignment's <a href="#property-materialpropertygroup-ae-properties">material properties</a> depend on its source. The default material exposes properties such as Base Color and Roughness. Substance and layer sources expose texture transform properties. Uniform Tiling and Randomize Offset are not available on parametric mesh layers.</p>
+<h4 id="layer-parametricmeshlayer-type_1">Type<a class="headerlink" href="#layer-parametricmeshlayer-type_1" title="Permanent link">&para;</a></h4>
+<p><a href="#property-materialassignmentpropertygroup">MaterialAssignmentPropertyGroup object</a>; read-only.</p>
+<hr />
+<h3 id="layer-parametricmeshlayer-parametricmeshlayermaterialassignmentcount">ParametricMeshLayer.materialAssignmentCount<a class="headerlink" href="#layer-parametricmeshlayer-parametricmeshlayermaterialassignmentcount" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).materialAssignmentCount</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This functionality is in After Effects (Beta) 27.1 and is subject to change while it remains in Beta.</p>
+</div>
+<h4 id="layer-parametricmeshlayer-description_3">Description<a class="headerlink" href="#layer-parametricmeshlayer-description_3" title="Permanent link">&para;</a></h4>
+<p>The total number of material assignments on the layer, including assignments whose material override has not been added. A ParametricMeshLayer has one material assignment. This value is the same as <code>materialAssignment.numProperties</code>.</p>
+<h4 id="layer-parametricmeshlayer-type_2">Type<a class="headerlink" href="#layer-parametricmeshlayer-type_2" title="Permanent link">&para;</a></h4>
+<p>Integer; read-only.</p>
+<hr />
 <h3 id="layer-parametricmeshlayer-parametricmeshlayerparametricmeshtype">ParametricMeshLayer.parametricMeshType<a class="headerlink" href="#layer-parametricmeshlayer-parametricmeshlayerparametricmeshtype" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).parametricMeshType</code></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This functionality was added in After Effects 26.3.</p>
 </div>
-<h4 id="layer-parametricmeshlayer-description_1">Description<a class="headerlink" href="#layer-parametricmeshlayer-description_1" title="Permanent link">&para;</a></h4>
+<h4 id="layer-parametricmeshlayer-description_4">Description<a class="headerlink" href="#layer-parametricmeshlayer-description_4" title="Permanent link">&para;</a></h4>
 <p>For a parametric mesh layer, its mesh type. Trying to set this attribute for a non-parametric mesh layer produces an error.</p>
-<h4 id="layer-parametricmeshlayer-type">Type<a class="headerlink" href="#layer-parametricmeshlayer-type" title="Permanent link">&para;</a></h4>
+<h4 id="layer-parametricmeshlayer-type_3">Type<a class="headerlink" href="#layer-parametricmeshlayer-type_3" title="Permanent link">&para;</a></h4>
 <p>A <code>ParametricMeshType</code> enumerated value; read/write. One of:</p>
 <ul>
 <li><code>ParametricMeshType.SPHERE</code></li>
@@ -11485,9 +11787,9 @@ See <a href="#layer-avlayer-avlayerremovetrackmatte">AVLayer.removeTrackMatte()<
 <p class="admonition-title">Note</p>
 <p>This functionality was added in After Effects 26.3.</p>
 </div>
-<h4 id="layer-parametricmeshlayer-description_2">Description<a class="headerlink" href="#layer-parametricmeshlayer-description_2" title="Permanent link">&para;</a></h4>
+<h4 id="layer-parametricmeshlayer-description_5">Description<a class="headerlink" href="#layer-parametricmeshlayer-description_5" title="Permanent link">&para;</a></h4>
 <p>Gets/sets details about the structure of the parametric mesh.</p>
-<h4 id="layer-parametricmeshlayer-type_1">Type<a class="headerlink" href="#layer-parametricmeshlayer-type_1" title="Permanent link">&para;</a></h4>
+<h4 id="layer-parametricmeshlayer-type_4">Type<a class="headerlink" href="#layer-parametricmeshlayer-type_4" title="Permanent link">&para;</a></h4>
 <p><code>ParametricMeshOptions</code> based on the ParametricMeshType of the layer, as follows.</p>
 <h4 id="layer-parametricmeshlayer-for-parametricmeshtypecube">For ParametricMeshType.CUBE<a class="headerlink" href="#layer-parametricmeshlayer-for-parametricmeshtypecube" title="Permanent link">&para;</a></h4>
 <ul>
@@ -11555,13 +11857,13 @@ See <a href="#layer-avlayer-avlayerremovetrackmatte">AVLayer.removeTrackMatte()<
 <p class="admonition-title">Note</p>
 <p>This functionality was added in After Effects 26.3.</p>
 </div>
-<h4 id="layer-parametricmeshlayer-description_3">Description<a class="headerlink" href="#layer-parametricmeshlayer-description_3" title="Permanent link">&para;</a></h4>
+<h4 id="layer-parametricmeshlayer-description_6">Description<a class="headerlink" href="#layer-parametricmeshlayer-description_6" title="Permanent link">&para;</a></h4>
 <p>Gets/sets details about the beveling of the parametric mesh.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Only Parametric Mesh Layers with <code>ParametricMeshType.CUBE</code>, <code>ParametricMeshType.CONE</code>, and <code>ParametricMeshType.CYLINDER</code> have <code>parametricBevelOptions</code>.</p>
 </div>
-<h4 id="layer-parametricmeshlayer-type_2">Type<a class="headerlink" href="#layer-parametricmeshlayer-type_2" title="Permanent link">&para;</a></h4>
+<h4 id="layer-parametricmeshlayer-type_5">Type<a class="headerlink" href="#layer-parametricmeshlayer-type_5" title="Permanent link">&para;</a></h4>
 <p><code>ParametricBevelOptions</code> based on the ParametricMeshType of the layer, as follows.</p>
 <h4 id="layer-parametricmeshlayer-for-parametricmeshtypecube_1">For ParametricMeshType.CUBE<a class="headerlink" href="#layer-parametricmeshlayer-for-parametricmeshtypecube_1" title="Permanent link">&para;</a></h4>
 <ul>
@@ -13694,7 +13996,7 @@ must also be true.</p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>PropertyGroup is a base class for <a href="#layer-layer">Layer</a> and <a href="#property-maskpropertygroup">MaskPropertyGroup</a>. PropertyGroup attributes and methods are available when working with layer or mask groups.</p>
+<p>PropertyGroup is a base class for <a href="#layer-layer">Layer</a>, <a href="#property-maskpropertygroup">MaskPropertyGroup</a>, <a href="#property-materialassignmentpropertygroup">MaterialAssignmentPropertyGroup</a>, and <a href="#property-materialpropertygroup">MaterialPropertyGroup</a>. PropertyGroup attributes and methods are available when working with these objects.</p>
 </div>
 <hr />
 <h2 id="property-propertygroup-attributes">Attributes<a class="headerlink" href="#property-propertygroup-attributes" title="Permanent link">&para;</a></h2>
@@ -14166,7 +14468,218 @@ For supported property names, see the table below.</p>
 <p>To get a Bulge Center value from a Bulge effect, you can use either of the following:</p>
 <div class="language-javascript highlight"><pre><span></span><code><span id="__span-7-1"><span class="nx">myLayer</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="s2">"Effects"</span><span class="p">).</span><span class="nx">property</span><span class="p">(</span><span class="s2">"Bulge"</span><span class="p">).</span><span class="nx">property</span><span class="p">(</span><span class="s2">"Bulge Center"</span><span class="p">);</span>
 </span><span id="__span-7-2"><span class="nx">myLayer</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="s2">"Effects"</span><span class="p">).</span><span class="nx">property</span><span class="p">(</span><span class="s2">"Bulge"</span><span class="p">).</span><span class="nx">property</span><span class="p">(</span><span class="s2">"bulgeCenter"</span><span class="p">);</span>
-</span></code></pre></div></section><section class="print-page" id="property-maskpropertygroup" heading-number="6.4"><h1 id="property-maskpropertygroup-maskpropertygroup-object">MaskPropertyGroup object<a class="headerlink" href="#property-maskpropertygroup-maskpropertygroup-object" title="Permanent link">&para;</a></h1>
+</span></code></pre></div></section><section class="print-page" id="property-materialassignmentpropertygroup" heading-number="6.4"><h1 id="property-materialassignmentpropertygroup-materialassignmentpropertygroup-object">MaterialAssignmentPropertyGroup object<a class="headerlink" href="#property-materialassignmentpropertygroup-materialassignmentpropertygroup-object" title="Permanent link">&para;</a></h1>
+<p><code>app.project.item(index).layer(index).materialAssignment</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects (Beta) 27.1 and is subject to change while it remains in Beta.</p>
+</div>
+<h4 id="property-materialassignmentpropertygroup-description">Description<a class="headerlink" href="#property-materialassignmentpropertygroup-description" title="Permanent link">&para;</a></h4>
+<p>The MaterialAssignmentPropertyGroup object contains the material assignments for a <a href="#layer-parametricmeshlayer">ParametricMeshLayer object</a>, <a href="#layer-threedmodellayer">ThreeDModelLayer object</a>, 3D <a href="#layer-shapelayer">ShapeLayer object</a>, and 3D <a href="#layer-textlayer">TextLayer object</a>.</p>
+<p>Each assignment is a MaterialPropertyGroup whose <a href="#property-materialpropertygroup-ae-properties">child material properties</a> depend on the receiving layer type, material source, and projection mode.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>MaterialAssignmentPropertyGroup is a subclass of <a href="#property-propertygroup">PropertyGroup object</a>. All PropertyGroup methods and attributes are available on a MaterialAssignmentPropertyGroup.</p>
+</div>
+<p>The group can be accessed from the layer's <code>materialAssignment</code> attribute:</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-0-1"><span class="kd">var</span><span class="w"> </span><span class="nx">materialAssignments</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">layer</span><span class="p">.</span><span class="nx">materialAssignment</span><span class="p">;</span>
+</span></code></pre></div>
+<p>For match names, see <a href="#matchnames-layer-3dlayer-materials">3D layer match names</a>.</p>
+<h2 id="property-materialassignmentpropertygroup-availability">Availability<a class="headerlink" href="#property-materialassignmentpropertygroup-availability" title="Permanent link">&para;</a></h2>
+<h3 id="property-materialassignmentpropertygroup-layer-requirements">Layer requirements<a class="headerlink" href="#property-materialassignmentpropertygroup-layer-requirements" title="Permanent link">&para;</a></h3>
+<p>Material assignments are available on <a href="#layer-parametricmeshlayer">parametric mesh layers</a> and <a href="#layer-threedmodellayer">imported 3D model layers</a>.</p>
+<p><a href="#layer-textlayer">Text layers</a> and <a href="#layer-shapelayer">shape layers</a> support material assignments when they are 3D layers in a composition that uses the Advanced 3D renderer.</p>
+<p>Other layer types do not support material assignments.</p>
+<h3 id="property-materialassignmentpropertygroup-override-state">Override state<a class="headerlink" href="#property-materialassignmentpropertygroup-override-state" title="Permanent link">&para;</a></h3>
+<p>Parametric mesh layers and single-material 3D model layers always have a material override. You can change its source, but you cannot add or remove the override.</p>
+<p>Text layers, shape layers, and 3D model layers with multiple materials let you add or remove an override for each material assignment independently.</p>
+<p>You can look up an assignment and read its <a href="#property-materialpropertygroup-materialpropertygroupisoverride">isOverride</a> and <a href="#property-materialpropertygroup-materialpropertygroupmaterialsource">materialSource</a> attributes even before adding its override. If <code>isOverride</code> is <code>false</code>, call <a href="#property-materialpropertygroup-materialpropertygroupsetmaterialoverride">setMaterialOverride()</a> before editing its material properties.</p>
+<p>Setting the source to <code>null</code> selects the default material without removing the override.</p>
+<h2 id="property-materialassignmentpropertygroup-materialassignment-enum">MaterialAssignment enum<a class="headerlink" href="#property-materialassignmentpropertygroup-materialassignment-enum" title="Permanent link">&para;</a></h2>
+<p>The <code>MaterialAssignment</code> enumerated values identify material slots that have a known semantic role:</p>
+<ul>
+<li><code>MaterialAssignment.FRONT</code></li>
+<li><code>MaterialAssignment.BEVEL</code></li>
+<li><code>MaterialAssignment.SIDE</code></li>
+<li><code>MaterialAssignment.BACK</code></li>
+<li><code>MaterialAssignment.DEFAULT</code></li>
+</ul>
+<p><code>FRONT</code>, <code>BEVEL</code>, <code>SIDE</code>, and <code>BACK</code> select slots on 3D TextLayer and ShapeLayer objects. <code>DEFAULT</code> selects the material assignment on a ParametricMeshLayer. ThreeDModelLayer material names are model-defined, so access its slots by index or exact name.</p>
+<h2 id="property-materialassignmentpropertygroup-methods">Methods<a class="headerlink" href="#property-materialassignmentpropertygroup-methods" title="Permanent link">&para;</a></h2>
+<h3 id="property-materialassignmentpropertygroup-materialassignmentpropertygroupproperty">MaterialAssignmentPropertyGroup.property()<a class="headerlink" href="#property-materialassignmentpropertygroup-materialassignmentpropertygroupproperty" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).materialAssignment.property(indexOrAssignmentOrName)</code></p>
+<h4 id="property-materialassignmentpropertygroup-description_1">Description<a class="headerlink" href="#property-materialassignmentpropertygroup-description_1" title="Permanent link">&para;</a></h4>
+<p>Finds and returns a material assignment by its 1-based index, a <code>MaterialAssignment</code> value, or an exact display name, English name, or match name. A valid index returns the slot even when its override has not been added.</p>
+<p>The object can also be called directly as a shortcut:</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-1-1"><span class="kd">var</span><span class="w"> </span><span class="nx">front</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">textLayer</span><span class="p">.</span><span class="nx">materialAssignment</span><span class="p">(</span><span class="nx">MaterialAssignment</span><span class="p">.</span><span class="nx">FRONT</span><span class="p">);</span>
+</span><span id="__span-1-2"><span class="kd">var</span><span class="w"> </span><span class="nx">sameFront</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">textLayer</span><span class="p">.</span><span class="nx">materialAssignment</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="nx">MaterialAssignment</span><span class="p">.</span><span class="nx">FRONT</span><span class="p">);</span>
+</span><span id="__span-1-3"><span class="kd">var</span><span class="w"> </span><span class="nx">modelMaterial</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">modelLayer</span><span class="p">.</span><span class="nx">materialAssignment</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="s2">"Material_MR"</span><span class="p">);</span>
+</span><span id="__span-1-4"><span class="kd">var</span><span class="w"> </span><span class="nx">meshMaterial</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">meshLayer</span><span class="p">.</span><span class="nx">materialAssignment</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="nx">MaterialAssignment</span><span class="p">.</span><span class="nx">DEFAULT</span><span class="p">);</span>
+</span></code></pre></div>
+<p>Names are case-sensitive and must match the full display name, English name, or match name. Partial or unknown names return <code>null</code>; if duplicate names exist, the first match is returned.</p>
+<p>An assignment enum is valid only for the corresponding layer type:</p>
+<ul>
+<li>Text and shape layers accept <code>FRONT</code>, <code>BEVEL</code>, <code>SIDE</code>, and <code>BACK</code>.</li>
+<li>Parametric mesh layers accept <code>DEFAULT</code>.</li>
+<li>Imported 3D models do not support assignment enum values; use an index or exact name.</li>
+</ul>
+<p>Using an assignment enum that is not valid for the layer raises an error.</p>
+<h4 id="property-materialassignmentpropertygroup-parameters">Parameters<a class="headerlink" href="#property-materialassignmentpropertygroup-parameters" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>indexOrAssignmentOrName</code></td>
+<td>Integer, <code>MaterialAssignment</code>, or String</td>
+<td>A 1-based material index, a supported <code>MaterialAssignment</code> value, or an exact material name.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="property-materialassignmentpropertygroup-returns">Returns<a class="headerlink" href="#property-materialassignmentpropertygroup-returns" title="Permanent link">&para;</a></h4>
+<p><a href="#property-materialpropertygroup">MaterialPropertyGroup object</a>, or <code>null</code> if a string name is not found. A non-integer outside the supported enum values is interpreted as a name, and an out-of-range integer reports a range error.</p>
+<hr /></section><section class="print-page" id="property-materialpropertygroup" heading-number="6.5"><h1 id="property-materialpropertygroup-materialpropertygroup-object">MaterialPropertyGroup object<a class="headerlink" href="#property-materialpropertygroup-materialpropertygroup-object" title="Permanent link">&para;</a></h1>
+<p><code>app.project.item(index).layer(index).materialAssignment.property(index)</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This functionality was added in After Effects (Beta) 27.1 and is subject to change while it remains in Beta.</p>
+</div>
+<h4 id="property-materialpropertygroup-description">Description<a class="headerlink" href="#property-materialpropertygroup-description" title="Permanent link">&para;</a></h4>
+<p>The MaterialPropertyGroup object represents one material assignment on a material-capable layer. It provides access to the material properties and to the assignment's source and override state.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>MaterialPropertyGroup is a subclass of <a href="#property-propertygroup">PropertyGroup object</a>. All PropertyGroup methods and attributes are available on a MaterialPropertyGroup.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><code>materialSource</code> is read-only. Use <code>setMaterialOverride()</code> to assign or reset the source.</p>
+</div>
+<h4 id="property-materialpropertygroup-ae-properties">AE Properties<a class="headerlink" href="#property-materialpropertygroup-ae-properties" title="Permanent link">&para;</a></h4>
+<p>The available AE properties depend on the receiving layer type, <a href="#property-materialpropertygroup-materialpropertygroupmaterialsource">materialSource</a>, and selected projection mode. The following properties are available on an added override, subject to the <a href="#property-materialassignmentpropertygroup-availability">layer and renderer requirements</a>:</p>
+<ul>
+<li><code>Ambient</code></li>
+<li><code>Base Color</code></li>
+<li><code>Blend Softness</code></li>
+<li><code>Emission Color</code></li>
+<li><code>Emission Intensity</code></li>
+<li><code>Metallic</code></li>
+<li><code>Opacity</code></li>
+<li><code>Projection Mode</code></li>
+<li><code>Randomize Offset</code></li>
+<li><code>Randomize Offset Seed</code></li>
+<li><code>Roughness</code></li>
+<li><code>Texture Offset</code></li>
+<li><code>Texture Rotation</code></li>
+<li><code>Texture Scale</code></li>
+<li><code>Uniform Tiling</code></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Material source</th>
+<th>Available properties</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Default (<code>materialSource === null</code>)</td>
+<td>Parametric meshes: <code>Ambient</code>, <code>Base Color</code>, <code>Emission Color</code>, <code>Emission Intensity</code>, <code>Metallic</code>, and <code>Roughness</code>. Imported models: <code>Texture Offset</code>, <code>Texture Rotation</code>, and <code>Texture Scale</code>. Text and Shape layers: none.</td>
+</tr>
+<tr>
+<td>Substance material item</td>
+<td>Texture transforms and projection controls. Material appearance comes from the Substance item.</td>
+</tr>
+<tr>
+<td>Eligible layer</td>
+<td>Texture transforms and projection controls, plus <code>Ambient</code>, <code>Emission Color</code>, <code>Emission Intensity</code>, <code>Metallic</code>, <code>Opacity</code>, and <code>Roughness</code>. Material color comes from the source layer's rendered pixels.</td>
+</tr>
+</tbody>
+</table>
+<p><code>Blend Softness</code> requires Triplanar projection. <code>Uniform Tiling</code>, <code>Randomize Offset</code>, and <code>Randomize Offset Seed</code> are available only on 3D Text and Shape layers with a Substance or layer source. <code>Uniform Tiling</code> is unavailable with Triplanar projection. <code>Randomize Offset Seed</code> remains accessible when <code>Randomize Offset</code> is off.</p>
+<h4 id="property-materialpropertygroup-example">Example<a class="headerlink" href="#property-materialpropertygroup-example" title="Permanent link">&para;</a></h4>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-0-1"><span class="kd">var</span><span class="w"> </span><span class="nx">material</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">textLayer</span><span class="p">.</span><span class="nx">materialAssignment</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="nx">MaterialAssignment</span><span class="p">.</span><span class="nx">FRONT</span><span class="p">);</span>
+</span><span id="__span-0-2"><span class="nx">material</span><span class="p">.</span><span class="nx">setMaterialOverride</span><span class="p">(</span><span class="nx">sourceLayer</span><span class="p">);</span>
+</span><span id="__span-0-3"><span class="c1">// Retrieve the group again because its available properties can change.</span>
+</span><span id="__span-0-4"><span class="nx">material</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">textLayer</span><span class="p">.</span><span class="nx">materialAssignment</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="nx">MaterialAssignment</span><span class="p">.</span><span class="nx">FRONT</span><span class="p">);</span>
+</span><span id="__span-0-5"><span class="nx">material</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="s2">"Roughness"</span><span class="p">).</span><span class="nx">setValue</span><span class="p">(</span><span class="mf">50</span><span class="p">);</span>
+</span></code></pre></div>
+<hr />
+<h2 id="property-materialpropertygroup-attributes">Attributes<a class="headerlink" href="#property-materialpropertygroup-attributes" title="Permanent link">&para;</a></h2>
+<h3 id="property-materialpropertygroup-materialpropertygroupisoverride">MaterialPropertyGroup.isOverride<a class="headerlink" href="#property-materialpropertygroup-materialpropertygroupisoverride" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).materialAssignment.property(index).isOverride</code></p>
+<h4 id="property-materialpropertygroup-description_1">Description<a class="headerlink" href="#property-materialpropertygroup-description_1" title="Permanent link">&para;</a></h4>
+<p><code>true</code> if the material override has been added for this assignment; otherwise <code>false</code>.</p>
+<p>Some layers, such as parametric meshes and single-material 3D models, always have their material override present. On text, shape, and multi-material 3D model layers, an override can be added or removed when the layer reports <code>canAddOrRemoveMaterialOverride</code> as <code>true</code>.</p>
+<h4 id="property-materialpropertygroup-type">Type<a class="headerlink" href="#property-materialpropertygroup-type" title="Permanent link">&para;</a></h4>
+<p>Boolean; read-only.</p>
+<hr />
+<h3 id="property-materialpropertygroup-materialpropertygroupmaterialsource">MaterialPropertyGroup.materialSource<a class="headerlink" href="#property-materialpropertygroup-materialpropertygroupmaterialsource" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).materialAssignment.property(index).materialSource</code></p>
+<h4 id="property-materialpropertygroup-description_2">Description<a class="headerlink" href="#property-materialpropertygroup-description_2" title="Permanent link">&para;</a></h4>
+<p>The source currently assigned to the material. The value is:</p>
+<ul>
+<li>A <a href="#item-footageitem">FootageItem object</a> whose footage is a Substance material.</li>
+<li>An eligible visual <a href="#layer-avlayer">AVLayer object</a> from the same composition. The layer can be 2D.</li>
+<li><code>null</code> when the assignment uses its default material.</li>
+</ul>
+<p>The following layers are ineligible as material sources:</p>
+<ul>
+<li>The layer receiving the material assignment.</li>
+<li>A layer in another composition.</li>
+<li>A null layer.</li>
+<li>An adjustment layer.</li>
+<li>An imported 3D model layer.</li>
+<li>A Parametric Mesh Layer.</li>
+<li>An audio-only layer.</li>
+<li>A layer that depends on the target layer and would create a circular material dependency.</li>
+</ul>
+<p>An unadded material override is readable and returns <code>null</code>.</p>
+<h4 id="property-materialpropertygroup-type_1">Type<a class="headerlink" href="#property-materialpropertygroup-type_1" title="Permanent link">&para;</a></h4>
+<p>FootageItem object, AVLayer object, or <code>null</code>; read-only.</p>
+<hr />
+<h2 id="property-materialpropertygroup-methods">Methods<a class="headerlink" href="#property-materialpropertygroup-methods" title="Permanent link">&para;</a></h2>
+<h3 id="property-materialpropertygroup-materialpropertygroupremovematerialoverride">MaterialPropertyGroup.removeMaterialOverride()<a class="headerlink" href="#property-materialpropertygroup-materialpropertygroupremovematerialoverride" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).materialAssignment.property(index).removeMaterialOverride()</code></p>
+<h4 id="property-materialpropertygroup-description_3">Description<a class="headerlink" href="#property-materialpropertygroup-description_3" title="Permanent link">&para;</a></h4>
+<p>Removes the material override and resets its source, property values, keyframes, and expressions to the layer's default material state.</p>
+<p>The layer's <code>canAddOrRemoveMaterialOverride</code> and the assignment's <code>isOverride</code> attributes must both be <code>true</code> before calling this method.</p>
+<h4 id="property-materialpropertygroup-parameters">Parameters<a class="headerlink" href="#property-materialpropertygroup-parameters" title="Permanent link">&para;</a></h4>
+<p>None.</p>
+<h4 id="property-materialpropertygroup-returns">Returns<a class="headerlink" href="#property-materialpropertygroup-returns" title="Permanent link">&para;</a></h4>
+<p>Nothing.</p>
+<hr />
+<h3 id="property-materialpropertygroup-materialpropertygroupsetmaterialoverride">MaterialPropertyGroup.setMaterialOverride()<a class="headerlink" href="#property-materialpropertygroup-materialpropertygroupsetmaterialoverride" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).materialAssignment.property(index).setMaterialOverride([materialSource])</code></p>
+<h4 id="property-materialpropertygroup-description_4">Description<a class="headerlink" href="#property-materialpropertygroup-description_4" title="Permanent link">&para;</a></h4>
+<p>Adds the material override if necessary, then assigns the supplied material source. Passing no argument or <code>null</code> adds or updates the override with the default material. The override remains added after resetting its source to the default.</p>
+<p>A project item source must be a Substance material item. Assigning the same source again is allowed.</p>
+<p>A layer source must be a suitable visual AVLayer with a nonempty name in the same composition. It may be a 2D layer. See <a href="#property-materialpropertygroup-materialpropertygroupmaterialsource">materialSource</a> for the complete list of ineligible layer types and references.</p>
+<p>An invalid source is rejected before the material override is added or changed.</p>
+<h4 id="property-materialpropertygroup-parameters_1">Parameters<a class="headerlink" href="#property-materialpropertygroup-parameters_1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>materialSource</code></td>
+<td>Substance FootageItem object or AVLayer object</td>
+<td>Optional material source. If omitted or <code>null</code>, the default material is selected.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="property-materialpropertygroup-returns_1">Returns<a class="headerlink" href="#property-materialpropertygroup-returns_1" title="Permanent link">&para;</a></h4>
+<p>Nothing.</p>
+<hr /></section><section class="print-page" id="property-maskpropertygroup" heading-number="6.6"><h1 id="property-maskpropertygroup-maskpropertygroup-object">MaskPropertyGroup object<a class="headerlink" href="#property-maskpropertygroup-maskpropertygroup-object" title="Permanent link">&para;</a></h1>
 <p><code>app.project.item(index).layer(index).mask</code></p>
 <h4 id="property-maskpropertygroup-description">Description<a class="headerlink" href="#property-maskpropertygroup-description" title="Permanent link">&para;</a></h4>
 <p>The MaskPropertyGroup object encapsulates mask attributes in a layer.</p>
@@ -19536,6 +20049,98 @@ Calling this method will set the <a href="#other-viewer-vieweractive">viewer's a
 <td><code>ADBE Index of Refraction</code></td>
 <td>Index of Refraction</td>
 </tr>
+<tr>
+<td><code>ADBE3D Material Parade</code></td>
+<td>Material Assignment</td>
+</tr>
+<tr>
+<td><code>ADBE3D Para Mat Parade</code></td>
+<td>Material Assignment - Parametric Mesh Layers</td>
+</tr>
+<tr>
+<td><code>ADBE3D Base Color</code></td>
+<td>Base Color</td>
+</tr>
+<tr>
+<td><code>ADBE3D Opacity</code></td>
+<td>Opacity</td>
+</tr>
+<tr>
+<td><code>ADBE3D Roughness</code></td>
+<td>Roughness</td>
+</tr>
+<tr>
+<td><code>ADBE3D Metallic</code></td>
+<td>Metallic</td>
+</tr>
+<tr>
+<td><code>ADBE3D Emission</code></td>
+<td>Emission Color</td>
+</tr>
+<tr>
+<td><code>ADBE3D Emission Intensity</code></td>
+<td>Emission Intensity</td>
+</tr>
+<tr>
+<td><code>ADBE3D Ambient</code></td>
+<td>Ambient</td>
+</tr>
+<tr>
+<td><code>ADBE3D Material Texturre Offset</code></td>
+<td>Texture Offset</td>
+</tr>
+<tr>
+<td><code>ADBE3D Material Texture Offset</code></td>
+<td>Texture Offset</td>
+</tr>
+<tr>
+<td><code>ADBE3D Material Rotation</code></td>
+<td>Texture Rotation</td>
+</tr>
+<tr>
+<td><code>ADBE3D Material Scale</code></td>
+<td>Texture Scale</td>
+</tr>
+<tr>
+<td><code>ADBE3D Material Projection</code></td>
+<td>Projection Mode — Parametric Mesh Layers</td>
+</tr>
+<tr>
+<td><code>ADBE3D Model Mat Projection</code></td>
+<td>Projection Mode — Model Layers</td>
+</tr>
+<tr>
+<td><code>ADBE3D Synth Mat Projection</code></td>
+<td>Projection Mode — Text/Shape layers</td>
+</tr>
+<tr>
+<td><code>ADBE3D Triplanar Blend Softness</code></td>
+<td>Blend Softness</td>
+</tr>
+<tr>
+<td><code>ADBE3D Uniform Tiling</code></td>
+<td>Uniform Tiling</td>
+</tr>
+<tr>
+<td><code>ADBE3D Mat Rand Offset</code></td>
+<td>Randomize Offset</td>
+</tr>
+<tr>
+<td><code>ADBE3D Mat Rand Offset Seed</code></td>
+<td>Randomize Offset Seed</td>
+</tr>
+<tr>
+<td><code>ADBE Displacement Options</code></td>
+<td>Displacement Options</td>
+</tr>
+<tr>
+<td><code>ADBE Subdivision Count</code></td>
+<td>Subdivision Count</td>
+</tr>
+<tr>
+<td><code>ADBE Displacement Intensity</code></td>
+<td>Intensity</td>
+</tr>
 </tbody>
 </table></section><section class="print-page" id="matchnames-layer-cameralayer" heading-number="11.1.3"><h1 id="matchnames-layer-cameralayer-camera-layer-match-names">Camera Layer Match Names<a class="headerlink" href="#matchnames-layer-cameralayer-camera-layer-match-names" title="Permanent link">&para;</a></h1>
 <hr />
@@ -24048,9 +24653,19 @@ Calling this method will set the <a href="#other-viewer-vieweractive">viewer's a
                 .print-site-enumerate-headings #property-propertygroup h2:before { content: '6.3.' counter(counter-property-propertygroup-2) ' ' }
                 .print-site-enumerate-headings #property-propertygroup h2 {  counter-increment: counter-property-propertygroup-2 }
             
-.print-site-enumerate-headings #property-maskpropertygroup > h1:before { content: '6.4 ' }
+.print-site-enumerate-headings #property-materialassignmentpropertygroup > h1:before { content: '6.4 ' }
 
-                .print-site-enumerate-headings #property-maskpropertygroup h2:before { content: '6.4.' counter(counter-property-maskpropertygroup-2) ' ' }
+                .print-site-enumerate-headings #property-materialassignmentpropertygroup h2:before { content: '6.4.' counter(counter-property-materialassignmentpropertygroup-2) ' ' }
+                .print-site-enumerate-headings #property-materialassignmentpropertygroup h2 {  counter-increment: counter-property-materialassignmentpropertygroup-2 }
+            
+.print-site-enumerate-headings #property-materialpropertygroup > h1:before { content: '6.5 ' }
+
+                .print-site-enumerate-headings #property-materialpropertygroup h2:before { content: '6.5.' counter(counter-property-materialpropertygroup-2) ' ' }
+                .print-site-enumerate-headings #property-materialpropertygroup h2 {  counter-increment: counter-property-materialpropertygroup-2 }
+            
+.print-site-enumerate-headings #property-maskpropertygroup > h1:before { content: '6.6 ' }
+
+                .print-site-enumerate-headings #property-maskpropertygroup h2:before { content: '6.6.' counter(counter-property-maskpropertygroup-2) ' ' }
                 .print-site-enumerate-headings #property-maskpropertygroup h2 {  counter-increment: counter-property-maskpropertygroup-2 }
             
 .print-site-enumerate-headings #section-7 > h1:before { content: '7 ' }

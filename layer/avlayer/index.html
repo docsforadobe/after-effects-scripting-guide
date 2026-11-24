@@ -1281,6 +1281,19 @@
 				
 				
 					<li class="md-nav__item">
+	<a href="#avlayerismaterialsource" class="md-nav__link">
+		<span class="md-ellipsis">
+			AVLayer.isMaterialSource
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
 	<a href="#avlayerisnamefromsource" class="md-nav__link">
 		<span class="md-ellipsis">
 			AVLayer.isNameFromSource
@@ -1928,6 +1941,62 @@
     
   
     PropertyGroup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../property/materialassignmentpropertygroup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MaterialAssignmentPropertyGroup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../property/materialpropertygroup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MaterialPropertyGroup
   
 
     
@@ -3545,6 +3614,19 @@
 				
 				
 					<li class="md-nav__item">
+	<a href="#avlayerismaterialsource" class="md-nav__link">
+		<span class="md-ellipsis">
+			AVLayer.isMaterialSource
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
 	<a href="#avlayerisnamefromsource" class="md-nav__link">
 		<span class="md-ellipsis">
 			AVLayer.isNameFromSource
@@ -4146,11 +4228,22 @@ and <code>outPoint</code> of this layer.</p>
 <h4 id="type_14">Type<a class="headerlink" href="#type_14" title="Permanent link">&para;</a></h4>
 <p>Floating-point value; read-only.</p>
 <hr />
+<h3 id="avlayerismaterialsource">AVLayer.isMaterialSource<a class="headerlink" href="#avlayerismaterialsource" title="Permanent link">&para;</a></h3>
+<p><code>app.project.item(index).layer(index).isMaterialSource</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This functionality is in After Effects (Beta) 27.1 and is subject to change while it remains in Beta.</p>
+</div>
+<h4 id="description_16">Description<a class="headerlink" href="#description_16" title="Permanent link">&para;</a></h4>
+<p><code>true</code> if any material assignment uses this layer as its material source; otherwise <code>false</code>.</p>
+<h4 id="type_15">Type<a class="headerlink" href="#type_15" title="Permanent link">&para;</a></h4>
+<p>Boolean; read-only.</p>
+<hr />
 <h3 id="avlayerisnamefromsource">AVLayer.isNameFromSource<a class="headerlink" href="#avlayerisnamefromsource" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).isNameFromSource</code></p>
-<h4 id="description_16">Description<a class="headerlink" href="#description_16" title="Permanent link">&para;</a></h4>
+<h4 id="description_17">Description<a class="headerlink" href="#description_17" title="Permanent link">&para;</a></h4>
 <p><code>true</code> if the layer has no expressly set name, but contains a named source. In this case, <code>layer.name</code> has the same value as <code>layer.source.name</code>. <code>false</code> if the layer has an expressly set name, or if the layer does not have a source.</p>
-<h4 id="type_15">Type<a class="headerlink" href="#type_15" title="Permanent link">&para;</a></h4>
+<h4 id="type_16">Type<a class="headerlink" href="#type_16" title="Permanent link">&para;</a></h4>
 <p>Boolean; read-only.</p>
 <hr />
 <h3 id="avlayeristrackmatte">AVLayer.isTrackMatte<a class="headerlink" href="#avlayeristrackmatte" title="Permanent link">&para;</a></h3>
@@ -4159,30 +4252,30 @@ and <code>outPoint</code> of this layer.</p>
 <p class="admonition-title">Note</p>
 <p>This functionality was updated in After Effects 23.0. Track Matte is no longer dependent on layer order.</p>
 </div>
-<h4 id="description_17">Description<a class="headerlink" href="#description_17" title="Permanent link">&para;</a></h4>
+<h4 id="description_18">Description<a class="headerlink" href="#description_18" title="Permanent link">&para;</a></h4>
 <p><code>true</code> if this layer is being used as a track matte.</p>
-<h4 id="type_16">Type<a class="headerlink" href="#type_16" title="Permanent link">&para;</a></h4>
+<h4 id="type_17">Type<a class="headerlink" href="#type_17" title="Permanent link">&para;</a></h4>
 <p>Boolean; read-only.</p>
 <hr />
 <h3 id="avlayermotionblur">AVLayer.motionBlur<a class="headerlink" href="#avlayermotionblur" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).motionBlur</code></p>
-<h4 id="description_18">Description<a class="headerlink" href="#description_18" title="Permanent link">&para;</a></h4>
+<h4 id="description_19">Description<a class="headerlink" href="#description_19" title="Permanent link">&para;</a></h4>
 <p><code>true</code> if motion blur is enabled for the layer.</p>
-<h4 id="type_17">Type<a class="headerlink" href="#type_17" title="Permanent link">&para;</a></h4>
+<h4 id="type_18">Type<a class="headerlink" href="#type_18" title="Permanent link">&para;</a></h4>
 <p>Boolean; read/write.</p>
 <hr />
 <h3 id="avlayerpreservetransparency">AVLayer.preserveTransparency<a class="headerlink" href="#avlayerpreservetransparency" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).preserveTransparency</code></p>
-<h4 id="description_19">Description<a class="headerlink" href="#description_19" title="Permanent link">&para;</a></h4>
+<h4 id="description_20">Description<a class="headerlink" href="#description_20" title="Permanent link">&para;</a></h4>
 <p><code>true</code> if preserve transparency is enabled for the layer.</p>
-<h4 id="type_18">Type<a class="headerlink" href="#type_18" title="Permanent link">&para;</a></h4>
+<h4 id="type_19">Type<a class="headerlink" href="#type_19" title="Permanent link">&para;</a></h4>
 <p>Boolean; read/write.</p>
 <hr />
 <h3 id="avlayerquality">AVLayer.quality<a class="headerlink" href="#avlayerquality" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).quality</code></p>
-<h4 id="description_20">Description<a class="headerlink" href="#description_20" title="Permanent link">&para;</a></h4>
+<h4 id="description_21">Description<a class="headerlink" href="#description_21" title="Permanent link">&para;</a></h4>
 <p>The quality with which this layer is displayed.</p>
-<h4 id="type_19">Type<a class="headerlink" href="#type_19" title="Permanent link">&para;</a></h4>
+<h4 id="type_20">Type<a class="headerlink" href="#type_20" title="Permanent link">&para;</a></h4>
 <p>A <code>LayerQuality</code> enumerated value; read/write. One of:</p>
 <ul>
 <li><code>LayerQuality.BEST</code></li>
@@ -4196,9 +4289,9 @@ and <code>outPoint</code> of this layer.</p>
 <p class="admonition-title">Note</p>
 <p>This functionality was added in After Effects 12.0 (CC)</p>
 </div>
-<h4 id="description_21">Description<a class="headerlink" href="#description_21" title="Permanent link">&para;</a></h4>
+<h4 id="description_22">Description<a class="headerlink" href="#description_22" title="Permanent link">&para;</a></h4>
 <p>Set/get layer sampling method (bicubic or bilinear)</p>
-<h4 id="type_20">Type<a class="headerlink" href="#type_20" title="Permanent link">&para;</a></h4>
+<h4 id="type_21">Type<a class="headerlink" href="#type_21" title="Permanent link">&para;</a></h4>
 <p>A <code>LayerSamplingQuality</code> enumerated value; read/write. One of:</p>
 <ul>
 <li><code>LayerSamplingQuality.BICUBIC</code></li>
@@ -4207,30 +4300,30 @@ and <code>outPoint</code> of this layer.</p>
 <hr />
 <h3 id="avlayersource">AVLayer.source<a class="headerlink" href="#avlayersource" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).source</code></p>
-<h4 id="description_22">Description<a class="headerlink" href="#description_22" title="Permanent link">&para;</a></h4>
+<h4 id="description_23">Description<a class="headerlink" href="#description_23" title="Permanent link">&para;</a></h4>
 <p>The source AVItem for this layer. The value is <code>null</code> in a Text layer. Use <a href="#avlayerreplacesource">AVLayer.replaceSource()</a> to change the value.</p>
-<h4 id="type_21">Type<a class="headerlink" href="#type_21" title="Permanent link">&para;</a></h4>
+<h4 id="type_22">Type<a class="headerlink" href="#type_22" title="Permanent link">&para;</a></h4>
 <p>AVItem object; read-only.</p>
 <hr />
 <h3 id="avlayerthreedlayer">AVLayer.threeDLayer<a class="headerlink" href="#avlayerthreedlayer" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).threeDLayer</code></p>
-<h4 id="description_23">Description<a class="headerlink" href="#description_23" title="Permanent link">&para;</a></h4>
+<h4 id="description_24">Description<a class="headerlink" href="#description_24" title="Permanent link">&para;</a></h4>
 <p><code>true</code> if this is a 3D layer.</p>
-<h4 id="type_22">Type<a class="headerlink" href="#type_22" title="Permanent link">&para;</a></h4>
+<h4 id="type_23">Type<a class="headerlink" href="#type_23" title="Permanent link">&para;</a></h4>
 <p>Boolean; read/write.</p>
 <hr />
 <h3 id="avlayerthreedperchar">AVLayer.threeDPerChar<a class="headerlink" href="#avlayerthreedperchar" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).threeDPerChar</code></p>
-<h4 id="description_24">Description<a class="headerlink" href="#description_24" title="Permanent link">&para;</a></h4>
+<h4 id="description_25">Description<a class="headerlink" href="#description_25" title="Permanent link">&para;</a></h4>
 <p><code>true</code> if this layer has the Enable Per-character 3D switch set, allowing its characters to be animated off the plane of the text layer. Applies only to text layers.</p>
-<h4 id="type_23">Type<a class="headerlink" href="#type_23" title="Permanent link">&para;</a></h4>
+<h4 id="type_24">Type<a class="headerlink" href="#type_24" title="Permanent link">&para;</a></h4>
 <p>Boolean; read/write.</p>
 <hr />
 <h3 id="avlayertimeremapenabled">AVLayer.timeRemapEnabled<a class="headerlink" href="#avlayertimeremapenabled" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).timeRemapEnabled</code></p>
-<h4 id="description_25">Description<a class="headerlink" href="#description_25" title="Permanent link">&para;</a></h4>
+<h4 id="description_26">Description<a class="headerlink" href="#description_26" title="Permanent link">&para;</a></h4>
 <p><code>true</code> if time remapping is enabled for this layer.</p>
-<h4 id="type_24">Type<a class="headerlink" href="#type_24" title="Permanent link">&para;</a></h4>
+<h4 id="type_25">Type<a class="headerlink" href="#type_25" title="Permanent link">&para;</a></h4>
 <p>Boolean; read/write.</p>
 <hr />
 <h3 id="avlayertrackmattelayer">AVLayer.trackMatteLayer<a class="headerlink" href="#avlayertrackmattelayer" title="Permanent link">&para;</a></h3>
@@ -4239,9 +4332,9 @@ and <code>outPoint</code> of this layer.</p>
 <p class="admonition-title">Note</p>
 <p>This functionality was added in After Effects 23.0</p>
 </div>
-<h4 id="description_26">Description<a class="headerlink" href="#description_26" title="Permanent link">&para;</a></h4>
+<h4 id="description_27">Description<a class="headerlink" href="#description_27" title="Permanent link">&para;</a></h4>
 <p>Returns the track matte layer for this layer. Returns <code>null</code> if this layer has no track matte layer.</p>
-<h4 id="type_25">Type<a class="headerlink" href="#type_25" title="Permanent link">&para;</a></h4>
+<h4 id="type_26">Type<a class="headerlink" href="#type_26" title="Permanent link">&para;</a></h4>
 <p>AVLayer object; read only.</p>
 <hr />
 <h3 id="avlayertrackmattetype">AVLayer.trackMatteType<a class="headerlink" href="#avlayertrackmattetype" title="Permanent link">&para;</a></h3>
@@ -4254,10 +4347,10 @@ and <code>outPoint</code> of this layer.</p>
 <p class="admonition-title">Warning</p>
 <p>This is a Legacy API we don't recommend using for setting Track Matte Type in new scripts. Please consider using the latest track matte APIs <a href="#avlayersettrackmatte">AVLayer.setTrackMatte()</a> and <a href="#avlayerremovetrackmatte">AVLayer.removeTrackMatte()</a> for your tasks.</p>
 </div>
-<h4 id="description_27">Description<a class="headerlink" href="#description_27" title="Permanent link">&para;</a></h4>
+<h4 id="description_28">Description<a class="headerlink" href="#description_28" title="Permanent link">&para;</a></h4>
 <p>If this layer has a track matte, specifies the way the track matte is applied.
 Specifying the <code>TrackMatteType.NO_TRACK_MATTE</code> type will remove the track matte for this layer and reset the track matte type.</p>
-<h4 id="type_26">Type<a class="headerlink" href="#type_26" title="Permanent link">&para;</a></h4>
+<h4 id="type_27">Type<a class="headerlink" href="#type_27" title="Permanent link">&para;</a></h4>
 <p>A <code>TrackMatteType</code> enumerated value; read/write. One of:</p>
 <ul>
 <li><code>TrackMatteType.ALPHA</code></li>
@@ -4281,9 +4374,9 @@ Specifying the <code>TrackMatteType.NO_TRACK_MATTE</code> type will remove the t
 <hr />
 <h3 id="avlayerwidth">AVLayer.width<a class="headerlink" href="#avlayerwidth" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).width</code></p>
-<h4 id="description_28">Description<a class="headerlink" href="#description_28" title="Permanent link">&para;</a></h4>
+<h4 id="description_29">Description<a class="headerlink" href="#description_29" title="Permanent link">&para;</a></h4>
 <p>The width of the layer in pixels.</p>
-<h4 id="type_27">Type<a class="headerlink" href="#type_27" title="Permanent link">&para;</a></h4>
+<h4 id="type_28">Type<a class="headerlink" href="#type_28" title="Permanent link">&para;</a></h4>
 <p>Floating-point value; read-only.</p>
 <hr />
 <h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h2>
@@ -4293,7 +4386,7 @@ Specifying the <code>TrackMatteType.NO_TRACK_MATTE</code> type will remove the t
 <p class="admonition-title">Note</p>
 <p>This functionality was added in After Effects 18.0 (2021)</p>
 </div>
-<h4 id="description_29">Description<a class="headerlink" href="#description_29" title="Permanent link">&para;</a></h4>
+<h4 id="description_30">Description<a class="headerlink" href="#description_30" title="Permanent link">&para;</a></h4>
 <p>Adds the layer to the Essential Graphics Panel for the specified composition.</p>
 <p>Returns <code>true</code> if the layer is successfully added, or otherwise <code>false</code>.</p>
 <p>If the layer cannot be added, it is either because it is not a layer type for which media can be replaced (referred to as Media Replacement Layers), or the layer has already been added to the EGP for that composition. After Effects will present a warning dialog if the layer cannot be added to the EGP.</p>
@@ -4324,7 +4417,7 @@ Specifying the <code>TrackMatteType.NO_TRACK_MATTE</code> type will remove the t
 <p class="admonition-title">Note</p>
 <p>This functionality was added in After Effects 18.0 (2021)</p>
 </div>
-<h4 id="description_30">Description<a class="headerlink" href="#description_30" title="Permanent link">&para;</a></h4>
+<h4 id="description_31">Description<a class="headerlink" href="#description_31" title="Permanent link">&para;</a></h4>
 <p>Adds the layer to the Essential Graphics Panel for the specified composition.</p>
 <p>Returns <code>true</code> if the layer is successfully added, or otherwise <code>false</code>.</p>
 <p>If the layer cannot be added, it is either because it is not a layer type for which media can be replaced (referred to as Media Replacement Layers), or the layer has already been added to the EGP for that composition. After Effects will present a warning dialog if the layer cannot be added to the EGP.</p>
@@ -4356,7 +4449,7 @@ Specifying the <code>TrackMatteType.NO_TRACK_MATTE</code> type will remove the t
 <hr />
 <h3 id="avlayeraudioactiveattime">AVLayer.audioActiveAtTime()<a class="headerlink" href="#avlayeraudioactiveattime" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).audioActiveAtTime(time)</code></p>
-<h4 id="description_31">Description<a class="headerlink" href="#description_31" title="Permanent link">&para;</a></h4>
+<h4 id="description_32">Description<a class="headerlink" href="#description_32" title="Permanent link">&para;</a></h4>
 <p>Returns <code>true</code> if this layer's audio will be active at the specified time.</p>
 <p>For this method to return <code>true</code>, <code>audioEnabled</code> must be <code>true</code>, no other layer with audio may be soloing unless this layer is soloed too, and the time must be between the <code>inPoint</code> and <code>outPoint</code> of this layer.</p>
 <h4 id="parameters_2">Parameters<a class="headerlink" href="#parameters_2" title="Permanent link">&para;</a></h4>
@@ -4381,7 +4474,7 @@ Specifying the <code>TrackMatteType.NO_TRACK_MATTE</code> type will remove the t
 <hr />
 <h3 id="avlayercalculatetransformfrompoints">AVLayer.calculateTransformFromPoints()<a class="headerlink" href="#avlayercalculatetransformfrompoints" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).calculateTransformFromPoints(pointTopLeft, pointTopRight, pointBottomRight)</code></p>
-<h4 id="description_32">Description<a class="headerlink" href="#description_32" title="Permanent link">&para;</a></h4>
+<h4 id="description_33">Description<a class="headerlink" href="#description_33" title="Permanent link">&para;</a></h4>
 <p>Calculates a transformation from a set of points in this layer.</p>
 <h4 id="parameters_3">Parameters<a class="headerlink" href="#parameters_3" title="Permanent link">&para;</a></h4>
 <table>
@@ -4428,7 +4521,7 @@ Specifying the <code>TrackMatteType.NO_TRACK_MATTE</code> type will remove the t
 <p class="admonition-title">Note</p>
 <p>This functionality was added in After Effects 18.0 (2021)</p>
 </div>
-<h4 id="description_33">Description<a class="headerlink" href="#description_33" title="Permanent link">&para;</a></h4>
+<h4 id="description_34">Description<a class="headerlink" href="#description_34" title="Permanent link">&para;</a></h4>
 <p>Test whether or not the layer can be added to the Essential Graphics Panel for the specified composition.</p>
 <p>Returns <code>true</code> if the layer can be added, or otherwise <code>false</code>.</p>
 <p>If the layer cannot be added, it is either because it is not a layer type for which media can be replaced (referred to as Media Replacement Layers), or the layer has already been added to the EGP for that composition.</p>
@@ -4467,7 +4560,7 @@ Specifying the <code>TrackMatteType.NO_TRACK_MATTE</code> type will remove the t
 <p class="admonition-title">Note</p>
 <p>This functionality was added in After Effects 13.2 (CC 2014.2)</p>
 </div>
-<h4 id="description_34">Description<a class="headerlink" href="#description_34" title="Permanent link">&para;</a></h4>
+<h4 id="description_35">Description<a class="headerlink" href="#description_35" title="Permanent link">&para;</a></h4>
 <p>Converts composition coordinates, such as <code>sourcePointToComp</code>, to layer coordinates.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -4495,7 +4588,7 @@ Specifying the <code>TrackMatteType.NO_TRACK_MATTE</code> type will remove the t
 <hr />
 <h3 id="avlayeropeninviewer">AVLayer.openInViewer()<a class="headerlink" href="#avlayeropeninviewer" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).openInViewer()</code></p>
-<h4 id="description_35">Description<a class="headerlink" href="#description_35" title="Permanent link">&para;</a></h4>
+<h4 id="description_36">Description<a class="headerlink" href="#description_36" title="Permanent link">&para;</a></h4>
 <p>Opens the layer in a Layer panel, and moves the Layer panel to front and gives it focus.</p>
 <h4 id="parameters_6">Parameters<a class="headerlink" href="#parameters_6" title="Permanent link">&para;</a></h4>
 <p>None.</p>
@@ -4508,7 +4601,7 @@ Specifying the <code>TrackMatteType.NO_TRACK_MATTE</code> type will remove the t
 <p class="admonition-title">Note</p>
 <p>This functionality was added in After Effects 23.0</p>
 </div>
-<h4 id="description_36">Description<a class="headerlink" href="#description_36" title="Permanent link">&para;</a></h4>
+<h4 id="description_37">Description<a class="headerlink" href="#description_37" title="Permanent link">&para;</a></h4>
 <p>Removes the track matte for this layer while preserving the TrackMatteType.
 See <a href="#avlayersettrackmatte">AVLayer.setTrackMatte()</a> for another way of removing track matte.</p>
 <h4 id="parameters_7">Parameters<a class="headerlink" href="#parameters_7" title="Permanent link">&para;</a></h4>
@@ -4527,7 +4620,7 @@ See <a href="#avlayersettrackmatte">AVLayer.setTrackMatte()</a> for another way 
 <hr />
 <h3 id="avlayerreplacesource">AVLayer.replaceSource()<a class="headerlink" href="#avlayerreplacesource" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).replaceSource(newSource, fixExpressions)</code></p>
-<h4 id="description_37">Description<a class="headerlink" href="#description_37" title="Permanent link">&para;</a></h4>
+<h4 id="description_38">Description<a class="headerlink" href="#description_38" title="Permanent link">&para;</a></h4>
 <p>Replaces the source for this layer.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -4593,7 +4686,7 @@ See <a href="#avlayersettrackmatte">AVLayer.setTrackMatte()</a> for another way 
 <p class="admonition-title">Note</p>
 <p>This functionality was added in After Effects 23.0</p>
 </div>
-<h4 id="description_38">Description<a class="headerlink" href="#description_38" title="Permanent link">&para;</a></h4>
+<h4 id="description_39">Description<a class="headerlink" href="#description_39" title="Permanent link">&para;</a></h4>
 <p>Sets the track matte layer and type for this layer. Passing in <code>null</code> to trackMatteLayer parameter removes the track matte.
 See <a href="#avlayerremovetrackmatte">AVLayer.removeTrackMatte()</a> for another way of removing track matte.</p>
 <h4 id="parameters_9">Parameters<a class="headerlink" href="#parameters_9" title="Permanent link">&para;</a></h4>
@@ -4648,7 +4741,7 @@ See <a href="#avlayerremovetrackmatte">AVLayer.removeTrackMatte()</a> for anothe
 <p class="admonition-title">Note</p>
 <p>This functionality was added in After Effects 13.2 (CC 2014.2)</p>
 </div>
-<h4 id="description_39">Description<a class="headerlink" href="#description_39" title="Permanent link">&para;</a></h4>
+<h4 id="description_40">Description<a class="headerlink" href="#description_40" title="Permanent link">&para;</a></h4>
 <p>Converts layer coordinates, such as <code>boxTextPos</code>, to composition coordinates.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -4681,7 +4774,7 @@ See <a href="#avlayerremovetrackmatte">AVLayer.removeTrackMatte()</a> for anothe
 <hr />
 <h3 id="avlayersourcerectattime">AVLayer.sourceRectAtTime()<a class="headerlink" href="#avlayersourcerectattime" title="Permanent link">&para;</a></h3>
 <p><code>app.project.item(index).layer(index).sourceRectAtTime(timeT, extents)</code></p>
-<h4 id="description_40">Description<a class="headerlink" href="#description_40" title="Permanent link">&para;</a></h4>
+<h4 id="description_41">Description<a class="headerlink" href="#description_41" title="Permanent link">&para;</a></h4>
 <p>Retrieves the rectangle bounds of the layer at the specified time index, corrected for text or shape layer content. Use, for example, to write text that is properly aligned to the baseline.</p>
 <h4 id="parameters_11">Parameters<a class="headerlink" href="#parameters_11" title="Permanent link">&para;</a></h4>
 <table>
@@ -4727,7 +4820,7 @@ See <a href="#avlayerremovetrackmatte">AVLayer.removeTrackMatte()</a> for anothe
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 5, 2025 19:22:34 UTC">February 5, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 24, 2026 00:29:41 UTC">November 24, 2026</span>
   </span>
 
     
