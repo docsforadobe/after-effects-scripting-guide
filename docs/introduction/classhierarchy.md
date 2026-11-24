@@ -22,11 +22,15 @@ Note that some classes exist only as base classes, and demonstrate unexpected be
 - [PropertyBase object](../property/propertybase.md) ⚠
     - [Property object](../property/property.md)
     - [PropertyGroup object](../property/propertygroup.md)
+        - [MaterialAssignmentPropertyGroup object](../property/materialassignmentpropertygroup.md)
+        - [MaterialPropertyGroup object](../property/materialpropertygroup.md)
         - [MaskPropertyGroup object](../property/maskpropertygroup.md)
         - [Layer object](../layer/layer.md) ⚠
             - [AVLayer object](../layer/avlayer.md)
+                - [ParametricMeshLayer object](../layer/parametricmeshlayer.md)
                 - [ShapeLayer object](../layer/shapelayer.md)
                 - [TextLayer object](../layer/textlayer.md)
+                - [ThreeDModelLayer object](../layer/threedmodellayer.md)
             - [CameraLayer object](../layer/cameralayer.md)
             - [LightLayer object](../layer/lightlayer.md)
 
