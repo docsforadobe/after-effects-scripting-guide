@@ -471,7 +471,7 @@ Applies the specified collection of animation settings (an animation preset) to 
 Predefined animation preset files are installed in the Presets folder, and users can create new animation presets through the user interface.
 
 !!! warning
-    The animation preset is applied to the the selected layer(s) of the comp, not to the layer whose applyPreset function is called. Hence, the layer whose applyPreset function is called effectively just determines the comp whose layers are processed.
+    The animation preset is applied to the selected layer(s) of the comp, not to the layer whose applyPreset function is called. Hence, the layer whose applyPreset function is called effectively just determines the comp whose layers are processed.
 
 #### Parameters
 

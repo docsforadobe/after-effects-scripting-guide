@@ -203,7 +203,7 @@ Reports whether the file object is numbered, i.e. file name has a digit.
 
 Object, containing 2 keys:
 
-- `isNumbered`: Boolean; wether the file name contains any digit,
+- `isNumbered`: Boolean; whether the file name contains any digit,
 - `num`: Integer; a number found in file name. Returns 0 when `isNumbered` is `false`.
 
 #### Example

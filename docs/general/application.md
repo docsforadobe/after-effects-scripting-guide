@@ -194,7 +194,7 @@ app.exitCode = 2; // on quit, if value is 2, an error has occurred
 
 #### Description
 
-Returns an object to navigate and retreive all the fonts currently available on your system.
+Returns an object to navigate and retrieve all the fonts currently available on your system.
 
 #### Type
 
